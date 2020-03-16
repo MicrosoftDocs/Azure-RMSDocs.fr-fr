@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 4d4ba8a3093e1bef32e42b562c93e787e603614b
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117984"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404145"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -126,7 +126,7 @@ Par exemple, le nom de votre journal d’installation peut être similaire à C:
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Définition des serveurs autorisés à utiliser le connecteur RMS
 Dès lors que le connecteur RMS est installé sur au moins deux ordinateurs, vous êtes en mesure d'autoriser les serveurs et les services souhaités à utiliser le connecteur RMS. Par exemple, les serveurs exécutant Exchange Server 2013 ou SharePoint Server 2013.
 
-Pour définir ces serveurs, exécutez l'outil d'administration du connecteur RMS, puis ajoutez des entrées à la liste des serveurs autorisés. Vous pouvez exécuter cet outil lors de la sélection de l'option **Lancer la console Administrateur du connecteur pour autoriser des serveurs** à la fin de l'Assistant de configuration du connecteur Microsoft Rights Management, mais vous pouvez également l'exécuter séparément de l'Assistant.
+Pour définir ces serveurs, exécutez l'outil d'administration du connecteur RMS, puis ajoutez des entrées à la liste des serveurs autorisés. Vous pouvez exécuter cet outil lors de la sélection de l'option **Launch connector administration console to authorize servers** à la fin de l'Assistant de configuration du connecteur Microsoft Rights Management, mais vous pouvez également l'exécuter séparément de l'Assistant.
 
 Prenez en compte les considérations suivantes lors de la définition des serveurs :
 
@@ -134,14 +134,14 @@ Prenez en compte les considérations suivantes lors de la définition des serveu
 
 - Vous pouvez ajouter plusieurs serveurs sous la forme d'une entrée unique en spécifiant un groupe de distribution ou de sécurité Active Directory ou un compte de service utilisé par plus d'un serveur. Quand vous utilisez cette configuration, le groupe de serveurs partage les mêmes certificats RMS et ils sont tous considérés comme étant propriétaires de l’ensemble du contenu protégé par un des serveurs. Pour minimiser la charge administrative, nous vous conseillons d'adopter cette configuration de groupe unique plutôt que de serveurs multiples pour autoriser les serveurs Exchange ou la batterie de serveurs SharePoint de votre organisation.
 
-Sur la page **Serveurs autorisés à utiliser le connecteur**, cliquez sur **Ajouter**.
+Sur la page **Servers allowed to utilize the connector**, cliquez sur **Ajouter**.
 
 > [!NOTE]
 > Autoriser des serveurs dans Azure RMS équivaut à la configuration AD RMS qui consiste à appliquer manuellement des droits NTFS à ServerCertification.asmx pour les comptes d’ordinateur de service ou de serveur et à accorder manuellement des droits de super utilisateur aux comptes Exchange. L’application de droits NTFS à ServerCertification.asmx n’est pas nécessaire sur le connecteur.
 
 
 ### <a name="add-a-server-to-the-list-of-allowed-servers"></a>Ajout d'un serveur à la liste des serveurs autorisés
-Sur la page **Autoriser un serveur à utiliser le connecteur**, saisissez le nom de l'objet ou recherchez l'objet à autoriser.
+Sur la page **Allow a server to utilize the connector**, saisissez le nom de l'objet ou recherchez l'objet à autoriser.
 
 Il est important d'autoriser l'objet adéquat. Pour qu'un serveur utilise le connecteur, le compte qui exécute le service local (par exemple, Exchange ou SharePoint) doit être sélectionné pour autorisation. Par exemple, si le service est exécuté en tant que compte de service configuré, ajoutez le nom de ce compte de service à la liste. Si le service est exécuté en tant que système local, ajoutez le nom de l'objet d'ordinateur (par exemple, NOMSERVEUR$). Il est préférable de créer un groupe contenant ces comptes afin de spécifier ce groupe plutôt que des noms de serveurs individuels.
 
@@ -176,7 +176,7 @@ Le nom de serveur URL du connecteur peut être n'importe quel nom défini dans u
 > [!IMPORTANT]
 > Nous vous conseillons de ne pas modifier ce nom une fois les serveurs Exchange ou SharePoint configurés pour utiliser le connecteur, car vous devriez alors supprimer ces serveurs de l'ensemble des configurations de gestion des droits relatifs à l'information pour ensuite les reconfigurer.
 
-Une fois le nom créé dans le système DNS et associé à une adresse IP, configurez l'équilibrage de charge pour cette adresse, afin de rediriger le trafic vers les serveurs du connecteur. Vous pouvez utiliser n'importe quel programme d'équilibrage de charge basé sur une adresse IP, notamment la fonctionnalité Équilibrage de la charge réseau (NLB) de Windows Server. Pour plus d’informations, consultez le [guide de déploiement de l’équilibrage de charge](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Une fois le nom créé dans le système DNS et associé à une adresse IP, configurez l'équilibrage de charge pour cette adresse, afin de rediriger le trafic vers les serveurs du connecteur. Vous pouvez utiliser n'importe quel programme d'équilibrage de charge basé sur une adresse IP, notamment la fonctionnalité Équilibrage de la charge réseau (NLB) de Windows Server. Pour plus d’informations, consultez le [guide de déploiement de l’équilibrage de charge](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Utilisez les paramètres suivants pour configurer le cluster NLB :
 
@@ -184,7 +184,7 @@ Utilisez les paramètres suivants pour configurer le cluster NLB :
 
     Pour plus d'informations sur le choix du protocole HTTP ou du protocole HTTPS, consultez la section suivante.
 
--   Affinité : Aucune
+-   Affinité : Aucune
 
 -   Méthode de distribution : Égal
 
@@ -196,7 +196,7 @@ Ce nom que vous définissez pour le système d'équilibrage de charge (pour les 
 
 Bien que l'utilisation de TLS ou de SSL soit facultative pour le connecteur RMS, nous la conseillons pour tout service lié à la sécurité basé sur le protocole HTTP. Cette configuration authentifie les serveurs exécutant le connecteur sur vos serveurs Exchange et SharePoint qui utilisent le connecteur. De plus, toutes les données envoyées depuis ces serveurs au connecteur sont chiffrées.
 
-Pour que le connecteur RMS utilise TLS, installez un certificat d'authentification de serveur contenant le nom utilisé pour le connecteur RMS sur chacun des serveurs qui l'exécutent. Par exemple, si le nom de connecteur RMS défini dans votre système DNS est **rmsconnector.contoso.com**, déployez un certificat d’authentification de serveur incluant le nom commun **rmsconnector.contoso.com** dans le sujet du certificat. Vous pouvez aussi spécifier **rmsconnector.contoso.com** dans le nom alternatif du certificat comme valeur DNS. Le certificat n'a pas besoin d'inclure le nom du serveur. Dans IIS, reliez ensuite ce certificat au site Web par défaut.
+Pour que le connecteur RMS utilise TLS, installez un certificat d'authentification de serveur contenant le nom utilisé pour le connecteur RMS sur chacun des serveurs qui l'exécutent. Par exemple, si le nom de connecteur RMS défini dans votre système DNS est **rmsconnector.contoso.com**, déployez un certificat d'authentification de serveur incluant le nom commun **rmsconnector.contoso.com** dans le sujet du certificat. Vous pouvez également spécifier **rmsconnector.contoso.com** dans le nom alternatif du certificat comme valeur DNS. Le certificat n'a pas besoin d'inclure le nom du serveur. Dans IIS, reliez ensuite ce certificat au site Web par défaut.
 
 Si vous utilisez l'option HTTPS, assurez-vous que tous les serveurs exécutant le connecteur disposent d'un certificat d'authentification de serveur valide lié à l'autorité de certification racine reconnue par vos serveurs Exchange et SharePoint. Par ailleurs, si l'autorité de certification qui a établi les certificats pour les serveurs du connecteur publie une liste de révocation de certificats, les serveurs Exchange et SharePoint doivent pouvoir la télécharger.
 
@@ -214,7 +214,7 @@ Si vos serveurs de connecteur sont installés sur un réseau qui ne dispose pas 
 
 1.  Sur chaque serveur exécutant le connecteur RMS, ouvrez un éditeur de registre, tel que Regedit.
 
-2.  Accédez à l’emplacement **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AADRM\Connector**.
+2.  Accédez à l'emplacement **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AADRM\Connector**.
 
 3.  Ajoutez la valeur de chaîne **Adresse proxy**, puis configurez les données de cette valeur sur **http://&lt;MonDomainProxyOuAdresseIP&gt;:&lt;MonPortProxy&gt;**
 
@@ -227,9 +227,9 @@ Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un 
 
 -   Un ordinateur physique ou virtuel exécutant Windows Server 2012 ou Windows Server 2012 R2 (toutes éditions), Windows 8.1, Windows 8.
 
--   1 Go de RAM minimum ;
+-   1 Go de RAM minimum ;
 
--   64 Go d'espace disque minimum ;
+-   64 Go d'espace disque minimum.
 
 -   au moins une interface réseau ;
 
@@ -244,6 +244,6 @@ Exécutez les fichiers suivants pour installer l'outil d'administration du conne
 Si ce n'est déjà fait, vous pouvez télécharger ces fichiers à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Maintenant que le connecteur RMS est installé et configuré, vous êtes prêt à configurer vos serveurs locaux pour qu’ils l’utilisent. Accédez à [Configuration des serveurs pour le connecteur Azure Rights Management](configure-servers-rms-connector.md).
 

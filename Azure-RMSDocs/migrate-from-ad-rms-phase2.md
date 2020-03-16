@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934702"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404043"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -27,7 +27,7 @@ ms.locfileid: "74934702"
 Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 4 à 6 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
 Cette étape est un processus comprenant deux phases :
 
 1. Exporter les données de configuration d'AD RMS en exportant les domaines de publication approuvés (TPD) dans un fichier .xml. Ce processus est identique pour toutes les migrations.
@@ -42,13 +42,13 @@ Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de pub
 
 1. Connectez-vous au cluster AD RMS en tant qu'utilisateur avec des autorisations d'administration AD RMS.
 
-2. À partir de la console de gestion AD RMS (**Active Directory Rights Management Services**), développez le nom du cluster AD RMS, **Stratégies d'approbation**, puis cliquez sur **Domaines de publication approuvés**.
+2. À partir de la console de gestion AD RMS (**Active Directory Rights Management Services**), développez le nom du cluster AD RMS, **Stratégies d'approbation**, puis cliquez sur **Domaines de publication approuvés**.
 
 3. Dans le volet Résultats, sélectionnez le domaine de publication approuvé, puis, dans le volet Actions, cliquez sur **Exporter un domaine de publication approuvé**.
 
-4. Dans la boîte de dialogue **Exporter un domaine de publication approuvé** :
+4. Dans la boîte de dialogue **Exporter un domaine de publication approuvé** :
 
-    - Cliquez sur **Enregistrer sous**, puis définissez le chemin d'accès et le nom de fichier de votre choix. Spécifiez **.xml** comme extension de nom de fichier (l’extension n’est pas ajoutée automatiquement).
+    - Cliquez sur **Enregistrer sous**, puis définissez le chemin d'accès et le nom de fichier de votre choix. Veillez à spécifier **.xml** comme extension de nom de fichier (l'extension n'est pas ajoutée automatiquement).
 
     - Spécifiez et confirmez un mot de passe fort. N’oubliez pas ce mot de passe, car vous en aurez besoin ultérieurement pour importer les données de configuration dans Azure Information Protection.
 
@@ -194,5 +194,5 @@ Remove-PSDrive MyRmsAdmin -force
 ```
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Passez à la [Phase 3 : Configuration côté client](migrate-from-ad-rms-phase3.md).

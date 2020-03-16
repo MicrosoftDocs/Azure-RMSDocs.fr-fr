@@ -14,11 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 363fc709334ac3974ec657d72c44e88a2e9c828a
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422816"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404383"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -83,7 +83,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
   - **Administrateur général**
     
     > [!NOTE] 
-    > Si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), le rôle d’administrateur Azure information protection (anciennement « administrateur information protection ») n’est pas pris en charge pour le portail Azure. [Informations complémentaires](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), le rôle d’administrateur Azure information protection (anciennement « administrateur information protection ») n’est pas pris en charge pour le portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Les comptes Microsoft ne peuvent pas gérer Azure Information Protection.
 

@@ -13,11 +13,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
 ms.openlocfilehash: 5e8cf81bc2f9f4de76bdc868603af0cf7e6a76a3
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960770"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403516"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guide de l’utilisateur d’étiquetage unifié Azure Information Protection 
 
@@ -27,10 +27,10 @@ ms.locfileid: "75960770"
 
 Le Azure Information Protection client d’étiquetage unifié pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transférée ou si votre document est enregistré dans un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
 
-Vous avez uniquement besoin d'un ordinateur qui exécute au moins Windows 7 avec Service Pack 1. Ensuite, téléchargez auprès de Microsoft et installez ce client gratuit.
+Tout ce dont vous avez besoin, c’est un ordinateur exécutant au moins Windows 7 avec Service Pack 1. Ensuite, téléchargez auprès de Microsoft et installez ce client gratuit.
 
 
-## <a name="what-do-you-want-to-do"></a>Que souhaitez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que souhaitez-vous faire ?
 
 - [Télécharger et installer le client d’étiquetage unifié Azure Information Protection](install-unifiedlabelingclient-app.md)
 

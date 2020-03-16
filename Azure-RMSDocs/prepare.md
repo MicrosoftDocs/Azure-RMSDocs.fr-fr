@@ -13,11 +13,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 56a61e558f72812517d21201aa6e4215624d903d
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934583"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404978"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -150,15 +150,15 @@ Vérifiez ensuite si la colonne **ProxyAddresses** est remplie. Si tel est le ca
 
 Si la colonne **ProxyAddresses** n’est pas remplie, la valeur **UserPrincipalName** sert à autoriser l’utilisation du service Azure Rights Management.
 
-Exemple :
+Par exemple :
 
 
-|  Nom complet   |     UserPrincipalName      |                            ProxyAddresses                             |
+|  Nom d’affichage   |     UserPrincipalName      |                            ProxyAddresses                             |
 |-----------------|----------------------------|-----------------------------------------------------------------------|
 | Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
 |    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp : ankur.roy@onmicrosoft.contoso.com} |
 
-Exemple :
+Dans cet exemple :
 
 - Le compte d’utilisateur pour Jagannath Reddy est autorisé par <strong>jagannathreddy@contoso.com</strong>.
 
@@ -177,7 +177,7 @@ Dans la plupart des cas, la valeur de UserPrincipalName correspond à une valeur
 > [!TIP]
 > Vous pouvez utiliser l’applet de commande Export-Csv afin d’exporter les résultats dans une feuille de calcul pour faciliter la gestion, comme la recherche et la modification en bloc pour l’importation.
 >
-> Par exemple : `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> Exemple : `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`.
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confirmer que les comptes de groupe sont prêts pour Azure Information Protection
 
@@ -208,7 +208,7 @@ Pour des raisons de performances, Azure Information Protection met en cache l’
 N’oubliez pas de tenir compte de ce délai dans l’ensemble des modifications ou tests que vous effectuez quand vous utilisez des groupes pour attribuer des droits d’utilisation ou pour configurer le service Azure Rights Management, ou quand vous configurez des stratégies délimitées.
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Après avoir confirmé que vos utilisateurs et groupes peuvent être utilisés avec Azure Information Protection et que vous êtes prêt à commencer à protéger des documents et des e-mails, vérifiez que vous avez besoin d’activer le service Azure Rights Management. Ce service doit être activé avant de pouvoir protéger les documents et les e-mails de votre organisation : 
 

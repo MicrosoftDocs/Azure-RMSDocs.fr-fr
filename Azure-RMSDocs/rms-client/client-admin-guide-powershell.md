@@ -4,7 +4,7 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ff48c873b55a0aa0f973885c65fd3b68701dbca8
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 0820004870c3a391a2dcea9fa3c81b8577374c54
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79082222"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403788"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -25,12 +25,11 @@ ms.locfileid: "79082222"
 >
 > *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Par exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -77,7 +76,7 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
 Lisez cette section avant de commencer à utiliser les commandes PowerShell quand votre organisation utilise Azure Information Protection pour la classification et la protection, ou seulement le service Azure Rights Management pour la protection des données.
 
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Composants requis
 
 En plus des prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour l’étiquetage Azure Information Protection et pour le service de protection de données Azure Rights Management :
 
@@ -316,7 +315,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -329,7 +328,7 @@ Votre résultat peut ressembler à ce qui suit :
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Exemple :
+Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Par exemple :
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -339,7 +338,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -351,12 +350,12 @@ Votre résultat peut ressembler à ce qui suit :
 
 Notez que si les modèles Rights Management sont modifiés, vous devez les télécharger à nouveau à l’aide de `Get-RMSTemplate -force`. 
 
-## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
+## <a name="active-directory-rights-management-services"></a>Services AD RMS
 
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Composants requis
 
 Outre les prérequis pour l’installation du module AzureInformationProtection, le compte utilisé pour protéger ou déprotéger des fichiers doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 
@@ -432,7 +431,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -445,7 +444,7 @@ Votre résultat peut ressembler à ce qui suit :
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Exemple : 
+Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Par exemple : 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -455,7 +454,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -645,8 +644,8 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
     Vous pouvez supprimer la tâche si vous le souhaitez. Si votre jeton expire, vous devez répéter ce processus, auquel cas il peut être plus pratique de laisser la tâche configurée afin qu’elle soit prête à s’exécuter à nouveau lorsque vous copierez le nouveau script PowerShell avec la nouvelle valeur du jeton.
 
-## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 
+## <a name="next-steps"></a>Étapes suivantes :
+Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Par exemple : 
 
     Get-Help Get-RMSTemplate -online
 

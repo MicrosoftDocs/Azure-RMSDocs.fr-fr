@@ -7,11 +7,11 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 2ee3c660a14df74f432870d364002cee86a5ce27
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489263"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79405012"
 ---
 # <a name="enumerations-and-structures"></a>Énumérations et structures
 
@@ -84,7 +84,7 @@ Automatique            | Défini par les conditions de la stratégie
 RECOMMANDATIONS            | Défini par l’utilisateur après que l’étiquette a été recommandée par les conditions de la stratégie
 VALEURS            | Défini par défaut dans la stratégie
 
-Définit ce qui a déclenché l’événement SetLabel
+définit ce qui a déclenché l’événement SetLabel
   
 #### <a name="datastate-enum"></a>Énumération DataState
 Valeurs                         | Descriptions                                
@@ -131,7 +131,7 @@ Default            | Les marques connues sont converties un marquage inconnu est
 Passage            | Les marques connues sont converties le marquage inconnu est passé
 Aucune            | Toutes les marques sont transmises
 
-Différents champs dynamiques peuvent être définis dans le message texte de l’application : $ {Item. label} $ {Item.Name} $ {Item. Location} $ {User.Name} $ {User. principal} $ {Event. DateTime} les autres éléments ne sont toujours pas définis : le kit de développement logiciel (SDK) les remplace par les valeurs utilisant ces indicateurs de contrôle.
+différents champs dynamiques peuvent être définis dans le message texte de l’application : $ {Item. label} $ {Item.Name} $ {Item. Location} $ {User.Name} $ {User. principal} $ {Event. DateTime} les autres éléments ne sont toujours pas définis : le kit de développement logiciel (SDK) les remplace par les valeurs utilisant ces indicateurs de contrôle.
   
 #### <a name="consent-enum"></a>Énumération de consentement
 Valeurs                         | Descriptions                                
@@ -294,7 +294,7 @@ Sensibilité            |
 #### <a name="contentmarkplacement-enum"></a>Énumération ContentMarkPlacement
 Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Header            | 
+En-tête            | 
 Pied de page            | 
   
 #### <a name="labelactiondatatype-enum"></a>Énumération LabelActionDataType

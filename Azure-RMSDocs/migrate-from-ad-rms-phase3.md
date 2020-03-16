@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: b2c206885b2449edc73948a3c0e3c815634c93de
-ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215741"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79405029"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -138,7 +138,7 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
    > 
    > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
     
-   Si vous devez récupérer l’URL du service Azure Rights Management pour *&lt;URLdevotrelocataire&gt;*, consultez [Pour identifier l’URL du service Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+   Si vous devez récupérer l’URL du service Azure Rights Management pour *&lt;URLdevotrelocataire&gt;* , consultez [Pour identifier l’URL du service Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. À l’aide des instructions fournies au début de cette étape, configurez les méthodes de déploiement de votre script pour exécuter **Migrate-Client.cmd** et **Migrate-User.cmd** sur les ordinateurs clients Windows utilisés par les membres du groupe AIPMigrated. 
 

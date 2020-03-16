@@ -12,11 +12,11 @@ ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: f50db0279d5611e3e62698a6a4ca7f871f00dd04
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117560"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403652"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -115,9 +115,9 @@ Utilisez les instructions suivantes pour installer le client lorsque vous n’ut
     
     Paramètres supplémentaires qui ne figurent pas sur l’écran d’aide :
     
-    - **ServiceLocation** : utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010 et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent un message. [Informations complémentaires](#more-information-about-the-servicelocation-installation-parameter) 
+    - **ServiceLocation** : utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010 et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent un message. [Plus d’informations](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement** : utilisez ce paramètre pour éviter d’avoir à disposer de Microsoft Framework .NET version 4.6.2. [Informations complémentaires](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
+    - **DowngradeDotNetRequirement** : utilisez ce paramètre pour éviter d’avoir à disposer de Microsoft Framework .NET version 4.6.2. [Plus d’informations](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
     
     - **AllowTelemetry = 0** : Utilisez ce paramètre pour désactiver l’option d’installation **Participer à l’amélioration d’Azure Information Protection en envoyant des statistiques d’utilisation à Microsoft**. 
 
@@ -161,7 +161,7 @@ Utilisez la procédure suivante pour identifier la valeur à spécifier pour le 
 
     Par exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
-3. À partir de la valeur, supprimez la section **_wmcs/licensing** de cette chaîne. Par exemple : **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+3. Supprimez la section **/_wmcs/licensing** de cette chaîne. Par exemple : **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
     La chaîne restante correspond à la valeur à spécifier pour le paramètre ServiceLocation.
 
@@ -174,7 +174,7 @@ Pour prendre en charge les mises à niveau automatiques à l’aide d’Windows 
 
 Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
 
-Exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
+Exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`.
 
 Nous vous recommandons d’utiliser ce paramètre avec précaution et de savoir qu’il existe des problèmes avec les applications Office qui se sont débloquées lorsque le client d’étiquetage unifié Azure Information Protection est utilisé avec cette version antérieure du Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
 
@@ -192,23 +192,23 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 2. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
-    |Version d’Office|Système d'exploitation|Software|Action|
+    |Version d’Office|Système d’exploitation|Logiciels|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installez|
-    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installez|
-    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installez|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installez|
+    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
+    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Install|
+    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Install|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Install|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
-    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installez|
+    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Install|
     |Office 2010|Windows 7 et Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB3125574 n’est pas installé|
-    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installez|
-    |Not applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller|
+    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
+    |Not applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller|
 
 3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/** , par exemple, `AzInfoProtection_UL.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) d’installation exécutable, à une exception près :
     
     - Au lieu de **AllowTelemetry = 0** pour désactiver l’option d’installation, **Aidez-nous à améliorer Azure information protection en envoyant des statistiques d’utilisation à Microsoft**, puis spécifiez **ENABLETELEMETRY = 0**. 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Maintenant que vous avez installé le client d’étiquetage unifié Azure Information Protection, consultez les rubriques suivantes pour plus d’informations sur la prise en charge de ce client :
 
 - [Fichiers du client et journalisation de l’utilisation](clientv2-admin-guide-files-and-logging.md)

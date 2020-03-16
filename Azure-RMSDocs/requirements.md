@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117882"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403958"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -49,7 +49,7 @@ Si vous avez des questions sur les abonnements ou les licences, ne les postez pa
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d'utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d'annuaire.
+Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d’utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d’annuaire.
 
 L’authentification unique (SSO) étant prise en charge pour Azure Information Protection, les utilisateurs ne sont pas invités de manière répétée à fournir leurs informations d’identification. Si vous utilisez une autre solution de fournisseur pour la fédération, vérifiez auprès de ce dernier comment la configurer pour Azure AD. WS-Trust est une exigence courante pour ces solutions afin de prendre en charge l’authentification unique. 
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur les conditions d’authentification, consultez [C
 
 Pour plus d’informations sur la configuration requise pour les comptes d’utilisateur et de groupe pour l’autorisation, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
-## <a name="client-devices"></a>Appareils clients
+## <a name="client-devices"></a>Périphériques client
 
 Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.
 
@@ -105,7 +105,7 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
 - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 
-- Office 365 ProPlus
+- Office 365 ProPlus
 
 - Office Professionnel Plus 2019
 
@@ -165,7 +165,7 @@ Le scénario de déploiement suivant n’est pas pris en charge, sauf si vous ut
 
 Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et [d’Azure Information Protection vers AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md).
 
-### <a name="service-tags"></a>Étiquettes de service
+### <a name="service-tags"></a>Balises de service
 
 Veillez à autoriser l’accès à tous les ports pour les balises de service suivantes :
 

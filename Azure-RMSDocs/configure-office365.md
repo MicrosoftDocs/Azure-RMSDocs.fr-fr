@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 73e087934d6858bf7ce3644ac47b8c7f6e2327f9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935110"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404332"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : configuration de services en ligne pour utiliser le service Azure Rights Management
 
@@ -31,7 +31,7 @@ Pour plus d’informations sur le fonctionnement d’Exchange Online avec le ser
 
 Exchange Online est peut-être déjà activé pour utiliser le service Azure Rights Management. Pour le savoir, exécutez les commandes suivantes :
 
-1. S'il s'agit de la première fois que vous avez utilisé Windows PowerShell pour Exchange Online sur votre ordinateur, vous devez configurer Windows PowerShell pour exécuter des scripts signés. Démarrez votre session Windows PowerShell à l'aide de l'option **Exécuter en tant qu'administrateur** , puis tapez :
+1. Si vous n'avez jamais utilisé Windows PowerShell pour Exchange Online sur votre ordinateur, vous devez configurer Windows PowerShell pour exécuter des scripts signés. Démarrez votre session Windows PowerShell à l'aide de l'option **Exécuter en tant qu'administrateur**, puis tapez :
     
         Set-ExecutionPolicy RemoteSigned
     
@@ -86,10 +86,10 @@ Pour activer le service IRM pour SharePoint Online, consultez les instructions s
 
 - [Configuration de la Gestion des droits relatifs à l'information dans le centre d'administration SharePoint](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
-Cette configuration est effectuée par l'administrateur Office 365.
+Cette configuration est effectuée par l'administrateur Office 365.
 
 ### <a name="configuring-irm-for-libraries-and-lists"></a>Configuration de l'IRM pour les bibliothèques et listes
-Une fois que vous avez activé le service IRM pour SharePoint, les propriétaires de sites peuvent protéger par IRM leurs bibliothèques de documents et listes SharePoint. Pour obtenir des instructions, consultez les ressources suivantes sur le site web Office :
+Une fois que vous avez activé le service IRM pour SharePoint, les propriétaires de sites peuvent protéger par IRM leurs bibliothèques de documents et listes SharePoint. Pour obtenir des instructions, consultez les ressources suivantes sur le site web Office :
 
 - [Activation de la gestion des droits relatifs à l'information pour une liste ou une bibliothèque](https://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)
 
@@ -492,9 +492,9 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
    Disconnect-SPOService -ErrorAction SilentlyContinue
    ```
 
-4. Examinez le script et apportez les modifications suivantes :
+4. Examinez le script et apportez les modifications suivantes :
 
-   1. Recherchez `$sharepointAdminCenterUrl` et remplacez la valeur de l'exemple par l'URL de votre propre Centre d'administration SharePoint.
+   1. Recherchez `$sharepointAdminCenterUrl` et remplacez la valeur de l’exemple par l’URL de votre propre Centre d’administration SharePoint.
 
       Cette valeur est l’URL de base quand vous accédez au Centre d’administration SharePoint. Son format est le suivant : https://<em>&lt;nom_client&gt;</em>-admin.sharepoint.com.
 
@@ -525,7 +525,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 6. Exécutez le script et, si vous y êtes invité, fournissez le mot de passe du compte d'administrateur Office 365. Si vous modifiez le script et l'exécutez dans la même session Windows PowerShell, vous n'êtes pas invité à fournir des informations d'identification.
 
 > [!TIP]
-> Vous pouvez également utiliser ce script pour configurer IRM pour une bibliothèque SharePoint Online. Pour cette configuration, il est préférable d’activer l’option supplémentaire **Interdire aux utilisateurs de télécharger des documents qui ne prennent pas en charge IRM** pour vous assurer que la bibliothèque ne contient que des documents protégés.    Pour ce faire, ajoutez le paramètre `-IrmReject` à la commande Set-IrmConfiguration dans le script.
+> Vous pouvez également utiliser ce script pour configurer IRM pour une bibliothèque SharePoint Online. Pour cette configuration, il se peut que vous vouliez activer l'option supplémentaire **Interdire aux utilisateurs de télécharger des documents qui ne prennent pas en charge IRM** pour vous assurer que la bibliothèque ne contient que des documents protégés.    Pour ce faire, ajoutez le paramètre `-IrmReject` à la commande Set-IrmConfiguration dans le script.
 >
 > Vous devez également modifier la variable `$webUrls` (par exemple, **https :\//contoso.SharePoint.com**) et `$listTitle` variable (par exemple, **$reports**).
 
@@ -534,7 +534,7 @@ Si vous devez désactiver IRM pour les bibliothèques OneDrive Entreprise de l�
 ##### <a name="additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file"></a>Script supplémentaire pour insérer toutes les URL de OneDrive Entreprise dans un fichier .CSV
 Pour l'étape 4c ci-dessus, vous pouvez utiliser le script Windows PowerShell suivant pour extraire les URL des bibliothèques OneDrive Entreprise de tous les utilisateurs, que vous pouvez ensuite vérifier, modifier si nécessaire et importer dans le script principal.
 
-Ce script nécessite également le [SDK des composants du client SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Suivez les mêmes instructions pour le copier et coller, enregistrez le fichier localement (par exemple, sous « Rapport-OneDriveForBusinessSiteInfo.ps1 »), modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin` comme précédemment, puis exécutez le script.
+Ce script nécessite également le [SDK des composants du client SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Suivez les mêmes instructions pour le copier et le coller, enregistrez le fichier localement (par exemple, sous « Report-OneDriveForBusinessSiteInfo.ps1 »), modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin` comme précédemment, puis exécutez le script.
 
 *&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 

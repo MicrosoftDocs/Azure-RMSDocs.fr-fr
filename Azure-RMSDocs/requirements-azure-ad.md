@@ -13,11 +13,11 @@ ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72890290"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404638"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
@@ -51,7 +51,7 @@ La valeur UPN des utilisateurs ne correspond pas à leur adresse e-mail :
 
 Appareils mobiles ou ordinateurs Mac qui s’authentifient localement avec AD FS ou un fournisseur d’authentification équivalent :
 
-- Vous devez utiliser AD FS sur la version serveur minimale de **Windows Server 2012 R2**, ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
+- Vous devez utiliser soit les services AD FS sur la version serveur minimale de **Windows Server 2012 R2**, soit un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :
@@ -90,6 +90,6 @@ Le connecteur Azure Rights Management et le moteur d’analyse Azure Information
  
 - Le compte de service qui exécute le moteur d’analyse.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements.md).
 

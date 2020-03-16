@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 9bd7768d478301e090518f86bd119c99436ca8a3
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935501"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79405080"
 ---
 # <a name="migration-phase-1---preparation"></a>Phase de migration 1 : Préparation
 
@@ -55,7 +55,7 @@ Par exemple : **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
             (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
-## <a name="step-2-prepare-for-client-migration"></a>Étape 2. Préparer la migration des clients
+## <a name="step-2-prepare-for-client-migration"></a>Étape 2. Préparer la migration des clients
 
 Pour la plupart des migrations, comme il n’est pas pratique de migrer tous les clients à la fois, vous pouvez les migrer par lots. Cela signifie que, pendant une période donnée, certains clients utilisent Azure Information Protection et d’autres continuent à utiliser AD RMS. Pour prendre en charge les utilisateurs avant et après la migration, utilisez les contrôles d’intégration et déployez un script de prémigration. Cette étape est nécessaire pendant le processus de migration afin que les utilisateurs qui n’ont pas encore migré puissent consommer le contenu qui a été protégé par les utilisateurs migrés qui utilisent maintenant Azure Rights Management.
 
@@ -87,7 +87,7 @@ Pour la plupart des migrations, comme il n’est pas pratique de migrer tous les
 
     Vous pouvez utiliser une stratégie de groupe ou un autre mécanisme de déploiement de logiciel pour déployer ce script.
 
-## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Étape 3. Préparer le déploiement Exchange pour la migration
+## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Étape 3. Préparer le déploiement Exchange pour la migration
 
 Si vous utilisez Exchange Online ou Exchange sur site, vous avez peut-être déjà intégré Exchange à votre déploiement AD RMS. Dans cette étape, vous allez les configurer pour utiliser la configuration AD RMS existante pour prendre en charge le contenu protégé par Azure RMS. 
 
@@ -147,6 +147,6 @@ Commandes PowerShell à exécuter l’une après l’autre, ou dans un script
 Après avoir exécuté ces commandes pour Exchange Online ou Exchange sur site, si votre déploiement Exchange a été configuré pour prendre en charge le contenu qui a été protégé par AD RMS, il prend également en charge le contenu protégé par Azure RMS après la migration. Votre déploiement Exchange continue à utiliser les services AD RMS pour prendre en charge le contenu protégé jusqu’à une étape ultérieure de la migration.
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Passez à la [Phase 2 : Configuration côté serveur](migrate-from-ad-rms-phase2.md).
 

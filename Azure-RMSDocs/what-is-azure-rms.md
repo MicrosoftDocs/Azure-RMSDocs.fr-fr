@@ -16,13 +16,13 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: a09ee41507dae2aa54cf8cde326d70be143d403c
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934074"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403533"
 ---
-# <a name="what-is-azure-rights-management"></a>Qu'est-ce qu'Azure Rights Management ?
+# <a name="what-is-azure-rights-management"></a>En quoi consiste Azure Rights Management ?
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -83,11 +83,11 @@ Azure Rights Management prend en charge les exigences réglementaires, de confor
 
 -   L'agence FedRAMP, dans le cadre de la certification d'Azure Active Directory dans Office 365, a émis une autorisation d'utilisation par HHS
 
--   Niveau 1 PCI DSS
+-   Niveau 1 PCI DSS
 
 Pour plus d'informations sur ces certifications externes, consultez le [Centre de confidentialité de Azure](https://azure.microsoft.com/support/trust-center/compliance/).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour obtenir plus d’informations techniques sur le fonctionnement du service Azure Rights Management, consultez [Fonctionnement d’Azure RMS](how-does-it-work.md).
 

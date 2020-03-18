@@ -4,19 +4,19 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d8afb466a119bdedb03082d6a2d59c59fad4564c
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: d63faa1d40768927c064eb40092c7a9d0668fae8
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972718"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482774"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -60,7 +60,7 @@ Notez que les paramètres de stratégie peuvent avoir des valeurs par défaut di
     
     - **Tous les documents et e-mails doivent avoir une étiquette** : lorsque vous paramétrez cette option sur **Activé**, tous les documents et e-mails envoyés enregistrés doivent avoir une étiquette appliquée. L’étiquetage peut être affecté manuellement par un utilisateur, automatiquement à la suite d’une [condition](configure-policy-classification.md), ou être attribué par défaut (en définissant l’option **Sélectionner l’étiquette par défaut**.
         
-       Si aucune étiquette n’est affectée quand les utilisateurs enregistrent un document ou envoient un e-mail, ils sont invités à sélectionner une étiquette. Exemple :
+       Si aucune étiquette n’est affectée quand les utilisateurs enregistrent un document ou envoient un e-mail, ils sont invités à sélectionner une étiquette. Par exemple :
         
        ![Invite d’Azure Information Protection si un étiquetage est appliqué](./media/info-protect-enforce-labelv2.png)
         
@@ -104,7 +104,7 @@ Notez que les paramètres de stratégie peuvent avoir des valeurs par défaut di
 
 Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour voir comment certains de ces paramètres de stratégie peuvent fonctionner ensemble, essayez le tutoriel [Configurer des paramètres Azure Information Protection qui fonctionnent ensemble](infoprotect-settings-tutorial.md).
 

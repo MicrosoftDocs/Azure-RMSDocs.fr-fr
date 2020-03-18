@@ -1,10 +1,10 @@
 ---
 title: Déployer le scanneur de Azure Information Protection-versions précédentes
 description: Instructions de déploiement pour les versions de l’analyseur de Azure Information Protection antérieures à la version de disponibilité générale actuelle.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 986a9cfb4376f17d2a53aa78b512bb8ab16f2243
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 8e1dd6ba7076a62b8b5c65b89fe49a0cb3b4fb8c
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973261"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483097"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Déploiement des versions précédentes du scanneur Azure Information Protection
 
@@ -63,7 +63,7 @@ Vous pouvez indiquer quels types de fichiers analyser ou exclure de l’analyse.
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prérequis pour le scanneur Azure Information Protection
 Avant d’installer le scanneur Azure Information Protection, vérifiez que les conditions suivantes sont respectées.
 
-|Exigence|Informations complémentaires|
+|Configuration requise|Informations complémentaires|
 |---------------|--------------------|
 |Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 8 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2019, Windows Server 2016 ou Windows Server 2012 R2. <br /><br />**Remarque**: à des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br />Si la connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations) . Dans le cas contraire, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPs (port 443) :<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
 |Compte de service pour exécuter le service du scanneur |En plus d’exécuter le service du scanneur sur l’ordinateur Windows Server, ce compte Windows s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />- **Ouvrir une session localement**, attribution des droits utilisateur. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Ouvrir une session en tant que service**, attribution des droits utilisateur. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />-Autorisations sur les référentiels de données : pour les référentiels de données sur SharePoint en local, accordez toujours l’autorisation **modifier** si l’option **Ajouter et personnaliser des pages** est sélectionnée pour le site, ou accordez l’autorisation **concevoir** . Pour les autres référentiels de données, accordez des autorisations **en lecture et en** **écriture** pour analyser les fichiers, puis appliquez la classification et la protection aux fichiers qui remplissent les conditions de la stratégie de Azure information protection. Pour exécuter le scanneur en mode détection uniquement pour les autres référentiels de données, l’autorisation de **lecture** est suffisante.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md). En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
@@ -105,7 +105,7 @@ Si le rôle Sysadmin peut vous être attribué temporairement pour installer le 
 
 Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données nommée AzInfoProtectionScanner avant d’installer le scanneur. Pour cette configuration, les rôles suivants doivent être attribués :
     
-|Compte|Rôle au niveau de la base de données|
+|Account|Rôle au niveau de la base de données|
 |--------------------------------|---------------------|
 |Compte de service pour le scanneur|db_owner|
 |Compte utilisateur pour l’installation du scanneur|db_owner|
@@ -118,7 +118,7 @@ Pour créer un utilisateur et accorder des droits de db_owner sur cette base de 
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
-En outre :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
@@ -424,7 +424,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
 - La construction d’expressions regex pour des conditions personnalisées
     
-    Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. Exemple :
+    Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. Par exemple :
     
     - Évitez les [quantificateurs gourmands](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
@@ -442,7 +442,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
     
     - Les gros fichiers prennent évidemment plus de temps à analyser que les petits fichiers.
 
-- En outre :
+- En outre :
     
     - Vérifiez que le compte de service qui exécute le scanneur dispose uniquement des droits décrits dans la section [conditions préalables du scanneur](#prerequisites-for-the-azure-information-protection-scanner) , puis configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) pour désactiver le niveau d’intégrité faible du scanneur.
     
@@ -513,7 +513,7 @@ Si le scanneur a été configuré pour une exécution manuelle et non continue, 
 
 ----
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 

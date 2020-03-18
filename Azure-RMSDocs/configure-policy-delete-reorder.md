@@ -4,19 +4,19 @@ description: Vous pouvez supprimer ou réorganiser les étiquettes Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3edb56da95274608dae79e3e0694eda67737228c
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 1bd2e62d27ed59f79353b294d7a8924953402be8
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972563"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482400"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
@@ -71,7 +71,7 @@ Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
 
     - Pour réorganiser une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette à réorganiser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu'à ce que l’étiquette se trouve à l’endroit souhaité.  
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

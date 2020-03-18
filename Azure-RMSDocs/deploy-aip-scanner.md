@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/27/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,20 +12,22 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc2c9a134c222ad9ec8463e94dc5b355ade20d91
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 0e8d1e570b09e406ee20fcb14a0f5bf13cb8e760
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404315"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483216"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 > [!NOTE]
-> Cet article est destiné à la version actuelle de la disponibilité générale du scanneur Azure Information Protection avec le client Azure Information Protection (Classic) et à la version préliminaire du scanneur pour la version de disponibilité générale actuelle d’Azure. Information Protection client d’étiquetage unifié.
+> Cet article est destiné à la version actuelle de la disponibilité générale du scanneur de Azure Information Protection avec le client Azure Information Protection (Classic) et à la version de disponibilité générale du client d’étiquetage unifié Azure Information Protection.
 > 
 > Si vous avez déjà installé le scanneur et que vous souhaitez le mettre à niveau, utilisez les instructions de mise à niveau suivantes, puis suivez les instructions de cette page, en omettant l’étape d’installation du scanneur :
 > - Pour le client classique : [mise à niveau du scanneur Azure information protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
@@ -755,7 +757,7 @@ Si le scanneur a été configuré pour s’exécuter manuellement plutôt que de
 
 Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez les sections suivantes dans les guides d’administration :
 

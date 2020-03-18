@@ -4,18 +4,18 @@ description: Comprendre le processus de configuration de la stratégie par défa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 315b61c3efe5a591848cb82e7ad27991cb17eb8f
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 766259cf25be40ae74d64fdb763514f8385a4971
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972645"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482366"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -25,7 +25,6 @@ ms.locfileid: "78972645"
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
-
 
 > [!NOTE]
 > La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -106,7 +105,7 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|valeur|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Titre|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
@@ -116,9 +115,9 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 Certains paramètres ont été ajoutés après le 31 juillet 2017.
 
-|Paramètre|valeur|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
-|Sélectionner l’étiquette par défaut|Aucune.|
+|Sélectionner l’étiquette par défaut|Aucune|
 |Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
@@ -155,7 +154,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|valeur|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Titre|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
@@ -163,10 +162,10 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|valeur|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
-|Sélectionner l’étiquette par défaut|Aucune.|
+|Sélectionner l’étiquette par défaut|Aucune|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
@@ -193,7 +192,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|valeur|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Titre|Sensibilité|
 |Info-bulle|La confidentialité des informations est composée de quatre niveaux distincts (public, interne, confidentiel, secret), qui permettent à l’utilisateur d’identifier le risque d’exposition d’informations à des utilisateurs non autorisés à l’intérieur ou à l’extérieur de l’entreprise.|
@@ -201,14 +200,14 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|valeur|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
-|Sélectionner l’étiquette par défaut|Aucune.|
+|Sélectionner l’étiquette par défaut|Aucune|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy). 

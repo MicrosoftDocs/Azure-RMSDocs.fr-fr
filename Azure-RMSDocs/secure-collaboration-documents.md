@@ -13,16 +13,19 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 61567869b889ba72c61e736804c313fd4e0bfbb0
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403720"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483386"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Lorsque vous utilisez Azure Information Protection, vous pouvez protéger vos documents sans pour autant devoir renoncer à la collaboration avec des utilisateurs autorisés. Les documents créés par un utilisateur puis partagés avec d’autres afin que ceux-ci puissent les consulter et les modifier sont en majorité des documents Office Word, Excel et PowerPoint. Ces documents prennent en charge la protection native, autrement dit, en plus des fonctionnalités de protection que sont le chiffrement et l’autorisation, ils prennent également en charge l’autorisation restreinte pour un contrôle plus précis. 
 

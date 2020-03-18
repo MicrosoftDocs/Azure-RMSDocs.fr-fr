@@ -4,19 +4,19 @@ description: Vue d’ensemble de la protection HYOK (AD RMS) pour Azure Informat
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 4fb1018d75717faeb2e19a1ac63bc74b9cb44b07
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972692"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482689"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
@@ -26,7 +26,6 @@ ms.locfileid: "78972692"
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
-
 
 Prenez connaissance des informations suivantes pour comprendre le lien entre la protection HYOK (Hold Your Own Key) et Azure Information Protection, et en quoi cette protection diffère de la protection cloud par défaut. Avant d’appliquer une protection HYOK, assurez-vous de bien comprendre les cas d’usage appropriés, les scénarios pris en charge, les limitations et les prérequis. 
 
@@ -72,7 +71,7 @@ Pour appliquer une protection HYOK, utilisez les étiquettes Azure Information P
 
 Le tableau suivant liste les scénarios qui prennent en charge la protection du contenu à l’aide d’étiquettes configurées avec HYOK, ainsi que l’ouverture (l’utilisation) du contenu protégé par HYOK.
 
-|Plate-forme|Application|Pris en charge|
+|Plateforme|Application|Pris en charge|
 |----------------------|----------|-----------|
 |Windows|Client Azure Information Protection avec applications Office 365, Office 2019, Office 2016 et Office 2013 <br /><br />- Word, Excel, PowerPoint|Protection : oui<br /><br />Utilisation : oui|
 |Windows|Client Azure Information Protection avec applications Office 365, Office 2019, Office 2016 et Office 2013 <br /><br />- Outlook|Protection : oui<br /><br />Utilisation : oui|
@@ -200,6 +199,6 @@ Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la
     Si vous disposez d’une valeur de licence extranet et d’une valeur de licence intranet différentes : spécifiez la valeur extranet uniquement si vous voulez partager des documents ou des e-mails protégés avec des partenaires qui ont été définis avec des approbations point à point explicites. Sinon, utilisez la valeur intranet et vérifiez que tous les ordinateurs clients qui utilisent la protection AD RMS avec Azure Information Protection se connectent au moyen d’une connexion intranet (par exemple, les ordinateurs distants utilisent une connexion VPN).
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour savoir comment configurer une étiquette pour la protection HYOK, consultez [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md). 

@@ -4,7 +4,7 @@ description: Configurez et gérez les modèles de protection, également appelé
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 63c6857794730dc0b6532d39c6ae7b8a2d572671
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: df8b182f39cb4609dfda42c7ded85d44add58cb5
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973297"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482740"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -162,7 +162,7 @@ Quand vous créez une étiquette avec le paramètre de protection **Azure (clé 
 
 5. À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir les nouveaux paramètres de protection. Puis, sélectionnez **Ajouter ou supprimer des étiquettes**. Dans le volet **stratégie : ajouter ou supprimer des étiquettes** , sélectionnez l’étiquette qui vient d’être créée et qui contient vos paramètres de protection, cliquez sur **OK**, puis sélectionnez **Enregistrer**.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Il peut prendre jusqu'à 15 minutes pour qu’un ordinateur exécutant le client Azure Information Protection obtienne ces paramètres modifiés. Pour plus d’informations sur la façon dont les ordinateurs et les services téléchargent et actualisent les modèles, consultez [Actualisation des modèles pour les utilisateurs et services](refresh-templates.md).
 

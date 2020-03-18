@@ -4,7 +4,7 @@ description: Informations destinées aux administrateurs sur le déploiement des
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 180e6c29580c87ebdf813df0dc6aae40007f1d86
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 2219c1267d9c271106a7605f1947990bd1ea21a6
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972766"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482672"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : installation et configuration pour les clients
 
@@ -77,6 +77,6 @@ Informations supplémentaires quand vous ajoutez l’application Azure Informati
 
 Quand l’application Azure Information Protection est configurée pour une stratégie de protection d’application pour les appareils Android, en plus d’ouvrir le texte, les images et les documents PDF protégés, elle peut aussi ouvrir des fichiers audio et vidéo. Pour plus d’informations, consultez [Afficher des fichiers multimédias avec l’application Azure Information Protection](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Une fois que vous avez installé et configuré Azure Information Protection clients, vous devrez peut-être en savoir plus sur la façon dont le client interprète les différents droits d’utilisation qui peuvent être utilisés pour protéger des documents et des e-mails. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure Information Management](configure-usage-rights.md).

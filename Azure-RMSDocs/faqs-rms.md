@@ -4,7 +4,7 @@ description: Certaines questions fréquentes sur le service de protection des do
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,19 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 184d1b69c7256d85e162edc5a2993b1bff066500
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: f62c8088ace61b60d7cb94c55ad174265bf516f6
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404298"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482297"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Vous avez une question sur le service de protection des données, Azure Rights Management, d’Azure Information Protection ? Vous trouverez peut-être une réponse ici.
 
@@ -31,13 +33,13 @@ Non, il s’agit d’une idée fausse répandue. Le service Azure Rights Managem
 
 Pour plus d’informations, consultez [comment Azure RMS fonctionne-t-il ? Sous le capot](./how-does-it-work.md) pour comprendre comment une formule secrète de Cola, créée et stockée localement, est protégée par le service Azure Rights Management, mais reste en local.
 
-## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Quelle est la différence entre le chiffrement Azure Rights Management et le chiffrement dans d’autres services cloud Microsoft ?
+## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Quelle est la différence entre le chiffrement Azure Rights Management et le chiffrement dans d’autres services Cloud Microsoft ?
 
 Microsoft propose plusieurs technologies de chiffrement qui vous permettent de protéger vos données dans des scénarios différents et souvent complémentaires. Par exemple, si Office 365 offre le chiffrement au repos des données stockées dans Office 365, le service Azure Rights Management d’Azure Information Protection chiffre indépendamment vos données pour les protéger, quel que soit leur emplacement ou leur mode de transmission.
 
 Pour utiliser ces technologies de chiffrement complémentaires, vous devez les activer et les configurer indépendamment. À ce stade, vous pouvez être invité à fournir votre propre clé de chiffrement. Il s’agit du scénario BYOK (« Bring Your Own Key »). Le fait d’activer BYOK avec l’une de ces technologies n’affecte pas les autres. Vous pouvez ainsi utiliser BYOK avec Azure Information Protection et ne pas l’utiliser avec d’autres technologies de chiffrement, ou vice versa. Les clés utilisées par ces différentes technologies peuvent être identiques ou non, selon la façon dont vous configurez les options de chiffrement pour chaque service.
 
-## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Quelle est la différence entre les dispositifs BYOK et HYOK et quand dois-je les utiliser ?
+## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Quelle est la différence entre BYOK et HYOK et quand dois-je les utiliser ?
 
 Dans Azure Information Protection, la solution **Bring Your Own Key** (BYOK) vous permet de créer votre propre clé en local pour la protection offerte par Azure Rights Management. Ensuite, vous transférez cette clé à un module de sécurité matériel (HSM, Hardware Security Module) dans Azure Key Vault, mais elle reste en votre possession et vous continuez à la gérer. Si vous ne procédez pas ainsi, la fonctionnalité de protection d’Azure Rights Management utilise une clé automatiquement créée et gérée pour vous dans Azure. Cette configuration par défaut est considérée comme « gérée par Microsoft » plutôt que « gérée par le client » (option BYOK).
 
@@ -61,7 +63,7 @@ De nombreux fournisseurs de logiciels disposent de solutions ou implémentent de
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Existe-t-il un pack d’administration ou un mécanisme de surveillance similaire pour le connecteur RMS ?
 
-Bien que le connecteur Rights Management consigne les messages d’information, d’avertissement et d’erreur dans le journal des événements, il n’existe pas de pack d’administration qui inclut la surveillance de ces événements. Toutefois, la liste des événements et leurs descriptions, ainsi que des informations supplémentaires pour vous aider à prendre une action corrective, sont documentées dans [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md).
+Bien que le connecteur Rights Management consigne les messages d’information, d’avertissement et d’erreur dans le journal des événements, il n’existe pas de Pack d’administration qui inclut la surveillance de ces événements. Toutefois, la liste des événements et leurs descriptions, ainsi que des informations supplémentaires pour vous aider à prendre une action corrective, sont documentées dans [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md).
 
 ## <a name="how-do-i-create-a-new-custom-template-in-the-azure-portal"></a>Comment créer un nouveau modèle personnalisé dans le portail Azure ?
 
@@ -95,11 +97,11 @@ Oui, le service Azure Rights Management dispose de contrôles d’intégration d
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Puis-je empêcher des utilisateurs de partager des documents protégés avec des organisations spécifiques ?
 L’un des avantages majeurs de l’utilisation du service Azure Rights Management pour la protection des données est qu’il prend en charge la collaboration interentreprises sans que vous soyez obligé de configurer des approbations explicites pour chaque organisation partenaire, car Azure AD se charge de l’authentification à votre place.
 
-Il n'existe aucune option d'administration permettant d'empêcher des utilisateurs de partager en toute sécurité des documents avec des organisations spécifiques. Par exemple, imaginons que vous souhaitiez bloquer une organisation en laquelle vous n'avez pas confiance ou qui exerce une activité concurrente. Empêcher le service Azure Rights Management d’envoyer des documents protégés à des utilisateurs travaillant au sein de cette organisation n’aurait aucun sens, car ceux-ci partageraient leurs documents non protégés, ce qui est probablement la dernière chose que vous souhaitez dans le cadre de ce scénario. Par exemple, vous ne seriez pas en mesure d’identifier qui partage des documents confidentiels avec quels utilisateurs au sein de ces organisations, contrairement à ce que vous pouvez faire quand le document (ou l’e-mail) est protégé par le service Azure Rights Management.
+Il n'existe aucune option d'administration permettant d'empêcher des utilisateurs de partager en toute sécurité des documents avec des organisations spécifiques. Par exemple, vous souhaitez bloquer une organisation à laquelle vous n’avez pas confiance ou qui a une activité concurrente. Empêcher le service Azure Rights Management d’envoyer des documents protégés à des utilisateurs de ces organisations n’aurait aucun sens, car vos utilisateurs partageraient leurs documents non protégés, ce qui est probablement la dernière chose que vous souhaitez faire dans ce consiste. Par exemple, vous ne seriez pas en mesure d’identifier qui partage des documents confidentiels de l’entreprise avec quels utilisateurs dans ces organisations, ce que vous pouvez faire quand le document (ou l’e-mail) est protégé par le service Azure Rights Management.
 
 ## <a name="when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated"></a>Lors du partage d'un document protégé avec une personne extérieure à mon organisation, comment cet utilisateur s'authentifie-t-il ?
 
-Par défaut, le service Azure Rights Management utilise un compte Azure Active Directory et une adresse e-mail associée pour l’authentification de l’utilisateur, ce qui rend la collaboration interentreprises homogène pour les administrateurs. Si l’autre organisation utilise des services Azure, les utilisateurs disposent déjà de comptes dans Azure Active Directory, même si ceux-ci sont créés et gérés localement, puis synchronisés avec Azure. Si l’organisation dispose d’Office 365, en arrière-plan, ce service utilise également Azure Active Directory pour les comptes d’utilisateur. Si l’organisation de l’utilisateur ne dispose pas de compte géré dans Azure, les utilisateurs peuvent s’inscrire à [RMS for individuals](./rms-for-individuals.md), ce qui a pour effet de créer un locataire Azure non géré et un annuaire pour l’organisation avec un compte pour l’utilisateur, afin que celui-ci, et les utilisateurs suivants, puissent s’authentifier auprès du service Azure Rights Management.
+Par défaut, le service Azure Rights Management utilise un compte Azure Active Directory et une adresse e-mail associée pour l’authentification de l’utilisateur, ce qui rend la collaboration interentreprises homogène pour les administrateurs. Si l’autre organisation utilise des services Azure, les utilisateurs disposent déjà de comptes dans Azure Active Directory, même si ceux-ci sont créés et gérés localement, puis synchronisés avec Azure. Si l’organisation dispose d’Office 365, en arrière-plan, ce service utilise également Azure Active Directory pour les comptes d’utilisateur. Si l’organisation de l’utilisateur n’a pas de compte géré dans Azure, les utilisateurs peuvent s’inscrire à [RMS for Individuals](./rms-for-individuals.md), ce qui crée un locataire et un répertoire Azure non gérés pour l’organisation avec un compte pour l’utilisateur, afin que cet utilisateur (et les utilisateurs suivants) puissent ensuite être authentifiés pour le service Azure Rights Management.
 
 La méthode d'authentification pour ces comptes peut varier en fonction de la manière dont l'administrateur de l'autre organisation a configuré les comptes Azure Active Directory. Par exemple, ils peuvent utiliser des mots de passe créés pour ces comptes, une fédération ou des mots de passe créés dans les services de domaine Active Directory, puis synchronisés avec Azure Active Directory.
 
@@ -162,13 +164,13 @@ Pour effectuer le suivi d’un document une fois que vous l’avez protégé : 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quand j’ouvre un document Office protégé par RMS, le fichier temporaire associé devient-il également protégé par RMS ?
 Non. Dans ce scénario, le fichier temporaire associé ne contient pas les données du document d’origine, mais uniquement ce que l’utilisateur entre pendant que le fichier est ouvert. Contrairement au fichier d’origine, le fichier temporaire n’est évidemment pas conçu pour le partage. Il reste sur l’appareil, protégé par des contrôles de sécurité locaux tels que BitLocker et EFS.
 
-## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>Il semble qu'une fonctionnalité que je recherche ne fonctionne pas avec les bibliothèques protégées SharePoint. Une prise en charge de ma fonctionnalité est-elle prévue ?
+## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>Une fonctionnalité que je recherche ne fonctionne pas avec les bibliothèques protégées SharePoint. la prise en charge de ma fonctionnalité est-elle prévue ?
 Actuellement, SharePoint prend en charge les documents protégés par RMS en utilisant des bibliothèques protégées par IRM, qui ne prennent pas en charge les modèles Rights Management, le suivi de document et certaines autres fonctionnalités. Pour plus d’informations, consultez la section [SharePoint Online et SharePoint Server](./office-apps-services-support.md#sharepoint-online-and-sharepoint-server) dans l’article [Applications et services Office](./office-apps-services-support.md).
 
 Si vous êtes intéressé par une fonctionnalité spécifique qui n’est pas encore prise en charge, surveillez les annonces publiées dans [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Blog de sécurité et de mobilité d’entreprise).
 
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Comment configurer OneDrive Entreprise dans SharePoint Online, afin que les utilisateurs puissent partager en toute sécurité des fichiers avec des personnes à l'intérieur et à l'extérieur de l'organisation ?
-Par défaut, en votre qualité d’administrateur Office 365, ce n’est pas vous qui configurez cela, mais les utilisateurs.
+Par défaut, en tant qu’administrateur Office 365, vous ne configurez pas ce paramètre. les utilisateurs.
 
 De la même manière qu’un administrateur de site SharePoint active et configure IRM pour une bibliothèque SharePoint dont il est propriétaire, OneDrive Entreprise a été conçu pour permettre aux utilisateurs d’activer et de configurer IRM pour leur propre bibliothèque OneDrive Entreprise. Cependant, en utilisant PowerShell, vous pouvez le faire à leur place. Pour obtenir des instructions, consultez la section [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) dans l’article [Office 365 : configuration pour les clients et services en ligne](configure-office365.md).
 

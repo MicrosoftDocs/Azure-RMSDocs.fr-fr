@@ -4,7 +4,7 @@ description: Pour configurer d’autres paramètres et étiquettes pour des util
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d0a370950bb5853453106e59af3da9c9a2f8f463
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 1922348a9d6075eb9843588515a24a5896fc41cf
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972885"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482723"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
@@ -57,6 +57,9 @@ Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans l
     
     Pour des raisons de performances, l’appartenance au groupe pour les stratégies délimitées est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection).
 
+    > [!NOTE]
+    > Sélectionnez jusqu’à 200 utilisateurs ou groupes. Si plus de 200 utilisateurs sont nécessaires pour obtenir la stratégie délimitée, créez un groupe, ajoutez des utilisateurs appropriés au groupe, puis définissez l’étendue de la stratégie sur le nouveau groupe. 
+
 4. Maintenant, ajoutez des étiquettes ou configurez les paramètres de la stratégie délimitée. La stratégie globale est toujours appliquée en premier, afin de compléter la stratégie globale avec les nouvelles étiquettes et de remplacer les paramètres globaux. Par exemple, la stratégie globale peut ne pas avoir d’étiquette par défaut spécifiée et vous configurez une étiquette par défaut différente dans les différentes stratégies délimitées à des services spécifiques.
 
     Si vous avez besoin d’aide pour la configuration des étiquettes ou des paramètres, utilisez les liens de la section Configuration de la [stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy) .
@@ -67,6 +70,6 @@ Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans l
 
 Le client Azure Information Protection vérifie toutes les modifications à chaque démarrage d’une application Office prise en charge ou à chaque ouverture de l'Explorateur de fichiers. Il télécharge les modifications dans la stratégie globale ou les stratégies délimitées qui s’appliquent à cet utilisateur.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, suivez le tutoriel [Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md).

@@ -4,7 +4,7 @@ description: Instructions et informations pour les administrateurs pour configur
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e4537e9a84f83eaf3865e01dbf4c5b702a8bbc50
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: f249f8f725fc64c4c18e5d4919a34ad5accfb2a8
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973090"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483029"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -107,7 +107,7 @@ Pour obtenir des instructions sur l’utilisation du site de suivi des documents
 
 Pour pouvoir suivre et révoquer un document, il doit d’abord être enregistré sur le site de suivi des documents. Cette action se produit quand les utilisateurs sélectionnent l’option **Suivre et révoquer** dans l’Explorateur de fichiers ou leurs applications Office lorsqu’ils utilisent le client Azure Information Protection.
 
-Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Exemple :
+Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Par exemple :
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 
@@ -123,7 +123,7 @@ Il existe également des types de demandes qui journalisent la façon dont les u
 
 Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](../log-analyze-usage.md)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Maintenant que vous avez configuré le site de suivi des documents pour le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
 - [Customizations](client-admin-guide-customizations.md)

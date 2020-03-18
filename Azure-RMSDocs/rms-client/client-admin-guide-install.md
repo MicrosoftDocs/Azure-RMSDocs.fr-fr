@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/15/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 22fba73024ac9c20051742246c96f5c2807a5c4f
-ms.sourcegitcommit: 03c9f8d24c65bffc14b9701ea83a2ac05b681023
+ms.openlocfilehash: e8a2b3fbf25dcf3952c232e12998af1c004493cc
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416393"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483267"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -26,6 +26,8 @@ ms.locfileid: "79416393"
 >
 > *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Avant d’installer le client Azure Information Protection sur votre réseau d’entreprise, vérifiez que vos ordinateurs disposent des versions et des applications nécessaires du système d’exploitation pour Azure Information Protection : [Configuration requise pour Azure Information Protection](../requirements.md). 
 
@@ -155,7 +157,7 @@ Utilisez la procédure suivante pour identifier la valeur à spécifier pour le 
 
 3. Supprimez la section **/_wmcs/licensing** de cette chaîne. Par exemple : **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-    La chaîne restante correspond à la valeur à spécifier pour le paramètre ServiceLocation.
+    La chaîne remainin’est la valeur à spécifier pour votre paramètre ServiceLocation.
 
 Exemple d’installation du client en mode silencieux pour Office 2010 et Azure RMS : `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 

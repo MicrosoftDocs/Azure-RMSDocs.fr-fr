@@ -4,19 +4,19 @@ description: Vous pouvez ajouter la prise en charge de différentes langues pour
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 21b4cf65be0b4f31a1b98df58f0578aaf41b797c
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 139fbf957b8ce6e4caaabbed5c2f8ff4e61b8dc4
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972598"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482383"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 
@@ -112,7 +112,7 @@ Dans les scénarios suivants, les noms localisés des étiquettes (et sous-étiq
 - En-têtes de messagerie et métadonnées de document
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour plus d’informations sur la configuration des options disponibles pour une étiquette et d’autres paramètres de vos stratégies Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
 

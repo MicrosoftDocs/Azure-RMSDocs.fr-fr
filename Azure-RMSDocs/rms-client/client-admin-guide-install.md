@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9759e1aea777a3de4cb8717e053d77d582e963a7
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 22fba73024ac9c20051742246c96f5c2807a5c4f
+ms.sourcegitcommit: 03c9f8d24c65bffc14b9701ea83a2ac05b681023
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404723"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416393"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -58,18 +58,6 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
 - KB 4482887
     
     Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.
-
-- KB 2533623
-    
-    Les ordinateurs exécutant Windows 7 SP1 requièrent KB 2533623. Pour plus d’informations, consultez [Avis de sécurité Microsoft : le chargement non sécurisé de bibliothèque peut permettre l’exécution de code à distance](https://support.microsoft.com/en-us/kb/2533623). Vous pouvez peut-être installer cette mise à jour directement, ou elle peut être remplacée par une autre qui l’installe pour vous.
-    
-    Si cette mise à jour est requise, mais qu’elle n’est pas installée, l’installation du client vous avertit qu’elle doit l’être. Cette mise à jour peut être installée après l’installation du client, mais certaines actions seront bloquées et le message s’affichera à nouveau.  
-
-- Visual C++ Redistributable pour Visual Studio 2015 (version 32 bits)
-    
-    Pour les ordinateurs qui exécutent Windows 7 Service Pack 1, installez **vc_redist.x86.exe** depuis la page de téléchargement : [Visual C++ Redistributable pour Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
-    
-    L’installation du client ne recherche pas ce prérequis, mais il est nécessaire au client Azure Information Protection pour classifier et protéger les fichiers PDF.
 
 - Configurer la stratégie de groupe pour empêcher la désactivation du complément Azure Information Protection
     
@@ -205,9 +193,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Install|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
     |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Install|
-    |Office 2010|Windows 7 et Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB3125574 n’est pas installé|
-    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
-    |Not applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller|
+
 
 3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/** , par exemple, `AzInfoProtection.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) d’installation exécutable, à une exception près :
     

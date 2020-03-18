@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f50db0279d5611e3e62698a6a4ca7f871f00dd04
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: ca7b0b879af117bc198c1a4224a44639c39d5548
+ms.sourcegitcommit: 03c9f8d24c65bffc14b9701ea83a2ac05b681023
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403652"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416376"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -57,18 +57,6 @@ Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires
     
     Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.
 
-- KB 2533623
-    
-    Les ordinateurs exécutant Windows 7 SP1 requièrent KB 2533623. Pour plus d’informations, consultez [Avis de sécurité Microsoft : le chargement non sécurisé de bibliothèque peut permettre l’exécution de code à distance](https://support.microsoft.com/en-us/kb/2533623). Vous pouvez peut-être installer cette mise à jour directement, ou elle peut être remplacée par une autre qui l’installe pour vous.
-    
-    Si cette mise à jour est requise, mais qu’elle n’est pas installée, l’installation du client vous avertit qu’elle doit l’être. Cette mise à jour peut être installée après l’installation du client, mais certaines actions seront bloquées et le message s’affichera à nouveau.  
-
-- Visual C++ Redistributable pour Visual Studio 2015 (version 32 bits)
-    
-    Pour les ordinateurs qui exécutent Windows 7 Service Pack 1, installez **vc_redist.x86.exe** depuis la page de téléchargement : [Visual C++ Redistributable pour Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
-    
-    L’installation du client ne vérifie pas la configuration requise, mais elle est nécessaire pour que le client d’étiquetage unifié Azure Information Protection pour classifier et protéger les fichiers PDF.
-
 - Configurer la stratégie de groupe pour empêcher la désactivation du complément Azure Information Protection
     
     Pour Office 2013 et versions ultérieures, configurez la stratégie de groupe pour vous assurer que le complément **Microsoft Azure Information Protection** pour les applications Office est toujours activé. Sans cette configuration, le complément Microsoft Azure Information Protection peut être désactivé et les utilisateurs ne seront pas en mesure d’étiqueter leurs documents et e-mails dans leur application Office.
@@ -88,6 +76,21 @@ Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires
 > [!IMPORTANT]
 > L’installation du client d’étiquetage unifié Azure Information Protection requiert des autorisations d’administrateur local.
 
+## <a name="applications"></a>Applications
+
+Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
+
+Applications Office version 1805 minimum, Build 9330,2078 à partir d’Office 365 Business ou Microsoft 365 Business lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelé Azure Information Protection pour Office 365) Office 365 ProPlus Office professionnel Plus 2019 Office professionnel plus 2016 Office professionnel plus 2013 avec Service Pack 1 Office professionnel plus 2010 avec Service Pack 2
+
+D’autres éditions (telles que **standard**) d’Office ne peuvent pas protéger des documents et des e-mails à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour l' **étiquetage** uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs sur le bouton ou la barre de sensibilité de Azure Information Protection.
+
+Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection, consultez [Applications prenant en charge la protection des données Azure Rights Management](https://docs.microsoft.com/azure/information-protection/requirements-applications).
+
+### <a name="office-features-and-capabilities-not-supported"></a>Fonctionnalités et fonctionnalités Office non prises en charge
+
+Le client d’étiquetage unifié Azure Information Protection ne prend pas en charge plusieurs versions d’Office sur le même ordinateur ou ne bascule pas les comptes d’utilisateur dans Office.
+
+La fonctionnalité de fusion et publipostage d’Office n’est pas prise en charge avec les fonctionnalités de Azure Information Protection.
 
 ## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Options d’installation du client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -200,9 +203,8 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Install|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
     |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Install|
-    |Office 2010|Windows 7 et Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB3125574 n’est pas installé|
-    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
-    |Not applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller|
+    
+   
 
 3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/** , par exemple, `AzInfoProtection_UL.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) d’installation exécutable, à une exception près :
     

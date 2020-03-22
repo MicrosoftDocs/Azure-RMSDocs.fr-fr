@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791337"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068387"
 ---
 # <a name="android-code-examples"></a>Exemples de code Android
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Cet article explique comment coder des éléments pour la version Android du Kit RMS SDK.
 

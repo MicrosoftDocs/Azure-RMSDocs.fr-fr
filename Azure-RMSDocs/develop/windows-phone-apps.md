@@ -14,25 +14,26 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8c36466511749b6148f58c439702c8cd0f252a64
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792093"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068507"
 ---
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Prérequis](#prerequisites)
+-   [Conditions préalables](#prerequisites)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Composants requis
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -71,7 +72,7 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Prise en main](get-started.md)
+[Mise en route](get-started.md)
 
 [Nouveautés](release-notes.md)
 

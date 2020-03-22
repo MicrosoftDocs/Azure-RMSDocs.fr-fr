@@ -1,5 +1,5 @@
 ---
-title: Configuration pour Linux
+title: Installation Linux
 description: Plusieurs versions des systèmes d’exploitation Linux peuvent désormais utiliser le SDK Rights Management 4.x.
 keywords: ''
 author: msmbaldwin
@@ -13,14 +13,16 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 7a7019e72e4d8d2b66c81fbc69542e140992467b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6d6986683529018ae8d7811fc8dc1bf91bf13a82
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60176820"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068601"
 ---
-# <a name="linux-setup"></a>Configuration pour Linux
+# <a name="linux-setup"></a>Installation Linux
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Plusieurs versions des systèmes d’exploitation Linux peuvent désormais utiliser le SDK Microsoft Rights Management 4.x pour activer la protection intégrée des informations dans leurs applications à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
@@ -43,6 +45,6 @@ Les bibliothèques et les exemples ont aussi été correctement compilés sur Wi
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en main](get-started.md)
+- [Mise en route](get-started.md)
 - [Nouveautés](release-notes.md)
 - [Terminologie et concepts du développement](core-concepts.md)

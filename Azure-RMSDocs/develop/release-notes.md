@@ -12,14 +12,16 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 2a3ef40991e2ba4fd5bac9c9eca947f269a77f47
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303624"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068306"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 ## <a name="whats-new"></a>Nouveautés
 
@@ -35,7 +37,7 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 -   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plateforme WinPhone](#january-2015-update---adds-winphone-platform-support)
 -   [Mise à jour d’octobre 2014 : mise à niveau vers Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Notes de publication](#release-notes)
--   [Forum Aux Questions](#frequently-asked-questions)
+-   [Forum aux questions](#frequently-asked-questions)
 
 ### <a name="new-for-july-2017"></a>Nouveau en juillet 2017
 
@@ -81,7 +83,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
     [Méthode synchrone UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)** ](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [Méthode synchrone UserPolicy.create (TempalteDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
 

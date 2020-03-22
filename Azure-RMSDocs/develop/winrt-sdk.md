@@ -14,25 +14,27 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 41ae437f06a3d90f391ead9dc843e86c1b54fcd8
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790722"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068678"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 Les applications du Windows Store peuvent utiliser le Kit Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
-Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
+Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Prérequis](#prerequisites)
+-   [Conditions préalables](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Composants requis
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -73,7 +75,7 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Prise en main](get-started.md)
+[Mise en route](get-started.md)
 
 [Nouveautés](release-notes.md)
 

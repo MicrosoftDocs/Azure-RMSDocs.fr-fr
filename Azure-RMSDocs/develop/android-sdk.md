@@ -14,25 +14,27 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792669"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068426"
 ---
 # <a name="android-setup"></a>Configuration pour Android
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations en utilisant Azure Active Directory Rights Management (AAD RM).
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Prérequis](#prerequisites)
+-   [Conditions préalables](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Composants requis
 
 Nous recommandons les logiciels suivants sur votre système de développement :
 
@@ -142,7 +144,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ### <a name="see-also"></a>Voir aussi
 
-[Prise en main](get-started.md)
+[Mise en route](get-started.md)
 
 [Nouveautés](release-notes.md)
 

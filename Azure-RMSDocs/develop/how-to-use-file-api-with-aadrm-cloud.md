@@ -14,21 +14,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 00f056e5e8dae9721933e041a766f72da99bb380
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 47107a9cbe9c7ba941475f83798a323cb4ff74d9
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792242"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068232"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management. Pour plus d’informations, consultez [Prise en main d’Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Important**  
 Pour utiliser votre application de service de Rights Management Services SDK 2.1 avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../requirements.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Composants requis
 
 -   RMS SDK 2.1 doit être installé et configuré. Pour plus d’informations, consultez [Prise en main de RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   Vous devez [créer une identité de service par le biais d’ACS](https://msdn.microsoft.com/library/gg185924.aspx) à l’aide de l’option de clé symétrique, ou par d’autres moyens, et noter les informations clés de ce processus.

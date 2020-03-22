@@ -4,7 +4,7 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f343194884ba299f0a003a975581b90fe423bcf9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: ef86511649f16740c4611766103b6985f350fdc9
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482961"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068355"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -538,36 +538,47 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     - **Description du consentement**de l’utilisateur : `Allow the application to access the scanner for the signed-in user`
     - **État**: **activé** (valeur par défaut)
 
+
 14. De retour sur le **AIPOnBehalfOf-exposer un volet API** , fermez ce volet.
 
-15. Dans le volet **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
+15. Sélectionnez **autorisations**de l’API.
 
-16. Dans le volet **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
+16. Dans le volet autorisations de l' **API** **AIPOnBehalfOf** | , sélectionnez **+ Ajouter une autorisation**.
+
+17. Choisissez **Azure Right Management**, sélectionnez **autorisations déléguées** , puis sélectionnez **créer et accéder au contenu protégé pour les utilisateurs**.
+
+18. Cliquez sur **Ajouter une autorisation**.
+
+19. De retour dans le volet autorisations de l' **API** , dans la section **accorder** le consentement, sélectionnez **accorder le consentement de l’administrateur pour <your tenant name>** et sélectionnez **Oui** pour l’invite de confirmation.
+
+20. Dans le volet **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native maintenant.
+
+21. Dans le volet **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
     - **Nom**: `AIPClient`
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     - **URI de redirection (facultatif)** : **client Public (mobile & desktop)** et `http://localhost`
 
-17. Dans le volet **AIPClient** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+22. Dans le volet **AIPClient** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Cette valeur est utilisée pour le paramètre NativeAppId lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-18. Toujours dans le volet **AIPClient** , dans le menu **gérer** , sélectionnez **authentification**.
+23. Toujours dans le volet **AIPClient** , dans le menu **gérer** , sélectionnez **authentification**.
 
-19. Dans le volet **AIPClient-Authentication** , spécifiez les éléments suivants, puis sélectionnez **Enregistrer**:
+24. Dans le volet **AIPClient-Authentication** , spécifiez les éléments suivants, puis sélectionnez **Enregistrer**:
     - Dans la section **Paramètres avancés** , sélectionnez **ID jetons**.
     - Dans la section **type de client par défaut** , sélectionnez **Oui**.
 
-20. Toujours dans le volet **AIPClient-Authentication** , dans le menu **gérer** , sélectionnez **autorisations API**.
+25. Toujours dans le volet **AIPClient-Authentication** , dans le menu **gérer** , sélectionnez **autorisations API**.
 
-21. Dans le volet **AIPClient-autorisations** , sélectionnez **+ Ajouter une autorisation**.
+26. Dans le volet **AIPClient-autorisations** , sélectionnez **+ Ajouter une autorisation**.
 
-22. Dans le volet **demander des autorisations d’API** , sélectionnez **mes API**.
+27. Dans le volet **demander des autorisations d’API** , sélectionnez **mes API**.
 
-23. Dans la section **Sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis activez la case à cocher **User-emprunt d’identité**comme autorisation. Sélectionnez **Ajouter des autorisations**. 
+28. Dans la section **Sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis activez la case à cocher **User-emprunt d’identité**comme autorisation. Sélectionnez **Ajouter des autorisations**. 
 
-24. De retour dans le volet **autorisations** de l’API, dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
+29. De retour dans le volet **autorisations** de l’API, dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
 
-Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. À partir de nos exemples :
+Vous avez maintenant terminé la configuration des deux applications et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* et *NativeAppId*. À partir de nos exemples :
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 

@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: dec0a095b84d265d3594112b24beba8aae923959
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2fbfcd7c2ec701316de7e671eba8144f189a3500
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73632267"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068624"
 ---
 # <a name="linux-code-examples"></a>Exemples de code Linux
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Cette rubrique présente les éléments de code et les scénarios importants pour la version Linux du Kit RMS SDK.
 

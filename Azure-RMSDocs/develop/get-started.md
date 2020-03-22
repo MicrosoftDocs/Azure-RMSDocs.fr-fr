@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: ef9e600f05d4935a03e105cca370a8afa82fa5d9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 38f9c8b6d5b916e025409e1f639749d186c20faa
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792364"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068588"
 ---
-# <a name="get-started"></a>Prendre en main
+# <a name="get-started"></a>Prise en main
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide pour développer une première application se fait via les guides de configuration de l’environnement de développement pour chacun des systèmes d’exploitation/plateformes. Pour commencer à créer vos applications avec gestion des droits, procédez comme suit :
 
@@ -55,4 +57,4 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
    |[Nouveautés](release-notes.md)|MS RMS SDK 4.2 améliore encore le niveau de simplicité et de flexibilité pour la mise en œuvre d’applications RMS.|
    |[Configurer l’environnement de développement](setup-developer-environment.md)|Les rubriques suivantes vous montrent comment configurer votre environnement de développement pour l’utilisation des API d’AD RMS SDK pour votre système d’exploitation.|
    |[Exemples de code](code-examples.md)|MS RMS SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge.|
-   |[Ressources de la communauté](community-resources.md)|Active Directory Rights Management Services est bien pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.|
+   |[Ressources de la communauté](community-resources.md)|Active Directory Rights Management Services est également pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.|

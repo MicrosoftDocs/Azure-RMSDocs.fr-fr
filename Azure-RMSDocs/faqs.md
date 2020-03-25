@@ -4,7 +4,7 @@ description: Quelques questions fréquemment posées sur Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 13e6b4ea47c2aafeec24984c7db6aab99a16e9a0
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 586932ce196769a49e5901dbe6b1290e9d7390ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483182"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138291"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -82,9 +82,9 @@ Les deux clients, lorsqu’ils sont installés, affichent **Azure information pr
 
 Utilisez le numéro de **version** affiché pour identifier le client :
 
-- Une version **1**, par exemple, **1.53.10.0**, identifie le client Azure information protection (Classic).
+- Une version **1**, par exemple, **1.54.59.0**, identifie le client Azure information protection (Classic).
 
-- Une version **2**, par exemple, **2.2.14.0**, identifie le client d’étiquetage unifié Azure information protection.
+- Une version **2**, par exemple, **2.6.111.0**, identifie le client d’étiquetage unifié Azure information protection.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Quand est-il approprié de migrer mes étiquettes ?
 

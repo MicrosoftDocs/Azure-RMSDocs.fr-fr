@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/11/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 76109514c88b90826d2f258f86f2bc97dc7cbce1
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: d28386d43df47ff0aaacf039d6649e622077b6ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404944"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138305"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -302,158 +302,8 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage
 
-Cette configuration utilise des [Paramètres avancés](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
-
-Il existe deux méthodes qui peuvent être utilisées pour supprimer des classifications d’autres solutions d’étiquetage. La première méthode supprime toute forme de documents Word où le nom de forme correspond au nom défini dans la propriété avancée **WordShapeNameToRemove**, la deuxième méthode vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels à partir de documents Word, Excel et PowerPoint, comme défini dans la propriété avancée **RemoveExternalContentMarkingInApp** . 
-
-### <a name="use-the-wordshapenametoremove-advanced-property"></a>Utiliser la propriété avancée WordShapeNameToRemove
-
-*La propriété avancée **WordShapeNameToRemove** est prise en charge à partir de la version 2.6.101.0 et supérieure*
-
-Ce paramètre vous permet de supprimer ou de remplacer des étiquettes basées sur des formes de documents Word lorsque ces marquages visuels ont été appliqués par une autre solution d’étiquetage. Par exemple, la forme contient le nom d’une ancienne étiquette que vous avez maintenant migrée vers des étiquettes de sensibilité pour utiliser un nouveau nom d’étiquette et sa propre forme.
-
-Pour utiliser cette propriété avancée, vous devez rechercher le nom de la forme dans le document Word, puis les définir dans la liste de propriétés avancées **WordShapeNameToRemove** des formes. Le service supprime toutes les formes dans Word qui commencent par un nom défini dans la liste des formes de cette propriété avancée.
-
-Évitez de supprimer les formes qui contiennent le texte que vous souhaitez ignorer, en définissant le nom de toutes les formes à supprimer et évitez de vérifier le texte dans toutes les formes, ce qui est un processus gourmand en ressources.
-
-Si vous ne spécifiez pas de formes de mot dans ce paramètre de propriété avancé supplémentaire et que Word est inclus dans la valeur de clé **RemoveExternalContentMarkingInApp** , le texte que vous spécifiez dans la valeur **ExternalContentMarkingToRemove** est recherché dans toutes les formes. 
-
-Pour rechercher le nom de la forme que vous utilisez et souhaitez exclure :
-
-1. Dans Word, affichez le volet de **sélection** : onglet dossier de **démarrage** > groupe **édition** > **Sélectionnez** l’option > **volet sélection**.
-
-2. Sélectionnez la forme sur la page que vous souhaitez marquer pour suppression. Le nom de la forme que vous marquez est maintenant mis en surbrillance dans le volet de **sélection** .
-
-Utilisez le nom de la forme pour spécifier une valeur de chaîne pour la clé * * * * WordShapeNameToRemove * * * *. 
-
-Exemple : le nom de la forme est **DC**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `dc`.
-
-- Clé : **WordShapeNameToRemove**
-
-- Valeur : \<**nom** de la forme de mot> 
-
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
-
-Lorsque vous avez plusieurs formes de mot à supprimer, spécifiez autant de valeurs que vous avez de formes à supprimer.
-
-
-### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Utiliser la propriété avancée RemoveExternalContentMarkingInApp
-Ce paramètre vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels dans des documents lorsque ces marquages visuels ont été appliqués par une autre solution d’étiquetage. Par exemple, l’ancien pied de page contient le nom d’une ancienne étiquette que vous avez maintenant migrée vers des étiquettes de sensibilité pour utiliser un nouveau nom d’étiquette et son propre pied de page.
-
-Lorsque le client d’étiquetage unifié obtient cette configuration dans sa stratégie, les anciens en-têtes et pieds de page sont supprimés ou remplacés lorsque le document est ouvert dans l’application Office et toute étiquette de sensibilité est appliquée au document.
-
-Cette configuration n’est pas prise en charge pour Outlook. Sachez également que quand vous l’utilisez avec Word, Excel et PowerPoint, elle peut affecter négativement les performances de ces applications pour les utilisateurs. La configuration vous permet de définir des paramètres par application, par exemple, rechercher du texte dans les en-têtes et les pieds de page des documents Word, mais pas dans les feuilles de calcul Excel ni dans les présentations PowerPoint.
-
-Étant donné que les critères spéciaux affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’applications Office (**W**ORD, E**X**cel, **P**owerPoint) à ceux qui doivent être recherchés.
-
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
-
-- Clé : **RemoveExternalContentMarkingInApp**
-
-- Valeur : \<**Types d’application Office WXP**> 
-
-Exemples :
-
-- Pour rechercher dans des documents Word uniquement, spécifiez **W**.
-
-- Pour rechercher dans des documents Word et des présentations PowerPoint, spécifiez **WP**.
-
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
-
-Ensuite, vous avez besoin d’au moins un paramètre client avancé de plus, **ExternalContentMarkingToRemove**, pour spécifier le contenu de l’en-tête ou du pied de page et comment les supprimer ou les remplacer.
-
-### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Comment configurer ExternalContentMarkingToRemove
-
-Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarkingToRemove**, vous disposez de trois options qui utilisent des expressions régulières :
-
-- Correspondance partielle pour tout supprimer dans l’en-tête ou le pied de page.
-    
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
-
-- Correspondance totale pour juste supprimer des mots spécifiques dans l’en-tête ou le pied de page.
-    
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
-
-- Correspondance totale pour tout supprimer dans l’en-tête ou le pied de page.
-    
-    Exemple : Les en-têtes ou les pieds de page ont la chaîne **TEXTE À SUPPRIMER**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
-    
-
-Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur de chaîne maximale est de 255 caractères et ne peut pas contenir d’espaces blancs. 
-
-Étant donné que des documents peuvent contenir des caractères invisibles ou différents types d’espaces ou des tabulations, la chaîne que vous spécifiez pour une expression ou une phrase peut ne pas être détectée. Si possible, spécifiez un seul mot distinctif pour la valeur et veillez à tester les résultats avant de procéder au déploiement en production.
-
-Pour la même stratégie d’étiquette, spécifiez les chaînes suivantes :
-
-- Clé : **ExternalContentMarkingToRemove**
-
-- Valeur : \<**chaîne à trouver, définie comme expression régulière**> 
-
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
-
-#### <a name="multiline-headers-or-footers"></a>En-têtes ou pieds de page multilignes
-
-Si un texte d’en-tête ou de pied de page prend plus d’une ligne, créez une clé et une valeur pour chaque ligne. Par exemple, vous avez le pied de page suivant sur deux lignes :
-
-**Le fichier est classé confidentiel**
-
-**Étiquette appliquée manuellement**
-
-Pour supprimer ce pied de page multiligne, vous créez les deux entrées suivantes pour la même stratégie d’étiquette :
-
-- Clé : **ExternalContentMarkingToRemove**
-
-- Valeur de la clé 1 : **\*Confidentiel***
-
-- Valeur de la clé 2 : **\*Étiquette appliquée*** 
-
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-
-
-#### <a name="optimization-for-powerpoint"></a>Optimisation pour PowerPoint
-
-Les pieds de page dans PowerPoint sont implémentés en tant que formes. Pour éviter de supprimer les formes qui contiennent le texte que vous avez spécifié, mais qui ne sont ni des en-têtes ni des pieds de page, utilisez un paramètre client avancé supplémentaire nommé **PowerPointShapeNameToRemove**. Nous recommandons également d’utiliser ce paramètre pour éviter de vérifier le texte dans toutes les formes, qui est un processus gourmand en ressources.
-
-Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si PowerPoint est inclus dans la valeur de la clé **RemoveExternalContentMarkingInApp**, toutes les formes sont vérifiées à la recherche du texte que vous spécifiez dans la valeur  **ExternalContentMarkingToRemove**. 
-
-Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :
-
-1. Dans PowerPoint, affichez le volet **Sélection** : onglet **Mise en forme** > groupe **Organiser** > **volet sélection**.
-
-2. Sélectionnez la forme sur la diapositive qui contient votre en-tête ou votre pied de page. Le nom de la forme sélectionnée est maintenant en surbrillance dans le volet **Sélection**.
-
-Utilisez le nom de la forme afin de spécifier une valeur de chaîne pour la clé **PowerPointShapeNameToRemove**. 
-
-Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
-
-- Clé : **PowerPointShapeNameToRemove**
-
-- Valeur : \<**Nom de la forme PowerPoint**> 
-
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
-
-Lorsque vous avez plusieurs formes PowerPoint à supprimer, spécifiez autant de valeurs que vous le souhaitez pour les formes à supprimer.
-
-Par défaut, seuls les en-têtes et les pieds de page qui se trouvent dans les diapositives principales sont recherchés. Pour étendre cette recherche à toutes les diapositives, processus beaucoup plus gourmand en ressources, utilisez un paramètre client avancé supplémentaire nommé **RemoveExternalContentMarkingInAllSlides**:
-
-- Clé : **RemoveExternalContentMarkingInAllSlides**
-
-- Valeur : **True**
-
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
-
+> [!NOTE]
+> Cette configuration présente actuellement une limitation connue et sera republiée dans une version ultérieure. 
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Désactiver les autorisations personnalisées dans l’Explorateur de fichiers
 

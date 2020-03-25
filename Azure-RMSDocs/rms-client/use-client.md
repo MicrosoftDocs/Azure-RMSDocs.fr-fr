@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b91a5e495ef625595d3453d306b6352f36d07d1e
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 2adce92f9507a31feb3c2a8acd5f9d62979f187a
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138252"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -124,6 +124,8 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Prise en charge du changement de compte :| Non | Non | **Oui** |
 |Prise en charge de Services Bureau à distance :| **Oui** | **Oui** | **Oui** |
 |Prise en charge des services AD RMS :| **Oui** | Non <sup>7</sup> | Non |
+|Supprimer le marquage de contenu externe dans l’application| **Oui**| Non| **Oui**|
+
 
 Notes de bas de page :
 

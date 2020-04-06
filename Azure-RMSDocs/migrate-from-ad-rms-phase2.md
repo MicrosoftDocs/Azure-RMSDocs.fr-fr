@@ -1,10 +1,10 @@
 ---
 title: Migrer un déploiement AD RMS vers Azure Information Protection - Phase 2
 description: Phase 2 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 4 à 6 de la migration d’AD RMS vers Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 1fbe3fd2f91b63e7111b4de92e95ec4cad20fa4f
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404043"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670163"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -54,7 +54,7 @@ Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de pub
 
     - N'activez pas la case à cocher pour enregistrer le fichier de domaine approuvé dans RMS version 1.0.
 
-Après avoir exporté tous les domaines de publication approuvés, vous pouvez commencer la procédure d’importation de ces données dans Azure Information Protection.
+Une fois que vous avez exporté tous les domaines de publication approuvés, vous êtes prêt à commencer la procédure d’importation de ces données dans Azure Information Protection.
 
 Notez que les domaines de publication approuvés incluent les clés de certificat de licence serveur (SLC) pour déchiffrer les fichiers précédemment protégés. Il est donc important d’exporter (et d’importer ultérieurement dans Azure) tous les domaines de publication approuvés et pas uniquement le domaine actuellement actif.
 
@@ -77,7 +77,7 @@ Votre déploiement AD RMS actuel utilise l’une des configurations suivantes po
 > [!NOTE]
 > Pour plus d'informations sur l'utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d'AD RMS avec des modules de sécurité matériels](https://technet.microsoft.com/library/jj651024.aspx).
 
-Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Le scénario dans lequel vous gérez votre propre clé de locataire Azure Information Protection est parfois appelé BYOK (« Bring Your Own Key »). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
+Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Lorsque vous gérez votre propre clé de locataire Azure Information Protection, elle est parfois appelée « Bring Your Own Key » (BYOK). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
 Le tableau suivant permet d'identifier la procédure à utiliser pour votre migration. 
 

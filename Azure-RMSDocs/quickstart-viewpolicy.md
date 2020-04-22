@@ -11,10 +11,10 @@ ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: c3c38ea55406b85dabda3e94101d268a9505c085
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "77423091"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
@@ -74,7 +74,7 @@ Même si le service de protection est maintenant automatiquement activé pour le
 
 ## <a name="create-and-publish-labels"></a>Créer et publier des étiquettes
 
-Votre entreprise peut déjà disposer d’étiquettes, car elles ont été créées automatiquement pour votre locataire, ou parce que vous avez des étiquettes de confidentialité dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft ou le centre de conformité Microsoft. Voyons voir :
+Votre entreprise peut déjà disposer d’étiquettes, car elles ont été créées automatiquement pour votre locataire, ou parce que vous avez des étiquettes de sensibilité dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft ou le centre de conformité Microsoft. Voyons voir :
 
 1. Sélectionnez **Classifications** > **Étiquettes** :
     

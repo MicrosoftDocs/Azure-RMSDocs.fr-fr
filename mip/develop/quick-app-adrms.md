@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 424a260b1646a381dca23de71785dd34f92fc281
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 32e2cc1cb3924c5a4181bd4cafaaf3f53f085c00
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555158"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764218"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Démarrage rapide : Protection Active Directory Rights Management Server (AD RMS)
 
@@ -49,7 +49,7 @@ Si l’enregistrement DNS SRV pour MDE a été publié et que `Microsoft.Informa
 
 ```csharp
 // Configure FileEngineSettings as protection only engine.
-var engineSettings = new FileEngineSettings("", "", "en-US")
+var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 {
      // Provide the identity for service discovery.
      Identity = identity,
@@ -64,7 +64,7 @@ Si l’enregistrement DNS SRV pour MDE n’est pas publié ou si `Microsoft.Info
 
 ```csharp
 // Configure FileEngineSettings as protection only engine and generate a unique engine id.
-var engineSettings = new FileEngineSettings("", "", "en-US")
+var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 {
      // Set ProtectionOnlyEngine to true for AD RMS as labeling isn't supported
      ProtectionOnlyEngine = true,
@@ -101,7 +101,7 @@ engineSettings.SetProtectionOnlyEngine = true;
 Si l’enregistrement DNS SRV pour MDE n’est pas publié ou si une identité n’est pas disponible pour la détection de service, le moteur doit être configuré sur protection uniquement et l’URL du point de terminaison cloud explicite doit être fournie via `SetProtectionCloudEndpointBaseUrl()`.
 
 ```cpp
-FileEngine::Settings engineSettings("", "");
+FileEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionOnlyEngine = true;
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 ```
@@ -117,7 +117,7 @@ Si vous n’avez pas l’enregistrement DNS SRV de l’extension d’appareil mo
 Si l’enregistrement DNS SRV de l’extension d’appareil mobile a été publié et qu’une identité est fournie dans `ProtectionEngine::Settings`, aucun changement d’option supplémentaire n’est nécessaire pour utiliser AD RMS. La détection de service identifie le terminal AD RMS et l’utilise pour les opérations de protection.
 
 ```cpp
-ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
+ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), authDelegate, "");
 ```
 
 ### <a name="set-the-protectionenginesettings-to-use-ad-rms-with-an-explicit-endpoint"></a>Définir ProtectionEngine::Settings pour utiliser AD RMS avec un point de terminaison explicite
@@ -125,7 +125,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
 Si l’enregistrement DNS SRV n’est pas publié ou si une identité n’est pas fournie dans `ProtectionEngine::Settings`, alors l’URL du point de terminaison de protection doit être définie explicitement via `SetProtectionCloudEndpointBaseUrl()`.
 
 ```cpp
-ProtectionEngine::Settings engineSettings("", "");
+ProtectionEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://RMS.CONTOSO.COM");
 ```
 

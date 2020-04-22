@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: "Enterprise Mobility\_+\_Security"
+    - name: Enterprise Mobility + Security
       tocHref: /enterprise-mobility-security/
       topicHref: /enterprise-mobility-security
       items:
@@ -13,7 +13,7 @@
             - name: Comprendre et explorer
               tocHref: /azure/information-protection/understand-explore/
               topicHref: /azure/information-protection/understand-explore/what-is-azure-rights-management
-            - name: Mise en route
+            - name: Commencer
               tocHref: /azure/information-protection/get-started/
               topicHref: /azure/information-protection/get-started/requirements-for-azure-rights-management
             - name: Planifier et concevoir

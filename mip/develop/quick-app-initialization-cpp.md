@@ -7,20 +7,20 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556076"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
 
 Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le SDK MIP C++ au moment de l’exécution. 
 
 > [!NOTE]
 > Les étapes décrites dans ce guide de démarrage rapide sont requises pour toute application cliente qui utilise les API MIP de fichier, de stratégie ou de protection. Bien que ce guide de démarrage rapide illustre l’utilisation des API de fichier, ce même modèle s’applique aux clients utilisant les API de stratégie et de protection. Effectuez les autres guides de démarrage rapide dans l’ordre, car chacun s’appuie sur le précédent, celui-ci étant le premier.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Si vous ne l’avez pas déjà fait, veillez à :
 
@@ -340,7 +340,7 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
 
 3. Remplacez toutes les valeurs d’espace réservé que vous venez de coller dans le code source par des constantes de chaîne :
 
-   | Espace réservé | Valeur | Exemple |
+   | Espace réservé | valeur | Exemple |
    |:----------- |:----- |:--------|
    | \<application-id\> | L’ID d’application Azure AD (GUID) attribué à l’application qui a été inscrite à l’[étape 2 de l’article « Installation et configuration du kit SDK MIP »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory). Remplacez les deux instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion de « ; ») et, si possible, correspondre au nom d’application que vous avez utilisé dans votre inscription Azure AD. | `"AppInitialization"` |

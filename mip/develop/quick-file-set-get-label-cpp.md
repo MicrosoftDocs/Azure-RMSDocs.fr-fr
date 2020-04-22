@@ -8,22 +8,22 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556025"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
 Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichier MIP. En utilisant l’une des étiquettes de sensibilité que vous avez listées dans le précédent guide de démarrage rapide, vous utilisez un gestionnaire de fichiers pour définir/obtenir l’étiquette sur un fichier. La classe de gestionnaire de fichiers expose différentes opérations pour définir/obtenir des étiquettes, ou une protection, pour les types de fichiers pris en charge.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Effectuez d’abord les étapes du [Guide de démarrage rapide : Lister les étiquettes de sensibilité (C++)](quick-file-list-labels-cpp.md) pour créer une solution Visual Studio de démarrage qui liste les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
-- Éventuellement : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
+- Commencez par suivre le guide [Démarrage rapide : Répertorier les étiquettes de sensibilité (C++)](quick-file-list-labels-cpp.md), qui génère une solution Visual Studio de démarrage afin de lister les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
+- Si vous le souhaitez : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implémenter une classe d’observateur pour superviser l’objet de gestionnaire de fichiers
 
@@ -31,7 +31,7 @@ Comme avec l’observateur que vous avez implémenté (pour le profil et le mote
 
 Créez une implémentation de base pour un observateur de gestionnaire de fichier, en étendant la classe `mip::FileHandler::Observer` du SDK. L’observateur est instancié et utilisé plus tard pour suivre les opérations du Gestionnaire de fichiers.
 
-1. Ouvrez la solution Visual Studio que vous avez utilisée dans l’article précédent, « Démarrage rapide : Lister les étiquettes de sensibilité (C++) ».
+1. Ouvrez la solution Visual Studio sur laquelle vous avez travaillé dans l’article précédent « Démarrage rapide : Répertorier les étiquettes de sensibilité (C++) ».
 
 2. Ajoutez une nouvelle classe dans votre projet, ce qui génère les fichiers header/.h et implementation/.cpp pour vous :
 
@@ -217,10 +217,10 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
 5. Remplacez les valeurs d’espace réservé que vous venez de coller dans le code source par des constantes de chaîne :
 
-   | Espace réservé | Valeur |
+   | Espace réservé | valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Un identificateur explicite du contenu. Par exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Un identificateur explicite du contenu. Exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `"c:\\Test\\Test_labeled.docx"`. |
 

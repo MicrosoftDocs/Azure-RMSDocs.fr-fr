@@ -1,7 +1,7 @@
 - name: Docs
   href: /
   items:
-    - name: "Enterprise Mobility\_+\_Security"
+    - name: Enterprise Mobility + Security
       href: /enterprise-mobility-security/
       items:
         - name: Microsoft Information Protection

@@ -13,24 +13,40 @@
       href: quick-app-adrms.md
     - name: C++
       items:
-        - name: Initialisation d’applications (C++)
-          href: quick-app-initialization-cpp.md
         - name: API de fichier
           items:
+            - name: Initialisation d’applications (C++)
+              href: quick-app-initialization-cpp.md
             - name: Lister les étiquettes de sensibilité (C++)
               href: quick-file-list-labels-cpp.md
             - name: Définir/obtenir des étiquettes de sensibilité (C++)
               href: quick-file-set-get-label-cpp.md
+        - name: API de protection
+          items:
+            - name: Initialisation d’applications (C++)
+              href: quick-protection-app-initialization-cpp.md
+            - name: Modèles de liste
+              href: quick-protection-list-templates-cpp.md
+            - name: Chiffrer/déchiffrer du texte
+              href: quick-protection-encrypt-decrypt-text-cpp.md
     - name: 'C#'
       items:
-        - name: 'Initialisation d’applications (C#)'
-          href: quick-app-initialization-csharp.md
         - name: API de fichier
           items:
+            - name: 'Initialisation d’applications (C#)'
+              href: quick-app-initialization-csharp.md
             - name: 'Lister les étiquettes de sensibilité (C#)'
               href: quick-file-list-labels-csharp.md
             - name: 'Définir/obtenir des étiquettes de sensibilité (C#)'
               href: quick-file-set-get-label-csharp.md
+        - name: API de protection
+          items:
+            - name: 'Initialisation d’applications (C#)'
+              href: quick-protection-app-initialization-csharp.md
+            - name: Modèles de liste
+              href: quick-protection-list-templates-csharp.md
+            - name: Chiffrer/déchiffrer du texte
+              href: quick-protection-encrypt-decrypt-text-csharp.md
 - name: Concepts
   items:
     - name: API
@@ -65,6 +81,8 @@
           href: concept-authentication-acquire-token-ps.md
         - name: Acquisition d’un jeton d’accès (Python)
           href: concept-authentication-acquire-token-py.md
+    - name: Consentement
+      href: concept-consent-cpp.md
     - name: Gestionnaires
       items:
         - name: Gestionnaire de l’API de fichier (C++)
@@ -231,6 +249,8 @@
               href: reference/class_mip_loggerdelegate.md
             - name: MetadataAction
               href: reference/class_mip_metadataaction.md
+            - name: MetadataEntry
+              href: reference/class_mip_metadataentry.md
             - name: MipContext
               href: reference/class_mip_mipcontext.md
             - name: MsgAttachmentData
@@ -265,7 +285,7 @@
               href: reference/class_mip_policyprofile_settings.md
             - name: PolicyRuleData
               href: reference/class_mip_policyruledata.md
-            - name: PolicySyncError
+            - name: 'mip::PolicySyncError'
               href: reference/class_mip_policysyncerror.md
             - name: PrivilegedRequiredError
               href: reference/class_mip_privilegedrequirederror.md
@@ -321,7 +341,7 @@
               href: reference/class_mip_removewatermarkaction.md
             - name: RulePackageData
               href: reference/class_mip_rulepackagedata.md
-            - name: SensitivityConditionData
+            - name: 'mip::SensitivityConditionData'
               href: reference/class_mip_sensitivityconditiondata.md
             - name: SensitivityTypesRulePackage
               href: reference/class_mip_sensitivitytypesrulepackage.md
@@ -341,7 +361,7 @@
               href: reference/class_mip_templatedescriptor.md
             - name: TemplateNotFoundError
               href: reference/class_mip_templatenotfounderror.md
-            - name: TransientNetworkError
+            - name: 'mip::TransientNetworkError'
               href: reference/class_mip_transientnetworkerror.md
             - name: UserRights
               href: reference/class_mip_userrights.md

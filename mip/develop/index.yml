@@ -40,7 +40,7 @@ sections:
               src: media/index/logo_Csharp.svg
             title: 'C#'
         rows:
-          - title: Initialisation d’applications
+          - title: Initialisation d’application
             values:
               - href: quick-app-initialization-cpp.md
               - href: quick-app-initialization-csharp.md

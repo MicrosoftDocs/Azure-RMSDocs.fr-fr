@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 32e2cc1cb3924c5a4181bd4cafaaf3f53f085c00
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: eafcf65b9478cc8a2d2c104c3e98194c40e9c941
+ms.sourcegitcommit: 80d7c1a1afb3e54fac434f10a7dca4f8076384a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764218"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255602"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Démarrage rapide : Protection Active Directory Rights Management Server (AD RMS)
 
@@ -26,12 +26,12 @@ Si vous ne l’avez pas déjà fait, veillez à :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Initialisation d’une application cliente (C++)](quick-app-initialization-cpp.md) pour créer une solution Visual Studio de démarrage.
 - Effectuez d’abord les étapes du [Démarrage rapide : Répertorier les étiquettes de sensibilité (C++)](quick-file-list-labels-cpp.md) ou du [Démarrage rapide : Répertorier les étiquettes de sensibilité (C#)](quick-file-list-labels-csharp.md)
-- Déployez AD RMS avec l’[extension Appareils mobiles](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
-- Le cas échéant, assurez-vous que l’[enregistrement DNS SRV pour AD RMS MDE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) est publié.
+- Déployez AD RMS avec l’[extension Appareils mobiles](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device).
+- Le cas échéant, assurez-vous que l’[enregistrement DNS SRV pour AD RMS MDE](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) est publié.
 
 ## <a name="service-discovery"></a>Détection du service
 
-Le SDK effectue la détection du service sur la base de `mip::Identity` fourni via `FileEngineSettings` ou `ProtectionEngineSettings` en utilisant le suffixe UPN ou de l’adresse mail. Il recherche d’abord l’enregistrement *_rmsdisco* dans la hiérarchie du domaine pour MDE. Pour plus de détails sur ce processus, reportez-vous à la [Spécification des enregistrements SRV DNS pour l’extension Appareils mobiles AD RMS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Si cet enregistrement DNS SRV est introuvable, le service Azure Information Protection est utilisé par défaut comme emplacement de service.
+Le SDK effectue la détection du service sur la base de `mip::Identity` fourni via `FileEngineSettings` ou `ProtectionEngineSettings` en utilisant le suffixe UPN ou de l’adresse mail. Il recherche d’abord l’enregistrement *_rmsdisco* dans la hiérarchie du domaine pour MDE. Pour plus de détails sur ce processus, reportez-vous à la [Spécification des enregistrements SRV DNS pour l’extension Appareils mobiles AD RMS](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Si cet enregistrement DNS SRV est introuvable, le service Azure Information Protection est utilisé par défaut comme emplacement de service.
 
 Si une identité n’est pas disponible ou si l'enregistrement DNS SRV pour MDE n’a pas été publié, le processus de détection du service peut être annulé en définissant explicitement l’[URL du point de terminaison cloud](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function).
 

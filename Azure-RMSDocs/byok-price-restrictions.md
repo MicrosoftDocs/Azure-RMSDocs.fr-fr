@@ -1,10 +1,10 @@
 ---
 title: Détails BYOK-Azure Information Protection
 description: Comprenez les détails et les restrictions lorsque vous utilisez des clés gérées par le client (appelées « apportez votre propre clé » ou BYOK) avec Azure Information Protection.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 11/22/2019
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,21 +13,21 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a82afdeee9459b460b98a385102147c6c78ff28
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935178"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224561"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>BYOK les détails de votre propre clé pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Les organisations qui ont un abonnement incluant Azure Information Protection peuvent configurer leur client Azure Information Protection pour utiliser une clé gérée par le client et [consigner son utilisation](log-analyze-usage.md). La configuration de clé gérée par le client est souvent appelée « mettre votre propre clé », ou BYOK.
 
-Cette clé gérée par le client doit être stockée dans Azure Key Vault, ce qui nécessite un abonnement Azure. Pour utiliser une clé protégée par module HSM, vous devez utiliser le niveau de service Azure Key Vault Premium. L’utilisation d’une clé dans Azure Key Vault entraîne des frais mensuels. Pour plus d’informations, consultez la [page Tarification d’Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
+Cette clé gérée par le client doit être stockée dans Azure Key Vault, ce qui nécessite un abonnement Azure. Pour utiliser une clé protégée par module HSM, vous devez utiliser le niveau de service Azure Key Vault Premium. L’utilisation d’une clé dans Azure Key Vault entraîne des frais mensuels. Pour plus d’informations, consultez la [page de tarification Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
 
 Quand vous utilisez Azure Key Vault pour votre clé de locataire Azure Information Protection, nous vous recommandons d’utiliser un coffre de clés dédié à cette clé pour garantir qu’il est utilisé seulement par le service Azure Rights Management. Cette configuration permet d’éviter que des appels effectués par d’autres services n’entraînent un dépassement des [limites de service](/azure/key-vault/key-vault-service-limits) pour le coffre de clés, ce qui peut limiter les temps de réponse pour le service Azure Rights Management.  
 

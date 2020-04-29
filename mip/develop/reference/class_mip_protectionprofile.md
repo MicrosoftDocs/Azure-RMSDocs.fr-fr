@@ -1,31 +1,31 @@
 ---
-title: mip::ProtectionProfile, classe
-description: Documente la classe MIP ::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: ProtectionProfile de classe
+description: 'Documente la classe protectionprofile :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 14d52de8ff87a75aaf2c777eb55c427bbde72a12
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: d3a2f02a0dab5bba9b74b264348bcfd7e073f783
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486730"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764410"
 ---
-# <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile, classe 
-ProtectionProfile est la classe racine pour effectuer des opérations de protection.
+# <a name="class-protectionprofile"></a>ProtectionProfile de classe 
+ProtectionProfile est la classe racine utilisée pour effectuer des opérations de protection.
 Une application doit créer un ProtectionProfile avant d’effectuer des opérations de protection
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtient les paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie.
-public std :: shared_ptr\<AsyncControl\> ListEnginesAsync (const std :: shared_ptr\<void\>& contexte)  |  Démarre une opération d’énumération de moteurs.
+public std :: shared_ptr\<AsyncControl\> ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
 public std :: Vector\<std :: String\> ListEngines ()  |  Répertorie les moteurs.
-public std :: shared_ptr\<AsyncControl\> AddEngineAsync (const ProtectionEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de protection au profil.
-public std :: shared_ptr\<ProtectionEngine\> AddEngine (const ProtectionEngine :: Settings & Settings)  |  Ajoute un nouveau moteur de protection au profil.
-public std :: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std :: String & engineId, const std :: shared_ptr\<void\>contexte &)  |  Démarre la suppression du moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
+public std :: shared_ptr\<AsyncControl\> AddEngineAsync (const ProtectionEngine :: Settings& Settings, const std :\<:\> shared_ptr void& Context)  |  Démarre l’ajout d’un nouveau moteur de protection au profil.
+public std :: shared_ptr\<ProtectionEngine\> AddEngine (const ProtectionEngine :: Settings& Settings)  |  Ajoute un nouveau moteur de protection au profil.
+public std :: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std :: String& engineId, const std :: shared_ptr\<void\>& Context)  |  Démarre la suppression du moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
 public void DeleteEngine(const std::string& engineId)  |  Supprime le moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
   
 ## <a name="members"></a>Membres
@@ -46,7 +46,7 @@ Paramètres :
 
   
 **Retourne**: objet de contrôle asynchrone.
-ProtectionProfile :: observer est appelé en cas de réussite ou d’échec.
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) est appelé en cas de réussite ou d’échec.
   
 ### <a name="listengines-function"></a>ListEngines fonction)
 Répertorie les moteurs.
@@ -58,7 +58,7 @@ Répertorie les moteurs.
 Démarre l’ajout d’un nouveau moteur de protection au profil.
 
 Paramètres :  
-* **paramètres**: l’objet mip ::P rotectionengine :: Settings qui spécifie les paramètres du moteur. 
+* **settings** : objet mip::ProtectionEngine::Settings qui spécifie les paramètres du moteur. 
 
 
 * **context** : contexte client qui est repassé de façon opaque aux observateurs
@@ -67,24 +67,24 @@ Paramètres :
 
   
 **Retourne**: objet de contrôle asynchrone.
-ProtectionProfile :: observer est appelé en cas de réussite ou d’échec.
+ProtectionProfile::Observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="addengine-function"></a>AddEngine fonction)
 Ajoute un nouveau moteur de protection au profil.
 
 Paramètres :  
-* **paramètres**: l’objet mip ::P rotectionengine :: Settings qui spécifie les paramètres du moteur.
+* **settings** : objet mip::ProtectionEngine::Settings qui spécifie les paramètres du moteur.
 
 
 
   
-**Retourne**: ProtectionEngine nouvellement créé
+**Retourne** : ProtectionEngine nouvellement créé
   
 ### <a name="deleteengineasync-function"></a>DeleteEngineAsync fonction)
 Démarre la suppression du moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
 
 Paramètres :  
-* **id** : ID unique du moteur. 
+* **ID**: ID de moteur unique. 
 
 
 * **context** : contexte client qui est repassé de façon opaque aux observateurs
@@ -93,11 +93,11 @@ Paramètres :
 
   
 **Retourne**: objet de contrôle asynchrone.
-ProtectionProfile :: observer est appelé en cas de réussite ou d’échec.
+ProtectionProfile::Observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="deleteengine-function"></a>DeleteEngine fonction)
 Supprime le moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
 
 Paramètres :  
-* **id** : ID unique du moteur.
+* **ID**: ID de moteur unique.
 

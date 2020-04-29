@@ -1,25 +1,25 @@
 ---
-title: 'MIP :: SensitivityTypesRulePackage, classe'
-description: 'Documente la classe MIP :: sensitivitytypesrulepackage du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: SensitivityTypesRulePackage de classe
+description: 'Documente la classe sensitivitytypesrulepackage :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a00dc55d8c4250db6c83bde29f0c73436196af95
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b6f4f45c9532cb4c87bbe97cedd294184573c873
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489433"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764371"
 ---
-# <a name="class-mipsensitivitytypesrulepackage"></a>MIP :: SensitivityTypesRulePackage, classe 
+# <a name="class-sensitivitytypesrulepackage"></a>SensitivityTypesRulePackage de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: String & GetRulePackageId () const  |  Obtient l’ID de package de la règle.
-public const std :: String & GetRulePackage () const  |  Obtient le package de règles.
+public const std :: String& GetRulePackageId () const  |  Obtient l’ID de package de la règle.
+public const std :: String& GetRulePackage () const  |  Obtient le package de règles.
   
 ## <a name="members"></a>Membres
   

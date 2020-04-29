@@ -1,10 +1,10 @@
 ---
 title: 'Azure Information Protection : autres appellations'
 description: Azure Information Protection ayant changé plusieurs fois d’appellation, il est possible que vous le connaissiez sous un autre nom.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/21/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 257fe9160a4a893d02247805d162bdb01aca5d79
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 067e96c31c7bca2a098cbdf0f7b215c05bc4fa61
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934821"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224612"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 La solution Azure Information Protection (parfois abrégée AIP) s’appuie sur de nombreuses technologies développées de longue date par Microsoft dans le domaine de la protection de la gestion des droits. En raison de cette évolution, vous connaissez peut-être cette solution par l’un de ses anciens noms, tout comme vous pouvez voir des références à ces noms dans de la documentation, des interfaces utilisateur et des fichiers journaux. 
 

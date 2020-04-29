@@ -1,25 +1,25 @@
 ---
-title: class mip::RecommendLabelAction
-description: 'Documente la classe MIP :: recommendlabelaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: RecommendLabelAction de classe
+description: 'Documente la classe recommendlabelaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 2038c8eb1a6baa52dc696be998853ca6774edccf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 3990d6de9d78002d9c240e621f96351cd337aabb
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489535"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764538"
 ---
-# <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
+# <a name="class-recommendlabelaction"></a>RecommendLabelAction de classe 
 Les actions d’étiquette recommandées sont conçues pour suggérer une étiquette aux utilisateurs. La suppression de cet appel lorsqu’un utilisateur ignore l’étiquette recommandée doit être effectuée via les actions prises en charge sur l’état d’exécution.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: shared_ptr\<étiquette\>& GetLabel () const  |  Obtient l’étiquette suggérée.
+public const std :: shared_ptr\<étiquette\>& getLabel () const  |  Obtient l’étiquette suggérée.
 public const std :: Vector\<std :: String\>& GetClassificationIds () const  |  Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
   
 ## <a name="members"></a>Membres
@@ -34,4 +34,4 @@ Obtient l’étiquette suggérée.
 Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
 
   
-**Retourne**: const std :: Vector < std :: string > & une liste d’ID de classification qui a provoqué l’affichage de cette étiquette.
+**Retourne**: const std :: Vector<std :: String>& une liste des ID de classification qui ont provoqué l’affichage de cette étiquette.

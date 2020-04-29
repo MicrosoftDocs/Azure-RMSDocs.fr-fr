@@ -1,19 +1,19 @@
 ---
-title: 'MIP :: LabelActionData, classe'
-description: 'Documente la classe MIP :: labelactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: LabelActionData de classe
+description: 'Documente la classe labelactiondata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d06339e217e04a6e1412361befae9d3d45070b16
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2fb2db92c5c88f6d7c48bead75e9fd7e3eba483b
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489926"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761988"
 ---
-# <a name="class-miplabelactiondata"></a>MIP :: LabelActionData, classe 
+# <a name="class-labelactiondata"></a>LabelActionData de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                

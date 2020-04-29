@@ -1,56 +1,63 @@
 ---
-title: mip::FileEngine::Settings, classe
-description: 'Documente la classe MIP :: fileengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'classe FileEngine :: Settings'
+description: 'Documente la classe fileengine :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6105a542c3c01b31598796912211f97562b25f08
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488787"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763269"
 ---
-# <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings, classe 
+# <a name="class-fileenginesettings"></a>classe FileEngine :: Settings 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: String & engineId, const std :: String & ClientData :, const std :: String & paramètres régionaux, bool loadSensitivityTypes)  |  FileEngine :: Settings, constructeur pour le chargement d’un moteur existant.
-Paramètres publics (const Identity & Identity, const std :: String & ClientData :, const std :: String & locale, bool loadSensitivityTypes)  |  FileProfile :: Settings, constructeur pour la création d’un nouveau moteur.
+Paramètres publics (const std :: String& engineId, const std :: shared_ptr\<AuthDelegate\>& AuthDelegate, const std :: String& ClientData :, const std :: String& paramètres régionaux, bool loadSensitivityTypes)  |  Constructeur FileEngine::Settings pour le chargement d’un moteur existant.
+Paramètres publics (const Identity& Identity, const std :\<:\> shared_ptr AuthDelegate& AuthDelegate, const std :: String& ClientData :, const std :: String& locale, bool loadSensitivityTypes)  |  Constructeur FileProfile::Settings pour la création d’un moteur.
 public const std::string& GetEngineId() const  |  Retourne l’ID du moteur.
 public void SetEngineId(const std::string& id)  |  Définir l’ID du moteur.
 public const Identity& GetIdentity() const  |  Retourne l’identité du moteur.
 public void SetIdentity(const Identity& identity)  |  Définit l’identité du moteur.
 public const std::string& GetClientData() const  |  Retourne les données clientes du moteur.
 public const std::string& GetLocale() const  |  Retourne les paramètres régionaux du moteur.
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>valeur &)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& value)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
 public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
-public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
+public void SetCloud (Cloud Cloud)  |  Définit éventuellement le Cloud cible.
+const GetCloud () du cloud public  |  Obtient le Cloud cible utilisé par toutes les demandes de service.
+public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison Cloud de protection pour le Cloud personnalisé.
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtient l’URL de base du point de terminaison Cloud de protection.
-public void SetPolicyCloudEndpointBaseUrl (const std :: String & policyCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison Cloud de la stratégie, utilisée pour spécifier la limite du Cloud.
-public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Obtient l’URL de base du point de terminaison Cloud de la stratégie.
+public void SetPolicyCloudEndpointBaseUrl (const std :: String& policyCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison Cloud de la stratégie pour le Cloud personnalisé.
+public const std :: String& GetPolicyCloudEndpointBaseUrl () const  |  Obtient l’URL de base du point de terminaison Cloud de la stratégie.
 public void SetProtectionOnlyEngine (bool protectionOnly)  |  Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
 public const bool IsProtectionOnlyEngine() const  |  Retourne l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
 public bool IsLoadSensitivityTypesEnabled () const  |  Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la charge sont activées.
 public void EnablePFile (valeur bool)  |  Définit l’indicateur qui spécifie si produit fichiers pfile.
 public const bool IsPFileEnabled ()  |  Obtient l’indicateur qui spécifie si produit fichiers pfile.
-public void SetDelegatedUserEmail (const std :: String & delegatedUserEmail)  |  Définit l’utilisateur délégué.
-public const std :: String & GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
+public void SetDelegatedUserEmail (const std :: String& delegatedUserEmail)  |  Définit l’utilisateur délégué.
+public const std :: String& GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
 public void SetLabelFilter (const std :: Vector\<LabelFilterType\>& labelFilter)  |  Définit le filtre d’étiquette.
 public const std :: Vector\<LabelFilterType\>& GetLabelFilter () const  |  Obtient le filtre d’étiquette.
+public void SetAuthDelegate (const std :: shared_ptr\<authDelegate\>& AuthDelegate)  |  Définissez le délégué d’authentification du moteur.
+public std :: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Obtient le délégué d’authentification du moteur.
   
 ## <a name="members"></a>Membres
   
 ### <a name="settings-function"></a>Fonction Settings
-FileEngine :: Settings, constructeur pour le chargement d’un moteur existant.
+Constructeur FileEngine::Settings pour le chargement d’un moteur existant.
 
 Paramètres :  
-* **engineId** : affectez à ce paramètre l’ID de moteur unique généré par AddEngineAsync. 
+* **engineId**: affectez-lui l’ID de moteur unique généré par AddEngineAsync. 
+
+
+* **authDelegate**: le délégué d’authentification utilisé par le kit de développement logiciel (SDK) pour acquérir des jetons d’authentification remplace PolicyProfile :: Settings :: authDelegate si les deux sont fournis 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
@@ -64,10 +71,13 @@ Paramètres :
 
   
 ### <a name="settings-function"></a>Fonction Settings
-FileProfile :: Settings, constructeur pour la création d’un nouveau moteur.
+Constructeur FileProfile::Settings pour la création d’un moteur.
 
 Paramètres :  
 * **identity** : informations d’identité de l’utilisateur associé au nouveau moteur. 
+
+
+* **authDelegate**: le délégué d’authentification utilisé par le kit de développement logiciel (SDK) pour acquérir des jetons d’authentification remplace PolicyProfile :: Settings :: authDelegate si les deux sont fournis 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
@@ -115,29 +125,45 @@ Définit l’ID de session du moteur.
 ### <a name="getsessionid-function"></a>GetSessionId fonction)
 Retourne l’ID de session du moteur.
   
-### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl function
-Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
+### <a name="setcloud-function"></a>SetCloud fonction)
+Définit éventuellement le Cloud cible.
+
+Paramètres :  
+* **Cloud**: Cloud
+
+
+Si le Cloud n’est pas spécifié, le Cloud global est utilisé par défaut.
+  
+### <a name="getcloud-function"></a>GetCloud fonction)
+Obtient le Cloud cible utilisé par toutes les demandes de service.
+
+  
+**Retourne**: Cloud
+  
+### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl fonction)
+Définit l’URL de base du point de terminaison Cloud de protection pour le Cloud personnalisé.
 
 Paramètres :  
 * **protectionCloudEndpointBaseUrl** : URL de base associée aux points de terminaison de protection
 
 
+Cette valeur est lue uniquement et doit être définie pour Cloud = Custom
   
-### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
+### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl fonction)
 Obtient l’URL de base du point de terminaison Cloud de protection.
 
   
-**Retourne** : URL de base associée aux points de terminaison de protection
+**Retourne**: URL de base associée aux points de terminaison de protection. cette valeur sera uniquement lue et doit être définie pour Cloud = Custom
   
-### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl function
-Définit l’URL de base du point de terminaison Cloud de la stratégie, utilisée pour spécifier la limite du Cloud.
+### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl fonction)
+Définit l’URL de base du point de terminaison Cloud de la stratégie pour le Cloud personnalisé.
 
 Paramètres :  
 * **policyCloudEndpointBaseUrl**: URL de base associée aux points de terminaison de stratégie
 
 
   
-### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl fonction)
 Obtient l’URL de base du point de terminaison Cloud de la stratégie.
 
   
@@ -186,7 +212,7 @@ Paramètres :
 * **labelFilter**: filtre d’étiquette.
 
 
-Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles.
+Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles. Si la valeur n’est pas définie, HyokProtection et DoubleKeyProtection sont filtrés.
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter fonction)
 Obtient le filtre d’étiquette.
@@ -194,3 +220,17 @@ Obtient le filtre d’étiquette.
   
 **Retourne**: filtre d’étiquette.
 Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles.
+  
+### <a name="setauthdelegate-function"></a>SetAuthDelegate fonction)
+Définissez le délégué d’authentification du moteur.
+
+Paramètres :  
+* **authDelegate**: délégué d’authentification
+
+
+  
+### <a name="getauthdelegate-function"></a>GetAuthDelegate fonction)
+Obtient le délégué d’authentification du moteur.
+
+  
+**Retourne**: le délégué d’authentification du moteur.

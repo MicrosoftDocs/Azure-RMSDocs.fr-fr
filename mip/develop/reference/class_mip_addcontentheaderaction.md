@@ -1,19 +1,19 @@
 ---
-title: mip::AddContentHeaderAction, classe
-description: 'Documente la classe MIP :: addcontentheaderaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: AddContentHeaderAction de classe
+description: 'Documente la classe addcontentheaderaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f58fe47de4ee1f79f64415013fc1949ef53b2adf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490725"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763761"
 ---
-# <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction, classe 
+# <a name="class-addcontentheaderaction"></a>AddContentHeaderAction de classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
   
 ## <a name="summary"></a>Résumé
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Obtenir la marge de l’en-tête à partir du b
 API utilisée pour marquer l’élément d’en-tête de contenu.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient l’en-tête de contenu. Le même nom sera retourné dans RemoveContentHeaderAction si l’en-tête de contenu doit être supprimé.
+**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient l’en-tête de contenu. Le même nom est retourné dans [RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) si l’en-tête de contenu doit être supprimé.
   
 ### <a name="gettext-function"></a>GetText, fonction
 Obtenir le texte devant être placé dans l’en-tête de contenu.
@@ -57,15 +57,15 @@ Obtenir la taille de la police utilisée pour afficher l’en-tête de contenu.
 Obtenir la couleur de la police utilisée pour afficher l’en-tête de contenu.
 
   
-**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
+**Retourne**: la couleur de police sous forme de chaîne (par exemple, #000000»).
   
 ### <a name="getalignment-function"></a>GetAlignment fonction)
 Obtenir l’alignement de l’en-tête.
 
   
-**Retourne** : l’énumérateur ContentMarkAlignment : LEFT|RIGHT|CENTER. 
+**Retourne**: l’énumérateur CONTENTMARKALIGNMENT : Left | À droite | Gestionnaire. 
   
-**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Voir aussi** : ContentMarkAlignment
   
 ### <a name="getmargin-function"></a>GetMargin fonction)
 Obtenir la marge de l’en-tête à partir du bas.

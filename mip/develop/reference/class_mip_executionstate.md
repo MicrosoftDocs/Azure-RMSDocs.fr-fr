@@ -1,37 +1,38 @@
 ---
-title: mip::ExecutionState, classe
-description: 'Documente la classe MIP :: ExecutionState du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: ExecutionState de classe
+description: 'Documente la classe ExecutionState :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e0bf26124a7181dd8e6477a303868b51d6275c6e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ff22cebbcb4a83015248c8f6990f04dfad4538e0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763299"
 ---
-# <a name="class-mipexecutionstate"></a>mip::ExecutionState, classe 
+# <a name="class-executionstate"></a>ExecutionState de classe 
 Interface pour tous les états nécessaires à l’exécution du moteur.
 Les clients doivent uniquement appeler les méthodes pour obtenir l’état qui est nécessaire. Ainsi, pour des raisons d’efficacité, les clients peuvent implémenter cette interface afin que l’état correspondant soit calculé de façon dynamique plutôt qu’en avance.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std :: shared_ptr\<étiquette\> GetNewLabel () const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
+public std :: shared_ptr\<label\> GetNewLabel () const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
 public std::string GetContentIdentifier() const  |  Obtient la description du contenu qui décrit le document. exemple pour un fichier : [path\filename] exemple pour un e-mail : [Subject : sender].
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
 STD public ::p air\<bool, std :: String\> IsDowngradeJustified () const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Obtenir la méthode d’assignation de la nouvelle étiquette.
-public virtuel std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
-public std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetContentMetadata (const std :: Vector\<std :: String\>& Names, const std :: Vector\<std :: String\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
+public virtuel std :: Vector\<std ::p air\<std :: String, std :: String\> \> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
+public std :: Vector\<MetadataEntry\> GetContentMetadata (const std :: Vector\<std :: String\>& Names, const std ::\<Vector std ::\> String& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
 public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  Obtenir le descripteur de protection.
 public ContentFormat GetContentFormat() const  |  Obtient le format du contenu.
+public virtuel unsigned int GetContentMetadataVersion () const  |  Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.
 public ActionType GetSupportedActions() const  |  Obtient une énumération masquée qui décrit tous les types d’action pris en charge.
-public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: Vector\<std :: shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
-public virtuel std :: Map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
+public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: Vector\<std :: shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
+public virtuel std :: map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
   
 ## <a name="members"></a>Membres
   
@@ -68,7 +69,7 @@ Obtenir la méthode d’assignation de la nouvelle étiquette.
   
 **Retourne** : la méthode d’affectation STANDARD, PRIVILEGED, AUTO. 
   
-**Voir aussi**: [MIP :: assignation](mip-enums-and-structs.md#assignmentmethod-enum)
+**Voir aussi** : mip::AssignmentMethod
   
 ### <a name="getnewlabelextendedproperties-function"></a>GetNewLabelExtendedProperties fonction)
 Retourner les propriétés étendues de la nouvelle étiquette.
@@ -94,7 +95,13 @@ Obtient le format du contenu.
   
 **Retourne** : DEFAULT, EMAIL 
   
-**Voir aussi**: [MIP :: ContentFormat](mip-enums-and-structs.md#contentformat-enum)
+**Voir aussi** : mip::ContentFormat
+  
+### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion fonction)
+Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.
+
+  
+**Retourne**: version des métadonnées de contenu. Si la valeur est 0, les métadonnées n’ont pas de version. Si un format de fichier prend en charge plusieurs versions des métadonnées, cela permet à MIP de comprendre toutes les métadonnées et de signaler les modifications des métadonnées granulaires à chaque version.
   
 ### <a name="getsupportedactions-function"></a>GetSupportedActions fonction)
 Obtient une énumération masquée qui décrit tous les types d’action pris en charge.

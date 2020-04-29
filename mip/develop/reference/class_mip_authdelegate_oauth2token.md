@@ -1,30 +1,30 @@
 ---
-title: 'MIP :: AuthDelegate :: OAuth2Token, classe'
-description: 'Documente la classe MIP :: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'classe AuthDelegate :: OAuth2Token'
+description: 'Documente la classe authdelegate :: oauth2token du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6053a282d162dc2b0f316b265fe6878a4c535a7f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 43f3e3d9abdab37620ca852411b2817a3848ba78
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490436"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763592"
 ---
-# <a name="class-mipauthdelegateoauth2token"></a>MIP :: AuthDelegate :: OAuth2Token, classe 
+# <a name="class-authdelegateoauth2token"></a>classe AuthDelegate :: OAuth2Token 
 Classe contenant les informations de jeton d’accès fournies par une application.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public OAuth2Token ()  |  Construisez un nouvel objet OAuth2Token.
-public OAuth2Token (const std :: String & accessToken)  |  Construisez un nouvel objet OAuth2Token à partir du jeton d’accès JWT.
-public const std :: String & GetAccessToken () const  |  Obtient la chaîne du jeton d’accès.
-public void SetAccessToken (const std :: String & accessToken)  |  Définissez la chaîne du jeton d’accès.
-public const std :: String & GetErrorMessage () const  |  Obtient le message d’erreur, le cas échéant.
-public void SetErrorMessage (const std :: String & errorMessage)  |  Définir le message d’erreur.
+public OAuth2Token (const std :: String& accessToken)  |  Construisez un nouvel objet OAuth2Token à partir du jeton d’accès JWT.
+public const std :: String& GetAccessToken () const  |  Obtient la chaîne du jeton d’accès.
+public void SetAccessToken (const std :: String& accessToken)  |  Définissez la chaîne du jeton d’accès.
+public const std :: String& GetErrorMessage () const  |  Obtient le message d’erreur, le cas échéant.
+public void SetErrorMessage (const std :: String& errorMessage)  |  Définir le message d’erreur.
   
 ## <a name="members"></a>Membres
   

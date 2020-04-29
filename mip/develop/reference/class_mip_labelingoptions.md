@@ -1,19 +1,19 @@
 ---
-title: mip::LabelingOptions, classe
-description: 'Documente la classe MIP :: labelingoptions du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: LabelingOptions de classe
+description: 'Documente la classe labelingoptions :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 4446cea1a31b7caf9dcd36113efc650e992f88a5
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 1ebc548d04f82e78a1ba7d5cef0c54d10b6ba91d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487784"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761926"
 ---
-# <a name="class-miplabelingoptions"></a>mip::LabelingOptions, classe 
+# <a name="class-labelingoptions"></a>LabelingOptions de classe 
 Interface pour la configuration des options d’étiquetage des méthodes SetLabel/DeleteLabel.
   
 ## <a name="summary"></a>Résumé
@@ -23,9 +23,9 @@ public LabelingOptions (méthode assignation)  | _Pas encore documenté._
 public AssignmentMethod GetAssignmentMethod() const  | _Pas encore documenté._
 public bool IsDowngradeJustified() const  | _Pas encore documenté._
 public const std::string& GetJustificationMessage() const  | _Pas encore documenté._
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetExtendedProperties () const  | _Pas encore documenté._
+public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetExtendedProperties () const  | _Pas encore documenté._
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Pas encore documenté._
-public void SetExtendedProperties (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& extendedProperties)  | _Pas encore documenté._
+public void SetExtendedProperties (const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& extendedProperties)  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

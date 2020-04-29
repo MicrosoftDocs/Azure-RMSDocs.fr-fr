@@ -1,29 +1,29 @@
 ---
-title: 'MIP :: AuthDelegate :: OAuth2Challenge, classe'
-description: 'Documente la classe MIP :: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'classe AuthDelegate :: OAuth2Challenge'
+description: 'Documente la classe authdelegate :: oauth2challenge du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 8e3119e18d465c9ad66dd1cbbece003b96d1a3b7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: f8a350a8c9ddd68f484a98b0e63860d2965bd890
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489059"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763608"
 ---
-# <a name="class-mipauthdelegateoauth2challenge"></a>MIP :: AuthDelegate :: OAuth2Challenge, classe 
+# <a name="class-authdelegateoauth2challenge"></a>classe AuthDelegate :: OAuth2Challenge 
 classe qui contient toutes les informations requises de l’application appelante afin de générer un jeton oauth2.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Challenge (const std :: String & autorité, const std :: String & ressource, const std :: String & portée, const std :: String & les revendications)  |  Construisez un nouvel objet OAuth2Challenge.
-public const std :: String & GetAuthority () const  |  Obtient la chaîne d’autorité.
-public const std :: String & GetResource () const  |  Obtient la chaîne de ressource.
-public const std :: String & GetScope, () const  |  Obtient la chaîne de portée.
-public const std :: String & GetClaims () const  |  Obtient la chaîne de revendications.
+public OAuth2Challenge (const std :: String& autorité, const std :: String& ressource, const std :: String& portée, const std :: String& les revendications)  |  Construisez un nouvel objet OAuth2Challenge.
+public const std :: String& GetAuthority () const  |  Obtient la chaîne d’autorité.
+public const std :: String& GetResource () const  |  Obtient la chaîne de ressource.
+public const std :: String& GetScope, () const  |  Obtient la chaîne de portée.
+public const std :: String& GetClaims () const  |  Obtient la chaîne de revendications.
   
 ## <a name="members"></a>Membres
   

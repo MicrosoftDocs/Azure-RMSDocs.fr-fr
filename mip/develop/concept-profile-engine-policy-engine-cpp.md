@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 934fe6e054a6fe2b7f92b869e05d27a834d51366
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 6cfd75a3f56ebe12dc0c1caa3bd4e56438827af4
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555260"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764068"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de stratégie
 
@@ -21,13 +21,14 @@ ms.locfileid: "75555260"
 
 ### <a name="implementation-create-policy-engine-settings"></a>Implémentation : Créer les paramètres du moteur de stratégie
 
-De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::PolicyEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
+De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::PolicyEngine::Settings`. Cet objet stocke l’identificateur unique du moteur, un objet de `mip::AuthDelegate` votre implémentation, des données clientes personnalisables qui peuvent être utilisés pour le débogage ou la télémétrie, et, éventuellement, les paramètres régionaux.
 
-Ici, nous créons un objet `FileEngine::Settings` appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application :
+Ici, nous créons `FileEngine::Settings` un objet appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application :
 
 ```cpp
 PolicyEngine::Settings engineSettings(
-  mip::Identity(mUsername), // mip::Identity.
+  mip::Identity(mUsername), // mip::Identity.  
+  authDelegateImpl,         // Auth delegate object
   "",                       // Client data. Customizable by developer, stored with engine.
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
@@ -37,36 +38,41 @@ Un ID de moteur personnalisé est également fourni :
 
 ```cpp
 PolicyEngine::Settings engineSettings(
-  "myEngineId", // string
-  "",           // Client data in string format. Customizable by developer, stored with engine.
-  "en-US",      // Locale. Default is en-US
-  false);       // Load sensitive information types for driving classification. Default is false.
+  "myEngineId",     // String
+  authDelegateImpl, // Auth delegate object
+  "",               // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",          // Locale. Default is en-US
+  false);           // Load sensitive information types for driving classification. Default is false.
 ```
 
 En guise de bonne pratique, le premier paramètre, **id**, doit être un élément permettant au moteur d’être facilement connecté à l’utilisateur associé, de préférence le nom d’utilisateur principal.
 
 ### <a name="implementation-add-the-policy-engine"></a>Implémentation : Ajouter le moteur de stratégie
 
-Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::Profile`, nous allons utiliser `mip::PolicyEngine`.
+Pour ajouter ce moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::Profile`, nous allons utiliser `mip::PolicyEngine`.
 
 ```cpp
 
-  //auto profile will be std::shared_ptr<mip::Profile>
+  // Auto profile will be std::shared_ptr<mip::Profile>.
   auto profile = profileFuture.get();
 
-  //Create the PolicyEngine::Settings object
-  PolicyEngine::Settings engineSettings("UniqueID", "");
+  // Create the delegate
+  auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
 
-  //Create a promise for std::shared_ptr<mip::PolicyEngine>
+
+  // Create the PolicyEngine::Settings object.
+  PolicyEngine::Settings engineSettings("UniqueID", authDelegateImpl, "");
+
+  // Create a promise for std::shared_ptr<mip::PolicyEngine>.
   auto enginePromise = std::make_shared<std::promise<std::shared_ptr<mip::PolicyEngine>>>();
 
-  //Instantiate the future from the promise
+  // Instantiate the future from the promise.
   auto engineFuture = enginePromise->get_future();
 
-  //Add the engine using AddEngineAsync, passing in the engine settings and the promise
+  // Add the engine using AddEngineAsync, passing in the engine settings and the promise.
   profile->AddEngineAsync(engineSettings, enginePromise);
 
-  //get the future value and store in std::shared_ptr<mip::PolicyEngine>
+  // Get the future value and store in std::shared_ptr<mip::PolicyEngine>.
   auto engine = engineFuture.get();
 ```
 

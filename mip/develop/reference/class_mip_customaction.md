@@ -1,26 +1,26 @@
 ---
-title: mip::CustomAction, classe
-description: 'Documente la classe MIP :: CustomAction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: CustomAction de classe
+description: 'Documente la classe CustomAction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 9dfbd444684f68b954dd577c9ccdd208f55f9a89
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 82f6ccc0e44fc5d055a1b4785c33d473dbedabf6
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490193"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763372"
 ---
-# <a name="class-mipcustomaction"></a>mip::CustomAction, classe 
+# <a name="class-customaction"></a>CustomAction de classe 
 CustomAction est une classe d’action générique qui capture toutes les sous-propriétés de l’action sous la forme d’un conteneur de propriétés. Il appartient à l’appelant de comprendre la signification de l’action.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Obtenir le nom de l’action.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetProperties () const  |  Obtenir la liste de paires clé/valeur des propriétés.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetProperties () const  |  Obtenir la liste de paires clé/valeur des propriétés.
   
 ## <a name="members"></a>Membres
   

@@ -1,52 +1,48 @@
 ---
-title: mip::FileProfile::Settings, classe
-description: 'Documente la classe MIP :: fileprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'classe FileProfile :: Settings'
+description: 'Documente la classe fileprofile :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 4987919875c297ace2246e77eadab279238cc205
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 8202dc85cf54b7629d688442a0b386d4ca725ac7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490028"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762746"
 ---
-# <a name="class-mipfileprofilesettings"></a>mip::FileProfile::Settings, classe 
-Paramètres utilisés par FileProfile lors de sa création et tout au long de sa durée de vie.
+# <a name="class-fileprofilesettings"></a>classe FileProfile :: Settings 
+Settings utilisé par FileProfile lors de sa création et tout au long de sa durée de vie.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std :: shared_ptr\<AuthDelegate\> authDelegate, std :: shared_ptr\<ConsentDelegate\> consentDelegate, std :: shared_ptr\<observateur\> observateur)  |  Constructeur FileProfile :: Settings.
+Paramètres publics (const std :: shared_ptr\<mipContext\>& MipContext, CacheStorageType CacheStorageType, std :: shared_ptr\<ConsentDelegate\> ConsentDelegate, std :: shared_ptr\<observateur\> observer)  |  Constructeur FileProfile::Settings.
 public CacheStorageType GetCacheStorageType () const  |  Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
-public std :: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
 public std :: shared_ptr\<ConsentDelegate\> GetConsentDelegate () const  |  Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
-public std :: shared_ptr\<observateur\> GetObserver () const  |  Obtient l’observateur qui reçoit les notifications des événements liés à FileProfile.
+public std :: shared_ptr\<observer\> GetObserver () const  |  Obtient l’observateur qui reçoit les notifications des événements liés à FileProfile.
 public std :: shared_ptr\<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
 public std :: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
-public void SetHttpDelegate (const std :: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public void SetHttpDelegate (const std :: shared_ptr\<httpDelegate\>& HttpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
 public std :: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
-public void SetTaskDispatcherDelegate (const std :: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
+public void SetTaskDispatcherDelegate (const std :: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
-public const std::string& GetSessionId() const  |  Obtient l’ID de la session.
+public const std::string& GetSessionId() const  |  Obtient l’ID de session.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configure si les licences utilisateur final (LUF) sont mises en cache localement.
 public bool CanCacheLicenses () const  |  Obtient une valeur indiquant si les licences d’utilisateur final (LUF) sont mises en cache localement.
   
 ## <a name="members"></a>Membres
   
 ### <a name="settings-function"></a>Fonction Settings
-Constructeur FileProfile :: Settings.
+Constructeur FileProfile::Settings.
 
 Paramètres :  
 * **mipContext**: paramètres de contexte globaux 
 
 
 * **cacheStorageType**: stocker tout État mis en cache dans la mémoire ou sur le disque 
-
-
-* **authDelegate** : le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification 
 
 
 * **consentDelegate**: délégué utilisé pour obtenir l’autorisation de l’utilisateur pour accéder aux ressources externes 
@@ -61,12 +57,6 @@ Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
 
   
 **Retourne**: type de stockage utilisé
-  
-### <a name="getauthdelegate-function"></a>GetAuthDelegate fonction)
-Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
-
-  
-**Retourne** : le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification
   
 ### <a name="getconsentdelegate-function"></a>GetConsentDelegate fonction)
 Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
@@ -90,7 +80,7 @@ Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
 Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 
   
-**Retourne** : délégué HTTP à utiliser pour les opérations HTTP
+**Retourne**: le délégué http à utiliser pour les opérations http
   
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate fonction)
 Remplacer la pile HTTP par défaut par celle du client.
@@ -124,7 +114,7 @@ Paramètres :
 
   
 ### <a name="getsessionid-function"></a>GetSessionId fonction)
-Obtient l’ID de la session.
+Obtient l’ID de session.
 
   
 **Retourne** : ID de session à utiliser pour mettre en corrélation des journaux et la télémétrie

@@ -1,27 +1,27 @@
 ---
-title: class mip::ProtectionHandler::Observer
-description: Documente la classe MIP ::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: 'classe ProtectionHandler :: observer'
+description: 'Documente la classe protectionhandler :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 8f661f3ebf9bc657a4dd6f6356b26cd582d4aa2e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 66453d343505cc57427e177eac258b83a2663eb0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486815"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764438"
 ---
-# <a name="class-mipprotectionhandlerobserver"></a>class mip::ProtectionHandler::Observer 
-Interface qui reçoit les notifications liées à ProtectionHandler.
+# <a name="class-protectionhandlerobserver"></a>classe ProtectionHandler :: observer 
+Interface qui reçoit les notifications relatives à ProtectionHandler.
 Cette interface doit être implémentée par les applications utilisant le SDK de protection
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateProtectionHandlerSuccess (const std :: shared_ptr\<ProtectionHandler\>& protectionHandler, const std :: shared_ptr\<void\>contexte &)  |  Appelé lorsque ProtectionHandler a été créé avec succès.
-public virtual void OnCreateProtectionHandlerFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé lors de l’échec de la création de ProtectionHandler.
+public virtual void OnCreateProtectionHandlerSuccess (const std :: shared_ptr\<protectionHandler\>& ProtectionHandler, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque ProtectionHandler a été créé avec succès.
+public virtual void OnCreateProtectionHandlerFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque la création de ProtectionHandler a échoué.
   
 ## <a name="members"></a>Membres
   
@@ -29,22 +29,22 @@ public virtual void OnCreateProtectionHandlerFailure (const std :: exception_pt
 Appelé lorsque ProtectionHandler a été créé avec succès.
 
 Paramètres :  
-* **protectionHandler**: protectionHandler nouvellement créé
+* **protectionHandler** : ProtectionHandler nouvellement créé
 
 
-* **Context**: le même contexte qui a été passé à ProtectionEngine :: CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine :: CreateProtectionHandlerFromPublishingLicenseAsync
+* **context** : le même contexte que celui transmis à ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine :: CreateProtectionHandlerFromPublishingLicenseAsync, et ce même contexte sera transféré en l’ProtectionEngine :: observer :: OnCreateProtectionHandlerSuccess ou ProtectionEngine :: observer :: OnCreateProtectionHandlerFailure
+Une application peut transmettre n’importe quel type de contexte (par exemple, std::promise, std::function) à ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync, et ce même contexte sera transféré tel quel à ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess ou ProtectionEngine::Observer::OnCreateProtectionHandlerFailure
   
 ### <a name="oncreateprotectionhandlerfailure-function"></a>OnCreateProtectionHandlerFailure fonction)
-Appelé lors de l’échec de la création de ProtectionHandler.
+Appelé lorsque la création de ProtectionHandler a échoué.
 
 Paramètres :  
 * **error** : défaillance qui s’est produite lors de la création 
 
 
-* **Context**: le même contexte qui a été passé à ProtectionEngine :: CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine :: CreateProtectionHandlerFromPublishingLicenseAsync
+* **context** : le même contexte que celui transmis à ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine :: CreateProtectionHandlerFromPublishingLicenseAsync, et ce même contexte sera transféré en l’ProtectionEngine :: observer :: OnCreateProtectionHandlerSuccess ou ProtectionEngine :: observer :: OnCreateProtectionHandlerFailure
+Une application peut transmettre n’importe quel type de contexte (par exemple, std::promise, std::function) à ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync ou ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync, et ce même contexte sera transféré tel quel à ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess ou ProtectionEngine::Observer::OnCreateProtectionHandlerFailure

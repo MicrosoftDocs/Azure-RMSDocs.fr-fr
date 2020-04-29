@@ -1,19 +1,19 @@
 ---
-title: mip::ProtectDoNotForwardAction, classe
-description: Documente la classe MIP ::p rotectdonotforwardaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: ProtectDoNotForwardAction de classe
+description: 'Documente la classe protectdonotforwardaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a3e85ad0d4e9ac4a1d729d8f6601eba2c7a1f9c8
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 561e1ede0f8a6a8c43fba3306a59e8ef17b738d7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486968"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763984"
 ---
-# <a name="class-mipprotectdonotforwardaction"></a>mip::ProtectDoNotForwardAction, classe 
+# <a name="class-protectdonotforwardaction"></a>ProtectDoNotForwardAction de classe 
 Classe d’action qui spécifie l’ajout de la protection Ne pas transférer au document.
   
 ## <a name="summary"></a>Résumé

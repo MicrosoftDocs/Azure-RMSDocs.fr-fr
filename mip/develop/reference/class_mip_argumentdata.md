@@ -1,25 +1,25 @@
 ---
-title: 'MIP :: ArgumentData, classe'
-description: 'Documente la classe MIP :: argumentdata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: ArgumentData de classe
+description: 'Documente la classe argumentdata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 1090ffaa68e1dbf83a198b2b193a07c9dfa1a58a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: d7ae47ddb7b955c3940530324a52c8a0ea1e62d2
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490623"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763639"
 ---
-# <a name="class-mipargumentdata"></a>MIP :: ArgumentData, classe 
+# <a name="class-argumentdata"></a>ArgumentData de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: String & GetValue () const  | _Pas encore documenté._
-public const std :: String & GetKey () const  | _Pas encore documenté._
+public const std :: String& GetValue () const  | _Pas encore documenté._
+public const std :: String& GetKey () const  | _Pas encore documenté._
 public const std :: Vector\<std :: String\>& GetValues () const  | _Pas encore documenté._
 virtuel public ~ ArgumentData ()  | _Pas encore documenté._
   

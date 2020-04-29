@@ -1,33 +1,33 @@
 ---
-title: class mip::ProtectionDescriptorBuilder
-description: Documente la classe MIP ::p rotectiondescriptorbuilder du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: ProtectionDescriptorBuilder de classe
+description: 'Documente la classe protectiondescriptorbuilder :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ed9d7085f7406e5c921843d32069f2f6af9f5807
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 11890665b02ade782edcff6c23296ab70c9368f8
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489688"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764472"
 ---
-# <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
+# <a name="class-protectiondescriptorbuilder"></a>ProtectionDescriptorBuilder de classe 
 Construit un ProtectionDescriptor qui décrit la protection associée à un élément de contenu.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std :: shared_ptr\<ProtectionDescriptor\> Build ()  |  Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
+public MIP_API std :: shared_ptr\<Build\> ProtectionDescriptor ()  |  Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Définit un nom pour la stratégie de protection.
 public void SetDescription(const std::string& value)  |  Définit la description de la stratégie de protection.
 public void SetContentValidUntil (const std :: Chrono :: time_point\<std :: Chrono :: system_clock\>& valeur)  |  Définit l’heure d’expiration de la stratégie de protection.
 public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
-public void SetEncryptedAppData (const std :: Map\<std :: String, std :: String\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
-public void SetSignedAppData (const std :: Map\<std :: String, std :: String\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être signées.
-public virtual ~ProtectionDescriptorBuilder()  | _Pas encore documenté._
+public void SetEncryptedAppData (const std :: map\<std :: String, std :: String\>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
+public void SetSignedAppData (const std :: map\<std :: String, std :: String\>& value)  |  Définit les données spécifiques de l’application qui doivent être signées.
+public void SetDoubleKeyUrl (const std :: String& doubleKeyUrl)  |  Définit l’URL de clé double à utiliser pour la protection personnalisée.
   
 ## <a name="members"></a>Membres
   
@@ -35,7 +35,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _Pas encore documenté._
 Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
 
   
-**Retourne**: nouvelle instance ProtectionDescriptor
+**Retourne** : nouvelle instance ProtectionDescriptor
   
 ### <a name="setname-function"></a>SetName fonction)
 Définit un nom pour la stratégie de protection.
@@ -53,7 +53,7 @@ Paramètres :
 
 
   
-### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil function
+### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil fonction)
 Définit l’heure d’expiration de la stratégie de protection.
 
 Paramètres :  
@@ -96,5 +96,9 @@ Paramètres :
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront signées par le service de protection. Ces données signées ne dépendent pas des données chiffrées définies par SetEncryptedAppData.
   
-### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder fonction)
-_Pas encore documenté._
+### <a name="setdoublekeyurl-function"></a>SetDoubleKeyUrl fonction)
+Définit l’URL de clé double à utiliser pour la protection personnalisée.
+
+Paramètres :  
+* **valeur**: URL de clé double
+

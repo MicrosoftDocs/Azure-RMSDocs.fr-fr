@@ -1,19 +1,19 @@
 ---
-title: mip::AddContentFooterAction, classe
-description: 'Documente la classe MIP :: addcontentfooteraction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: AddContentFooterAction de classe
+description: 'Documente la classe addcontentfooteraction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 7313976d8856a3aa807245a5c48ac22bf16b469a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 58c0767f2c880a52ef4a831e5d57670820187fc7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490742"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763772"
 ---
-# <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
+# <a name="class-addcontentfooteraction"></a>AddContentFooterAction de classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
   
 ## <a name="summary"></a>Résumé
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Obtenir la marge du pied de page à partir du b
 API utilisée pour marquer l’élément de pied de page de contenu.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom sera retourné dans RemoveContentFooterAction si le pied de page de contenu doit être supprimé.
+**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom est retourné dans [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) si le pied de page de contenu doit être supprimé.
   
 ### <a name="gettext-function"></a>GetText, fonction
 Obtenir le texte devant être placé dans le pied de page de contenu.
@@ -63,9 +63,9 @@ Obtenir la couleur de la police utilisée pour afficher le pied de page de conte
 Obtenir l’alignement du pied de page.
 
   
-**Retourne** : l’énumérateur ContentMarkAlignment : LEFT|RIGHT|CENTER. 
+**Retourne**: l’énumérateur CONTENTMARKALIGNMENT : Left | À droite | Gestionnaire. 
   
-**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Voir aussi** : ContentMarkAlignment
   
 ### <a name="getmargin-function"></a>GetMargin fonction)
 Obtenir la marge du pied de page à partir du bas.

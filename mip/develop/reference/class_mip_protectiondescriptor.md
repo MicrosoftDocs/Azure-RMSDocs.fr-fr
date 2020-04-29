@@ -1,19 +1,19 @@
 ---
-title: class mip::ProtectionDescriptor
-description: Documente la classe MIP ::p rotectiondescriptor du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: ProtectionDescriptor de classe
+description: 'Documente la classe protectiondescriptor :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b4257be5475b1225f79efe00c11df4b79ee67ee9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487036"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763947"
 ---
-# <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
+# <a name="class-protectiondescriptor"></a>ProtectionDescriptor de classe 
 Description de la protection associée à un élément de contenu.
   
 ## <a name="summary"></a>Résumé
@@ -32,8 +32,9 @@ public bool DoesContentExpire () const  |  Vérifie si le contenu a une heure d�
 public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetContentValidUntil () const  |  Obtient l’heure d’expiration de la protection.
 public bool DoesAllowOfflineAccess() const  |  Indique si la protection autorise l’accès au contenu hors connexion ou non.
 public std::string GetReferrer() const  |  Obtient l’adresse du référent de protection.
-public std :: Map\<std :: String, std :: String\> GetEncryptedAppData () const  |  Obtient les données spécifiques de l’application qui ont été chiffrées.
-public std :: Map\<std :: String, std :: String\> GetSignedAppData () const  |  Obtient les données spécifiques de l’application qui ont été signées.
+public std :: map\<std :: String, std :: String\> GetEncryptedAppData () const  |  Obtient les données propres à l’application qui ont été chiffrées.
+public std :: map\<std :: String, std :: String\> GetSignedAppData () const  |  Obtient les données spécifiques de l’application qui ont été signées.
+public std :: String GetDoubleKeyUrl () const  |  Obtient l’URL de clé double à utiliser pour la protection personnalisée.
   
 ## <a name="members"></a>Membres
   
@@ -65,7 +66,7 @@ Obtient la description de la protection.
 Obtient l’ID du modèle de protection, le cas échéant.
 
   
-**Retourne** : ID du modèle
+**Retourne**: ID de modèle
   
 ### <a name="getlabelid-function"></a>GetLabelId fonction)
 Obtient l’ID de l’étiquette, le cas échéant.
@@ -83,7 +84,7 @@ Obtient l’ID de contenu, le cas échéant.
 Obtient la collection de mappages utilisateurs-droits.
 
   
-**Retourne**: collection de mappages utilisateurs-droits la valeur de la propriété UserRights est vide si l’utilisateur actuel n’a pas accès à ces informations (autrement dit, si l’utilisateur n’est pas le propriétaire et qu’il n’a pas le droit VIEWRIGHTSDATA).
+**Retourne** : collection de mappages utilisateurs-droits. La valeur de la propriété [UserRights](class_mip_userrights.md) est vide si l’utilisateur actif n’a pas accès à ces informations (c’est-à-dire s’il n’est pas le propriétaire et qu’il ne dispose pas du droit VIEWRIGHTSDATA).
   
 ### <a name="getuserroles-function"></a>GetUserRoles fonction)
 Obtient la collection de mappages utilisateurs-rôles.
@@ -97,7 +98,7 @@ Vérifie si le contenu a une heure d’expiration ou non.
   
 **Retourne**la valeur true si le contenu peut expirer, sinon false.
   
-### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil function
+### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil fonction)
 Obtient l’heure d’expiration de la protection.
 
   
@@ -116,13 +117,19 @@ Obtient l’adresse du référent de protection.
 **Retourne** : adresse du référent de protection. Le référent est un URI qui peut être affiché pour l’utilisateur s’il ne peut pas ôter la protection du contenu. Il contient des informations sur la façon dont cet utilisateur peut obtenir l’autorisation d’accéder au contenu.
   
 ### <a name="getencryptedappdata-function"></a>GetEncryptedAppData fonction)
-Obtient les données spécifiques de l’application qui ont été chiffrées.
+Obtient les données propres à l’application qui ont été chiffrées.
 
   
-**Retourne**: données spécifiques à l’application un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été chiffrées par le service de protection. Ces données chiffrées sont indépendantes des données signées accessibles via ProtectionDescriptor :: GetSignedAppData
+**Retourne** : données spécifiques à l’application. Un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été chiffrées par le service de protection. Ces données chiffrées sont indépendantes des données signées accessibles via ProtectionDescriptor :: GetSignedAppData.
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData fonction)
 Obtient les données spécifiques de l’application qui ont été signées.
 
   
-**Retourne**: données spécifiques à l’application un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été signées par le service de protection. Ces données signées sont indépendantes des données chiffrées accessibles via ProtectionDescriptor :: GetEncryptedAppData
+**Retourne** : données spécifiques à l’application. Un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été signées par le service de protection. Ces données signées sont indépendantes des données chiffrées accessibles via ProtectionDescriptor :: GetEncryptedAppData.
+  
+### <a name="getdoublekeyurl-function"></a>GetDoubleKeyUrl fonction)
+Obtient l’URL de clé double à utiliser pour la protection personnalisée.
+
+  
+**Retourne**: URL de clé double URL de clé double utilisée dans les demandes personnalisées pour protéger les informations avec une deuxième clé

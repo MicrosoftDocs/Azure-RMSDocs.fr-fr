@@ -1,26 +1,26 @@
 ---
-title: class mip::PolicyEngine::Settings
-description: Documente la classe MIP ::p olicyengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: 'classe PolicyEngine :: Settings'
+description: 'Documente la classe policyengine :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 620775649ee0fa593f141b1a4f983ad8b52caafe
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5e745dd011f9626e031cfcb9c9ae0466e91e2bfe
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487614"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761068"
 ---
-# <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
+# <a name="class-policyenginesettings"></a>classe PolicyEngine :: Settings 
 Définit les paramètres associés à un PolicyEngine.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: String & engineId, const std :: String & ClientData :, const std :: String & paramètres régionaux, bool loadSensitivityTypes)  |  PolicyEngine :: Settings, constructeur pour le chargement d’un moteur existant.
-Paramètres publics (const Identity & Identity, const std :: String & ClientData :, const std :: String & locale, bool loadSensitivityTypes)  |  PolicyEngine :: Settings, constructeur pour la création d’un nouveau moteur.
+Paramètres publics (const std :: String& engineId, const std :: shared_ptr\<AuthDelegate\>& AuthDelegate, const std :: String& ClientData :, const std :: String& paramètres régionaux, bool loadSensitivityTypes)  |  Constructeur PolicyEngine::Settings pour le chargement d’un moteur existant.
+Paramètres publics (const Identity& Identity, const std :\<:\> shared_ptr AuthDelegate& AuthDelegate, const std :: String& ClientData :, const std :: String& locale, bool loadSensitivityTypes)  |  Constructeur PolicyEngine::Settings pour la création d’un moteur.
 public const std::string& GetEngineId() const  |  Obtenir l’ID du moteur.
 public void SetEngineId(const std::string& id)  |  Définir l’ID du moteur.
 public const Identity& GetIdentity() const  |  Obtenir l’objet Identity.
@@ -28,27 +28,34 @@ public void SetIdentity(const Identity& identity)  |  Définir l’objet Identit
 public const std::string& GetClientData() const  |  Obtenir la valeur Client Data définie dans les paramètres.
 public void SetClientData(const std::string& clientData)  |  Définir la chaîne Client Data.
 public const std::string& GetLocale() const  |  Obtenir la valeur Locale définie dans les paramètres.
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
 public void SetSessionId(const std::string& sessionId)  |  Définir l’ID de session, qui est utilisé pour la télémétrie définie par le client.
 public const std::string& GetSessionId() const  |  Obtenir l’ID de session, qui est un identificateur unique.
 public bool IsLoadSensitivityTypesEnabled () const  |  Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la charge sont activées.
-public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Définit éventuellement l’URL de base du point de terminaison cloud.
+public void SetCloud (Cloud Cloud)  |  Définit éventuellement le Cloud cible.
+const GetCloud () du cloud public  |  Obtient le Cloud cible utilisé par toutes les demandes de service.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison Cloud pour le Cloud personnalisé.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Obtient l’URL de base du cloud utilisée par toutes les demandes de service, si elle est spécifiée.
-public void SetDelegatedUserEmail (const std :: String & delegatedUserEmail)  |  Définit l’utilisateur délégué.
-public const std :: String & GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
+public void SetDelegatedUserEmail (const std :: String& delegatedUserEmail)  |  Définit l’utilisateur délégué.
+public const std :: String& GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
 public void SetLabelFilter (const std :: Vector\<LabelFilterType\>& labelFilter)  |  Définit le filtre d’étiquette.
 public const std :: Vector\<LabelFilterType\>& GetLabelFilter () const  |  Obtient le filtre d’étiquette.
 public void SetVariableTextMarkingType (VariableTextMarkingType variableTextMarkingType)  |  Définit le type de marquage de texte de la variable.
 public VariableTextMarkingType GetVariableTextMarkingType () const  |  Obtient le type de marquage de texte de la variable.
+public void SetAuthDelegate (const std :: shared_ptr\<authDelegate\>& AuthDelegate)  |  Définissez le délégué d’authentification du moteur.
+public std :: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Obtient le délégué d’authentification du moteur.
   
 ## <a name="members"></a>Membres
   
 ### <a name="settings-function"></a>Fonction Settings
-PolicyEngine :: Settings, constructeur pour le chargement d’un moteur existant.
+Constructeur PolicyEngine::Settings pour le chargement d’un moteur existant.
 
 Paramètres :  
 * **engineId** : affectez à ce paramètre l’ID unique du moteur généré par AddEngineAsync ou un ID généré automatiquement. Quand vous chargez un moteur existant, réutilisez l’ID ; sinon, un moteur est créé. 
+
+
+* **authDelegate**: le délégué d’authentification utilisé par le kit de développement logiciel (SDK) pour acquérir des jetons d’authentification remplace PolicyProfile :: Settings :: authDelegate si les deux sont fournis 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
@@ -62,10 +69,13 @@ Paramètres :
 
   
 ### <a name="settings-function"></a>Fonction Settings
-PolicyEngine :: Settings, constructeur pour la création d’un nouveau moteur.
+Constructeur PolicyEngine::Settings pour la création d’un moteur.
 
 Paramètres :  
 * **identity** : informations d’identité de l’utilisateur associé au nouveau moteur. 
+
+
+* **authDelegate**: le délégué d’authentification utilisé par le kit de développement logiciel (SDK) pour acquérir des jetons d’authentification remplace PolicyProfile :: Settings :: authDelegate si les deux sont fournis 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
@@ -156,7 +166,7 @@ Paramètres :
 Obtenir l’ID de session, qui est un identificateur unique.
 
   
-**Retourne** : ID de session.
+**Retourne**: ID de session.
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled fonction)
 Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la charge sont activées.
@@ -164,15 +174,31 @@ Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la ch
   
 **Retourne**la valeur true si l’option est activée. sinon, false.
   
+### <a name="setcloud-function"></a>SetCloud fonction)
+Définit éventuellement le Cloud cible.
+
+Paramètres :  
+* **Cloud**: Cloud
+
+
+Si le Cloud n’est pas spécifié, le Cloud commercial est utilisé par défaut.
+  
+### <a name="getcloud-function"></a>GetCloud fonction)
+Obtient le Cloud cible utilisé par toutes les demandes de service.
+
+  
+**Retourne**: Cloud
+  
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl fonction)
-Définit éventuellement l’URL de base du point de terminaison cloud.
+Définit l’URL de base du point de terminaison Cloud pour le Cloud personnalisé.
 
 Paramètres :  
 * **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://dataservice.protection.outlook.com »)
 
 
+Cette valeur est lue uniquement et doit être définie pour Cloud = Custom
   
-### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl fonction)
 Obtient l’URL de base du cloud utilisée par toutes les demandes de service, si elle est spécifiée.
 
   
@@ -200,7 +226,7 @@ Paramètres :
 * **labelFilter**: filtre d’étiquette.
 
 
-Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles.
+Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles. Si la valeur n’est pas définie, HyokProtection et DoubleKeyProtection sont filtrés.
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter fonction)
 Obtient le filtre d’étiquette.
@@ -222,3 +248,17 @@ Obtient le type de marquage de texte de la variable.
 
   
 **Retourne**: le type de marquage de texte de la variable.
+  
+### <a name="setauthdelegate-function"></a>SetAuthDelegate fonction)
+Définissez le délégué d’authentification du moteur.
+
+Paramètres :  
+* **authDelegate**: délégué d’authentification
+
+
+  
+### <a name="getauthdelegate-function"></a>GetAuthDelegate fonction)
+Obtient le délégué d’authentification du moteur.
+
+  
+**Retourne**: le délégué d’authentification du moteur.

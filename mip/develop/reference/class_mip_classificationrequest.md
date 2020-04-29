@@ -1,19 +1,19 @@
 ---
-title: 'MIP :: ClassificationRequest, classe'
-description: 'Documente la classe MIP :: classificationrequest du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: ClassificationRequest de classe
+description: 'Documente la classe classificationrequest :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 27c6e01eea2dae3735ce5cc3e5cd618b6223d2eb
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 0d4b8d3ed5e12698c0044975516b017d1c9376b0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489025"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763542"
 ---
-# <a name="class-mipclassificationrequest"></a>MIP :: ClassificationRequest, classe 
+# <a name="class-classificationrequest"></a>ClassificationRequest de classe 
 Classe qui contient la demande d’un appel de classification sur l’état d’exécution.
   
 ## <a name="summary"></a>Résumé

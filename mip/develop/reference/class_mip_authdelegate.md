@@ -1,26 +1,26 @@
 ---
-title: 'MIP :: AuthDelegate, classe'
-description: 'Documente la classe MIP :: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: AuthDelegate de classe
+description: 'Documente la classe authdelegate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 30907f3bf4a08f72305a59290c8cbd891def44c9
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: a7cbc6789fc6baa8fbb01ffb8c6d6ea7e9294d4f
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490606"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763628"
 ---
-# <a name="class-mipauthdelegate"></a>MIP :: AuthDelegate, classe 
+# <a name="class-authdelegate"></a>AuthDelegate de classe 
 Délégué pour les opérations liées à l’authentification.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtuel bool AcquireOAuth2Token (const MIP :: Identity & Identity, const OAuth2Challenge & Challenge, OAuth2Token & Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
-public virtuel bool AcquireOAuth2Token (const MIP :: Identity & Identity, const OAuth2Challenge & Challenge, const std :: shared_ptr\<void\>& contexte, OAuth2Token & Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
+public virtuel bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, OAuth2Token& Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
+public virtuel bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, const std :\<:\> shared_ptr void& Context, OAuth2Token& Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
   
 ## <a name="members"></a>Membres
   

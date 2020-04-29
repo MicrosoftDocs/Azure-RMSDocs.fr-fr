@@ -1,34 +1,36 @@
 ---
-title: MIP ::P rotectionHandler ::P ublishingSettings
-description: Documente la classe MIP ::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: ProtectionHandler de classe ::P ublishingSettings
+description: Documente la classe protectionhandler ::p ublishingsettings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e61eb300cbc787ecbb7fd14ec5dcb060d4f47d0a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: fc1de565e103b840c1190b397c247caca515d5bd
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490759"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764415"
 ---
-# <a name="class-mipprotectionhandlerpublishingsettings"></a>MIP ::P rotectionHandler ::P ublishingSettings 
+# <a name="class-protectionhandlerpublishingsettings"></a>ProtectionHandler de classe ::P ublishingSettings 
 Paramètres utilisés pour créer un ProtectionHandler pour protéger un nouveau contenu.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public PublishingSettings (const std :: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler :: Settings, constructeur pour la création d’un nouveau moteur.
+public PublishingSettings (const std :: shared_ptr\<protectionDescriptor\>& ProtectionDescriptor)  |  ProtectionHandler :: Settings, constructeur pour la création d’un nouveau moteur.
 public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | _Pas encore documenté._
 public bool GetIsAuditedExtractionAllowed () const  |  Obtient une valeur indiquant si des applications prenant en charge les non-MIP sont autorisées ou non pour ouvrir du contenu protégé.
 public void SetIsAuditedExtractionAllowed (bool isAuditedExtractionAllowed)  |  Définit si les applications prenant en charge non MIP sont autorisées ou non pour ouvrir du contenu protégé.
 public bool GetIsDeprecatedAlgorithmPreferred () const  |  Obtient une valeur indiquant si l’algorithme de chiffrement (ECB) déconseillé est préféré pour la compatibilité descendante.
 public void SetIsDeprecatedAlgorithmPreferred (bool isDeprecatedAlgorithmPreferred)  |  Définit si l’algorithme de chiffrement déconseillé (ECB) est préféré pour la compatibilité descendante.
-public void SetDelegatedUserEmail (const std :: String & delegatedUserEmail)  |  Définit l’utilisateur délégué.
-public const std :: String & GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
+public void SetDelegatedUserEmail (const std :: String& delegatedUserEmail)  |  Définit l’utilisateur délégué.
+public const std :: String& GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
 public bool IsPublishingFormatJson () const  |  Obtient une valeur indiquant si le pl retourné est au format JSON (le format XML est plus largement accepté et est la valeur par défaut).
 public void SetPublishingFormatJson (bool isPublishingFormatJson)  |  indique si le pl renvoyé est au format JSON (le format XML est plus largement accepté et est la valeur par défaut).
+public void SetPreLicenseUserEmail (const std :: String& preLicenseUserEmail)  |  Définit l’utilisateur de pré-licence.
+public const std :: String& GetPreLicenseUserEmail () const  |  Obtient l’utilisateur de pré-licence.
   
 ## <a name="members"></a>Membres
   
@@ -99,3 +101,19 @@ indique si le pl renvoyé est au format JSON (le format XML est plus largement a
 Paramètres :  
 * **isPublishingFormatJson**: si le format JSON est activé.
 
+
+  
+### <a name="setprelicenseuseremail-function"></a>SetPreLicenseUserEmail fonction)
+Définit l’utilisateur de pré-licence.
+
+Paramètres :  
+* **preLicenseUserEmail**: utilisateur de pré-licence
+
+
+Si aucun utilisateur de pré-licence n’est spécifié, une pré-licence ne sera pas obtenue
+  
+### <a name="getprelicenseuseremail-function"></a>GetPreLicenseUserEmail fonction)
+Obtient l’utilisateur de pré-licence.
+
+  
+**Retourne**: utilisateur de pré-licence

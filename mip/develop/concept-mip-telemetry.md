@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: e2c8d8726edc483b35c7b9931bc83a3ddb3b5a2c
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 87c9884f497cd0020b7252b6ef5a466fe858a8c1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556144"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764113"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configuration de la télémétrie
 
@@ -21,11 +21,13 @@ Par défaut, le kit de développement logiciel (SDK) Microsoft Information Prote
 
 ## <a name="telemetry-configuration"></a>Configuration de la télémétrie
 
-Les options de télémétrie dans le kit de développement logiciel MIP peuvent être contrôlées via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Créez une instance de cette classe, puis affectez à **IsTelemetryOptedOut** la valeur true. Fournissez l’objet de la classe **TelemetryConfiguration** à la fonction utilisée pour créer **MipContext**. Cela n’élimine pas complètement les données de télémétrie, mais réduit à un nombre minimal d’informations identifiables par l’utilisateur final.
+Les options de télémétrie dans le kit de développement logiciel MIP peuvent être contrôlées via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Créez une instance de cette classe, puis affectez à **IsTelemetryOptedOut** la valeur true. Fournissez l’objet de la classe **TelemetryConfiguration** à la fonction utilisée pour créer **MipContext**. 
+
+À compter de la version 1,6 du kit de développement logiciel MIP, le paramètre option **désactive complètement** la télémétrie. Dans verisons 1,5 et versions antérieures, nous envoyons un ensemble d’informations de télémétrie minimales.
 
 ### <a name="minimum-telemetry-events"></a>Événements de télémétrie minimaux
 
-Lorsque la télémétrie est définie sur la valeur *« refusé »* , un ensemble minimal de données est envoyé à Microsoft. Toutes les informations d’identification personnelle sont nettoyées à partir de ces informations. Ces données incluent des informations sur les pulsations pour comprendre que le kit de développement logiciel (SDK) est en cours d’utilisation et les métadonnées système. **Aucune information sur le contenu de l’utilisateur ou de l’utilisateur final n’est définie pour le service.**
+Lorsque la télémétrie est définie sur la valeur *« refusé »*, un ensemble minimal de données est envoyé à Microsoft. Toutes les informations d’identification personnelle sont nettoyées à partir de ces informations. Ces données incluent des informations sur les pulsations pour comprendre que le kit de développement logiciel (SDK) est en cours d’utilisation et les métadonnées système. **Aucune information sur le contenu de l’utilisateur ou de l’utilisateur final n’est définie pour le service.**
 
 Passez en revue les tableaux ci-dessous pour connaître exactement les événements et les données qui sont envoyés avec un ensemble de données de télémétrie minimal.
 
@@ -43,15 +45,15 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | Engine. TenantId                      | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
 | Engine. UserObjectId                  | ID d’objet utilisateur dans Azure Active Directory.                                              | Non       |
 | Event. CorrelationId                  | ID unique généré associé à l’objet qui a déclenché l’événement.                   | Non       |
-| Event. CorrelationIdDescription       | C++nom de classe de l’objet qui a déclenché l’événement.                                     | Non       |
+| Event. CorrelationIdDescription       | Nom de classe C++ de l’objet qui a déclenché l’événement.                                     | Non       |
 | Event. ParentCorrelationId            | ID de corrélation de l’événement parent.                                                           | Non       |
 | Event. ParentCorrelationIdDescription | ID unique généré associé au parent de l’objet qui a déclenché l’événement. | Non       |
 | Event. UniqueId                       | ID unique généré affecté à l’événement.                                             | Non       |
 | MachineName                          | Nom du système qui a généré l’événement.                                           | **Oui**  |
 | MIP. Version                          | Version du kit de développement logiciel (SDK) MIP.                                                                | Non       |
-| Opération                            | Pulsation                                                                              | Non       |
+| Opération                            | Heartbeat                                                                              | Non       |
 | OrganizationId                       | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
-| Plate-forme                             | Version du système d'exploitation.                                                              | Non       |
+| Plateforme                             | Version du système d’exploitation.                                                              | Non       |
 | ProcessName                          | Nom du processus à l’aide du kit de développement logiciel (SDK).                                                     | Non       |
 | ProductVersion                       | Identique à « App. ApplicationVersion ».                                                      | Non       |
 | SDKVersion                           | Identique à MIP. Version.                                                                   | Non       |
@@ -70,24 +72,24 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | ApplicationId                        | La version de l’application, par le biais de MIP :: ApplicationInfo.                             | Non       |
 | ApplicationName                      | Nom de l’application fourni via MIP :: ApplicationInfo.                                | Non       |
 | CreationTime                         | L’événement de temps a été généré.                                                              | Non       |
-| dataState                            | L’état des données à mesure que l’application agit sur « REST », « MOTION », « USE ».           | Non       |
+| DataState                            | L’état des données à mesure que l’application agit sur « REST », « MOTION », « USE ».           | Non       |
 | DefaultLabel.Id                      | Identificateur d’étiquette par défaut du locataire.                                                       | Non       |
 | Engine. TenantId                      | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
 | Engine. UserObjectId                  | Identificateur de l’objet utilisateur dans Azure Active Directory.                                      | Non       |
 | Event. CorrelationId                  | ID unique généré associé à l’objet qui a déclenché l’événement.                   | Non       |
-| Event. CorrelationIdDescription       | C++nom de classe de l’objet qui a déclenché l’événement.                                     | Non       |
+| Event. CorrelationIdDescription       | Nom de classe C++ de l’objet qui a déclenché l’événement.                                     | Non       |
 | Event. ParentCorrelationId            | ID de corrélation de l’événement parent.                                                           | Non       |
 | Event. ParentCorrelationIdDescription | ID unique généré associé au parent de l’objet qui a déclenché l’événement. | Non       |
 | Event. UniqueId                       | ID unique généré affecté à l’événement.                                             | Non       |
-| LabelId                              | Identificateur d’étiquette de contenu sur le fichier ou les données ouverts.                                   | Non       |
+| ID                              | Identificateur d’étiquette de contenu sur le fichier ou les données ouverts.                                   | Non       |
 | MachineName                          | Nom du système qui a généré l’événement.                                           | **Oui**  |
 | MIP. Version                          | Version du kit de développement logiciel (SDK) MIP.                                                                | Non       |
 | ObjectId                             | Chemin d’accès/Description du fichier ou des données.                                             | **Oui**  |
 | Opération                            | « Détection ».                                                                           | Non       |
 | OrganizationId                       | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
-| Plate-forme                             | Version du système d'exploitation.                                                              | Non       |
+| Plateforme                             | Version du système d’exploitation.                                                              | Non       |
 | ProcessName                          | Nom du processus à l’aide du kit de développement logiciel (SDK).                                                     | Non       |
-| Protégé                            | Valeur booléenne indiquant si le fichier est protégé ou non.                                       | Non       |
+| Protected                            | Valeur booléenne indiquant si le fichier est protégé ou non.                                       | Non       |
 | Protection                           | Identificateur du modèle de protection.                                                    | **Oui**  |
 | ProtectionOwner                      | Adresse e-mail du propriétaire de la protection.                                                 | **Oui**  |
 | SDKVersion                           | Identique à MIP. Version.                                                                   | Non       |
@@ -108,28 +110,28 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | ApplicationId                        | L’ID d’application fourni via MIP :: ApplicationInfo.                                  | Non       |
 | ApplicationName                      | Nom de l’application fourni via MIP :: ApplicationInfo.                                | Non       |
 | CreationTime                         | Heure à laquelle l’événement a été généré.                                                          | Non       |
-| dataState                            | L’état des données à mesure que l’application agit sur « REST », « MOTION », « USE ».           | Non       |
+| DataState                            | L’état des données à mesure que l’application agit sur « REST », « MOTION », « USE ».           | Non       |
 | DefaultLabel.Id                      | Identificateur d’étiquette par défaut du locataire.                                                       | Non       |
 | Engine. TenantId                      | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
 | Engine. UserObjectId                  | Identificateur de l’objet utilisateur dans Azure Active Directory.                                      | Non       |
 | Event. CorrelationId                  | ID unique généré associé à l’objet qui a déclenché l’événement.                   | Non       |
-| Event. CorrelationIdDescription       | C++nom de classe de l’objet qui a déclenché l’événement.                                     | Non       |
+| Event. CorrelationIdDescription       | Nom de classe C++ de l’objet qui a déclenché l’événement.                                     | Non       |
 | Event. ParentCorrelationId            | ID de corrélation de l’événement parent.                                                           | Non       |
 | Event. ParentCorrelationIdDescription | ID unique généré associé au parent de l’objet qui a déclenché l’événement. | Non       |
 | Event. UniqueId                       | ID unique généré affecté à l’événement.                                             | Non       |
 | IsLabelChanged                       | Valeur booléenne indiquant si l’étiquette a changé.                                                  | Non       |
 | IsProtectionChanged                  | Valeur booléenne indiquant si la protection a changé.                                                 | Non       |
-| LabelId                              | ID d’étiquette à appliquer au fichier ou aux données.                                    | Non       |
+| ID                              | ID d’étiquette à appliquer au fichier ou aux données.                                    | Non       |
 | LabelIdBefore                        | ID de l’étiquette précédente qui était sur le fichier ou les données.                                        | Non       |
 | MachineName                          | Nom du système qui a généré l’événement.                                           | **Oui**  |
 | MIP. Version                          | Version du kit de développement logiciel (SDK) MIP.                                                                | Non       |
 | ObjectId                             | Chemin d’accès/Description du fichier ou des données.                                             | **Oui**  |
 | Opération                            | « Modifier ».                                                                              | Non       |
 | OrganizationId                       | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
-| Plate-forme                             | Version du système d'exploitation.                                                              | Non       |
+| Plateforme                             | Version du système d’exploitation.                                                              | Non       |
 | ProcessName                          | Nom du processus à l’aide du kit de développement logiciel (SDK).                                                     | Non       |
 | Version du produit                      |                                                                                        | Non       |
-| Protégé                            | Valeur booléenne indiquant si le fichier est protégé ou non.                                       | Non       |
+| Protected                            | Valeur booléenne indiquant si le fichier est protégé ou non.                                       | Non       |
 | Protégé avant                     | Valeur booléenne indiquant si le fichier a été précédemment protégé ou non.                           | Non       |
 | Protection                           | Identificateur du modèle de protection.                                                    | Non       |
 | Protection avant                    | Identificateur de modèle de protection précédent.                                           | Non       |
@@ -143,9 +145,9 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | Version                              | Schéma de la version d’audit (« 1,1 »).                                                          | Non       |
 
 
-### <a name="opting-out-in-c"></a>Vous en désabonnerC++
+### <a name="opting-out-in-c"></a>Opt-out en C++
 
-Pour définir la télémétrie sur minimum uniquement, créez un pointeur partagé de **MIP :: TelemetryConfiguration ()** et affectez à **isTelemetryOptedOut** la valeur true. Transmettez l’objet de configuration dans **MipContent :: Create ()** .
+Pour définir la télémétrie sur minimum uniquement, créez un pointeur partagé de **MIP :: TelemetryConfiguration ()** et affectez à **isTelemetryOptedOut** la valeur true. Transmettez l’objet de configuration dans **MipContent :: Create ()**.
 
 ```cpp
 auto telemetryConfig = std::make_shared<mip::TelemetryConfiguration>();                                     
@@ -164,7 +166,7 @@ mMipContext = mip::MipContext::Create(
 
 ### <a name="opting-out-in-net"></a>Si vous optez pour .NET
 
-Pour définir la télémétrie sur minimum uniquement, créez un objet **TelemetryConfiguration ()** et affectez à **isTelemetryOptedOut** la valeur true. Transmettez l’objet de configuration dans au **MIP. CreateMipContext ()** .
+Pour définir la télémétrie sur minimum uniquement, créez un objet **TelemetryConfiguration ()** et affectez à **isTelemetryOptedOut** la valeur true. Transmettez l’objet de configuration dans au **MIP. CreateMipContext ()**.
 
 ```csharp
 TelemetryConfiguration telemetryConfiguration = new TelemetryConfiguration();

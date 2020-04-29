@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 35caf958f2da92e624018d5ad7e57e734ec66904
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: db081e190157c8585cbe74ef05e3fb7e5b5b7940
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555209"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764092"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de fichier
 
@@ -29,13 +29,14 @@ Tel qu’indiqué dans [Objets de profil et de moteur](concept-profile-engine-cp
 
 ### <a name="create-file-engine-settings"></a>Créer les paramètres du moteur de fichier
 
-De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::FileEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
+De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::FileEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, `mip::AuthDelegate` les données de client implemenatation et personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
-Ici, nous créons un objet `FileEngine::Settings` appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application.
+Ici, nous créons `FileEngine::Settings` un objet appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application.
 
 ```cpp
 FileEngine::Settings engineSettings(
   mip::Identity(mUsername), // mip::Identity.
+  authDelegateImpl,         // auth delegate object
   "",                       // Client data. Customizable by developer, stored with engine.
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
@@ -45,10 +46,11 @@ Un ID de moteur personnalisé est également fourni :
 
 ```cpp
 FileEngine::Settings engineSettings(
-  "myEngineId", // string
-  "",           // Client data in string format. Customizable by developer, stored with engine.
-  "en-US",      // Locale. Default is en-US
-  false);       // Load sensitive information types for driving classification. Default is false.
+  "myEngineId",     // string
+  authDelegateImpl, // auth delegate object
+  "",               // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",          // Locale. Default is en-US
+  false);           // Load sensitive information types for driving classification. Default is false.
 ```
 
 En guise de bonne pratique, le premier paramètre, `id`, doit être un élément permettant au moteur d’être facilement connecté à l’utilisateur associé. Un élément tel qu’une adresse de messagerie, un nom d'utilisateur principal ou un GUID d’objet AAD garantit que l’ID est unique et peut être chargé à partir de l’état local sans appeler le service.
@@ -61,8 +63,11 @@ Pour ajouter ce moteur, nous allons revenir au modèle de promesse/futur utilis�
   //auto profile will be std::shared_ptr<mip::FileProfile>
   auto profile = profileFuture.get();
 
+  // Instantiate the AuthDelegate implementation.
+  auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
+
   //Create the FileEngine::Settings object
-  FileEngine::Settings engineSettings("UniqueID", "");
+  FileEngine::Settings engineSettings("UniqueID", authDelegateImpl, "");
 
   //Create a promise for std::shared_ptr<mip::FileEngine>
   auto enginePromise = std::make_shared<std::promise<std::shared_ptr<mip::FileEngine>>>();

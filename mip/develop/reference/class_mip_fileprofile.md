@@ -1,30 +1,31 @@
 ---
-title: mip::FileProfile, classe
-description: 'Documente la classe MIP :: fileprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: FileProfile de classe
+description: 'Documente la classe fileprofile :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 44d6024473555c0745ff3156ff5cd004f83b6f6b
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: cf5950b37953dc32100e8ae2700b6111783cb612
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488141"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762924"
 ---
-# <a name="class-mipfileprofile"></a>mip::FileProfile, classe 
-La classe FileProfile est la classe racine pour l’utilisation des opérations Microsoft Information Protection.
+# <a name="class-fileprofile"></a>FileProfile de classe 
+La classe FileProfile est la classe de base pour l’utilisation des opérations Microsoft Information Protection.
 Une application classique a besoin d’un seul profil.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Retourne les paramètres de profil.
-public std :: shared_ptr\<AsyncControl\> ListEnginesAsync (const std :: shared_ptr\<void\>& contexte)  |  Démarre une opération d’énumération de moteurs.
-public std :: shared_ptr\<AsyncControl\> UnloadEngineAsync (const std :: String & ID, const std :: shared_ptr\<void\>contexte &)  |  Démarre le déchargement du moteur de fichier avec l’ID spécifié.
-public std :: shared_ptr\<AsyncControl\> AddEngineAsync (const FileEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de fichier au profil.
-public std :: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std :: String & ID, const std :: shared_ptr\<void\>contexte &)  |  Démarre la suppression du moteur de fichier avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
+public std :: shared_ptr\<AsyncControl\> ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
+public std :: shared_ptr\<AsyncControl\> UnloadEngineAsync (const std :: String& ID, const std :: shared_ptr\<void\>& Context)  |  Démarre le déchargement du moteur de fichier avec l’ID spécifié.
+public std :: shared_ptr\<AsyncControl\> AddEngineAsync (const FileEngine :: Settings& Settings, const std :\<:\> shared_ptr void& Context)  |  Démarre l’ajout d’un nouveau moteur de fichier au profil.
+public std :: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std :: String& ID, const std :: shared_ptr\<void\>& Context)  |  Démarre la suppression du moteur de fichier avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
+public void AcquirePolicyAuthToken (Cloud Cloud, const std :: shared_ptr\<authDelegate\>& AuthDelegate) const  |  Déclenchez un rappel d’authentification pour la stratégie.
   
 ## <a name="members"></a>Membres
   
@@ -36,25 +37,37 @@ Démarre une opération d’énumération de moteurs.
 
   
 **Retourne**: objet de contrôle asynchrone.
-FileProfile :: observer est appelé en cas de réussite ou d’échec.
+FileProfile::Observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="unloadengineasync-function"></a>UnloadEngineAsync fonction)
 Démarre le déchargement du moteur de fichier avec l’ID spécifié.
 
   
 **Retourne**: objet de contrôle asynchrone.
-FileProfile :: observer est appelé en cas de réussite ou d’échec.
+FileProfile::Observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="addengineasync-function"></a>AddEngineAsync fonction)
 Démarre l’ajout d’un nouveau moteur de fichier au profil.
 
   
 **Retourne**: objet de contrôle asynchrone.
-FileProfile :: observer est appelé en cas de réussite ou d’échec.
+FileProfile::Observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="deleteengineasync-function"></a>DeleteEngineAsync fonction)
 Démarre la suppression du moteur de fichier avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
 
   
 **Retourne**: objet de contrôle asynchrone.
-FileProfile :: observer est appelé en cas de réussite ou d’échec.
+FileProfile::Observer est appelé en cas de réussite ou d’échec.
+  
+### <a name="acquirepolicyauthtoken-function"></a>AcquirePolicyAuthToken fonction)
+Déclenchez un rappel d’authentification pour la stratégie.
+
+Paramètres :  
+* **Cloud**: Cloud Azure 
+
+
+* **authDelegate**: rappel d’authentification qui sera appelé
+
+
+MIP ne met pas en cache ou ne fait rien d’autre avec la valeur retournée par le délégué auth. Cette fonction est recommandée pour les applications qui ne sont pas « connectées » jusqu’à ce que MIP demande un jeton d’authentification. Elle permet à une application d’extraire un jeton avant que MIP en ait réellement besoin.

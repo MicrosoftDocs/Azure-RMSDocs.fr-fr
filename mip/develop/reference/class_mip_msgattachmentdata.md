@@ -1,29 +1,29 @@
 ---
-title: 'MIP :: MsgAttachmentData, classe'
-description: 'Documente la classe MIP :: msgattachmentdata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: MsgAttachmentData de classe
+description: 'Documente la classe msgattachmentdata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f9f47ca1503c912840fe1ed43542b5a4b4f2d0ec
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: cec59e4bea8b62ff16005c02fa7a9516c4fb339d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487665"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761444"
 ---
-# <a name="class-mipmsgattachmentdata"></a>MIP :: MsgAttachmentData, classe 
+# <a name="class-msgattachmentdata"></a>MsgAttachmentData de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: Vector\<uint8_t\>& GetBytes ()  |  Obtenir une pièce jointe en tant que vecteur binaire d’octets.
-public std :: shared_ptr\<flux\> GetStream () const  |  Obtenir la pièce jointe en tant que flux binaire.
+public const std :: Vector\<Uint8_t\>& GetBytes ()  |  Obtenir une pièce jointe en tant que vecteur binaire d’octets.
+public std :: shared_ptr\<Stream\> GetStream () const  |  Obtenir la pièce jointe en tant que flux binaire.
 public const std::string& GetName() const  |  Obtenir le nom de la pièce jointe sous forme de chaîne.
-public const std :: String & GetLongName () const  |  Obtenir le nom long de la pièce jointe sous forme de chaîne.
+public const std :: String& GetLongName () const  |  Obtenir le nom long de la pièce jointe sous forme de chaîne.
 public const std::string& GetPath() const  |  Obtient le nom du chemin d’accès des pièces jointes en tant que chaîne. Si le chemin d’accès n’est pas vide, référencez la pièce jointe.
-public const std :: String & GetLongPath () const  |  Obtient le nom du chemin d’accès long de la pièce jointe sous forme de chaîne. Si le chemin d’accès n’est pas vide, référencez la pièce jointe.
+public const std :: String& GetLongPath () const  |  Obtient le nom du chemin d’accès long de la pièce jointe sous forme de chaîne. Si le chemin d’accès n’est pas vide, référencez la pièce jointe.
   
 ## <a name="members"></a>Membres
   

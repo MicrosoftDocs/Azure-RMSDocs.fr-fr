@@ -1,26 +1,26 @@
 ---
-title: 'MIP :: FileExecutionState, classe'
-description: 'Documente la classe MIP :: fileexecutionstate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: FileExecutionState de classe
+description: 'Documente la classe fileexecutionstate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a55ad7b5d28a3115ea4f17f36a846011e82d7827
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ca29755d4533d6b7dd51280c2fb71b631bbb9b5c
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490045"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763147"
 ---
-# <a name="class-mipfileexecutionstate"></a>MIP :: FileExecutionState, classe 
+# <a name="class-fileexecutionstate"></a>FileExecutionState de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
-public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: shared_ptr\<FileHandler\> &, const std :: Vector\<std :: shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
-public virtuel std :: Map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
+public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: shared_ptr\<fileHandler\> &, const std :: Vector\<std :: shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
+public virtuel std :: map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
   
 ## <a name="members"></a>Membres
   

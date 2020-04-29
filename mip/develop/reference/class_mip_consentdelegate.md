@@ -1,19 +1,19 @@
 ---
-title: 'MIP :: ConsentDelegate, classe'
-description: 'Documente la classe MIP :: consentdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: classe ConsentDelegate
+description: 'Documente la classe consentdelegate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: bbeca67a1ffcd5a7b159883c97a2eb3a08bfb3e2
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: d6c4efddf5b70c1a4a97f0b036cffa107a6cac3e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490317"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763438"
 ---
-# <a name="class-mipconsentdelegate"></a>MIP :: ConsentDelegate, classe 
+# <a name="class-consentdelegate"></a>classe ConsentDelegate 
 Délégué pour les opérations relatives au consentement.
 Ce délégué est implémenté par une application cliente pour savoir quand une notification de requête de consentement doit être présentée à l’utilisateur.
   

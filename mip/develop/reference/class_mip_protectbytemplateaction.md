@@ -1,19 +1,19 @@
 ---
-title: class mip::ProtectByTemplateAction
-description: Documente la classe MIP ::p rotectbytemplateaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: ProtectByTemplateAction de classe
+description: 'Documente la classe protectbytemplateaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 77cb891c494c3c853f9e683b597bed9c685c6d40
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 37b6db52239f4140a3da5df56f712466c0d96853
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489722"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764016"
 ---
-# <a name="class-mipprotectbytemplateaction"></a>class mip::ProtectByTemplateAction 
+# <a name="class-protectbytemplateaction"></a>ProtectByTemplateAction de classe 
 Classe d’action qui spécifie l’ajout de la protection par modèle au document.
   
 ## <a name="summary"></a>Résumé

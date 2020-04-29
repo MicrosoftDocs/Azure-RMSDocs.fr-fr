@@ -1,27 +1,27 @@
 ---
-title: 'MIP :: SyncFileSensitivityData, classe'
-description: 'Documente la classe MIP :: syncfilesensitivitydata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: SyncFileSensitivityData de classe
+description: 'Documente la classe syncfilesensitivitydata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ab7b3286080d21bc09db12b39a470694cee9bb79
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2a9b5c66b4e40ee8fb412323aa57db8713d9361e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489365"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764301"
 ---
-# <a name="class-mipsyncfilesensitivitydata"></a>MIP :: SyncFileSensitivityData, classe 
+# <a name="class-syncfilesensitivitydata"></a>SyncFileSensitivityData de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: Vector\<std :: shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages () const  | _Pas encore documenté._
+public const std :: Vector\<std :: shared_ptr\<SensitivityTypesRulePackage\> \>& GetSensitivityTypesRulePackages () const  | _Pas encore documenté._
 virtuel public ~ SyncFileSensitivityData ()  | _Pas encore documenté._
-public const std :: String & GetFileId () const  | _Pas encore documenté._
-public const std :: String & GetTenantId () const  | _Pas encore documenté._
+public const std :: String& GetFileId () const  | _Pas encore documenté._
+public const std :: String& GetTenantId () const  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

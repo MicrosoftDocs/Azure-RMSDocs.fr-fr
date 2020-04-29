@@ -1,25 +1,25 @@
 ---
-title: 'MIP :: ClassificationData, classe'
-description: 'Documente la classe MIP :: classificationdata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: ClassificationData de classe
+description: 'Documente la classe classificationdata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d609dbbfc86e58b172e4cd5ee4d532be65ee0a8d
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5d3b98f121d4ed73df4d6b5af167f8088805ff91
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490419"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763553"
 ---
-# <a name="class-mipclassificationdata"></a>MIP :: ClassificationData, classe 
+# <a name="class-classificationdata"></a>ClassificationData de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: String & GetClassificationId () const  | _Pas encore documenté._
-public const std :: String & GetRulePackageId () const  | _Pas encore documenté._
+public const std :: String& GetClassificationId () const  | _Pas encore documenté._
+public const std :: String& GetRulePackageId () const  | _Pas encore documenté._
 public int GetMaxCount () const  | _Pas encore documenté._
 public int GetMinCount () const  | _Pas encore documenté._
 public int GetMinConfidence () const  | _Pas encore documenté._

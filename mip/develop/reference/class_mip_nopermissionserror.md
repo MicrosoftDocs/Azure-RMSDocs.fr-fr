@@ -1,19 +1,19 @@
 ---
-title: 'MIP :: NoPermissionsError, classe'
-description: 'Documente la classe MIP :: nopermissionserror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: NoPermissionsError de classe
+description: 'Documente la classe nopermissionserror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d5067dfcac8ad66464df061d6d043ae343d967cf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 18c3c66fe10ce9291a936a3e754923d36f3d1df0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487648"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761413"
 ---
-# <a name="class-mipnopermissionserror"></a>MIP :: NoPermissionsError, classe 
+# <a name="class-nopermissionserror"></a>NoPermissionsError de classe 
 L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
   
 ## <a name="summary"></a>Résumé

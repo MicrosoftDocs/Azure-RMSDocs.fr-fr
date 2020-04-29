@@ -1,19 +1,19 @@
 ---
-title: mip::Label, classe
-description: 'Documente la classe MIP :: label du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: Étiquette de la classe
+description: 'Documente la classe Label :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a108cdccef1747ec2b06a981f993fa8ad438d011
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 95eb7c523e7e627aff767169b9d35479839ac72d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487988"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762195"
 ---
-# <a name="class-miplabel"></a>mip::Label, classe 
+# <a name="class-label"></a>Étiquette de la classe 
 Abstraction d’une étiquette unique Microsoft Information Protection.
   
 ## <a name="summary"></a>Résumé
@@ -25,11 +25,11 @@ public const std::string& GetDescription() const  |  Obtenir la description de l
 public const std::string& GetColor() const  |  Obtenir la couleur d’affichage de l’étiquette.
 public int GetSensitivity() const  |  Obtenir la Sensibilité de l’étiquette.
 public const std::string& GetTooltip() const  |  Obtenir la description de l’info-bulle de l’étiquette.
-public const std :: String & GetAutoTooltip () const  |  Obtient la description de l’info-bulle de la classification qui entraîne l’application de cette étiquette.
+public const std :: String& GetAutoTooltip () const  |  Obtient la description de l’info-bulle de la classification qui entraîne l’application de cette étiquette.
 public bool IsActive() const  |  Obtient une valeur booléenne signalant si l’étiquette est active.
-public std :: weak_ptr\<étiquette\> GetParent () const  |  Obtenir l’étiquette parente.
-public const std :: Vector\<std :: shared_ptr\<étiquette\>\>& GetChildren () const  |  Obtenir les étiquettes enfants de l’étiquette actuelle.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient les paramètres personnalisés d’une étiquette.
+public std :: weak_ptr\<,\> étiquette GetParent () const  |  Obtenir l’étiquette parente.
+public const std :: Vector\<std :: shared_ptr\<étiquette\> \>& GetChildren () const  |  Obtenir les étiquettes enfants de l’étiquette actuelle.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtient les paramètres personnalisés d’une étiquette.
 public ActionSource GetActionSource() const  |  Obtient la source d’action de l’étiquette.
   
 ## <a name="members"></a>Membres

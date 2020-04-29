@@ -1,19 +1,19 @@
 ---
-title: mip::TemplateDescriptor, classe
-description: 'Documente la classe MIP :: templatedescriptor du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: TemplateDescriptor de classe
+description: 'Documente la classe templatedescriptor :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 3429d659b839f2150f1ec87c3b9ae20631b8f715
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 45537a7309efb20a3c5cfcb0df0349a7d3ec01ee
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77492730"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764268"
 ---
-# <a name="class-miptemplatedescriptor"></a>mip::TemplateDescriptor, classe 
+# <a name="class-templatedescriptor"></a>TemplateDescriptor de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
@@ -28,7 +28,7 @@ public std::string GetDescription() const  |  Obtient la description du modèle.
 Obtient l’ID du modèle.
 
   
-**Retourne** : ID du modèle
+**Retourne**: ID de modèle
   
 ### <a name="getname-function"></a>Fonction GetName
 Obtient le nom du modèle.

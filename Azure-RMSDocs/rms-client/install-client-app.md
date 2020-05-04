@@ -4,7 +4,7 @@ description: Instructions destinées aux utilisateurs pour installer le client A
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 65ce454504be04d7f3e5881dbefad3053d8a082c
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 9dd4e4f461c5a3643e8e9cb250e9bc1430b5efad
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960792"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736743"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection
 
@@ -29,11 +29,10 @@ ms.locfileid: "75960792"
 
 Si votre administrateur n’installe pas le client Azure Information Protection pour vous, vous pouvez le faire vous-même. Vous devez être un administrateur local de votre PC pour installer ce client, de sorte qu’il puisse étiqueter et protéger vos documents et vos e-mails.
 
-De plus :
+Informations supplémentaires :
 
 - Le client Azure Information Protection requiert une version minimale de Microsoft .NET Framework 4.6.2. Si cette version est manquante, le programme d’installation tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, votre ordinateur doit être redémarré.
 
-- Si vous disposez de Windows 7 SP1, le client Azure Information Protection exige la mise à jour spécifique KB 2533623. Si votre PC a besoin de cette mise à jour, mais qu’elle n’est pas installée, l’installation s’effectue, mais un message apparaît vous indiquant qu’Azure Information Protection a besoin de cette mise à jour. Jusqu’à ce que cette mise à jour soit installée, vous ne pourrez pas utiliser toutes les fonctionnalités du client Azure Information Protection. 
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Pour télécharger et installer le client Azure Information Protection    
 

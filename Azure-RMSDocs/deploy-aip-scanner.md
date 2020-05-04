@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/16/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60aa5e0dffd1c5c8e71534a4c4676b66963d9076
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: e1920e66707135616fe1abb121ca709be452cb1c
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161365"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736794"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -297,6 +297,9 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
     Pour les autres paramètres de ce volet, ne les modifiez pas pour cette configuration initiale, mais conservez-les en tant que **travail d’analyse du contenu par défaut**. Cela signifie que le référentiel de données hérite des paramètres du travail d’analyse de contenu. 
     
     Sélectionnez **Enregistrer**.
+
+> [!IMPORTANT]
+> Si le système de fichiers local peut être analysé, cette configuration n’est pas recommandée pour les déploiements de production et ne peut être utilisée **que** dans les clusters à nœud unique. L’analyse des dossiers locaux par les clusters à plusieurs nœuds n’est pas prise en charge. Si vous devez analyser un dossier sur le système de fichiers local, nous vous recommandons de créer un partage et de l’analyser à l’aide d’une URL réseau.
 
 10. Si vous souhaitez ajouter un autre référentiel de données, répétez les étapes 8 et 9. 
 
@@ -617,7 +620,7 @@ Le scanneur Azure Information Protection prend en charge trois autres scénarios
     
     Applicable uniquement au scanneur à partir du client d’étiquetage unifié, cette configuration vous permet de supprimer les étiquettes existantes, y compris la protection, si elles ont été appliquées avec cette étiquette. La protection appliquée indépendamment d’une étiquette est conservée. Utilisez cette configuration si vous devez supprimer toutes les étiquettes des fichiers dans un référentiel.
     
-    Configurez les paramètres suivants :
+    Configurez les paramètres suivants :
     - **Étiqueter les fichiers en fonction du contenu**: **désactivé**
     - **Étiquette par défaut**: **aucune**
     - **Renommer les fichiers**: **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée

@@ -4,7 +4,7 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: b7cc3bff14c5e16ca43fe8f204609e67b531e566
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403958"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736777"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Avant de déployer Azure Information Protection pour votre organisation, vérifiez que les conditions préalables suivantes sont respectées. 
 
@@ -49,7 +49,7 @@ Si vous avez des questions sur les abonnements ou les licences, ne les postez pa
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d’utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d’annuaire.
+Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d'utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d'annuaire.
 
 L’authentification unique (SSO) étant prise en charge pour Azure Information Protection, les utilisateurs ne sont pas invités de manière répétée à fournir leurs informations d’identification. Si vous utilisez une autre solution de fournisseur pour la fédération, vérifiez auprès de ce dernier comment la configurer pour Azure AD. WS-Trust est une exigence courante pour ces solutions afin de prendre en charge l’authentification unique. 
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur les conditions d’authentification, consultez [C
 
 Pour plus d’informations sur la configuration requise pour les comptes d’utilisateur et de groupe pour l’autorisation, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
-## <a name="client-devices"></a>Périphériques client
+## <a name="client-devices"></a>Appareils clients
 
 Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.
 
@@ -75,7 +75,7 @@ Les appareils suivants prennent en charge le client d’étiquetage Azure Inform
 
 - Windows 8 (x86, x64)
 
-- Windows Server 2019
+- Windows Server 2019
 
 - Windows Server 2016
 
@@ -129,13 +129,13 @@ Pour plus d’informations sur les éditions d’Office qui prennent en charge l
 
 Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui nécessitent une configuration pour autoriser des connexions spécifiques, les exigences de connectivité réseau sont incluses dans l’article relatif à Office, [URL et plages d’adresses IP Office 365](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). Consultez la section **Microsoft 365 Common et Office Online**.
 
-En plus des informations de l’article relatif à Office, voici des informations propres à Azure Information Protection :
+En plus des informations de l’article Office, propres à Azure Information Protection :
 
-- Pour le client d’étiquetage unifié pour télécharger des étiquettes et des stratégies d’étiquette : autorisez l’URL * **. protection.Outlook.com** sur HTTPS.
+- Pour le client d’étiquetage unifié pour télécharger des étiquettes et des stratégies d’étiquette : autorisez l’URL ***. protection.Outlook.com** sur HTTPS.
 
-- Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
+- Si vous utilisez un proxy web qui requiert une authentification, vous devez le configurer pour utiliser l’authentification Windows intégrée avec les informations d’identification de connexion Active Directory de l’utilisateur.
 
-- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) vers l’URL **aadrm.com**. Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
+- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) vers l’URL **aadrm.com**. Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
     
     Vous pouvez utiliser les commandes PowerShell suivantes pour vous aider à déterminer si votre connexion cliente est interrompue avant d’atteindre le service Azure Rights Management :
    
@@ -143,13 +143,13 @@ En plus des informations de l’article relatif à Office, voici des information
         $request.GetResponse()
         $request.ServicePoint.Certificate.Issuer
     
-    Le résultat doit indiquer que l’autorité de certification émettrice provient d’une autorité de certification Microsoft, par exemple : `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. Si vous voyez un nom d’autorité de certification émettrice qui ne provient pas de Microsoft, il est très probable que votre connexion sécurisée client à service soit arrêtée et nécessite une reconfiguration sur votre pare-feu.
+    Le résultat doit indiquer que l’autorité de certification émettrice provient d’une autorité de certification Microsoft `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`, par exemple :. Si vous voyez un nom d’autorité de certification émettrice qui ne provient pas de Microsoft, il est très probable que votre connexion sécurisée client à service soit arrêtée et nécessite une reconfiguration sur votre pare-feu.
 
 ### <a name="on-premises-servers"></a>Serveurs locaux
 
 Si vous souhaitez utiliser le service Azure Rights Management d’Azure Information Protection avec des serveurs locaux, les produits pris en charge sont les suivants :
 
-- Exchange Server
+- Microsoft Exchange Server
 
 - SharePoint Server
 
@@ -159,13 +159,15 @@ Pour plus d’informations sur les conditions requises supplémentaires pour ce 
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coexistence d’AD RMS et Azure RMS
 
-Le scénario de déploiement suivant n’est pas pris en charge, sauf si vous utilisez AD RMS pour la [protection HYOK](configure-adrms-restrictions.md) avec Azure Information Protection (la configuration « conservez votre propre clé ») :
+L’utilisation de AD RMS et Azure RMS dans le scénario suivant pour protéger le contenu par le même utilisateur au sein de la même organisation est prise en charge **uniquement** dans AD RMS pour la [protection hyok](configure-adrms-restrictions.md) avec Azure information protection (la configuration « conserver votre propre clé »).
 
 - En cas d’exécution d’AD RMS et d’Azure RMS côte à côte dans la même organisation, sauf pendant la migration, comme le décrit la rubrique [Migrer d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et [d’Azure Information Protection vers AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md).
+Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et [d’Azure Information Protection vers AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md). 
 
-### <a name="service-tags"></a>Balises de service
+Pour les autres scénarios, où les deux services sont actifs dans la même organisation, les services doivent être configurés de sorte qu’un seul d’entre eux autorise un utilisateur donné à protéger du contenu. Cela peut être configuré à l’aide de redirections dans le cas d’un [AD RMS pour Azure RMS la migration](migrate-from-ad-rms-to-azure-rms.md) ou, dans le cas où les deux services doivent être actifs simultanément pour différents utilisateurs, en utilisant des configurations côté service pour appliquer l’exclusivité : Azure RMS les contrôles d’intégration dans le service Cloud et une liste de contrôle d’accès sur l’URL de publication pour définir le mode lecture seule pour AD RMS.   
+
+### <a name="service-tags"></a>Étiquettes de service
 
 Veillez à autoriser l’accès à tous les ports pour les balises de service suivantes :
 

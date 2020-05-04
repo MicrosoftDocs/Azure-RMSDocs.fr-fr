@@ -1,10 +1,10 @@
 ---
 title: Vérification d’Azure Rights Management - AIP
 description: Instructions pour vérifier que le service de protection de Azure Information Protection fonctionne comme prévu.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 05/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fdf9caff7e1f1052f65f8126de3f3427cc9b4e44
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: e6b5a54cf02c9e34e9fc411a66dca9c589830458
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934363"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736709"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Vérification du service Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Lorsque le service de protection (Azure Rights Management) de Azure Information Protection est activé et que vous avez effectué toutes les étapes de configuration supplémentaires requises pour votre organisation, vous êtes prêt à vérifier que ce service de protection est fonctionne comme prévu. 
+Lorsque le service de protection (Azure Rights Management) de Azure Information Protection est activé et que vous avez effectué toutes les étapes de configuration supplémentaires requises pour votre organisation, vous êtes prêt à vérifier que ce service de protection fonctionne comme prévu. 
 
 Pour cela, il existe une méthode simple qui consiste à protéger un document ou un e-mail à l’aide d’un compte d’utilisateur, puis à essayer d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur sur un autre ordinateur.
 

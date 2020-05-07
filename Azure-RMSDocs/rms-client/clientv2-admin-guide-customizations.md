@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 760a4eddf40f344a47d335192e15d73d0d70dbaf
-ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
+ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
+ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736760"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82799127"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -675,7 +675,27 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
+## <a name="limit-cpu-consumption"></a>Limiter la consommation de l’UC
+
+Depuis la version 2.7. x. x du scanner, nous vous recommandons de limiter la consommation de l’UC à l’aide de la méthode de paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** suivante. 
+
+> [!IMPORTANT]
+> La méthode de paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** ne peut pas être utilisée avec la stratégie de limitation de thread. Pour utiliser la méthode pour limiter la consommation de l’UC, vous devez cesser d’utiliser la [stratégie de limitation des threads](#limit-the-number-of-threads-used-by-the-scanner) que vous avez peut-être déjà en place. 
+
+Pour limiter la consommation de l’UC sur l’ordinateur du scanneur, il est gérable en créant deux paramètres avancés : **ScannerMaxCPU** et **ScannerMinCPU**. 
+
+Par défaut, **ScannerMaxCPU** est défini sur 100, ce qui signifie qu’il n’y a aucune limite de consommation maximale de l’UC. Dans ce cas, le processus du scanneur essaiera d’utiliser tout le temps processeur disponible pour optimiser les taux d’analyse.
+
+Si vous affectez à **ScannerMaxCPU** une valeur inférieure à 100, le scanneur surveille la consommation du processeur au cours des 30 dernières minutes, et si le processeur Max franchit la limite que vous avez définie, il commence à réduire le nombre de threads alloués pour les nouveaux fichiers. La limite du nombre de threads se poursuit tant que la consommation du processeur est supérieure à la limite définie pour **ScannerMaxCPU**.
+
+**ScannerMinCPU**, est vérifié uniquement si **ScannerMaxCPU** n’est pas égal à 100. **ScannerMinCPU** ne peut pas être défini sur un nombre supérieur au nombre **ScannerMaxCPU** . Nous vous recommandons de laisser **ScannerMinCPU** définir au moins 15 points inférieurs à la valeur de **ScannerMaxCPU**.   
+
+La valeur par défaut de ce paramètre est 50, ce qui signifie que si la consommation du processeur au cours des 30 dernières minutes est inférieure à cette valeur, le scanneur commence à ajouter de nouveaux threads pour analyser plus de fichiers en parallèle, jusqu’à ce que la consommation du processeur atteigne le niveau que vous avez défini pour **ScannerMaxCPU**-15. 
+
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limiter le nombre de threads utilisés par le scanneur
+
+> [!IMPORTANT]
+> Lorsque la stratégie de limitation de threads suivante est utilisée, les paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** sont ignorés. Pour limiter la consommation de l’UC à l’aide des paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** , annulez l’utilisation des stratégies qui limitent le nombre de threads. 
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 

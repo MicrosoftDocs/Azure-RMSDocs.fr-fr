@@ -1,9 +1,9 @@
 ---
 title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
-author: cabailey
-ms.author: cabailey
-ms.date: 11/27/2019
+author: mlottner
+ms.author: mlottner
+ms.date: 05/05/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,21 +13,21 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 29c41a53bef195a1a80d728fdf40cfc262533373
+ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564546"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82799161"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
 > Cette fonctionnalité est disponible en préversion et susceptible d’être modifiée.
 
-Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. De plus :
+Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. Informations supplémentaires :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -56,7 +56,8 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     - Applications utilisées pour l’étiquetage
 
 - Dans **Journaux d’activité**, en sélectionnant une période :
-    
+
+    - Quels fichiers découverts précédemment par le moteur d’analyse ont été supprimés du référentiel analysé    
     - Quelles actions d’étiquetage ont été effectuées par un utilisateur donné
     
     - Quelles actions d’étiquetage ont été effectuées sur un appareil donné
@@ -144,10 +145,10 @@ Par défaut, les clients Azure Information Protection n’envoient pas de corres
 
 - Pour le client d’étiquetage unifié, configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) dans une stratégie d’étiquette.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 Pour afficher les rapports Azure Information Protection et créer les vôtres, vérifiez que les conditions suivantes sont respectées.
 
-|Condition requise|Autres informations|
+|Condition requise|Informations complémentaires|
 |---------------|--------------------|
 |Un abonnement Azure qui inclut Log Analytics et qui concerne le même locataire qu’Azure Information Protection|Consultez la page de [tarification d’Azure Monitor](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
 |Pour signaler des informations provenant de clients d’étiquetage : <br /><br />-Azure Information Protection les clients|Le client d’étiquetage unifié et le client classique sont pris en charge. <br /><br />S’il n’est pas déjà installé, vous pouvez télécharger et installer ces clients à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
@@ -168,15 +169,15 @@ Détails :
     - Pour créer votre espace de travail Log Analytics ou des requêtes personnalisées :
     
         - **Administrateur Azure Information Protection**
-        - **Administrateur de sécurité**
+        - **Administrateur de la sécurité**
         - **Administrateur de conformité**
         - **Administrateur des données de conformité**
         - **Administrateur général**
     
     - Une fois l’espace de travail créé, vous pouvez utiliser les rôles suivants avec moins d’autorisations pour afficher les données collectées :
     
-        - **Lecteur Sécurité**
-        - **Lecteur global**
+        - **Lecteur de sécurité**
+        - **Lecteur général**
 
 2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard pour accéder à votre espace de travail Azure Log Analytics :
     
@@ -202,7 +203,7 @@ Toutefois, de nombreuses organisations attribuent le rôle Azure AD **Lecteur S�
 
 ### <a name="storage-requirements-and-data-retention"></a>Exigences de stockage et rétention des données
 
-La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection varie considérablement pour chaque locataire, en fonction de facteurs tels que le nombre de clients Azure Information Protection et d’autres points de terminaison pris en charge, que vous soyez la collecte de données de découverte de point de terminaison, vous avez déployé des scanneurs, le nombre de documents protégés auxquels vous accédez, etc.
+La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection varie considérablement pour chaque locataire, en fonction de facteurs tels que le nombre de clients Azure Information Protection et d’autres points de terminaison pris en charge, que vous collectiez des données de découverte de point de terminaison, que vous ayez déployé des scanneurs, le nombre de documents protégés auxquels vous accédez, etc.
 
 Toutefois, comme point de départ, vous pouvez trouver les estimations suivantes utiles :
 
@@ -220,9 +221,9 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
     
     Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
     
-2. Recherchez les options du menu **Gérer**, puis sélectionnez **Configurer l’analytique (préversion)** .
+2. Recherchez les options du menu **gérer** , puis sélectionnez **configurer Analytics (version préliminaire)**.
 
-3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Procédez de l'une des façons suivantes :
+3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Effectuez l'une des opérations suivantes :
     
     - Pour créer un espace de travail Log Analytics : sélectionnez **créer un nouvel espace**de travail, puis dans le volet **espace de travail log Analytics** , fournissez les informations demandées.
     
@@ -244,7 +245,7 @@ Dans le volet Azure Information Protection, recherchez les options du menu **tab
 
 - **Journaux d’activité (préversion)** : utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins d'accès. En outre, pour les documents protégés, vous pouvez voir les tentatives d’accès (réussies ou refusées) pour les utilisateurs à l’intérieur et à l’extérieur de votre organisation, même s’ils n’ont pas le client Azure Information Protection installé.
     
-    Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut. Vous pouvez également voir plus de détails sur un fichier en le sélectionnant pour afficher les **détails de l’activité**.
+    Ce rapport comporte une option **colonnes** qui vous permet d’afficher plus d’informations sur l’activité que l’affichage par défaut. Vous pouvez également voir plus de détails sur un fichier en le sélectionnant pour afficher les **détails de l’activité**.
 
 - **Découverte des données (** préversion) : utilisez ce rapport pour afficher des informations sur les fichiers étiquetés trouvés par les scanneurs et les points de terminaison pris en charge.
     
@@ -275,25 +276,27 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 
 |Nom de la colonne|Description|
 |-----------|-----------|
-|Heure|Heure de l’événement : UTC au format AAAA-MM-JJThh : MM : SS|
+|Temps|Heure de l’événement : UTC au format AAAA-MM-JJThh : MM : SS|
 |Utilisateur|Utilisateur : format UPN ou domaine\utilisateur|
 |ItemPath|Chemin d’accès complet de l’élément ou objet de l’e-mail|
 |ItemName|Nom de fichier ou objet de l’e-mail |
 |Méthode|Méthode assignée à l’étiquette : Manual, auto, Recommended, default ou Mandatory|
-|Activité|Activité d’audit : DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection ou NewCustomProtection |
+|Activité|Activité d’audit : DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection ou FileRemoved |
+|ResultStatus|État du résultat de l’action :<br /><br /> Réussite ou échec (signalé par le scanneur AIP uniquement)|
+|ErrorMessage_s|Contient les détails du message d’erreur si ResultStatus = failed. Signalé par le scanneur AIP uniquement|
 |LabelName|Nom de l’étiquette (non localisé)|
 |LabelNameBefore |Nom de l’étiquette avant modification (non localisé) |
 |ProtectionType|Type de protection [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  « TemplateID » : « GUID » <br /> } <br />|
 |ProtectionBefore|Type de protection avant modification [JSON] |
 |MachineName |FQDN, le cas échéant ; sinon nom d’hôte|
 |DeviceRisk|Score de risque de l’appareil à partir de émission quand il est disponible|
-|Plate-forme|Plateforme d’appareils (Win, OSX, Android, iOS) |
+|Plateforme|Plateforme d’appareils (Win, OSX, Android, iOS) |
 |ApplicationName|Nom convivial de l’application|
 |AIPVersion|Version du client Azure Information Protection qui a effectué l’action d’audit |
-|TenantId|ID de locataire Azure AD |
+|TenantId|ID de locataire Azure AD |
 |AzureApplicationId|ID d’application inscrite Azure AD (GUID)|
 |ProcessName|Processus qui héberge le kit de développement logiciel MIP|
-|LabelId|GUID de l’étiquette ou null|
+|ID|GUID de l’étiquette ou null|
 |IsProtected|Si protégé : oui/non |
 |ProtectionOwner |Rights Management propriétaire au format UPN|
 |LabelIdBefore|GUID de l’étiquette ou null avant modification|

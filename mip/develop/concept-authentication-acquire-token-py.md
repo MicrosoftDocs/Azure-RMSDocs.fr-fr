@@ -6,23 +6,24 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.custom: has-adal-ref
+ms.openlocfilehash: 6a78bbfb94bd479feb7f2b8bebd203ed69eba9d0
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556246"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971708"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquérir un jeton d’accès (Python)
 
 Cet exemple montre comment appeler un script Python externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valide est requis par l’implémentation du délégué d’authentification.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 Pour exécuter l’exemple ci-dessous :
 
 - Installez Python 2,7 ou une version plus récente.
-- Implémentez utils.h/cpp dans votre projet. 
+- Implémentez utils.h/cpp dans votre projet.
 - Auth.py doit être ajouté à votre projet et se trouver dans le même répertoire que les binaires de la Build.
 - [Installation et configuration du kit de développement logiciel (MIP) SDK](setup-configure-mip.md). Entre autres tâches, vous allez inscrire votre application cliente dans votre locataire Azure Active Directory (Azure AD). Azure AD fournira un ID d’application, également appelé ID client, qui est utilisé dans votre logique d’acquisition de jeton.
 
@@ -30,7 +31,7 @@ Ce code n’est pas destiné à une utilisation en production. Elle ne peut êtr
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Dans l’exemple d’authentification simple, nous avons démontré une fonction de `AcquireToken()` simple qui n’a pris aucun paramètre et a retourné une valeur de jeton codée en dur. Dans cet exemple, nous allons surcharger AcquireToken() pour accepter des paramètres d’authentification et appeler un script Python externe pour retourner le jeton.
+Dans l’exemple d’authentification simple, nous avons démontré `AcquireToken()` une fonction simple qui n’a pris aucun paramètre et a retourné une valeur de jeton codée en dur. Dans cet exemple, nous allons surcharger AcquireToken() pour accepter des paramètres d’authentification et appeler un script Python externe pour retourner le jeton.
 
 ### <a name="authh"></a>auth.h
 
@@ -41,7 +42,7 @@ Dans auth.h, `AcquireToken()` est surchargée, et la fonction surchargée et les
 #include <string>
 
 namespace sample {
-  namespace auth {    
+  namespace auth {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -52,7 +53,7 @@ namespace sample {
 }
 ```
 
-Les trois premiers paramètres seront entrés par l’utilisateur ou codés en dur dans votre application. Les deux derniers paramètres sont fournis par le kit SDK au délégué d’authentification. 
+Les trois premiers paramètres seront entrés par l’utilisateur ou codés en dur dans votre application. Les deux derniers paramètres sont fournis par le kit SDK au délégué d’authentification.
 
 
 ### <a name="authcpp"></a>auth.cpp
@@ -118,7 +119,7 @@ namespace sample {
 
 Ce script acquiert des jetons d’authentification directement via [Adal pour Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). Ce code est inclus uniquement comme un moyen d’acquérir des jetons d’authentification pour une utilisation par les exemples d’applications et n’est pas destiné à être utilisé en production. Le script fonctionne uniquement sur les locataires qui prennent en charge une authentification http traditionnelle par nom d’utilisateur/mot de passe. L’authentification basée sur MFA ou des certificats échouera.
 
-> [!NOTE] 
+> [!NOTE]
 > Avant d’exécuter cet exemple, vous devez installer ADAL pour Python en exécutant l’une des commandes suivantes :
 
 ```shell
@@ -149,7 +150,7 @@ def main(argv):
   resource = ''
 
   clientId = ''
-    
+
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -180,13 +181,13 @@ def main(argv):
   token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
   print(token["accessToken"])
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
   main(sys.argv[1:])
 ```
 
 ## <a name="update-acquireoauth2token"></a>Mettre à jour AcquireOAuth2Token
 
-Enfin, mettez à jour la fonction `AcquireOAuth2Token` dans `AuthDelegateImpl` pour appeler la fonction `AcquireToken` surchargée. Les URL de ressource et d’autorité sont obtenues en lisant `challenge.GetResource()` et `challenge.GetAuthority()`. Le `OAuth2Challenge` est transmis au délégué d’authentification lorsque le moteur est ajouté. Ce travail est effectué par le SDK et ne nécessite aucun travail supplémentaire de la part du développeur. 
+Enfin, mettez à jour la fonction `AcquireOAuth2Token` dans `AuthDelegateImpl` pour appeler la fonction `AcquireToken` surchargée. Les URL de ressource et d’autorité sont obtenues en lisant `challenge.GetResource()` et `challenge.GetAuthority()`. Le `OAuth2Challenge` est transmis au délégué d’authentification lorsque le moteur est ajouté. Ce travail est effectué par le SDK et ne nécessite aucun travail supplémentaire de la part du développeur.
 
 ```cpp
 bool AuthDelegateImpl::AcquireOAuth2Token(
@@ -202,5 +203,3 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 ```
 
 Lorsque `engine` est ajouté, le kit SDK appelle la fonction AcquireOAuth2Token, transmet le défi, exécute le script Python, reçoit un jeton, puis présente le jeton au service.
-
-

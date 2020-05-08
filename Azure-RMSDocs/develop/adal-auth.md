@@ -13,13 +13,13 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: ef2e1755c6a86984227b09c95020a26a976a2c52
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791658"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971963"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configuration de votre application pour l’authentification ADAL
 
@@ -27,13 +27,13 @@ Cette rubrique décrit les étapes de configuration de votre application pour l�
 
 ## <a name="azure-authentication-setup"></a>Configuration de l’authentification Azure
 
-Vous avez besoin des éléments suivants :
+Vous devez disposer des éléments suivants :
 
 - Un [abonnement à Microsoft Azure](https://azure.microsoft.com/) (une version d’évaluation gratuite suffit). Pour plus d’informations, consultez [Inscription à RMS for Individuals](../rms-for-individuals-user-sign-up.md)
 - Un abonnement à Microsoft Azure Rights Management (un compte [RMS for Individuals](https://technet.microsoft.com/library/dn592127.aspx) gratuit suffit).
 
 > [!NOTE]
-> Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner avec un *compte professionnel ou scolaire*, et non un *compte Microsoft* (tel que Hotmail).
+> Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner à un *compte professionnel ou scolaire*plutôt qu’à un *compte Microsoft* (par exemple, Hotmail).
 
 Après vous être inscrit à Microsoft Azure :
 
@@ -43,7 +43,7 @@ Après vous être inscrit à Microsoft Azure :
 
 - Naviguez jusqu’à l’application **Active Directory** sur le côté gauche du portail.
 
-![Sélectionnez Active Directory](../media/AzureADPick.png)
+![Sélectionner Active Directory](../media/AzureADPick.png)
 
 - Si vous n’avez pas encore créé d’annuaire, cliquez sur le bouton **Nouveau** dans le coin inférieur gauche du portail.
 
@@ -100,7 +100,6 @@ Après vous être inscrit à Microsoft Azure :
 
 ![Configurez les autorisations](../media/AddDependency.png)
 
-- Enregistrez votre application pour conserver les modifications en cliquant sur l’icône **Enregistrer** située en bas au milieu du portail.
+- Enregistrez votre application pour conserver les modifications en choisissant l’icône **Enregistrer** située en bas, au centre du portail.
 
 ![Sélectionnez ENREGISTRER](../media/SaveApplication.png)
-

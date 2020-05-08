@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: has-adal-ref
+ms.openlocfilehash: 05036616c77d559dc82a0334b99b548da724df18
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60179115"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971793"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
 
@@ -63,14 +64,14 @@ La version 4.2 est un client REST avec des API spécifiques de plusieurs systè
 
 Les guides suivants vous orientent tout au long des étapes d’installation du système d’exploitation d’un environnement de développement d’applications qui utilise des outils courants.
 
-[![Installation iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md)
-[![Installation Android](../media/develop/android-icon.png)](android-sdk.md)
-[![Installation Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![Installation Windows Service](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
-[![Installation Linux](../media/develop/linux-icon.png)](linux-setup.md)
+[![](../media/develop/ios-icon.png)](ios-sdk.md)
+[![programme d'](../media/develop/android-icon.png)](android-sdk.md)installation d’iOS/OSX
+installation d'[![Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+configuration du[![service](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+Windows installation de[![Linux](../media/develop/linux-icon.png)](linux-setup.md)
 
 
-## <a name="how-tos"></a>Guides pratiques
+## <a name="how-tos"></a>Articles Comment faire
 
 Chacune des rubriques suivantes présente les instructions spécifiques d’un aspect de l’implémentation de votre application. Les applications de service sont développées à l’aide du SDK RMS 2.x. Les applications utilisateur sont développées à l’aide du SDK RMS 4.x. Le lien de l’article est attribué avec le type d’application, le service, l’utilisateur.
 
@@ -85,7 +86,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 
 ### <a name="security-and-authentication"></a>Sécurité et authentification
 
-- [Guide pratique pour configurer votre application de service pour utiliser une connexion Azure Active Directory](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Comment configurer votre application App service pour utiliser Azure Active Directory connexion](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [Guide pratique pour utiliser l’authentification Active Directory Azure (ADAL)](how-to-use-adal-authentication.md)
 - [Configuration d’Azure RMS pour l’authentification (service)](adal-auth.md)
 - [Guide pratique pour définir le mode de sécurité de l’API (service)](setting-the-api-security-mode-api-mode.md)
@@ -106,9 +107,9 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 ## <a name="other-resources"></a>Autres ressources
 
 - [Guide des bonnes pratiques en matière de sécurité](security-guidelines.md)
-- [Forum aux questions sur Azure Information Protection](/azure/information-protection/faqs)
+- [Forum aux questions (FAQ) pour Azure Information Protection](/azure/information-protection/faqs)
 
-### <a name="support-articles"></a>Articles sur la prise en charge
+### <a name="support-articles"></a>Articles de support
 
 - [Formats de fichier pris en charge](supported-file-formats.md)
 - [Plateformes prises en charge](supported-platforms.md)
@@ -125,14 +126,14 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 - [Format de fichier .MSG (partie 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
 - [Format de fichier .MSG (partie 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
-### <a name="api-reference"></a>Référence d'API
+### <a name="api-reference"></a>Informations de référence sur les API
 
-- [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/hh535292.aspx)
+- [Référence de l’API Windows](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Codes d’erreur du SDK Windows](https://msdn.microsoft.com/library/hh535248.aspx)
 - [Informations de référence sur les API du Windows Store et de Windows Phone](https://msdn.microsoft.com/library/dn891914.aspx)
 - [Informations de référence sur les API iOS/OSX](https://msdn.microsoft.com/library/dn758306.aspx)
-- [Informations de référence sur les API Android](https://msdn.microsoft.com/library/dn758245.aspx)
-- [Référence d’API Linux](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
+- [Informations de référence sur l’API Android](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Informations de référence sur l’API Linux](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>Versions précédentes
 
@@ -143,4 +144,3 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 
 - [Terminologie du développeur](terms.md)
 - [Terminologie liée à Azure Information Protection - ITPro](../terminology.md)
-

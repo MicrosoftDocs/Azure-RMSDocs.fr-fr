@@ -13,19 +13,19 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 60cf2741ddec361e5913fe043ce6dec7ecf848c9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 620464886d40c3f152a32f07952a924eee72920f
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792475"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971810"
 ---
 # <a name="developer-guidance"></a>Guide pour développeurs
 
-Cette section traite de recommandations spécifiques pour plusieurs scénarios de développement importants, ainsi que des informations générales sur le développement avec ce SDK. Les scénarios de cette section sont spécifiques à cette version du SDK Rights Management Services 2.1 et peuvent être modifiés dans les versions ultérieures.
+Cette section traite de recommandations spécifiques pour plusieurs scénarios de développement importants, ainsi que des informations générales sur le développement avec ce SDK. Les scénarios de cette section sont spécifiques à cette version de Rights Management Services SDK 2.1 et peuvent être modifiés dans les versions ultérieures.
 - [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md) - Authentification auprès d’Azure RMS pour votre application à l’aide de la bibliothèque d’authentification ADAL (Azure Active Directory Authentication Library).
-- [Comment : ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) - Votre application doit ajouter explicitement des droits « Owner » lors de la création d’une licence ex nihilo ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
+- [Comment : ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) -votre application doit ajouter explicitement des droits « propriétaire » lors de la création d’une licence à partir de zéro ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Comment : déboguer une application avec gestion des droits](debugging-applications-that-use-ad-rms.md) - Cette rubrique indique comment déboguer votre application et utiliser le journal des événements Windows.
 - [Comment déployer une application dans un locataire du client](how-to-deploy-app.md) - Cette rubrique souligne les étapes nécessaires au déploiement d’une application depuis son locataire Azure AD de développement dans un locataire Azure AD de production.
 - [Comment : activer le suivi et la révocation des documents](tracking-content.md) - Cette rubrique décrit les instructions de base pour implémenter le suivi des documents pour le contenu ainsi que l’exemple de code pour les mises à jour de métadonnées et la création d’un bouton **Suivre l'utilisation** pour votre application.
@@ -43,4 +43,4 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
 
  
 ## <a name="related-topics"></a>Rubriques connexes
-* [Vue d’ensemble](ad-rms-overview.md)
+* [Vue d'ensemble](ad-rms-overview.md)

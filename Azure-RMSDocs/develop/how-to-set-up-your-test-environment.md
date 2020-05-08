@@ -13,13 +13,13 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 8744ea8dfd7213030c741e6e760c506e0d795db4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 987b9bb711f96d6622fb1972f13d50fa8cbbfa3d
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792264"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972026"
 ---
 # <a name="testing-your-application"></a>Test de votre application
 
@@ -39,14 +39,13 @@ Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exé
 
     Pour obtenir de l’aide sur l’installation de RMS SDK 2.1, consultez [Installer le kit SDK](install-the-rms-sdk.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Notes 
 
 Ce guide n’est pas exhaustif. Pour découvrir comment configurer le client RMS 2.1, consultez [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [Procédure : installation et configuration d’un serveur RMS](how-to-install-and-configure-an-rms-server.md)
-* [Procédure : utilisation de l’authentification ADAL](how-to-use-adal-authentication.md)
-* [Installer le SDK](install-the-rms-sdk.md)
+* [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md)
+* [Installer le Kit de développement logiciel (SDK)](install-the-rms-sdk.md)
 * [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
-

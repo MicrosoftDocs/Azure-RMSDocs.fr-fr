@@ -13,13 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068565"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972048"
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
@@ -27,9 +27,9 @@ ms.locfileid: "80068565"
 
 Les applications iOS et OS X peuvent utiliser le SDK Microsoft Rights Management 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Rights Management (Azure RMS).
 
-Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
+Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
 
-**Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
+**Remarque**  ce SDK ne prend pas en charge iPod Touch.
 
 
 -   [Conditions préalables](#prerequisites)
@@ -37,9 +37,9 @@ Cette rubrique explique comment configurer votre environnement pour créer vos p
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
-Nous recommandons les logiciels suivants sur votre système de développement :
+Nous vous recommandons de disposer des logiciels suivants sur votre système de développement :
 
 -   OS X est obligatoire pour tout développement iOS.
 -   Xcode version 6.0 ou ultérieure
@@ -50,7 +50,7 @@ Nous recommandons les logiciels suivants sur votre système de développement :
 
     Vous pouvez utiliser ce SDK pour développer pour iOS 7.0 et OS X 10.8 et versions ultérieures.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) ou [ADAL pour OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -65,7 +65,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 -   Pour créer un projet, dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
 -   Sélectionnez **Single View Application**.
 
-    ![Créer un nouveau projet](../media/iOS-Project.png)
+    ![Création d'un projet](../media/iOS-Project.png)
 
 -   Entrez un nom et un identificateur pour votre nouveau projet.
 
@@ -76,13 +76,13 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     ![Définissez un emplacement](../media/ios-add-dependencies-01a.png)
 
--   Sélectionnez la case d’option **Create groups for any added folders** et décochez la case **Copy items into destination group’s folder (if needed)** .
+-   Sélectionnez la case d’option **Create groups for any added folders** et décochez la case **Copy items into destination group’s folder (if needed)**.
 
     Cette action conserve la référence au dossier d’installation du SDK au lieu de créer une copie.
 
     ![Définissez la référence au dossier d’installation du SDK](../media/iOS-create-groups.png)
 
--   Pour ajouter le SDK MS RMS 4.2 pour le bundle de ressources, faites glisser le fichier MSRightsManagementResources.bundle du dossier MSRightsManagement.framework/Resources vers la section **Frameworks** de votre Project Navigator.
+-   Pour ajouter MS RMS SDK 4.2 pour le groupe de ressources, faites glisser le fichier MSRightsManagementResources.bundle du dossier MSRightsManagement.framework/Resources vers la section **Frameworks** de votre Project Navigator.
 
     ![Ajoutez le groupe de ressources](../media/iOS-add-resource-bundle-02a.png)
 
@@ -91,7 +91,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     Les infrastructures **UIKit** et **Foundation** sont obligatoires et généralement présentes par défaut.
 
-    ![Ajoutez des ressources](../media/iOS-add-libraries.png)
+    ![Ajout de ressources](../media/iOS-add-libraries.png)
 
 -   Ajoutez l’indicateur **-ObjC** à **Other Linker Flags** (Autres indicateurs d’éditeur de lien) dans vos **Build Settings** (Paramètres de build) cibles.
 
@@ -103,12 +103,12 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Vous êtes maintenant prêt à créer vos propres applications iOS/OS X.
 
-### <a name="see-also"></a>Voir aussi
+### <a name="see-also"></a> Voir aussi
 
-* [Mise en route](get-started.md)
+* [Prise en main](get-started.md)
 
 * [Nouveautés](release-notes.md)
 
-* [Terminologie et concepts du développement](core-concepts.md)
+* [Concepts et termes de développement](core-concepts.md)
 
-* [Informations de référence sur l’API iOS / OS X](https://msdn.microsoft.com/library/dn758306.aspx)
+* [informations de référence sur l’API iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)

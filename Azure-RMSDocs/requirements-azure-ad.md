@@ -11,29 +11,29 @@ ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
-ms.custom: admin
-ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.custom: admin, has-adal-ref
+ms.openlocfilehash: 803980b071de64c053f1ad0bf3cac06488fc410b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404638"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972099"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Un annuaire Azure AD est nécessaire pour pouvoir utiliser Azure Information Protection. Vous utilisez un compte de cet annuaire pour vous connecter au portail Azure, où vous pouvez par exemple configurer et gérer des étiquettes Azure Information Protection et des modèles Azure Rights Management.
 
-Si vous avez un abonnement incluant Azure Information Protection ou Azure Rights Management, votre annuaire Azure AD est créé automatiquement pour vous si nécessaire.  
+Si vous avez un abonnement incluant Azure Information Protection ou Azure Rights Management, votre annuaire Azure AD est créé automatiquement pour vous si nécessaire.
 
 Pour plus d’informations sur Azure AD, consultez [Qu’est-ce que l’annuaire Azure AD ?](/azure/active-directory/fundamentals/active-directory-whatis)
 
 Pour intégrer un annuaire Azure AD à des forêts AD locales, voir [Intégrer des domaines Active Directory locaux à Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
-### <a name="scenarios-that-have-specific-requirements"></a>Scénarios avec des exigences spécifiques 
+### <a name="scenarios-that-have-specific-requirements"></a>Scénarios avec des exigences spécifiques
 
-Ordinateurs qui exécutent Office 2010 : 
+Ordinateurs qui exécutent Office 2010 :
 
 - Ces ordinateurs nécessitent l' [Azure information protection client d’étiquetage unifié](./rms-client/aip-clientv2.md) ou [Azure information protection client](./rms-client/aip-client.md) pour s’authentifier auprès d’Azure information protection et de son service de protection des données, Azure Rights Management.
 
@@ -45,13 +45,13 @@ Prise en charge de l’authentification basée sur les certificats :
 
 La valeur UPN des utilisateurs ne correspond pas à leur adresse e-mail :
 
-- Cette configuration n’est pas recommandée et ne prend pas en charge l’authentification unique pour Azure Information Protection. Si vous ne pouvez pas changer la valeur UPN, configurez un autre ID de connexion pour les utilisateurs et indiquez-leur comment se connecter à Office à l’aide de cette connexion de remplacement. Pour plus d’informations, consultez [Configuration d’un autre ID de connexion](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) et [Les applications Office demandent régulièrement des informations d’identification pour SharePoint Online, OneDrive et Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
-    
+- Cette configuration n’est pas recommandée et ne prend pas en charge l’authentification unique pour Azure Information Protection. Si vous ne pouvez pas changer la valeur UPN, configurez un autre ID de connexion pour les utilisateurs et indiquez-leur comment se connecter à Office à l’aide de cette connexion de remplacement. Pour plus d’informations, consultez [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) (Configuration d’un ID de connexion de secours) et [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online) (Les applications Office invitent régulièrement à saisir les informations d’identification pour SharePoint Online, OneDrive et Lync Online).
+
     Quand le nom de domaine dans la valeur UPN est un domaine qui est vérifié pour votre locataire, ajoutez la valeur UPN de l’utilisateur comme une autre adresse e-mail à l’attribut proxyAddresses d’Azure AD. L’utilisateur est ainsi autorisé à utiliser Azure Rights Management si sa valeur UPN est spécifiée au moment où les droits d’utilisation sont accordés. Pour plus d’informations sur ce sujet et sur la façon dont les comptes d’utilisateur sont autorisés, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
 Appareils mobiles ou ordinateurs Mac qui s’authentifient localement avec AD FS ou un fournisseur d’authentification équivalent :
 
-- Vous devez utiliser soit les services AD FS sur la version serveur minimale de **Windows Server 2012 R2**, soit un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
+- Vous devez utiliser soit les services AD FS sur la version serveur minimale de **Windows Server 2012 R2**, soit un autre fournisseur d'authentification prenant en charge le protocole OAuth 2.0.
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :
@@ -62,7 +62,7 @@ Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Pro
 
 - Client Azure Information Protection :
 
-    - Les clients Azure Information Protection pour Windows et l’application de visionneuse pour iOS et Android ont toujours pris en charge MFA ; aucune version minimale n’est requise. 
+    - Les clients Azure Information Protection pour Windows et l’application de visionneuse pour iOS et Android ont toujours pris en charge MFA ; aucune version minimale n’est requise.
 
 -   Application de partage Rights Management et ordinateurs Mac :
 
@@ -74,22 +74,21 @@ Ensuite, configurez votre solution MFA :
 
     - Configurez Azure MAF pour appliquer l’authentification MFA aux utilisateurs. Pour obtenir des instructions, consultez [Prise en main avec Azure Multi-Factor Authentication dans le cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) dans la documentation sur Azure.
 
-        Pour plus d’informations sur l’authentification multifacteur Azure, consultez [Qu’est-ce qu’Azure Multi-Factor Authentication ?](/multi-factor-authentication/multi-factor-authentication).
+        Pour plus d’informations sur Azure MFA, consultez [Présentation d’Azure Multi-Factor Authentication](/multi-factor-authentication/multi-factor-authentication)
 
 - Pour les clients fédérés (utilisant des serveurs de fédération locaux) :
 
     - Configurez vos serveurs de fédération pour Azure Active Directory ou Office 365. Par exemple, si vous utilisez AD FS, consultez [configurer des méthodes d’authentification supplémentaires pour les AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
-        Pour plus d’informations sur ce scénario, consultez [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office.
+        Pour plus d’informations sur ce scénario, consultez [la page fonctionne avec office 365 – Identity Program Now rationalisé](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office.
 
 Le connecteur Azure Rights Management et le moteur d’analyse Azure Information Protection ne prennent pas en charge la MFA. Si vous déployez le connecteur ou le moteur d’analyse, les comptes suivants ne doivent pas exiger l’authentification multifacteur :
 
 - Le compte qui installe et configure le connecteur.
 
 - Le compte principal du service dans Azure AD, **Aadrm_S-1-7-0** créé par le connecteur.
- 
+
 - Le compte de service qui exécute le moteur d’analyse.
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements.md).
-

@@ -13,13 +13,13 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: ef1306dbcbd4727f4e6c0207e328e7df3da8ed74
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068426"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971895"
 ---
 # <a name="android-setup"></a>Configuration pour Android
 
@@ -34,28 +34,28 @@ Cette rubrique explique comment configurer votre environnement pour créer vos p
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
-Nous recommandons les logiciels suivants sur votre système de développement :
+Nous vous recommandons de disposer des logiciels suivants sur votre système de développement :
 
 -   Système d’exploitation Windows ou OS X pour exécuter l’environnement de développement [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
 -   Ce guide suppose que vous utilisez le SDK Eclipse à partir d’Eclipse Juno 4.2 et avec une installation par défaut.
 -   Java à partir de Java 1.6.
 -   [Plug-in Outils ADT (Android Developer Tools)](https://developer.android.com/studio/install). REMARQUE : Vous devrez peut-être redémarrer Eclipse pour terminer l’installation.
 
-     
 
--   Package MS RMS SDK 4.2 pour Android. Pour plus d’informations, consultez [Prise en main](get-started.md).
+
+-   Package MS RMS SDK 4.2 pour Android. Pour plus d’informations, consultez [prise en main](get-started.md).
 
     Ce SDK peut être utilisé pour développer pour Android 4.0.3 (API niveau 15) et ultérieur.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Remarque**   Si votre application ne doit pas utiliser la bibliothèque ADAL comme bibliothèque d’authentification OAuth 2.0, il est conseillé de lire ces conseils qui concernent Android : [Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Remarque :**  si votre application n’utilise pas la bibliothèque Adal comme bibliothèque d’authentification OAuth 2,0, vous devez consulter cette aide Android, [quelques réflexions SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, les notes de publication et les questions les plus fréquentes (FAQ).
 
@@ -65,9 +65,9 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
-**Remarque**  version préliminaire de MS Kit de développement logiciel (SDK) RMS 4,2 : dans cette version préliminaire, les captures d’écran n’ont pas été mises à jour pour afficher la modification du nom des chemins d’accès de com/Microsoft/protection à com/Microsoft/rightsmanagment. Le texte a cependant été mis à jour.
+**Notez**  la version préliminaire de MS Kit de développement logiciel (SDK) RMS 4,2 : dans cette version préliminaire, les captures d’écran n’ont pas été mises à jour pour afficher la modification du nom des chemins d’accès de com/Microsoft/protection à com/Microsoft/rightsmanagment. Le texte a cependant été mis à jour.
 
- 
+
 -   Ouvrez l’environnement de développement Eclipse.
 -   Pour créer un projet d’application Android, dans le menu **Fichier**, cliquez sur **Nouveau**, cliquez sur **Projet**, puis sélectionnez **Projet d’application Android**.
 
@@ -86,7 +86,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     ![Créez l’activité](../media/Android-setup-04.png)
 
--   Cliquez sur **Suivant** et indiquez un nom pour l’activité. Vous pouvez laisser *MainActivity* comme nom par défaut avec un nom d’affichage *activity\_main*.
+-   Cliquez sur **Suivant** et indiquez un nom pour l’activité. Vous pouvez conserver *MainActivity* comme nom par défaut avec le nom de mise en page *main activité\_*.
 
     ![Spécifiez un nom pour l’activité](../media/Android-setup-05a.jpg)
 
@@ -96,16 +96,16 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Votre projet a été créé, ainsi que la classe d’activité principale *MainActivity.java*.
 
-**Faire référence au SDK**
+**Référencement du SDK**
 
-- Accédez au dossier où vous avez extrait *adrms\_android\_sdk.zip*. Dans le dossier « SDK > com > microsoft > rightsmanagement », vérifiez que les fichiers *.classpath*, *.project* et *project.properties* ne sont pas marqués en lecture seule.
+- Accédez au dossier dans lequel vous avez extrait le *fichier\_ADRMS\_Android SDK. zip*. Dans le dossier « SDK > com > microsoft > rightsmanagement », vérifiez que les fichiers *.classpath*, *.project* et *project.properties* ne sont pas marqués en lecture seule.
 - Pour faire référence au SDK, vous devez l’importer dans l’espace de travail.
 
   Dans Eclipse, cliquez sur **Fichier**. Dans le menu **Fichier**, cliquez sur **Importer**. Dans la boîte de dialogue **Importer**, sélectionnez **Android / Code Android existant dans l’espace de travail**.
 
   ![Importez-le dans l’espace de travail](../media/Android-setup-07.png)
 
-- Cliquez sur **Suivant**. Accédez au dossier où vous avez extrait *adrms\_android\_sdk.zip*. Le SDK doit apparaître dans la liste comme **com.microsoft.rightsmanagement**.
+- Cliquez sur **Suivant**. Accédez à sélectionner le dossier dans lequel vous avez extrait *le\_fichier\_ADRMS Android SDK. zip*. Le SDK doit apparaître dans la liste comme **com.microsoft.rightsmanagement**.
 
   ![Naviguez pour sélectionner le dossier](../media/Android-setup-08c.jpg)
 
@@ -121,11 +121,11 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 - Cliquez sur **OK**.
 
-  Comme MS RMS SDK 4.2 se connecte avec AAD RM, **INTERNET** et **ACCESS\_NETWORK\_STATE** doivent être accordés à l’application. Pour cela, ouvrez le fichier *AndroidManifest.xml* à la racine du projet.
+  Étant donné que le MS kit de développement logiciel (SDK) RMS 4,2 se connecte à AAD RM, l’application doit se voir accorder l' **État réseau\_\_** **Internet** et accès. Pour cela, ouvrez le fichier *AndroidManifest.xml* à la racine du projet.
 
   Pour ajouter les autorisations, cliquez sur **Ajouter**, puis sélectionnez **Utilise les autorisations**.
 
-  ![Ajoutez des autorisations](../media/Android-setup-11d.jpg)
+  ![Ajout d’autorisations](../media/Android-setup-11d.jpg)
 
 - Vous pouvez vérifier l’étape du manifeste en consultant le manifeste dans l’affichage de l’éditeur de texte. Vérifiez que les lignes suivantes s’affichent :
 
@@ -138,18 +138,16 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
   <uses-permission/>
   ```
 
-**Remarque**   Le SDK utilise *android.support.v4*
+**Remarque**  le kit de développement logiciel (SDK) utilise *Android. support. v4*
 
 -   Vous êtes maintenant prêt à créer vos propres applications Android.
 
-### <a name="see-also"></a>Voir aussi
+### <a name="see-also"></a> Voir aussi
 
-[Mise en route](get-started.md)
+[Prise en main](get-started.md)
 
 [Nouveautés](release-notes.md)
 
-[Terminologie et concepts du développement](core-concepts.md)
+[Concepts et termes de développement](core-concepts.md)
 
 [Informations de référence sur l’API Android](https://msdn.microsoft.com/library/dn758245.aspx)
-
-

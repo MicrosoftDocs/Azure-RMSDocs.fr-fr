@@ -13,13 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 5319ff8ca9424d1c1273df1bdf347abf65881209
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791298"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971861"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -48,10 +48,10 @@ Une fois que le service est activé, vous avez besoin des composants PowerShell 
 - Vérifiez que RMS est activé : `enable-aipservice`
 - Obtenez votre ID de locataire en exécutant : `Get-AipServiceConfiguration`
 
->Enregistrez la valeur BPOSId (ID de locataire). Vous en aurez besoin dans les étapes suivantes.
+>Enregistrez la valeur BPOSId (ID de locataire). Vous en aurez besoin au cours des prochaines étapes.
 
-*Exemple de sortie*
-![sortie de l’applet de commande](../media/develop/output-of-Get-AadrmConfiguration.png)
+*Exemple*
+![de sortie de l’applet de commande output](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Déconnectez-vous du service : `Disconnect-AipServiceService`
 
@@ -66,13 +66,13 @@ Suivez ces étapes pour créer un principal du service :
 - Fournissez un nom à votre principal du service.
   > Enregistrez la clé symétrique et l’ID de principal d’application pour une utilisation ultérieure.
 
-*Exemple de sortie*
-![sortie de l’applet de commande](../media/develop/output-of-NewMsolServicePrincipal.png)
+*Exemple*
+![de sortie de l’applet de commande output](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Ajoutez votre ID de principal d’application, votre clé symétrique et votre ID de locataire au fichier App.config de l’application.
 
-*Example de fichier App.config*
-![sortie de l’applet de commande](../media/develop/example-App.config-file.png)
+*Exemple*
+![de sortie de l’applet de commande du fichier app. config](../media/develop/example-App.config-file.png)
 
 - Les valeurs *ClientID* et *RedirectUri* sont mises à votre disposition quand vous inscrivez votre application dans Azure. Pour plus d’informations sur la façon d’inscrire votre application dans Azure et d’obtenir les valeurs *ClientID* et *RedirectUri*, consultez [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md).
 
@@ -132,7 +132,7 @@ L’option de protection avec un modèle permet d’obtenir la liste des modèle
 
      public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
      {
-       // Gets the available templates for this tenant             
+       // Gets the available templates for this tenant
        Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
            false, true, null, null, symmetricKeyCredential);
 
@@ -161,7 +161,7 @@ L’option de protection avec un modèle permet d’obtenir la liste des modèle
          {
            templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template             
+           // Encrypts the file using the selected template
            TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
            string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
@@ -176,7 +176,7 @@ Si vous sélectionnez la stratégie ad hoc, l’utilisateur de l’application d
 
     if (issuerDisplayName.Trim() != "")
     {
-      // Gets the available issuers of rights policy templates.              
+      // Gets the available issuers of rights policy templates.
       // The available issuers is a list of RMS servers that this user has already contacted.
       try
       {
@@ -186,7 +186,7 @@ Si vous sélectionnez la stratégie ad hoc, l’utilisateur de l’application d
                                                         false,
                                                         false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it             
+        // Creates the policy and associates the chosen user rights with it
         SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
                                                             templateIssuers.ElementAt(0));
         SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
@@ -197,7 +197,7 @@ Si vous sélectionnez la stratégie ad hoc, l’utilisateur de l’application d
                                                                 issuerDisplayName,
                                                                 false));
 
-        //Encrypts the file using the ad hoc policy             
+        //Encrypts the file using the ad hoc policy
         string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
                                        filePath,
                                        handle,
@@ -230,4 +230,3 @@ Une fois que tout est généré et en cours d’exécution, les sorties de l’a
    ![sortie de l’application - étape 5](../media/develop/app-output-5.png)
 
 6. Enfin, vous entrez certaines métadonnées de stratégie : nom de la stratégie, description et nom complet de l’émetteur (locataire Azure AD) ![sortie de l’application - étape 6](../media/develop/app-output-6.png)
-

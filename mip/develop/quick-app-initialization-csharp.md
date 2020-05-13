@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: 5b64da83fad3ca9187398f77780fd0810740668a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: fa8b41850468ed545512f8facc488ff0517a8b41
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764176"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972082"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C#)
 
@@ -26,7 +27,7 @@ Si vous ne l’avez pas déjà fait, veillez à :
 
 - Exécuter la procédure fournie dans [Installation et configuration du kit SDK Microsoft Information Protection (MIP)](setup-configure-mip.md). Ce guide de démarrage rapide « initialisation d’une application cliente » s’appuie sur une installation et une configuration correctes du kit SDK.
 - Éventuellement :
-  - Passez en revue [Objets de profil et moteur](concept-profile-engine-cpp.md). Les objets de profil et moteur sont des concepts universels, requis par les clients qui utilisent les API MIP de fichier/stratégie/protection. 
+  - Passez en revue [Objets de profil et moteur](concept-profile-engine-cpp.md). Les objets de profil et moteur sont des concepts universels, requis par les clients qui utilisent les API MIP de fichier/stratégie/protection.
   - Passez en revue les [concepts d’authentification](concept-authentication-cpp.md) pour savoir comment l’authentification et le consentement sont implémentés par le kit SDK et l’application cliente.
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Créer une solution et un projet Visual Studio
@@ -37,7 +38,7 @@ Tout d’abord, nous créons et configurons la solution et le projet Visual Stud
    - Dans le volet gauche, sous **Installé**, **Visual C#** , sélectionnez **Windows Desktop**.
    - Dans le volet central, sélectionnez **Application console (.NET Framework)**
    - Dans le volet inférieur, mettez à jour les champs **Nom**, **Emplacement** et **Nom de la solution** contenante du projet en conséquence.
-   - Lorsque vous avez terminé, cliquez sur le bouton **OK** dans le coin inférieur droit. 
+   - Lorsque vous avez terminé, cliquez sur le bouton **OK** dans le coin inférieur droit.
 
      [![Création d’une solution dans Visual Studio](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
@@ -97,7 +98,7 @@ L’objet `ApplicationInfo` contient trois propriétés. `_appInfo.ApplicationId
 
 Maintenant, créez une implémentation pour un délégué de consentement, en étendant l’interface `Microsoft.InformationProtection.IConsentDelegate` du SDK et en remplaçant/implémentant `GetUserConsent()`. Le délégué de consentement est instancié et utilisé plus tard par les objets de profil de fichier et de moteur de fichier. Le délégué de consentement est fourni avec l’adresse du service dont l’utilisation doit être consentie par l’utilisateur dans le paramètre `url`. Le délégué doit généralement fournir un flux qui permette à l’utilisateur de donner ou refuser son consentement pour l’accès au service. Dans le cadre de ce guide de démarrage rapide, vous devez coder `Consent.Accept` en dur.
 
-1. À l’aide de la même fonctionnalité « Ajouter une classe » de Visual Studio que nous avons utilisée précédemment, ajoutez une autre classe dans votre projet. Cette fois, entrez « ConsentDelegateImplementation » dans le champ **Nom de la classe**. 
+1. À l’aide de la même fonctionnalité « Ajouter une classe » de Visual Studio que nous avons utilisée précédemment, ajoutez une autre classe dans votre projet. Cette fois, entrez « ConsentDelegateImplementation » dans le champ **Nom de la classe**.
 
 2. Maintenant, mettez à jour **ConsentDelegateImpl.cs** pour implémenter votre nouvelle classe de délégué de consentement. Ajoutez l’instruction using pour `Microsoft.InformationProtection` et définissez la classe afin qu’elle hérite `IConsentDelegate`.
 
@@ -117,9 +118,9 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
 
 1. À partir de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
-2. Supprimez l’implémentation générée de `main()`. 
+2. Supprimez l’implémentation générée de `main()`.
 
-3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, la création d’un `MipContext`, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez `MIP.Initialize()`, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier. 
+3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, la création d’un `MipContext`, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez `MIP.Initialize()`, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier.
 
 4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription de l’application Azure AD créée précédemment.
 
@@ -140,7 +141,7 @@ namespace mip_sdk_dotnet_quickstart
 
         static void Main(string[] args)
         {
-            //Initialize Wrapper for File API operations 
+            //Initialize Wrapper for File API operations
             MIP.Initialize(MipComponent.File);
         }
     }
@@ -192,7 +193,7 @@ namespace mip_sdk_dotnet_quickstart
                // Create the FileProfileSettings object.
                // Initialize file profile settings to create/use local state.
                var profileSettings = new FileProfileSettings(mipContext,
-                                        CacheStorageType.OnDiskEncrypted,                                        
+                                        CacheStorageType.OnDiskEncrypted,
                                         new ConsentDelegateImplementation());
 
                // Load the Profile async and wait for the result.

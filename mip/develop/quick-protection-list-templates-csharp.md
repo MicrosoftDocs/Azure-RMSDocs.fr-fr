@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 0a71ac710aec82c7a5de16c7f603ccdfe4803f79
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: ec6439747b7a826a09851739a96ccdec3f5705f4
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766301"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972116"
 ---
 # <a name="quickstart-list-templates-c"></a>Démarrage rapide : Répertorier les modèles (C#)
 
@@ -22,7 +23,7 @@ Ce guide de démarrage rapide vous montre comment utiliser l’API Protection du
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Initialisation d’une application cliente - API Protection (C#)](quick-protection-app-initialization-csharp.md) pour créer une solution Visual Studio de démarrage. Ce guide de démarrage rapide « Répertorier les modèles de protection » s’appuie sur le précédent, qui permet de créer correctement la solution de démarrage.
-- Éventuellement : Passez en revue les concepts [Modèles RMS](https://docs.microsoft.com/azure/information-protection/configure-policy-templates). 
+- Éventuellement : Passez en revue les concepts [Modèles RMS](https://docs.microsoft.com/azure/information-protection/configure-policy-templates).
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>Ajouter une logique pour répertorier les modèles de protection
 
@@ -35,15 +36,15 @@ Ajoutez une logique pour répertorier les modèles de protection disponibles pou
 3. Vers la fin du corps `Main()`, au-dessous de la section d’arrêt d’application de la fonction `Main()` (là où vous vous êtes arrêté dans le démarrage rapide précédent), insérez le code suivant :
 
   ```csharp
-  // List protection templates using protectionEngine and display the list  
-  
+  // List protection templates using protectionEngine and display the list
+
   var templates=protectionEngine.GetTemplates();
 
   for(int i = 0; i < templates.Count; i++)
   {
       Console.WriteLine("{0}: {1}", i.ToString(), templates[i].Name + " : " + templates[i].Id);
   }
-  
+
   Console.WriteLine("Press a key to continue...");
   ```
 
@@ -55,7 +56,7 @@ Enfin, générez et testez votre application cliente.
 
 2. Si votre projet est généré et s’exécute correctement, l’application *peut* demander une authentification via ADAL chaque fois que le SDK appelle la méthode `AcquireToken()`. Si les informations d’identification ont déjà été mises en cache, vous n’êtes pas invité à vous connecter et à voir la liste des étiquettes.
 
-     [![Acquisition par Visual Studio d’un jeton de connexion](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) 
+     [![Acquisition par Visual Studio d’un jeton de connexion](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
    - Vous devrez peut-être également donner votre consentement pour autoriser l’application à accéder aux API MIP, lors de son exécution sous le compte de connexion. Cela se produit lorsque l’inscription de l’application Azure AD n’est pas préalablement consentie (comme indiqué dans « Installation et configuration du kit SDK MIP »), ou que vous vous connectez avec un compte issu d’un autre locataire (autre que celui où votre application est inscrite). Cliquez simplement sur **Accepter** pour enregistrer votre consentement.
 

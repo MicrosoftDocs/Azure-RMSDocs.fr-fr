@@ -7,12 +7,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c081d20ba3cfffdc1db06ade5d918230f3b9eff8
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75554988"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972167"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
 
@@ -27,9 +28,9 @@ Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants 
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>Ajouter une logique pour définir et obtenir une étiquette de sensibilité
 
-Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur un fichier à l’aide de l’objet de moteur de fichier. 
+Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur un fichier à l’aide de l’objet de moteur de fichier.
 
-1. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
+1. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
 2. Vers la fin du corps `Main()`, au-dessous de `Console.ReadKey()` et au-dessus de `}` (où vous vous êtes arrêté dans le guide de démarrage rapide précédent), insérez le code suivant :
 
@@ -42,7 +43,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
      string actualOutputFilePath = outputFilePath;
 
      //Create a file handler for that file
-     //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing. 
+     //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing.
      var handler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
 
      //Set Labeling Options
@@ -88,13 +89,13 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l'application
 
-Générez et testez votre application cliente. 
+Générez et testez votre application cliente.
 
 1. Utilisez CTRL-MAJ-B (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
 2. Si votre projet est généré et s’exécute correctement, l’application *peut* demander une authentification via ADAL chaque fois que le SDK appelle la méthode `AcquireToken()`. Si les informations d’identification ont déjà été mises en cache, vous n’êtes pas invité à vous connecter et à voir la liste des étiquettes, suivie des informations sur l’étiquette appliquée et le fichier modifié.
 
-  ```console   
+  ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
   Public : 73254501-3d5b-4426-979a-657881dfcb1e
   General : da480625-e536-430a-9a9e-028d16a29c59
@@ -110,10 +111,10 @@ Générez et testez votre application cliente.
 
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
-   
+
    Label committed to file: c:\Test\Test_labeled.docx
    Press any key to continue . . .
-  
+
    Getting the label committed to file: c:\Test\Test_labeled.docx
    Name: Confidential
    Id: 074e457c-5848-4542-9a6f-34a182080e7z
@@ -123,4 +124,4 @@ Générez et testez votre application cliente.
 Vous pouvez vérifier l’application de l’étiquette, en ouvrant le fichier de sortie et en inspectant visuellement les paramètres de protection des informations du document.
 
 > [!NOTE]
-> Si vous étiquetez un document Office, mais que ne vous êtes pas connecté à l’aide d’un compte issu du locataire Azure Active Directory (AD) où le jeton d’accès a été obtenu (et les étiquettes de sensibilité sont configurées), vous pouvez être invité à vous connecter avant de pouvoir ouvrir le document étiqueté. 
+> Si vous étiquetez un document Office, mais que ne vous êtes pas connecté à l’aide d’un compte issu du locataire Azure Active Directory (AD) où le jeton d’accès a été obtenu (et les étiquettes de sensibilité sont configurées), vous pouvez être invité à vous connecter avant de pouvoir ouvrir le document étiqueté.

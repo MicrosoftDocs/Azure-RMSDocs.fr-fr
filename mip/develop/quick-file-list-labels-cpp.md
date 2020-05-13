@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 330ceb37e0c8324a083bf5c5d7240035b9b86a0a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556042"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971606"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C++)
 
@@ -26,11 +27,11 @@ Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants 
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Ajouter une logique pour répertorier les étiquettes de sensibilité
 
-Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre organisation, à l’aide de l’objet de moteur de fichier. 
+Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre organisation, à l’aide de l’objet de moteur de fichier.
 
 1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « Démarrage rapide : Initialisation d’une application cliente (C++) ».
 
-2. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cpp dans votre projet qui contient l’implémentation de la méthode `main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
+2. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cpp dans votre projet qui contient l’implémentation de la méthode `main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
 3. Ajoutez la directive suivante `using` après `using mip::FileEngine;`, dans la partie supérieure du fichier :
 
@@ -54,23 +55,23 @@ Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre o
       }
    }
    system("pause");
-   ``` 
+   ```
 
 ## <a name="create-a-powershell-script-to-generate-access-tokens"></a>Créer un script PowerShell pour générer des jetons d’accès
 
-Utilisez le script PowerShell suivant pour générer les jetons d’accès demandés par le SDK dans votre implémentation de `AuthDelegateImpl::AcquireOAuth2Token`. Le script utilise l’applet de commande `Get-ADALToken` à partir du module ADAL.PS que vous avez installé précédemment, dans « Installation et configuration du kit SDK MIP ». 
+Utilisez le script PowerShell suivant pour générer les jetons d’accès demandés par le SDK dans votre implémentation de `AuthDelegateImpl::AcquireOAuth2Token`. Le script utilise l’applet de commande `Get-ADALToken` à partir du module ADAL.PS que vous avez installé précédemment, dans « Installation et configuration du kit SDK MIP ».
 
 1. Créez un fichier de script PowerShell (extension .ps1) et copiez/collez le script suivant dans ce fichier :
 
    - `$authority` et `$resourceUrl` sont mises à jour plus tard, dans la section suivante.
-   - Mettez à jour `$appId` et `$redirectUri` avec les valeurs que vous avez spécifiées dans l’inscription de votre application Azure AD. 
+   - Mettez à jour `$appId` et `$redirectUri` avec les valeurs que vous avez spécifiées dans l’inscription de votre application Azure AD.
 
    ```powershell
-   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token()
    $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
@@ -78,7 +79,7 @@ Utilisez le script PowerShell suivant pour générer les jetons d’accès deman
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l’application
 
-Enfin, générez et testez votre application cliente. 
+Enfin, générez et testez votre application cliente.
 
 1. Utilisez la touche F6 (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
@@ -122,7 +123,7 @@ Enfin, générez et testez votre application cliente.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-### <a name="problems-during-execution-of-powershell-script"></a>Problèmes durant l’exécution du script PowerShell 
+### <a name="problems-during-execution-of-powershell-script"></a>Problèmes durant l’exécution du script PowerShell
 
 | Résumé | Message d'erreur | Solution |
 |---------|---------------|----------|

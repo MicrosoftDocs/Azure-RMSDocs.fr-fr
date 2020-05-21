@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/08/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 51691ed4ae5e6a8cebdc372f4be21e25bf12db27
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 56194d242f6b079fc04765c8ceeeac5cddbf557d
+ms.sourcegitcommit: 93376be8c80776e572f1233812ef39fbabbbd0b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972065"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550852"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -28,7 +28,7 @@ ms.locfileid: "82972065"
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure information protection** > **Microsoft Azure information protection client d’étiquetage unifié**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
+Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure information protection**  >  **Microsoft Azure information protection client d’étiquetage unifié**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
 Pour plus d’informations, consultez [mise à niveau et maintenance du client d’étiquetage unifié Azure information protection](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -63,7 +63,6 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 ## <a name="version-27930"></a>Version 2.7.93.0
-Client d’étiquetage unifié (disponibilité générale) 
 
 Scanner d’étiquetage unifié (version préliminaire publique) version 2.7.93.0
 
@@ -134,7 +133,7 @@ Pris en charge jusqu’à 09/09/2020
     
     - Plusieurs scanneurs peuvent partager la même SQL Server base de données lorsque vous configurez les scanneurs pour qu’ils utilisent le même profil de scanneur. Cette configuration facilite la gestion de plusieurs scanneurs et entraîne des temps d’analyse plus rapides. Lorsque vous utilisez cette configuration, attendez toujours que l’installation d’un scanneur soit terminée avant d’installer un autre scanneur avec le même profil.
     
-    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur s’intitule **\<AIPScannerUL_ profile_name>**. Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
+    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur s’intitule **AIPScannerUL_ \< profile_name>**. Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
     
     - Vous pouvez définir une étiquette par défaut pour tous les documents, même si les documents sont déjà étiquetés. Dans les paramètres Profil du scanneur ou référentiel, affectez à l’option **Renommer les fichiers** la valeur **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée.
     
@@ -183,7 +182,7 @@ Pris en charge jusqu’à 09/09/2020
 
 **Modifications supplémentaires**
 
-- [Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) supprime maintenant les dossiers%LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.\> exe* au lieu du dossier\\%LocalAppData%\Microsoft\MSIP\mip*\<ProcessName\>* \mip.
+- [Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) supprime maintenant les dossiers%LocalAppData%\Microsoft\MSIP\mip \\ * \< ProcessName. \> exe* au lieu du dossier%localappdata%\Microsoft\MSIP\mip \\ * \< ProcessName \> *\mip.
 
 - L' [AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) d’accès à la sécurité comprend désormais l’ID de contenu d’un document protégé.
 

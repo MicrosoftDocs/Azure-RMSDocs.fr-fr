@@ -13,23 +13,23 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 81c95640f22e6234a3cc6d3487db6c12345a57b8
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 34484e732362adba288a9dfe8656df155b526b36
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404111"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746727"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Utilisez les informations suivantes pour identifier les applications et les solutions qui prennent en charge en mode natif le service Azure Rights Management (Azure RMS), qui fournit la protection des données pour Azure Information Protection.
 
 Pour ces applications et solutions, la prise en charge Rights Management est étroitement intégrée à l’aide des API Rights Management pour la prise en charge des [restrictions d’utilisation](configure-usage-rights.md). Ces applications et solutions sont également qualifiées de « compatibles RMS ».
 
-Sauf spécification contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, macOS et Windows Phone 8.1 a pour prérequis [l’extension des services AD RMS (Active Directory Rights Management Services) pour appareils mobiles](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
+Sauf indication contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, macOS et Windows Phone 8.1 a pour prérequis [l’extension des services AD RMS (Active Directory Rights Management Services) pour appareils mobiles](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 ## <a name="rms-enlightened-applications"></a>Applications compatibles avec RMS
 
@@ -39,40 +39,40 @@ Pour plus d’informations sur l’affichage des documents PDF protégés, consu
 
 Informations sur les colonnes du tableau :
 
--   **E-mail :** Les clients de messagerie répertoriés peuvent protéger l’e-mail proprement dit, ce qui a pour effet de protéger automatiquement tout fichier Office joint qui n’est pas déjà protégé. Dans ce scénario, la fonctionnalité d’aperçu du client peut afficher le contenu protégé (message et pièce jointe) aux destinataires autorisés. Cependant, si une pièce jointe est protégée mais pas l’e-mail qui la contient, la fonctionnalité d’aperçu du client ne peut pas afficher la pièce jointe protégée aux destinataires autorisés. 
+-   **E-mail :** Les clients de messagerie répertoriés peuvent protéger l’e-mail proprement dit, ce qui a pour effet de protéger automatiquement tout fichier Office joint qui n’est pas déjà protégé. Dans ce scénario, la fonctionnalité d'aperçu du client peut afficher le contenu protégé (message et pièce jointe) aux destinataires autorisés. Cependant, si une pièce jointe est protégée mais pas le message électronique qui la contient, la fonctionnalité d’aperçu du client ne peut pas afficher la pièce jointe protégée aux destinataires autorisés. 
     
     Conseil : pour les clients de messagerie qui ne prennent pas en charge la protection des e-mails, envisagez d’utiliser les [règles de flux de courrier d’Exchange Online pour appliquer cette protection](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8).
 
 -   **Autres types de fichier** : Les fichiers texte et image incluent les fichiers avec une extension de nom de fichier .txt, .xml, .jpg et .jpeg. Ces fichiers changent d’extension de nom de fichier une fois qu’ils sont protégés en mode natif par Rights Management, puis passent en lecture seule. Les fichiers qui ne peuvent pas être protégés en mode natif ont une extension de nom de fichier .pfile une fois qu’ils sont protégés de manière générique par Rights Management. Pour plus d’informations, consultez [Types de fichiers pris en charge](./rms-client/client-admin-guide-file-types.md) dans le guide de l’administrateur du client Azure Information Protection.
 
 
-|**Système d’exploitation de l’appareil**|Word, Excel, PowerPoint|Adresse de messagerie|Autres types de fichiers|
+|**Système d’exploitation de l’appareil**|Word, Excel, PowerPoint|Courrier|Autres types de fichiers|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Applications Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office pour le Web (affichage de documents protégés) [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Outlook à partir d’Office 365 ProPlus<br /><br />Navigateur web [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio à partir d’Office 365 Apps, Office 2019 et Office 2016 :. VSDM,. vsdx,. VSSM,. vstm,. vssx,. vstx <br /><br />Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
+|**Windows**|Applications Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office pour le Web (affichage de documents protégés) [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Outlook à partir d’Office 365 ProPlus<br /><br />Navigateur web [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio à partir d’Office 365 Apps, Office 2019 et Office 2016 :. VSDM,. vsdx,. VSSM,. vstm,. vssx,. vstx <br /><br />Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
 |**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Office pour iPad et iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Navigateur web [[4]](#footnote-4)|Application Azure Information Protection (affichage et protection de textes et d’images)<br /><br />Docs TITUS : Pfile|
 |**Android**|GigaTrust App pour Android<br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />Office Mobile (sauf en utilisant des étiquettes de sensibilité, limitées à l’affichage et à la modification des documents protégés) <br /><br />Navigateur web [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />BlackBerry Work <br /><br />GigaTrust App pour Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook pour Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 et versions ultérieures) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[4]](#footnote-4)|Application Azure Information Protection (affichage de textes et d’images protégés)|
-|**MacOS**|Applications Office 365<br /><br />Office 2019 pour Mac<br /><br />Office 2016 pour Mac<br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2019 pour Mac<br /><br /> Outlook 2016 pour Mac<br /><br />Navigateur web [[4]](#footnote-4)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
-|**Windows 10 Mobile**|Applications Office Mobile (affichage des documents protégés avec Azure RMS) <br /><br />Navigateur web [[3]](#footnote-3)|Citrix WorxMail <br /><br />Courrier Outlook (affichage des e-mails protégés) <br /><br />Navigateur web [[4]](#footnote-4)|Non pris en charge|
-|**BlackBerry 10**|Navigateur web [[3]](#footnote-3)|Messagerie Blackberry [[5]](#footnote-5) <br /><br />Navigateur web [[4]](#footnote-4)|Non pris en charge|
+|**macOS**|Applications Office 365<br /><br />Office 2019 pour Mac<br /><br />Office 2016 pour Mac<br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2019 pour Mac<br /><br /> Outlook 2016 pour Mac<br /><br />Navigateur web [[4]](#footnote-4)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
+|**Windows 10 Mobile**|Applications Office Mobile (affichage des documents protégés avec Azure RMS) <br /><br />Navigateur web [[3]](#footnote-3)|Citrix WorxMail <br /><br />Courrier Outlook (affichage des e-mails protégés) <br /><br />Navigateur web [[4]](#footnote-4)|Non prise en charge|
+|**Blackberry 10**|Navigateur web [[3]](#footnote-3)|Messagerie Blackberry [[5]](#footnote-5) <br /><br />Navigateur web [[4]](#footnote-4)|Non prise en charge|
 
-###### <a name="footnote-1"></a>Note de bas de page 1
+###### <a name="footnote-1"></a>Note 1
 Inclut : 
 - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 - Applications Office 365 ProPlus
 
-###### <a name="footnote-2"></a>Note 2
-Uniquement prise en charge avec SharePoint Online et OneDrive Entreprise et la protection des documents est retirée avant leur chargement sur une bibliothèque protégée.
+###### <a name="footnote-2"></a>Note 2
+Pris en charge uniquement avec Microsoft SharePoint et OneDrive, et les documents ne sont pas protégés avant d’être téléchargés dans une bibliothèque protégée.
 
-###### <a name="footnote-3"></a>Note 3
+###### <a name="footnote-3"></a>Note 3
 Pour les [pièces jointes Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) qui sont protégées avec le [chiffrement de messages Office 365 avec les nouvelles fonctionnalités](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
-###### <a name="footnote-4"></a>Note 4
+###### <a name="footnote-4"></a>Note 4
 Si l’expéditeur et le destinataire font partie de la même organisation, ou bien si une des conditions suivantes est remplie :
 - L’expéditeur ou le destinataire utilise Exchange Online.
 - L’expéditeur utilise Exchange local dans une configuration hybride. 
 
 ###### <a name="footnote-5"></a>Note 5
-Utilise l’IRM Exchange ActiveSync, qui doit être activée par l’administrateur Exchange. Les utilisateurs peuvent afficher, répondre et répondre à tous pour les e-mails protégés, mais ne peuvent pas protéger de nouveaux e-mails.
+utilise l’IRM Exchange ActiveSync, qui doit être activée par l’administrateur Exchange. Les utilisateurs peuvent afficher, répondre et répondre à tous pour les e-mails protégés, mais ne peuvent pas protéger de nouveaux e-mails.
  
 Si l’application de messagerie ne peut pas afficher le message car le serveur Exchange ActiveSync IRM n’est pas activé, le destinataire peut afficher l’e-mail dans un navigateur web quand l’expéditeur utilise Exchange Online ou Exchange local dans une configuration hybride. 
 
@@ -137,7 +137,7 @@ Pour plus d’informations sur l’utilisation de l’application, consultez [FA
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows
 
-Pour plus d'informations, voir les ressources suivantes :
+Pour plus d’informations, consultez les ressources suivantes :
 
 - Guides de l’administrateur du client Azure Information Protection :
     - [Client d’étiquetage unifié](./rms-client/clientv2-admin-guide.md)
@@ -155,7 +155,7 @@ Téléchargez l’application correspondante à l’aide des liens de la [page M
 
 Sur les ordinateurs Mac, l’application de partage Rights Management fournit une visionneuse qui permet d’afficher les fichiers PDF protégés (.ppdf), les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou Office 365 ProPlus. 
 
-Pour plus d'informations, voir les ressources suivantes :
+Pour plus d’informations, consultez les ressources suivantes :
 
 -   [FAQ relatif à l’application de partage Microsoft Rights Management pour plateformes mobiles](https://technet.microsoft.com/dn451248)
 
@@ -176,9 +176,9 @@ Pour plus d’informations, consultez le [guide du développeur Azure Informatio
 
 Les applications suivantes ne sont pas prises en charge actuellement par Azure RMS :
 
-- Microsoft OneDrive Entreprise pour SharePoint Server 2013
+- Microsoft OneDrive pour SharePoint Server 2013
 
-- Visionneuse XPS
+- Visionneuse XPS
 
 De plus, le client Azure Information Protection présente les restrictions suivantes :
 
@@ -188,7 +188,7 @@ De plus, le client Azure Information Protection présente les restrictions suiva
 
 Pour obtenir les informations les plus récentes sur les solutions qui prennent en charge le service et les Azure Information Protection Azure Rights Management, consultez le billet de blog [microsoft 2019 – microsoft information Protection Solutions Partner écosystème Showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements.md).
 
 Pour plus d’informations sur la façon dont les applications les plus couramment utilisées prennent en charge le service Azure Rights Management, consultez [Comment les applications prennent en charge le service azure Rights Management](./applications-support.md).

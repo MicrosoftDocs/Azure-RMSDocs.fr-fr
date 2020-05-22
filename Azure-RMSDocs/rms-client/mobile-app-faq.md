@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cd8cef4bae59fbffa66ce18737558888f101ef47
-ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
+ms.openlocfilehash: 0ccc3ae77d8113a6a3d1a1595a474bd39b1f3ede
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75913265"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747078"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -31,11 +31,11 @@ Cette application vous permet d’afficher des e-mails protégés par des droits
 
 Cette application étant une visionneuse, vous ne pouvez pas l’utiliser pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés. En outre, l’application ne peut pas ouvrir de pièces jointes pour les fichiers que vous affichez. Par exemple, des pièces jointes dans des documents PDF protégés ou dans des e-mails protégés par des droits.
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et dans OneDrive Entreprise ?
+## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive"></a>Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et OneDrive ?
 
-Oui, vous pouvez ouvrir des fichiers PDF protégés que d’autres ont partagés avec vous par l’intermédiaire de SharePoint et de OneDrive Entreprise. Appuyez sur le lien, puis choisissez cette application pour ouvrir automatiquement le fichier. 
+Oui, vous pouvez ouvrir des fichiers PDF protégés que d’autres ont partagés avec vous via Microsoft SharePoint et OneDrive. Appuyez sur le lien, puis choisissez cette application pour ouvrir automatiquement le fichier. 
 
-Cette application peut également ouvrir les fichiers PDF qui ont été protégés en dehors de SharePoint et de OneDrive Entreprise (PDF protégés et fichiers .ppdf).
+Cette application peut également ouvrir des fichiers PDF protégés en dehors de SharePoint et de OneDrive (fichiers PDF protégés et fichiers. ppdf).
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>Mon appareil mobile peut-il exécuter l’application Azure Information Protection ?
 
@@ -63,7 +63,7 @@ Si votre adresse e-mail personnelle a été utilisée pour protéger le fichier,
 
 Oui, lorsque vous demandez un compte Microsoft, vous pouvez spécifier votre adresse Hotmail ou Gmail, ou toute autre adresse e-mail que vous possédez. 
 
-Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Informations complémentaires](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quelles extensions de fichier puis-je ouvrir avec cette application ?
 
@@ -73,7 +73,7 @@ Pour obtenir la liste complète des extensions de nom de fichier texte et image,
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>Comment envoyer des commentaires concernant cette application ?
 
-Dans l’application, accédez à **Paramètres** > **Envoyer des commentaires**.
+Dans l’application, accédez à **paramètres**  >  **Envoyer des commentaires**.
 
 
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>Aucune réponse n’a été apportée à ma question. Que dois-je faire ?

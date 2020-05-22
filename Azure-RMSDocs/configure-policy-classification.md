@@ -11,16 +11,16 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 4ad532dd31e948da894ebe51bd6b198589afe8b5
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 7ca25b5e36afc9828b01d16c83ce133f3e521469
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482434"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746881"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -35,7 +35,7 @@ ms.locfileid: "79482434"
 
 Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter automatiquement une étiquette à un document ou à un e-mail. Ou vous pouvez inviter les utilisateurs à sélectionner l’étiquette que vous recommandez. 
 
-Quand vous configurez ces conditions, vous pouvez utiliser des modèles prédéfinis, comme **Numéro de carte de crédit** ou **Numéro de sécurité sociale (USA)** . Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez l’étape 5 de la [procédure suivante](#to-configure-recommended-or-automatic-classification-for-a-label).
+Quand vous configurez ces conditions, vous pouvez utiliser des modèles prédéfinis, comme **Numéro de carte de crédit** ou **Numéro de sécurité sociale (USA)**. Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez l’étape 5 de la [procédure suivante](#to-configure-recommended-or-automatic-classification-for-a-label).
 
 Pour bénéficier de la meilleure expérience utilisateur possible et pour assurer la continuité des activités, nous vous recommandons de commencer avec la classification recommandée par l’utilisateur plutôt que par la classification automatique. Cette configuration permet à vos utilisateurs d’accepter la classification et toute protection associée, ou de modifier ces suggestions si elles ne sont pas adaptées à leur document ou à leur e-mail.
 
@@ -56,13 +56,13 @@ Si vous configurez la classification automatique au lieu de la classification re
 
 - La classification automatique s’applique à Word, Excel et PowerPoint lors de l’enregistrement de documents et s’applique à Outlook quand vous envoyez des e-mails. 
     
-    Vous ne pouvez pas utiliser la classification automatique pour des documents et e-mails qui ont été déjà été étiquetés manuellement ou automatiquement avec une classification plus élevée. 
+    Vous ne pouvez pas utiliser la classification automatique pour des documents et e-mails précédemment étiquetés manuellement ou automatiquement avec une classification plus élevée. 
 
 - La classification recommandée s’applique à Word, Excel et PowerPoint lors de l’enregistrement de documents. Vous ne pouvez pas utiliser la classification recommandée pour Outlook si vous ne configurez pas un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook), qui est actuellement en préversion.
     
     Vous ne pouvez pas utiliser la classification recommandée pour des documents qui ont préalablement été étiquetés avec une classification plus élevée. 
 
-Vous pouvez changer ce comportement afin que le client Azure Information Protection vérifie régulièrement les règles des conditions que vous spécifiez dans les documents. C’est le cas, par exemple, si vous utilisez l' [enregistrement](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) automatique avec les applications Office qui sont automatiquement enregistrées dans SharePoint Online, OneDrive ou onedrive entreprise. Pour prendre en charge ce scénario, vous pouvez configurer un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) qui est actuellement en version préliminaire. Le paramètre active la classification pour qu’elle s’exécute en continu en arrière-plan.
+Vous pouvez changer ce comportement afin que le client Azure Information Protection vérifie régulièrement les règles des conditions que vous spécifiez dans les documents. C’est le cas, par exemple, si vous utilisez l' [enregistrement](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) automatique avec les applications Office qui sont automatiquement enregistrées dans Microsoft SharePoint, onedrive for Work ou School, ou onedrive à la page. Pour prendre en charge ce scénario, vous pouvez configurer un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) qui est actuellement en version préliminaire. Le paramètre active la classification pour qu’elle s’exécute en continu en arrière-plan.
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes
 
@@ -75,11 +75,11 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Pour configurer la classification automatique ou recommandée pour une étiquette
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**. 
+1. Si ce n’est pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**. 
     
     Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
-2. À partir de l’option de menu **classifications** > **étiquettes** : dans le volet **Azure information protection-étiquettes** , sélectionnez l’étiquette à configurer.
+2. À partir de l’option de menu **classifications**  >  **étiquettes** : dans le volet **Azure information protection-étiquettes** , sélectionnez l’étiquette à configurer.
 
 3. Dans le volet **étiquette** , dans la section **configurer des conditions pour appliquer automatiquement cette étiquette** , cliquez sur **Ajouter une nouvelle condition**.
 
@@ -117,24 +117,24 @@ Les types d’informations sensibles suivants requièrent une version minimale d
 
 - **Chaîne de connexion Azure Service Bus**
 - **Chaîne de connexion Azure IoT**
-- **Compte de stockage Azure**
+- **Compte Stockage Azure**
 - **Chaîne de connexion de la base de données Azure IAAS et chaîne de connexion SQL Azure**
-- **Chaîne de connexion du Cache Redis Azure**
-- **Azure SAS**
+- **Chaîne de connexion Azure Cache pour Redis**
+- **Azure SAAS**
 - **Chaîne de connexion SQL Server**
-- **Clé d’authentification Azure DocumentDB**
+- **Clé d’autorisation Azure DocumentDB**
 - **Mot de passe de paramètre de publication Azure**
-- **Clé de compte de stockage Azure (générique)**
+- **Clé du compte de Stockage Azure (générique)**
 
 Pour plus d’informations sur ces types d’informations sensibles, consultez le billet de blog suivant : [Azure information protection vous aide à être plus sûr en détectant automatiquement les informations d’identification](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
 En outre, à partir de 1.48.204.0 du client Azure Information Protection, les types d’informations sensibles suivants ne sont pas pris en charge et ne s’affichent plus dans le Portail Azure. Si vous avez des étiquettes qui utilisent ces types d’informations sensibles, nous vous recommandons de les supprimer, car nous ne pouvons pas garantir une détection correcte pour eux et les références à celles-ci dans les rapports du scanneur doivent être ignorées :
 
-- **Numéro de téléphone dans l’UE**
-- **Coordonnées GPS dans l’UE**
+- **Numéro de téléphone de l’UE**
+- **Coordonnées GPS UE**
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Envisagez de déployer le [scanneur Azure Information Protection](deploy-aip-scanner.md), qui peut utiliser vos règles de classification automatique pour découvrir, classifier et protéger des fichiers situés dans les partages réseau et les magasins de fichiers locaux.  
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).

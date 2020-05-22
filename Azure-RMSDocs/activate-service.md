@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 181320c5046137d96816723c9b9ae55979998453
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 3b4dd50ba7afd8a6d3d1c85e66b6cfab12fa88ed
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403618"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746413"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Activation du service de protection à partir de Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Ces informations de configuration sont destinées aux administrateurs qui sont responsables d’un service qui s’applique à tous les utilisateurs dans une organisation. Si vous recherchez des informations et une aide utilisateur sur l’utilisation des fonctionnalités de Rights Management pour une application spécifique ou sur l’ouverture d’un fichier ou e-mail protégé par des droits, utilisez l’aide et les conseils qui accompagnent votre application.
@@ -77,7 +77,7 @@ Vous pouvez également utiliser la commande Windows PowerShell suivante :
 
 4. Pour activer le service, exécutez [Enable-AipService](/powershell/module/aipservice/enable-aipservice).
 
-## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configuration de contrôles d’intégration pour un déploiement échelonné
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configuration de contrôles d'intégration pour un déploiement échelonné
 Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des documents et des e-mails immédiatement à l’aide de Azure Information Protection, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande PowerShell [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) . Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
 
 Par exemple, si vous souhaitez initialement que seuls les administrateurs du groupe « Département informatique » (dont l'ID d'objet est fbb99ded-32a0-45f1-b038-38b519009503) puissent protéger du contenu à des fins de test, utilisez la commande suivante :
@@ -105,10 +105,10 @@ Pour plus d’informations sur cette applet de commande et des exemples supplém
 Lorsque vous utilisez ces contrôles d'intégration, tous les utilisateurs de l'organisation peuvent toujours consommer du contenu protégé par votre sous-ensemble d'utilisateurs, mais ils ne peuvent pas appliquer la protection des informations à eux-mêmes à partir d'applications clientes. Par exemple, ils ne voient pas dans leurs applications Office les modèles de protection par défaut qui sont automatiquement publiés lors de l’activation du service de protection, ou les modèles personnalisés que vous pouvez configurer. Les applications côté serveur, telles qu’Exchange, peuvent implémenter leurs propres contrôles par utilisateur pour obtenir le même résultat. Par exemple, pour empêcher les utilisateurs de protéger des e-mails dans Outlook sur le web, utilisez [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) pour définir le paramètre *IRMEnabled* sur *$false*.
 
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 Lorsque le service de protection est activé pour votre organisation, utilisez la feuille de [route de déploiement Azure information protection](deployment-roadmap.md) pour vérifier si d’autres étapes de configuration peuvent s’avérer nécessaires avant de déployer des Azure information protection pour les utilisateurs et les administrateurs. 
 
 Par exemple, vous pouvez utiliser des [modèles](configure-policy-templates.md) pour faciliter l’application de la protection aux fichiers par les utilisateurs, connecter vos serveurs locaux pour utiliser le service de protection en installant le [connecteur Rights Management](deploy-rms-connector.md)et déployer le [client Azure information protection](./rms-client/aip-client.md) qui prend en charge la protection de tous les types de fichiers sur tous les appareils. 
 
-Les services Office, comme Exchange Online et SharePoint Online, nécessitent une configuration supplémentaire avant que vous puissiez utiliser leurs fonctionnalités de gestion des droits relatifs à l’information (IRM). Pour plus d’informations sur la façon dont vos applications fonctionnent avec le service de protection, Azure Rights Management, consultez [Comment les applications prennent en charge le service azure Rights Management](applications-support.md).
+Les services Office, tels qu’Exchange Online et Microsoft SharePoint, nécessitent une configuration supplémentaire avant que vous puissiez utiliser leurs fonctionnalités d’Rights Management d’informations (IRM). Pour plus d’informations sur la façon dont vos applications fonctionnent avec le service de protection, Azure Rights Management, consultez [Comment les applications prennent en charge le service azure Rights Management](applications-support.md).
 

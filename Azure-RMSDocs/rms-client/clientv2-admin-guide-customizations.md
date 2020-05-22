@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799127"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746307"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -86,7 +86,7 @@ La spécification du nom de la stratégie d’étiquette pour le paramètre d' *
 
 - **Nom complet** est le nom de l’étiquette que les utilisateurs voient, et il n’est pas nécessaire qu’il soit unique sur toutes vos étiquettes. Par exemple, les utilisateurs voient une sous-étiquette **tous les employés** pour l’étiquette **confidentiel** et une autre sous-étiquette **tous les employés** pour l’étiquette **hautement confidentiel** . Ces sous-étiquettes affichent le même nom, mais elles ne sont pas de la même étiquette et présentent des paramètres différents.
 
-Pour configurer les paramètres avancés des étiquettes, utilisez la valeur **nom** . Par exemple, pour identifier l’étiquette dans l’image suivante, vous devez spécifier `-Identity "All Company"`:
+Pour configurer les paramètres avancés des étiquettes, utilisez la valeur **nom** . Par exemple, pour identifier l’étiquette dans l’image suivante, vous devez spécifier `-Identity "All Company"` :
 
 ![Utiliser’name’plutôt que’Display Name’pour identifier une étiquette de sensibilité](../media/labelname_scc.png)
 
@@ -120,7 +120,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
-|AdditionalPPrefixExtensions|[Prise en charge \<de la modification des> ext. PFILE à P\<ext> à l’aide de cette propriété avancée](#additionalpprefixextensions)
+|AdditionalPPrefixExtensions|[Prise en charge de la modification des \<> ext. PFILE à P \< EXT> à l’aide de cette propriété avancée](#additionalpprefixextensions)
 |AttachmentAction|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling)
@@ -261,7 +261,7 @@ Vous pouvez modifier ce comportement par défaut pour une stratégie d’étique
 
 - Clé : **PFileSupportedExtensions**
 
-- Valeur : ** \<valeur de chaîne>** 
+- Valeur : ** \< valeur de chaîne>** 
 
 Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier :
 
@@ -287,19 +287,19 @@ Ce paramètre vous permet de modifier les types de fichiers protégés, mais vou
 
 ### <a name="additionalpprefixextensions"></a>AdditionalPPrefixExtensions
 
-Le client d’étiquetage unifié prend en \<charge la modification des> ext. PFILE à P\<ext> à l’aide de la propriété Advanced, **AdditionalPPrefixExtensions**. Cette propriété avancée est prise en charge par un clic droit, PowerShell et un scanneur. Toutes les applications ont un comportement similaire.   
+Le client d’étiquetage unifié prend en charge la modification des \<> ext. PFILE à P \< EXT> à l’aide de la propriété Advanced, **AdditionalPPrefixExtensions**. Cette propriété avancée est prise en charge par un clic droit, PowerShell et un scanneur. Toutes les applications ont un comportement similaire.   
 
 - Clé : **AdditionalPPrefixExtensions**
 
-- Valeur : ** \<valeur de chaîne>** 
+- Valeur : ** \< valeur de chaîne>** 
 
 Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier :
 
 | Valeur de chaîne| Client et scanneur|
 |-------------|---------------|
-|\*|Toutes les extensions PFile deviennent\<P ext>|
+|\*|Toutes les extensions PFile deviennent P \< EXT>|
 |\<valeur null>| La valeur par défaut se comporte comme la valeur de protection par défaut.|
-|ConvertTo-JSON (". DWG", ". zip")|En plus de la liste précédente, « . dwg » et « . zip » deviennent P\<ext>| 
+|ConvertTo-JSON (". DWG", ". zip")|En plus de la liste précédente, « . dwg » et « . zip » deviennent P \< EXT>| 
 
 Exemple 1 : une commande PowerShell se comporte comme le comportement par défaut où protéger « . DWG » devient « . dwg. pfile » :
 
@@ -313,7 +313,7 @@ Exemple 3 : commande PowerShell pour modifier « . dwg » en « . PDWG » l
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-Avec ce paramètre, les extensions suivantes («. txt ",". xml ",". bmp ",". JT ",". jpg ",". jpeg ",". jpe ",". jif ",". JFIF ",". JFI ",". png ",". TIF ",". TIFF ",". gif ") deviennent toujours des\<>s P ext. L’exclusion notable est que « PTXT » ne devient pas « txt. pfile ». 
+Avec ce paramètre, les extensions suivantes («. txt ",". xml ",". bmp ",". JT ",". jpg ",". jpeg ",". jpe ",". jif ",". JFIF ",". JFI ",". png ",". TIF ",". TIFF ",". gif ") deviennent toujours des \<>s P ext. L’exclusion notable est que « PTXT » ne devient pas « txt. pfile ». 
 **AdditionalPPrefixExtensions** fonctionne uniquement si la protection de fichiers pfile avec la propriété Advanced- [**PFileSupportedExtension**](#pfilesupportedextension) est activée. 
 
 Par exemple, dans le cas où la commande suivante est utilisée :
@@ -386,7 +386,7 @@ Cette configuration utilise des [Paramètres avancés](#how-to-configure-advance
 
 Ce paramètre est destiné aux utilisateurs qui joignent des documents étiquetés à un courrier électronique et n’étiquettent pas le message électronique lui-même. Dans ce scénario, une étiquette est automatiquement sélectionnée pour eux, en fonction des étiquettes de classification appliquées aux pièces jointes. L’étiquette classification la plus élevée est sélectionnée.
 
-La pièce jointe doit être un fichier physique et ne peut pas être un lien vers un fichier (par exemple, un lien vers un fichier sur SharePoint ou OneDrive Entreprise).
+La pièce jointe doit être un fichier physique et ne peut pas être un lien vers un fichier (par exemple, un lien vers un fichier sur Microsoft SharePoint ou OneDrive).
 
 Vous pouvez configurer ce paramètre sur **recommandé**, afin que les utilisateurs soient invités à appliquer l’étiquette sélectionnée à leur message électronique, avec une info-bulle personnalisable. Les utilisateurs peuvent accepter la recommandation ou l’ignorer. Ou bien, vous pouvez configurer ce paramètre sur **automatique**, où l’étiquette sélectionnée est automatiquement appliquée, mais les utilisateurs peuvent supprimer l’étiquette ou sélectionner une autre étiquette avant d’envoyer l’e-mail.
 
@@ -403,7 +403,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la str
 
 - Clé 2 : **AttachmentActionTip**
 
-- Valeur de clé 2 :\<« info-bulle personnalisée> »
+- Valeur de clé 2 : « \< info-bulle personnalisée> »
 
 L’info-bulle personnalisée ne prend en charge qu’une seule langue.
 
@@ -421,7 +421,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la str
 
 - Clé : **ReportAnIssueLink**
 
-- Valeur : ** \<chaîne http>**
+- Valeur : ** \< chaîne http>**
 
 Exemple de valeur pour un site web : `https://support.contoso.com`
 
@@ -707,7 +707,7 @@ Lorsque vous configurez tout d’abord la valeur pour le test, nous vous recomma
 
 - Clé : **ScannerConcurrencyLevel**
 
-- Valeur : ** \<nombre de threads simultanés>**
+- Valeur : ** \< nombre de threads simultanés>**
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « scanner » :
 
@@ -786,7 +786,7 @@ Le paramètre client avancé :
 
 - Clé : **labelByCustomProperties**
 
-- Valeur : l' **étiquette des îlots sécurisés contient Internal\* , classification. Intérieurs. \***
+- Valeur : l' **étiquette des îlots sécurisés contient Internal, classification. \* Interne. \* **
 
 Exemple de commande PowerShell, où votre étiquette est nommée « général » :
 
@@ -923,7 +923,7 @@ Lorsque vous ajoutez une sous-étiquette à une étiquette, les utilisateurs ne 
 
 - Clé : **DefaultSubLabelId**
 
-- Valeur : \<GUID de sous-étiquette>
+- Valeur : GUID de sous- \< étiquette>
 
 Exemple de commande PowerShell, où votre étiquette parente est nommée « Confidential » et la sous-étiquette « all employees » a le GUID 8faca7b8-8d20-48A3-8ea2-0f96310a848e :
 
@@ -938,7 +938,7 @@ Quand vous configurez ce paramètre, il modifie le comportement par défaut de l
 Pour Word, Excel et PowerPoint, la classification automatique s’exécute en continu en arrière-plan.
 
 Le comportement ne change pas pour Outlook.
-Lorsque le Azure Information Protection client d’étiquetage unifié vérifie régulièrement les règles de condition que vous spécifiez, ce comportement active la classification et la protection automatiques et recommandées pour les documents stockés dans SharePoint Online. Les fichiers volumineux s’enregistrent également plus rapidement car les règles des conditions se sont déjà exécutées.
+Lorsque le Azure Information Protection client d’étiquetage unifié vérifie régulièrement les règles de condition que vous spécifiez, ce comportement active la classification et la protection automatiques et recommandées pour les documents stockés dans SharePoint. Les fichiers volumineux s’enregistrent également plus rapidement car les règles des conditions se sont déjà exécutées.
 
 Les règles des conditions ne s’exécutent pas en temps réel pendant la saisie de l’utilisateur. Elles s’exécutent plutôt à intervalles réguliers sous la forme d’une tâche en arrière-plan si le document est modifié.
 
@@ -959,13 +959,13 @@ Cette configuration utilise des [Paramètres avancés](#how-to-configure-advance
 
 Utilisez ce paramètre avancé pour définir la couleur d’une étiquette. Pour spécifier la couleur, entrez un code d’triplement hexadécimal pour les composants rouge, vert et bleu (RVB) de la couleur. Par exemple, #40e0d0 est la valeur hexadécimale RVB pour turquoise.
 
-Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à [ \<](https://developer.mozilla.org/docs/Web/CSS/color_value) partir de la page de>des couleurs dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [ \<>des couleurs](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
 Pour configurer le paramètre avancé pour la couleur d’un contrôle Label, entrez les chaînes suivantes pour l’étiquette sélectionnée :
 
 - Clé : **couleur**
 
-- Valeur : \<valeur hexadécimale RGB>
+- Valeur : \< valeur hexadécimale RGB>
 
 Exemple de commande PowerShell, où votre étiquette est nommée « public » :
 

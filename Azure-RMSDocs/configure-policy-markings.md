@@ -11,16 +11,16 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f48a131588d2087a1cf37a65f4e7d3a1f32ee0cd
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 64f1d03931e346d7f27ce35a3837c336a4468e7a
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482332"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746824"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 
 >[!NOTE] 
@@ -62,17 +62,17 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
 
 - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers, de PowerShell ou du scanneur Azure Information Protection, les marquages visuels ne sont pas appliqués immédiatement, mais le sont par le client Azure Information Protection lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
     
-    La seule exception est quand vous utilisez l' [enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec les applications Office pour les fichiers qui sont enregistrés dans SharePoint Online, OneDrive ou onedrive entreprise : quand l’enregistrement automatique est activé, les marquages visuels ne sont pas appliqués, sauf si vous configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) pour activer la classification pour qu’elle s’exécute en continu en arrière-plan. 
+    La seule exception est quand vous utilisez l' [enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec les applications Office pour les fichiers qui sont enregistrés dans Microsoft SharePoint, onedrive entreprise ou scolaire, ou onedrive à la page : lorsque l’enregistrement automatique est activé, les marquages visuels ne sont pas appliqués, sauf si vous configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) pour activer la classification en continu en arrière-plan. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
 
 Utilisez les instructions suivantes pour configurer les marquages visuels d’une étiquette.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**. 
+1. Si ce n’est pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**. 
     
     Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
-2. À partir de l’option de menu **classifications** > **étiquettes** : dans le volet **Azure information protection-étiquettes** , sélectionnez l’étiquette qui contient les marquages visuels que vous souhaitez ajouter ou modifier.
+2. À partir de l’option de menu **classifications**  >  **étiquettes** : dans le volet **Azure information protection-étiquettes** , sélectionnez l’étiquette qui contient les marquages visuels que vous souhaitez ajouter ou modifier.
 
 3. Dans le volet **étiquette** , dans la section **définir le marquage visuel (par exemple, un en-tête ou un pied de page)** , configurez les paramètres des marquages visuels que vous souhaitez, puis cliquez sur **Enregistrer**:
     
@@ -99,7 +99,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone 
 
-- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Exemple : rsimone@vanarsdelltd.com.
+- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
@@ -109,7 +109,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 Exemple : Si vous spécifiez la chaîne `Document: ${Item.Name}  Classification: ${Item.Label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
 
 > [!NOTE]
-> L’utilisation de la variable `${User.Name}` et/ou `${User.PrincipalName}` n’est pas prise en charge actuellement par le client d’étiquetage unifié Azure Information Protection. 
+> L’utilisation de la `${User.Name}` variable et/ou `${User.PrincipalName}` n’est pas prise en charge actuellement par le client d’étiquetage unifié Azure information protection. 
 
 >[!TIP]
 > Vous pouvez également utiliser un [Code de champ pour insérer le nom de l’étiquette](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
@@ -158,9 +158,9 @@ Si la police spécifiée n’est pas disponible, le client utilise la police Cal
 
 Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#40e0d0** est la valeur hexadécimale RVB pour turquoise. 
 
-Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [> de couleur\<](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [ \<>des couleurs](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

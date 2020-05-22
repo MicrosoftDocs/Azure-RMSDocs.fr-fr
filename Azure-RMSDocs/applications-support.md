@@ -12,18 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9e14cd34dd31dda6942c028fa9a68778eaaaed3a
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: cc23496dc8ceedeb463205147a076d8a98d58c75
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224578"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746151"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Utilisez les informations suivantes pour vous aider à comprendre comment les applications et services les plus couramment utilisés par les utilisateurs finaux peuvent utiliser le service Azure Rights Management de Azure Information Protection pour protéger les documents et e-mails de votre organisation. Ces applications incluent Word, Excel, PowerPoint et Outlook. Les services incluent Exchange et SharePoint.
+Utilisez les informations suivantes pour vous aider à comprendre comment les applications et services les plus couramment utilisés par les utilisateurs finaux peuvent utiliser le service Azure Rights Management de Azure Information Protection pour protéger les documents et e-mails de votre organisation. Ces applications incluent Word, Excel, PowerPoint et Outlook. Les services incluent Exchange et Microsoft SharePoint.
 
 > [!NOTE]
 > Pour vérifier les applications et les versions prises en charge par le service Azure Rights Management, consultez [Applications prenant en charge la protection des données Azure Rights Management](./requirements-applications.md).
@@ -40,7 +40,7 @@ Les services de recherche peuvent s’intégrer à Rights Management de différe
 
 - Exchange Online et Exchange Server utilisent l’indexation côté service pour que les e-mails protégés de l’utilisateur soient affichés automatiquement dans les résultats de la recherche. 
 
-- SharePoint Online et SharePoint Server appliquent la protection Rights Management aux fichiers seulement lors du téléchargement. Cette implémentation signifie que les résultats de l’indexation et de la recherche sur SharePoint ne sont pas affectés par cette solution de protection des documents. Cependant, si vous avez un document que vous voulez stocker dans SharePoint et que ce document ne doit pas être retourné dans les résultats de la recherche, protégez le document avant de le charger dans SharePoint.
+- SharePoint dans Microsoft 365 et SharePoint Server appliquent la protection Rights Management aux fichiers uniquement au téléchargement. Cette implémentation signifie que les résultats de l’indexation et de la recherche sur SharePoint ne sont pas affectés par cette solution de protection des documents. Cependant, si vous avez un document que vous voulez stocker dans SharePoint et que ce document ne doit pas être retourné dans les résultats de la recherche, protégez le document avant de le charger dans SharePoint.
 
 - Windows Desktop Search utilise un index partagé entre différents utilisateurs de l’appareil. Ainsi, pour sécuriser les données dans les documents protégés, il n’indexe pas les fichiers protégés. Cela signifie que même si vos résultats de recherche n’incluent pas les fichiers que vous avez protégés, vous pouvez être sûr que vos fichiers qui contiennent des données sensibles ne sont pas affichés dans les résultats de recherche pour les autres utilisateurs qui peuvent se connecter à votre ordinateur ou se connecter à votre PC. 
 

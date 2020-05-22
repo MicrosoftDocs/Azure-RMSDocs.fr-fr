@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 803980b071de64c053f1ad0bf3cac06488fc410b
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 6ff6aa3956064c9c116e2d8f7a9ad2cbeef0da9c
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972099"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746702"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
@@ -45,7 +45,7 @@ Prise en charge de l’authentification basée sur les certificats :
 
 La valeur UPN des utilisateurs ne correspond pas à leur adresse e-mail :
 
-- Cette configuration n’est pas recommandée et ne prend pas en charge l’authentification unique pour Azure Information Protection. Si vous ne pouvez pas changer la valeur UPN, configurez un autre ID de connexion pour les utilisateurs et indiquez-leur comment se connecter à Office à l’aide de cette connexion de remplacement. Pour plus d’informations, consultez [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) (Configuration d’un ID de connexion de secours) et [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online) (Les applications Office invitent régulièrement à saisir les informations d’identification pour SharePoint Online, OneDrive et Lync Online).
+- Cette configuration n’est pas recommandée et ne prend pas en charge l’authentification unique pour Azure Information Protection. Si vous ne pouvez pas changer la valeur UPN, configurez un autre ID de connexion pour les utilisateurs et indiquez-leur comment se connecter à Office à l’aide de cette connexion de remplacement. Pour plus d’informations, consultez Configuration de l' [ID de connexion de substitution](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) et des [applications Office pour demander périodiquement des informations d’identification à SharePoint, OneDrive et Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
     Quand le nom de domaine dans la valeur UPN est un domaine qui est vérifié pour votre locataire, ajoutez la valeur UPN de l’utilisateur comme une autre adresse e-mail à l’attribut proxyAddresses d’Azure AD. L’utilisateur est ainsi autorisé à utiliser Azure Rights Management si sa valeur UPN est spécifiée au moment où les droits d’utilisation sont accordés. Pour plus d’informations sur ce sujet et sur la façon dont les comptes d’utilisateur sont autorisés, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 

@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29c41a53bef195a1a80d728fdf40cfc262533373
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799161"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747168"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -27,7 +27,7 @@ ms.locfileid: "82799161"
 > [!NOTE]
 > Cette fonctionnalité est disponible en préversion et susceptible d’être modifiée.
 
-Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. Informations supplémentaires :
+Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. De plus :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -169,7 +169,7 @@ Détails :
     - Pour créer votre espace de travail Log Analytics ou des requêtes personnalisées :
     
         - **Administrateur Azure Information Protection**
-        - **Administrateur de la sécurité**
+        - **Administrateur de sécurité**
         - **Administrateur de conformité**
         - **Administrateur des données de conformité**
         - **Administrateur général**
@@ -223,7 +223,7 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
     
 2. Recherchez les options du menu **gérer** , puis sélectionnez **configurer Analytics (version préliminaire)**.
 
-3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Effectuez l'une des opérations suivantes :
+3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Effectuez l’une des opérations suivantes :
     
     - Pour créer un espace de travail Log Analytics : sélectionnez **créer un nouvel espace**de travail, puis dans le volet **espace de travail log Analytics** , fournissez les informations demandées.
     
@@ -309,8 +309,8 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |ProtectedBefore|Si le contenu a été protégé avant modification : oui/non |
 |ProtectionOwnerBefore|Rights Management propriétaire avant modification |
 |UserJustification|Justification de la rétrogradation ou de la suppression d’une étiquette|
-|LastModifiedBy|Utilisateur au format UPN qui a modifié le fichier pour la dernière fois. Disponible uniquement pour Office et SharePoint Online|
-|LastModifiedDate &|UTC au format AAAA-MM-JJThh : MM : SS : disponible pour Office & SharePoint Online uniquement |
+|LastModifiedBy|Utilisateur au format UPN qui a modifié le fichier pour la dernière fois. Disponible pour Office et SharePoint uniquement|
+|LastModifiedDate &|UTC au format AAAA-MM-JJThh : MM : SS : disponible uniquement pour Office et SharePoint |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Exemples d’utilisation d’InformationProtectionEvents

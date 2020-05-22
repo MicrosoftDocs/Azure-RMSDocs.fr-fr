@@ -1,5 +1,5 @@
 ---
-title: Configurer des super utilisateurs pour Azure Rights Management - AIP
+title: Configurer des super utilisateurs pour Azure Rights Management - AIP
 description: Comprenez et implémentez la fonctionnalité de super utilisateur du service Azure Rights Management à partir de Azure Information Protection, afin que les personnes et services autorisés puissent toujours lire et inspecter les données protégées de votre organisation (« raison »).
 author: cabailey
 ms.author: cabailey
@@ -13,20 +13,20 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 4b8115ffc0b4af968f2dbfdcb7747f288876b271
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404604"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746038"
 ---
-# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour les services de Azure Information Protection et de découverte ou la récupération de données
+# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Information Protection ainsi que pour les services de découverte ou la récupération des données
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Grâce à la fonctionnalité de super utilisateur du service Azure Rights Management d’Azure Information Protection, les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure Rights Management protège pour votre organisation. Si nécessaire, la protection peut ensuite être supprimée ou modifiée.
 
-Un super utilisateur a toujours le [droit d’utilisation](configure-usage-rights.md) Contrôle total Rights Management pour les documents et e-mails qui ont été protégés par le locataire Azure Information Protection de votre organisation. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise. Par exemple, vous pouvez utiliser cette fonctionnalité pour les scénarios suivants :
+Un super utilisateur a toujours le [droit d’utilisation](configure-usage-rights.md) Contrôle total Rights Management pour les documents et e-mails qui ont été protégés par le locataire Azure Information Protection de votre organisation. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise. Par exemple, vous pouvez utiliser cette fonctionnalité pour les scénarios suivants :
 
 - Un employé quitte l’organisation et vous devez lire les fichiers qu’il a protégés.
 
@@ -36,11 +36,11 @@ Un super utilisateur a toujours le [droit d’utilisation](configure-usage-right
 
 - Vous avez des services informatiques existants pour les solutions de prévention contre la perte de données (DLP), les passerelles de chiffrement de contenu (CEG) et les produits anti-programme malveillant qui doivent inspecter des fichiers déjà protégés.
 
-- Vous devez déchiffrer des fichiers en bloc à des fins d'audit, juridiques ou de conformité.
+- Vous devez déchiffrer des fichiers en bloc à des fins d’audit, juridiques ou de conformité.
 
 ## <a name="configuration-for-the-super-user-feature"></a>Configuration de la fonctionnalité de super utilisateur
 
-Par défaut, la fonctionnalité de super utilisateur n'est pas activée, et ce rôle n'est attribué à aucun utilisateur. Elle est automatiquement activée si vous configurez le connecteur Rights Management pour Exchange. Elle n’est pas requise pour les services standard qui exécutent Exchange Online, SharePoint Online ou SharePoint Server.
+Par défaut, la fonctionnalité de super utilisateur n’est pas activée et ce rôle n’est attribué à aucun utilisateur. Elle est automatiquement activée si vous configurez le connecteur Rights Management pour Exchange et qu’elle n’est pas requise pour les services standard qui exécutent Exchange Online, Microsoft SharePoint Server ou SharePoint dans Microsoft 365.
 
 Si vous devez activer manuellement la fonctionnalité de super utilisateur, utilisez l’applet de commande PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), puis affectez des utilisateurs (ou des comptes de service) en fonction des besoins à l’aide de l’applet de commande [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) ou de l’applet de commande [Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) , puis ajoutez des utilisateurs (ou d’autres groupes) en fonction des besoins de ce groupe. 
 
@@ -55,7 +55,7 @@ Peu importe le moment où vous activez la fonctionnalité de super utilisateur o
 
 - Limitez et surveillez les administrateurs auxquels sont attribués un administrateur global pour votre client Office 365 ou Azure Information Protection, ou qui sont affectés au rôle GlobalAdministrator à l’aide de l’applet de commande [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) . Ces utilisateurs peuvent activer la fonctionnalité de super utilisateur, ainsi que désigner des utilisateurs (et eux-mêmes) comme super utilisateurs, et potentiellement déchiffrer tous les fichiers que votre organisation protège.
 
-- Pour voir quels utilisateurs et comptes de service sont affectés individuellement comme super utilisateurs, utilisez l’applet de commande [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) . Pour déterminer si un groupe de super utilisateurs est configuré, utilisez l’applet de commande [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) et vos outils de gestion d’utilisateur standard pour vérifier les utilisateurs qui sont membres de ce groupe. Comme toutes les actions d’administration, l’activation ou la désactivation de la fonctionnalité Super, et l’ajout ou la suppression de super utilisateurs sont enregistrées et peuvent être auditées à l’aide de la commande [AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) . Consultez la section suivante pour un exemple. Quand les super utilisateurs déchiffrent des fichiers, l’action est enregistrée et peut être auditée à l’aide de la [ journalisation de l’utilisation](log-analyze-usage.md).
+- Pour voir quels utilisateurs et comptes de service sont affectés individuellement comme super utilisateurs, utilisez l’applet de commande [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) . Pour déterminer si un groupe de super utilisateurs est configuré, utilisez l’applet de commande [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) et vos outils de gestion d’utilisateur standard pour vérifier les utilisateurs qui sont membres de ce groupe. Comme toutes les actions d’administration, l’activation ou la désactivation de la fonctionnalité Super, et l’ajout ou la suppression de super utilisateurs sont enregistrées et peuvent être auditées à l’aide de la commande [AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) . Consultez la section suivante pour un exemple. Quand les super utilisateurs déchiffrent des fichiers, l’action est enregistrée et peut être auditée à l’aide de la [journalisation de l’utilisation](log-analyze-usage.md).
 
 - Si vous n’avez pas besoin de la fonctionnalité de super utilisateur pour les services quotidiens, activez-la uniquement lorsque vous en avez besoin et désactivez-la à l’aide de l’applet de commande [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) .
 
@@ -63,7 +63,7 @@ Peu importe le moment où vous activez la fonctionnalité de super utilisateur o
 
 L’extrait de journal suivant montre des exemples d’entrées à partir de l’utilisation de l’applet de commande [AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) . 
 
-Dans cet exemple, l’administrateur pour la société Contoso Ltd confirme que la fonctionnalité de super utilisateur est désactivée, ajoute Richard Simone comme super utilisateur, vérifie que celui-ci est bien le seul super utilisateur configuré pour le service Azure Rights Management, puis active la fonctionnalité de super utilisateur pour permettre à Richard de déchiffrer des fichiers protégés par un employé qui a quitté la société.
+Dans cet exemple, l’administrateur de la société Contoso Ltd confirme que la fonctionnalité de super utilisateur est désactivée, ajoute Richard Simone comme super utilisateur, vérifie que celui-ci est bien le seul super utilisateur configuré pour le service Azure Rights Management, puis active la fonctionnalité de super utilisateur pour permettre à Richard de déchiffrer des fichiers protégés par un employé qui a quitté la société.
 
 `2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 

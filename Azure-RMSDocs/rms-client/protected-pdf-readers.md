@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 6d9dc21d2541ab9aeb6d6fc6772781e1c23c1f2e
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326365"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746947"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Lecteurs PDF prenant en charge Microsoft Information Protection
 
@@ -31,22 +31,22 @@ Un document PDF protégé est susceptible de contenir des informations sensibles
 
 Sélectionnez l’appareil que vous utilisez pour installer un lecteur PDF qui peut ouvrir des documents PDF protégés. Tous ces lecteurs peuvent ouvrir des documents protégés qui adhèrent à la norme ISO pour le chiffrement PDF :
 
-- **Ordinateurs**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
+- **Ordinateurs**: [Windows](protected-pdf-readers-windows.md)  |  [MacOS](protected-pdf-readers-mac.md)
 
-- **Appareils mobiles**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
+- **Appareils mobiles**: [Android](protected-pdf-readers-android.md)  |  [iOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>Prise en charge des formats précédents
 
 Les lecteurs PDF dans le tableau suivant prennent en charge les documents PDF protégés qui ont une extension de nom de fichier. ppdf, ainsi que les anciens formats qui ont une extension de nom de fichier. pdf. 
 
-Actuellement, SharePoint Online et SharePoint en local utilisent un format plus ancien pour les documents PDF dans les bibliothèques protégées par IRM.
+À l’heure actuelle, Microsoft SharePoint utilise un format plus ancien pour les documents PDF dans les bibliothèques protégées par IRM.
 
 
-|Système d'exploitation|Lecteurs pris en charge|
+|Système d’exploitation|Lecteurs pris en charge|
 |----------------|-----------------------------------|
 |Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Visionneuse Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />GigaTrust App pour Android|
-|iOS|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />Docs TITUS|
+|iOS|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />TITUS Docs|
 
 ## <a name="using-adobe-acrobat-reader-with-the-adobe-plug-in"></a>Utilisation d’Adobe Acrobat Reader avec le plug-in Adobe
 

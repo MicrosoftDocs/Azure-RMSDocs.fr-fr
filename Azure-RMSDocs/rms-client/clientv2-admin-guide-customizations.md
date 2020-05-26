@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/05/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: fdfbd6bded95a8fc2c156a34fb17f5241b65cf70
+ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746307"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825464"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -680,7 +680,9 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 Depuis la version 2.7. x. x du scanner, nous vous recommandons de limiter la consommation de l’UC à l’aide de la méthode de paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** suivante. 
 
 > [!IMPORTANT]
-> La méthode de paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** ne peut pas être utilisée avec la stratégie de limitation de thread. Pour utiliser la méthode pour limiter la consommation de l’UC, vous devez cesser d’utiliser la [stratégie de limitation des threads](#limit-the-number-of-threads-used-by-the-scanner) que vous avez peut-être déjà en place. 
+> Lorsque la stratégie de limitation de threads suivante est utilisée, les paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** sont ignorés. Pour limiter la consommation de l’UC à l’aide des paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** , annulez l’utilisation des stratégies qui limitent le nombre de threads. 
+
+Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 
 Pour limiter la consommation de l’UC sur l’ordinateur du scanneur, il est gérable en créant deux paramètres avancés : **ScannerMaxCPU** et **ScannerMinCPU**. 
 

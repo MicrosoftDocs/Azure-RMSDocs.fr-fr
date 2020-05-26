@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 2f192ffc2572bbec4f9292155d482534dbcc94d5
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 51d5ea830335e86007a3caabbbf724d16c33f97b
+ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746286"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825449"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -101,10 +101,10 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | **Oui** |
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
-|Les personnalisations sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
-|Scanneur pour magasins de données locaux :| **Oui** | **Oui<br />** | Non |
+|Les personnalisations sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | No |
+|Scanneur pour magasins de données locaux :| **Oui** | **Oui<br />** | No |
 |Création centralisée de rapports (analytique) :| **Oui** | **Oui** | Non |
-|Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| Non |
+|Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| No |
 |Barre Information Protection dans les applications Office :| **Oui** | **Oui**| Non |
 |Marquages visuels en tant qu’action d’étiquette (en-tête, pied de page, filigrane) :| **Oui** | **Oui** | **Oui**|
 |Marquages visuels par application :| **Oui** | **Oui** | Non |
@@ -112,18 +112,18 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|
 |Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non  |
-|Applets de commande d’étiquetage PowerShell :| **Oui** | **Oui** <sup>4</sup> | Non |
+|Applets de commande d’étiquetage PowerShell :| **Oui** | **Oui** <sup>4</sup> | No |
 |Prise en charge hors connexion des actions de protection :| **Oui** | **Oui** <sup>5</sup> | **Oui** |
 |Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés :| **Oui** |**Oui**| Non |
 |Prise en charge de HYOK :| **Oui** | Non | Non  |
 |Journalisation de l’utilisation dans observateur d’événements :| **Oui** | Non |Non  |
 |Afficher le bouton ne pas transférer dans Outlook :| **Oui** | Non | Non  |
-|Suivre les documentés protégés :| **Oui** | **Oui** <sup>6</sup> | Non |
+|Suivre les documentés protégés :| **Oui** | **Oui** <sup>6</sup> | No |
 |Révoquer les documents protégés :| **Oui** | Non | Non  |
 |Mode Protection uniquement (pas d’étiquettes) :| **Oui** | Non | Non  |
 |Prise en charge du changement de compte :| Non  | Non | **Oui** |
 |Prise en charge de Services Bureau à distance :| **Oui** | **Oui** | **Oui** |
-|Prise en charge des services AD RMS :| **Oui** | Non <sup>7</sup> | Non |
+|Prise en charge des services AD RMS :| **Oui** | Non <sup>7</sup> | No |
 |Supprimer le marquage de contenu externe dans l’application| **Oui**| Non| **Oui**|
 
 
@@ -188,6 +188,8 @@ Bien que le client d’étiquetage unifié Azure Information Protection soit tou
 - Invite de confirmation voulez **-vous supprimer cette étiquette ?** pour les utilisateurs lorsque vous n’utilisez pas le paramètre de stratégie pour la justification
 
 - Applets de commande PowerShell distinctes pour la connexion à un service Rights Management
+
+- Affichage de l’identité de l’utilisateur qui a appliqué une étiquette
 
 
 ### <a name="parent-labels-and-their-sublabels"></a>Étiquettes parentes et sous-étiquettes associées 

@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2020
 ms.locfileid: "83673286"
 ---
-| Système d’exploitation        | Versions                          | Téléchargements                                                                                                                            | Remarques                                        |
+| Système d'exploitation        | Versions                          | Téléchargements                                                                                                                            | Remarques                                        |
 | ----------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
 | Ubuntu                  | 16.04                             | [tar.gz C++](https://aka.ms/mipsdkbinaries)                                                                                          |                                              |
 | RedHat Enterprise Linux | 7 avec devtoolset-7               | [tar.gz C++](https://aka.ms/mipsdkbinaries)                                                                                          |                                              |

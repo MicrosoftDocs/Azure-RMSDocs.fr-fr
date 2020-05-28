@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 97008a7ecb7979780454bee990ae905d87655f45
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 1d65cbbe95b13bd86cdefe7360cdd46cd80ef0bc
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "73979965"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747137"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -113,11 +113,11 @@ Quand vous joignez des documents Office à ces e-mails, ces documents sont eux a
 
 Dans l’idéal, les documents et e-mails sont étiquetés lors de leur création. Mais vous avez probablement dans vos banques de données de nombreux documents que vous souhaitez classifier pour les protéger également. Ces magasins de données peut être locaux ou dans le cloud.
 
-Pour vos magasins de données locaux, utilisez le scanneur Azure Information Protection pour détecter, classifier et protéger des documents sur des dossiers locaux, des partages réseau et des sites SharePoint Server, ainsi que des bibliothèques. Le scanneur s’exécute en tant que service sur Windows Server. Vous pouvez utiliser les mêmes règles en termes de stratégie pour détecter les informations sensibles et appliquer des étiquettes spécifiques aux documents. Ou vous pouvez appliquer une étiquette par défaut à tous les documents dans un référentiel de données sans inspecter le contenu des fichiers. Vous pouvez également utiliser l’Analyseur de fichier uniquement en mode de création de rapports pour vous aider à découvrir des informations sensibles dont vous ignorez peut-être qu’elles sont en votre possession. 
+Pour vos magasins de données locaux, utilisez le scanneur Azure Information Protection pour découvrir, classifier et protéger des documents sur des dossiers locaux, des partages réseau, ainsi que des bibliothèques et des sites Microsoft SharePoint Server. Le scanneur s’exécute en tant que service sur Windows Server. Vous pouvez utiliser les mêmes règles en termes de stratégie pour détecter les informations sensibles et appliquer des étiquettes spécifiques aux documents. Ou vous pouvez appliquer une étiquette par défaut à tous les documents dans un référentiel de données sans inspecter le contenu des fichiers. Vous pouvez également utiliser l’Analyseur de fichier uniquement en mode de création de rapports pour vous aider à découvrir des informations sensibles dont vous ignorez peut-être qu’elles sont en votre possession. 
 
 Pour en savoir plus sur le déploiement et l’utilisation du scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md).
 
-Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour appliquer vos étiquettes aux documents dans Box, SharePoint Online et OneDrive entreprise. Pour plus d’informations, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](/cloud-app-security/use-case-information-protection) et [Intégration d’Azure Information Protection](/cloud-app-security/azip-integration).
+Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour appliquer vos étiquettes aux documents dans Box, SharePoint et OneDrive. Pour plus d’informations, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](/cloud-app-security/use-case-information-protection) et [Intégration d’Azure Information Protection](/cloud-app-security/azip-integration).
 
 ## <a name="latest-labeling-updates-for-microsoft-365"></a>Mises à jour les plus récentes de l’étiquetage pour Microsoft 365
 

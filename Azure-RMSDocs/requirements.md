@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables requises pour déployer des A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/21/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 240dc9112d49ff2a3ad3c4e6f886062ca6529d97
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746256"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249842"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour la Azure Information Protection
 
@@ -87,7 +87,7 @@ Les systèmes d’exploitation suivants prennent en charge à la fois l’étiqu
 
 - **Windows Server 2019**
 
-- **Windows Server 2016**
+- **Windows Server 2016**
 
 - **Windows server 2012 R2** et **Windows Server 2012**
 
@@ -128,7 +128,7 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
 - **Applications Office version 1805 minimum**, Build 9330,2078 à partir d’Office 365 Business ou Microsoft 365 Business. 
 
-Cette édition est prise en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management, également appelée Azure Information Protection pour Office 365.
+    Cette édition est prise en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management, également appelée Azure Information Protection pour Office 365.
 
 - **Office 365 ProPlus**
 
@@ -156,14 +156,15 @@ Pour plus d’informations, consultez [applications prenant en charge Azure Righ
 
 Si vous avez un pare-feu ou des périphériques réseau intermédiaires similaires qui sont configurés pour autoriser des connexions spécifiques, les exigences en matière de connectivité réseau sont répertoriées dans cet article Office : [URL office 365 et plages d’adresses IP > Microsoft 365 Common et Office Online](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
-Azure Information Protection présente les conditions d’ajout suivantes :
+Azure Information Protection présente les exigences supplémentaires suivantes :
 
 - **Client d’étiquetage unifié**. Pour télécharger des étiquettes et des stratégies d’étiquette, autorisez l’URL suivante sur HTTPs : ***. protection.Outlook.com**
 
 - **Proxys Web**. Si vous utilisez un proxy Web qui nécessite une authentification, vous devez configurer le proxy pour utiliser l’authentification Windows intégrée avec les informations d’identification d’ouverture de session de l’utilisateur Active Directory.
 
+    
 - **Connexions client à service TLS**. Ne mettez pas fin à des connexions de client à service TLS, par exemple pour effectuer une inspection au niveau du paquet, vers l’URL **aadrm.com** . Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
-
+     
     Pour déterminer si votre connexion cliente est terminée avant d’atteindre le service Rights Management Azure, utilisez les commandes PowerShell suivantes :
     
         $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
@@ -174,6 +175,8 @@ Azure Information Protection présente les conditions d’ajout suivantes :
     
     Si vous voyez un nom d’autorité de certification émettrice qui ne provient pas de Microsoft, il est très probable que votre connexion sécurisée client-à-service est interrompue et nécessite une reconfiguration sur votre pare-feu.
 
+- **TLS version 1,2 ou ultérieure** (client d’étiquetage unifié uniquement). Le client d’étiquetage unifié requiert une version TLS de 1,2 ou une version ultérieure pour garantir l’utilisation de protocoles sécurisés par chiffrement et s’aligner sur les consignes de sécurité Microsoft.
+    
 ### <a name="on-premises-servers"></a>Serveurs locaux
 
 Les serveurs locaux suivants sont pris en charge avec le service Azure Rights Management à partir de Azure Information Protection :

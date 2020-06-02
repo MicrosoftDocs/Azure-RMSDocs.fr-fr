@@ -1,10 +1,10 @@
 ---
 title: Lecteurs PDF protégés pour Microsoft Information Protection
 description: Installer un lecteur pour les documents PDF étiquetés pour la classification et la protection
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,18 +14,20 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 755424c1f3c813ca517ae4afcbe1e4d7a134276f
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746947"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250039"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Lecteurs PDF prenant en charge Microsoft Information Protection
 
 Si vous avez besoin d’ouvrir un document PDF protégé par Microsoft Information Protection, utilisez les liens et les informations ci-dessous.
 
-Un document PDF protégé est susceptible de contenir des informations sensibles. Pour renforcer la sécurité, le document est chiffré afin que les personnes non autorisées ne puissent pas le lire. Pour ouvrir ce document, vous avez besoin d’un lecteur (parfois appelé visionneuse) qui vérifie que vous avez reçu les autorisations nécessaires pour ouvrir le document, puis le déchiffrer pour vous.
+Un document PDF protégé est susceptible de contenir des informations sensibles. Pour renforcer la sécurité, le document est chiffré de sorte que les personnes non autorisées ne puissent pas le lire, et que les personnes autorisées ne peuvent pas partager des écrans ou des captures d’écran qui affichent le document. 
+
+Pour ouvrir ce document, vous avez besoin d’un lecteur (parfois appelé visionneuse) qui vérifie que vous avez reçu les autorisations nécessaires pour ouvrir le document, puis le déchiffrer pour vous.
 
 ## <a name="install-pdf-readers-for-your-device"></a>Installer des lecteurs PDF pour votre appareil
 
@@ -42,7 +44,7 @@ Les lecteurs PDF dans le tableau suivant prennent en charge les documents PDF pr
 À l’heure actuelle, Microsoft SharePoint utilise un format plus ancien pour les documents PDF dans les bibliothèques protégées par IRM.
 
 
-|Système d’exploitation|Lecteurs pris en charge|
+|Système d'exploitation|Lecteurs pris en charge|
 |----------------|-----------------------------------|
 |Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Visionneuse Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />GigaTrust App pour Android|

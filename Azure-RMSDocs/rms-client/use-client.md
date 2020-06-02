@@ -1,10 +1,10 @@
 ---
 title: Client pour Azure Information Protection-AIP
 description: Microsoft Azure Information Protection fournit une solution client-serveur qui permet de protéger les données d’une organisation. Le client (le client Azure Information Protection ou le client Rights Management) est intégré aux applications que vous exécutez sur des ordinateurs et appareils mobiles.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
-ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
+ms.openlocfilehash: 13128b48be4dd4e64e767e121551c4c2e8692e78
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84022946"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250040"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -37,7 +37,7 @@ Azure Information Protection fournit une solution client-serveur qui permet de p
 
 Tous ces clients s’intègrent aux applications Office, mais le client d’étiquetage unifié et le client classique doivent être installés séparément et prendre en charge des fonctionnalités et composants supplémentaires. Par exemple, ces clients incluent la prise en charge de l’Explorateur de fichiers, ce qui vous permet de classer et de protéger des fichiers en dehors d’Office. Les composants supplémentaires incluent une visionneuse pour les documents PDF protégés et les images protégées, ainsi qu’un scanneur pour les magasins de données locaux.
 
-Le client RMS offre une protection uniquement. Ce client est installé automatiquement avec certaines applications, telles que les applications Office, les clients Azure Information Protection et les applications compatibles RMS des éditeurs de logiciels. Toutefois, il peut également être [installé par lui-même](https://www.microsoft.com/en-us/download/details.aspx?id=38396), pour prendre en charge la [synchronisation des fichiers à partir des bibliothèques protégées par IRM et de OneDrive](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), et pour les développeurs qui souhaitent intégrer la protection Rights Management à des applications métier.
+Le client RMS offre une protection uniquement. Ce client est installé automatiquement avec certaines applications, telles que les applications Office, les clients Azure Information Protection et les applications compatibles RMS des éditeurs de logiciels. Toutefois, il peut également être [installé par lui-même](https://www.microsoft.com/download/details.aspx?id=38396), pour prendre en charge la [synchronisation des fichiers à partir des bibliothèques protégées par IRM et de OneDrive](https://docs.microsoft.com/onedrive/deploy-on-windows), et pour les développeurs qui souhaitent intégrer la protection Rights Management à des applications métier.
 
 ## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Choisir le client d’étiquetage à utiliser pour les ordinateurs Windows
 
@@ -52,7 +52,7 @@ Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être in
 
 - Le client Azure Information Protection (Classic) télécharge les paramètres d’étiquette et de stratégie à partir du Portail Azure.
 
-Étant donné que le client d’étiquetage unifié et le client Classic requièrent une installation distincte pour Office, vous devez télécharger et installer ces clients à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+Étant donné que le client d’étiquetage unifié et le client Classic requièrent une installation distincte pour Office, vous devez télécharger et installer ces clients à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
 
 Quel client devez-vous utiliser ?
 
@@ -148,7 +148,7 @@ Notes de bas de page :
 
 Lorsque le client Azure Information Protection (Classic) et le Azure Information Protection client d’étiquetage unifié prennent tous deux en charge la même fonctionnalité, utilisez le tableau suivant pour identifier les différences fonctionnelles entre les deux clients.
 
-|Fonctionnalité |Client classique|Client d’étiquetage unifié|
+|Fonctionnalités |Client classique|Client d’étiquetage unifié|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Paramétrage :| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|

@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection l’historique des versions du client d’étiquetage unifié-version & la stratégie de support
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/14/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 56194d242f6b079fc04765c8ceeeac5cddbf557d
-ms.sourcegitcommit: 93376be8c80776e572f1233812ef39fbabbbd0b2
+ms.openlocfilehash: b1e91bcbfca3d4f925750fd8d1f135bd8f4ff2c4
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550852"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250041"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -25,8 +25,7 @@ ms.locfileid: "83550852"
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-
-Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
 Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure information protection**  >  **Microsoft Azure information protection client d’étiquetage unifié**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
@@ -62,26 +61,80 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## <a name="version-27930"></a>Version 2.7.93.0
+## <a name="version-27950-public-preview"></a>Version préliminaire publique de la version 2.7.95.0
 
-Scanner d’étiquetage unifié (version préliminaire publique) version 2.7.93.0
+Scanner d’étiquetage unifié et client (version préliminaire publique) version 2.7.95.0
 
-**Publication** le 05/05/2020
+**Publication** le 06/01/2020
 
-**Nouvelles fonctionnalités :**
+**Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié :**
 
-- Cette version limitée est axée uniquement sur les versions préliminaires publiques de la version 2.7.93.0 du scanneur d’étiquetage unifiée, comme décrit ci-dessous : 
+- [Utilisez le scanneur pour appliquer des étiquettes en fonction des conditions recommandées](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). Les clients AIP peuvent désormais choisir d’implémenter l’étiquetage automatique côté service uniquement. Cette fonctionnalité permet aux utilisateurs d’AIP de toujours suivre les recommandations au lieu du scénario précédent, qui ne permettait que l’étiquetage automatique côté utilisateur.
 
-- **Nouveau dans le scanneur**
-    - [Utilisez le scanneur pour appliquer des étiquettes en fonction des conditions recommandées](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). Le scanneur AIP peut désormais traiter les règles d’étiquetage automatique avec les actions « étiquette recommandée » comme règles automatiques. Cette modification a été mise en œuvre pour permettre aux clients AIP de choisir d’implémenter l’étiquetage automatique uniquement côté service, ce qui permet à leurs utilisateurs finaux de toujours suivre les recommandations au lieu de l’option précédente permettant uniquement d’activer l’étiquetage automatique côté utilisateur.
-    - [Découvrez quels fichiers découverts précédemment par le moteur d’analyse ont été supprimés du référentiel analysé](https://docs.microsoft.com/azure/information-protection/reports-aip) Ces fichiers supprimés n’ont pas été précédemment signalés dans AIP Analytics et sont désormais disponibles dans le rapport de découverte du scanneur.
-    - [Recevez des rapports du scanner sur les échecs pour appliquer des événements d’action](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions). Utilisez les rapports pour en savoir plus sur les événements d’action ayant échoué et découvrir des moyens d’éviter les occurrences futures. 
-    - Présentation de l’outil d’analyse de diagnostics du scanneur AIP pour la détection et l’analyse des erreurs courantes du scanneur. Pour commencer à utiliser les diagnostics du scanneur AIP, [exécutez la nouvelle applet de commande **Start-AIPScannerDiagnostics** ](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool). 
-    - Vous pouvez désormais gérer et limiter la consommation maximale de l’UC sur l’ordinateur du scanneur. Découvrez comment empêcher l’utilisation de l’UC de 100% et gérer l’utilisation de votre UC à l’aide de [deux nouveaux paramètres avancés **ScannerMaxCPU**et **ScannerMinCPU**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption). 
+- [Découvrez quels fichiers découverts précédemment par le moteur d’analyse ont été supprimés du référentiel analysé](https://docs.microsoft.com/azure/information-protection/reports-aip) Ces fichiers supprimés n’ont pas été précédemment signalés dans AIP Analytics et sont désormais disponibles dans le rapport de découverte du scanneur.
 
-- **Correctifs et améliorations** 
-    - Améliorations des performances de l’analyseur SQL
-    - Améliorations des performances d’analyse SharePoint
+- [Recevez des rapports du scanner sur les échecs pour appliquer des événements d’action](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions). Utilisez les rapports pour en savoir plus sur les événements d’action ayant échoué et découvrir des moyens d’éviter les occurrences futures. 
+
+- Présentation de l’outil d’analyse de diagnostics du scanneur AIP pour la détection et l’analyse des erreurs courantes du scanneur. Pour commencer à utiliser les diagnostics du scanneur AIP, [exécutez la nouvelle applet de commande **Start-AIPScannerDiagnostics** ](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool). 
+
+- Vous pouvez désormais gérer et limiter la consommation maximale de l’UC sur l’ordinateur du scanneur. Découvrez comment empêcher l’utilisation de l’UC de 100% et gérer l’utilisation de votre UC à l’aide de [deux nouveaux paramètres avancés **ScannerMaxCPU**et **ScannerMinCPU**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption). 
+
+- Vous pouvez maintenant configurer le scanneur d’étiquetage unifié pour ignorer des fichiers spécifiques en fonction de leurs attributs de fichier. Définissez la liste des attributs de fichier qui déclenchent l’omission d’un fichier à l’aide du nouveau paramètre avancé **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)** .
+
+**Nouvelles fonctionnalités pour le client d’étiquetage unifié :**
+
+- Les [fenêtres contextuelles de justification](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) s’affichent désormais pour les modifications apportées aux étiquettes par défaut dans le client d’étiquetage unifié.
+    
+- Intégration plus lisse avec les marquages de contenu visuel appliqués par Office. Pour plus d’informations sur la configuration des marquages de contenu dans le document Office, consultez [Comment configurer une étiquette pour les marquages visuels pour Azure information protection](../configure-policy-markings.md).
+
+- La nouvelle propriété avancée **WordShapeNameToRemove** permet de supprimer le marquage de contenu dans les documents Word créés par des applications tierces. En savoir plus sur la façon d' [identifier les noms de formes existants et de les définir en vue de leur suppression à l’aide de **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
+
+**Nouveaux journaux d’audit générés pour les fichiers supprimés**
+
+Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
+
+Pour plus d'informations, consultez les pages suivantes :
+- [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
+- [Rapports centraux d’Azure Information Protection](../reports-aip.md)
+
+**Application de TLS 1.2**
+
+À partir de cette version du client Azure Information Protection, seules les versions TLS 1,2 ou ultérieures sont prises en charge.
+    
+Les clients qui ont une configuration TLS qui ne prend pas en charge TLS 1,2 doivent migrer vers le programme d’installation qui prend en charge TLS 1,2 pour utiliser les stratégies de Azure Information Protection, les jetons, l’audit et la protection, ainsi que pour recevoir la communication basée sur Azure Information Protection. 
+    
+Pour plus d’informations sur la configuration requise, consultez [firewalls and Network infrastructure Requirements](../requirements.md#firewalls-and-network-infrastructure).
+
+**Correctifs et améliorations** 
+- Améliorations de SQL pour le scanneur :
+    - Performances
+    - Fichiers avec un grand nombre de types d’informations
+    
+- Améliorations de l’analyse SharePoint pour :
+    - Analyse des performances
+    - Fichiers avec des caractères spéciaux dans le chemin d’accès
+    - Bibliothèques avec grand nombre de fichiers
+    
+    Pour afficher un guide de démarrage rapide pour l’utilisation de Azure Information Protection avec SharePoint, voir [démarrage rapide : Rechercher les informations sensibles que vous avez dans les fichiers stockés localement](../quickstart-findsensitiveinfo.md).
+        
+- Notifications utilisateur améliorées pour les stratégies manquantes. Pour plus d’informations sur les stratégies d’étiquette pour le client d’étiquetage unifié, consultez que les stratégies de l’étiquette [peuvent faire](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) dans la documentation Microsoft 365.
+
+- Les [étiquettes automatiques](../configure-policy-classification.md) sont désormais appliquées dans Excel pour les scénarios où un utilisateur commence à fermer un fichier sans l’enregistrer, comme c’est le cas lorsqu’un utilisateur enregistre activement un fichier.
+
+- Les en-têtes et les pieds de page sont supprimés comme prévu, et non lors de chaque enregistrement de document, lorsque le paramètre [ExternalContentMarkingToRemove](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) est configuré.
+
+- Les [variables utilisateur dynamiques](../configure-policy-markings.md#using-variables-in-the-text-string) sont désormais affichées dans les marquages visuels d’un document comme prévu.
+
+- Lorsque plusieurs comptes Exchange sont configurés et que le client Azure Information Protection Outlook est activé, les messages électroniques sont envoyés à partir du compte secondaire comme prévu. Pour plus d’informations sur la configuration du client d’étiquetage unifié avec Outlook, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+
+- Lorsqu’un document avec une étiquette de confidentialité plus élevée est glissé et déposé dans un message électronique, le message électronique reçoit désormais automatiquement l’étiquette de confidentialité la plus élevée comme prévu. Pour plus d’informations sur l’étiquetage des fonctionnalités clientes, consultez le [tableau comparatif des clients d’étiquetage](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+- Les autorisations personnalisées sont désormais appliquées aux courriers électroniques comme prévu, lorsque les adresses de messagerie incluent à la fois une apostrophe (') et un point (.) Pour plus d’informations sur la configuration du client d’étiquetage unifié avec Outlook, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+
+- Par défaut, le propriétaire NTFS d’un fichier est perdu lorsque le fichier est étiqueté par le scanneur d’étiquetage unifié, PowerShell ou l’extension de l’Explorateur de fichiers. Vous pouvez maintenant configurer le système pour conserver le propriétaire NTFS du fichier en définissant le paramètre avancé New **[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** sur **true**. 
+
+    Le paramètre avancé **UseCopyAndPreserveNTFSOwner** nécessite une connexion réseau fiable et à faible latence entre le scanneur et le référentiel analysé.
+
 
 ## <a name="version-261110"></a>Version 2.6.111.0 
 
@@ -109,7 +162,6 @@ Scanner d’étiquetage unifié (version préliminaire publique) version 2.7.93.
 
 - Prise en charge ajoutée pour la [fonctionnalité d’étiquetage hors connexion](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) avec les applications Office dans le client d’étiquetage unifié.
 
-
 **Correctifs :**
 
 - Dans les cas où les utilisateurs ont tenté sans succès d’ouvrir des fichiers TIFF protégés et des fichiers TIFF créés par RightFax, les fichiers TIFF s’ouvrent et restent stables comme prévu.  
@@ -133,7 +185,7 @@ Pris en charge jusqu’à 09/09/2020
     
     - Plusieurs scanneurs peuvent partager la même SQL Server base de données lorsque vous configurez les scanneurs pour qu’ils utilisent le même profil de scanneur. Cette configuration facilite la gestion de plusieurs scanneurs et entraîne des temps d’analyse plus rapides. Lorsque vous utilisez cette configuration, attendez toujours que l’installation d’un scanneur soit terminée avant d’installer un autre scanneur avec le même profil.
     
-    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur s’intitule **AIPScannerUL_ \< profile_name>**. Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
+    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur est nommée **AIPScannerUL_ \<profile_name> **. Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
     
     - Vous pouvez définir une étiquette par défaut pour tous les documents, même si les documents sont déjà étiquetés. Dans les paramètres Profil du scanneur ou référentiel, affectez à l’option **Renommer les fichiers** la valeur **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée.
     
@@ -182,16 +234,16 @@ Pris en charge jusqu’à 09/09/2020
 
 **Modifications supplémentaires**
 
-- [Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) supprime maintenant les dossiers%LocalAppData%\Microsoft\MSIP\mip \\ * \< ProcessName. \> exe* au lieu du dossier%localappdata%\Microsoft\MSIP\mip \\ * \< ProcessName \> *\mip.
+- [Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) supprime maintenant les \\ *\<ProcessName.exe\>* dossiers%LocalAppData%\Microsoft\MSIP\mip au lieu du \\ *\<ProcessName\>* dossier%localappdata%\Microsoft\MSIP\mip \mip.
 
 - L' [AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) d’accès à la sécurité comprend désormais l’ID de contenu d’un document protégé.
 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous ne savez pas s’il s’agit du bon client à installer ?  Consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Vous ne savez pas si l’étiquetage unifié est le bon client à installer ?  Consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
-Pour plus d’informations sur l’installation et l’utilisation de ce client : 
+Pour plus d’informations sur l’installation et l’utilisation du client d’étiquetage unifié : 
 
 - Pour les utilisateurs : [Télécharger et installer le client](install-unifiedlabelingclient-app.md)
 

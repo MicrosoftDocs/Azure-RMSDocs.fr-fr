@@ -13,19 +13,16 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: ea0081e4f81a3ea123c3ff58e57334b46df00521
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747168"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249893"
 ---
-# <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
+# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
-> [!NOTE]
-> Cette fonctionnalité est disponible en préversion et susceptible d’être modifiée.
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. De plus :
 
@@ -121,7 +118,13 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Version du système d’exploitation client.
 
-Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable indépendamment d’Azure Information Protection par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations, voir la section [Autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Pour plus d’informations sur la gestion de l’accès à votre espace de travail, consultez la section [Gérer l’accès à l’espace de travail Log Analytics avec des autorisations Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) de la documentation Azure.
+Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable indépendamment d’Azure Information Protection par les utilisateurs qui disposent des droits d’accès correspondants. 
+
+Pour plus d'informations, consultez la page suivante :
+
+- [Autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics)
+- [Gérer l’accès à l’espace de travail Log Analytics à l’aide des autorisations Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Référence du journal d’audit Azure Information Protection](audit-logs.md)
 
 Pour empêcher les clients Azure Information Protection (Classic) d’envoyer ces données, affectez au [paramètre de stratégie](configure-policy-settings.md) envoyer des données d’audit la valeur **désactivé** **à Azure information protection Analytics** :
 
@@ -290,7 +293,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |ProtectionBefore|Type de protection avant modification [JSON] |
 |MachineName |FQDN, le cas échéant ; sinon nom d’hôte|
 |DeviceRisk|Score de risque de l’appareil à partir de émission quand il est disponible|
-|Plateforme|Plateforme d’appareils (Win, OSX, Android, iOS) |
+|Plate-forme|Plateforme d’appareils (Win, OSX, Android, iOS) |
 |ApplicationName|Nom convivial de l’application|
 |AIPVersion|Version du client Azure Information Protection qui a effectué l’action d’audit |
 |TenantId|ID de locataire Azure AD |

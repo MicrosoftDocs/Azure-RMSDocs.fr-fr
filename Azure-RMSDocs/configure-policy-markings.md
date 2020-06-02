@@ -1,32 +1,31 @@
 ---
 title: Configurer les marquages visuels d’une étiquette Azure Information Protection – AIP
 description: Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 64f1d03931e346d7f27ce35a3837c336a4468e7a
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: a0a0f5e712c0313b281fc2bafa64719ed61d2e03
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746824"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249859"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-
->[!NOTE] 
+>[!NOTE]
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page. 
+Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page.
 
 Informations supplémentaires sur ces marquages visuels :
 
@@ -35,15 +34,15 @@ Informations supplémentaires sur ces marquages visuels :
 - Les filigranes s’appliquent à Word, Excel et PowerPoint :
 
     - Excel : les filigranes avec Excel sont visibles uniquement en mode Mise en page et Aperçu avant impression, ainsi que lors de l’impression.
-    
+
     - PowerPoint : les filigranes sont appliqués au masque des diapositives comme image d’arrière-plan. Sur l’onglet **Affichage**, **Masque des diapositives**, vérifiez que la case à cocher **Masquer les graphiques en arrière-plan** n’est pas sélectionnée.
 
 - Il est possible d’ajouter plusieurs lignes dans les filigranes, ainsi que dans les en-têtes et les pieds de page dans Word, Excel et PowerPoint. Si plusieurs lignes sont spécifiées dans l’en-tête ou le pied de page appliqué à Outlook d’une étiquette, les lignes sont concaténées. Dans ce cas de figure, vous pouvez utiliser la configuration permettant de [définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Longueurs de chaînes maximales :
-    
+
     - La longueur de chaîne maximale que vous pouvez entrer pour les en-têtes et pieds de page est de 1 024 caractères. Toutefois, Excel a une limite totale de 255 caractères pour les en-têtes et pieds de page. Cette limite inclut des caractères qui ne sont pas visibles dans Excel, comme les codes de mise en forme. Si cette limite est atteinte, la chaîne que vous entrez n’est pas affichée dans Excel.
-    
+
     - La longueur de chaîne maximale pour les filigranes que vous pouvez entrer est de 255 caractères.
 
 - Vous pouvez spécifier simplement une chaîne de texte ou utiliser des [variables](#using-variables-in-the-text-string) pour créer dynamiquement la chaîne de texte quand l’en-tête, le pied de page ou le filigrane est appliqué.
@@ -61,7 +60,7 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
 - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée. Les marquages visuels sont également appliqués lors de l’ouverture d’un document étiqueté et lors du premier enregistrement document.  
 
 - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers, de PowerShell ou du scanneur Azure Information Protection, les marquages visuels ne sont pas appliqués immédiatement, mais le sont par le client Azure Information Protection lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
-    
+
     La seule exception est quand vous utilisez l' [enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec les applications Office pour les fichiers qui sont enregistrés dans Microsoft SharePoint, onedrive entreprise ou scolaire, ou onedrive à la page : lorsque l’enregistrement automatique est activé, les marquages visuels ne sont pas appliqués, sauf si vous configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) pour activer la classification en continu en arrière-plan. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
@@ -99,18 +98,16 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone 
 
-- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
 > [!NOTE]
->Cette syntaxe respecte la casse.
+>Cette syntaxe respecte la casse. Par exemple, si vous spécifiez la chaîne `Document: ${Item.Name}  Classification: ${Item.Label}` pour le pied de page de l’étiquette **générale** , le texte du pied de page appliqué à un document nommé Project. docx sera **document : Project. docx classification : général**.
 
-Exemple : Si vous spécifiez la chaîne `Document: ${Item.Name}  Classification: ${Item.Label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
-
-> [!NOTE]
-> L’utilisation de la `${User.Name}` variable et/ou `${User.PrincipalName}` n’est pas prise en charge actuellement par le client d’étiquetage unifié Azure information protection. 
-
+<!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
+> Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
+-->
 >[!TIP]
 > Vous pouvez également utiliser un [Code de champ pour insérer le nom de l’étiquette](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
 
@@ -158,7 +155,7 @@ Si la police spécifiée n’est pas disponible, le client utilise la police Cal
 
 Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#40e0d0** est la valeur hexadécimale RVB pour turquoise. 
 
-Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [ \<>des couleurs](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) page des documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

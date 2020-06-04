@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/05/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7d410c7cf697005750790fdb705c2a6e358aeec
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
+ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249910"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326316"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -278,21 +278,17 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
     Les caractères génériques ne sont pas pris en charge, ni les emplacements WebDav.
     
     Exemples :
-    
-    - Pour un chemin d’accès local : `C:\Folder`
-    
+      
     - Pour un partage réseau : `C:\Folder\Filename`
-    
-    - Pour un chemin d’accès UNC : `\\Server\Folder`
     
     - Pour une bibliothèque SharePoint : `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
     > [!TIP]
     > Si vous ajoutez un chemin d’accès SharePoint pour « Documents partagés » :
     >
-     >- Spécifiez **Documents partagés** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers de Documents partagés. Par exemple : `http://sp2013/Shared Documents`
+     >- Spécifiez **Documents partagés** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers de Documents partagés. Par exemple : `http://sp2013/Shared Documents`
      >
-     >- Spécifiez **Documents** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers d’un sous-dossier sous Documents partagés. Par exemple : `http://sp2013/Documents/Sales Reports`
+     >- Spécifiez **Documents** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers d’un sous-dossier sous Documents partagés. Par exemple : `http://sp2013/Documents/Sales Reports`
     
     Pour les autres paramètres de ce volet, ne les modifiez pas pour cette configuration initiale, mais conservez-les en tant que **travail d’analyse du contenu par défaut**. Cela signifie que le référentiel de données hérite des paramètres du travail d’analyse de contenu. 
     

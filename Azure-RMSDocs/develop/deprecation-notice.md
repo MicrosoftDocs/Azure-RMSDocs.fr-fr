@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 81c1ae66ebe1580255469c7008996ea633ca358d
-ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
+ms.openlocfilehash: 51af06c37e6ee23a762f35791b0796b93b52e83b
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80375598"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665807"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>Avis de désapprobation kit de développement logiciel (SDK) RMS 4,2 
 
@@ -33,7 +33,7 @@ Les versions précédentes du kit de développement logiciel (SDK) RMS utilisent
 
 Les navigateurs modernes utilisent les journaux de transparence des certificats pour vérifier que les certificats ont été émis pour des propriétaires de domaine légitimes et que ces certificats sont émis par des autorités de certification racines de confiance.  
 
-Pour mieux prendre en charge les navigateurs modernes, le 15 septembre 2020, Microsoft mettra à jour le certificat de `https://api.aadrm.com` vers un nouveau certificat émis par une autorité de certification racine de confiance mondiale qui signale des certificats émis pour les journaux de transparence des certificats approuvés par les navigateurs modernes. Une fois cette modification terminée, les versions héritées de kit de développement logiciel (SDK) RMS tentant d’effectuer un épinglage de certificat sur le certificat racine attendu ne parviendront pas à trouver ce certificat et ne pourront pas se connecter.  
+Pour mieux prendre en charge les navigateurs modernes, le 15 septembre 2020, Microsoft mettra à jour le certificat de `https://api.aadrm.com` à un nouveau certificat émis par une autorité de certification racine de confiance mondiale qui signale des certificats émis pour les journaux de transparence des certificats approuvés par les navigateurs modernes. Une fois cette modification terminée, les versions héritées de kit de développement logiciel (SDK) RMS tentant d’effectuer un épinglage de certificat sur le certificat racine attendu ne parviendront pas à trouver ce certificat et ne pourront pas se connecter.  
 
 ## <a name="client-impact"></a>Impact sur le client 
 
@@ -46,7 +46,7 @@ Les applications Microsoft suivantes utilisent les kits de développement logici
 
 Ressources 
 
-- Android : https://www.microsoft.com/en-us/download/details.aspx?id=43673
-- iOS : https://www.microsoft.com/en-us/download/details.aspx?id=43674 
-- MacOS : https://www.microsoft.com/en-us/download/details.aspx?id=43675 
+- Android : https://www.microsoft.com/download/details.aspx?id=43673
+- Libéréhttps://www.microsoft.com/download/details.aspx?id=43674 
+- MacOS : https://www.microsoft.com/download/details.aspx?id=43675 
 - Linux : https://azuread.github.io/rms-sdk-for-cpp/annotated.html

@@ -1,6 +1,6 @@
 ---
-title: Suivi des documents pour Azure Information Protection
-description: Instructions et informations pour les administrateurs pour configurer et utiliser le suivi des documents pour Azure Information Protection.
+title: Suivi des documents pour Azure Information Protection
+description: Instructions et informations à l’attention des administrateurs pour la configuration et l’utilisation du suivi des documents pour Azure Information Protection.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
@@ -13,14 +13,14 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f249f8f725fc64c4c18e5d4919a34ad5accfb2a8
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 08f6c13eaeb3684965ae1baba652e4ee29f99ce6
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483029"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665688"
 ---
-# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
 >
@@ -29,7 +29,7 @@ ms.locfileid: "79483029"
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations pour les utilisateurs et administrateurs concernant les dates d’accès à un document protégé et, si nécessaire, un document suivi peut être révoqué.
+Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations pour les utilisateurs et administrateurs concernant les dates d’accès à un document protégé et, si nécessaire, un document suivi peut être révoqué.
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Utilisation de PowerShell pour gérer le site de suivi de documents
 
@@ -43,7 +43,7 @@ Si l’affichage de toutes les informations de suivi des documents est interdit 
 
 Cette applet de commande désactive l’accès au site de suivi de documents afin que tous les utilisateurs de votre organisation ne puissent pas effectuer le suivi ou révoquer l’accès à des documents qu’ils ont protégés. Vous pouvez réactiver le suivi des documents à tout moment, à l’aide de [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature), et vous pouvez vérifier si le suivi des documents est actuellement activé ou désactivé à l’aide de la [AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). 
 
-Lorsque le site de suivi des documents est activé, il fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Ce niveau d’informations peut être utile pour déterminer comment les documents partagés sont utilisés et s’ils doivent être révoqués en cas d’activité suspecte. Toutefois, pour des raisons de confidentialité, vous devrez peut-être désactiver ces informations utilisateur pour une partie ou l’intégralité des utilisateurs. 
+Lorsque le site de suivi des documents est activé, il fournit par défaut des informations telles que les adresses de messagerie des personnes qui ont tenté d’accéder aux documents protégés et indique quand ces personnes ont tenté d’y accéder, ainsi que leur emplacement. Ce niveau d’informations peut être utile pour déterminer comment les documents partagés sont utilisés et s’ils doivent être révoqués en cas d’activité suspecte. Toutefois, pour des raisons de confidentialité, vous devrez peut-être désactiver ces informations utilisateur pour une partie ou l’intégralité des utilisateurs. 
 
 Si vous avez des utilisateurs dont l’activité ne doit pas être suivie par d’autres utilisateurs, ajoutez-les à un groupe qui est stocké dans Azure AD et spécifiez ce groupe avec l’applet de commande [Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) . Lorsque vous exécutez cette applet de commande, vous devez spécifier un groupe unique. Toutefois, le groupe peut contenir des groupes imbriqués. 
 
@@ -84,7 +84,7 @@ Ces URL sont standard pour le service Azure Rights Management, à l’exception 
 
 Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont protégés à l’aide du client Azure Information Protection. Quand vous vous connectez en tant qu’administrateur général Azure AD pour votre abonné, vous pouvez cliquer sur l’icône Administrateur afin passer en mode Administrateur. Les autres rôles d’administrateur ne prennent pas en charge ce mode pour le site de suivi de document. 
 
-![Icône Administrateur du site de suivi de document](../media/tracking-site-admin-icon.png)
+![Icône Administrateur sur le site de suivi des documents](../media/tracking-site-admin-icon.png)
 
 Le mode administrateur vous permet de voir les documents que les utilisateurs de votre organisation ont choisi de suivre à l’aide du client Azure Information Protection.
 
@@ -97,9 +97,9 @@ Quand vous êtes en mode Administrateur, vous pouvez lancer une recherche par ut
 
 Si vous effectuez une recherche par document, vous voyez tous les utilisateurs de votre organisation qui ont suivi ce document à l’aide du client Azure Information Protection. Vous pouvez ensuite affiner les résultats de la recherche pour suivre les documents que les utilisateurs ont protégé et révoquer ces documents, si nécessaire. 
 
-Pour quitter le mode Administrateur, cliquez sur **X** en regard de **Quitter le mode Administrateur** :
+Pour quitter le mode Administrateur, cliquez sur **X** en regard de **Quitter le mode Administrateur** :
 
-![Quitter le mode administrateur dans le site de suivi des documents](../media/tracking-site-exit-admin-icon.png)
+![Quitter le mode Administrateur dans le site de suivi des documents](../media/tracking-site-exit-admin-icon.png)
 
 Pour obtenir des instructions sur l’utilisation du site de suivi des documents, consultez [Suivre et révoquer vos documents](client-track-revoke.md) dans le guide de l’utilisateur.
 
@@ -113,24 +113,24 @@ Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide d
 
 ## <a name="usage-logging-for-the-document-tracking-site"></a>Journalisation de l’utilisation du site de suivi des documents
 
-Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
+Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
 
-**AdminAction** Ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
+**AdminAction** : ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
 
-**ActingAsUser**: Quand le champ AdminAction a la valeur True, ce champ contient le nom de l’utilisateur au nom duquel l’administrateur agit (comme propriétaire du document ou utilisateur recherché). Ce champ est vide quand un utilisateur se connecte au site de suivi des documents. 
+**ActingAsUser** : quand le champ AdminAction a la valeur True, ce champ contient le nom de l’utilisateur au nom duquel l’administrateur agit (comme propriétaire du document ou utilisateur recherché). Ce champ est vide quand un utilisateur se connecte au site de suivi des documents. 
 
 Il existe également des types de demandes qui journalisent la façon dont les utilisateurs et les administrateurs utilisent le site de suivi des documents. Par exemple, **RevokeAccess** est le type de demande quand un utilisateur (ou un administrateur au nom d’un utilisateur) a révoqué un document dans le site de suivi des documents. Utilisez ce type de demande conjointement avec le champ AdminAction pour déterminer si l’utilisateur a révoqué son propre document (le champ AdminAction est vide) ou si un administrateur a révoqué un document au nom d’un d’utilisateur (AdminAction a la valeur True).
 
 Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](../log-analyze-usage.md)
 
-## <a name="next-steps"></a>Étapes suivantes :
-Maintenant que vous avez configuré le site de suivi des documents pour le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
+## <a name="next-steps"></a>Étapes suivantes
+Maintenant que vous avez configuré le site de suivi des documents pour le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
-- [Customizations](client-admin-guide-customizations.md)
+- [Personnalisations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 
-- [Types de fichier pris en charge](client-admin-guide-file-types.md)
+- [Types de fichiers pris en charge](client-admin-guide-file-types.md)
 
 - [Commandes PowerShell](client-admin-guide-powershell.md)
 

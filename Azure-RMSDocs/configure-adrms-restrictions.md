@@ -11,16 +11,16 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 83fc8228b664acc067c6a604f3d438f39669a49a
-ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
+ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80375626"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666028"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -71,7 +71,7 @@ Pour appliquer une protection HYOK, utilisez les étiquettes Azure Information P
 
 Le tableau suivant liste les scénarios qui prennent en charge la protection du contenu à l’aide d’étiquettes configurées avec HYOK, ainsi que l’ouverture (l’utilisation) du contenu protégé par HYOK.
 
-|Plateforme|Application|Pris en charge|
+|Plateforme|Application|Prise en charge|
 |----------------------|----------|-----------|
 |Windows|Client Azure Information Protection avec applications Office 365, Office 2019, Office 2016 et Office 2013 <br /><br />- Word, Excel, PowerPoint|Protection : oui<br /><br />Utilisation : oui|
 |Windows|Client Azure Information Protection avec applications Office 365, Office 2019, Office 2016 et Office 2013 <br /><br />- Outlook|Protection : oui<br /><br />Utilisation : oui|
@@ -84,13 +84,13 @@ Le tableau suivant liste les scénarios qui prennent en charge la protection du 
 |MacOS|Office pour Mac<br /><br />- Outlook|Protection : non<br /><br />Utilisation : oui|
 |MacOS|Application de partage Rights Management|Protection : non<br /><br />Utilisation : oui|
 |iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : oui|
-|iOS|Office Mobile <br /><br />\- Outlook|Protection : non<br /><br />Utilisation : non|
+|iOS|Office Mobile <br /><br />- Outlook|Protection : non<br /><br />Utilisation : non|
 |iOS|Visionneuse Azure Information Protection|Protection : non applicable<br /><br />Utilisation : oui|
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : oui|
 |Android|Office Mobile <br /><br />- Outlook|Protection : non<br /><br />Utilisation : non|
 |Android|Visionneuse Azure Information Protection|Protection : non applicable<br /><br />Utilisation : oui|
-|Internet|Outlook sur le web|Protection : non<br /><br />Utilisation : non|
-|Internet|Office pour le Web<br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : non|
+|Web|Outlook sur le web|Protection : non<br /><br />Utilisation : non|
+|Web|Office pour le Web<br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : non|
 |Universal|Applications Office Universal<br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : non|
 
 
@@ -158,7 +158,7 @@ Un déploiement AD RMS doit remplir les prérequis suivants pour prendre en char
 
 - Les utilisateurs exécutent une version d’Office qui prend en charge la Gestion des droits relatifs à l’information (IRM) et au moins Office Professionnel Plus 2013 avec Service Pack 1 exécuté sur Windows 7 Service Pack 1 ou ultérieur. Notez qu’Office 2010 et Office 2007 ne sont pas pris en charge dans ce scénario.
     
-    - Pour l’édition Office 2016, Microsoft Installer (. msi) : vous avez installé la [mise à jour 4018295 pour Microsoft Office 2016 publiée le 2018 6 mars](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+    - Pour Office 2016, édition basée sur Microsoft Installer (.msi) : vous avez installé la [mise à jour 4018295 pour Microsoft Office 2016 qui a été publiée le 6 mars 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > Pour garantir un niveau de protection HYOK maximal, placez si possible vos serveurs AD RMS à l’extérieur de votre réseau de périmètre et limitez leur accès uniquement à des appareils gérés. 
@@ -174,7 +174,7 @@ Pour obtenir des informations et des instructions sur le déploiement pour AD RM
 
     `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
     
-    Pour la \<valeur de chaîne>, spécifiez l’une des valeurs suivantes :
+    Pour le \<string value> , spécifiez l’un des éléments suivants :
     
     - Pour les clusters AD RMS utilisant SSL/TLS :
 
@@ -188,17 +188,17 @@ Pour obtenir des informations et des instructions sur le déploiement pour AD RM
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
 
-Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)** , vous devez spécifier l’URL de licence de votre cluster AD RMS. Par ailleurs, vous devez spécifier un modèle que vous avez configuré pour les autorisations à accorder aux utilisateurs ou permettre aux utilisateurs de définir les autorisations et les utilisateurs. 
+Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous devez spécifier l’URL de licence de votre cluster AD RMS. Par ailleurs, vous devez spécifier un modèle que vous avez configuré pour les autorisations à accorder aux utilisateurs ou permettre aux utilisateurs de définir les autorisations et les utilisateurs. 
 
 Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la console des services AD RMS (Active Directory Rights Management Services) :
 
 - Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Exemple : `https://rmscluster.contoso.com`. 
+- Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : `https://rmscluster.contoso.com` 
     
     Si vous disposez d’une valeur de licence extranet et d’une valeur de licence intranet différentes : spécifiez la valeur extranet uniquement si vous voulez partager des documents ou des e-mails protégés avec des partenaires qui ont été définis avec des approbations point à point explicites. Sinon, utilisez la valeur intranet et vérifiez que tous les ordinateurs clients qui utilisent la protection AD RMS avec Azure Information Protection se connectent au moyen d’une connexion intranet (par exemple, les ordinateurs distants utilisent une connexion VPN).
 
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour savoir comment configurer une étiquette pour la protection HYOK, consultez [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md). 

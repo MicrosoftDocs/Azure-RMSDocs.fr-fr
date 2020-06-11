@@ -15,30 +15,30 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 261ec0147fd1312aa0f80e65549b6dbda5149c82
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 1fd421e047c4a157a1632635ac091ae1be952029
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483233"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665450"
 ---
-# <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
+# <a name="information-and-support-for-azure-information-protection"></a>Informations et support pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Utilisez les ressources suivantes pour en savoir plus sur le service Azure Information Protection, le déployer et le prendre en charge pour votre organisation.
+Utilisez les ressources suivantes pour vous aider à découvrir, déployer et prendre en charge Azure Information Protection pour votre organisation.
 
-|Pour effectuer cette opération...|procédez ainsi :|
+|Pour effectuer cette opération...|... faites ceci :|
 |----------------|---------------|
 |En savoir plus sur les versions nouvelles et à venir|Consultez la section [Informations sur les nouvelles versions et mises à jour](#information-about-new-releases-and-updates) de cette page.|
 |Obtenir de l’aide sur le produit|Consultez la section [Options de support technique et ressources de la communauté](#support-options-and-community-resources) de cette page.|
-|Vérifier les informations d’abonnement et les fonctionnalités prises en charge|Utilisez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).|
+|Vérifiez les informations d’abonnement et les fonctionnalités prises en charge.|Utilisez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).|
 |Consulter les questions fréquemment posées sur les licences et les réponses|Lisez le [Forum aux questions](https://azure.microsoft.com/pricing/details/information-protection#faq) sur les licences.|
-|Demander une nouvelle fonctionnalité ou la modification d’une fonctionnalité|Visitez le site [UserVoice](https://msip.uservoice.com) pour Azure Information Protection et utilisez l’adresse e-mail de votre entreprise pour vous connecter.|
-|Prendre contact avec l’équipe du produit et vos collègues|Visitez le [site Yammer](https://www.yammer.com/AskIPTeam) pour Azure Information Protection.|
+|Demander une nouvelle fonctionnalité ou une modification de fonctionnalité|Visitez le site [UserVoice](https://msip.uservoice.com) pour Azure Information Protection et utilisez l’adresse e-mail de votre entreprise pour vous connecter.|
+|Contacter l’équipe de produit et vos homologues|Visitez le [site Yammer](https://www.yammer.com/AskIPTeam) pour Azure Information Protection.|
 |Comprendre un terme Azure Information Protection spécifique|Recherchez le terme ou l’abréviation sur la page de [terminologie](terminology.md).|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informations sur les nouvelles versions et mises à jour
@@ -53,48 +53,48 @@ Vous trouverez des informations supplémentaires et plus détaillées sur le [bl
 
 Le blog technique de Azure Information Protection présente également un résumé des [modifications de la documentation chaque mois](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Ces modifications peuvent inclure une documentation nouvelle et mise à jour pour la nouvelle version, des modifications des instructions de prise en charge, ainsi que des corrections et des clarifications pour les mises en production existantes.
 
-Ces billets sur les mises à jour de la documentation sont intitulés : « **Azure Information Protection Documentation Update for – \<mois année>**  ».
+Ces publications de mises à jour de documents sont intitulées : «**Azure information protection la \<month year> mise à jour de la documentation pour **».
 
-## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
-Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
+## <a name="support-options-and-community-resources"></a>Options de support et ressources communautaires
+Les sections suivantes fournissent des informations sur les options de support et de dépannage, ainsi que sur les ressources communautaires.
 
 ### <a name="to-contact-microsoft-support"></a>Pour contacter le support Microsoft
 
 Si vous avez Support Premier, visitez le [Hub de services Microsoft](https://serviceshub.microsoft.com/support/contactsupport) pour soumettre des incidents, parcourir les solutions et obtenir de l’aide.
 
-Vous êtes peut-être éligible à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
+Vous pouvez être éligible à **FastTrack** : vous pouvez utiliser les avantages du Centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. Les avantages du Centre FastTrack vous permettent de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Avantages du Centre FastTrack pour Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
-Pour les autres clients, utilisez les canaux de support dans le tableau suivant, en fonction de votre abonnement à Azure Information Protection.
+Pour les autres clients, utilisez les canaux de support du tableau suivant, en fonction de votre abonnement à Azure Information Protection.
 
 |Abonnement|Instructions|
 |----------------|---------------|
-|Azure Information Protection (autonome)|1. Sélectionnez **nouvelle demande de support** dans [aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans la portail Azure.<br /><br />2. quand vous y êtes invité, dans le volet de **base** , choisissez **technique** pour le **type de problème** et **information protection** pour le service. <br /><br />3. en outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - Inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
-|Azure Information Protection et un abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support produit pour les entreprises – Aide de l’administrateur](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le Centre d’administration Microsoft 365.|
-|Azure Information Protection avec EMS (Enterprise Mobility + Security)|1. Sélectionnez **nouvelle demande de support** dans [aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans la portail Azure.<br /><br />2. quand vous y êtes invité, dans le volet de **base** , choisissez **technique** pour le **type de problème** et **information protection** pour le service. <br /><br />3. en outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - Inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
-|Azure Information Protection avec Microsoft 365 Entreprise|Utilisez les [canaux de support d’Office 365](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
+|Azure Information Protection (autonome)|1. Sélectionnez **nouvelle demande de support** dans [aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans la portail Azure.<br /><br />2. quand vous y êtes invité, dans le volet de **base** , choisissez **technique** pour le **type de problème** et **information protection** pour le service. <br /><br />3. en outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec le support technique inclus** : vous voyez cette option si vous avez un abonnement d’évaluation ou payant pour Azure.<br /><br /> - **Support technique - inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
+|Azure Information Protection et abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support produit pour les entreprises – Aide de l’administrateur](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le Centre d’administration Microsoft 365.|
+|Azure Information Protection avec Enterprise Mobility + Security (EMS)|1. Sélectionnez **nouvelle demande de support** dans [aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans la portail Azure.<br /><br />2. quand vous y êtes invité, dans le volet de **base** , choisissez **technique** pour le **type de problème** et **information protection** pour le service. <br /><br />3. en outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec le support technique inclus** : vous voyez cette option si vous avez un abonnement d’évaluation ou payant pour Azure.<br /><br /> - **Support technique - inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
+|Azure Information Protection avec Microsoft 365 Enterprise|Utilisez les [canaux de support Office 365](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
-Pour connaître les autres options de support, adressez-vous à votre contact Microsoft. 
+Pour d’autres options de support, demandez à votre contact Microsoft. 
 
 
-### <a name="self-help"></a>Support autonome
+### <a name="self-help"></a>Support en ligne
 
 Ateliers pratiques : voir [le laboratoire Azure information protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
-Vidéos à la demande :
+Vidéos à la demande :
 
 - Les webinaires enregistrés par la communauté technique pour [Azure information protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
-- Sessions Microsoft Virtual Academy incluant [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
+- Les sessions Microsoft Virtual Academy incluent [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
-Dépannage :
+Résolution des problèmes :
 
 - Si vous avez une question sur le fonctionnement d’un problème, vérifiez si votre question a déjà répondu en tant que [question fréquemment posée](faqs.md).
 
-- Si vous avez une question concernant une instruction de prise en charge pour Azure Information Protection, consultez les informations relatives aux [Conditions requises](requirements.md), qui est régulièrement mise à jour.
+- Si vous avez une question relative à une déclaration de support pour Azure Information Protection, consultez les informations sur les [Exigences](requirements.md), qui sont régulièrement mises à jour.
 
 - Pour plus d’informations sur l’aide à apporter aux utilisateurs finaux, au support technique et aux administrateurs qui configurent des services et des applications utilisant le service de protection d’Azure Information Protection, consultez [Aide aux utilisateurs sur la protection de fichiers](help-users.md).
 
-- Si vous avez déployé le connecteur Rights Management pour vos serveurs locaux, consultez les informations sur la [surveillance](monitor-rms-connector.md), qui incluent des détails sur les entrées du journal des événements, les compteurs de performances et la journalisation.
+- Si vous avez déployé le connecteur Rights Management pour vos serveurs locaux, consultez les informations d’[analyse](monitor-rms-connector.md), qui comprennent des détails sur les entrées du journal des événements, les compteurs de performance et la journalisation.
 
 - Pour le client Azure Information Protection :
     
@@ -104,7 +104,7 @@ Dépannage :
 
 ### <a name="community-resources"></a>Ressources de la communauté
 
-Nous vous recommandons de consulter le [site Yammer pour Azure Information Protection](https://www.yammer.com/AskIPTeam). Sur ce site, vous pouvez obtenir des réponses directement de l’équipe Azure Information Protection et bénéficier de l’expérience partagée et des connaissances d’autres administrateurs et consultants.
+Nous recommandons le [site Yammer pour Azure Information Protection](https://www.yammer.com/AskIPTeam). Cette ressource fournit des réponses directes de l’équipe Azure Information Protection, en plus des avantages de l’expérience et des connaissances partagées des autres administrateurs et consultants.
 
-Si vous n’avez pas accès à ce site, essayez [l’espace de la communauté technique pour Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) ou le [forum TechNet pour Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Si vous n’avez pas accès à ce site, essayez l’[espace de la communauté technique pour Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection), ou le [forum TechNet pour Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 

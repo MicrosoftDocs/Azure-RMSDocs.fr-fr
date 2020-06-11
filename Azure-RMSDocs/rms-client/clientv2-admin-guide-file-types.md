@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd9f9358ad9abaafc2fc67de8beb548173d9fee9
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: 9bafeded86eeaedf588335932dead370831c3568
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161348"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666096"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
 
@@ -70,9 +70,9 @@ D’autres types de fichiers prennent en charge la classification quand ils sont
 
 Exemples :
 
-- Si l’étiquette de sensibilité **générale** applique la classification et n’applique pas la protection : vous pouvez appliquer l’étiquette **générale** à un fichier nommé Sales. pdf, mais vous n’avez pas pu appliquer cette étiquette à un fichier nommé Sales. txt. 
+- Si l’étiquette de sensibilité **générale** applique la classification et n’applique pas la protection : vous pouvez appliquer l’étiquette **générale** à un fichier nommé sales.pdf mais vous n’avez pas pu appliquer cette étiquette à un fichier nommé sales.txt. 
 
-- Si l’étiquette de sensibilité **confidentiel \ tous les employés** applique la classification et la protection : vous pouvez appliquer cette étiquette à un fichier nommé Sales. pdf et à un fichier nommé Sales. txt. Vous pouvez également appliquer juste une protection à ces fichiers, sans classification.
+- Si l’étiquette de sensibilité **confidentiel \ tous les employés** applique la classification et la protection : vous pouvez appliquer cette étiquette à un fichier nommé sales.pdf et à un fichier nommé sales.txt. Vous pouvez également appliquer juste une protection à ces fichiers, sans classification.
 
 ## <a name="file-types-supported-for-protection"></a>Types de fichiers pris en charge pour la protection
 
@@ -207,7 +207,7 @@ Les sections suivantes contiennent des instructions de configuration pour inspec
 
 Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) permettent d’inspecter les fichiers .zip suivant ces instructions :
 
-1. Pour l’ordinateur exécutant le scanneur ou la session PowerShell, installez [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+1. Pour l’ordinateur exécutant le scanneur ou la session PowerShell, installez [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2).
 
 2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classé et protégé par une étiquette, spécifiez l’extension de nom de fichier. zip avec le paramètre PowerShell avancé, **PFileSupportedExtensions**, comme décrit dans la section [configuration PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) contre les instructions de déploiement de l’analyseur.
 
@@ -216,7 +216,7 @@ Exemple de scénario après avoir effectué ces étapes :
 
 Un fichier nommé **accounts.zip** contient des feuilles de calcul Excel avec des numéros de carte de crédit. Vous avez une étiquette de sensibilité nommée **confidentiel \ finance**, qui est configurée pour découvrir les numéros de carte de crédit et appliquer automatiquement l’étiquette avec une protection qui limite l’accès au groupe finance. 
 
-Une fois le fichier inspecté, le client d’étiquetage unifié de votre session PowerShell classe ce fichier comme **confidentiel \ finance**, applique la protection générique au fichier afin que seuls les membres des groupes finance puissent le décompresser et renomme le fichier **Accounts. zip. pfile**.
+Une fois le fichier inspecté, le client d’étiquetage unifié de votre session PowerShell classe ce fichier comme **confidentiel \ finance**, applique la protection générique au fichier afin que seuls les membres des groupes finance puissent le décompresser et renomme le fichier **accounts.zip. pfile**.
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>Pour inspecter des fichiers .tiff à l’aide de la reconnaissance optique de caractères
 

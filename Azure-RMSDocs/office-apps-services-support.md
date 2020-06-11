@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8dc7cc5f8e7c7a09293fedf0b4bb9874df339437
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 0fa79e8e9562739c59a2052dd97c9a1c96a2e90d
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249876"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665620"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -91,7 +91,7 @@ Pour les bibliothèques qui ne sont pas protégées par IRM, si vous appliquez l
 
 Quand vous utilisez la protection IRM SharePoint, le service Azure Rights Management applique des restrictions d’utilisation et un chiffrement de données aux documents téléchargés à partir de SharePoint, mais pas aux documents créés initialement dans SharePoint ou chargés dans la bibliothèque. Pour plus d’informations sur la façon dont les documents sont protégés avant leur téléchargement, consultez [chiffrement des données dans OneDrive et SharePoint](https://technet.microsoft.com/library/dn905447.aspx) dans la documentation SharePoint.
 
-Bien qu’il ne soit plus nouveau, le billet suivant sur le blog Office 365 contient des informations supplémentaires que vous pouvez trouver utiles : [nouveautés avec les informations Rights Management dans SharePoint](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Bien qu’il ne soit plus nouveau, le billet suivant sur le blog Office 365 contient des informations supplémentaires que vous pouvez trouver utiles : [nouveautés avec les informations Rights Management dans SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
 Pour obtenir les modifications à venir, consultez [mises à jour de la sécurité, de l’administration et de la migration SharePoint](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 

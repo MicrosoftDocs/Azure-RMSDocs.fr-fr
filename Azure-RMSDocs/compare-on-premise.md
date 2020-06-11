@@ -12,12 +12,12 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2eeae09e3fe8bca00eb7d80df60418a246c0ca86
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 59caaa9eba68758595ab05be3b8abaadca715862
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224544"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666045"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparaison d’Azure Information Protection avec AD RMS
 
@@ -53,7 +53,7 @@ Pour les autres différences, utilisez le tableau suivant pour une comparaison c
 |Prend en charge le client Azure Information Protection (Classic) et le client d’étiquetage unifié Azure Information Protection pour les activités de protection et de consommation.|Prend en charge le client Azure Information Protection (Classic) pour les activités de protection et de consommation. <br /><br />Prend en charge le client d’étiquetage unifié Azure Information Protection à des fins de consommation uniquement et vous devez installer l' [extension d’appareil Mobile services AD RMS (Active Directory Rights Management Services)](./active-directory-rights-manage-mobile-device.md).
 |Prend en charge l'authentification multifacteur (Multi-Factor Authentication, MFA) pour les ordinateurs et les appareils mobiles.<br /><br />Pour plus d’informations, consultez [Multi-Factor Authentication (MFA) et Azure Information Protection](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Prend en charge l'authentification par carte à puce si IIS est configuré pour demander des certificats.|
 |Prend en charge le mode de chiffrement 2 par défaut pour fournir un niveau de sécurité recommandé pour les longueurs de clés et les algorithmes de chiffrement.|Prend en charge le mode de chiffrement 1 par défaut et requiert une configuration supplémentaire pour prendre en charge le mode de chiffrement 2 pour un niveau de sécurité recommandé.<br /><br />Pour plus d’informations, consultez [Modes de chiffrement d’AD RMS](https://go.microsoft.com/fwlink/?LinkId=266659).|
-|Requiert une licence Azure Information Protection ou une licence Azure Rights Management avec Office 365 pour protéger du contenu. <br /><br />Aucune licence n’est nécessaire pour utiliser du contenu protégé par Azure Information Protection (y compris si les utilisateurs appartiennent à une autre organisation).<br /><br />Pour plus d’informations sur les licences, y compris les différences entre une licence P1 et P2, consultez la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure information protection.|Nécessite une licence RMS pour protéger du contenu et utiliser du contenu protégé par AD RMS.<br /><br />Pour plus d’informations sur les licences, consultez [licences d’accès client et licences de gestion](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) pour obtenir des informations générales, mais contactez votre partenaire Microsoft ou un représentant Microsoft pour obtenir des informations spécifiques.|
+|Requiert une licence Azure Information Protection ou une licence Azure Rights Management avec Office 365 pour protéger du contenu. <br /><br />Aucune licence n’est nécessaire pour utiliser du contenu protégé par Azure Information Protection (y compris si les utilisateurs appartiennent à une autre organisation).<br /><br />Pour plus d’informations sur les licences, y compris les différences entre une licence P1 et P2, consultez la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure information protection.|Nécessite une licence RMS pour protéger du contenu et utiliser du contenu protégé par AD RMS.<br /><br />Pour plus d’informations sur les licences, consultez [licences d’accès client et licences de gestion](https://www.microsoft.com/Licensing/product-licensing/client-access-license.aspx) pour obtenir des informations générales, mais contactez votre partenaire Microsoft ou un représentant Microsoft pour obtenir des informations spécifiques.|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>Contrôles de chiffrement pour la signature et le chiffrement
 Par défaut, Azure Information Protection utilise la norme RSA 2048 pour tout le chiffrement à clé publique et la norme SHA 256 pour les opérations de signature. Par comparaison, AD RMS prend en charge les normes RSA 1024 et RSA 2048, ainsi que les normes SHA 1 ou SHA 256 pour les opérations de signature.

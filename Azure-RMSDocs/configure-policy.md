@@ -13,16 +13,16 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 363fc709334ac3974ec657d72c44e88a2e9c828a
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: fc00f88734712c8ee9a60c334989d5ed5be8854c
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404383"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665892"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -32,7 +32,7 @@ ms.locfileid: "79404383"
 > 
 > Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dans la documentation relative à la conformité de Microsoft 365.
 
-Pour configurer la classification, l’étiquetage et la protection du client classique, vous devez configurer la stratégie de Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs sur lesquels est installé le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Pour configurer la classification, l’étiquetage et la protection du client classique, vous devez configurer la stratégie de Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs qui ont installé le [client Azure information protection](https://www.microsoft.com/download/details.aspx?id=53018).
 
 La stratégie contient des paramètres et des étiquettes :
 
@@ -76,9 +76,9 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
   - **Administrateur de sécurité**
     
-    **Lecteur de sécurité** - [Azure information protection Analytics](reports-aip.md) uniquement
+    **Lecteur**  -  de sécurité [Azure information protection Analytics](reports-aip.md) uniquement
     
-    **Lecteur Global** - [Azure information protection Analytics](reports-aip.md) uniquement
+    **Lecteur global**  -  [Azure information protection Analytics](reports-aip.md) uniquement
     
   - **Administrateur général**
     
@@ -102,7 +102,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 4. Vous voyez la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Parcourez les ressources suggérées ou utilisez les autres options de menu. Pour configurer les étiquettes que les utilisateurs peuvent sélectionner, utilisez la procédure suivante.
 
-La prochaine fois que vous accéderez au volet **Azure information protection** , il sélectionne automatiquement l’option **étiquettes** pour vous permettre d’afficher et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **Général**.
+La prochaine fois que vous accéderez au volet **Azure information protection** , il sélectionne automatiquement l’option **étiquettes** pour vous permettre d’afficher et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **démarrage rapide** en la sélectionnant dans le menu **général** .
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
@@ -143,7 +143,7 @@ Utilisez les informations suivantes pour configurer la stratégie Azure Informat
 
 - [Guide pratique pour configurer les paramètres de stratégie](configure-policy-settings.md)
 
-- [Comment créer une étiquette](configure-policy-new-label.md)
+- [Comment créer une nouvelle étiquette](configure-policy-new-label.md)
 
 - [Guide pratique pour ajouter ou supprimer une étiquette](configure-policy-add-remove-label.md)
  
@@ -169,15 +169,15 @@ Utilisez les informations suivantes pour configurer la stratégie Azure Informat
 
 Quand une étiquette est appliquée à un document ou un e-mail, en arrière-plan, l’étiquette est stockée dans les métadonnées afin que les applications et services puissent lire l’étiquette :
 
-- Dans les e-mails, ces informations sont stockées dans l’en-tête x : **msip_labels : MSIP_Label_\<GUID > _enabled = true** 
+- Dans les e-mails, ces informations sont stockées dans l’en-tête x : **msip_labels : MSIP_Label_ \<GUID> _enabled = true** 
 
-- Pour les documents Word (. doc et. docx), les feuilles de calcul Excel (. xls et. xlsx), les présentations PowerPoint (. ppt et. pptx) et les documents PDF, ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_\<GUID > _enabled = true**
+- Pour les documents Word (. doc et. docx), les feuilles de calcul Excel (. xls et. xlsx), les présentations PowerPoint (. ppt et. pptx) et les documents PDF, ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_ \<GUID> _enabled = true**
 
 Pour les e-mails, les informations d’étiquette sont stockées lors de l’envoi de l’e-mail. Pour les documents, les informations d’étiquette sont stockées lors de l’enregistrement du fichier. 
 
 Pour identifier le GUID d’une étiquette, recherchez la valeur ID d’étiquette dans le volet **étiquette** de la portail Azure, lorsque vous affichez ou configurez la stratégie de Azure information protection. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier le GUID (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours le GUID de la sous-étiquette et non celui de l’étiquette parente.
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir des exemples montrant comment personnaliser la stratégie Azure Information Protection et voir le comportement qui en résulte pour les utilisateurs, suivez les didacticiels ci-dessous :
 

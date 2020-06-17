@@ -4,29 +4,31 @@ description: Instructions pour afficher un fichier protégé qui vous oblige à 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7ef8129e7a97dbd0a9903e177221beb938108b7a
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 452e7779c6c6b1f9227dcea80a49f3402d0375f2
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960803"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802805"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
+> **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
+>
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Souvent, vous pouvez afficher un fichier protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 
-Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse Azure Information Protection** pourra peut-être le faire. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
+Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse de Azure information protection** peut être en mesure de l’ouvrir. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
 
 La visionneuse s’installe automatiquement dans le cadre de l’Azure Information Protection client d’étiquetage unifié, ou vous pouvez l’installer séparément. Vous pouvez installer à la fois ce client et la visionneuse à partir de la page [Microsoft Azure information protection](https://go.microsoft.com/fwlink/?LinkId=303970) du site Web Microsoft. Pour plus d’informations sur l’installation de ce client, consultez [Télécharger et installer le client d’étiquetage unifié Azure information protection](install-unifiedlabelingclient-app.md).
 
@@ -66,7 +68,7 @@ Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous s
 4. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
 
 > [!TIP]
-> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **sensibilité** > **aide et commentaires** > **Réinitialiser les paramètres**. 
+> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **sensibilité** > paramètres de réinitialisation de **l’aide et des commentaires**  >  **Reset Settings**. 
 > 
 > [Informations supplémentaires sur l’option Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

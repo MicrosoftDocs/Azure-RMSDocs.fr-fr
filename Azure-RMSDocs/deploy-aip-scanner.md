@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/03/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
-ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
+ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326316"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802934"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -169,7 +169,7 @@ En règle générale, vous utilisez le même compte utilisateur pour installer e
     
     Remplissez la base de données à l’aide du script suivant : 
 
-    s’il n’existe pas (Select * from Master. sys. server_principals où sid = SUSER_SID ('domaine\utilisateur')) BEGIN DECLARE @T nvarchar (500) Set @T = 'Create login' + QUOTENAME ('domaine\utilisateur') + 'from Windows’exec ( @T ) End 
+    s’il n’existe pas (Select * from master.sys. server_principals où sid = SUSER_SID ('domaine\utilisateur')) BEGIN DECLARE @T nvarchar (500) Set @T = 'Create login' + QUOTENAME ('domaine\utilisateur') + 'de Windows’exec ( @T ) End 
 
 Pour créer un utilisateur et accorder des droits de db_owner sur cette base de données, demandez à l’administrateur système d’effectuer les opérations suivantes :
 
@@ -279,7 +279,7 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
     
     Exemples :
       
-    - Pour un partage réseau : `C:\Folder\Filename`
+    - Pour un partage réseau : `\\Server\Folder`
     
     - Pour une bibliothèque SharePoint : `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
@@ -602,7 +602,7 @@ Le scanneur actualise la stratégie en fonction des déclencheurs suivants :
 > [!TIP]
 > Si vous devez actualiser la stratégie avant l’intervalle par défaut, par exemple, pendant une période de test : 
 >
-> - Analyseur à partir du client classique : supprimez manuellement le fichier de stratégie, **Policy. MSIP** , de **%LocalAppData%\Microsoft\MSIP\Policy.MSIP**.
+> - Analyseur à partir du client classique : supprimez manuellement le fichier de stratégie, **Policy.msip** de **% LocalAppData% \Microsoft\MSIP\Policy.msip**.
 >
 > - Analyseur du client d’étiquetage unifié : supprimez manuellement le contenu de **%LocalAppData%\Microsoft\MSIP\mip \\ < *ProcessName*> \mip**.
 >
@@ -636,7 +636,7 @@ Le scanneur Azure Information Protection prend en charge trois autres scénarios
     
     Applicable uniquement au scanneur à partir du client d’étiquetage unifié, cette configuration vous permet de supprimer les étiquettes existantes, y compris la protection, si elles ont été appliquées avec cette étiquette. La protection appliquée indépendamment d’une étiquette est conservée. Utilisez cette configuration si vous devez supprimer toutes les étiquettes des fichiers dans un référentiel.
     
-    Configurez les paramètres suivants :
+    Configurez les paramètres suivants :
     - **Étiqueter les fichiers en fonction du contenu**: **désactivé**
     - **Étiquette par défaut**: **aucune**
     - **Renommer les fichiers**: **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée

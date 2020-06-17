@@ -11,16 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2983f346ba29bed30d1ceb2b055e4cdd1e152d4e
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 46152c8f004f05a1c1ae317c0710e98be4a98121
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117542"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802780"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Azure Information Protection fichiers du client d’étiquetage unifié et journalisation de l’utilisation du client
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>
+> **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -28,7 +30,7 @@ Après avoir installé le client d’étiquetage unifié Azure Information Prote
 
 ## <a name="file-locations-for-the-azure-information-protection-unified-labeling-client"></a>Emplacements des fichiers pour le client d’étiquetage unifié Azure Information Protection
 
-Fichiers du client :   
+Fichiers du client :    
 
 - Pour les systèmes d’exploitation 64 bits : **\ProgramFiles (x86) \Microsoft Azure Information Protection**
 
@@ -47,9 +49,9 @@ Le client d’étiquetage unifié n’enregistre pas l’activité des utilisate
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié tous les fichiers journaux associés à l’Azure Information Protection client d’étiquetage unifié, consultez les éléments suivants pour plus d’informations sur la prise en charge de ce client :
 
-- [Customizations](clientv2-admin-guide-customizations.md)
+- [Personnalisations](clientv2-admin-guide-customizations.md)
 
-- [Types de fichier pris en charge](clientv2-admin-guide-file-types.md)
+- [Types de fichiers pris en charge](clientv2-admin-guide-file-types.md)
 
 - [Commandes PowerShell](clientv2-admin-guide-powershell.md)
 

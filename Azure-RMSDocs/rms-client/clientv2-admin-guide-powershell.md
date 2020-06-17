@@ -4,23 +4,25 @@ description: Instructions et informations permettant aux administrateurs de gér
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4456dd292fe6049a432aaebe56cba36dc4a3d7d1
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 01149b9f12fce4c88f250548eaa86dd87eeaa689
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404706"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802867"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>
+> **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -36,7 +38,7 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
 > [!TIP]
-> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> **Stratégie de l’ordinateur Local** > **configuration** de l’ordinateur > **Modèles d’administration** > **tous les paramètres** > **activer les chemins longs Win32** 
+> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> Stratégie de l' **ordinateur local**  >  Configuration de l' **ordinateur**  >  **Modèles d’administration**  >  **Tous les paramètres**  >  **Activer les chemins d’accès longs Win32** 
 > 
 > Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
 >
@@ -45,7 +47,7 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
 > [!IMPORTANT]
-> Le module AzureInformationProtection ne prend pas en charge la configuration de paramètres avancés pour les étiquettes ou les stratégies d’étiquette. Pour ces paramètres, vous avez besoin d’Office 365 Centre de sécurité et de conformité PowerShell. Pour plus d’informations, consultez [configurations personnalisées pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-customizations.md).
+> Le module AzureInformationProtection ne prend pas en charge la configuration de paramètres avancés pour les étiquettes ou les stratégies d’étiquette. Pour ces paramètres, vous avez besoin d’Office 365 Security & Compliance Center PowerShell. Pour plus d’informations, consultez [configurations personnalisées pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-customizations.md).
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Conditions préalables à l’utilisation du module AzureInformationProtection
 
@@ -75,7 +77,7 @@ Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les
 
 Vous devez également demander un jeton d’accès à partir de Azure AD, qui définit et stocke les informations d’identification de l’utilisateur délégué pour s’authentifier auprès de Azure Information Protection.
 
-L’ordinateur qui exécute l’applet de commande AIPAuthentication télécharge les stratégies d’étiquette avec des étiquettes qui sont affectées au compte d’utilisateur délégué à l’aide de votre centre de gestion d’étiquetage, tel que le Centre de sécurité et de conformité Office 365.
+L’ordinateur qui exécute l’applet de commande AIPAuthentication télécharge les stratégies d’étiquette avec des étiquettes qui sont affectées au compte d’utilisateur délégué à l’aide de votre centre de gestion d’étiquetage, tel que le centre de conformité d’Office 365 Security &.
 
 > [!NOTE]
 > Si vous utilisez des stratégies d’étiquette pour différents utilisateurs, vous devrez peut-être créer une nouvelle stratégie d’étiquette qui publie toutes vos étiquettes et publier la stratégie sur ce compte d’utilisateur délégué uniquement.
@@ -99,34 +101,34 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
 
-2. Pour le locataire Azure AD que vous utilisez avec Azure Information Protection, accédez à **Azure Active Directory** > **gérer** > **inscriptions d’applications**. 
+2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory**  >  **gérer**les  >  **inscriptions d’applications**. 
 
 3. Sélectionnez **+ nouvel enregistrement**. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
-   - **Nom**: `AIP-DelegatedUser`
+   - **Nom** : `AIP-DelegatedUser`
         
         Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     
-    - **URI de redirection (facultatif)** : **Web** et `https://localhost`
+    - **URI de redirection (facultatif)**: **Web** et`https://localhost`
 
-4. Dans le volet **AIP-DelegatedUser** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
+4. Dans le volet **AIP-DelegatedUser** , copiez la valeur de l’ID de l' **application (client)**. La valeur ressemble à l’exemple suivant : `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-5. Dans la barre latérale, sélectionnez **gérer** les **certificats > & les secrets**.
+5. Dans la barre latérale, sélectionnez **gérer**les  >  **certificats & les secrets**.
 
 6. Sur le volet **AIP-DelegatedUser-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**.
 
 7. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
     
-    - **Description**: `Azure Information Protection unified labeling client`
+    - **Description**:`Azure Information Protection unified labeling client`
     - **Expires**: spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
 
-8. De retour sur le volet **AIP-DelegatedUser-certificates & secrets** , dans la section **secrets client** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
+8. De retour sur le volet **AIP-DelegatedUser-certificates & secrets** , dans la section **secrets client** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` . Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
     
     Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
-9. Dans la barre latérale, sélectionnez **gérer** les **autorisations d’API** > .
+9. Dans la barre latérale, sélectionnez **gérer**les  >  **autorisations d’API**.
 
 10. Dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une autorisation**.
 
@@ -151,7 +153,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 18. Sélectionnez **Ajouter des autorisations**.
 
-19. De retour dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
+19. De retour dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **accorder le \<*your tenant name*> consentement de l’administrateur pour** et sélectionnez **Oui** pour l’invite de confirmation.
     
     Vos autorisations d’API doivent ressembler à ce qui suit :
     
@@ -160,7 +162,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 Maintenant que vous avez terminé l’inscription de cette application avec un secret, vous êtes prêt à exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *AppID*et *AppSecret*. En outre, vous aurez besoin de votre ID de locataire. 
 
 > [!TIP]
->Vous pouvez copier rapidement votre ID de locataire à l’aide de Portail Azure : **Azure Active Directory** > **gérer** les **Propriétés** de >  > **ID de répertoire**.
+>Vous pouvez copier rapidement votre ID de locataire à l’aide de portail Azure : **Azure Active Directory**  >  **gérer**l’ID de répertoire des  >  **Propriétés**  >  **Directory ID**.
 
 1. Ouvrez Windows PowerShell avec l' **option Exécuter en tant qu’administrateur**. 
 
@@ -177,15 +179,15 @@ Maintenant que vous avez terminé l’inscription de cette application avec un s
 > [!NOTE]
 > Si l’ordinateur ne peut pas accéder à Internet, il n’est pas nécessaire de créer l’application dans Azure AD et d’exécuter Set-AIPAuthentication. Au lieu de cela, suivez les instructions pour les [ordinateurs déconnectés](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
-## <a name="next-steps"></a>Étapes suivantes :
-Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online`. Par exemple : 
+## <a name="next-steps"></a>Étapes suivantes
+Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online` . Par exemple : 
 
     Get-Help Set-AIPFileLabel -online
 
 Pour des informations supplémentaires nécessaires pour la prise en charge du client Azure Information Protection, consultez les éléments suivants :
 
-- [Customizations](clientv2-admin-guide-customizations.md)
+- [Personnalisations](clientv2-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](clientv2-admin-guide-files-and-logging.md)
 
-- [Types de fichier pris en charge](clientv2-admin-guide-file-types.md)
+- [Types de fichiers pris en charge](clientv2-admin-guide-file-types.md)

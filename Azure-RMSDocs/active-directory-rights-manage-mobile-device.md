@@ -4,19 +4,19 @@ description: En savoir plus sur les extensions d’appareils mobiles Active Dire
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 06/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6dc8a5aa43b6f5d3dc53c014dd770fa87ff683a5
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: f20ebed9647570e1f9395791f346eb175a3a8c5e
+ms.sourcegitcommit: 43c9a5c3130a3a8e2ee2644207d07382bed09679
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746375"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879996"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Extension Appareils mobiles AD RMS (Active Directory Rights Management Services)
 
@@ -126,32 +126,90 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 |**Configuration**|**Valeur**|
 |-----|-----|
 |**Approbation de partie de confiance**|_api. RMS. Rest. com|
-|**Règle de revendication**|**Magasin d’attributs** : Active Directory <br /><br />**Adresses de messagerie**: adresse de messagerie<br /><br>**User-principal-name**: UPN<br /><br /> **Adresse proxy**: _https : \/ \/ schemas.xmlsoap.org/claims/proxyAddresses|
+|**Règle de revendication**|**Magasin d’attributs** : Active Directory <br /><br />**Adresses de messagerie**: adresse de messagerie<br /><br>**User-principal-name**: UPN<br /><br /> **Adresse proxy**: _https : \/ \/schemas.xmlSOAP.org/claims/proxyAddresses|
 
 > [!TIP]
 > Pour obtenir des instructions pas à pas pour un exemple de déploiement de AD RMS avec AD FS, consultez [déploiement de services AD RMS (Active Directory Rights Management Services) avec services ADFS](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
 
 #### <a name="step-2-authorize-apps-for-your-devices"></a>Étape 2 : autoriser les applications pour vos appareils
 
-1. Exécutez la commande Windows PowerShell suivante après avoir remplacé les variables pour ajouter la prise en charge de l’application Azure Information Protection :
+- Exécutez la commande Windows PowerShell suivante après avoir remplacé les variables pour ajouter la prise en charge de l’application **Azure information protection** . Veillez à exécuter les deux commandes dans l’ordre indiqué :
 
 
 ```powershell
 Add-AdfsClient -Name "R<your application name> " -ClientId "<YOUR CLIENT ID >" -RedirectUri @("<YOUR REDIRECT URI >")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '<YOUR CLIENT ID>' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
 ```
 
 **Exemple PowerShell**
 ```powershell
 Add-AdfsClient -Name "Fabrikam application for MIP" -ClientId "96731E97-2204-4D74-BEA5-75DCA53566C3" -RedirectUri @("com.fabrikam.MIPAPP://authorize")
 ```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '96731E97-2204-4D74-BEA5-75DCA53566C3' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- Pour le **client d’étiquetage unifié Azure information protection**, exécutez la commande Windows PowerShell suivante pour ajouter la prise en charge du client Azure information protection sur vos appareils :
+
+```powershell
+Add-AdfsClient -Name "Azure Information Protection Client" -ClientId "c00e9d32-3c8d-4a7d-832b-029040e7db99" -RedirectUri @("com.microsoft.azip://authorize")
+Grant-AdfsApplicationPermission -ClientRoleIdentifier "c00e9d32-3c8d-4a7d-832b-029040e7db99" -ServerRoleIdentifier api.rms.rest.com -ScopeName "openid"
+```
+- Pour prendre en charge **ADFS sur Windows 2016 et 2019** et **ADRMS MDE** pour les produits tiers, exécutez la commande Windows PowerShell suivante :
+
+```powershell
+Add-AdfsClient -Name "YOUR APP" -ClientId 'YOUR CLIENT ID' -RedirectUri @("YOUR REDIRECT") 
+Grant-AdfsApplicationPermission -ClientRoleIdentifier 'YOUR CLIENT ID' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+Pour configurer le client AIP sur **Windows**, **Mac**, mobile et **Office Mobile** afin de **consommer du contenu hyok ou AD RMS protégé** avec **AD FS sur Windows Server 2012 R2 et versions ultérieures**, utilisez les éléments suivants : 
+
+- Pour les appareils Mac (à l’aide de l’application partage RMS), veillez à exécuter les deux commandes dans l’ordre indiqué :
+
+```powershell
+Add-AdfsClient -Name "RMS Sharing App for macOS" -ClientId "96731E97-2204-4D74-BEA5-75DCA53566C3" -RedirectUri @("com.microsoft.rms-sharing-for-osx://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '96731E97-2204-4D74-BEA5-75DCA53566C3' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- Pour les appareils iOS (à l’aide de l’application Azure Information Protection), veillez à exécuter les deux commandes dans l’ordre indiqué :
+```powershell
+Add-AdfsClient -Name "Azure Information Protection app for iOS" -ClientId "9D7590FB-9536-4D87-B5AA-FAA863DCC3AB" -RedirectUri @("com.microsoft.rms-sharing-for-ios://authorize")
+```
+
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '9D7590FB-9536-4D87-B5AA-FAA863DCC3AB' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- Pour les appareils Android (à l’aide de l’application Azure Information Protection), veillez à exécuter les deux commandes dans l’ordre indiqué :
+```powershell
+Add-AdfsClient -Name "Azure Information Protection app for Android" -ClientId "ECAD3080-3AE9-4782-B763-2DF1B1373B3A" -RedirectUri @("com.microsoft.rms-sharing-for-android://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier 'ECAD3080-3AE9-4782-B763-2DF1B1373B3A' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+Exécutez les commandes PowerShell suivantes pour ajouter la prise en charge de Microsoft Office apps sur vos appareils :
+- Pour les appareils Mac, iOS et Android (veillez à exécuter les deux commandes dans l’ordre indiqué) :
+
+```powershell
+Add-AdfsClient –Name "Office for Mac and Office Mobile" –ClientId "d3590ed6-52b3-4102-aeff-aad2292ab01c" –RedirectUri @("urn:ietf:wg:oauth:2.0:oob")
+```
+
+```powershell
+Set-AdfsClient -TargetClientId d3590ed6-52b3-4102-aeff-aad2292ab01c -RedirectUri "urn:ietf:wg:oauth:2.0:oob","launch-word://com.microsoft.Office.Word","launch-excel://com.microsoft.Office.Excel","launch-ppt://com.microsoft.Office.Powerpoint"
+```
 
 ### <a name="specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension"></a>Spécification des enregistrements SRV DNS pour l’extension d’appareil mobile AD RMS
 
 Vous devez créer des enregistrements SRV DNS pour chaque domaine de messagerie employé par les utilisateurs. Si tous vos utilisateurs emploient des domaines enfants depuis un domaine parent unique et que tous les utilisateurs de cet espace de noms contigu emploient le même cluster RMS, vous pouvez utiliser un seul enregistrement SRV dans le domaine parent et RMS trouvera les enregistrements DNS appropriés.
-Les enregistrements SRV ont le format suivant : _rmsdisco. _http. _tcp. \<emailsuffix>\< numéro_port>\< RMSClusterFQDN>
+Les enregistrements SRV ont le format suivant : _rmsdisco. _http. _tcp. \<emailsuffix>\<portnumber>\<RMSClusterFQDN>
 
 > [!NOTE]
-> Spécifiez 443 pour le \< numéro_port>. Bien que vous puissiez spécifier un numéro de port différent dans DNS, les appareils qui utilisent l’extension d’appareil mobile utilisent toujours 443.
+> Spécifiez 443 pour \<portnumber> . Bien que vous puissiez spécifier un numéro de port différent dans DNS, les appareils qui utilisent l’extension d’appareil mobile utilisent toujours 443.
 
 Par exemple, si votre organisation a des utilisateurs avec les adresses de messagerie suivantes :
   - _user@contoso.com
@@ -202,18 +260,18 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez le tableau su
 
 Avant d’installer l’extension d’appareil mobile AD RMS, assurez-vous que les conditions préalables de la section précédente sont en place et que vous connaissez l’URL de votre serveur de AD FS. Faites ensuite ce qui suit :
 
-1. Téléchargez l’extension d’appareil mobile AD RMS (ADRMS. MobileDeviceExtension. exe) à partir du centre de téléchargement Microsoft.
-1. Exécutez **ADRMS. MobileDeviceExtension. exe** pour démarrer services AD RMS (Active Directory Rights Management Services) l’Assistant Installation d’une extension de périphérique mobile.
+1. Téléchargez le AD RMS l’extension d’appareil mobile (ADRMS.MobileDeviceExtension.exe) à partir du centre de téléchargement Microsoft.
+1. Exécutez **ADRMS.MobileDeviceExtension.exe** pour démarrer l’Assistant Installation d’une extension de périphérique mobile services AD RMS (Active Directory Rights Management Services).
 Quand vous y êtes invité, entrez l'URL du serveur AD FS que vous avez configuré précédemment.
 1. Effectuez toutes les étapes de l'Assistant.
 
 Exécutez cet Assistant sur tous les nœuds de votre cluster RMS.
 
-Si vous avez un serveur proxy entre le cluster AD RMS et les serveurs AD FS, par défaut, votre cluster AD RMS ne pourra pas contacter le service fédéré. Dans ce cas, AD RMS ne peut pas vérifier le jeton reçu du client mobile et rejette la demande. Si vous avez un serveur proxy qui bloque cette communication, vous devez mettre à jour le fichier Web. config à partir du site Web d’extension de périphérique mobile AD RMS, afin que AD RMS puisse contourner le serveur proxy lorsqu’il doit contacter les serveurs de AD FS.
+Si vous avez un serveur proxy entre le cluster AD RMS et les serveurs AD FS, par défaut, votre cluster AD RMS ne pourra pas contacter le service fédéré. Dans ce cas, AD RMS ne peut pas vérifier le jeton reçu du client mobile et rejette la demande. Si vous avez un serveur proxy qui bloque cette communication, vous devez mettre à jour le fichier web.config à partir du site Web d’extension de périphérique mobile AD RMS, afin que AD RMS puisse contourner le serveur proxy lorsqu’il doit contacter les serveurs AD FS.
 
 #### <a name="updating-proxy-settings-for-the-ad-rms-mobile-device-extension"></a>Mise à jour des paramètres de proxy pour l’extension d’appareil mobile AD RMS
 
-1. Ouvrez le fichier Web. config qui se trouve dans **\Program Files\Active Directory Rights Management Services Mobile Device Extension\Web service**.
+1. Ouvrez le fichier web.config qui se trouve dans **\Program Files\Active Directory Rights Management Services Mobile Device Extension\Web service**.
 
 1. Ajoutez le nœud suivant au fichier :
 
@@ -230,9 +288,9 @@ Si vous avez un serveur proxy entre le cluster AD RMS et les serveurs AD FS, par
 <system.net>
 ```
 1. Apportez les modifications suivantes, puis enregistrez le fichier :
-- Remplacez \< proxy-server> par le nom ou l’adresse de votre serveur proxy.
-- Remplacez le \< port> par le numéro de port que le serveur proxy est configuré pour utiliser.
-- Remplacez \< AD FS url> par l’URL du service de Fédération. N’incluez pas le préfixe HTTP.
+- Remplacez \<proxy-server> par le nom ou l’adresse de votre serveur proxy.
+- Remplacez \<port> par le numéro de port que le serveur proxy est configuré pour utiliser.
+- Remplacez \<AD FS URL> par l’URL du service de Fédération. N’incluez pas le préfixe HTTP.
 
     > [!NOTE]
     > Pour en savoir plus sur le remplacement des paramètres de proxy, consultez la documentation sur la [configuration du proxy](https://msdn.microsoft.com/library/dkwyc043(v=vs.110).aspx) .
@@ -246,3 +304,4 @@ Répétez cette procédure sur tous les nœuds de votre cluster RMS.
 
 Pour en savoir plus sur les Azure Information Protection, contactez les autres clients AIP et les responsables de produit AIP à l’aide du [groupe Yammer d’API](https://www.yammer.com/askipteam/). 
 
+"

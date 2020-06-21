@@ -12,18 +12,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 51af06c37e6ee23a762f35791b0796b93b52e83b
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 14ea411732b38883d278d4df22700b8503224be0
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665807"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126643"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>Avis de désapprobation kit de développement logiciel (SDK) RMS 4,2 
 
 *Applicable à toutes les versions de kit de développement logiciel (SDK) RMS 4,2 antérieures au 2020 mars*
 
-Le 3 mars, 2020, une mise à jour de la kit de développement logiciel (SDK) RMS 4,2 pour Android, iOS et OSX a été publiée par le biais du centre de téléchargement Microsoft. Cette mise à jour est obligatoire pour toutes les applications qui utilisent actuellement ces plateformes de kit de développement logiciel (SDK) RMS.  
+Le 3 mars, 2020, une mise à jour de la kit de développement logiciel (SDK) RMS 4,2 pour Android, iOS et OSX a été publiée via le centre de téléchargement Microsoft. Cette mise à jour est obligatoire pour toutes les applications qui utilisent actuellement ces plateformes de kit de développement logiciel (SDK) RMS.  
 
 Le mardi 15 septembre, 2020 versions de l’kit de développement logiciel (SDK) RMS publiées avant le 1er mars 2020 ne pourront pas se connecter au point de terminaison du service Azure Rights Management. Les applications qui consomment kit de développement logiciel (SDK) RMS 4,2 doivent être mises à jour avant cette date. 
 

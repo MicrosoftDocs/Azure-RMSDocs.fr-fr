@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: c1efdbcf7d6738b5dd1d0cfb6b5d4495cec60f4b
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802934"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126711"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -449,9 +449,11 @@ Puisque nous avons configuré la planification pour qu’elle s’exécute en co
 
 ## <a name="troubleshooting-using-scanner-diagnostic-tool"></a>Résolution des problèmes à l’aide de l’outil de diagnostic scanner
 
-Pour résoudre les problèmes liés au scanneur, exécutez la commande suivante dans votre session PowerShell :
+Pour résoudre les problèmes liés au scanneur, exécutez les commandes suivantes dans votre session PowerShell :
 
-        Start-AIPScannerDiagnostics
+        $scanner_account_creds= Get-Credential 
+        Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+
 
 1. Exécutez uniquement la commande-onbehalf% scanner_account% 
 2. Notez que cette commande n’est pas un outil de vérification de la configuration requise. L’outil vérifie si le déploiement de l’analyseur actuel est sain. Veillez à exécuter cette commande uniquement une fois que le déploiement du scanneur est terminé et que la configuration de votre profil est terminée. 

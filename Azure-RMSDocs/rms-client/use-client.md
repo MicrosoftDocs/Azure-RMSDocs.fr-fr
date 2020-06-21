@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 13128b48be4dd4e64e767e121551c4c2e8692e78
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: e069abcc246848a48dc0edb014bdea0e128d03b1
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84250040"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126694"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -54,17 +54,53 @@ Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être in
 
 Étant donné que le client d’étiquetage unifié et le client Classic requièrent une installation distincte pour Office, vous devez télécharger et installer ces clients à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
 
-Quel client devez-vous utiliser ?
+Utilisez les sections suivantes pour vous aider à déterminer quel client est le mieux adapté à votre organisation :
 
-- Utilisez le **client d’étiquetage intégré à Office** pour vos ordinateurs Windows quand vous avez des applications Office 365 dont la version 1910 est minimale, que vous souhaitez utiliser les mêmes étiquettes et paramètres de stratégie que MacOS, iOS et Android, et que vous n’avez pas besoin de fonctionnalités dans vos applications Office qui requièrent le client d’étiquetage unifié ou le client Classic. Ces fonctionnalités incluent la barre de Information Protection sous le ruban pour faciliter la sélection et la visibilité des étiquettes. 
-    
-    Ce client prend en charge le basculement de comptes et parce qu’il n’utilise pas de complément Office, il offre de meilleures performances dans les applications Office que l’utilisation de l’un des clients Azure Information Protection. L’étiquetage étant intégré à Office, il n’y a pas d’installation et de maintenance distinctes pour ce client d’étiquetage. En outre, contrairement à un complément Office, il ne peut pas être désactivé.
+- [Client d’étiquetage Office intégré](#built-in-office-labeling-client)
+- [Client d’étiquetage unifié Azure Information Protection](#azure-information-protection-unified-labeling-client)
+- [Client Azure Information Protection Classic](#azure-information-protection-classic-client)
+- [Utilisation de plusieurs clients dans le même environnement](#using-multiple-clients-in-the-same-environment)
 
-- Utilisez l' **Azure information protection client d’étiquetage unifié** sur les ordinateurs Windows pour les étiquettes et les paramètres de stratégie qui peuvent également être utilisés par MacOS, iOS et Android. vous souhaitez étiqueter les fichiers indépendamment des applications Office 365 et vous n’avez pas besoin de fonctionnalités qui ne sont prises en charge que par le client classique. Ces fonctionnalités incluent actuellement la protection du contenu avec une clé locale (HYOK) et une version de disponibilité générale du scanneur pour les magasins de données locaux.
+Pour plus d’informations, consultez : [comparaisons détaillées pour les clients](#detailed-comparisons-for-the-azure-information-protection-clients) et les [fonctionnalités AIP non planifiés pour le client d’étiquetage unifié](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client).
 
-- Installez le **client Azure information protection (Classic)** sur les ordinateurs Windows si vous avez besoin d’une version du client qui possède des fonctionnalités qui ne sont pas encore disponibles avec le client d’étiquetage unifié. Bien que ce client puisse utiliser les mêmes étiquettes que celles utilisées par MacOS, iOS et Android, il possède des paramètres de stratégie différents. Votre compromis est donc l’administration à l’aide d’un autre portail de gestion et d’une expérience utilisateur différente pour les utilisateurs.
+> [!NOTE]
+> La dernière version du client d’étiquetage unifié l’amène à fermer la parité dans les fonctionnalités avec le client classique. À mesure que cet intervalle se ferme, vous pouvez vous attendre à ce que les nouvelles fonctionnalités soient ajoutées uniquement au client d’étiquetage unifié. 
+>
+> Nous vous recommandons de déployer le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise.
+> 
 
-La dernière version du client d’étiquetage unifié l’amène à fermer la parité dans les fonctionnalités avec le client classique. À mesure que cet intervalle se ferme, vous pouvez vous attendre à ce que les nouvelles fonctionnalités soient ajoutées uniquement au client d’étiquetage unifié. Pour cette raison, nous vous recommandons de déployer le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise. Si ce n’est pas le cas, ou si vous avez configuré des étiquettes dans le Portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client classique.
+### <a name="built-in-office-labeling-client"></a>Client d’étiquetage Office intégré
+
+Le client d’étiquetage intégré à Microsoft Office :
+
+- Nécessite un ordinateur Windows avec les applications Office 365, version minimale 1910
+- Vous permet de partager des étiquettes et des paramètres de stratégie qui peuvent également être utilisés par macOS, iOS et Android
+- Prend en charge le basculement de comptes
+- Offre de meilleures performances dans les applications Office
+- Ne nécessite pas d’installation et de maintenance distinctes
+- Ne peut être désactivée.
+
+**N’utilisez pas** le client d’étiquetage Office intégré Si vous avez besoin de fonctionnalités fournies uniquement par les clients d’étiquetage classiques ou unifiés, tels que la barre de information protection sous le ruban. Cette barre facilite la sélection et la visibilité des étiquettes.
+
+### <a name="azure-information-protection-unified-labeling-client"></a>Client d’étiquetage unifié Azure Information Protection
+
+Le client d’étiquetage unifié requiert un ordinateur Windows et vous permet de partager des étiquettes et des paramètres de stratégie qui peuvent également être utilisés par macOS, iOS et Android.
+
+**N’utilisez** pas le client d’étiquetage unifié si les fonctionnalités d’étiquetage unifiées actuelles ne répondent pas aux besoins de votre entreprise ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md).
+
+### <a name="azure-information-protection-classic-client"></a>Client Azure Information Protection Classic
+
+Le client classique :
+
+- Nécessite un ordinateur Windows
+- Permet d’accéder à des fonctionnalités qui ne sont pas encore disponibles sur le client d’étiquetage unifié, telles que la conservation de votre propre clé locale (HYOK) et d’une version de disponibilité générale du scanneur pour les magasins de données locaux. 
+- Vous permet de partager des étiquettes avec macOS, iOS et Android
+
+Toutefois, le client classique possède des paramètres de stratégie différents pour macOS, iOS et Android. Ainsi, bien que vous souhaitiez utiliser les fonctionnalités supplémentaires, vous devez utiliser un portail de gestion et une expérience utilisateur distincts pour protéger le contenu sur les systèmes d’exploitation.
+
+**N’utilisez pas** le client classique si vous souhaitez que les fonctionnalités plus récentes soient disponibles uniquement dans le client d’étiquetage unifié ou pour fournir une expérience utilisateur unifiée et centralisée.
+
+### <a name="using-multiple-clients-in-the-same-environment"></a>Utilisation de plusieurs clients dans le même environnement
 
 Vous pouvez utiliser différents clients dans le même environnement pour prendre en charge différents besoins de l’entreprise, comme illustré dans l’exemple de déploiement suivant. Dans un environnement client mixte, nous vous recommandons d’utiliser des étiquettes unifiées afin que les clients partagent le même ensemble d’étiquettes pour faciliter l’administration. Par défaut, les nouveaux clients ont des étiquettes unifiées, car leurs locataires se trouvent sur la plateforme d’étiquetage unifiée. Pour plus d’informations, consultez [Comment puis-je déterminer si mon locataire se trouve sur la plateforme d’étiquetage unifiée ?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
@@ -74,7 +110,7 @@ Si vous disposez d’un ordinateur Windows qui exécute les applications Office 
 
 - Pour la majorité des utilisateurs, vous déployez le client d’étiquetage unifié Azure Information Protection, car ce client répond aux besoins de l’entreprise pour ces utilisateurs. 
     
-    Pour ces utilisateurs, leur étiquetage est très similaire sur Windows, Mac, iOS et Android, car ils ont les mêmes étiquettes publiées et les mêmes paramètres de stratégie. En tant qu’administrateur, vous gérez ces étiquettes et paramètres de stratégie dans le même centre de gestion.
+    Pour ces utilisateurs, leur étiquetage est similaire sur Windows, Mac, iOS et Android, car ils ont les mêmes étiquettes publiées et les mêmes paramètres de stratégie. En tant qu’administrateur, vous gérez ces étiquettes et paramètres de stratégie dans le même centre de gestion.
 
 - Vous installez également le client d’étiquetage unifié pour vous-même, afin de tester le scanneur Azure Information Protection.
 
@@ -88,7 +124,7 @@ Si vous disposez d’un ordinateur Windows qui exécute les applications Office 
 
 Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge par les trois clients d’étiquetage pour les ordinateurs Windows.
 
-Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées à Office sur différentes plateformes de système d’exploitation (Windows, MacOS, iOS et Android) et pour le Web, consultez la documentation de conformité Microsoft 365, [prise en charge des fonctionnalités d’étiquette de sensibilité dans les applications](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Cette documentation comprend également les numéros de version Office ou les informations de canal Office Update pour les fonctionnalités prises en charge.
+Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées à Office sur différentes plateformes de système d’exploitation (Windows, macOS, iOS et Android) et pour le Web, consultez la documentation de conformité Microsoft 365, [prise en charge des fonctionnalités d’étiquette de sensibilité dans les applications](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Cette documentation comprend également les numéros de version Office ou les informations de canal Office Update pour les fonctionnalités prises en charge.
 
 |Fonctionnalité|Client classique|Client d’étiquetage unifié|Client d’étiquetage Office intégré|
 |:------|:------------:|:---------------------:|:-----------------------------:|
@@ -101,7 +137,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | **Oui** |
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
-|Les personnalisations sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
+|Les personnalisations sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />-Afficher les messages dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
 |Scanneur pour magasins de données locaux :| **Oui** | **Oui<br />** | Non |
 |Création centralisée de rapports (analytique) :| **Oui** | **Oui** | Non |
 |Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| Non |
@@ -153,8 +189,8 @@ Lorsque le client Azure Information Protection (Classic) et le Azure Information
 |Paramétrage :| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|
 |Gérer la barre Information Protection dans les applications Office :|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Protéger** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, par défaut, elle est masquée dans cette application, mais continue de s’afficher automatiquement dans les applications récemment ouvertes. <br /><br /> Pour les administrateurs : <br /><br />- Paramètres de stratégie permettant d’afficher ou de masquer automatiquement la barre à la première ouverture d’une application, et de contrôler si la barre reste automatiquement masquée pour les applications récemment ouvertes une fois qu’un utilisateur a choisi de masquer la barre|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Critère de diffusion** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, celle-ci est masquée dans cette application et dans les applications récemment ouvertes <br /><br />Pour les administrateurs : <br /><br />-Paramètre PowerShell pour gérer la barre |
-|Couleur d’étiquette : | À configurer dans le portail Azure | Conservé après la migration des étiquettes et configurable avec [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
-|Les étiquettes prennent en charge différentes langues :| À configurer dans le portail Azure | Configurer à l’aide d' [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
+|Couleur d’étiquette : | Configurer dans le portail Azure | Conservé après la migration des étiquettes et configurable avec [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|Les étiquettes prennent en charge différentes langues :| Configurer dans le portail Azure | Configurer à l’aide d' [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
 |Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures <br /><br />Pour le scanneur : toutes les heures et lorsque le service démarre et que la stratégie est antérieure à une heure| Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures <br /><br />Pour le scanneur : toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
 |Fichiers protégés de façon générique (. pfile) ouverts avec la visionneuse :| Le fichier s’ouvre dans l’application d’origine, où il peut ensuite être affiché, modifié et enregistré sans protection | Le fichier s’ouvre dans l’application d’origine, où il peut ensuite être affiché et modifié, mais pas enregistré|

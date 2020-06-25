@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "78973171"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665705"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -40,13 +40,13 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 2. L’un des clients Azure Information Protection suivants est installé sur votre ordinateur :
     
-    - Le client classique : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** depuis la page Azure Information Protection.
+    - Le client classique : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** depuis la page Azure Information Protection.
     
-    - Le client d’étiquetage unifié : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection_UL.exe** depuis la page Azure Information Protection.
+    - Le client d’étiquetage unifié : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) et téléchargez **AzInfoProtection_UL.exe** depuis la page Azure Information Protection.
     
 3. SQL Server Express est également installé sur votre ordinateur.
     
-    Si cette édition SQL Server n’est pas déjà installée, vous pouvez la télécharger à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express) et sélectionner une installation de base.
+    Si cette édition SQL Server n’est pas déjà installée, vous pouvez la télécharger à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/sql-server/sql-server-editions-express) et sélectionner une installation de base.
 
 4. Votre compte de domaine est synchronisé avec Azure AD.
 

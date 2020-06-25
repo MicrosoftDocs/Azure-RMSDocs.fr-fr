@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 904898a5832a2c178ca7e1a8308d95998e926ad7
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: e218d27a877263d450e965b3a8a6ec97d527dacb
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483318"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665994"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
@@ -52,7 +52,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 3. Le client Azure Information Protection (classique) est installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
     
-    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. Si vous utilisez un autre client d’étiquetage que le client classique, consultez la [documentation sur la conformité Microsoft 365](/microsoft-365/compliance/sensitivity-labels) pour des instructions équivalentes à ce tutoriel.
+    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. Si vous utilisez un autre client d’étiquetage que le client classique, consultez la [documentation sur la conformité Microsoft 365](/microsoft-365/compliance/sensitivity-labels) pour des instructions équivalentes à ce tutoriel.
 
 4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     
@@ -122,7 +122,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
 4. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée. Cette option utilise le service Azure Rights Management pour protéger les documents et les e-mails. Vérifiez aussi que l’option **Définir les autorisations** est sélectionnée. Ensuite, sélectionnez **Ajouter des autorisations**.
 
-5. Dans le volet **Ajouter des autorisations**, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
+5. Dans le volet **Ajouter des autorisations**, sélectionnez **Ajouter\<organization name> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
     
     ![Accorder des autorisations de protection à tous les membres pour une étiquette Azure Information Protection](./media/info-protect-protection-all-members.png) 
     

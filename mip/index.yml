@@ -1,21 +1,28 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Microsoft Information Protection
+### YamlMime:Landing
+title: Documentation Microsoft Information Protection
+summary: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
 metadata:
-  title: Documentation de Microsoft Information Protection
-  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
-  author: msmbaldwin
-  manager: barbkess
-  ms.service: information-protection
+  title: Documentation Microsoft Information Protection
+  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
   services: information-protection
+  ms.service: information-protection
   ms.topic: landing-page
-  ms.date: 09/26/2018
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
   ms.author: mbaldwin
-  layout: LandingPage
-abstract:
-  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
-sections:
-  - title: Kit SDK Microsoft Information Protection
-    items:
-      - type: paragraph
-        text: Commencez avec la <a href="develop/">vue d’ensemble du kit SDK Microsoft Information Protection.</a>
+  ms.date: 06/24/2020
+  ms.openlocfilehash: e009dd37014b10d9d48ea7fe72eabda31abc15c8
+  ms.sourcegitcommit: 6b5fd79603d55f67d47885595e704065dda2bda9
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 06/25/2020
+  ms.locfileid: "85372398"
+landingContent:
+- title: Kit SDK Microsoft Information Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: En savoir plus sur le kit SDK MIP
+      url: ./develop/overview.md
+    - text: Bien démarrer avec le kit SDK MIP
+      url: ./develop/setup-configure-mip.md

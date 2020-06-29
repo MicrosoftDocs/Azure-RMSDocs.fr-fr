@@ -1,62 +1,94 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Documentation du kit SDK Microsoft Information Protection
+summary: Documentation du kit SDK Microsoft Information Protection – Tutoriels et informations de référence sur les API
 metadata:
-  title: Documentation du kit SDK Microsoft Information Protection – Tutoriels et informations de référence sur les API
-  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
+  title: Documentation du kit SDK Microsoft Information Protection
+  description: Documentation du kit SDK Microsoft Information Protection – Tutoriels et informations de référence sur les API
   services: information-protection
-  author: msmbaldwin
-  manager: barbkess
-  layout: LandingPage
-  ms.assetid: null
   ms.service: information-protection
-  ms.tgt_pltfrm: na
-  ms.devlang: na
   ms.topic: landing-page
-  ms.date: 09/26/2018
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
   ms.author: mbaldwin
-abstract:
-  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
-  aside:
-    image:
-      alt: "Vidéo MIP SDK @ Ignite\_2018"
-      height: 112
-      src: media/index/kartik-tom-mip-sdk.png
-      width: 250
-    title: "MIP SDK @ Ignite\_2018"
-    href: 'https://www.youtube.com/embed/V02HTllv54s'
-    width: 250
-sections:
-  - title: Guides de démarrage rapide de 5 minutes
-    description: 'Après avoir réalisé <a href="setup-configure-mip">l’installation et la configuration</a>, consultez les guides de démarrage rapide du kit SDK MIP.'
-    items:
-      - type: table
-        style: dataMatrix
-        columns:
-          - image:
-              src: ./media/index/logo_Cplusplus.svg
-            title: C++
-          - image:
-              src: media/index/logo_Csharp.svg
-            title: 'C#'
-        rows:
-          - title: Initialisation d’application
-            values:
-              - href: quick-app-initialization-cpp.md
-              - href: quick-app-initialization-csharp.md
-          - title: Utiliser l’API de fichier pour lister les étiquettes de sensibilité
-            values:
-              - href: quick-file-list-labels-cpp.md
-              - href: quick-file-list-labels-csharp.md
-          - title: Utiliser l’API de fichier pour définir/obtenir une étiquette sur un fichier
-            values:
-              - href: quick-file-set-get-label-cpp.md
-              - href: quick-file-set-get-label-csharp.md
-  - title: Référence
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: Langues
-            html: <p><a href="reference/mip-sdk-reference">C++</a></p>
+  ms.date: 06/24/2020
+  ms.openlocfilehash: 9c12d77f61a85446c04c5ba706206edd204faf96
+  ms.sourcegitcommit: 6b5fd79603d55f67d47885595e704065dda2bda9
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 06/25/2020
+  ms.locfileid: "85372415"
+landingContent:
+- title: Vue d’ensemble
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: À propos du kit SDK Microsoft Information Protection
+      url: overview.md
+- title: Prise en main
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Installation et configuration du kit SDK MIP
+      url: setup-configure-mip.md
+    - text: Implémenter la protection AD RMS
+      url: quick-app-adrms.md
+- title: Démarrages rapides C++
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Initialisation d’une application cliente
+      url: quick-app-initialization-cpp.md
+    - text: Lister les étiquettes de confidentialité
+      url: quick-file-list-labels-cpp.md
+    - text: Définir et obtenir des étiquettes de confidentialité
+      url: quick-file-set-get-label-cpp.md
+    - text: Abaisser l’étiquette de confidentialité sur un fichier
+      url: quick-file-justify-actions-cpp.md
+    - text: Republier un fichier
+      url: quick-file-republishing-cpp.md
+    - text: Traiter les fichiers e-mail .msg
+      url: quick-email-msg-cpp.md
+    - text: Initialiser les applications
+      url: quick-protection-app-initialization-cpp.md
+    - text: Modèles de liste
+      url: quick-protection-list-templates-cpp.md
+    - text: Chiffrer et déchiffrer du texte
+      url: quick-protection-encrypt-decrypt-text-cpp.md
+- title: Démarrages rapides C#
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Initialisation d’une application cliente
+      url: quick-app-initialization-csharp.md
+    - text: Lister les étiquettes de confidentialité
+      url: quick-file-list-labels-csharp.md
+    - text: Définir et obtenir des étiquettes de confidentialité
+      url: quick-file-set-get-label-csharp.md
+    - text: Abaisser l’étiquette de confidentialité sur un fichier
+      url: quick-file-justify-actions-csharp.md
+    - text: Republier un fichier
+      url: quick-file-republishing-csharp.md
+    - text: Traiter les fichiers e-mail .msg
+      url: quick-email-msg-csharp.md
+    - text: Initialiser les applications
+      url: quick-protection-app-initialization-csharp.md
+    - text: Modèles de liste
+      url: quick-protection-list-templates-csharp.md
+    - text: Chiffrer et déchiffrer du texte
+      url: quick-protection-encrypt-decrypt-text-csharp.md
+- title: Concepts
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Concepts des API
+      url: concept-apis-use-cases.md
+    - text: Concepts relatifs aux objets MipContext
+      url: concept-mipcontext.md
+    - text: Stockage de cache
+      url: concept-cache-storage.md
+    - text: Consentement
+      url: concept-consent-cpp.md
+    - text: Étiquettes
+      url: concept-classification-labels.md
+    - text: Métadonnées
+      url: concept-mip-metadata.md

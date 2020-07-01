@@ -2,9 +2,9 @@
 title: Configurations personnalisées-Azure Information Protection client d’étiquetage unifié
 description: Informations sur la personnalisation de l’Azure Information Protection client d’étiquetage unifié pour Windows.
 author: mlottner
-ms.author: bagol
+ms.author: mlottner
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 901b036a333e5d801888176a020a8f60932ec2c8
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: 9e77e09d19e19d2d062dc526927176c1645abbe0
+ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716156"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -151,7 +151,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |RunAuditInformationTypesDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
-|ScannerFSAttributesToSkip | [Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|ScannerFSAttributesToSkip | [Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
 |UseCopyAndPreserveNTFSOwner | [Conserver les propriétaires NTFS pendant l’étiquetage](#preserve-ntfs-owners-during-labeling-public-preview)
 
 Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée « global » :
@@ -1206,7 +1206,7 @@ Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
 Ce paramètre de registre ne modifie pas les informations qui sont envoyées à Azure Information Protection pour la [création de rapports centraux](../reports-aip.md).
 
-## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview"></a>Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier (préversion publique)
+## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes"></a>Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 

@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection l’historique des versions du client d’étiquetage unifié-version & la stratégie de support
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,18 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1e91bcbfca3d4f925750fd8d1f135bd8f4ff2c4
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 7e3ac45d3665d342ddee3f1523b964c2f768db84
+ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84250041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716085"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>
+> **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -61,11 +63,11 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## <a name="version-27950-public-preview"></a>Version préliminaire publique de la version 2.7.95.0
+## <a name="version-27960"></a>Version 2.7.96.0 
 
-Scanner d’étiquetage unifié et client (version préliminaire publique) version 2.7.95.0
+2.7.96.0 de la version du client et du scanneur d’étiquetage unifiée
 
-**Publication** le 06/01/2020
+**Publication** le 06/29/2020
 
 **Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié :**
 
@@ -79,7 +81,7 @@ Scanner d’étiquetage unifié et client (version préliminaire publique) versi
 
 - Vous pouvez désormais gérer et limiter la consommation maximale de l’UC sur l’ordinateur du scanneur. Découvrez comment empêcher l’utilisation de l’UC de 100% et gérer l’utilisation de votre UC à l’aide de [deux nouveaux paramètres avancés **ScannerMaxCPU**et **ScannerMinCPU**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption). 
 
-- Vous pouvez maintenant configurer le scanneur d’étiquetage unifié pour ignorer des fichiers spécifiques en fonction de leurs attributs de fichier. Définissez la liste des attributs de fichier qui déclenchent l’omission d’un fichier à l’aide du nouveau paramètre avancé **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)** .
+- Vous pouvez maintenant configurer le scanneur d’étiquetage unifié pour ignorer des fichiers spécifiques en fonction de leurs attributs de fichier. Définissez la liste des attributs de fichier qui déclenchent l’omission d’un fichier à l’aide du nouveau paramètre avancé **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** .
 
 **Nouvelles fonctionnalités pour le client d’étiquetage unifié :**
 
@@ -93,7 +95,7 @@ Scanner d’étiquetage unifié et client (version préliminaire publique) versi
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d'informations, voir :
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)
 
@@ -125,6 +127,8 @@ Pour plus d’informations sur la configuration requise, consultez [firewalls an
 
 - Les [variables utilisateur dynamiques](../configure-policy-markings.md#using-variables-in-the-text-string) sont désormais affichées dans les marquages visuels d’un document comme prévu.
 
+- Problème où seule la première page du contenu d’un fichier PDF était utilisée pour l’application des règles de classification automatique est maintenant résolue, et la classification automatique basée sur tout le contenu du fichier PDF se déroule désormais comme prévu. Pour plus d’informations sur la classification et l’étiquetage, consultez le [Forum aux questions sur la classification et l’étiquetage](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
+
 - Lorsque plusieurs comptes Exchange sont configurés et que le client Azure Information Protection Outlook est activé, les messages électroniques sont envoyés à partir du compte secondaire comme prévu. Pour plus d’informations sur la configuration du client d’étiquetage unifié avec Outlook, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 - Lorsqu’un document avec une étiquette de confidentialité plus élevée est glissé et déposé dans un message électronique, le message électronique reçoit désormais automatiquement l’étiquette de confidentialité la plus élevée comme prévu. Pour plus d’informations sur l’étiquetage des fonctionnalités clientes, consultez le [tableau comparatif des clients d’étiquetage](use-client.md#compare-the-labeling-clients-for-windows-computers).
@@ -135,10 +139,11 @@ Pour plus d’informations sur la configuration requise, consultez [firewalls an
 
     Le paramètre avancé **UseCopyAndPreserveNTFSOwner** nécessite une connexion réseau fiable et à faible latence entre le scanneur et le référentiel analysé.
 
-
 ## <a name="version-261110"></a>Version 2.6.111.0 
 
 **Publication** le 03/09/2020
+
+Pris en charge jusqu’à 12/29/2020
 
 **Nouvelles fonctionnalités :**
 

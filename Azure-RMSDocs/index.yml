@@ -12,12 +12,12 @@ metadata:
   ms.author: mlottner
   manager: rkarlin
   ms.date: 04/02/2019
-  ms.openlocfilehash: 28aee5d35982e832cbe6a43782a3b9c7a85700ee
-  ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+  ms.openlocfilehash: 63026df891e74f05bf8bcf570f852840aa991cce
+  ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "80587499"
+  ms.lasthandoff: 07/07/2020
+  ms.locfileid: "86048423"
 landingContent:
 - title: À propos d’Azure Information Protection
   linkLists:
@@ -51,8 +51,8 @@ landingContent:
     links:
     - text: 5 sessions Ignite principales recommandées
       url: what-is-information-protection.md#microsoft-ignite
-    - text: Détails de la version 2.6.111.0 - Client d’étiquetage unifié
-      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: Dernière version du client d’étiquetage unifié
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: Classer et protéger les données dans des magasins de données locaux
   linkLists:
   - linkListType: how-to-guide
@@ -97,5 +97,5 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Création centralisée de rapports (préversion)
+    - text: Création centralisée de rapports
       url: reports-aip.md

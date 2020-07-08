@@ -173,8 +173,26 @@
           href: secure-collaboration-documents.md
         - name: Configuration des règles de flux de messagerie pour les étiquettes Azure Information Protection
           href: configure-exo-rules.md
-        - name: Déploiement du scanneur Azure Information Protection
-          href: deploy-aip-scanner.md
+        - name: Scanneur d’étiquetage unifié Azure Information Protection
+          items:
+            - name: Vue d’ensemble
+              href: deploy-aip-scanner.md
+            - name: Prérequis du scanneur d’étiquetage unifié
+              href: deploy-aip-scanner-prereqs.md
+            - name: Configurer et installer le scanneur d’étiquetage unifié
+              href: deploy-aip-scanner-configure-install.md
+            - name: Exécuter le scanneur d’étiquetage unifié
+              href: deploy-aip-scanner-manage.md
+        - name: Scanneur classique Azure Information Protection
+          items:
+            - name: Vue d’ensemble
+              href: deploy-aip-scanner-classic.md
+            - name: Prérequis du scanneur classique
+              href: deploy-aip-scanner-prereqs-classic.md
+            - name: Configurer et installer le scanneur classique
+              href: deploy-aip-scanner-configure-install-classic.md
+            - name: Exécuter le scanneur classique
+              href: deploy-aip-scanner-manage-classic.md
         - name: Création de rapports pour Azure Information Protection
           href: reports-aip.md
         - name: Déploiement du connecteur RMS
@@ -297,6 +315,12 @@
                       href: ./rms-client/client-protection-only-mode.md
                     - name: Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
                       href: ./rms-client/upgrade-client-app.md
+        - name: Applications Azure Information Protection pour iOS et Android
+          items:
+            - name: Vue d’ensemble
+              href: ./rms-client/mobile-app-faq.md
+            - name: Commencer à utiliser les applications mobiles AIP
+              href: ./rms-client/mobile-app-get-started.md
         - name: Lecteurs PDF protégés
           items:
             - name: Vue d’ensemble

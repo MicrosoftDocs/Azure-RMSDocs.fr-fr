@@ -1,32 +1,32 @@
 ---
 title: 'Démarrage rapide : rechercher les informations sensibles à l’aide du scanneur Azure Information Protection'
 description: Utilisez le scanneur Azure Information Protection pour rechercher les informations sensibles consignées dans les fichiers stockés localement.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 07/01/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 82900a08a630987c52b2352725f3542e50b9c50a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665705"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048406"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Lors de ce démarrage rapide, vous autoriserez SharePoint à permettre l’analyse, et vous installerez et configurerez le scanneur Azure Information Protection pour trouver des informations sensibles dans vos fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
+Dans ce guide de démarrage rapide, vous autoriserez SharePoint à permettre l’analyse, puis vous installerez et configurerez le scanneur Azure Information Protection pour trouver des informations sensibles dans vos fichiers stockés dans un magasin de données local, comme un partage réseau ou un serveur SharePoint.
 
 > [!NOTE]
 > Vous pouvez utiliser ce guide de démarrage rapide avec la version en disponibilité générale actuelle du client Azure Information Protection (classique) ou la version en disponibilité générale du client d’étiquetage unifié Azure Information Protection qui inclut le scanneur.
 >  
-> Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 
 Cette configuration prend moins de 15 minutes.
 
@@ -58,7 +58,7 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 Pour effectuer un test initial afin de confirmer que le scanneur fonctionne :
 
-1. Créez un dossier local sur votre ordinateur. Par exemple, **TestScanner** sur votre lecteur C local.
+1. Créez un dossier sur un partage réseau accessible. Par exemple, nommez ce dossier **TestScanner**.
 
 2. Créez et enregistrez un document Word dans ce dossier, contenant le texte **Carte de crédit : 4242-4242-4242-4242**.
 
@@ -107,7 +107,7 @@ Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail 
     
     Les paramètres configurent le scanneur pour une détection à usage unique de tous les fichiers dans vos référentiels de données spécifiés. Cette analyse recherche tous les types connus d’informations sensibles et ne nécessite aucune configuration préalable de vos étiquettes Azure Information Protection ou paramètres de stratégie.
 
-6. Maintenant que le profil est créé et enregistré, vous pouvez revenir à l’option **Configurer des référentiels** pour spécifier votre dossier local en tant que magasin de données à analyser.
+6. Maintenant que le profil est créé et enregistré, vous pouvez revenir à l’option **Configurer des référentiels** pour spécifier votre dossier réseau en tant que magasin de données à analyser.
     
     Toujours dans le volet **Ajouter un nouveau profil**, sélectionnez **Configurer les référentiels** pour ouvrir le volet **Référentiels** :
     
@@ -117,7 +117,7 @@ Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail 
     
     ![Ajouter un référentiel de données pour le scanneur Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Dans le volet **Référentiel**, spécifiez votre dossier local que vous avez créé dans la première étape. Par exemple : `C:\TestScanner`
+8. Dans le volet **Référentiel**, spécifiez le dossier que vous avez créé au cours de la première étape. Par exemple : `\\server\TestScanner`
     
     Pour les autres paramètres de ce volet, ne les modifiez pas, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
     
@@ -133,10 +133,12 @@ Vous pouvez maintenant installer le scanneur avec le profil de scanneur que vous
 
 1. Ouvrez une session PowerShell avec l’option **Exécuter en tant qu’administrateur**.
 
-2. Utilisez la commande suivante pour installer le scanneur, en spécifiant le nom de votre ordinateur et le nom du profil que vous avez enregistré dans le portail Azure :
-    
-        Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
-    
+2. Utilisez la commande suivante pour installer le scanneur, en spécifiant le nom de votre partage réseau et le nom du profil que vous avez enregistré dans le portail Azure :
+
+    ```ps
+    Install-AIPScanner -SqlServerInstance <your network share name>\SQLEXPRESS -Profile <profile name>
+    ```
+
     Lorsque vous y êtes invité, fournissez vos propres informations d’identification pour le scanneur au format \<domain\user name>, puis saisissez votre mot de passe. 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Démarrer l’analyse et confirmer la fin de l’opération
@@ -164,19 +166,16 @@ Dans Excel, les deux premières colonnes affichent le nom du répertoire du maga
 ## <a name="scan-your-own-data"></a>Analyser vos propres données
 
 1. Modifiez votre profil du scanneur et ajoutez un nouveau référentiel de données, cette fois en spécifiant vos propres magasin de données locaux dans lesquels vous souhaitez rechercher des informations sensibles.     
-    Vous pouvez spécifier un dossier local, un partage réseau (chemin UNC) ou une URL SharePoint Server pour un site SharePoint ou une bibliothèque. 
+    Vous pouvez spécifier un partage réseau (chemin UNC) ou une URL SharePoint Server pour une bibliothèque ou un site SharePoint. 
     
-    - Exemple pour un dossier local :
-        
-            D:\Data\Finance
-    
-    - Exemple pour un partage réseau
-        
-            \\NAS\HR
-    
-    - Exemple pour un dossier SharePoint :
-        
-            http://sp2016/Shared Documents
+    - **Exemple pour un partage réseau**
+        ```sh        
+        \\NAS\HR
+        ```
+    - **Exemple pour un dossier SharePoint**
+        ```sh
+        http://sp2016/Shared Documents
+        ```
 
 2. Redémarrez le scanneur à nouveau : Dans le volet **Azure Information Protection - Profils**, assurez-vous que votre profil est sélectionné, puis sélectionnez l’option **Analyser maintenant** :
     
@@ -192,7 +191,9 @@ Dans un environnement de production, vous exécutez le scanneur sur un serveur W
 
 Pour nettoyer les ressources et les préparer pour ce déploiement de production, dans votre session PowerShell, exécutez la commande suivante pour désinstaller le scanneur :
 
-    Uninstall-AIPScanner
+```ps
+Uninstall-AIPScanner
+```
 
 Puis redémarrez votre ordinateur.
 

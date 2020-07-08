@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4c9a13c0bfcaa98d19c3ed39c6e00d921c6f572a
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: aadbd0cb27878d33c6e9822660a404e82eeeb222
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665416"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048967"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
 >*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
 >
-> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -221,12 +221,12 @@ Par défaut, le scanneur exclut également les mêmes types de fichier que le cl
 
 Vous pouvez changer les types de fichiers inclus ou exclus pour l’inspection des fichiers par le scanneur :
 
-- Configurez les **types de fichiers à analyser** dans le profil du scanneur, [à l’aide du portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
+- Configurez les **types de fichiers à analyser** dans le profil du scanneur [à l’aide de l’portail Azure](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > Si vous incluez des fichiers .rtf pour l’analyse, surveillez attentivement le scanneur. Certains fichiers .rtf ne peuvent pas être inspectés par le scanneur. En effet, pour ces fichiers, l’inspection n’aboutit pas et le service doit être redémarré. 
 
-Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). Pour modifier ce comportement du scanneur, modifiez le Registre et spécifiez les autres types de fichiers que vous souhaitez protéger. Pour obtenir des instructions, consultez [modifications du Registre pour modifier les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) contre les instructions de déploiement de l’analyseur.
+Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). Pour modifier ce comportement du scanneur, modifiez le Registre et spécifiez les autres types de fichiers que vous souhaitez protéger. Pour obtenir des instructions, consultez [utiliser le registre pour changer les types de fichiers protégés](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) des instructions de déploiement de l’analyseur.
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Fichiers qui ne peuvent pas être protégés par défaut
 
@@ -274,7 +274,7 @@ Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileC
 
 1. Pour l’ordinateur exécutant le scanneur ou la session PowerShell, installez [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection générique (pfile), comme décrit dans [modifications du Registre pour changer les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) des instructions de déploiement de l’analyseur.
+2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection générique (pfile), comme décrit dans [utiliser le registre pour changer les types de fichiers protégés](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) des instructions de déploiement de l’analyseur.
 
 Exemple de scénario après avoir effectué ces étapes : 
 
@@ -286,7 +286,7 @@ Après avoir inspecté le fichier, le scanneur classifie ce fichier comme **Conf
 
 Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) peuvent utiliser la reconnaissance optique de caractères (OCR) pour inspecter les images TIFF avec une extension de nom de fichier .tiff quand vous installez la fonctionnalité Windows TIFF IFilter et configurez les [paramètres TIFF Windows IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) sur l’ordinateur qui exécute le scanneur ou la session PowerShell.
 
-Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. TIFF doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection native, comme décrit dans [modifications du Registre pour changer les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) par les instructions de déploiement de l’analyseur.
+Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. TIFF doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection native, comme décrit dans [utiliser le registre pour changer les types de fichiers protégés](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) des instructions de déploiement de l’analyseur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les ressources suivantes pour des informations supplémentaires nécessaires à la prise en charge de ce client :

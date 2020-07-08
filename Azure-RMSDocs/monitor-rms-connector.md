@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9fccaa7995b47dbabd9f0308eb206965cdaa7392
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: ba24185e8f8da86bc3801aa9307ae35f671a6c09
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117899"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049018"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -47,7 +47,7 @@ Si le connecteur ne parvient pas à se connecter au service Azure Rights Managem
 
 Comme avec toutes les entrées de journal des événements, examinez le message pour plus de détails.
 
-Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy Web pour que les serveurs du connecteur RMS ne puissent plus accéder à Internet (erreur 3001) ou supprime un compte d’ordinateur d’un groupe que vous avez spécifié comme autorisé à utiliser le connecteur (avertissement 2001) .
+Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy Web pour que les serveurs du connecteur RMS ne puissent plus accéder à Internet (erreur 3001) ou supprime un compte d’ordinateur d’un groupe que vous avez spécifié comme autorisé à utiliser le connecteur (avertissement 2001).
 
 ### <a name="event-log-ids-and-descriptions"></a>ID du journal des événements et descriptions
 
@@ -81,7 +81,7 @@ Cet événement est consigné quand un compte à partir d’un serveur local se 
 
 Information **1003**
 
-**La connexion à partir du client répertorié ci-dessous est passée d’une connexion non sécurisée (HTTP) à une connexion sécurisée (HTTPS).**
+**La connexion depuis le client répertorié ci-dessous est passée d’une connexion non sécurisée (HTTP) à une connexion sécurisée (HTTPS).**
 
 Cet événement est consigné quand un serveur local change sa connexion au connecteur RMS de HTTP (moins sécurisé) à HTTPS (plus sécurisé). Le SID, le nom du compte et le nom de l’ordinateur effectuant la connexion figurent dans le message de l’événement.
 
@@ -121,7 +121,7 @@ Le message d’événement contient des informations sur le compte et l’ordina
 
 Avertissement **2002**
 
-**La connexion à partir du client répertorié ci-dessous utilise une connexion non sécurisée (HTTP).**
+**La connexion depuis le client répertorié ci-dessous utilise une connexion non sécurisée (HTTP).**
 
 Cet événement est consigné quand un serveur local se connecte correctement au connecteur RMS, mais que la connexion utilise le protocole HTTP (moins sécurisé) au lieu du protocole HTTPS (plus sécurisé). Un événement est consigné par compte, plutôt que par connexion. Cet événement est redéclenché si le compte revient à HTTP après avoir basculé vers HTTPS.
 
@@ -161,7 +161,7 @@ Cet événement est consigné si le connecteur RMS ne peut pas télécharger la 
 
 ----
 
-## <a name="performance-counters"></a>Compteurs de performances
+## <a name="performance-counters"></a>Compteurs de performance
 
 Quand vous installez le connecteur RMS, il crée automatiquement les compteurs de performances du **connecteur Microsoft Rights Management** qui sont utiles pour surveiller et améliorer les performances de l’utilisation du service Azure Rights Management. 
 
@@ -183,13 +183,15 @@ Si vous avez besoin d’une journalisation plus détaillée à des fins de diagn
 
 2. Recherchez la ligne suivante :
 
-        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 3. Remplacez cette ligne par le texte suivant :
-
-        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 4.  Arrêtez et démarrez les services IIS pour activer le suivi. 
 
 5.  Quand vous avez capturé les traces dont vous avez besoin, rétablissez la ligne de l’étape 3, puis arrêtez et redémarrez les services IIS.
-

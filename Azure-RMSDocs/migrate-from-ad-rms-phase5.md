@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: cf946837e928c976cb3c8bc18fb6063866d5087e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971725"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049120"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -56,9 +56,11 @@ Si les clients migrés exécutent Office 2010, les utilisateurs peuvent rencontr
 
 Redirection par le biais du fichier d’hôte local :
 
-- Ajoutez la ligne suivante dans le fichier local hosts, `<AD RMS URL FQDN>` en remplaçant par la valeur de votre cluster AD RMS, sans préfixes ni pages Web :
+- Ajoutez la ligne suivante dans le fichier local hosts, en remplaçant `<AD RMS URL FQDN>` par la valeur de votre cluster AD RMS, sans préfixes ni pages Web :
 
-        127.0.0.1 <AD RMS URL FQDN>
+    ```sh
+    127.0.0.1 <AD RMS URL FQDN>
+    ```
 
 Redirection via DNS :
 
@@ -72,7 +74,7 @@ Une fois ces modifications DNS propagées, ces clients découvrent et commencent
 
 Pour forcer les ordinateurs Mac à exécuter immédiatement le processus de découverte, dans le trousseau, recherchez « adal » et supprimez toutes les entrées ADAL. Ensuite, exécutez les commandes suivantes sur ces ordinateurs :
 
-````
+````sh
 
 rm -r ~/Library/Cache/MSRightsManagement
 
@@ -98,21 +100,26 @@ Pour supprimer les contrôles d’intégration :
 
 1. Dans une session PowerShell, connectez-vous au service Azure Rights Management et indiquez vos informations d’identification d’administrateur général quand vous y êtes invité :
 
-        Connect-AipService
+    ```ps
+    Connect-AipService
 
-2. Exécutez la commande suivante, puis entrez **O** pour confirmer :
+2. Run the following command, and enter **Y** to confirm:
 
-        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```ps
+    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```
 
     Notez que cette commande supprime toute application de licence pour le service de protection Azure Rights Management, et ce pour que tous les ordinateurs puissent protéger les documents et les e-mails.
 
 3. Vérifiez que les contrôles d’intégration ne sont plus définis :
 
-        Get-AipServiceOnboardingControlPolicy
+    ```ps    
+    Get-AipServiceOnboardingControlPolicy
+    ```
 
     Dans la sortie, **Licence** doit indiquer **False** et aucun GUID n’est affiché pour **SecurityGroupOjbectId**
 
-Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** dans la bibliothèque du Planificateur de tâches Windows, désactivez cette tâche parce qu’elle n’est pas utilisée par le client Azure Information Protection. Cette tâche est généralement activée par l’utilisation d’une stratégie de groupe et prend en charge un déploiement AD RMS. Vous pouvez trouver cette tâche à l’emplacement suivant : client **Microsoft** > **Windows** > **services AD RMS (Active Directory Rights Management Services)**
+Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** dans la bibliothèque du Planificateur de tâches Windows, désactivez cette tâche parce qu’elle n’est pas utilisée par le client Azure Information Protection. Cette tâche est généralement activée par l’utilisation d’une stratégie de groupe et prend en charge un déploiement AD RMS. Vous pouvez trouver cette tâche à l’emplacement suivant : client **Microsoft**  >  **Windows**  >  **services AD RMS (Active Directory Rights Management Services)**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Étape 12. Renouveler votre clé de locataire Azure Information Protection
 
@@ -130,7 +137,10 @@ Pour renouveler votre clé de locataire Azure Information Protection :
 
 - **Si votre clé de locataire est gérée par Microsoft**: exécutez l’applet de commande PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) et spécifiez l’identificateur de clé pour la clé qui a été créée automatiquement pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant l’applet de commande [AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
 
-        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+        
+    ```ps
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+    ```
 
 - **Si votre clé de locataire est gérée par vous (BYOK)**: dans Azure Key Vault, répétez votre processus de création de clé pour votre locataire Azure information protection, puis exécutez à nouveau l’applet de commande [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) pour spécifier l’URI de cette nouvelle clé.
 

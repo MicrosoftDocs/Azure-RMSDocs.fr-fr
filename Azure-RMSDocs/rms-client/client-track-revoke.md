@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7eb260815def6727fcdbd393fd9453ac89cb8baf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 956eccb942893d6d8850185449118f4027895a81
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960740"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047505"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Une fois que vous avez protégé vos documents avec Azure Information Protection, vous pouvez suivre leur utilisation. Si nécessaire, vous pouvez également révoquer l’accès à ces documents si des personnes ne doivent plus être en mesure de les lire. Pour ce faire, vous utilisez le **site de suivi des documents**. Vous pouvez accéder à ce site à partir d’un ordinateur Windows ou Mac, d’une tablette ou d’un téléphone.
 
@@ -32,13 +32,13 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
 Actions que vous pouvez entreprendre sur le site de suivi de documents :
 
-- Si vous souhaitez arrêter le partage d’un document : 
+- Si vous voulez cesser le partage d'un document : 
     
     - Cliquez sur **Révoquer l'accès**. Notez la durée pendant laquelle le document reste disponible. Choisissez s’il faut permettre aux utilisateurs de savoir par un message personnalisé que vous révoquez l’accès au document que vous avez partagé précédemment. Quand vous révoquez un document, il n’est pas supprimé, mais les utilisateurs autorisés ne peuvent plus l’ouvrir :
         
         ![Icône Révoquer l’accès du site de suivi de document](../media/tracking-site-revoke-access-icon.png)
         
-- Si vous souhaitez exporter vers Excel : 
+- Si vous voulez exporter vers Excel : 
     
     - Cliquez sur **Exporter au format CSV**, de sorte que vous pouvez ensuite modifier les données et créer vos propres vues et graphiques :
          
@@ -54,7 +54,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
     
     - Les administrateurs d’Azure Information Protection peuvent cliquer sur l’icône Administrateur pour suivre et révoquer des documents protégés quand les utilisateurs ont inscrit leurs documents sur le site de suivi des documents. Cette icône n’est accessible qu’aux administrateurs :
         
-        ![Icône Administrateur du site de suivi de document](../media/tracking-site-admin-icon.png)
+        ![Icône Administrateur sur le site de suivi des documents](../media/tracking-site-admin-icon.png)
         
         Si vous ne voyez pas cette icône, alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 

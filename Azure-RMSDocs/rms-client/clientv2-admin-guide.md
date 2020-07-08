@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 76f87d66c2eacafc7883b905c3bc364f9b69f5a1
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: fcd773904dc9570715313a856d512c0bce54811c
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802854"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048763"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "84802854"
 >
 > **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
 >
-> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations de ce guide si vous êtes responsable de la Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, ou si vous souhaitez des informations plus techniques que celles figurant dans le Guide de l' [utilisateur du client d’étiquetage unifié Azure information protection](clientv2-user-guide.md). 
 
@@ -225,7 +225,7 @@ Si vous avez mis à niveau le scanneur à l’aide de la version préliminaire d
 
 2. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant le client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
+3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
     
     Cette étape permet de créer une base de données portant le nom **AIPScannerUL_ \<profile_name> **
 
@@ -240,7 +240,7 @@ Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de 
 
 À partir de la version 1.48.204.0, le scanneur obtient ses paramètres de configuration à partir du Portail Azure, à l’aide d’un profil de configuration. La mise à niveau du scanneur implique de demander au scanneur d’utiliser cette configuration en ligne et le client d’étiquetage unifié. la configuration hors connexion pour le scanneur n’est pas prise en charge.
 
-1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour obtenir de l’aide pour cette étape, consultez la section [configurer le scanneur dans la portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) dans les instructions de déploiement de l’analyseur.
+1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour obtenir de l’aide sur cette étape, consultez [configurer le scanneur dans le portail Azure](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) à partir des instructions de déploiement de l’analyseur.
 
 2. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
 

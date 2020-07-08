@@ -13,16 +13,16 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 12456200687cd907bb82a8b489414d3c9fa91bbe
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 6f37e0dc2132c85985135c512a6e369641a1bf01
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934923"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047046"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les paramètres de protection pour Azure Information Protection sont enregistrés dans des modèles de protection. Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des paramètres de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. 
 
@@ -38,9 +38,9 @@ Applets de commande prenant en charge la création et la gestion de modèles de 
 
 - [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)
 
-- [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
+- [AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
 
-- [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
+- [AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
 
 - [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
 
@@ -49,8 +49,6 @@ Applets de commande prenant en charge la création et la gestion de modèles de 
 - [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)
 
 - [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
-
-
 
 ## <a name="see-also"></a>Voir aussi
 [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)

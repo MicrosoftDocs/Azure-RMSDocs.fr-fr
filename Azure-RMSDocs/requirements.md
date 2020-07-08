@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: bcb3006bdd7575385d37be066b627ef49f770c70
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249842"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047709"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour la Azure Information Protection
 
@@ -91,7 +91,7 @@ Les systèmes d’exploitation suivants prennent en charge à la fois l’étiqu
 
 - **Windows server 2012 R2** et **Windows Server 2012**
 
-[Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails.
+[Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails.
 
 Pour plus d’informations sur la prise en charge dans les versions antérieures de Windows, contactez votre compte Microsoft ou un représentant du support technique.
 
@@ -104,7 +104,7 @@ Si vous utilisez des machines virtuelles, vérifiez si le fournisseur de logicie
 
 Par exemple, pour les solutions Citrix, vous devrez peut-être désactiver les hooks de l' [interface de programmation d’applications (API) Citrix](https://support.citrix.com/article/CTX107825) pour Office, le client d’étiquetage unifié Azure information protection ou le client Azure information protection. 
 
-Ces applications utilisent les fichiers suivants respectivement : **WINWORD. exe**, **Excel. exe**, **Outlook. exe**, **Powerpnt. exe**, **MSIP. app. exe**, **MSIP. Viewer. exe**
+Ces applications utilisent les fichiers suivants, respectivement : **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
 
 ### <a name="server-support"></a>Prise en charge du serveur
 
@@ -116,7 +116,7 @@ En outre, Server Core et nano Server ne sont pas pris en charge.
 
 ### <a name="additional-requirements-per-client"></a>Exigences supplémentaires par client
 
-Chaque client Azure Information Protection a des conditions préalables supplémentaires. Pour plus d'informations, consultez :
+Chaque client Azure Information Protection a des conditions préalables supplémentaires. Pour plus d’informations, consultez :
 
 - [Prérequis du client d’étiquetage unifié Azure Information Protection](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
@@ -130,15 +130,15 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
     Cette édition est prise en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management, également appelée Azure Information Protection pour Office 365.
 
-- **Office 365 ProPlus**
+- **Office 365 ProPlus**
 
 - **Office professionnel plus 2019**
 
-- **Office Professionnel Plus 2016**
+- **Office professionnel plus 2016**
 
 - **Office professionnel plus 2013 avec Service Pack 1**
 
-- **Office Professionnel Plus 2010 avec Service Pack 2**
+- **Office professionnel plus 2010 avec Service Pack 2**
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement, et les étiquettes qui appliquent la protection ne sont pas affichées pour les utilisateurs. 
 
@@ -166,10 +166,12 @@ Azure Information Protection présente les exigences supplémentaires suivantes�
 - **Connexions client à service TLS**. Ne mettez pas fin à des connexions de client à service TLS, par exemple pour effectuer une inspection au niveau du paquet, vers l’URL **aadrm.com** . Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
      
     Pour déterminer si votre connexion cliente est terminée avant d’atteindre le service Rights Management Azure, utilisez les commandes PowerShell suivantes :
-    
-        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-        $request.GetResponse()
-        $request.ServicePoint.Certificate.Issuer
+
+    ```ps
+    $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+    $request.GetResponse()
+    $request.ServicePoint.Certificate.Issuer
+    ```
 
     Le résultat doit indiquer que l’autorité de certification émettrice provient d’une autorité de certification Microsoft, par exemple : `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` . 
     

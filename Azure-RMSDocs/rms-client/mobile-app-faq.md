@@ -1,10 +1,10 @@
 ---
-title: FAQ relatives à l’application Azure Information Protection pour iOS et Android
-description: Quelques questions fréquemment posées pour vous aider à utiliser l’application Azure Information Protection pour iOS et Android
-author: mlottner
-ms.author: mlottner
+title: Applications Azure Information Protection pour iOS & Android
+description: Découvrez les principes de base des applications Azure Information Protection (AIP) pour les appareils iOS et Android
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,70 +12,86 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 0ccc3ae77d8113a6a3d1a1595a474bd39b1f3ede
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 0f849dfefa6af9ffd95dcca0c731ed216f465b11
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747078"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046400"
 ---
-# <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
+# <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Qu’est-ce que l’application Azure Information Protection pour iOS ou Android ?
 
 *S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Cette page fournit des réponses aux questions les plus fréquemment posées sur l’application Azure Information Protection pour iOS et Android.
+Les applications d’Azure Information Protection (AIP) pour iOS et Android vous permettent d’afficher les messages électroniques protégés par des droits (fichiers **. rpmsg** ) lorsque votre application de messagerie ne prend pas en charge la protection des données Rights Management en mode natif.  
 
-## <a name="what-can-i-do-with-the-azure-information-protection-app"></a>Que puis-je faire avec l’application Azure Information Protection ?
+Les applications AIP vous permettent également d’afficher des documents PDF protégés par des droits (fichiers PDF protégés et fichiers **. ppdf** ), des images et des fichiers texte.
 
-Cette application vous permet d’afficher des e-mails protégés par des droits (fichiers .rpmsg) si votre application de messagerie ne prend pas en charge la protection des données Rights Management. Cette application vous permet également d’afficher les documents PDF, les images et les fichiers texte protégés par des droits. 
+> [!NOTE]
+> Les applications AIP sont uniquement des observateurs et ne vous permettent pas de créer ou de répondre à des messages électroniques protégés, ni de créer ou de modifier des fichiers protégés. Les applications ne peuvent pas non plus ouvrir les pièces jointes des fichiers que vous affichez, comme les pièces jointes aux documents PDF protégés ou aux e-mails.
+>
 
-Cette application étant une visionneuse, vous ne pouvez pas l’utiliser pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés. En outre, l’application ne peut pas ouvrir de pièces jointes pour les fichiers que vous affichez. Par exemple, des pièces jointes dans des documents PDF protégés ou dans des e-mails protégés par des droits.
+## <a name="aip-mobile-app-requirements"></a>Configuration requise pour l’application mobile AIP
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive"></a>Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et OneDrive ?
+Les applications mobiles AIP pour iOS et Android peuvent être utilisées avec les systèmes suivants :
 
-Oui, vous pouvez ouvrir des fichiers PDF protégés que d’autres ont partagés avec vous via Microsoft SharePoint et OneDrive. Appuyez sur le lien, puis choisissez cette application pour ouvrir automatiquement le fichier. 
+- [Versions de système d’exploitation mobiles prises en charge](#supported-mobile-os-versions)
+- [Informations d’identification de connexion prises en charge](#supported-sign-in-credentials)
+- [Extensions de fichiers prises en charge](#supported-file-extensions)
 
-Cette application peut également ouvrir des fichiers PDF protégés en dehors de SharePoint et de OneDrive (fichiers PDF protégés et fichiers. ppdf).
+### <a name="supported-mobile-os-versions"></a>Versions de système d’exploitation mobiles prises en charge
 
-## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>Mon appareil mobile peut-il exécuter l’application Azure Information Protection ?
+Les applications mobiles AIP nécessitent l’un des systèmes d’exploitation mobiles minimaux suivants : 
 
-L’application Azure Information Protection nécessite une version minimale d' **iOS 11** ou **Android 6,0**. Notez que l’application Azure Information Protection **ne peut pas** s’exécuter sur des processeurs Intel. 
+- iOS 11 
+- Android 6,0 
 
-Si vous disposez de ces versions ou de versions ultérieures, vous pouvez installer l’application pour l'exécuter sur votre appareil mobile :
+> [!NOTE]
+> Les applications mobiles AIP ne sont pas prises en charge sur les processeurs Intel.
+> 
 
-- Si votre appareil mobile est géré par Microsoft Intune, vous pourrez peut-être installer l’application Azure Information Protection à partir de votre portail d’entreprise.
+### <a name="supported-sign-in-credentials"></a>Informations d’identification de connexion prises en charge
 
-- Si votre appareil mobile n’est pas géré par Microsoft Intune ou si Azure Information Protection n’est pas disponible sur votre portail d’entreprise, vous pouvez installer l’application directement à partir de l’iTunes Store et du Google Play Store, ou par un clic sur l’icône iOS ou Android dans la section **Appareils mobiles** sur la [page de téléchargement Azure Information Protection](https://portal.azurerms.com/#/download). 
+Pour vous connecter à AIP, utilisez l’une des méthodes suivantes : 
 
-## <a name="how-do-i-get-started-with-the-viewer-app"></a>Comment commencer à utiliser l’application de visionneuse ?
+- **Informations d’identification professionnelles ou scolaires.** Utilisez si votre organisation a déjà AD RMS localement avec l’extension d’appareil mobile, ou utilise Azure Information Protection.
+ 
+- **Compte Microsoft**. Si votre adresse de messagerie personnelle a été utilisée pour protéger le fichier, connectez-vous à l’aide d’un [compte Microsoft](https://signup.live.com). 
 
-Une fois que vous avez installé l’application, vous n’avez rien d’autre à faire à ce stade. Patientez jusqu'à ce que vous receviez un e-mail ou un fichier protégé que vous souhaitez afficher, puis choisissez la **visionneuse AIP** pour l’ouvrir. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire, ou invité à sélectionner un certificat. Une fois ces informations d’identification authentifiées, vous pourrez lire le contenu.
+    - Vous pouvez utiliser votre propre adresse de messagerie Hotmail, Gmail ou toute autre adresse de messagerie que vous possédez lorsque vous appliquez pour une compte Microsoft.
+    
+> [!NOTE]
+> Toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé. Pour plus d’informations, consultez [scénarios pris en charge pour l’ouverture de documents protégés](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+> 
 
-Toutefois, si vous ne souhaitez pas attendre, vous pouvez utiliser les instructions suivantes pour vous envoyer un e-mail ou un fichier protégé : [Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-get-started.md) 
-
-## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quelles informations d’identification utiliser pour se connecter à cette application ?
-
-Si votre organisation dispose déjà d’AD RMS locaux (avec l’extension d’appareil mobile) ou utilise Azure Information Protection, utilisez vos informations d’identification professionnelles pour vous connecter. 
-
-Si votre adresse e-mail personnelle a été utilisée pour protéger le fichier, utilisez les informations d’identification d’un [compte Microsoft](https://signup.live.com) gratuit pour vous connecter.
-
-## <a name="can-i-sign-up-for-the-free-account-with-my-personal-email-address-such-as-a-hotmail-or-gmail-account"></a>Puis-je m’inscrire au compte gratuit avec mon adresse e-mail personnelle, comme un compte Hotmail ou Gmail ?
-
-Oui, lorsque vous demandez un compte Microsoft, vous pouvez spécifier votre adresse Hotmail ou Gmail, ou toute autre adresse e-mail que vous possédez. 
-
-Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
-
-## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quelles extensions de fichier puis-je ouvrir avec cette application ?
+### <a name="supported-file-extensions"></a>Extensions de fichiers prises en charge
 
 Vous pouvez ouvrir les fichiers .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml et plusieurs autres formats de fichiers texte et image.
 
 Pour obtenir la liste complète des extensions de nom de fichier texte et image, consultez la première table de la section [Types de fichier pris en charge pour la classification et la protection](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du guide d’administration.
 
-##  <a name="how-do-i-provide-feedback-about-this-app"></a>Comment envoyer des commentaires concernant cette application ?
+## <a name="installing-your-aip-mobile-apps-and-viewing-files"></a>Installation de vos applications mobiles AIP et affichage des fichiers
 
-Dans l’application, accédez à **paramètres**  >  **Envoyer des commentaires**.
+Si votre appareil mobile est géré par Microsoft Intune, vous pourrez peut-être télécharger les applications à partir de votre portail d’entreprise.
 
+Dans le cas contraire, accédez aux applications à partir de :
 
-## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>Aucune réponse n’a été apportée à ma question. Que dois-je faire ?
+- Le magasin [iTunes](https://apps.apple.com/app/microsoft-rights-management/id689516635) ou [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)
+- [Page de téléchargement Azure information protection](https://portal.azurerms.com/#/download). Sélectionnez les icônes [iOS](https://apps.apple.com/app/microsoft-rights-management/id689516635) ou [Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) dans la section **périphériques mobiles** .
 
-Postez votre question sur notre [site Yammer](https://www.yammer.com/AskIPTeam).
+Une fois l’installation terminée, patientez jusqu’à ce que vous ayez reçu un e-mail ou un fichier protégé, puis sélectionnez la **visionneuse AIP** lors de son ouverture.
+
+Vous êtes invité à vous connecter avec votre compte professionnel ou scolaire, ou vous êtes invité à sélectionner un certificat. Une fois que vous avez été authentifié, votre e-mail ou fichier s’ouvre et vous pouvez lire son contenu.
+
+> [!TIP]
+> Pour essayer immédiatement, envoyez-vous un e-mail ou un fichier protégé à afficher. 
+>
+> Pour plus d’informations, consultez [prise en main de l’application Microsoft Azure information protection pour iOS et Android](mobile-app-get-started.md).
+> 
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Utilisez l’une des méthodes suivantes pour fournir des commentaires sur les applications mobiles AIP :
+
+- Accéder aux **paramètres**  >  **Envoyer des commentaires**
+- Publiez votre question sur notre [site Yammer](https://www.yammer.com/AskIPTeam)

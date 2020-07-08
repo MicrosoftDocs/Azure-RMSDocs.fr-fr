@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46a2d8cbae5f0e3bc67945323dc475ce046c390d
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: f011f71bfe330a4ec559fba600aca7a7a1e2ae12
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802960"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048848"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "84802960"
 >
 > **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
 >
-> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Le client d’étiquetage unifié Azure Information Protection peut appliquer les éléments suivants aux documents et aux e-mails :
 
@@ -166,12 +166,12 @@ Par défaut, le scanneur exclut également les mêmes types de fichiers que le c
 
 Vous pouvez changer les types de fichiers inclus ou exclus pour l’inspection des fichiers par le scanneur :
 
-- Configurez les **types de fichiers à analyser** dans le profil du scanneur, [à l’aide du portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
+- Configurez les **types de fichiers à analyser** dans le profil du scanneur, [à l’aide du portail Azure](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
     
     > [!NOTE]
     > Si vous incluez des fichiers .rtf pour l’analyse, surveillez attentivement le scanneur. Certains fichiers .rtf ne peuvent pas être inspectés par le scanneur. En effet, pour ces fichiers, l’inspection n’aboutit pas et le service doit être redémarré. 
 
-Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). Pour modifier ce comportement pour le scanneur, utilisez le paramètre avancé PowerShell **PFileSupportedExtensions**. Pour plus d’informations, consultez [configuration PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) contre les instructions de déploiement de l’analyseur.
+Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). Pour modifier ce comportement pour le scanneur, utilisez le paramètre avancé PowerShell **PFileSupportedExtensions**. Pour plus d’informations, consultez [Utiliser PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) contre les instructions de déploiement de l’analyseur.
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Fichiers qui ne peuvent pas être protégés par défaut
 
@@ -211,7 +211,7 @@ Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileC
 
 1. Pour l’ordinateur exécutant le scanneur ou la session PowerShell, installez [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classé et protégé par une étiquette, spécifiez l’extension de nom de fichier. zip avec le paramètre PowerShell avancé, **PFileSupportedExtensions**, comme décrit dans la section [configuration PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) contre les instructions de déploiement de l’analyseur.
+2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classifié et protégé par une étiquette, spécifiez l’extension de nom de fichier. zip avec le paramètre PowerShell avancé, **PFileSupportedExtensions**, comme décrit dans [Utiliser PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) des instructions de déploiement de l’analyseur.
 
 
 Exemple de scénario après avoir effectué ces étapes : 
@@ -224,7 +224,7 @@ Une fois le fichier inspecté, le client d’étiquetage unifié de votre sessio
 
 La commande PowerShell [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) peut utiliser la reconnaissance optique de caractères pour inspecter les images TIFF avec une extension de nom de fichier. TIFF lorsque vous installez la fonctionnalité Windows TIFF IFilter, puis configurer les [paramètres IFilter Windows TIFF](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) sur l’ordinateur exécutant la session PowerShell.
 
-Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. TIFF doit être classifié et protégé par une étiquette, spécifiez cette extension de nom de fichier avec le paramètre avancé PowerShell, **PFileSupportedExtensions**, comme décrit dans la section [configuration PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) des instructions de déploiement de l’analyseur.
+Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. TIFF doit être classifié et protégé par une étiquette, spécifiez cette extension de nom de fichier avec le paramètre avancé PowerShell **PFileSupportedExtensions**, comme décrit dans [Utiliser PowerShell pour modifier les types de fichiers protégés](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) des instructions de déploiement de l’analyseur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection, consultez les ressources suivantes pour obtenir des informations supplémentaires dont vous pouvez avoir besoin pour prendre en charge ce client :

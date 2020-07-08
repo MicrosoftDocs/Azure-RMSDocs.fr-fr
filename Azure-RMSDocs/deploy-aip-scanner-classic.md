@@ -1,10 +1,10 @@
 ---
-title: Fonctionnement du scanneur d’étiquetage unifié Azure Information Protection-AIP
-description: Instructions d’installation, de configuration et d’exécution de la version actuelle de l’Azure Information Protection scanneur d’étiquetage unifié pour détecter, classer et protéger des fichiers dans des banques de données.
+title: Comprendre le Azure Information Protection scanneur classique-AIP
+description: Instructions d’installation, de configuration et d’exécution du Azure Information Protection scanneur classique pour détecter, classer et protéger des fichiers sur des magasins de données.
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,23 +12,23 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d56e4850cab6c9395dd56247cab111dc9b847c5d
+ms.openlocfilehash: 65c3a37f68676616d7342879d9621a143842f4bf
 ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047884"
+ms.locfileid: "86049537"
 ---
-# <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?
+# <a name="what-is-the-azure-information-protection-classic-scanner"></a>Qu’est-ce que le scanneur classique Azure Information Protection ?
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
 
->[!NOTE] 
-> Si vous utilisez le scanneur classique, consultez [qu’est-ce que le Azure information protection scanneur classique ?](deploy-aip-scanner-classic.md).
+>[!NOTE]
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
-> Pour analyser et étiqueter des fichiers sur des référentiels cloud, utilisez [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) au lieu du scanneur.
+> Si vous utilisez le client d’étiquetage unifié, consultez [qu’est-ce que le scanneur d’étiquetage unifié Azure information protection ?](deploy-aip-scanner.md).
 
-Utilisez les informations de cette section pour en savoir plus sur le Azure Information Protection scanneur d’étiquetage unifié, puis sur la façon d’installer, de configurer, d’exécuter et, le cas échéant, de le résoudre.
+Utilisez les informations de cette section pour en savoir plus sur le scanneur de Azure Information Protection, puis sur la façon d’installer, de configurer, d’exécuter et, le cas échéant, de résoudre le problème.
 
 Le scanneur AIP s’exécute en tant que service sur Windows Server et vous permet de découvrir, classifier et protéger des fichiers sur les banques de données suivantes :
 
@@ -36,34 +36,30 @@ Le scanneur AIP s’exécute en tant que service sur Windows Server et vous perm
 
 - **Bibliothèques de documents SharePoint et dossier** pour sharepoint server 2019 via sharepoint server 2013. SharePoint 2010 est également pris en charge pour les clients disposant de la [prise en charge étendue de cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
-## <a name="azure-information-protection-unified-labeling-scanner-overview"></a>Vue d’ensemble du scanner d’étiquetage unifié Azure Information Protection
+> [!NOTE]
+> Pour analyser et étiqueter des fichiers sur des référentiels cloud, utilisez [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) au lieu du scanneur.
+>
+## <a name="azure-information-protection-classic-scanner-overview"></a>Présentation du scanneur classique Azure Information Protection
 
 Le scanneur AIP peut inspecter les fichiers que Windows peut indexer. Si vous avez configuré des étiquettes qui appliquent une classification automatique, le scanneur peut étiqueter les fichiers détectés pour appliquer cette classification et éventuellement appliquer ou supprimer la protection.
 
 L’illustration suivante montre l’architecture du scanneur AIP, où le scanneur Découvre des fichiers sur vos serveurs locaux et SharePoint.
 
-:::image type="content" source="media/ul-scanner-arch.png" alt-text="Architecture du scanneur d’étiquetage unifiée Azure Information Protection":::
+:::image type="content" source="media/classic-scanner-arch.png" alt-text="Architecture du scanneur Azure Information Protection Classic":::
 
 Pour inspecter vos fichiers, le scanneur utilise les IFilters installés sur l’ordinateur. Pour déterminer si les fichiers doivent être étiquetés, le scanneur utilise les types d’informations de sensibilité de protection contre la perte de données (DLP) et la détection de modèle Office 365 intégrés, ou les modèles Regex Office 365.
 
-Le scanneur utilise le client Azure Information Protection et peut classer et protéger les mêmes types de fichiers que le client. Pour plus d’informations, consultez [types de fichiers pris en charge par le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-file-types.md).
+Le scanneur utilise le client Azure Information Protection et peut classer et protéger les mêmes types de fichiers que le client. Pour plus d’informations, consultez [types de fichiers pris en charge par le client Azure information protection](./rms-client/client-admin-guide-file-types.md).
 
 Effectuez l’une des opérations suivantes pour configurer vos analyses en fonction des besoins :
 
 - **Exécutez le scanneur en mode détection uniquement** pour créer des rapports qui vérifient ce qui se produit lorsque vos fichiers sont étiquetés.
 - **Exécutez le scanneur pour détecter les fichiers contenant des informations sensibles,** sans configurer les étiquettes qui appliquent la classification automatique.
-- **Exécutez le scanner automatiquement** pour appliquer les étiquettes configurées. 
+- **Exécutez le scanner automatiquement** pour appliquer les étiquettes configurées.
 - **Définissez une liste de types de fichiers** pour spécifier des fichiers à analyser ou à exclure.
 
 > [!NOTE]
 > Le scanneur ne découvre pas et n’étiquette pas en temps réel. Il analyse systématiquement les fichiers des magasins de données que vous spécifiez. Configurez ce cycle pour qu’il s’exécute une seule fois, ou à plusieurs reprises.
-
-> [!TIP]
-> Le scanner d’étiquetage unifié prend en charge les clusters de scanneurs avec plusieurs nœuds, ce qui permet à votre organisation de monter en charge, ce qui permet des temps d’analyse plus rapides et une portée plus large. 
-> 
-> Déployez plusieurs nœuds directement à partir du début, ou démarrez avec un cluster à nœud unique et ajoutez des nœuds supplémentaires plus tard au fur et à mesure que vous augmentez. Déployez plusieurs nœuds en utilisant les mêmes nom de cluster et base de données pour l’applet de commande **install-AIPScanner** .
-> 
- 
 
 ## <a name="aip-scanning-process"></a>Processus d’analyse AIP
 
@@ -73,13 +69,14 @@ Lors de l’analyse des fichiers, le scanneur AIP exécute les étapes suivantes
 
 [2. Inspectez et étiquetez les fichiers](#2-inspect-and-label-files)
 
-[3. étiquetez les fichiers qui ne peuvent pas être inspectés](#3-label-files-that-cant-be-inspected) 
+[3. étiquetez les fichiers qui ne peuvent pas être inspectés](#3-label-files-that-cant-be-inspected)
 
-Pour plus d’informations, consultez [fichiers non marqués par le scanneur](#files-not-labeled-by-the-scanner).
+> [!NOTE]
+> Pour plus d’informations, consultez [fichiers non marqués par le scanneur](#files-not-labeled-by-the-scanner).
 
-### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. déterminer si les fichiers sont inclus ou exclus pour l’analyse 
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. déterminer si les fichiers sont inclus ou exclus pour l’analyse
 
-Le scanneur ignore automatiquement les fichiers qui sont exclus de la classification et de la protection, comme les fichiers exécutables et les fichiers système. Pour plus d’informations, consultez [types de fichiers exclus de la classification et](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)de la protection.
+Le scanneur ignore automatiquement les fichiers qui sont exclus de la classification et de la protection, comme les fichiers exécutables et les fichiers système. Pour plus d’informations, consultez [types de fichiers exclus de la classification et](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)de la protection.
 
 Le scanneur prend également en compte toutes les listes de fichiers explicitement définies pour analyser ou exclure de l’analyse. Les listes de fichiers s’appliquent à tous les référentiels de données par défaut et peuvent également être définies pour des référentiels spécifiques.
 
@@ -95,7 +92,7 @@ Après avoir identifié les fichiers exclus, le scanneur filtre à nouveau pour 
 
 Ces filtres supplémentaires sont les mêmes que ceux utilisés par le système d’exploitation pour la recherche et l’indexation Windows et ne nécessitent aucune configuration supplémentaire. Windows IFilter est également utilisé pour analyser les types de fichiers utilisés par Word, Excel et PowerPoint, ainsi que pour les documents PDF et les fichiers texte.
 
-Pour obtenir la liste complète des types de fichiers pris en charge pour l’inspection, ainsi que des instructions supplémentaires pour la configuration des filtres pour inclure des fichiers. zip et. TIFF, consultez [types de fichiers pris en charge pour l’inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
+Pour obtenir la liste complète des types de fichiers pris en charge pour l’inspection, ainsi que des instructions supplémentaires pour la configuration des filtres pour inclure des fichiers. zip et. TIFF, consultez [types de fichiers pris en charge pour l’inspection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 Après l’inspection, les types de fichiers pris en charge sont étiquetés à l’aide des conditions spécifiées pour vos étiquettes. Si vous utilisez le mode détection, ces fichiers peuvent être consignés pour contenir les conditions spécifiées pour vos étiquettes, ou être signalés comme contenant des types d’informations sensibles connus.
 
@@ -104,19 +101,29 @@ Après l’inspection, les types de fichiers pris en charge sont étiquetés à 
 Pour tous les types de fichiers qui ne peuvent pas être inspectés, le scanneur AIP applique l’étiquette par défaut dans la stratégie de Azure Information Protection ou l’étiquette par défaut configurée pour le scanneur.
 
 ### <a name="files-not-labeled-by-the-scanner"></a>Fichiers non marqués par le scanneur
+
 Le scanneur AIP ne peut pas étiqueter les fichiers dans les circonstances suivantes :
 
-- Lorsque l’étiquette applique la classification, mais pas la protection, et que le type de fichier ne prend pas en charge la classification uniquement par le client. Pour plus d’informations, consultez [types de fichiers du client d’étiquetage unifié](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only).
+- Lorsque l’étiquette applique la classification, mais pas la protection, et que le type de fichier ne prend pas en charge la classification uniquement par le client. Pour plus d’informations, consultez [types de fichiers client classiques](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
 - Lorsque l’étiquette applique la classification et la protection, mais que le scanneur ne prend pas en charge le type de fichier.
   
-    Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). 
+    Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF).
 
     D’autres types de fichiers peuvent être ajoutés pour la protection lorsque vous [Modifiez les types de fichiers à protéger](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Exemple :** Après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement. 
+**Exemple :** Après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement.
 
 Toutefois, si l’étiquette est configurée pour la classification et la protection et que le type de fichier. txt est inclus pour le scanneur à protéger, le scanneur peut étiqueter le fichier.
+
+## <a name="upgrading-your-scanner"></a>Mise à niveau de votre scanneur
+
+Si vous avez déjà installé le scanneur et que vous souhaitez effectuer une mise à niveau, consultez [mise à niveau de l’analyseur de Azure information protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+
+Ensuite, [configurez](deploy-aip-scanner-configure-install.md) et [Utilisez votre scanneur](deploy-aip-scanner-manage.md) comme d’habitude, en ignorant les étapes d’installation de votre scanneur.
+
+>[!NOTE]
+> Si vous disposez d’une version du scanneur antérieure à 1.48.204.0 et que vous n’êtes pas prêt à effectuer la mise à niveau, consultez [déploiement de versions antérieures du moteur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner-previousversions.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -132,5 +139,4 @@ Pour plus d’informations sur le déploiement du scanneur, consultez les articl
 
 - Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
-- Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md).
-
+- Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur tous les scénarios qui utilisent PowerShell, consultez [Utiliser PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).

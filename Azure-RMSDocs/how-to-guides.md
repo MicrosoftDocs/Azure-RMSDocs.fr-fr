@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f3bc3064aa4a3a723197dcb171eaba018bca6b3e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 5059215c9883552e1a4ccf3b902664d1d357e51a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933325"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048440"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Il existe de nombreux scénarios dans lesquels vous pouvez utiliser Azure Information Protection pour classer et, le cas échéant, protéger les documents et e-mails de votre organisation. 
 
@@ -32,14 +32,14 @@ Les déploiements les plus performants sont ceux qui identifient des cas d’uti
 
 |Scénario : je souhaite...|Instructions|
 |----------------|---------------|
-|Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles consignées dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
+|Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
 |Aider les utilisateurs à protéger leurs e-mails contenant des informations sensibles|[Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](quickstart-label-dnf-protectedemail.md)|
 |Aider les utilisateurs à classer les données qu’ils ont créées ou modifiées, et à les protéger si elles contiennent des informations sensibles| [Tutoriel : Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md)|
 |Aider les utilisateurs à collaborer sur un document protégé|[Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md)|
 |Protéger automatiquement les e-mails des utilisateurs qui sont envoyés en dehors de l’organisation| [Configuration des règles de flux de messagerie pour les étiquettes Azure Information Protection](configure-exo-rules.md)
 |Classer et protéger automatiquement les données existantes dans mes banques de données locales|[Déploiement du scanneur Azure Information Protection](deploy-aip-scanner.md)|
 |Utiliser ma propre clé pour protéger les données de mon organisation| [Planification et implémentation de la clé de client](plan-implement-tenant-key.md)|
-|Migrer à partir d’AD RMS|[Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)|
+|Migrer à partir d’AD RMS|[Migration depuis AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)|
 
 ## <a name="additional-deployment-instructions"></a>Instructions de déploiement supplémentaires
 

@@ -12,171 +12,263 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 586932ce196769a49e5901dbe6b1290e9d7390ed
-ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
+ms.openlocfilehash: a62ebab99a6cf9672942dcc7b447c29365c6440b
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80138291"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048481"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Vous avez une question sur Azure Information Protection ou sur le service Azure Rights Management (Azure RMS) ? Vous trouverez peut-être une réponse ici.
 
-Ces pages de questions fréquentes sont régulièrement actualisées. Les nouveautés sont répertoriées dans les avis de mise à jour mensuels de la documentation sur le [blog technique d’Azure Information Protection](https://aka.ms/AIPblog).
+<!-- These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).-->
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-microsoft-information-protection"></a>Quelle est la différence entre Azure Information Protection et Microsoft Information Protection ?
 
-Contrairement à Azure Information Protection, Microsoft Information Protection n’est pas un abonnement ou un produit que vous pouvez acheter. Au lieu de cela, il s’agit d’un framework pour les produits et les fonctionnalités intégrées qui vous aident à protéger les informations sensibles de votre organisation :
+Contrairement à Azure Information Protection, [Microsoft information protection](https://www.microsoft.com/security/business/information-protection) n’est pas un abonnement ou un produit que vous pouvez acheter. Au lieu de cela, il s’agit d’une infrastructure pour les produits et des fonctionnalités intégrées qui vous aident à protéger les informations sensibles de votre organisation.
 
-- Les produits individuels de ce framework incluent Azure Information Protection, Office 365 Information Protection (par exemple, Office 365 DLP), Windows Information Protection et Microsoft Cloud App Security. 
+**Les produits Microsoft Information Protection sont les suivants :**
+- Azure Information Protection
+- Office 365 Information Protection, comme Office 365 DLP
+- Protection des informations Windows
+- Microsoft Cloud App Security
 
-- Les fonctions intégrées dans ce framework incluent la gestion d’étiquette unifiée, les expériences d’étiquetage de l’utilisateur final intégrées aux applications Office, la possibilité pour Windows de comprendre les étiquettes unifiées et appliquer une protection aux données, le SDK Microsoft Information Protection et de nouvelles fonctionnalités dans Adobe Acrobat Reader pour afficher les fichiers PDF étiquetés et protégés.
+**Les fonctionnalités de Microsoft Information Protection sont les suivantes :**
+- Gestion unifiée des étiquettes
+- Expériences d’étiquetage des utilisateurs finaux intégrés aux applications Office
+- La capacité de Windows à comprendre les étiquettes unifiées et à appliquer la protection aux données
+- Kit de développement logiciel (SDK) Microsoft Information Protection
+- Fonctionnalités d’Adobe Acrobat Reader pour afficher les fichiers PDF étiquetés et protégés
 
-Pour plus d’informations, consultez [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967) (Annonce de la disponibilité des fonctionnalités de protection des informations pour protéger vos données sensibles).
+Pour plus d’informations, consultez [fonctionnalités de protection des informations pour vous aider à protéger vos données sensibles](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Quelle est la différence entre les étiquettes dans Azure Information Protection et les étiquettes dans Office 365 ?
 
-Au départ, Office 365 disposait uniquement [d’étiquettes de conservation](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) pour vous permettre de classifier les documents et les e-mails à des fins d’audit et de conservation quand ce contenu se trouvait dans les services Office 365. Par comparaison, les étiquettes Azure Information Protection vous permettent d’appliquer une stratégie de classification et de protection cohérente aux documents et aux e-mails, qu’ils soient locaux ou dans le cloud.
+À l’origine, Office 365 avait uniquement des [étiquettes de rétention](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) qui vous permettaient de classer les documents et les e-mails à des fins d’audit et de rétention lorsque ce contenu a été stocké dans les services Office 365. 
 
-Annoncée chez 2018 Microsoft, à Orlando, vous avez désormais la possibilité de créer et de configurer des [étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) en plus des étiquettes de rétention dans l’un des centres d’administration : le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 ou le centre de conformité Microsoft 365. Vous pouvez migrer vos étiquettes de Azure Information Protection existantes vers le nouveau magasin d’étiquetage unifié, à utiliser comme étiquettes de sensibilité avec les applications Office. 
+En revanche, Azure Information Protection étiquettes activées vous appliquez une stratégie de classification et de protection cohérente pour les documents et e-mails, qu’ils aient été stockés localement ou dans le Cloud.
 
-Pour plus d’informations sur la gestion de l’étiquetage unifié et la prise en charge de ces étiquettes, lisez le billet de blog [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+Annoncée au cours de Microsoft enflamme 2018 à Orlando, Office 365 a désormais la possibilité de créer et de configurer des [étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), en plus des étiquettes de rétention. Des étiquettes de sensibilité peuvent être créées et configurées dans les centres d’administration suivants :
 
-Pour plus d’informations sur la migration de vos étiquettes existantes, consultez [Comment migrer des étiquettes Azure information protection vers des étiquettes de sensibilité unifiée](configure-policy-migrate-labels.md).
+- Centre de sécurité et conformité Office 365
+- Centre de sécurité Microsoft 365
+- Centre de conformité Microsoft 365
+
+Utilisez Azure Information Protection étiquettes en tant qu’étiquettes de sensibilité avec les applications Office 365 en [migrant vos étiquettes AIP dans le magasin d’étiquetage unifié](configure-policy-migrate-labels.md).
+
+Pour plus d’informations sur la gestion et la prise en charge de l’étiquetage unifié, consultez [annonce de la disponibilité des fonctionnalités de protection des informations pour vous aider à protéger vos données sensibles](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## <a name="how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform"></a>Comment puis-je déterminer si mon locataire se trouve sur la plateforme d’étiquetage unifiée ?
 
 Lorsque votre locataire se trouve sur la plateforme d’étiquetage unifiée, il prend en charge les étiquettes de sensibilité qui peuvent être utilisées par [les clients et les services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Si vous avez obtenu votre abonnement pour Azure Information Protection en juin 2019 ou une version ultérieure, votre locataire est automatiquement sur la plateforme d’étiquetage unifiée et aucune autre action n’est nécessaire. Votre locataire peut également se trouver sur cette plateforme, car quelqu’un a migré vos étiquettes de Azure Information Protection.
 
-Si votre locataire ne fait pas partie de la plateforme d’étiquetage unifiée, vous voyez la bannière d’informations suivante dans le Portail Azure, dans les volets de **Azure information protection** :
+Si votre locataire ne se trouve pas sur la plateforme d’étiquetage unifiée, vous verrez la bannière d’informations suivante dans le Portail Azure, dans les volets de **Azure information protection** :
 
 ![Bannière d’informations sur la migration](media/migration-status-banner.png)
 
-Vous pouvez également vérifier en accédant à **Azure Information Protection** > **gérer** > **étiquette unifiée**et afficher l’état de l' **étiquetage unifiée**:
+Vous pouvez également vérifier en accédant à **Azure information protection**  >  **gérer**  >  l'**étiquetage unifiée**et afficher l’état d' **étiquetage unifiée** :
 
-- Si vous voyez **activé**, votre locataire se trouve sur la plateforme d’étiquetage unifiée et vous pouvez [créer, configurer et publier des étiquettes](/microsoft-365/compliance/create-sensitivity-labels) à partir du centre de conformité Microsoft 365.
+|Statut |Description  |
+|---------|---------|
+|**Activé**     |  Votre locataire se trouve sur la plateforme d’étiquetage unifiée. </br>Vous pouvez [créer, configurer et publier des étiquettes](/microsoft-365/compliance/create-sensitivity-labels) à partir du centre de conformité Microsoft 365.       |
+|**Non activé**    |  Votre locataire n’est pas sur la plateforme d’étiquetage unifiée. </br>Pour obtenir des instructions et des instructions de migration, consultez [Comment migrer des étiquettes Azure information protection vers des étiquettes de sensibilité unifiée](configure-policy-migrate-labels.md).       |
 
-- Si vous **ne voyez pas activé**, votre locataire ne se trouve pas sur la plateforme d’étiquetage unifiée. Pour obtenir des instructions et des instructions de migration, consultez [Comment migrer des étiquettes Azure information protection vers des étiquettes de sensibilité unifiée](configure-policy-migrate-labels.md).
+## <a name="whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients"></a>Quelle est la différence entre les Azure Information Protection clients d’étiquetage classiques et unifiés ?
 
-## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Quelle est la différence entre le client Azure Information Protection et le client d’étiquetage unifié Azure Information Protection ?
+Le client d’origine, connu sous le terme de *Azure information client* ou *Classic* client, télécharge des étiquettes et des paramètres de stratégie à partir d’Azure et vous permet de configurer la [stratégie AIP](overview-policy.md) à partir du portail Azure.
 
-Le **client Azure information protection (Classic)** est disponible depuis que Azure information protection a été annoncé pour la première fois en tant que nouveau service de classification et de protection des fichiers et e-mails. Ce client télécharge des étiquettes et des paramètres de stratégie à partir d’Azure, et vous configurez la stratégie de Azure Information Protection à partir du Portail Azure. Pour plus d’informations, consultez [vue d’ensemble de la stratégie de Azure information protection](overview-policy.md). 
+Le *client d’étiquetage unifié* est un ajout plus récent et prend en charge le magasin d’étiquetage unifié utilisé par plusieurs applications et services. Le client d’étiquetage unifié télécharge les [étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) et les paramètres de stratégie à partir des centres d’administration suivants :
 
-Le **Azure information protection client d’étiquetage unifié** est un ajout plus récent, afin de prendre en charge le magasin d’étiquetage unifié que plusieurs applications et services prennent en charge. Ce client télécharge les étiquettes de sensibilité et les paramètres de stratégie à partir des centres d’administration suivants : le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365. Pour plus d’informations, consultez [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+- Centre de sécurité et conformité Office 365
+- Centre de sécurité Microsoft 365
+- Centre de conformité Microsoft 365
 
-Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client Azure information protection à utiliser](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Si vous êtes un administrateur et que vous ne savez pas quel client utiliser, consultez [choisir le client Azure information protection à utiliser](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
-### <a name="identify-which-client-you-have-installed"></a>Identifier le client que vous avez installé
+### <a name="identify-the-client-you-have-installed"></a>Identifier le client que vous avez installé
 
-Les deux clients, lorsqu’ils sont installés, affichent **Azure information protection**. Pour vous aider à identifier le client que vous avez installé, utilisez l’option **aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure information protection** :
+Si vous êtes un utilisateur qui souhaite comprendre si vous avez installé le client d’étiquetage classique ou unifié, sélectionnez **aide et commentaires** pour afficher la boîte de dialogue **Microsoft Azure information protection** . 
 
-- Dans l’Explorateur de fichiers : cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**.
+Par exemple :
 
-- À partir d’une application Office : à partir du bouton **protéger** (client classique) ou du bouton **sensibilité** (client d’étiquetage unifié), sélectionnez **aide et commentaires**.
+:::image type="content" source="media/client-about.png" alt-text="Déterminer si le client classique ou unifié est installé":::
 
-Utilisez le numéro de **version** affiché pour identifier le client :
+Le numéro de version indique le client, comme suit :
 
-- Une version **1**, par exemple, **1.54.59.0**, identifie le client Azure information protection (Classic).
+- Les versions **1. x** indiquent que vous disposez du client classique. Exemple : **1.54.59.0**
+- Les versions **2. x** indiquent que vous disposez du client d’étiquetage unifié. Exemple : **2.6.111.0**
 
-- Une version **2**, par exemple, **2.6.111.0**, identifie le client d’étiquetage unifié Azure information protection.
+Accédez à cette boîte de dialogue à l’aide de l’une des méthodes suivantes :
+
+- Dans l’Explorateur de fichiers, cliquez avec le bouton droit sur un fichier, des fichiers ou un dossier, puis sélectionnez **classifier et protéger**  >  **l’aide et les commentaires**.
+- Dans les applications Office, le client classique a un bouton **protéger** et le client d’étiquetage unifié a un bouton de **sensibilité** . Sélectionnez l’un de ces boutons, puis sélectionnez **aide et commentaires**.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Quand est-il approprié de migrer mes étiquettes ?
 
-Maintenant que l’option de migration des étiquettes dans le Portail Azure est en disponibilité générale, nous vous recommandons d’activer la migration afin que vous puissiez utiliser vos étiquettes comme étiquettes de sensibilité avec [les clients et les services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+Nous vous recommandons de migrer vos étiquettes Azure Information Protection vers la plateforme d’étiquetage unifiée afin de pouvoir les utiliser en tant qu’étiquettes de sensibilité avec d’autres [clients et services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 Pour plus d’informations et pour obtenir des instructions, consultez [Comment migrer des étiquettes Azure information protection vers des étiquettes de sensibilité unifiée](configure-policy-migrate-labels.md).
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?
 
-Une fois que vous avez migré vos étiquettes dans le portail Azure :
+Une fois que vous avez migré vos étiquettes dans le Portail Azure, continuez à les gérer dans l’un des emplacements suivants, selon les clients que vous avez installés :
 
-- Si vous avez des [clients et des services d’étiquetage unifiés](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), accédez à l’un des centres d’administration (Office 365 Centre de sécurité et de conformité, Microsoft 365 Security center ou Microsoft 365 Center Compliance Center) pour publier ces étiquettes et configurer leurs paramètres de stratégie. À l’avenir, utilisez l’un de ces centres d’administration pour toute modification d’étiquette. Les clients d’étiquetage unifié téléchargent les étiquettes et les paramètres de stratégie à partir de ces centres d’administration. Pour obtenir des instructions, consultez [créer et configurer des étiquettes de sensibilité et leurs stratégies](/microsoft-365/compliance/create-sensitivity-labels).
-
-- Si vous avez le [client Azure information protection (Classic)](./rms-client/aip-client.md), continuez à utiliser la portail Azure pour modifier vos étiquettes et paramètres de stratégie. Le client classique continue à télécharger des étiquettes et des paramètres de stratégie à partir d’Azure.
-
-- Si vous avez des [clients d’étiquetage unifiés](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) et des [clients classiques](./rms-client/aip-client.md), vous pouvez utiliser les centres d’administration ou le portail Azure pour modifier l’étiquette. Toutefois, pour que les clients classiques récupèrent les modifications d’étiquette que vous apportez dans les centres d’administration, vous devez revenir à la Portail Azure : utilisez l’option **publier** du volet d' **étiquetage Azure information protection-Unified** dans le portail Azure. 
-
-Continuez à utiliser le portail Azure pour la [centralisation des rapports](reports-aip.md) et le [scanneur](deploy-aip-scanner.md).
+|Client  |Colonne2  |
+|---------|---------|
+|[Clients et services d’étiquetage unifiés](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) uniquement    |  Si vous avez uniquement des clients d’étiquetage unifiés installés, gérez vos étiquettes dans l’un des centres d’administration : Office 365 Security & Compliance Center, Microsoft 365 Security Center ou Microsoft 365 Center Compliance Center. Les clients d’étiquetage unifié téléchargent les étiquettes et les paramètres de stratégie à partir de ces centres d’administration. </br></br>Pour obtenir des instructions, consultez [créer et configurer des étiquettes de sensibilité et leurs stratégies](/microsoft-365/compliance/create-sensitivity-labels).     |
+|[Client classique](./rms-client/aip-client.md) uniquement  | Si vous avez migré vos étiquettes, mais que le client Classic est toujours installé, continuez à utiliser la Portail Azure pour modifier les étiquettes et les paramètres de stratégie. Le client classique continue à télécharger des étiquettes et des paramètres de stratégie à partir d’Azure.
+|Le [client standard](./rms-client/aip-client.md) AIP et les clients d' [étiquetage unifiés](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)     | Si vous avez installé les deux clients, utilisez les centres d’administration ou le Portail Azure pour apporter des modifications aux étiquettes. </br></br>Pour que les clients classiques récupèrent les modifications apportées aux étiquettes dans les centres d’administration, revenez à la Portail Azure pour les publier. Dans le volet Portail Azure > **Azure information protection-nom unifié** , sélectionnez **publier**.  </br></br> Continuez à utiliser le portail Azure pour la [centralisation des rapports](reports-aip.md) et le [scanneur](deploy-aip-scanner.md).     |
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Quelle est la différence entre Information Protection et Azure Rights Management ?
 
-Azure Information Protection permet à une organisation de classifier, d’étiqueter et de protéger ses documents et e-mails. La technologie de protection utilise le service Azure Rights Management, désormais un composant d’Azure Information Protection.
+Azure Information Protection (AIP) fournit la classification, l’étiquetage et la protection des documents et e-mails d’une organisation.
+
+Le contenu est protégé à l’aide du service Azure Rights Management, qui est désormais un composant d’AIP. 
+
+Pour plus d’informations, consultez [Comment les données sont protégées](what-is-information-protection.md#how-data-is-protected) et [qu’est-ce qu’Azure Rights Management ?](what-is-azure-rms.md).
 
 ## <a name="whats-the-role-of-identity-management-for-azure-information-protection"></a>Quel est le rôle de la gestion des identités pour Azure Information Protection ?
 
-Un utilisateur doit avoir un nom d’utilisateur et un mot de passe valides pour accéder au contenu protégé par Azure Information Protection. Pour en savoir plus sur la façon dont Azure Information Protection permet de sécuriser vos données, consultez [Rôle d’Azure Information Protection dans la sécurisation des données](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
+La gestion des identités est un composant important d’AIP, car les utilisateurs doivent disposer d’un nom d’utilisateur et d’un mot de passe valides pour accéder au contenu protégé.
+
+Pour en savoir plus sur la façon dont Azure Information Protection permet de sécuriser vos données, consultez [Rôle d’Azure Information Protection dans la sécurisation des données](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?
 
-Consultez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
+Pour en savoir plus sur les abonnements AIP, consultez les informations d’abonnement et la liste des fonctionnalités sur la page de [tarification Azure information protection](https://azure.microsoft.com/pricing/details/information-protection) .
 
-Si vous avez un abonnement Office 365 qui comprend la protection des données Azure Rights Management, téléchargez la [fiche sur les licences Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+Si vous disposez d’un abonnement Office 365 qui comprend la protection des données Azure Rights Management, téléchargez la [fiche technique Azure information protection Licensing](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) pour plus d’informations sur l’intégration avec AIP.
 
 Vous avez d’autres questions sur les licences ? Regardez si vous trouvez des réponses dans la section [Forum aux questions](https://azure.microsoft.com/pricing/details/information-protection#faq) sur les licences.
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Le client Azure Information Protection est-il réservé aux abonnements qui comprennent la classification et l’étiquetage ?
 
-Non. Le client Azure Information Protection (Classic) peut également être utilisé avec les abonnements qui incluent uniquement le service Azure Rights Management pour protéger les données.
+Non. Le client AIP classique peut également être utilisé avec les abonnements qui incluent uniquement le service Azure Rights Management, pour la protection des données uniquement.
 
-Lorsque le client classique est installé et qu’il ne dispose pas d’une stratégie de Azure Information Protection, ce client fonctionne automatiquement en [mode protection uniquement](./rms-client/client-protection-only-mode.md). Dans ce mode, les utilisateurs peuvent facilement appliquer des modèles Rights Management et des autorisations personnalisées. Si vous décidez, plus tard, de souscrire un abonnement qui n’inclut ni la classification ni l’étiquetage, le client passe automatiquement en mode standard lors du téléchargement de la stratégie Azure Information Protection.
+Lorsque le client Classic est installé sans Azure Information Protection stratégie, le client fonctionne automatiquement en [mode protection uniquement](./rms-client/client-protection-only-mode.md), ce qui permet aux utilisateurs d’appliquer des modèles de Rights Management et des autorisations personnalisées. 
+
+Si vous décidez, plus tard, de souscrire un abonnement qui n’inclut ni la classification ni l’étiquetage, le client passe automatiquement en mode standard lors du téléchargement de la stratégie Azure Information Protection.
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators"></a>Faut-il être administrateur général pour configurer Azure Information Protection ou puis-je déléguer la configuration à d’autres administrateurs ?
 
-Les administrateurs généraux d’un locataire Office 365 ou Azure AD peuvent évidemment exécuter toutes les tâches d’administration d’Azure Information Protection. Toutefois, si vous voulez affecter des autorisations d’administration à d’autres utilisateurs, vous avez les options suivantes :
+Les administrateurs généraux d’un locataire Office 365 ou Azure AD peuvent évidemment exécuter toutes les tâches d’administration d’Azure Information Protection. 
 
-- **Administrateur de Azure information protection**: ce rôle d’administrateur de Azure Active Directory permet à un administrateur de configurer Azure information protection, mais pas d’autres services. Un administrateur qui a ce rôle peut activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et les étiquettes, et configurer la stratégie Azure Information Protection. En outre, un administrateur disposant de ce rôle peut exécuter toutes les applets de commande PowerShell pour le [client Azure information protection](./rms-client/client-admin-guide-powershell.md) et à partir du [module AIPService](administer-powershell.md). Toutefois, ce rôle ne prend pas en charge le suivi et la révocation des documents pour les utilisateurs.
+Toutefois, si vous souhaitez affecter des autorisations d’administration à d’autres utilisateurs, utilisez les rôles suivants :
+
+- [Administrateur Azure Information Protection](#azure-information-protection-administrator)
+- [Administrateur de conformité ou administrateur des données de conformité](#compliance-administrator-or-compliance-data-administrator)
+- [Lecteur de sécurité ou lecteur global](#security-reader-or-global-reader)
+- [Administrateur de la sécurité](#security-administrator)
+- [Administrateur général et administrateur du connecteur Azure Rights Management](#azure-rights-management-global-administrator-and-connector-administrator)
+
+En outre, notez les points suivants lors de la gestion des tâches et des rôles d’administration :
+
+|Rubrique  |Détails  |
+|---------|---------|
+|**Types de comptes pris en charge**     | Les comptes Microsoft ne sont pas pris en charge pour l’administration déléguée de Azure Information Protection, même si ces comptes sont affectés à l’un des rôles d’administration répertoriés.         |
+|**Contrôles d’intégration**     |Si vous avez configuré des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), cette configuration n’affecte pas la possibilité d’administrer Azure Information Protection, à l’exception du connecteur RMS. </br></br>Par exemple, si vous avez configuré des contrôles d’intégration de manière à ce que la capacité à protéger le contenu soit limitée au groupe *service informatique* , le compte utilisé pour installer et configurer le connecteur RMS doit être membre de ce groupe.          |
+|**Suppression de la protection**     |  Les administrateurs ne peuvent pas supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure Information Protection. </br></br>Seuls les utilisateurs qui sont affectés en tant que super utilisateurs peuvent supprimer la protection et uniquement lorsque la fonctionnalité de super utilisateur est activée. </br></br>Tout utilisateur disposant d’autorisations d’administration pour Azure Information Protection peut activer la fonctionnalité de super utilisateur et affecter des utilisateurs en tant que super utilisateurs, y compris leur propre compte. </br></br>Ces actions sont enregistrées dans un journal d’administrateur. </br></br>Pour plus d’informations, consultez la section meilleures pratiques en matière de sécurité dans [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](configure-super-users.md). 
+       |
+|**Migration vers le magasin d’étiquetage unifié**      |  Si vous migrez vos étiquettes de Azure Information Protection vers le magasin d’étiquetage unifié, veillez à lire la section suivante dans la documentation relative à la migration des étiquettes : </br>[Rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform).
+       |
+
+### <a name="azure-information-protection-administrator"></a>Administrateur Azure Information Protection
+
+Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection mais pas d’autres services. 
+
+Les administrateurs disposant de ce rôle peuvent :
+
+- Activer et désactiver le service de protection Azure Rights Management
+- Configurer les paramètres de protection et les étiquettes
+- Configurer la stratégie Azure Information Protection
+- Exécuter toutes les applets de commande PowerShell pour le [client Azure information protection](./rms-client/client-admin-guide-powershell.md) et à partir du [module AIPService](administer-powershell.md)
     
-    > [!NOTE]
-    > Ce rôle n’est pas pris en charge dans le Portail Azure si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+
+> [!NOTE]
+> Ce rôle ne prend pas en charge le suivi et la révocation des documents pour les utilisateurs, et n’est pas pris en charge dans le Portail Azure si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
     
-    Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+### <a name="compliance-administrator-or-compliance-data-administrator"></a>Administrateur de conformité ou administrateur des données de conformité
 
-- Administrateur de **conformité** ou **administrateur des données de conformité**: ces rôles d’administrateur Azure Active Directory permettent à un administrateur de configurer Azure information protection, ce qui comprend l’activation et la désactivation du service de protection Azure Rights Management, la configuration des paramètres de protection et des étiquettes et la configuration de la stratégie de Azure information protection. En outre, un administrateur disposant de l’un de ces rôles peut exécuter toutes les applets de commande PowerShell pour le [client Azure information protection](./rms-client/client-admin-guide-powershell.md) et à partir du [module AIPService](administer-powershell.md). Toutefois, ces rôles ne prennent pas en charge le suivi et la révocation des documents pour les utilisateurs.
+Ces rôles d’administrateur Azure Active Directory permettent aux administrateurs d’effectuer les opérations suivantes :
+
+- Configurer Azure Information Protection, y compris l’activation et la désactivation du service Azure Rights Management protection
+- Configurer les paramètres de protection et les étiquettes
+- Configurer la stratégie Azure Information Protection
+- Exécutez toutes les applets de commande PowerShell pour le [client Azure information protection](./rms-client/client-admin-guide-powershell.md) et à partir du [module AIPService](administer-powershell.md). 
+
+Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). 
+
+Pour connaître les autres autorisations dont dispose un utilisateur avec ces rôles, consultez la section [rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation de Azure Active Directory.
+
+> [!NOTE]
+> Ces rôles ne prennent pas en charge le suivi et la révocation des documents pour les utilisateurs.
+>     
     
-    Pour affecter un utilisateur à l’un de ces rôles d’administration, consultez [affecter un utilisateur à des rôles d’administrateur dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Pour connaître les autres autorisations dont dispose un utilisateur avec ces rôles, consultez la section [rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation de Azure Active Directory.
+### <a name="security-reader-or-global-reader"></a>Lecteur de sécurité ou lecteur global
 
-- Lecteur de **sécurité** ou **lecteur Global**: pour [Azure information protection Analytics](reports-aip.md) uniquement. Ce rôle d’administrateur Azure Active Directory permet à un administrateur de visualiser comment vos étiquettes sont utilisées, de surveiller l’accès utilisateur aux documents et e-mails étiquetés, ainsi que les modifications apportées à leur classification, et peut identifier les documents qui contiennent des informations sensibles devant être protégés. Étant donné que cette fonctionnalité utilise Azure Monitor, vous devez également disposer d’un [rôle RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics)de prise en charge.
+Ces rôles sont utilisés pour [Azure information protection Analytics](reports-aip.md) uniquement et permettent aux administrateurs d’effectuer les opérations suivantes :
 
-- **Administrateur**de la sécurité : ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure information protection dans le portail Azure, en plus de la configuration de certains aspects des autres services Azure. Un administrateur disposant de ce rôle ne peut pas exécuter les [applets de commande PowerShell à partir du module AIPService](administer-powershell.md), ni suivre et révoquer des documents pour les utilisateurs.
+- Afficher l’utilisation de vos étiquettes
+- Surveiller l’accès des utilisateurs aux documents étiquetés et aux e-mails
+- Afficher les modifications apportées à la classification
+- Identifier les documents qui contiennent des informations sensibles qui doivent être protégées 
+
+Étant donné que cette fonctionnalité utilise Azure Monitor, vous devez également disposer d’un [rôle RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics)de prise en charge.
+
+### <a name="security-administrator"></a>Administrateur de sécurité
+
+Ce rôle d’administrateur Azure Active Directory permet aux administrateurs de configurer Azure Information Protection dans le Portail Azure, ainsi que certains aspects des autres services Azure. 
+
+Les administrateurs disposant de ce rôle ne peuvent pas exécuter les [applets de commande PowerShell à partir du module AIPService](administer-powershell.md), ni suivre et révoquer des documents pour les utilisateurs.
     
-    Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Pour connaître les autres autorisations qu’un rôle donne à un utilisateur, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
+Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). 
 
-- Administrateur **général** et administrateur de **connecteur**Azure Rights Management : pour ces rôles d’administrateur Azure Rights Management, le premier accorde aux utilisateurs les autorisations d’exécuter toutes les [applets de commande PowerShell à partir du module AIPService](administer-powershell.md) sans en faire un administrateur global pour d’autres services Cloud, et le second rôle accorde des autorisations pour exécuter uniquement le connecteur Rights Management (RMS). Aucun de ces rôles d’administration n’accorde d’autorisations aux consoles de gestion ou de suivi et de révocation des documents pour les utilisateurs.
+Pour connaître les autres autorisations qu’un rôle donne à un utilisateur, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
+
+### <a name="azure-rights-management-global-administrator-and-connector-administrator"></a>Administrateur général et administrateur du connecteur Azure Rights Management
+
+Le rôle d’administrateur général permet aux utilisateurs d’exécuter toutes les [applets de commande PowerShell à partir du module AIPService](administer-powershell.md) sans en faire un administrateur global pour d’autres services Cloud.
+
+Le rôle d’administrateur de connecteur permet aux utilisateurs d’exécuter uniquement le connecteur Rights Management (RMS). 
+
+Ces rôles d’administration n’accordent pas d’autorisations aux consoles de gestion, ou prennent en charge le suivi et la révocation des documents pour les utilisateurs.
     
-    Pour affecter l’un de ces rôles d’administration, utilisez l’applet de commande PowerShell AIPService, [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator).
-
-Quelques éléments à prendre en compte :
-
-- Les comptes Microsoft ne sont pas pris en charge pour l’administration déléguée de Azure Information Protection, même si ces comptes sont affectés à l’un des rôles d’administration répertoriés. 
-
-- Si vous avez configuré des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), cette configuration n’affecte pas la possibilité d’administrer Azure Information Protection, à l’exception du connecteur RMS. Par exemple, si vous avez configuré des contrôles d’intégration de manière à ce que la capacité à protéger le contenu soit limitée au groupe « département informatique », le compte que vous utilisez pour installer et configurer le connecteur RMS doit être membre de ce groupe. 
-
-- Les utilisateurs avec un rôle d’administration ne peuvent pas supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure Information Protection. Seuls les super utilisateurs peuvent le faire, sous réserve que la fonctionnalité de super utilisateur soit activée. Toutefois, tout utilisateur avec des autorisations d’administrateur sur Azure Information Protection peut affecter un rôle de super utilisateur, y compris à lui-même. Ils peuvent également activer la fonctionnalité de super utilisateur. Ces actions sont enregistrées dans un journal d’administrateur. Pour plus d’informations, consultez la section meilleures pratiques en matière de sécurité dans [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](configure-super-users.md). 
-
-- Si vous migrez vos étiquettes de Azure Information Protection vers le magasin d’étiquetage unifié, veillez à lire la section suivante dans la documentation sur la migration des étiquettes : les [rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform).
+Pour affecter l’un de ces rôles d’administration, utilisez l’applet de commande PowerShell AIPService, [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator).
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>La solution Azure Information Protection prend-elle en charge les scénarios sur site et hybrides ?
 
 Oui. Bien qu’Azure Information Protection soit une solution basée sur le cloud, elle peut classer, étiqueter et protéger des documents et des e-mails stockés sur site, ainsi que dans le cloud.
 
-Si vous possédez Exchange Server, SharePoint Server et des serveurs de fichiers Windows, vous pouvez déployer le [connecteur Rights Management](deploy-rms-connector.md) afin de permettre à ces serveurs locaux d’utiliser le service Azure Rights Management pour protéger vos e-mails et documents. Vous pouvez également synchroniser et fédérer vos contrôleurs de domaine Active Directory avec Azure AD afin d’offrir une expérience d'authentification simple aux utilisateurs, par exemple, en utilisant [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+Si vous avez Exchange Server, SharePoint Server et les serveurs de fichiers Windows, utilisez l’une des méthodes suivantes, ou les deux :
 
-Le service Azure Rights Management génère et gère automatiquement les certificats XrML en fonction des besoins. il n’utilise donc pas d’infrastructure à clé publique (PKI) locale. Pour plus d’informations sur la façon dont Azure Rights Management utilise les certificats, voir la section [Présentation du fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) de l’article [Fonctionnement d’Azure RMS](./how-does-it-work.md).
+- Déployer le [connecteur Rights Management](deploy-rms-connector.md) afin que ces serveurs locaux puissent utiliser le service Azure Rights Management pour protéger vos e-mails et vos documents
+- Synchronisez et fédérer vos contrôleurs de domaine Active Directory avec Azure AD pour une expérience d’authentification plus transparente pour les utilisateurs. Par exemple, utilisez [Azure ad Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+
+Le service Azure Rights Management génère et gère automatiquement les certificats XrML en fonction des besoins. il n’utilise donc pas d’infrastructure à clé publique (PKI) locale. 
+
+Pour plus d’informations sur la façon dont Azure Rights Management utilise les certificats, consultez la [procédure pas à pas de fonctionnement de Azure RMS : première utilisation, protection du contenu, consommation du contenu](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption).
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Quels sont les types de données qu’Azure Information Protection peut classifier et protéger ?
 
-Azure Information Protection peut classifier et protéger des e-mails et des documents, localement ou dans le cloud. Ces documents sont notamment des documents Word, des feuilles de calcul Excel, des présentations PowerPoint, des documents PDF, des fichiers texte et des fichiers image. Pour connaître les types de document pris en charge, consultez la liste des [types de fichier pris en charge](./rms-client/clientv2-admin-guide-file-types.md) dans le guide d’administration.
+Azure Information Protection peut classifier et protéger des e-mails et des documents, localement ou dans le cloud. Ces documents sont notamment des documents Word, des feuilles de calcul Excel, des présentations PowerPoint, des documents PDF, des fichiers texte et des fichiers image. 
 
-Azure Information Protection ne pouvez pas classifier et protéger des données structurées telles que des fichiers de base de données, des éléments de calendrier, des publications Yammer, du contenu Sway et des blocs-notes OneNote.
+Pour plus d’informations, consultez la liste complète des [types de fichiers pris en charge](./rms-client/clientv2-admin-guide-file-types.md).
 
-**Récemment annoncé en**préversion : Power bi prend désormais en charge la classification à l’aide d’étiquettes de sensibilité et peut appliquer la protection de ces étiquettes aux données exportées aux formats de fichier suivants :. pdf,. xls et. ppt. Pour plus d’informations, consultez [protection des données en Power bi (version préliminaire)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
+> [!NOTE]
+> Azure Information Protection ne pouvez pas classifier et protéger des données structurées telles que des fichiers de base de données, des éléments de calendrier, des publications Yammer, du contenu Sway et des blocs-notes OneNote.
+> 
 
+> [!TIP]
+> Power BI prend désormais en charge la classification à l’aide d’étiquettes de sensibilité et peut appliquer la protection de ces étiquettes aux données exportées aux formats de fichier suivants :. pdf,. xls et. ppt. Pour plus d’informations, consultez [protection des données en Power bi (version préliminaire)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
+> 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Je vois qu’Azure Information Protection est répertoriée en tant qu’application cloud disponible pour l’accès conditionnel : comment cela fonctionne-t-il ?
 
 Oui, dans le cadre d’une offre de préversion, vous pouvez à présent configurer l’accès conditionnel Azure AD pour Azure Information Protection.
@@ -187,17 +279,14 @@ Pour plus d’informations et des exemples de procédure pas à pas, consultez l
 
 Informations complémentaires :
 
-- Pour les ordinateurs Windows : pour la préversion actuelle, les stratégies d’accès conditionnel pour Azure Information Protection sont évaluées quand l’[environnement de l’utilisateur est initialisé](./how-does-it-work.md#initializing-the-user-environment) (ce processus est également appelé amorçage), puis tous les 30 jours.
+|Rubrique  |Détails  |
+|---------|---------|
+|**Fréquence d’évaluation**    | Pour les ordinateurs Windows et la version préliminaire actuelle, les stratégies d’accès conditionnel pour les Azure Information Protection sont évaluées lorsque l' [environnement utilisateur est initialisé](./how-does-it-work.md#initializing-the-user-environment) (ce processus est également appelé amorçage), puis tous les 30 jours.</br></br>Pour ajuster la fréquence à laquelle vos stratégies d’accès conditionnel sont évaluées, [configurez la durée de vie du jeton](/azure/active-directory/active-directory-configurable-token-lifetimes).       |
+|**Comptes d’administrateur**     |Nous vous recommandons de ne pas ajouter de comptes d’administrateur à vos stratégies d’accès conditionnel, car ces comptes ne seront pas en mesure d’accéder au volet de Azure Information Protection dans le Portail Azure.         |
+|**MFA et B2B collaboration**     | Si vous utilisez MFA dans vos stratégies d’accès conditionnel pour collaborer avec d’autres organisations (B2B), vous devez utiliser [Azure AD B2B Collaboration](/azure/active-directory/b2b/what-is-b2b) et créer des comptes Invité pour les utilisateurs de l’autre organisation avec lesquels vous souhaitez partager.        |
+|**Invites de conditions d’utilisation**     |  Avec la version préliminaire de Azure AD décembre 2018, vous pouvez désormais [inviter les utilisateurs à accepter les conditions d’utilisation](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) avant d’ouvrir un document protégé pour la première fois.       |
+|**Applications Cloud**     |  Si vous utilisez un grand nombre d’applications cloud pour l’accès conditionnel, **Microsoft Azure Information Protection** risque de ne pas s’afficher dans la liste de sélection. </br></br>Dans ce cas, utilisez la zone de recherche située en haut de la liste. Commencez à taper « Microsoft Azure Information Protection » pour filtrer les applications disponibles. À condition d’avoir un abonnement pris en charge, vous pourrez alors sélectionner **Microsoft Azure Information Protection**.        |
 
-- Vous devrez peut-être ajuster la fréquence à laquelle vos stratégies d’accès conditionnel sont évaluées. Pour cela, configurez la durée de vie des jetons. Pour plus d’informations, consultez [Durées de vie de jeton configurables dans Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
-
-- Nous vous recommandons de ne pas ajouter de comptes d’administrateur à vos stratégies d’accès conditionnel, car ces comptes ne seront pas en mesure d’accéder au volet de Azure Information Protection dans le Portail Azure.
-
-- Si vous utilisez MFA dans vos stratégies d’accès conditionnel pour collaborer avec d’autres organisations (B2B), vous devez utiliser [Azure AD B2B Collaboration](/azure/active-directory/b2b/what-is-b2b) et créer des comptes Invité pour les utilisateurs de l’autre organisation avec lesquels vous souhaitez partager.
-
-- Avec la préversion d’Azure AD publiée en décembre 2018, vous pouvez inviter les utilisateurs à accepter des conditions d’utilisation avant la première ouverture d’un document protégé. Pour plus d’informations, consultez le billet de blog suivant : [mises à jour de Azure ad fonctionnalités de conditions d’utilisation dans l’accès conditionnel](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822)
-
-- Si vous utilisez un grand nombre d’applications cloud pour l’accès conditionnel, **Microsoft Azure Information Protection** risque de ne pas s’afficher dans la liste de sélection. Dans ce cas, utilisez la zone de recherche située en haut de la liste. Commencez à taper « Microsoft Azure Information Protection » pour filtrer les applications disponibles. À condition d’avoir un abonnement pris en charge, vous pourrez alors sélectionner **Microsoft Azure Information Protection**. 
 
 ## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Je vois qu’Azure Information Protection est répertorié en tant que fournisseur de sécurité pour Microsoft Graph Security, comment cela fonctionne-t-il et quelles alertes vais-je recevoir ?
 
@@ -217,19 +306,28 @@ Nous vous recommandons maintenant d’utiliser le [scanneur Azure Information Pr
 
 Les principales différences entre ces deux solutions sont les suivantes :
 
-|ICF de Windows Server|Scanneur Azure Information Protection|
-|--------------------------------|-------------------------------------|
-|Magasins de données pris en charge : <br /><br />- Dossiers locaux sur Windows Server|Magasins de données pris en charge : <br /><br />- Dossiers locaux sur Windows Server<br /><br />- Dispositif de stockage NAS et partages de fichiers Windows<br /><br />- SharePoint Server 2016 et SharePoint Server 2013. SharePoint Server 2010 est également pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).|
-|Mode de fonctionnement : <br /><br />- Temps réel|Mode de fonctionnement : <br /><br />- Analyse systématiquement les magasins de données et ce cycle peut s’exécuter une ou plusieurs fois|
-|Prise en charge des types de fichiers : <br /><br />- Tous les types de fichiers sont protégés par défaut <br /><br />- Des types de fichiers spécifiques peuvent être exclus de la protection par modification du registre|Prise en charge des types de fichiers : <br /><br />- Les types de fichiers Office et les documents PDF sont protégés par défaut <br /><br />- Des types de fichiers supplémentaires peuvent être inclus dans la protection par modification du Registre|
+|  |ICF de Windows Server  |Scanneur Azure Information Protection  |
+|---------|---------|---------|
+|**Magasins de données pris en charge**    | Dossiers locaux sur Windows Server        | - Dispositif de stockage NAS et partages de fichiers Windows<br /></br>- SharePoint Server 2016 et SharePoint Server 2013. SharePoint Server 2010 est également pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).        |
+|**Mode opérationnel**     |En temps réel         |Analyse systématiquement les magasins de données une fois ou plusieurs fois.         |
+|**Types de fichiers pris en charge**     | - Tous les types de fichiers sont protégés par défaut <br /><br />- Des types de fichiers spécifiques peuvent être exclus de la protection par modification du registre|Prise en charge des types de fichiers : <br /><br />- Les types de fichiers Office et les documents PDF sont protégés par défaut <br /><br />- Des types de fichiers supplémentaires peuvent être inclus dans la protection par modification du Registre|
 
-Il existe une différence dans la définition de la [Rights Management propriétaire](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) pour les fichiers protégés sur un dossier local ou un partage réseau. Par défaut, dans les deux solutions, le propriétaire de Rights Management est défini sur le compte qui protège le fichier, mais vous pouvez remplacer ce paramètre :
+### <a name="setting-rights-management-owners"></a>Définition des propriétaires de Rights Management
 
-- Pour l’ICF de Windows Server, vous pouvez définir le propriétaire de Rights Management sur un seul compte pour tous les fichiers, ou définir de façon dynamique ce propriétaire pour chaque fichier. Pour définir le propriétaire de Rights Management de façon dynamique, utilisez le paramètre et la valeur **- OwnerMail [Source File Owner Email]** . Cette configuration récupère l’adresse e-mail de l’utilisateur à partir d’Active Directory en utilisant le nom du compte d’utilisateur dans la propriété Propriétaire du fichier.
+Par défaut, pour Windows Server FCI et le scanneur Azure Information Protection, le [propriétaire](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) de la Rights Management est défini sur le compte qui protège le fichier.
 
-- Pour le scanneur de Azure Information Protection : pour les fichiers récemment protégés, vous pouvez définir le Rights Management propriétaire comme un compte unique pour tous les fichiers d’une banque de données spécifiée, mais vous ne pouvez pas définir dynamiquement le propriétaire Rights Management pour chaque fichier. Le propriétaire de Rights Management ne change pas pour les fichiers précédemment protégés. Pour définir le compte des nouveaux fichiers protégés, spécifiez le paramètre **Propriétaire par défaut** dans le profil du scanneur. 
+Remplacez les paramètres par défaut comme suit :
 
-Quand le scanneur protège les fichiers sur les sites et bibliothèques SharePoint, le propriétaire de Rights Management est défini dynamiquement pour chaque fichier à l’aide de la valeur de l’éditeur de SharePoint.
+- **Windows Server FCI**: définissez le Rights Management propriétaire comme un compte unique pour tous les fichiers, ou définissez dynamiquement le propriétaire Rights Management pour chaque fichier. 
+
+    Pour définir le propriétaire de Rights Management de façon dynamique, utilisez le paramètre et la valeur **- OwnerMail [Source File Owner Email]**. Cette configuration récupère l’adresse e-mail de l’utilisateur à partir d’Active Directory en utilisant le nom du compte d’utilisateur dans la propriété Propriétaire du fichier.
+
+- **Analyseur de Azure information protection :** Pour les fichiers récemment protégés, définissez le Rights Management propriétaire comme un compte unique pour tous les fichiers d’une banque de données spécifiée, en spécifiant le paramètre de **propriétaire par défaut** dans le profil du scanneur. 
+
+    Le fait de définir dynamiquement le propriétaire de Rights Management pour chaque fichier n’est pas pris en charge et le propriétaire de Rights Management n’est pas modifié pour les fichiers précédemment protégés. 
+
+    > [!NOTE]
+    > Quand le scanneur protège les fichiers sur les sites et bibliothèques SharePoint, le propriétaire de Rights Management est défini dynamiquement pour chaque fichier à l’aide de la valeur de l’éditeur de SharePoint.
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>J’ai entendu dire qu’une nouvelle version sera bientôt disponible, par Azure Information Protection, quand sera-t-elle publiée ?
 
@@ -241,7 +339,9 @@ Les pays ont chacun leurs réglementations et leurs exigences. Pour vous aider �
 
 ## <a name="how-can-azure-information-protection-help-with-gdpr"></a>Comment Azure Information Protection peut-il aider pour le RGPD ?
 
-Pour savoir comment Azure Information Protection peut vous aider à respecter le Règlement général sur la protection des données (RGPD), consultez l’annonce du billet de blog suivant qui contient une vidéo : [Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
+Pour savoir comment Azure Information Protection peut vous aider à respecter le Règlement général sur la protection des données (RGPD), consultez l’annonce du billet de blog suivant qui contient une vidéo : 
+
+[Microsoft 365 fournit une stratégie de protection des informations pour faciliter la RGPD](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr)
 
 ## <a name="where-can-i-find-supporting-information-for-azureinformation-protectionsuch-as-legal-compliance-and-slas"></a>Où puis-je trouver des informations annexes sur Azure Information Protection (considérations juridiques, conformité, contrats de niveau de service, etc.) ?
 Consultez [Conformité et informations annexes pour Azure Information Protection](./compliance.md).
@@ -254,13 +354,13 @@ Nous vous invitons également à contacter l’équipe d’ingénieurs sur son [
 
 ## <a name="what-do-i-do-if-my-question-isnt-here"></a>Que dois-je faire si ma question n’est pas disponible ?
 
-Tout d’abord, passez en revue les questions fréquentes suivantes propres à la classification et à l’étiquetage ou spécifiques de la protection des données. Le service Azure Rights Management (Azure RMS) fournit la technologie de protection des données à Azure Information Protection. Azure RMS peut être utilisé avec la classification et l’étiquetage, ou de façon autonome. 
+Tout d’abord, passez en revue les questions fréquemment posées répertoriées ci-dessous, qui sont spécifiques à la classification et à l’étiquetage, ou spécifiques à la protection des données. Le [service Azure Rights Management (Azure RMS)](what-is-azure-rms.md) fournit la technologie de protection des données pour Azure information protection. Azure RMS peut être utilisé avec la classification et l’étiquetage, ou de façon autonome. 
 
-- [Forum aux questions sur la classification et l’étiquetage](faqs-infoprotect.md)
+- [FAQ sur la classification et l’étiquetage](faqs-infoprotect.md)
 
-- [Forum aux questions sur la protection des données](faqs-rms.md)
+- [FAQ sur la protection des données](faqs-rms.md)
 
-Si votre question ne fait pas l’objet d’une réponse, utilisez les liens et les ressources figurant dans [Informations et support technique pour Azure Rights Management](information-support.md).
+Si votre question n’a pas de réponse, consultez les liens et les ressources figurant dans [informations et support pour Azure information protection](information-support.md).
 
 De plus, il existe des questions fréquentes destinées aux utilisateurs finaux :
 

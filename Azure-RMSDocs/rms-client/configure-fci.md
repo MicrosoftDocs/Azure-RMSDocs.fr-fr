@@ -13,18 +13,18 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3afd356ee64d337bf171488e8be6aa65049d7ee
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224731"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046536"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Cet article contient des instructions et un script pour utiliser le client Azure Information Protection et PowerShell pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF).
 
@@ -150,9 +150,9 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
         -   **Activé**: Conservez la valeur par défaut, c'est-à-dire que cette case à cocher est activée.
 
-        -   **Description**: tapez **classifier tous les fichiers &lt;dans le&gt; dossier Nom du dossier pour Rights Management**.
+        -   **Description**: tapez **classifier tous les fichiers dans le &lt; dossier nom du dossier &gt; pour Rights Management**.
 
-            Remplacez * &lt;le nom&gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**
+            Remplacez le * &lt; nom &gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**
 
         -   **Étendue**: Ajoutez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
@@ -194,7 +194,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
         -   **Description** : Tapez **Protéger les fichiers dans &lt;nom de dossier&gt; avec Rights Management et un modèle à l’aide d’un script Windows PowerShell.**
 
-            Remplacez * &lt;le nom&gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l'aide d'un script Windows PowerShell**.
+            Remplacez le * &lt; nom &gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l'aide d'un script Windows PowerShell**.
 
         -   **Étendue**: Sélectionnez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 

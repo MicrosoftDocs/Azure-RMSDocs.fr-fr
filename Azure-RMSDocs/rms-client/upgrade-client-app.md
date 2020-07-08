@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cc1d3c3d64d6c8b51d355fd870c48138a6ed4d33
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: d8a9c0e81b7b5bedb1b8f41dc129f4370c827acf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117525"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048593"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guide de l’utilisateur : Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
 
 >*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
 >
-> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Vous avez récemment effectué la mise à niveau de l’application de partage Rights Management (également appelée « application de partage RMS ») vers le client Azure Information Protection ? 
 
@@ -33,7 +33,7 @@ Utilisez les informations suivantes pour être opérationnel rapidement.
 |L’application de partage RMS|Comment procéder avec le client Azure Information Protection
 |-----------|--------------------|
 |Protéger un fichier sur un appareil <br /><br />Également appelé « protéger sur place »|Pour les applications Office : sélectionnez une étiquette qui applique la protection nécessaire ou définissez des autorisations personnalisées.<br /><br />Pour les autres fichiers : dans le menu Explorateur de fichiers, utilisez l’option **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. Ensuite, sélectionnez une étiquette qui applique la protection nécessaire ou spécifiez vos propres autorisations personnalisées. <br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
-|Protéger un fichier partagé par courrier électronique <br /><br />Également appelé « partage protégé »|Avec Outlook, appliquez une étiquette avec la protection requise à votre e-mail, ou sélectionnez l’option **Ne pas transférer** dans Outlook. Les pièces jointes non protégées qui ont un [type de fichier pris en charge](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sont protégées automatiquement.<br /><br />Remarque : Pour effectuer le suivi d’un document protégé que vous envoyez par e-mail, commencez par le protéger avant de l’attacher à l’e-mail.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
+|Protéger un fichier que vous partagez par courrier électronique <br /><br />Également appelé « partage protégé »|Avec Outlook, appliquez une étiquette avec la protection requise à votre e-mail, ou sélectionnez l’option **Ne pas transférer** dans Outlook. Les pièces jointes non protégées qui ont un [type de fichier pris en charge](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sont protégées automatiquement.<br /><br />Remarque : Pour effectuer le suivi d’un document protégé que vous envoyez par e-mail, commencez par le protéger avant de l’attacher à l’e-mail.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
 |Modifier des autorisations sur les fichiers protégés <br /><br />Également appelé « reprotéger »|Pour les applications Office qui affichent la barre Azure Information Protection : sélectionnez une étiquette qui applique la protection nécessaire.<br /><br />Pour les autres fichiers, et si le client Azure Information Protection est en [mode protection uniquement](client-protection-only-mode.md) : utilisez l’option du menu Explorateur de fichiers **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. Ensuite, sélectionnez une étiquette qui applique la protection nécessaire ou spécifiez vos propres autorisations personnalisées.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
 |Suivre et révoquer des documents|À partir de Word, Excel et PowerPoint : ouvrez le document puis, cliquez sur l’onglet **Accueil** > groupe **Protection** > **Protéger** > **Suivre et révoquer**<br /><br />Depuis l’Explorateur de fichiers : cliquez avec le bouton droit sur un fichier ou dossier > **Classifier et protéger**. Ensuite, à partir de la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Suivre et révoquer**. <br /><br />Lorsque vous utilisez PowerShell pour le client Azure Information Protection : utilisez le paramètre *EnableTracking* avec l’applet de commande [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) pour enregistrer le document étiqueté pour le suivi.<br /><br />Pour plus d’informations, consultez [Suivre et révoquer vos documents](client-track-revoke.md).
 |Afficher et utiliser des fichiers qui ont été protégés|Pour les documents Office protégés, Office doit être installé. La visionneuse Azure Information Protection peut ouvrir de nombreux autres fichiers protégés, vous permettant ainsi de les lire, les imprimer et les enregistrer si vous disposez des autorisations appropriées pour effectuer ces actions. Cette visionneuse est installée automatiquement avec le client, ou vous pouvez l’installer séparément.<br /><br />Pour plus d’informations, consultez [Ouvrir des fichiers protégés](client-view-use-files.md).
@@ -43,11 +43,11 @@ Utilisez les informations suivantes pour être opérationnel rapidement.
 
 Si vous recherchez une option spécifique que vous utilisiez avec l’application de partage RMS, consultez le tableau suivant.
 
-|Option dans l’application de partage RMS|Informations
+|Option dans l’application de partage RMS|Information
 |-----------|--------------------|
 |**Partage protégé**|Cette option n’est plus disponible dans le ruban Office. Au lieu de partager directement à partir de votre application Office, utilisez l’option contextuelle de l’Explorateur de fichiers, **Classifier et protéger** pour protéger une copie du document avec des autorisations personnalisées, puis partagez le fichier à l’aide du client de messagerie de votre choix ou d’un emplacement de partage. <br /><br /> Vous pouvez également attacher un document Office non protégé à un e-mail que vous protégez : ce document est alors protégé automatiquement avec les mêmes restrictions. Vous ne pouvez cependant pas suivre ni révoquer ce document.
-|**M’envoyer un e-mail quand quelqu’un tente d’ouvrir ces documents**|Utilisez le site de suivi des documents pour configurer vos paramètres de notification d’e-mail préférés : recherchez le document protégé que vous avez partagé > **Paramètres** > **Notifications d’e-mail**
-|**M’autoriser à révoquer de suite l’accès à ces documents**|Cette option n’est plus disponible. Utilisez les paramètres de protection définis par l’administrateur qui n’autorisent pas l’accès hors connexion. En outre, un administrateur peut réduire la période de validité de la licence d’utilisation pour votre locataire, en exécutant [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
+|**M’envoyer un e-mail quand quelqu’un tente d’ouvrir ces documents**|Utilisez le site de suivi des documents pour configurer votre paramètre de notification par courrier électronique préféré : localiser le document protégé que vous avez partagé > **paramètres**  >  **notifications par e-mail**
+|**M'autoriser à révoquer de suite l'accès à ces documents.**|Cette option n’est plus disponible. Utilisez les paramètres de protection définis par l’administrateur qui n’autorisent pas l’accès hors connexion. En outre, un administrateur peut réduire la période de validité de la licence d’utilisation pour votre locataire, en exécutant [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
 |**Effectuer le suivi de l’utilisation** dans Outlook|La possibilité d’accéder au site de suivi des documents à partir d’Outlook n’est plus disponible. Au lieu de cela, utilisez l’option **Suivre et révoquer** à partir de Word, PowerPoint, Excel ou l’Explorateur de fichiers. Ou, à l’aide d’un navigateur, vous pouvez accéder directement au [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
 ## <a name="next-steps"></a>Étapes suivantes

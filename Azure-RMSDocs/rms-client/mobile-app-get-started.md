@@ -1,10 +1,10 @@
 ---
 title: 'Bien démarrer : application AIP pour iOS et Android'
 description: Afficher des e-mails ou des fichiers avec l’application Azure Information Protection pour iOS et Android
-author: rkarlin
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,38 +12,53 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cfae5de653497a448d10e0ac65c10ea2a6e9e4f3
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960840"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048695"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
 *S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Avant d’utiliser les instructions de cette page, veillez à lire les [questions fréquentes sur l’application Azure Information Protection pour iOS et Android](mobile-app-faq.md). Cette page décrit à quoi sert l’application, quels appareils sont pris en charge et donne des informations élémentaires sur l’utilisation de l’application.
+Cette page explique comment tester l’exécution des applications Azure Information Protection pour iOS ou Android.
 
-La plupart des utilisateurs se servent généralement de l’application Azure Information Protection quand ils ont besoin d’ouvrir un fichier ou un e-mail protégé. Toutefois, si vous êtes administrateur et que vous souhaitez tester l’application pour vos utilisateurs, ou simplement faire un essai avant d’en avoir besoin, vous pouvez utiliser les instructions suivantes.
+La plupart des utilisateurs se servent généralement de l’application Azure Information Protection quand ils ont besoin d’ouvrir un fichier ou un e-mail protégé. Toutefois, si vous êtes un administrateur qui teste l’application pour vos utilisateurs, ou si vous souhaitez simplement l’essayer avant de l’avoir besoin, suivez les instructions ci-dessous pour afficher les fichiers protégés sur votre appareil.
+
+> [!IMPORTANT]
+> Avant de commencer, lisez les conditions requises et les instructions relatives à [l’application Azure information protection pour iOS ou Android ?](mobile-app-faq.md)
+> 
+
+## <a name="access-a-protected-file-from-your-device"></a>Accéder à un fichier protégé à partir de votre appareil
+
+Pour tester l’application mobile AIP, assurez-vous que vous pouvez accéder à l’un des types de fichiers protégés suivants à partir de votre appareil :
+
+|Type de fichier  |Instructions  |
+|---------|---------|
+|**Un fichier. rpmsg**     | Message électronique protégé par des droits. Si votre application de messagerie mobile ne prend pas en charge la protection des données Rights Management en mode natif, les messages électroniques protégés sont affichés sous forme de pièces jointes. </br></br>Utilisez un autre appareil, tel qu’Outlook à partir d’un ordinateur Windows, pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. </br></br>**Remarque :** Pour obtenir la liste des clients de messagerie qui prennent en charge Rights Management en mode natif, consultez la colonne **e-mail** dans [applications compatibles RMS](../requirements-applications.md#rms-enlightened-applications). |
+|**Un fichier PDF protégé par des droits**     | 1. à partir d’un ordinateur Windows, protégez un fichier PDF à l’aide du client du [client d’étiquetage](clientv2-classify-protect.md) [classique](client-classify-protect.md) ou unifié d’AIP. </br>2. envoyez-vous le fichier PDF protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie.        |
+|**A. PTXT ou. pjpg ou. PPNG**     | 1. à partir d’un ordinateur Windows, protégez un fichier texte ou image à l’aide du client [client d’étiquetage](clientv2-classify-protect.md) [classique](client-classify-protect.md) ou unifié d’AIP. </br></br>2. envoyez-vous le fichier protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie. </br></br>**Remarque :** Pour plus d’informations, consultez [types de fichiers pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)   |
+| | |
+
+### <a name="open-the-protected-file-on-your-mobile"></a>Ouvrir le fichier protégé sur votre mobile
+
+1. Appuyez sur la pièce jointe de courrier électronique ou sur le lien pour ouvrir votre contenu protégé.
+
+1. Lorsque vous y êtes invité, sélectionnez l’application de **visionneuse AIP** pour afficher le contenu protégé.
+
+1. Lorsque vous y êtes invité, connectez-vous avec votre compte professionnel ou scolaire ou sélectionnez un certificat.
+
+Une fois authentifié, l’application de visionneuse AIP affiche l’e-mail ou le fichier pour vous.
 
 > [!NOTE]
-> Ne commencez pas par ouvrir l’application pour sélectionner ensuite les documents et e-mails à afficher. Ouvrez plutôt votre document ou votre e-mail, puis sélectionnez cette application pour l’afficher.
->
-> De même, n’essayez pas de vous connecter à l’application tant que vous n’y êtes pas invité.
-
-Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Exemple :
-
-- **Un fichier .rpmsg** : il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
-    
-    Utilisez un autre appareil pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. Par exemple, utilisez Outlook à partir d’un ordinateur Windows. Pour obtenir la liste des clients de messagerie qui prennent en charge Rights Management en mode natif, consultez la colonne **e-mail** dans le premier tableau de la page [applications prenant en charge Azure Rights Management Data Protection](../requirements-applications.md) .
-
-- **Un fichier PDF protégé**par des droits : à partir d’un ordinateur Windows, utilisez un client Azure information protection ( [client d’étiquetage](clientv2-classify-protect.md) [classique](client-classify-protect.md) ou unifié) pour protéger un fichier PDF, puis envoyez-vous ce fichier PDF protégé par des droits sous forme de pièce jointe dans un message électronique. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
-
-- **A. PTXT ou. pjpg ou. PPNG**: à partir d’un ordinateur Windows, utilisez un client Azure information protection pour protéger un fichier texte ou image, puis envoyez-vous ce fichier protégé en tant que pièce jointe à un message électronique. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour les tests, consultez le premier tableau de la section [Types de fichiers pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du Guide d’administration du client Azure Information Protection. 
-
-Pour afficher ces fichiers dans l’application de visionneuse Azure Information Protection, cliquez sur la pièce jointe ou le lien dans l’e-mail. Lorsque vous êtes invité à sélectionner une application avez laquelle les ouvrir, sélectionnez l’application **Visionneuse d’accès et de protection des informations**. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire, ou invité à sélectionner un certificat. Une fois ces informations d’identification authentifiées, l’application Azure Information Protection affiche l’e-mail ou le fichier que vous voulez lire.
+> Ouvrez toujours l’application AIP en ouvrant le contenu protégé. N’essayez pas de vous connecter à l’application tant que vous n’y êtes pas invité ou d’ouvrir un fichier protégé à partir de l’application de visionneuse AIP.
+> 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour poser des questions ou laisser des commentaires sur cette application, qui ne sont pas traités dans les [questions fréquentes](mobile-app-faq.md), visitez notre [site Yammer](https://www.yammer.com/AskIPTeam).
+Utilisez l’une des méthodes suivantes pour fournir des commentaires sur les applications mobiles AIP :
+
+- Accéder aux **paramètres**  >  **Envoyer des commentaires**
+- Publiez votre question sur notre [site Yammer](https://www.yammer.com/AskIPTeam)

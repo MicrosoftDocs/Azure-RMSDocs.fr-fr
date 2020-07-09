@@ -1,9 +1,9 @@
 ---
 title: Aider les utilisateurs à protéger des fichiers à l’aide d’Azure RMS - AIP
 description: Informations vous permettant de fournir de l’aide aux utilisateurs, aux administrateurs et au support technique après le déploiement et la configuration du service Azure Rights Management d’Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 0c828903f4849dd63de95a401b88acdc4f92dd7e
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933359"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136596"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Après avoir déployé et configuré Azure Information Protection pour votre organisation, vous pouvez fournir de l’aide et des instructions aux utilisateurs, aux administrateurs et au support technique :
 
@@ -31,7 +31,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     Expliquez à vos utilisateurs comment et quand protéger des documents et messages électroniques contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu’ils puissent intégrer les étapes supplémentaires à un processus déjà familier, au lieu d’introduire des processus nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des messages électroniques. Si vous avez configuré des [modèles](configure-policy-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
     
     > [!TIP]
-    > Exemples de vidéos à l’attention des utilisateurs finaux :
+    > Exemples de vidéos à l’attention des utilisateurs finaux :
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
     > -   [Révocation et suivi de document Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
@@ -41,7 +41,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
     Pour plus d’informations, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md) et [Configuration d’applications pour le service Azure Rights Management](configure-applications.md).
     
--   **Informations de support technique**
+-   **Informations sur le support technique**
     
     Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez le guide de l’administrateur : [Vérifications et résolution des problèmes liés à l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
@@ -49,7 +49,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
     Voici en outre certaines catégories de problèmes que les utilisateurs peuvent signaler :
     
-    - **Aide à la connexion**
+    - **Aide sur la connexion**
         
         Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent généralement au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé au client (tenant) Office 365 ou Azure Active Directory. Même si le service Azure Rights Management peut authentifier des comptes Azure AD, certaines applications peuvent également ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
@@ -80,13 +80,13 @@ Pour savoir comment utiliser ce client pour les ordinateurs Windows, consultez l
 Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications Office pour poste de travail. Ils ne voient pas non plus le bouton **Protéger** sur le ruban, ni **Classer et protéger** dans l’Explorateur de fichiers. Ces ajouts facilitent la protection des documents et des e-mails. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
 
 > [!TIP]
-> Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
+> Pour trouver de l'aide et des instructions spécifiques à une application qui ont trait à l'utilisation de la protection des données avec ces applications, recherchez « **IRM** » ainsi que le nom et la version de l'application.
 
 #### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Pour protéger un document dans Word d’Office 365 ProPlus
 
 1.  Dans Microsoft Word, créez un document.
 
-2.  Dans le menu **fichier** : **info** > **protéger le document** >  **restreindre l’accès**.
+2.  Dans le menu **fichier** : **info**  >  **protéger document**  >   **restreindre l’accès**.
 
 3. Choisissez un modèle pour appliquer rapidement les droits d’utilisation appropriés ou sélectionnez **Restreindre l’accès** et sélectionnez vous-même les droits d’utilisation.
 
@@ -95,7 +95,7 @@ Si vous utilisez le service Azure Rights Management et que vous n’avez pas ins
 
 3.  Enregistrez le document.
 
-Lorsque d'autres personnes ouvriront le document, ils devront d'abord être authentifiés. S'ils ne reçoivent pas l'autorisation pour ouvrir le document, ce dernier ne s'ouvrira pas. S’ils sont autorisés à ouvrir le document, ce dernier s’ouvrira avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
+Lorsque d'autres personnes ouvriront le document, ils devront d'abord être authentifiés. S'ils ne reçoivent pas l'autorisation pour ouvrir le document, ce dernier ne s'ouvrira pas. S’ils sont autorisés à ouvrir le document, il s’ouvre avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été spécifiés pour cet utilisateur. 
 
 Par exemple, un droit d'utilisation Affichage uniquement ne permet pas à l'utilisateur de modifier ou d'enregistrer le document, même si ce dernier est d'abord copié vers un autre emplacement. 
 
@@ -105,11 +105,11 @@ Les droits d'utilisation sont affichés en haut du document grâce à une banni�
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  Sous l’onglet **options** : **autorisation** > sélectionnez une option. Par exemple : **Ne pas transférer**, **\<Nom de la société>- Confidentiel** ou **\<Nom de la société>- Affichage confidentiel uniquement**.
+2.  Sous l’onglet **options** : **autorisation** > sélectionnez une option. Par exemple : **ne pas transférer**, ou ** \<Company Name> -confidentiel**ou ** \<Company Name> confidentiel uniquement**.
 
 3.  Envoyez le message.
 
-Comme pour l’affichage d’un document protégé, lorsque les destinataires ouvrent l’e-mail protégé, ceux-ci sont tout d’abord authentifiés. S’ils sont autorisés à afficher le message électronique, ce dernier s’ouvrira avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
+Comme pour l’affichage d’un document protégé, lorsque les destinataires ouvrent l’e-mail protégé, ceux-ci sont tout d’abord authentifiés. S’ils sont autorisés à voir le message électronique, ils s’ouvrent avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été spécifiés pour cet utilisateur. 
 
 Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas transférer**, le bouton Transférer n’est pas disponible dans le ruban.
 
@@ -117,10 +117,10 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1. Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **modifier les autorisations** , puis sélectionnez une option dans la liste déroulante. Par exemple : **chiffrer** ou **\<nom de la société >-Confidential**.
+2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **modifier les autorisations** , puis sélectionnez une option dans la liste déroulante. Par exemple : **chiffrer** ou ** \<Company Name> confidentiel**.
 
 3. Envoyez le message.
 
-Comme pour un document protégé, les destinataires sont authentifiés avant de pouvoir ouvrir l’e-mail. S’ils sont autorisés à afficher le message électronique, ce dernier s’ouvrira avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
+Comme pour un document protégé, les destinataires sont authentifiés avant de pouvoir ouvrir l’e-mail. S’ils sont autorisés à voir le message électronique, ils s’ouvrent avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été spécifiés pour cet utilisateur. 
 
 Par exemple, avec l’option par défaut **Ne pas transférer**, l’option **Transférer** n’est pas disponible dans la fenêtre de message.

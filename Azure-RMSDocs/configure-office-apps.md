@@ -1,9 +1,9 @@
 ---
 title: Configuration pour les clients utilisant des applications Office avec Azure RMS d’Azure Information Protection
 description: Informations et instructions permettant aux administrateurs de configurer des applications Office pour qu’elles fonctionnent avec le service Azure Rights Management d’Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,28 +12,28 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc190e6a7433457e0126976a66dbf5b04a47d140
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 7746a412225248808e02731433133fc4182874a9
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935144"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136262"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applications Office : configuration pour les clients utilisant le service Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Utilisez ces informations pour déterminer ce que vous devez faire pour que les applications Office fonctionnent avec le service Azure Rights Management d’Azure Information Protection.
 
-## <a name="office365-apps-office-2019-office-2016-and-office-2013"></a>Office 365 Apps, Office 2019, Office 2016 et Office 2013
+## <a name="office365-apps-office-2019-office-2016-and-office-2013"></a>Applications Office 365, Office 2019, Office 2016 et Office 2013
 Ces versions d’Office prenant en charge le service Azure Rights Management en mode natif, aucune configuration de l’ordinateur client n’est nécessaire pour la prise en charge des fonctionnalités de gestion des droits relatifs à l’information (IRM) pour des applications comme Word, Excel, PowerPoint, Outlook et Outlook sur le web. Tous les utilisateurs doivent faire pour ces applications sur Windows, se connectent à leurs applications Office avec leurs informations d’identification Office 365. Ils peuvent alors protéger des fichiers et des e-mails, et utiliser des fichiers et des e-mails qui ont été protégés par d’autres.
 
 ### <a name="user-instructions-for-office-for-mac"></a>Instructions de l’utilisateur pour Office pour Mac
 
-Les utilisateurs qui disposent d’Office pour Mac doivent tout d’abord vérifier leurs informations d’identification pour pouvoir protéger du contenu. Exemple :
+Les utilisateurs qui disposent d’Office pour Mac doivent tout d’abord vérifier leurs informations d’identification pour pouvoir protéger du contenu. Par exemple :
 
-1. Ouvrez Outlook et créez un profil à l’aide de compte de travail ou scolaire Office 365. 
+1. Ouvrez Outlook et créez un profil à l’aide de votre compte de travail ou scolaire Office 365. 
 
 2. Créez un nouveau message et, sous l’onglet **options** , sélectionnez **autorisations**, puis sélectionnez **vérifier les informations d’identification**. Lorsque vous y êtes invité, spécifiez à nouveau les détails votre compte de travail ou scolaire Office 365, puis sélectionnez **Connexion**.
     

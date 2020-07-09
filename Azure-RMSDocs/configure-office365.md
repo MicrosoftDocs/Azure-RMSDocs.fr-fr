@@ -1,9 +1,9 @@
 ---
 title: Configuration pour les services Office 365 à utiliser Azure RMS-AIP
 description: Informations et instructions permettant aux administrateurs de configurer les services Office 365 pour qu’ils fonctionnent avec le service Azure Rights Management à partir de Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef5a4d9f270d111ead3a6d04c2b49e67e230eb6a
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ee38abad373662034a5c8d5c5b31d3a0b006d4ce
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047811"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136255"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : configuration de services en ligne pour utiliser le service Azure Rights Management
 

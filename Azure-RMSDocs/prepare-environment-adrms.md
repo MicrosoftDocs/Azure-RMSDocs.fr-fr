@@ -1,9 +1,9 @@
 ---
 title: Préparer l’environnement pour Azure RMS et AD RMS
 description: Conseils pour les administrateurs si Azure Rights Management avec AD RMS déployés.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5fba2e27abaf59e9b9b50322baa0d93b2af93aa9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935382"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136945"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Préparez l’environnement pour Azure Rights Management lorsque vous avez AD RMS
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Conseils pour l’utilisation des services AD RMS (Active Directory Rights Management Services)
@@ -68,17 +68,17 @@ Exécutez l’une des procédures suivantes pour désactiver Azure Rights Manage
     
     Si vous êtes invité à vous connecter, utilisez un compte qui est administrateur général pour Office 365.
 
-2. Sur la page **rights management** , cliquez sur **désactiver**.
+2. Dans la page **Gestion des droits**, cliquez sur **Désactiver**.
 
-3.  À l’invite **Voulez-vous désactiver Rights Management ?** , cliquez sur **Désactiver**.
+3.  À l’invite **Voulez-vous désactiver Rights Management ?**, cliquez sur **Désactiver**.
 
 Le message **Rights Management n’est pas activé** s’affiche alors, avec une option pour l’activer.
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Pour désactiver Rights Management à partir du portail Azure
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**.
+1. Si ce n’est pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**.
     
-    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
+    Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
     
     Si vous n’avez pas accédé au volet Azure Information Protection, consultez les [étapes supplémentaires](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) pour ajouter ce volet au portail.
 
@@ -90,7 +90,7 @@ La barre d’informations affiche **Désactivation terminée** et **Désactiver*
 
 ### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
-Consultez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Consultez les conseils de migration : [migration de AD RMS vers Azure information protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>Votre abonnement a été acheté avant ou pendant février 2018, et vous disposez d’Exchange Online
@@ -107,7 +107,7 @@ Utilisez la commande Exchange Online PowerShell [Set-IRMConfiguration](/powershe
 
 ### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
-Consultez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Consultez les conseils de migration : [migration de AD RMS vers Azure information protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Vous voyez une option pour activer la protection quand vous configurez Azure Information Protection
@@ -122,7 +122,7 @@ Dans le volet **Azure information protection-étiquettes** , affichez et configu
 
 ### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
-Consultez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Consultez les conseils de migration : [migration de AD RMS vers Azure information protection](migrate-from-ad-rms-to-azure-rms.md)
 
 ### <a name="step-3-configure-labels-for-protection"></a>Étape 3 : Configurer les étiquettes pour la protection
 

@@ -1,9 +1,9 @@
 ---
 title: Log & analyser l’utilisation de la protection à partir de Azure Information Protection
 description: Informations et instructions sur l’utilisation de la journalisation de l’utilisation pour le service de protection à partir de Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 234c661133aa61dfa3636671d903fb78c364a678
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: c18c3e6524e6c42ee4b639b42778a8a8217b12d0
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747107"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136790"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Journalisation et analyse de l’utilisation de la protection à partir de Azure Information Protection
 
@@ -202,7 +202,7 @@ Il existe de nombreux types de demandes pour le service de protection, mais le t
 |UpdateTemplate|Un appel est fait à partir du portail Azure pour mettre à jour un modèle existant.|
 
 
-## <a name="powershell-reference"></a>Référence sur PowerShell
+## <a name="powershell-reference"></a>Informations de référence sur PowerShell
 
 La seule applet de commande PowerShell dont vous avez besoin pour accéder à la journalisation de l’utilisation de la protection est [AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog). 
 

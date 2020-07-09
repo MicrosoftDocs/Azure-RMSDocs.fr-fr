@@ -1,8 +1,8 @@
 ---
 title: Prise en charge d’Azure RMS d’Azure Information Protection par les programmes et services Office
 description: Voici comment les programmes Office (comme Word et Outlook) et les services Office (Exchange et SharePoint) pour les utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0fa79e8e9562739c59a2052dd97c9a1c96a2e90d
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: b453bde76cfc8709d955e3fc6e0b25f35ce02c4f
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665620"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136980"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 

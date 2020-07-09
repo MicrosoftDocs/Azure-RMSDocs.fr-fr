@@ -1,9 +1,9 @@
 ---
 title: Paramètres de Registre pour le connecteur Rights Management - AIP
 description: Informations relatives aux paramètres du Registre sur les serveurs utilisant le connecteur RMS. La méthode recommandée pour configurer ces paramètres consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 82ff7c593d7557428d8201c9c87e3d563d2daed6
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 536d3662c5e3e7a90a8da2f6b9d97f522d1f4111
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048576"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136934"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
@@ -93,7 +93,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Tapez :** Reg_SZ
 
-**Valeur :** https://*<\URL_votre_locataire>*
+**Valeur :** https://*< \yourtenanturl>*
 
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
@@ -143,7 +143,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Tapez :** Reg_SZ
 
-**Valeur :** https://*< \yourtenanturl>*
+**Valeur :** https://*<\URL_votre_locataire>*
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 

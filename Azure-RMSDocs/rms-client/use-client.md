@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e069abcc246848a48dc0edb014bdea0e128d03b1
-ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
+ms.openlocfilehash: 56d58578527a6df64091ed4c1569999ddad4fd69
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85126694"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281934"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -147,7 +147,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Marquages visuels dynamiques avec des variables :| **Oui** | **Oui** | Non |
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|
-|Prise en charge PDF pour l’application des étiquettes :| **Oui** | Non | Non  |
+|Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non  |
 |Applets de commande d’étiquetage PowerShell :| **Oui** | **Oui** <sup>4</sup> | Non |
 |Prise en charge hors connexion des actions de protection :| **Oui** | **Oui** <sup>5</sup> | **Oui** |
 |Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés :| **Oui** |**Oui**| Non |

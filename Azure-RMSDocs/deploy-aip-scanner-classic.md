@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 65c3a37f68676616d7342879d9621a143842f4bf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049537"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281951"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Qu’est-ce que le scanneur classique Azure Information Protection ?
 
@@ -115,15 +115,6 @@ Le scanneur AIP ne peut pas étiqueter les fichiers dans les circonstances suiva
 **Exemple :** Après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement.
 
 Toutefois, si l’étiquette est configurée pour la classification et la protection et que le type de fichier. txt est inclus pour le scanneur à protéger, le scanneur peut étiqueter le fichier.
-
-## <a name="upgrading-your-scanner"></a>Mise à niveau de votre scanneur
-
-Si vous avez déjà installé le scanneur et que vous souhaitez effectuer une mise à niveau, consultez [mise à niveau de l’analyseur de Azure information protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-
-Ensuite, [configurez](deploy-aip-scanner-configure-install.md) et [Utilisez votre scanneur](deploy-aip-scanner-manage.md) comme d’habitude, en ignorant les étapes d’installation de votre scanneur.
-
->[!NOTE]
-> Si vous disposez d’une version du scanneur antérieure à 1.48.204.0 et que vous n’êtes pas prêt à effectuer la mise à niveau, consultez [déploiement de versions antérieures du moteur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner-previousversions.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

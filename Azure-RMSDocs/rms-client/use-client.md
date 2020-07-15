@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 56d58578527a6df64091ed4c1569999ddad4fd69
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: 08c5658ed0997da058e2542826d336581bba4bb7
+ms.sourcegitcommit: 76bb452442ed42f066ee23fb3bcd9fef92440b22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281934"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308502"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -134,7 +134,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Étiquetage automatique ou recommandé :<br />-Pour Outlook| **Oui** | **Oui** | Non |
 |Étiquetage obligatoire :| **Oui** | **Oui** | Non |
 |Autorisations définies par l’utilisateur pour une étiquette : <br />-Ne pas transférer pour les e-mails| **Oui** | **Oui** | **Oui** |
-|Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | **Oui** |
+|Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint| **Oui** | **Oui** | **Oui** |
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
 |Les personnalisations sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />-Afficher les messages dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
@@ -184,7 +184,7 @@ Notes de bas de page :
 
 Lorsque le client Azure Information Protection (Classic) et le Azure Information Protection client d’étiquetage unifié prennent tous deux en charge la même fonctionnalité, utilisez le tableau suivant pour identifier les différences fonctionnelles entre les deux clients.
 
-|Fonctionnalités |Client classique|Client d’étiquetage unifié|
+|Fonctionnalité |Client classique|Client d’étiquetage unifié|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Paramétrage :| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|

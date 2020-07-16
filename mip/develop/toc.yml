@@ -23,7 +23,7 @@
               href: quick-file-set-get-label-cpp.md
             - name: Abaissement d’une étiquette de sensibilité sur un fichier (C++)
               href: quick-file-justify-actions-cpp.md
-            - name: Réédition de l’API de fichier (C++)
+            - name: Republication de l’API de fichier (C++)
               href: quick-file-republishing-cpp.md
             - name: Traiter les fichiers e-mail .msg (C++)
               href: quick-email-msg-cpp.md
@@ -35,29 +35,29 @@
               href: quick-protection-list-templates-cpp.md
             - name: Chiffrer/déchiffrer du texte (C++)
               href: quick-protection-encrypt-decrypt-text-cpp.md
-    - name: 'C#'
+    - name: C#
       items:
         - name: API de fichier
           items:
-            - name: 'Initialisation d’applications (C#)'
+            - name: Initialisation d’applications (C#)
               href: quick-app-initialization-csharp.md
-            - name: 'Lister les étiquettes de sensibilité (C#)'
+            - name: Lister les étiquettes de sensibilité (C#)
               href: quick-file-list-labels-csharp.md
-            - name: 'Définir/obtenir des étiquettes de sensibilité (C#)'
+            - name: Définir/obtenir des étiquettes de sensibilité (C#)
               href: quick-file-set-get-label-csharp.md
-            - name: 'Abaissement d’une étiquette de sensibilité sur un fichier (C#)'
+            - name: Abaissement d’une étiquette de sensibilité sur un fichier (C#)
               href: quick-file-justify-actions-csharp.md
-            - name: 'Réédition de l’API de fichier (C#)'
+            - name: Republication de l’API de fichier (C#)
               href: quick-file-republishing-csharp.md
-            - name: 'Traiter les fichiers e-mail .msg (C#)'
+            - name: Traiter les fichiers e-mail .msg (C#)
               href: quick-email-msg-csharp.md
         - name: API de protection
           items:
-            - name: 'Initialisation d’applications (C#)'
+            - name: Initialisation d’applications (C#)
               href: quick-protection-app-initialization-csharp.md
-            - name: 'Répertorier les modèles (C#)'
+            - name: Répertorier les modèles (C#)
               href: quick-protection-list-templates-csharp.md
-            - name: 'Chiffrer/déchiffrer du texte (C#)'
+            - name: Chiffrer/déchiffrer du texte (C#)
               href: quick-protection-encrypt-decrypt-text-csharp.md
 - name: Concepts
   items:
@@ -133,12 +133,12 @@
       href: concept-mip-telemetry.md
     - name: Cas d’usage
       items:
-        - name: API de fichier - Justification d’action pour abaisser une étiquette de sensibilité sur un fichier (C++)
-          href: concept-justification-cpp.md
-        - name: API de fichier - réédition (C++)
-          href: concept-republishing-cpp.md
-        - name: API de fichier - Traiter les fichiers e-mail .msg (C++)
-          href: concept-email-cpp.md
+        - name: API de fichier - Justification d’action pour abaisser une étiquette de sensibilité sur un fichier
+          href: concept-justification.md
+        - name: API de fichier - Republication
+          href: concept-republishing.md
+        - name: API de fichier - Traiter les fichiers e-mail .msg
+          href: concept-email.md
 - name: Référence
   items:
     - name: Bibliothèque C++

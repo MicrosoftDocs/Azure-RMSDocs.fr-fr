@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 87c9884f497cd0020b7252b6ef5a466fe858a8c1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 22f98a6781dc0ff0b43d1da73c72c2029c960021
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764113"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403372"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configuration de la télémétrie
 
@@ -21,11 +21,13 @@ Par défaut, le kit de développement logiciel (SDK) Microsoft Information Prote
 
 ## <a name="telemetry-configuration"></a>Configuration de la télémétrie
 
-Les options de télémétrie dans le kit de développement logiciel MIP peuvent être contrôlées via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Créez une instance de cette classe, puis affectez à **IsTelemetryOptedOut** la valeur true. Fournissez l’objet de la classe **TelemetryConfiguration** à la fonction utilisée pour créer **MipContext**. 
+Les options de télémétrie dans le kit de développement logiciel MIP peuvent être contrôlées via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Créez une instance de cette classe, puis affectez à **IsTelemetryOptedOut** la valeur true. Fournissez l’objet de la classe **TelemetryConfiguration** à la fonction utilisée pour créer **MipContext**.
 
 À compter de la version 1,6 du kit de développement logiciel MIP, le paramètre option **désactive complètement** la télémétrie. Dans verisons 1,5 et versions antérieures, nous envoyons un ensemble d’informations de télémétrie minimales.
 
 ### <a name="minimum-telemetry-events"></a>Événements de télémétrie minimaux
+
+Dans le kit de développement logiciel (SDK) MIP 1,6 et versions ultérieures, lorsque la télémétrie est définie sur *« refusé »*, **aucun événement de télémétrie n’est envoyé.** Les versions antérieures à la 1,6 ont le comportement suivant.
 
 Lorsque la télémétrie est définie sur la valeur *« refusé »*, un ensemble minimal de données est envoyé à Microsoft. Toutes les informations d’identification personnelle sont nettoyées à partir de ces informations. Ces données incluent des informations sur les pulsations pour comprendre que le kit de développement logiciel (SDK) est en cours d’utilisation et les métadonnées système. **Aucune information sur le contenu de l’utilisateur ou de l’utilisateur final n’est définie pour le service.**
 

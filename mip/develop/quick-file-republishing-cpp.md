@@ -6,24 +6,24 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 602cc8c56d260e8399fa62367d585baae1976157
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: 929959135d4889ec65fcc5122837d6e8a09235e9
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548256"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403355"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>Démarrage rapide de la republication de l’API de fichier (C++)
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Pour obtenir une vue d’ensemble de ce scénario et l’endroit où il peut être utilisé, reportez-vous à [republication dans MIP SDK](concept-republishing-cpp.md).
+Pour obtenir une vue d’ensemble de ce scénario et l’endroit où il peut être utilisé, reportez-vous à [republication dans MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Guide de [démarrage rapide : définir/obtenir des étiquettes de sensibilité (C++)](quick-file-set-get-label-cpp.md) tout d’abord, qui génère une solution de démarrage Visual Studio, pour répertorier les étiquettes de sensibilité d’une organisation, pour définir et lire des étiquettes de sensibilité à partir d’un fichier. Ce guide de démarrage rapide « comment faire pour rétrograder/supprimer une étiquette nécessitant une justification C++ » s’appuie sur le précédent.
+- Effectuez d’abord les étapes du [Démarrage rapide : Définir/Obtenir les étiquettes de confidentialité (C++)](quick-file-set-get-label-cpp.md) pour créer une solution Visual Studio de démarrage, en vue de lister les étiquettes de confidentialité d’une organisation, et de définir et lire les étiquettes de confidentialité d’un fichier. Ce guide de démarrage rapide « comment faire pour rétrograder/supprimer une étiquette nécessitant une justification C++ » s’appuie sur le précédent.
 - Éventuellement : consultez les [gestionnaires de fichiers](concept-handler-file-cpp.md) dans les concepts du kit de développement logiciel MIP.
 - Éventuellement : passez en revue les [gestionnaires de protection](concept-handler-protection-cpp.md) dans les concepts du kit de développement logiciel MIP.
 
@@ -31,7 +31,7 @@ Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants 
 
 Pour pouvoir utiliser le déchiffrement d’un fichier protégé à l’aide de `GetDecryptedTemporaryFileAsync()` la méthode exposée par `mip::FileHandler` , les rappels de la méthode Async pour la réussite et l’échec doivent être définis comme indiqué ci-dessous.
 
-1. Ouvrez la solution Visual Studio que vous avez créée dans le précédent «démarrage rapide : définir/recevoir des étiquettes de sensibilité (C++).
+1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « Démarrage rapide : Définir/Obtenir des étiquettes de confidentialité (C++).
 
 2. À l’aide de Explorateur de solutions, ouvrez le `filehandler_observer.h` fichier de dans votre projet. Vers la fin de la définition de FileHandler, avant d' `};` Ajouter les lignes ci-dessous pour la déclaration de méthode.
 
@@ -57,63 +57,69 @@ Pour pouvoir utiliser le déchiffrement d’un fichier protégé à l’aide de 
 
 ## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Ajouter une logique pour modifier et republier un fichier protégé
 
-1. À l’aide de Explorateur de solutions, ouvrez le fichier. cpp de votre projet qui contient l’implémentation de la `main()` méthode. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
+1. À l’aide de l’Explorateur de solutions, ouvrez le fichier .cpp dans votre projet qui contient l’implémentation de la méthode `main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
 2. Vers la fin du corps principal (), sous System (« pause »); et supérieur retournent 0 ; (là où vous vous êtes arrêté dans le démarrage rapide précédent), insérez le code suivant :
 
-    ```cpp
+```cpp
+//Originally protected file's path.
+std::string protectedFilePath = "<protected-file-path>";
 
-        //Originally protected file's path.
-        std::string protectedFilePath = "<protected-file-path>";
+// Create file handler for the file
+auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+auto handlerFuture = handlerPromise->get_future();
+engine->CreateFileHandlerAsync(protectedFilePath, 
+                                protectedFilePath, 
+                                true, 
+                                std::make_shared<FileHandlerObserver>(), 
+                                handlerPromise);
+auto protectedFileHandler = handlerFuture.get();
 
-        // Create file handler for the file
-        auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-        auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(protectedFilePath, protectedFilePath, true, std::make_shared<FileHandlerObserver>(), handlerPromise);
-        auto protectedFileHandler = handlerFuture.get();
+// retieve and store protection handler from file
+auto protectionHandler = protectedFileHandler->GetProtection();
 
-        // retieve and store protection handler from file
-        auto protectionHandler = protectedFileHandler->GetProtection();
+//Check if the user has the 'Edit' right to the file and if so decrypt the file.
+if (protectionHandler->AccessCheck("Edit")) {
 
-        //Check if the user has the 'Edit' right to the file and if so decrypt the file.
-        if (protectionHandler->AccessCheck("Edit")) {
+    // Decrypt file to temp path using the same file handler
+    auto tempPromise = std::make_shared<std::promise<string>>();
+    auto tempFuture = tempPromise->get_future();
+    protectedFileHandler->GetDecryptedTemporaryFileAsync(tempPromise);
+    auto tempPath = tempFuture.get();
 
-            // Decrypt file to temp path using the same file handler
-            auto tempPromise = std::make_shared<std::promise<string>>();
-            auto tempFuture = tempPromise->get_future();
-            protectedFileHandler->GetDecryptedTemporaryFileAsync(tempPromise);
-            auto tempPath = tempFuture.get();
+    /// Write code here to perform further operations for edit ///
 
-            /// Write code here to perform further operations for edit ///
+    /// Follow steps below for re-protecting the edited file ///
 
-            /// Follow steps below for re-protecting the edited file ///
+    // Create a new file handler using the temporary file path.
+    auto reprotectPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto reprotectFuture = reprotectPromise->get_future();
+    engine->CreateFileHandlerAsync(tempPath, 
+                                    tempPath, 
+                                    true, 
+                                    std::make_shared<FileHandlerObserver>(), 
+                                    reprotectPromise);
+    auto republishHandler = reprotectFuture.get();
 
-            // Create a new file handler using the temporary file path.
-            auto reprotectPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-            auto reprotectFuture = reprotectPromise->get_future();
-            engine->CreateFileHandlerAsync(tempPath, tempPath, true, std::make_shared<FileHandlerObserver>(), reprotectPromise);
-            auto republishHandler = reprotectFuture.get();
+    // Set protection using the ProtectionHandler from the original consumption operation.
+    republishHandler->SetProtection(protectionHandler);
+    std::string reprotectedFilePath = "<protected-file-path>";
 
-            // Set protection using the ProtectionHandler from the original consumption operation.
-            republishHandler->SetProtection(protectionHandler);
-            std::string reprotectedFilePath = "<protected-file-path>";
+    // Commit changes
+    auto republishPromise = std::make_shared<std::promise<bool>>();
+    auto republishFuture = republishPromise->get_future();
+    republishHandler->CommitAsync(reprotectedFilePath, republishPromise);
 
-            // Commit changes
-            auto republishPromise = std::make_shared<std::promise<bool>>();
-            auto republishFuture = republishPromise->get_future();
-            republishHandler->CommitAsync(reprotectedFilePath, republishPromise);
+    // Validate republishing
+    cout << "Protected File: " + protectedFilePath<<endl;
+    cout << "Protected Label ID: " + protectedFileHandler->GetLabel()->GetLabel()->GetId() << endl;
+    cout << "Protection Owner: " + protectedFileHandler->GetProtection()->GetOwner() << endl<<endl;
 
-            // Validate republishing
-            cout << "Protected File: " + protectedFilePath<<endl;
-            cout << "Protected Label ID: " + protectedFileHandler->GetLabel()->GetLabel()->GetId() << endl;
-            cout << "Protection Owner: " + protectedFileHandler->GetProtection()->GetOwner() << endl<<endl;
-
-            cout << "Republished File: " + reprotectedFilePath<<endl;
-            cout << "Republished Label ID: " + republishHandler->GetLabel()->GetLabel()->GetId() << endl;
-            cout << "Republished Owner: " + republishHandler->GetProtection()->GetOwner() << endl;
-
-        }
-    ```
+    cout << "Republished File: " + reprotectedFilePath<<endl;
+    cout << "Republished Label ID: " + republishHandler->GetLabel()->GetLabel()->GetId() << endl;
+    cout << "Republished Owner: " + republishHandler->GetProtection()->GetOwner() << endl;
+}
+```
 
 3. Vers la fin de main () Rechercher le bloc d’arrêt de l’application créé dans le démarrage rapide précédent et ajouter les lignes du gestionnaire ci-dessous pour libérer les ressources.
 

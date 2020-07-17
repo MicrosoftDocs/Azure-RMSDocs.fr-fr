@@ -4,29 +4,41 @@ description: Installer un lecteur sur des ordinateurs Mac pour les documents PDF
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/04/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: edb58bdd93ff573015decb8edf3b68e4fecd212c
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: fc4f9356017096439c09d6d8c1f6d886801cbf18
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326454"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437799"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installer un lecteur PDF pour MacOS
 
 [![icône iOS](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
-Si vous avez besoin d’ouvrir un document PDF protégé sur votre ordinateur Mac, installez le plug-in Adobe pour Adobe Acrobat Reader.
+Si vous avez besoin d’ouvrir un document PDF protégé sur votre ordinateur Mac, utilisez le nouveau [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL)ou installez le plug-in Adobe pour Adobe Acrobat Reader.
+
+## <a name="use-microsoft-edge-to-view-protected-files"></a>Utiliser Microsoft Edge pour afficher les fichiers protégés
+
+**Versions prises en charge**: 10,12 et versions ultérieures
+
+Instructions : 
+
+1. Vérifiez la [version de Microsoft Edge](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) installée sur votre système. 
+1. Si la version de Microsoft Edge est 83.0.478.37 ou supérieure, vous pouvez ouvrir des fichiers protégés directement dans le navigateur Edge. 
+1. Pour ouvrir des fichiers PDF dans SharePoint, cliquez sur **ouvrir**  >  **ouvrir dans le navigateur**. 
+
+## <a name="use-adobe-acrobat-reader-to-view-protected-files"></a>Utiliser Adobe Acrobat Reader pour afficher les fichiers protégés
 
 **Versions prises en charge**: 10,12-10,14
 
-Instructions :
+Instructions :
 
 1. Lisez les [conditions générales d’utilisation d’Adobe](https://www.adobe.com/legal/terms.html).
 

@@ -1,10 +1,10 @@
 ---
 title: Client pour Azure Information Protection-AIP
 description: Microsoft Azure Information Protection fournit une solution client-serveur qui permet de protéger les données d’une organisation. Le client (le client Azure Information Protection ou le client Rights Management) est intégré aux applications que vous exécutez sur des ordinateurs et appareils mobiles.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 07/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 08c5658ed0997da058e2542826d336581bba4bb7
-ms.sourcegitcommit: 76bb452442ed42f066ee23fb3bcd9fef92440b22
+ms.openlocfilehash: 53f9b0b11c89e66fccc10243d48bc2835884ea35
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308502"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437833"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -160,7 +160,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Prise en charge du changement de compte :| Non  | Non | **Oui** |
 |Prise en charge de Services Bureau à distance :| **Oui** | **Oui** | **Oui** |
 |Prise en charge des services AD RMS :| **Oui** | Non <sup>7</sup> | Non |
-|Supprimer le marquage de contenu externe dans l’application| **Oui**| Non| Non |
+|Supprimer le marquage de contenu externe dans l’application :| **Oui**| **Oui**| Non|
 
 
 Notes de bas de page :
@@ -184,7 +184,7 @@ Notes de bas de page :
 
 Lorsque le client Azure Information Protection (Classic) et le Azure Information Protection client d’étiquetage unifié prennent tous deux en charge la même fonctionnalité, utilisez le tableau suivant pour identifier les différences fonctionnelles entre les deux clients.
 
-|Fonctionnalité |Client classique|Client d’étiquetage unifié|
+|Fonctionnalités |Client classique|Client d’étiquetage unifié|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Paramétrage :| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|

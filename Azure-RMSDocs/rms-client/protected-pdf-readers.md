@@ -1,10 +1,10 @@
 ---
 title: Lecteurs PDF protégés pour Microsoft Information Protection
 description: Installer un lecteur pour les documents PDF étiquetés pour la classification et la protection
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 05/26/2020
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 755424c1f3c813ca517ae4afcbe1e4d7a134276f
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 25bc9d18badcb6bb79e17795f7f86912968a44ee
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84250039"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437770"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Lecteurs PDF prenant en charge Microsoft Information Protection
 
@@ -44,13 +44,23 @@ Les lecteurs PDF dans le tableau suivant prennent en charge les documents PDF pr
 À l’heure actuelle, Microsoft SharePoint utilise un format plus ancien pour les documents PDF dans les bibliothèques protégées par IRM.
 
 
-|Système d'exploitation|Lecteurs pris en charge|
+|Système d’exploitation|Lecteurs pris en charge|
 |----------------|-----------------------------------|
-|Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Visionneuse Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
+|Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Microsoft Edge<br /><br />Visionneuse Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />GigaTrust App pour Android|
 |iOS|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />TITUS Docs|
 
-## <a name="using-adobe-acrobat-reader-with-the-adobe-plug-in"></a>Utilisation d’Adobe Acrobat Reader avec le plug-in Adobe
+## <a name="using-microsoft-edge-to-view-protected-pdf-files"></a>Utilisation de Microsoft Edge pour afficher les fichiers PDF protégés
+
+Microsoft Edge offre une prise en charge native de l’affichage des fichiers PDF qui sont classifiés et protégés. L’utilisation de Microsoft Edge garantit que les utilisateurs peuvent ouvrir des fichiers PDF protégés sans qu’il soit nécessaire d’installer ou de configurer des paramètres ou des logiciels supplémentaires.  Paramètres.
+
+Avec Microsoft Edge, lorsqu’un utilisateur rencontre un fichier PDF protégé enregistré localement, il peut afficher le fichier directement dans le navigateur. Si le fichier est disponible sur SharePoint, l’utilisateur doit cliquer sur **ouvrir**  >  **ouvrir dans un navigateur** à partir de Microsoft Edge pour afficher le fichier. 
+
+:::image type="content" source="../media/edge_open_browser.png" alt-text="Ouvrir un fichier PDF protégé à l’aide de Microsoft Edge à partir du navigateur à l’aide de l’option ouvrir dans le navigateur":::
+
+Les fichiers protégés peuvent être ouverts sur [Windows](./protected-pdf-readers-windows.md) et [MacOS](./protected-pdf-readers-mac.md).
+
+## <a name="using-adobe-acrobat-reader-with-adobe-plug-in"></a>Utilisation d’Adobe Acrobat Reader avec Adobe Plug-in
 
 Une collaboration entre Microsoft et Adobe vous offre une expérience plus simple et plus cohérente pour les documents PDF qui ont été classés et éventuellement protégés. Cette collaboration assure la prise en charge de l’intégration native d’Adobe Acrobat aux solutions Microsoft Information Protection, par exemple [Azure Information Protection](../what-is-information-protection.md). 
 

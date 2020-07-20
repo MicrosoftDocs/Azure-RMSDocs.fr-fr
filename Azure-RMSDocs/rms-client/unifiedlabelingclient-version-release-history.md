@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection l’historique des versions du client d’étiquetage unifié-version & la stratégie de support
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aca29a142c0735755c343535b3df43e175c59e80
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
+ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048610"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86471721"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -63,7 +63,17 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## <a name="version-27960"></a>Version 2.7.96.0 
+## <a name="version-27990"></a>Version 2.7.99.0
+
+2.7.99.0 de la version du client et du scanneur d’étiquetage unifiée
+
+**Correctifs et améliorations :**
+
+Correction des problèmes dans les actions d’étiquetage des fichiers pour les nouveaux journaux d’audit des **étiquettes** .
+
+Pour plus d’informations, consultez version 2.7.96.0 et [Azure information protection référence du journal d’audit (](../audit-logs.md) [préversion](#version-27960) publique).
+
+## <a name="version-27960"></a>Version 2.7.96.0
 
 2.7.96.0 de la version du client et du scanneur d’étiquetage unifiée
 
@@ -95,9 +105,14 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d'informations, voir :
+Pour plus d’informations, consultez :
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)
+
+> [!IMPORTANT]
+> Dans cette version, les actions d’étiquetage de fichier ne génèrent pas de nouveaux journaux d’audit **des étiquettes** .
+> Si vous exécutez le scanneur dans **appliquer =** en mode, nous vous recommandons d’effectuer la mise à niveau vers la [version 2.7.99.0](#version-27990).
+> 
 
 **Application de TLS 1.2**
 

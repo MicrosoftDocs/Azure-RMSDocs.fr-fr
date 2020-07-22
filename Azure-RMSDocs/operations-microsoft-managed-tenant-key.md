@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 635732301320538d58e9b34011291bce0fe07ce4
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a10e0f8c1af8134de0665ce3255cf42be4900783
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136571"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869060"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft : opérations de cycle de vie des clés de locataire
 
@@ -54,7 +54,7 @@ Pour sélectionner une autre clé comme clé de locataire active pour Azure Info
 (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 ```
 
-Pour passer à une topologie de clé gérée par le client (BYOK), consultez [Implémentation de BYOK pour votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+Pour modifier la topologie de votre clé pour qu’elle soit gérée par le client (BYOK), consultez [planification et implémentation de votre clé de locataire Azure information protection](plan-implement-tenant-key.md).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Microsoft se charge de sauvegarder votre clé de locataire. Aucune action n'est requise de votre part.

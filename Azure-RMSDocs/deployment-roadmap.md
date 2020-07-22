@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9852c792e732a0d84326e7dfc6f8b291af56fcad
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 63a3fcc9ee6b7e59ceab31eb63455d53929d028c
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665858"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927809"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -121,7 +121,7 @@ Configurez éventuellement les éléments suivants :
 
 ### <a name="step-5-configure-labels-and-settings-applications-and-services-for-data-protection"></a>Étape 5 : configurer des étiquettes et des paramètres, des applications et des services pour la protection des données
 
-1. Mettre à jour vos étiquettes pour appliquer la protection
+1. **Mettre à jour vos étiquettes pour appliquer la protection**
     
     Pour le client Azure Information Protection (classique), consultez [Comment configurer une étiquette pour la protection de Rights Management](./configure-policy-protection.md).
     
@@ -129,25 +129,30 @@ Configurez éventuellement les éléments suivants :
     
     Notez que les utilisateurs peuvent appliquer des étiquettes dans Outlook qui appliquent la protection Rights Management, même si Exchange n’est pas configuré pour la gestion des droits relatifs à l'information (IRM). Cependant, tant qu’Exchange n’est pas configuré pour IRM ou pour le [chiffrement de messages Office 365 avec de nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), votre organisation ne peut pas bénéficier des fonctionnalités complètes de la protection Azure Rights Management avec Exchange. Cette configuration supplémentaire est incluse dans la liste suivante (l’étape 2 pour Exchange Online et l’étape 5 pour Exchange sur site). 
 
-2. Configurer des applications et des services Office
+2. **Configurer des applications et des services Office**
     
     Configurez les applications et services Office pour les fonctionnalités de gestion des droits relatifs à l’information (IRM) dans Microsoft SharePoint ou Exchange Online. Pour plus d’informations, consultez [configuration d’applications pour Azure Rights Management](configure-applications.md).
 
-3. Configurez la fonctionnalité de super utilisateur pour la récupération de données.
+3. **Configurez la fonctionnalité de super utilisateur pour la récupération de données.**
     
     Si vous avez des services informatiques, tels que des solutions de protection contre la perte de données (DLP), des passerelles de chiffrement de contenu (CEG) et d’autres logiciels anti-programme malveillant, qui sont chargés d’inspecter les fichiers qu’Azure Information Protection doit protéger, configurez les comptes de service en tant que super utilisateurs pour Azure Rights Management. Pour plus d’informations, consultez [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](./configure-super-users.md).
 
-4. Classifier et protéger les fichiers existants en bloc
+4. **Classifier et protéger les fichiers existants en bloc**
     
-    Pour vos banques de données locales, exécutez maintenant le [scanneur Azure Information Protection](deploy-aip-scanner.md) en mode de mise en conformité afin que les fichiers soient automatiquement étiquetés. Pour les banques de données basées sur le cloud, utilisez [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security).
+    Pour vos banques de données locales, exécutez maintenant le [scanneur Azure Information Protection](deploy-aip-scanner.md) en mode de mise en conformité afin que les fichiers soient automatiquement étiquetés.
     
-    Pour les fichiers sur les PC, vous pouvez utiliser les applets de commande PowerShell pour classifier et protéger des fichiers. Pour plus d’informations, consultez les guides d’administration suivants :
+    Pour les fichiers sur PC, utilisez les applets de commande PowerShell pour classifier et protéger des fichiers. Pour plus d’informations, consultez les guides d’administration suivants :
     
     - Client Azure Information Protection (classique) : [utilisation de PowerShell avec le client Azure information protection](./rms-client/client-admin-guide-powershell.md)
     
     - Azure Information Protection client d’étiquetage unifié : [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md)
 
-6. Déployez le connecteur pour les bibliothèques protégées par IRM sur SharePoint Server et les e-mails protégés par IRM pour Exchange sur site
+    Pour les banques de données basées sur le cloud, utilisez [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+
+    > [!TIP]
+    > La classification et la protection des fichiers existants en bloc ne sont pas l’un des principaux cas d’utilisation de Cloud App Security. les [solutions de contournement documentées](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) peuvent vous aider à obtenir la classification et la protection de vos fichiers.
+
+6. **Déployez le connecteur pour les bibliothèques protégées par IRM sur SharePoint Server et les e-mails protégés par IRM pour Exchange sur site**
     
     Si vous avez SharePoint et Exchange sur site, et souhaitez utiliser leurs fonctionnalités de gestion des droits relatifs à l’information (IRM), installez et configurez le connecteur Rights Management. Pour plus d’informations, consultez [déploiement du connecteur Azure Rights Management](./deploy-rms-connector.md).
 

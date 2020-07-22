@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 14b3c9d4db202abb18555eb695fe7e3e0769af40
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 5e6cffeb02cb22f65a5108e96ffa1b0cc8974142
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136342"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869094"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
@@ -57,7 +57,8 @@ Pour renouveler la clé et obtenir ainsi une autre clé que vous gérez, vous po
 
 Pour plus d’informations sur chacune de ces étapes :
 
-- Pour renouveler la clé et obtenir ainsi une autre clé que vous gérez, consultez [Implémentation de BYOK pour votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+- Pour régénérer une nouvelle clé vers une autre clé que vous gérez, consultez [planification et implémentation de votre clé de locataire Azure information protection](plan-implement-tenant-key.md).
+
     
     Si vous renouvelez une clé protégée par HSM que vous créez en local et transférez à Key Vault, vous pouvez utiliser le même univers de sécurité et les mêmes cartes d’accès que pour votre clé actuelle.
 

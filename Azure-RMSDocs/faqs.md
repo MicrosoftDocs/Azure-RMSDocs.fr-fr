@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a62ebab99a6cf9672942dcc7b447c29365c6440b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 82280d50bdd16139e53d4906e908f7efcb9b6281
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048481"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927384"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -132,7 +132,7 @@ Azure Information Protection (AIP) fournit la classification, l’étiquetage et
 
 Le contenu est protégé à l’aide du service Azure Rights Management, qui est désormais un composant d’AIP. 
 
-Pour plus d’informations, consultez [Comment les données sont protégées](what-is-information-protection.md#how-data-is-protected) et [qu’est-ce qu’Azure Rights Management ?](what-is-azure-rms.md).
+Pour plus d’informations, consultez [Comment les données sont protégées](what-is-information-protection.md#how-aip-protects-your-data) et [qu’est-ce qu’Azure Rights Management ?](what-is-azure-rms.md).
 
 ## <a name="whats-the-role-of-identity-management-for-azure-information-protection"></a>Quel est le rôle de la gestion des identités pour Azure Information Protection ?
 
@@ -165,7 +165,7 @@ Toutefois, si vous souhaitez affecter des autorisations d’administration à d�
 - [Administrateur Azure Information Protection](#azure-information-protection-administrator)
 - [Administrateur de conformité ou administrateur des données de conformité](#compliance-administrator-or-compliance-data-administrator)
 - [Lecteur de sécurité ou lecteur global](#security-reader-or-global-reader)
-- [Administrateur de la sécurité](#security-administrator)
+- [Administrateur de sécurité](#security-administrator)
 - [Administrateur général et administrateur du connecteur Azure Rights Management](#azure-rights-management-global-administrator-and-connector-administrator)
 
 En outre, notez les points suivants lors de la gestion des tâches et des rôles d’administration :
@@ -277,7 +277,7 @@ Lorsqu’un utilisateur ouvre un document protégé par Azure Information Protec
 
 Pour plus d’informations et des exemples de procédure pas à pas, consultez le blog suivant : [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/) (Stratégies d’accès conditionnel pour Azure Information Protection).
 
-Informations complémentaires :
+Informations supplémentaires :
 
 |Rubrique  |Détails  |
 |---------|---------|
@@ -285,7 +285,7 @@ Informations complémentaires :
 |**Comptes d’administrateur**     |Nous vous recommandons de ne pas ajouter de comptes d’administrateur à vos stratégies d’accès conditionnel, car ces comptes ne seront pas en mesure d’accéder au volet de Azure Information Protection dans le Portail Azure.         |
 |**MFA et B2B collaboration**     | Si vous utilisez MFA dans vos stratégies d’accès conditionnel pour collaborer avec d’autres organisations (B2B), vous devez utiliser [Azure AD B2B Collaboration](/azure/active-directory/b2b/what-is-b2b) et créer des comptes Invité pour les utilisateurs de l’autre organisation avec lesquels vous souhaitez partager.        |
 |**Invites de conditions d’utilisation**     |  Avec la version préliminaire de Azure AD décembre 2018, vous pouvez désormais [inviter les utilisateurs à accepter les conditions d’utilisation](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) avant d’ouvrir un document protégé pour la première fois.       |
-|**Applications Cloud**     |  Si vous utilisez un grand nombre d’applications cloud pour l’accès conditionnel, **Microsoft Azure Information Protection** risque de ne pas s’afficher dans la liste de sélection. </br></br>Dans ce cas, utilisez la zone de recherche située en haut de la liste. Commencez à taper « Microsoft Azure Information Protection » pour filtrer les applications disponibles. À condition d’avoir un abonnement pris en charge, vous pourrez alors sélectionner **Microsoft Azure Information Protection**.        |
+|**Applications cloud**     |  Si vous utilisez un grand nombre d’applications cloud pour l’accès conditionnel, **Microsoft Azure Information Protection** risque de ne pas s’afficher dans la liste de sélection. </br></br>Dans ce cas, utilisez la zone de recherche située en haut de la liste. Commencez à taper « Microsoft Azure Information Protection » pour filtrer les applications disponibles. À condition d’avoir un abonnement pris en charge, vous pourrez alors sélectionner **Microsoft Azure Information Protection**.        |
 
 
 ## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Je vois qu’Azure Information Protection est répertorié en tant que fournisseur de sécurité pour Microsoft Graph Security, comment cela fonctionne-t-il et quelles alertes vais-je recevoir ?

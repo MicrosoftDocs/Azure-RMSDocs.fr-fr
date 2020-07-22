@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32880671c46efb9cb82f13235f98ac42566b65fc
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048899"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868992"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -54,12 +54,6 @@ Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Pr
 
 Actuellement, si vous installez le module en tant qu’un certain utilisateur et que vous exécutez les applets de commande sur le même ordinateur en tant qu’un autre utilisateur, vous devez d’abord exécuter la commande `Import-Module AzureInformationProtection`. Dans ce scénario, le module ne se charge pas automatiquement quand vous exécutez d’abord une applet de commande.
 
-La version actuelle du module AzureInformationProtection a les limitations suivantes :
-
-- Vous pouvez annuler la protection des dossiers personnels Outlook (fichiers .pst), mais vous ne pouvez pas actuellement protéger en mode natif ces fichiers ou d’autres fichiers de conteneur à l’aide de ce module PowerShell.
-
-- Vous pouvez annuler la protection des e-mails Outlook protégés (fichiers .rpmsg) lorsqu’ils sont dans un dossier personnel Outlook (.pst), mais vous ne pouvez pas annuler la protection de fichiers .rpmsg en dehors d’un dossier personnel.
-
 Avant de commencer à utiliser ces applets de commande, consultez les autres conditions préalables et instructions correspondant à votre déploiement :
 
 - [Azure Information Protection et le service Azure Rights Management](#azure-information-protection-and-azure-rights-management-service)
@@ -71,6 +65,7 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
 
     - S’applique si vous utilisez la protection uniquement avec la version locale d’Azure Rights Management ; Active Directory Rights Management Services (AD RMS).
 
+Pour plus d’informations, consultez la collection appropriée de [Azure information protection problèmes connus](../known-issues.md#powershell-support-for-the-azure-information-protection-client).
 
 ## <a name="azure-information-protection-and-azure-rights-management-service"></a>Azure Information Protection et le service Azure Rights Management
 

@@ -1,10 +1,10 @@
 ---
 title: Configurer les droits d’utilisation pour Azure Information Protection
 description: Comprenez et identifiez les droits spécifiques qui sont utilisés quand vous protégez des fichiers ou des e-mails à l’aide de la protection Rights Management de Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 01/08/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 585f962f3da6fbb3cb2373a8ac3d355e1d97aef6
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 779d527df4b95b985ae72b41414f5c91d7775d01
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136762"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927316"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configuration des droits d’utilisation pour Azure Information Protection
 
@@ -43,7 +43,7 @@ Dans ce tableau :
 
 |Droits d’utilisation|Description|Implémentation|
 |-------------------------------|---------------------------|-----------------|
-|Nom commun : **Modifier le contenu, Modifier** <br /><br />Encodage dans la stratégie : **DOCEDIT**|Permet à l’utilisateur de modifier, réorganiser, mettre en forme ou filtrer le contenu dans l’application. Il n’accorde pas le droit d’enregistrer la copie modifiée.<br /><br />Dans Word, sauf si vous avez Office 365 ProPlus avec la version minimale [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25),ce droit n’est pas suffisant pour activer ou désactiver le **Suivi des modifications**, ni pour utiliser toutes les fonctionnalités de suivi des modifications en tant que réviseur. À la place, pour utiliser toutes les options de suivi des modifications, le droit suivant est requis : **Contrôle total**. |Droits personnalisés Office : dans le cadre des options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Modifier le contenu**<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **modifier le contenu, modifier (DOCEDIT)**<br /><br />Nom dans les modèles AD RMS : **Modifier** <br /><br />Constante ou valeur API : non applicable.|
+|Nom commun : **Modifier le contenu, Modifier** <br /><br />Encodage dans la stratégie : **DOCEDIT**|Permet à l’utilisateur de modifier, réorganiser, mettre en forme ou filtrer le contenu dans l’application. Il n’accorde pas le droit d’enregistrer la copie modifiée.<br /><br />Dans Word, sauf si vous avez [Microsoft 365 apps pour entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) avec une version minimale de [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25), ce droit n’est pas suffisant pour activer ou désactiver **le suivi des modifications**, ou pour utiliser toutes les fonctionnalités de suivi des modifications en tant que réviseur. À la place, pour utiliser toutes les options de suivi des modifications, le droit suivant est requis : **Contrôle total**. |Droits personnalisés Office : dans le cadre des options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Modifier le contenu**<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **modifier le contenu, modifier (DOCEDIT)**<br /><br />Nom dans les modèles AD RMS : **Modifier** <br /><br />Constante ou valeur API : non applicable.|
 |Nom commun : **Enregistrer** <br /><br />Encodage dans la stratégie : **EDIT**|Permet à l’utilisateur d’enregistrer le document à l’emplacement actuel.<br /><br />Dans les applications Office, ce droit permet également à l’utilisateur de modifier le document et de l’enregistrer sous un nouveau nom si le format de fichier sélectionné en mode natif prend en charge la protection Rights Management. La restriction de format de fichier empêche toute suppression éventuelle de la protection d’origine appliquée au fichier.|Droits personnalisés Office : dans le cadre des options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Enregistrer le fichier**<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **Enregistrer (modifier)**<br /><br />Nom dans les modèles AD RMS : **Enregistrer** <br /><br />Constante ou valeur API :`IPC_GENERIC_WRITE L"EDIT"`|
 |Nom commun : **Commentaire** <br /><br />Encodage dans la stratégie : **COMMENT**|Active l’option d’ajout d’annotations ou de commentaires au contenu.<br /><br />Ce droit est disponible dans le SDK, il est disponible en tant que stratégie ad hoc dans les modules AzureInformationProtection et Protection RMS pour Windows PowerShell et il a été implémenté dans certaines applications d’éditeurs de logiciels. Toutefois, il n’est pas largement utilisé et n’est pas pris en charge par les applications Office.|Droits personnalisés Office : non implémenté. <br /><br />Nom dans le portail Azure Classic : non implémenté.<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : non implémenté.<br /><br />Nom dans les modèles AD RMS : non implémenté. <br /><br />Constante ou valeur API :`IPC_GENERIC_COMMENT L"COMMENT`|
 |Nom commun : **Enregistrer sous, Exporter** <br /><br />Encodage dans la stratégie : **EXPORT**|Active l’option d’enregistrement du contenu sous un autre nom de fichier (Enregistrer sous). <br /><br />Pour le client Azure Information Protection, le fichier peut être enregistré sans protection, et aussi reprotégé avec de nouveaux paramètres et autorisations. Ces actions autorisées signifient qu’un utilisateur disposant de ce droit peut changer ou supprimer une étiquette Azure Information Protection dans un document ou un e-mail protégé. <br /><br />Ce droit permet également à l’utilisateur d’utiliser d’autres options d’exportation dans les applications, telles que **Envoyer à OneNote**.|Droits personnalisés Office : En relation avec l’option **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Exporter le contenu (Enregistrer sous)** <br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **Enregistrer sous, exporter (exporter)**<br /><br />Nom dans les modèles AD RMS : **Exporter (Enregistrer sous)** <br /><br />Constante ou valeur API :`IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -109,7 +109,7 @@ Les [documents Office](https://support.office.com/article/bb643d33-4a3f-4ac7-977
 
 ### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>Différence entre l’option Ne pas transférer et le fait de ne pas accorder le droit d’utilisation Transférer
 
-Il existe une distinction importante entre l’application de l’option **Ne pas transférer** et celle d’un modèle qui n’accorde pas le droit d’utilisation **Transférer** à un e-mail : l’option **Ne pas transférer** utilise une liste dynamique des utilisateurs autorisés qui se base sur les destinataires choisis par l’utilisateur dans l’e-mail d’origine, tandis que les droits du modèle ont une liste statique d’utilisateurs autorisés que l’administrateur a spécifiés au préalable. Quelle est la différence ? Prenons un exemple : 
+Il existe une distinction importante entre l’application de l’option **Ne pas transférer** et celle d’un modèle qui n’accorde pas le droit d’utilisation **Transférer** à un e-mail : l’option **Ne pas transférer** utilise une liste dynamique des utilisateurs autorisés qui se base sur les destinataires choisis par l’utilisateur dans l’e-mail d’origine, tandis que les droits du modèle ont une liste statique d’utilisateurs autorisés que l’administrateur a spécifiés au préalable. Quelle est la différence ? Prenons un exemple : 
 
 Un utilisateur souhaite envoyer un e-mail à des personnes spécifiques du service marketing, contenant certaines informations à ne pas partager. Doit-il protéger l’e-mail avec un modèle restreignant les droits (affichage, réponse et enregistrement) au service marketing ?  Ou bien doit-il choisir l’option **Ne pas transférer** ? Les deux choix se traduiraient par le fait que les destinataires ne pourraient pas transférer l’e-mail. 
 
@@ -124,7 +124,7 @@ Un utilisateur souhaite envoyer un e-mail à des personnes spécifiques du servi
 
 Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement des messages Office 365, une nouvelle option d’e-mail est disponible : **Chiffrement seul**.
 
-Cette option est disponible pour les locataires qui utilisent Exchange Online, et peut être sélectionnée dans Outlook sur le web comme nouvelle option de protection des droits pour une règle de flux de courrier, en tant qu’action de protection contre la perte de données Office 365, et à partir d’Outlook (version minimale [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) pour Office 365 ProPlus et version minimale 1805 quand vous avez des [applications Office 365 qui prennent en charge Azure RMS)](requirements-applications.md#windows-computers-for-information-rights-management-irm). Pour plus d’informations sur l’option de chiffrement uniquement, consultez le billet de blog suivant de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
+Cette option est disponible pour les locataires qui utilisent Exchange Online et qui peuvent être sélectionnées dans Outlook sur le Web, sous la forme d’une autre option de protection des droits pour une règle de courrier, en tant qu’action DLP d’Office 365 et à partir d’Outlook (version minimale de [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) pour les [applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)et version minimale de 1805 lorsque vous avez des [applications Office 365 qui prennent Azure RMS en](requirements-applications.md#windows-computers-for-information-rights-management-irm) Pour plus d’informations sur l’option de chiffrement uniquement, consultez le billet de blog suivant de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
 
 Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de **Enregistrer sous, Exporter** et de **Contrôle total**. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier à partir de l’e-mail, l’imprimer et le transférer. 
 

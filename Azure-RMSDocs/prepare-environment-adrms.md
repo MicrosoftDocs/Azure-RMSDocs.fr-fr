@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 9196f02e63f7eb433237613fe44c43cf74ab3262
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136945"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869026"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Préparez l’environnement pour Azure Rights Management lorsque vous avez AD RMS
 
@@ -41,7 +41,7 @@ Si le service Azure Rights Management est activé et que vous utilisez aussi AD 
 
 Si AD RMS est déployé pour votre organisation, envisagez si vous pouvez migrer vers Azure Information Protection. Azure Information Protection présente de nombreux avantages par rapport à AD RMS. Par exemple, une meilleure prise en charge des appareils mobiles et l’intégration avec les services Office 365, ainsi qu’avec Exchange Server et SharePoint Server. Pour plus d’informations, consultez [Comparaison d’Azure Information Protection avec AD RMS](compare-on-premise.md).
 
-Lorsque vous migrez vers Azure Information Protection, vous ne perdez pas l’accès au contenu précédemment protégé, et vous n’êtes pas obligé d’ôter la protection sur votre contenu ou de le protéger à nouveau. Les documents et les e-mails qui étaient protégés par AD RMS peuvent toujours être ouverts, même après le déprovisionnement d’AD RMS.
+Lorsque vous migrez vers Azure Information Protection, vous ne perdez pas l’accès à un contenu précédemment protégé et vous n’avez pas besoin de ôter la protection ou de reprotéger votre contenu. Les documents et les e-mails qui ont été protégés par AD RMS peuvent toujours être ouverts même après le désapprovisionnement de AD RMS.
 
 Si vous décidez de migrer vers Azure Information Protection ou si vous décidez d’accepter les limitations dans l’utilisation de votre déploiement AD RMS actuel, vous devez tout d’abord vous assurer que le service Azure Rights Management est désactivé. Pour obtenir des instructions, suivez les étapes du scénario qui s’applique à votre cas :
 

@@ -1,10 +1,10 @@
 ---
 title: Aider les utilisateurs à protéger des fichiers à l’aide d’Azure RMS - AIP
 description: Informations vous permettant de fournir de l’aide aux utilisateurs, aux administrateurs et au support technique après le déploiement et la configuration du service Azure Rights Management d’Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2019
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c828903f4849dd63de95a401b88acdc4f92dd7e
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 833659878def719263d0410f086eb3445a6531d1
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136596"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927418"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -82,7 +82,7 @@ Si vous utilisez le service Azure Rights Management et que vous n’avez pas ins
 > [!TIP]
 > Pour trouver de l'aide et des instructions spécifiques à une application qui ont trait à l'utilisation de la protection des données avec ces applications, recherchez « **IRM** » ainsi que le nom et la version de l'application.
 
-#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Pour protéger un document dans Word d’Office 365 ProPlus
+#### <a name="to-protect-a-document-in-wordfrom-microsoft-365-apps-for-enterprise"></a>Pour protéger un document dans Word des applications Microsoft 365 pour l’entreprise
 
 1.  Dans Microsoft Word, créez un document.
 
@@ -101,7 +101,7 @@ Par exemple, un droit d'utilisation Affichage uniquement ne permet pas à l'util
 
 Les droits d'utilisation sont affichés en haut du document grâce à une bannière de restriction. La bannière peut afficher les autorisations appliquées au document, ou un lien pour afficher celles-ci.
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Pour protéger un e-mail à l’aide d’Outlook d’Office 365 ProPlus, en se connectant à Exchange Online
+#### <a name="to-protect-an-email-message-using-outlookfrom-microsoft-365-apps-for-enterprise-connecting-to-exchange-online"></a>Pour protéger un message électronique à l’aide d’Outlook de Microsoft 365 apps pour l’entreprise, en vous connectant à Exchange Online
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 

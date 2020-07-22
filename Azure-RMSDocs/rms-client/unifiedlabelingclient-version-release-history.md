@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
-ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
+ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86471721"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868788"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -95,17 +95,23 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 **Nouvelles fonctionnalités pour le client d’étiquetage unifié :**
 
-- Les [fenêtres contextuelles de justification](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) s’affichent désormais pour les modifications apportées aux étiquettes par défaut dans le client d’étiquetage unifié.
+- Les [**fenêtres contextuelles de justification**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) s’affichent désormais pour les modifications apportées aux étiquettes par défaut dans le client d’étiquetage unifié.
     
 - Intégration plus lisse avec les marquages de contenu visuel appliqués par Office. Pour plus d’informations sur la configuration des marquages de contenu dans le document Office, consultez [Comment configurer une étiquette pour les marquages visuels pour Azure information protection](../configure-policy-markings.md).
 
 - La nouvelle propriété avancée **WordShapeNameToRemove** permet de supprimer le marquage de contenu dans les documents Word créés par des applications tierces. En savoir plus sur la façon d' [identifier les noms de formes existants et de les définir en vue de leur suppression à l’aide de **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
 
+- Prise en charge du **chiffrement à clé double (DKE)** (version préliminaire publique). 
+
+    Vous pouvez maintenant utiliser le client d’étiquetage unifié pour protéger du contenu très sensible tout en conservant le contrôle total de votre clé. DKE requiert deux clés pour accéder au contenu protégé : une clé est stockée dans Azure et l’autre clé est détenue par le client. 
+
+    Pour plus d’informations sur les clés de racine de locataire par défaut basées sur le Cloud, consultez [planification et implémentation de votre clé de locataire Azure information protection](../plan-implement-tenant-key.md). Pour plus d’informations sur l’implémentation du chiffrement à clé double, consultez [chiffrement à clé double](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365.
+
 **Nouveaux journaux d’audit générés pour les fichiers supprimés**
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, voir :
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)
 

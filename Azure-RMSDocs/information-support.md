@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 1fd421e047c4a157a1632635ac091ae1be952029
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 7530329b1f3e25eabb622087a575d5c6e34c66b3
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665450"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869145"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et support pour Azure Information Protection
 
@@ -37,6 +37,7 @@ Utilisez les ressources suivantes pour vous aider à découvrir, déployer et pr
 |Obtenir de l’aide sur le produit|Consultez la section [Options de support technique et ressources de la communauté](#support-options-and-community-resources) de cette page.|
 |Vérifiez les informations d’abonnement et les fonctionnalités prises en charge.|Utilisez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).|
 |Consulter les questions fréquemment posées sur les licences et les réponses|Lisez le [Forum aux questions](https://azure.microsoft.com/pricing/details/information-protection#faq) sur les licences.|
+|Rechercher ou parcourir une liste de problèmes connus actuels | Consultez la page [problèmes connus-Azure information protection](known-issues.md) .
 |Demander une nouvelle fonctionnalité ou une modification de fonctionnalité|Visitez le site [UserVoice](https://msip.uservoice.com) pour Azure Information Protection et utilisez l’adresse e-mail de votre entreprise pour vous connecter.|
 |Contacter l’équipe de produit et vos homologues|Visitez le [site Yammer](https://www.yammer.com/AskIPTeam) pour Azure Information Protection.|
 |Comprendre un terme Azure Information Protection spécifique|Recherchez le terme ou l’abréviation sur la page de [terminologie](terminology.md).|

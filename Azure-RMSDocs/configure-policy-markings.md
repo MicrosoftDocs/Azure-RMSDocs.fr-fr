@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8057d0599cdd1f01dc32adb6b7e20b359f9fea0e
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048253"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927367"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -84,8 +84,6 @@ Utilisez les instructions suivantes pour configurer les marquages visuels d’un
 Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
 ## <a name="using-variables-in-the-text-string"></a>Utilisation de variables dans la chaîne de texte
-
-Les variables suivantes sont généralement disponibles lors de l’utilisation de Azure Information Protection client classique et sont en version préliminaire publique lors de l’utilisation du client d’étiquetage unifié Azure Information Protection.  
 
 Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’en-tête, le pied de page ou le filigrane :
 

@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables requises pour déployer des A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/25/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bcb3006bdd7575385d37be066b627ef49f770c70
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ebe0b506862e87e8dc99b9995eb0529f10805207
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047709"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927656"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour la Azure Information Protection
 
@@ -87,7 +87,7 @@ Les systèmes d’exploitation suivants prennent en charge à la fois l’étiqu
 
 - **Windows Server 2019**
 
-- **Windows Server 2016**
+- **Windows Server 2016**
 
 - **Windows server 2012 R2** et **Windows Server 2012**
 
@@ -126,19 +126,19 @@ Chaque client Azure Information Protection a des conditions préalables supplém
 
 Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de Microsoft **Word**, **Excel**, **PowerPoint**et **Outlook** , à partir des éditions Office suivantes :
 
-- **Applications Office version 1805 minimum**, Build 9330,2078 à partir d’Office 365 Business ou Microsoft 365 Business. 
+- **Applications Office version 1805 minimum**, Build 9330,2078 à partir de [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
 
     Cette édition est prise en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management, également appelée Azure Information Protection pour Office 365.
 
-- **Office 365 ProPlus**
+- **[Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office professionnel plus 2019**
+- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
 
-- **Office professionnel plus 2016**
+- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
 
-- **Office professionnel plus 2013 avec Service Pack 1**
+- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1**
 
-- **Office professionnel plus 2010 avec Service Pack 2**
+- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2**
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement, et les étiquettes qui appliquent la protection ne sont pas affichées pour les utilisateurs. 
 

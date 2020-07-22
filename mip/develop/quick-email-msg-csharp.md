@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: a9280d545cb997bef32c464685532afe7c4020df
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: e9bbbde050f868fda5a31d5bab25e02280e5e826
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548103"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403310"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>API de fichier - Traiter les fichiers e-mail .msg (C#)
 
@@ -24,7 +24,7 @@ Comme nous l’avons vu précédemment, l’instanciation de `IFileEngine` néce
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Initialisation de l’API de fichier (C#)](quick-app-initialization-csharp.md) pour créer une solution Visual Studio de démarrage. Le guide de démarrage rapide « Traitement des fichiers .msg (C#) » s’appuie sur le précédent.
-- Passez en revue les concepts relatifs au [SDK MIP des fichiers e-mail](concept-email-cpp.md).
+- Passez en revue les concepts relatifs au [SDK MIP des fichiers e-mail](concept-email.md).
 - Éventuellement : Passez en revue les concepts relatifs au [SDK MIP des moteurs de fichiers](concept-profile-engine-file-engine-cpp.md).
 - Éventuellement : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
 
@@ -60,7 +60,9 @@ Pour poursuivre ce guide de démarrage rapide concernant l’initialisation de l
         // Initialize and instantiate the File Profile.
         // Create the FileProfileSettings object.
         // Initialize file profile settings to create/use local state.
-        var profileSettings = new FileProfileSettings(mipContext, CacheStorageType.OnDiskEncrypted, new ConsentDelegateImplementation());
+        var profileSettings = new FileProfileSettings(mipContext, 
+                                    CacheStorageType.OnDiskEncrypted, 
+                                    new ConsentDelegateImplementation());
 
         // Load the Profile async and wait for the result.
         var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
@@ -85,7 +87,9 @@ Pour poursuivre ce guide de démarrage rapide concernant l’initialisation de l
         string actualOutputFilePath = outputFilePath;
 
         //Create a file handler for original file
-        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
+        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, 
+                                                                    actualFilePath, 
+                                                                    true)).Result;
 
         // List templates available to the user and use one of them to protect the mail file.
 
@@ -101,7 +105,9 @@ Pour poursuivre ce guide de démarrage rapide concernant l’initialisation de l
         var result = Task.Run(async () => await fileHandler.CommitAsync(outputFilePath)).Result;
 
         // Create a new handler to read the protected file metadata
-        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, actualOutputFilePath, true)).Result;
+        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, 
+                                                                        actualOutputFilePath, 
+                                                                        true)).Result;
 
         Console.WriteLine(string.Format("Original file: {0}", inputFilePath));
         Console.WriteLine(string.Format("Protected file: {0}", outputFilePath));

@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60178231"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135621"
 ---
 # <a name="file-api-configuration"></a>Configuration de l’API de fichier
 
@@ -57,7 +57,7 @@ Pour spécifier le comportement de la protection, définissez la valeur **Encryp
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
 
-**Type** : REG_SZ
+**Type**: REG_SZ
 
 **Description** : Contient l’une des trois valeurs suivantes :
 
@@ -72,7 +72,7 @@ Pour spécifier le comportement de la protection, définissez la valeur **Encryp
 
 
 > [!Note]
-> Ce paramètre n’a aucune incidence sur les formats de fichiers Office. Par exemple, si la valeur `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` est « Pfile », les fichiers .docx sont tout de même chiffrés à l’aide de la protection native. De plus, les fichiers chiffrés gardent l’extension de fichier .docx.
+> Ce paramètre n’a aucune incidence sur les formats de fichiers Office. Par exemple, si la `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` valeur est définie sur « pfile », les fichiers. docx seront toujours chiffrés à l’aide de la protection native, et le fichier chiffré aura toujours une extension de fichier. docx.
 
 Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le comportement par défaut s’applique.
 

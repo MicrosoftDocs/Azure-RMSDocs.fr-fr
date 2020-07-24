@@ -14,17 +14,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4a9f0b375f9e152d44f4d5b5251a9259456db53c
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792427"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135706"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Comment : activer la journalisation des erreurs et des performances
 Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 
-## <a name="overview"></a>Overview ##
+## <a name="overview"></a>Vue d’ensemble ##
 Vous pouvez améliorer l’expérience de vos utilisateurs et faciliter la résolution de leurs problèmes en activant le chargement automatique des données des journaux de diagnostic, de performances et de télémétrie vers Microsoft. 
 
 > [!IMPORTANT] 
@@ -51,49 +51,63 @@ Dans chacun des exemples d’extraits de code suivants, l’application appelant
 ### <a name="android"></a>Android ###
 Activer la journalisation automatique
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    SharedPreferences.Editor editor = preferences.edit();
-    editor.putBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, true);
-    editor.commit();
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+SharedPreferences.Editor editor = preferences.edit();
+editor.putBoolean("IpcCustomerExperienceDataCollectionEnabled", true);
+editor.commit();
+```
 
 Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```
 
 ## <a name="ios"></a>iOS ##
 Activer la journalisation automatique
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:FALSE forKey:@&quot;IpcCustomerExperienceDataCollectionEnabled”];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+```objectivec
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setBool:FALSE forKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcCustomerExperienceDataCollectionEnabled&quot;];
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+```
 
 Définir le contrôle de niveau de journalisation
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-      [prefs setInteger:1 forKey:@&quot;IpcLogLevel”];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+```java
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:1 forKey:@"IpcLogLevel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Obtenir le paramètre de contrôle de niveau de journalisation
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcLogLevel"];
+```
 
 ## <a name="windows"></a>Windows ##
 Activer la journalisation automatique
 
-    CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```cpp
+CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```
 
 Pour plus d’informations sur les paramètres facultatifs, consultez [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
-    CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
-
+```cpp
+CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
+```
 
 **Remarque** : Les extraits de code Windows ci-dessus sont en C++. Pour C\#, mettez à jour la syntaxe avec « . » à la place de « :: ».
 

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 53bfc93ce31322922fdadcc0f5bcc7a92e242bed
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 09823af031db2968c951c6c3610bc14e6a31bd17
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971841"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135638"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
@@ -82,7 +82,7 @@ Il provient de l’étape d’inscription dans le portail Azure.
 
 **Authentification utilisateur Android** : pour plus d’informations, consultez [Exemples de code Android](android-code.md), **Étape 2** du premier scénario, « Consommation d’un fichier protégé par RMS ».
 
-
+```java
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
     {
     ...
@@ -94,8 +94,8 @@ Il provient de l’étape d’inscription dans le portail Azure.
         String authority = authenticationParametersMap.get("oauth2.authority");
         String resource = authenticationParametersMap.get("oauth2.resource");
         String userId = authenticationParametersMap.get("userId");
-        mClientId = “12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”; // get your registered Azure AD application ID here
-        mRedirectUri = “urn:ietf:wg:oauth:2.0:oob”;
+        mClientId = "12345678-ABCD-ABCD-ABCD-ABCDEFGH12"; // get your registered Azure AD application ID here
+        mRedirectUri = "urn:ietf:wg:oauth:2.0:oob";
         final String userHint = (userId == null)? "" : userId;
         AuthenticationContext authenticationContext = App.getInstance().getAuthenticationContext();
         if (authenticationContext == null || !authenticationContext.getAuthority().equalsIgnoreCase(authority))
@@ -153,11 +153,11 @@ Il provient de l’étape d’inscription dans le portail Azure.
                             }
                         });
                          }
-
+```
 
 **Authentification utilisateur iOS/OS X** : pour plus d’informations, consultez [Exemples de code iOS/OS X](ios-os-x-code-examples.md), *Étape 2 du premier scénario, « Consommation d’un fichier protégé par RMS ».*
 
-
+```objectivec
     // AuthenticationCallback holds the necessary information to retrieve an access token.
     @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
 
@@ -173,11 +173,11 @@ Il provient de l’étape d’inscription dans le portail Azure.
     ADAuthenticationError *error;
     ADAuthenticationContext* context = [ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority error:&error];
 
-    NSString *appClientId = @”12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”;
+    NSString *appClientId = @"12345678-ABCD-ABCD-ABCD-ABCDEFGH12";
 
     // get your registered Azure AD application ID here
 
-    NSURL *redirectURI = [NSURL URLWithString:@”ms-sample://com.microsoft.sampleapp”];
+    NSURL *redirectURI = [NSURL URLWithString:@"ms-sample://com.microsoft.sampleapp"];
 
     // get your <app-scheme>://<bundle-id> here
     // Retrieve token using ADAL
@@ -200,13 +200,12 @@ Il provient de l’étape d’inscription dans le portail Azure.
 
         ];
     }
-
-
+```
 
 **Authentification utilisateur Linux** : pour plus d’informations, consultez [Exemples de code Linux](linux-c-code-examples.md).
 
 
-
+```cpp
     // Class Header
     class AuthCallback : public IAuthenticationCallback {
     private:
@@ -266,3 +265,4 @@ Il provient de l’étape d’inscription dans le portail Azure.
         throw;
       }
     }
+```

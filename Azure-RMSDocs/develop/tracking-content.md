@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792014"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135604"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Comment : activer le suivi et la révocation de documents
 
@@ -94,7 +94,9 @@ Enfin, utilisez cette API pour inscrire votre document faisant l’objet d’un 
 
 Voici un exemple d’extrait de code illustrant la définition des métadonnées de suivi de document et l’appel utilisé pour inscrire le document auprès du système de suivi.
 
-      C++
+**C++**:
+
+  ```cpp
       HRESULT hr = S_OK;
       LPCWSTR wszOutputFile = NULL;
       wstring wszWorkingFile;
@@ -124,7 +126,7 @@ Voici un exemple d’extrait de code illustrant la définition des métadonnées
      /* the context to use for the call */
      PCIPC_PROMPT_CTX pContext;
 
-     wstring wstrContentName(“MyDocument.txt”);
+     wstring wstrContentName("MyDocument.txt");
      bool sendLicenseRegistrationNotificationEmail = FALSE;
 
      hr = IpcRegisterLicense( pSerializedLicense,
@@ -132,6 +134,7 @@ Voici un exemple d’extrait de code illustrant la définition des métadonnées
                         pContext,
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
+  ```
 
 ## <a name="add-a-track-usage-button-to-your-app"></a>Ajouter un bouton **Suivre l’utilisation** à votre application
 
@@ -139,11 +142,11 @@ Ajouter un élément d’interface utilisateur **Suivre l’utilisation** à vot
 
 - Utilisation de l’ID de contenu
   - Obtenez l’ID de contenu à l’aide de [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) ou [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) si la licence est sérialisée et utilisez la propriété de licence **IPC_LI_CONTENT_ID**. Pour plus d’informations, consultez [Types de propriété de licence](https://msdn.microsoft.com/library/hh535287.aspx).
-  - Avec les métadonnées **ContentId** et **Issuer**, utilisez le format suivant : `https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - Avec les métadonnées de **contentid** et de l' **émetteur** , utilisez le format suivant :`https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Exemple : `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- Si vous n’avez pas accès à ces métadonnées (par exemple, si vous examinez la version non protégée du document), vous pouvez utiliser **Content_Name** au format suivant : `https://track.azurerms.com/#/?q={ContentName}`
+- Si vous n’avez pas accès à ces métadonnées (par exemple, si vous examinez la version non protégée du document), vous pouvez utiliser la **Content_Name** au format suivant :`https://track.azurerms.com/#/?q={ContentName}`
 
   Exemple - https://track.azurerms.com/#/?q=Secret!.txt
 

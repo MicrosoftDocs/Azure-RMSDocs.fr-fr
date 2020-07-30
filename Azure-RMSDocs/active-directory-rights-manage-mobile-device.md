@@ -4,19 +4,19 @@ description: En savoir plus sur les extensions d’appareils mobiles Active Dire
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f20ebed9647570e1f9395791f346eb175a3a8c5e
-ms.sourcegitcommit: 43c9a5c3130a3a8e2ee2644207d07382bed09679
+ms.openlocfilehash: 4351fbd3a7cbbcfbc49df69c1103a6d3a90fb920
+ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879996"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87255146"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Extension Appareils mobiles AD RMS (Active Directory Rights Management Services)
 
@@ -82,7 +82,7 @@ $TransformRules = @"
 @RuleTemplate = "LdapClaims"
 @RuleName = "Jwt Token"
 c:[Type ==
-"https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
 Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types =
 ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -222,7 +222,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez les tableaux 
 
 |Champ|Valeur|
 |------|------|
-|Domain|_tcp. contoso. com
+|Domaine|_tcp. contoso. com
 |Service|_rmsdisco
 |Protocol|_http
 |Priority|0
@@ -232,7 +232,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez les tableaux 
 
 |Champ|Valeur|
 |------|------|
-|Domain|_tcp. fabrikam. com
+|Domaine|_tcp. fabrikam. com
 |Service|_rmsdisco
 |Protocol|_http
 |Priority|0
@@ -248,7 +248,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez le tableau su
 
 |Champ|Valeur|
 |------|------|
-|Domain|_tcp. contoso. com
+|Domaine|_tcp. contoso. com
 |Service|_rmsdisco
 |Protocol|_http
 |Priority|0

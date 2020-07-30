@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 405989dae3fb7f37edc4fdd8b213ae5dae3ac592
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: f69c7071c7e4bb257d4325f4404c51a6e0a81046
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665909"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298272"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Déploiement du connecteur Azure Rights Management
 
@@ -42,7 +42,7 @@ Le connecteur RMS prend en charge les serveurs locaux suivants : Exchange Server
 > [!NOTE]
 > Si vous voulez protéger plusieurs types de fichiers (pas seulement les documents Office) à l’aide de l’Infrastructure de classification des fichiers, n’utilisez pas le connecteur RMS, mais des [applets de commande AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
 
-Pour connaître les versions de ces serveurs locaux qui sont prises en charge par le connecteur RMS, consultez [Serveurs locaux qui prennent en charge Azure RMS](requirements-servers.md).
+Pour connaître les versions de ces serveurs locaux qui sont prises en charge par le connecteur RMS, consultez [Serveurs locaux qui prennent en charge Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
 
 
 ### <a name="support-for-hybrid-scenarios"></a>Prise en charge des scénarios hybrides
@@ -87,7 +87,7 @@ Avant d'installer le connecteur RMS, assurez-vous que les conditions requises su
 
     -   [Configuration d’un serveur Exchange pour utiliser le connecteur](configure-servers-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
 
-    -   [Configuration d'un serveur SharePoint afin d'utiliser le connecteur](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
+    -   [Configuration d’un serveur SharePoint afin d’utiliser le connecteur](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
 
     -   [Configuration d’un serveur de fichiers pour l’infrastructure de classification des fichiers afin d’utiliser le connecteur](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 

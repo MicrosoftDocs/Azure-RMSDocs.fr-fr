@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 6c479bbb5f63bbbdc98165bc0c99f43a4e9503b4
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 1a239e489dee616ba13050a9fa6614d85bee1429
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927401"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87297865"
 ---
 # <a name="what-is-azure-rights-management"></a>En quoi consiste Azure Rights Management ?
 
@@ -61,7 +61,7 @@ Utilisez les listes et les tables suivantes pour identifier les besoins de l’e
 
 ### <a name="protection-features"></a>Fonctionnalités de protection
 
-|Fonctionnalité  |Description  |
+|Caractéristique  |Description  |
 |---------|---------|
 |**Protéger plusieurs types de fichiers**     | Dans les premières implémentations de Rights Management, seuls les fichiers Office pouvaient être protégés, à l’aide de la protection Native Rights Management. </br></br>À présent, la protection générique qui a été fournie par l’application de partage Rights Management, et désormais offerte par le client Azure Information Protection, signifie que davantage de [types de fichiers](./rms-client/client-admin-guide-file-types.md) sont pris en charge.        |
 |**Protégez vos fichiers n’importe où**. | Lorsqu’un fichier est [protégé](./rms-client/client-classify-protect.md), la protection reste avec le fichier, même s’il est enregistré ou copié dans un stockage qui n’est pas sous le contrôle de celui-ci, tel qu’un service de stockage cloud.|
@@ -70,7 +70,7 @@ Utilisez les listes et les tables suivantes pour identifier les besoins de l’e
 
 ### <a name="collaboration-features"></a>Fonctionnalités de collaboration
 
-|Fonctionnalité  |Description  |
+|Caractéristique  |Description  |
 |---------|---------|
 |**Partager des informations en toute sécurité**     |  Les [fichiers protégés](./rms-client/client-classify-protect.md) peuvent être partagés avec d’autres personnes, par exemple, une pièce jointe à un message électronique ou un lien vers un site SharePoint. </br></br> Si les informations sensibles se trouvent dans un message électronique, Protégez l’e-mail ou utilisez l’option **ne pas transférer** d’Outlook.       |
 |**Prise en charge pour les collaborations interentreprises**     |  Étant donné qu’Azure Rights Management est un service Cloud, il n’est pas nécessaire de configurer explicitement des approbations avec d’autres organisations avant de pouvoir partager du contenu protégé avec eux. </br></br>La collaboration avec d’autres organisations qui disposent déjà d’un annuaire Office 365 ou Azure AD est prise en charge automatiquement. </br></br>Pour les organisations sans Office 365 ou un répertoire Azure AD, les utilisateurs peuvent s’inscrire à l’abonnement gratuit [RMS for Individuals](rms-for-individuals.md) , ou utiliser une compte Microsoft pour les [applications prises en charge](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).       |
@@ -85,9 +85,9 @@ Utilisez les listes et les tables suivantes pour identifier les besoins de l’e
 
 Azure RMS prend en charge un large éventail de plates-formes et d’applications, notamment :
 
-|Fonctionnalité  |Description  |
+|Caractéristique  |Description  |
 |---------|---------|
-|**Appareils couramment utilisés** </br>pas seulement les ordinateurs Windows     | Les [appareils pris en charge](./requirements-client-devices.md) sont les suivants : </br></br>- Téléphones et ordinateurs Windows </br>- Ordinateurs Mac </br>- Tablettes et téléphones iOS </br>- Tablettes et téléphones Android        |
+|**Appareils couramment utilisés** </br>pas seulement les ordinateurs Windows     | Les [périphériques clients](requirements.md#client-devices) sont les suivants : </br></br>- Téléphones et ordinateurs Windows </br>- Ordinateurs Mac </br>- Tablettes et téléphones iOS </br>- Tablettes et téléphones Android        |
 |**Services locaux**     | En plus de travailler en [toute transparence avec Office 365](office-apps-services-support.md), utilisez Azure Rights Management avec les services locaux suivants lorsque vous déployez le [connecteur RMS](deploy-rms-connector.md): </br></br>- Exchange Server 2016 </br>- SharePoint Server </br>- Windows Server exécutant l’infrastructure de classification des fichiers        |
 |**Extensibilité des applications**     |Azure Rights Management offre une intégration étroite avec les applications et les services Microsoft Office, et étend la prise en charge d’autres applications à l’aide du [client Azure information protection](./rms-client/aip-client.md ). </br></br>Les [Kits de développement](./develop/developers-guide.md) logiciel (sdk) Azure information protection fournissent à vos développeurs internes et aux éditeurs de logiciels des API pour écrire des applications personnalisées qui prennent en charge Azure information protection. </br></br>Pour plus d’informations, consultez [Autres applications prenant en charge les API Rights Management ](api-support.md).         |
 | | |
@@ -118,7 +118,7 @@ Azure RMS fournit les fonctionnalités suivantes pour prendre en charge les serv
 
 - **Maintenez le contrôle informatique sur les données**. Les organisations peuvent tirer parti des fonctionnalités de contrôle informatique, telles que :
 
-    |Fonctionnalité  |Description  |
+    |Caractéristique  |Description  |
     |---------|---------|
     |Gestion des clés de locataire    |   Gérez votre propre clé de locataire à l’aide de la solution «[Bring Your Own Key](plan-implement-tenant-key.md)» (BYOK), qui stocke votre clé de locataire dans des modules de sécurité matériels (HSM).      |
     |Audit et journalisation de l’utilisation    |   Utilisez les fonctionnalités d’audit et de [journalisation de l’utilisation](log-analyze-usage.md) pour analyser les informations métier, surveiller les abus et effectuer une analyse d’investigation pour les fuites d’informations.      |

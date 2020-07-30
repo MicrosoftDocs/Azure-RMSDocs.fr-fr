@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24471ecb326009495082e697f96ea241eafd9d39
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: ebc917204844e893a4ff27659e29fa29aa3638c2
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927639"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298051"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -32,56 +32,40 @@ Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires
 
 ## <a name="additional-prerequisites-for-the-azure-information-protection-unified-labeling-client"></a>Conditions préalables supplémentaires pour le client d’étiquetage unifié Azure Information Protection
 
-- Microsoft .NET Framework 4.6.2
-    
-    L’installation complète du client d’étiquetage unifié Azure Information Protection par défaut, requiert une version minimale de Microsoft .NET Framework 4.6.2 et, si ce n’est pas le cas, l’Assistant Installation du programme d’installation exécutable tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, l’ordinateur doit être redémarré. Bien que déconseillé, vous pouvez ignorer ce prérequis lorsque vous utilisez l’Assistant Installation en utilisant un [paramètre d’installation personnalisé](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
-    
-    - Microsoft .NET Framework 4.5.2
-    
-    Si la visionneuse Azure Information Protection est installée séparément, Microsoft .NET Framework version 4.5.2 minimum est requis. Si cette version est manquante, le programme d’installation exécutable ne procède pas au téléchargement ni à l’installation.
+Les prérequis suivants pour le client d’étiquetage unifié AIP s’ajoutent aux éléments répertoriés dans [Azure information protection exigences](../requirements.md).
 
-- Version minimale de Windows PowerShell 4,0
-    
-    Le module PowerShell pour le client nécessite une version minimale de 4,0 pour Windows PowerShell, qui devra peut-être être installé sur des systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Ce programme d’installation ne vérifie pas ou n’installe pas cette condition préalable pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.
-
-- Résolution d’écran supérieure à 800 x 600
-    
-    Les résolutions de 800 x 600 et les résolutions inférieures ne peuvent pas afficher entièrement la boîte de dialogue **Classifier et protéger - Azure Information Protection** lorsque vous cliquez avec le bouton droit sur un fichier ou dossier dans l’Explorateur de fichiers.
-
-
-- Assistant de connexion Microsoft Online Services 7.250.4303.0
-    
-    Les ordinateurs qui exécutent Office 2010 nécessitent l’assistant de connexion Microsoft Online Services version 7.250.4303.0. Cette version est incluse dans l’installation du client. Si vous disposez d’une version ultérieure de l’Assistant de connexion, désinstallez-la avant d’installer le client d’étiquetage unifié Azure Information Protection. Par exemple, vérifiez la version et désinstallez l’Assistant de connexion à l’aide du **panneau de configuration**  >  **programme et fonctionnalités**  >  **désinstaller ou modifier un programme**.
-
-- KB 4482887
-    
-    Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.
-
-- Configurer la stratégie de groupe pour empêcher la désactivation du complément Azure Information Protection
-    
-    Pour Office 2013 et versions ultérieures, configurez la stratégie de groupe pour vous assurer que le complément **Microsoft Azure Information Protection** pour les applications Office est toujours activé. Sans cette configuration, le complément Microsoft Azure Information Protection peut être désactivé et les utilisateurs ne seront pas en mesure d’étiqueter leurs documents et e-mails dans leur application Office.
-    
-    - Pour Outlook : utilisez le paramètre de stratégie de groupe documenté dans [Contrôle de l’administrateur système sur les compléments](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) dans la documentation Office.
-    
-    - Pour Word, Excel et PowerPoint : utilisez le paramètre de stratégie de groupe **liste des compléments gérés** documenté dans l’article du support [Aucun complément chargé en raison des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
+|Condition requise  |Description  |
+|---------|---------|
+|**Microsoft .NET Framework 4.6.2**     | L’installation complète du client d’étiquetage unifié Azure Information Protection par défaut nécessite une version minimale de Microsoft .NET Framework 4.6.2. </br></br>Si ce Framework est absent, l’Assistant Installation du programme d’installation exécutable tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, l’ordinateur doit être redémarré. </br></br>**Remarque :** Bien que cela ne soit pas recommandé, vous pouvez ignorer cette condition préalable lorsque vous utilisez l’Assistant Installation à l’aide d’un [paramètre d’installation personnalisée](#more-information-about-the-downgradedotnetrequirement-installation-parameter).        |
+|**Microsoft .NET Framework 4.5.2**     | Si la visionneuse de Azure Information Protection est installée séparément, l’application de la visionneuse requiert une version minimale de Microsoft .NET Framework 4.5.2. </br></br>**Important :** Si ce Framework est manquant pour la visionneuse, le programme d’installation exécutable ne le télécharge pas ou ne l’installe *pas* .        |
+|**Version minimale de Windows PowerShell 4,0**     |   Le module PowerShell pour le client nécessite une version minimale de Windows PowerShell 4,0, qui peut être nécessaire pour être installé sur des systèmes d’exploitation plus anciens. </br></br>Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). </br></br>**Important :** Le programme d’installation ne vérifie pas ou n’installe *pas* ce composant requis pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.      |
+|**Résolution d’écran supérieure à 800 x 600**    |     Les résolutions de 800 x 600 et les résolutions inférieures ne peuvent pas afficher entièrement la boîte de dialogue **Classifier et protéger - Azure Information Protection** lorsque vous cliquez avec le bouton droit sur un fichier ou dossier dans l’Explorateur de fichiers.    |
+|**Assistant de connexion Microsoft Online Services 7.250.4303.0**     |   Les ordinateurs qui exécutent Office 2010 requièrent l’Assistant de connexion Microsoft Online Services version 7.250.4303.0, qui est inclus dans l’installation du client. </br></br>Si vous disposez d’une version ultérieure de l’Assistant de connexion, désinstallez-la avant d’installer le client d’étiquetage unifié Azure Information Protection. </br></br>Par exemple, vérifiez la version et désinstallez l’Assistant de connexion à l’aide du **panneau de configuration**  >  **programme et fonctionnalités**  >  **désinstaller ou modifier un programme**.      |
+|**KB 4482887**     | Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. </br></br>Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.        |
+|**Autorisations d’administrateur**| L’installation du client d’étiquetage unifié Azure Information Protection requiert des autorisations d’administrateur local.| 
+|   |  |
         
-        Indiquez les identificateurs programmatiques (ProgID) suivants pour Azure Information Protection et définissez l’option sur **1 : le complément est toujours activé**.
-        
-        Pour Word : `MSIP.WordAddin`
-        
-        Pour Excel : `MSIP.ExcelAddin`
-        
-        Pour PowerPoint : `MSIP.PowerPointAddin`
+### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>Configurer votre stratégie de groupe pour empêcher la désactivation d’AIP
 
-> [!IMPORTANT]
-> L’installation du client d’étiquetage unifié Azure Information Protection requiert des autorisations d’administrateur local.
+Pour les versions d’Office 2013 et ultérieures, nous vous recommandons de configurer votre stratégie de groupe pour vous assurer que le complément **Microsoft Azure information protection** pour les applications Office est toujours activé.  Sans ce complément, les utilisateurs ne peuvent pas étiqueter leurs documents ou messages électroniques dans les applications Office.   
+
+- **Pour Outlook :** Utilisez le paramètre de stratégie de groupe documenté dans contrôle de l' [administrateur système sur les compléments](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins).
+- **Pour Word, Excel et PowerPoint :** Utilisez la **liste des paramètres de stratégie de groupe des compléments gérés** documentés dans [aucun complément chargé en raison des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). . 
+
+    Spécifiez les identificateurs programmatiques (ProgID) suivants pour AIP, puis affectez la valeur 1 à l’option **: le complément est toujours activé**.
+
+    |Application  |ProgID  |
+    |---------|---------|
+    |Word     |     `MSIP.WordAddin`    |
+    |Excel     |  `MSIP.ExcelAddin`       |
+    |PowerPoint     |   `MSIP.PowerPointAddin`      |
+    | | | 
 
 ## <a name="applications"></a>Applications
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-Applications Office version 1805 minimum, Build 9330,2078 à partir d' [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
-
+- Applications Office version 1805 minimum, Build 9330,2078 à partir d' [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
 - [Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
 - [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
 - [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
@@ -199,7 +183,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     
     Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production.
 
-2. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
+1. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
     |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
@@ -212,9 +196,13 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     
    
 
-3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection_UL.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) d’installation exécutable, à une exception près :
-    
-    - Au lieu de **AllowTelemetry = 0** pour désactiver l’option d’installation, **Aidez-nous à améliorer Azure information protection en envoyant des statistiques d’utilisation à Microsoft**, puis spécifiez **ENABLETELEMETRY = 0**. 
+1. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection_UL.msi /quiet`.
+
+    Vous devrez peut-être spécifier des paramètres d’installation supplémentaires. Pour plus d’informations, consultez les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).
+
+    > [!NOTE]
+    > Par défaut, l’option **aider à améliorer Azure information protection en envoyant des statistiques d’utilisation à** l’installation Microsoft est activée. Pour désactiver cette option, veillez à spécifier **ENABLETELEMETRY = 0** au lieu de **AllowTelemetry = 0**.
+    >
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez installé le client d’étiquetage unifié Azure Information Protection, consultez les rubriques suivantes pour plus d’informations sur la prise en charge de ce client :

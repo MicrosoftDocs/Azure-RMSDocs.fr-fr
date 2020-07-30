@@ -12,12 +12,12 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 622786bc1192d6727ef748df970adeb53733f4f8
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048695"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298082"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -37,7 +37,7 @@ Pour tester l’application mobile AIP, assurez-vous que vous pouvez accéder à
 
 |Type de fichier  |Instructions  |
 |---------|---------|
-|**Un fichier. rpmsg**     | Message électronique protégé par des droits. Si votre application de messagerie mobile ne prend pas en charge la protection des données Rights Management en mode natif, les messages électroniques protégés sont affichés sous forme de pièces jointes. </br></br>Utilisez un autre appareil, tel qu’Outlook à partir d’un ordinateur Windows, pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. </br></br>**Remarque :** Pour obtenir la liste des clients de messagerie qui prennent en charge Rights Management en mode natif, consultez la colonne **e-mail** dans [applications compatibles RMS](../requirements-applications.md#rms-enlightened-applications). |
+|**Un fichier. rpmsg**     | Message électronique protégé par des droits. Si votre application de messagerie mobile ne prend pas en charge la protection des données Rights Management en mode natif, les messages électroniques protégés sont affichés sous forme de pièces jointes. </br></br>Utilisez un autre appareil, tel qu’Outlook à partir d’un ordinateur Windows, pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. </br></br>**Remarque :** Pour obtenir la liste des clients de messagerie qui prennent en charge Rights Management en mode natif, consultez les lignes de **courrier électronique** dans les [applications qui prennent en charge Azure Rights Management la protection des données](../requirements-applications.md). |
 |**Un fichier PDF protégé par des droits**     | 1. à partir d’un ordinateur Windows, protégez un fichier PDF à l’aide du client du [client d’étiquetage](clientv2-classify-protect.md) [classique](client-classify-protect.md) ou unifié d’AIP. </br>2. envoyez-vous le fichier PDF protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie.        |
 |**A. PTXT ou. pjpg ou. PPNG**     | 1. à partir d’un ordinateur Windows, protégez un fichier texte ou image à l’aide du client [client d’étiquetage](clientv2-classify-protect.md) [classique](client-classify-protect.md) ou unifié d’AIP. </br></br>2. envoyez-vous le fichier protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie. </br></br>**Remarque :** Pour plus d’informations, consultez [types de fichiers pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)   |
 | | |

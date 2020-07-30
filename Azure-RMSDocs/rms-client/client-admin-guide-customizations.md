@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a038d70cfbeb75f4bcabbfab0391582cdb0b5e87
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 58d96afe47d6d3fc993c7c7e213e64097777b21e
+ms.sourcegitcommit: edd0614ef6f687ff2745f56e4171cd72e03edc9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047369"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438193"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -191,7 +191,7 @@ Lorsque vous exportez la stratégie à partir du portail Azure, un fichier compr
 
 1. Décompressez le fichier et utilisez le tableau suivant pour identifier le fichier de stratégie dont vous avez besoin. 
     
-    |Nom du fichier|Version du client correspondante|
+    |Nom de fichier|Version du client correspondante|
     |--------------------------|---------------------------------------------|
     |Policy1.1.msip |version 1.2|
     |Policy1.2.msip |version 1.3 - 1.7|
@@ -358,19 +358,19 @@ Exemple de valeur pour plusieurs ID d’étiquette sous forme de chaîne sépar�
     
     - Clé : **OutlookWarnUntrustedCollaborationLabel**
     
-    - Valeur: \<**label IDs, comma-separated**>
+    - Valeur : \<**label IDs, comma-separated**>
 
 - Messages de justification :
     
     - Clé : **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Valeur: \<**label IDs, comma-separated**>
+    - Valeur : \<**label IDs, comma-separated**>
 
 - Messages de blocage :
     
     - Clé : **OutlookBlockUntrustedCollaborationLabel**
     
-    - Valeur: \<**label IDs, comma-separated**>
+    - Valeur : \<**label IDs, comma-separated**>
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Pour exempter les noms de domaine pour les messages contextuels configurés pour des étiquettes spécifiques
 
@@ -689,7 +689,7 @@ Dans cet exemple :
 Le paramètre client avancé :
 
     
-|Name|Valeur|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
 
@@ -706,7 +706,7 @@ Dans cet exemple :
 Le paramètre client avancé :
 
     
-|Name|Valeur|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
 
@@ -724,7 +724,7 @@ Dans cet exemple :
 Le paramètre client avancé :
 
     
-|Name|Valeur|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
 
@@ -743,7 +743,7 @@ Cette configuration n’est pas prise en charge pour Outlook. Sachez également 
 
 - Clé : **RemoveExternalContentMarkingInApp**
 
-- Valeur: \<**Office application types WXP**> 
+- Valeur : \<**Office application types WXP**> 
 
 Exemples :
 
@@ -776,7 +776,7 @@ Les caractères génériques de la chaîne que vous spécifiez sont sensibles à
 
 - Clé : **ExternalContentMarkingToRemove**
 
-- Valeur: \<**string to match, defined as regular expression**> 
+- Valeur : \<**string to match, defined as regular expression**> 
 
 #### <a name="multiline-headers-or-footers"></a>En-têtes ou pieds de page multilignes
 
@@ -814,7 +814,7 @@ Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom
 
 - Clé : **PowerPointShapeNameToRemove**
 
-- Valeur: \<**PowerPoint shape name**> 
+- Valeur : \<**PowerPoint shape name**> 
 
 Lorsque vous avez plusieurs formes PowerPoint à supprimer, créez autant de clés **PowerPointShapeNameToRemove** que vous avez de formes à supprimer. Pour chaque entrée, spécifiez le nom de la forme à supprimer.
 
@@ -980,9 +980,9 @@ Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
 Ce paramètre client avancé ne modifie ni les informations envoyées à Azure Information Protection pour le [reporting central](../reports-aip.md), ni les informations écrites dans le [journal des événements](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) local.
 
-## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
+## <a name="integration-with-the-legacy-exchange-message-classification"></a>Intégration à la classification des messages Exchange hérités
 
-Outlook sur le Web prend désormais en charge l’étiquetage intégré pour Exchange Online, qui est la méthode recommandée pour étiqueter les messages électroniques dans Outlook sur le Web. Toutefois, si vous n’utilisez pas encore les étiquettes de sensibilité publiées à partir du centre de conformité Office 365 Security &, Microsoft 365 Security Center ou Microsoft Compliance Center, vous pouvez utiliser la classification des messages Exchange pour étendre Azure Information Protection étiquettes à vos utilisateurs mobiles lorsqu’ils utilisent Outlook sur le Web. Vous pouvez également utiliser cette méthode pour Exchange Server. 
+Outlook sur le Web prend désormais en charge l’étiquetage intégré pour Exchange Online, qui est la méthode recommandée pour étiqueter les messages électroniques dans Outlook sur le Web. Toutefois, si vous avez besoin d’étiqueter les e-mails dans OWA et que vous utilisez Exchange Server, qui ne prend pas encore en charge les étiquettes de sensibilité, vous pouvez utiliser la classification des messages Exchange pour étendre Azure Information Protection étiquettes à Outlook sur le Web.
 
 Outlook Mobile ne prend pas en charge la classification des messages Exchange.
 

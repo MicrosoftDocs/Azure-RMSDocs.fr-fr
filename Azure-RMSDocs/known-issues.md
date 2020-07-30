@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/02/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cec682216c07f93b36d189f3c385dc935b2f887d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
+ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869643"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87378282"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus-Azure Information Protection
 
@@ -84,14 +84,14 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problèmes connus liés à AIP dans les applications Office
 
-|Composant  |Problèmes connus  |
+|Caractéristique  |Problèmes connus  |
 |---------|---------|
-|Plusieurs versions d’Office    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
-|Prise en charge d’IRM dans Office 2016 | Le paramètre de Registre [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , qui contrôle le chiffrement des métadonnées dans Office 2016, n’est pas pris en charge pour les étiquettes de Azure information protection.|
-|Marquages de contenu dans Word    | Azure Information Protection [marquages](configure-policy-markings.md) de contenu peuvent être masqués dans les pieds de page Microsoft Word, lorsque le pied de page contient également un tableau. Pour plus d’informations, consultez la page [quand des marquages visuels sont appliqués](configure-policy-markings.md#when-visual-markings-are-applied). |
-|Marquages de contenu dans les e-mails | Le marquage de contenu dynamique, tel que l’ajout d’en-têtes et de pieds de page avec des macros à des e-mails, est pris en charge pour Outlook uniquement lors de l’utilisation du client Azure Information Protection. </br></br>Le marquage de contenu dynamique n’est pas pris en charge dans l’application Outlook Native ni dans Outlook online. |
-|Fichiers joints aux courriers électroniques |En raison d’une limitation dans les mises à jour Windows récentes, lorsque [Microsoft Outlook est protégé par Azure Rights Management](office-apps-services-support.md), les fichiers joints aux courriers électroniques peuvent être verrouillés après l’ouverture du fichier. |
-|Fusion et publipostage    |  La fonctionnalité de [fusion et](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) publipostage d’Office n’est pas prise en charge avec les fonctionnalités de Azure information protection.       |
+|**Plusieurs versions d’Office**    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
+|**Affichages multiples** |Si vous utilisez plusieurs écrans et que vous avez ouvert une application Office, la barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des deux écrans. </br></br>Pour vous assurer que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général,** sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence.**    |
+|**Prise en charge d’IRM dans Office 2016**| Le paramètre de Registre [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , qui contrôle le chiffrement des métadonnées dans Office 2016, n’est pas pris en charge pour les étiquettes de Azure information protection.|
+|**Marquages de contenu dans Word**    | Azure Information Protection [marquages](configure-policy-markings.md) de contenu peuvent être masqués dans les pieds de page Microsoft Word, lorsque le pied de page contient également un tableau. Pour plus d’informations, consultez la page [quand des marquages visuels sont appliqués](configure-policy-markings.md#when-visual-markings-are-applied). |
+|**Fichiers joints aux courriers électroniques** |En raison d’une limitation dans les mises à jour Windows récentes, lorsque [Microsoft Outlook est protégé par Azure Rights Management](office-apps-services-support.md), les fichiers joints aux courriers électroniques peuvent être verrouillés après l’ouverture du fichier. |
+|**Fusion et publipostage**    |  La fonctionnalité de [fusion et](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) publipostage d’Office n’est pas prise en charge avec les fonctionnalités de Azure information protection.       |
 | | |
 
 <!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.
@@ -114,13 +114,13 @@ La publication des stratégies peut prendre jusqu’à 24 heures.
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Image étirée dans la visionneuse cliente":::
     
-    Pour plus d'informations, voir :
+    Pour plus d’informations, consultez :
 
     - [**Client classique**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/client-view-use-files.md)
     - [**Client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md)
 
 
-## <a name="more-information"></a>Informations complémentaires
+## <a name="more-information"></a>Plus d’informations
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

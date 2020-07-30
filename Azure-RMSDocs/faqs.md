@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 82280d50bdd16139e53d4906e908f7efcb9b6281
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: c72d1764ace998b21c17be97639239da2a6a6c19
+ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927384"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334179"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -267,7 +267,7 @@ Pour plus d’informations, consultez la liste complète des [types de fichiers 
 > 
 
 > [!TIP]
-> Power BI prend désormais en charge la classification à l’aide d’étiquettes de sensibilité et peut appliquer la protection de ces étiquettes aux données exportées aux formats de fichier suivants :. pdf,. xls et. ppt. Pour plus d’informations, consultez [protection des données en Power bi (version préliminaire)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
+> Power BI prend désormais en charge la classification à l’aide d’étiquettes de sensibilité et peut appliquer la protection de ces étiquettes aux données exportées aux formats de fichier suivants :. pdf,. xls et. ppt. Pour plus d’informations, consultez [Protection des données dans Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
 > 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Je vois qu’Azure Information Protection est répertoriée en tant qu’application cloud disponible pour l’accès conditionnel : comment cela fonctionne-t-il ?
 

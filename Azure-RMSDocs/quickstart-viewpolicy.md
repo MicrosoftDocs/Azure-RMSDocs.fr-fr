@@ -1,152 +1,158 @@
 ---
-title: 'Démarrage rapide : afficher Azure Information Protection sur le portail Azure - AIP'
-description: Si Azure Information Protection est nouveau pour votre organisation, commencez par ajouter le service au Portail Azure, vérifier que le service de protection est activé et publier les paramètres de stratégie et les étiquettes.
-author: mlottner
-ms.author: mlottner
+title: Démarrage rapide – Affichage d’Azure Information Protection (AIP) sur le Portail Azure
+description: Si Azure Information Protection (AIP) est nouveau pour votre organisation, suivez ce guide pour ajouter le service au Portail Azure, vérifier que le service de protection est activé et publier les étiquettes et les paramètres de stratégie.
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/04/2019
+ms.date: 07/19/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 38f18cebc7d819d0a5afeb3c3a14b1b56ef0aca6
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ebe7260cdbd9a252323b13ffd91897e5cd423810
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049052"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927903"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Dans ce démarrage rapide, vous allez ajouter Azure Information Protection au portail Azure, vérifier que le service de protection est activé, créer des étiquettes par défaut si vous n’avez pas d’étiquettes et afficher les paramètres de stratégie pour le client Azure Information Protection (classique).
 
-Ce démarrage rapide prend moins de 10 minutes.
+**Temps nécessaire :** Ce démarrage rapide prend moins de 10 minutes.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
+Pour effectuer ce démarrage rapide, les éléments suivants sont requis :
 
-- Un abonnement comportant le plan Azure Information Protection 1 ou 2.
-    
+- L’accès à votre compte [**Portail Azure**](https://portal.azure.com/)
+
+- Un abonnement comportant le [**plan Azure Information Protection 1 ou 2**](https://azure.microsoft.com/pricing/details/information-protection/)
+
     Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
 
 ## <a name="add-azure-information-protection-to-the-azure-portal"></a>Ajouter Azure Information Protection au Portail Azure
 
-Azure Information Protection n’est pas automatiquement disponible sur le Portail Azure. Vous devez l’ajouter.
+Même si vous disposez d’un abonnement comportant le plan Azure Information Protection 1 ou 2, AIP n’est pas automatiquement disponible sur le Portail Azure.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) avec le compte Administrateur général de votre locataire. 
-    
+Pour ajouter AIP au Portail Azure, procédez ainsi :
+
+1. Connectez-vous au [portail Azure](https://portal.azure.com) avec le compte Administrateur général de votre locataire.
+
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Sélectionnez **+ Créer une ressource**, puis, à partir de la zone de recherche de la Place de marché, tapez **Azure Information Protection**. 
-    
-3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. Ensuite, dans le volet **Azure Information Protection**, cliquez sur **Créer**.
-    
-    > [!TIP] 
-    > Ou sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
-    
-    Cliquez sur **Créer** à nouveau.
+1. Sélectionnez **+ Créer une ressource**. Dans la zone de recherche de la Place de marché, tapez puis sélectionnez **Azure Information Protection**. Sur la page Azure Information Protection, sélectionnez **Créer**, puis à nouveau **Créer**.
 
-## <a name="confirm-the-protection-service-is-activated"></a>Vérifier que le service de protection est activé
+    :::image type="content" source="media/gifs/quickstart-add-aip-to-portal.gif" alt-text="Ajout d’Azure Information Protection au Portail Azure":::
 
-Même si le service de protection est maintenant automatiquement activé pour les nouveaux clients, il est préférable de vérifier qu’aucune activation manuelle n’est nécessaire. 
+    > [!TIP]
+    > Si c’est la première fois que vous effectuez cette étape, une icône **Épingler au tableau de bord** ![icône Épingler au tableau de bord](media/qs-tutor/pin-to-dashboard.png "Icône Épingler au tableau de bord") apparaît à côté du nom du volet. Sélectionnez-la pour créer une vignette dans votre tableau de bord vous permettant d’y accéder directement la prochaine fois.
+
+## <a name="confirm-that-the-protection-service-is-activated"></a>Vérification de l’activation du service de protection
+
+Le service de protection est maintenant activé automatiquement pour les nouveaux clients. Vérifiez qu’il est activé maintenant ou plus tard de la façon suivante :
 
 1. Dans le volet **Azure Information Protection**, sélectionnez **Gérer** > **Activation de la protection**.
 
-2. Vérifiez que la protection est activée pour votre locataire : 
-    
-    - Si la protection est activée, la confirmation suivante s’affiche :
-        
-        ![État d’Azure Information Protection pour Azure RMS : activé](./media/info-protect-azurerms-activated.png)
-        
-    - Si la protection n’est pas activée, les informations d’état vous l’indiquent, et l’option d’activation est affichée :
-        
-        ![État d’Azure Information Protection pour Azure RMS : non activé](./media/info-protect-azurerms-deactivated.png)
+1. Vérifiez que la protection est activée pour votre locataire. Par exemple :
 
-3. Si la protection n’est pas activée, sélectionnez **Activer**. 
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Vérification de l’activation d’AIP":::
 
-    Quand l’activation est terminée, la barre d’informations affiche **Activation terminée**.
+    Si la protection n’est pas activée et que vous devez l’activer, sélectionnez **Activer** ![Activer AIP](media/qs-tutor/activate.png "Activer AIP"). Quand l’activation est terminée, la barre d’informations affiche **Activation terminée**.
 
 ## <a name="create-and-publish-labels"></a>Créer et publier des étiquettes
 
 Votre entreprise peut déjà disposer d’étiquettes, car elles ont été créées automatiquement pour votre locataire, ou parce que vous avez des étiquettes de sensibilité dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft ou le centre de conformité Microsoft. Voyons voir :
 
-1. Sélectionnez **Classifications** > **Étiquettes** :
-    
-    Si vous voyez l’option **Générer des étiquettes par défaut**, vous n’avez pas encore d’étiquettes :
-    
-     ![Azure Information Protection, aucune étiquette par défaut](./media/info-protect-nodefaultlabels.png)
-    
-    Si vous ne voyez pas cette option pour générer des étiquettes par défaut, vous disposez peut-être déjà d’étiquettes, probablement similaires à celles de l’image suivante, qui sont les étiquettes par défaut pour Azure Information Protection :
-    
-    ![Azure Information Protection, étiquettes par défaut](./media/info-protect-defaultlabels.png)
-    
-    Si vous ne voyez pas cette option pour générer des étiquettes par défaut et que vous ne voyez pas non plus d’étiquettes, accédez à **Gérer** > **Étiquetage unifié** et affichez l’état de **Étiquetage unifié**. Si vous voyez **Non activé**, sélectionnez **Activer**, puis revenez au volet **Classifications** > **Étiquettes**.
+1. Sous **Classifications**, sélectionnez **Étiquettes**.
 
-2. Si vous n’avez pas encore d’étiquettes, sélectionnez l’option **Générer des étiquettes par défaut**.
+    Il se peut que des étiquettes par défaut aient déjà été créées. L’illustration suivante indique les étiquettes créées par défaut avec Azure Information Protection :
 
-4. Pour publier les étiquettes pour tous les utilisateurs, à partir de **Classifications** > **Stratégies** > **Général** :
-    
-    a. Sélectionnez **Ajouter ou supprimer des étiquettes**.
-    
-    b. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez toutes les étiquettes, puis **OK**.
-    
-    c. De retour dans le panneau **Stratégie : Général**, sélectionnez **Enregistrer**.
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Étiquettes par défaut Azure Information Protection":::
 
-La publication des étiquettes dans le portail Azure les rend disponibles pour le client Azure Information Protection (classique).
+    **Si les étiquettes par défaut n’apparaissent pas ou en l’absence d’étiquette** :
+
+    Si les étiquettes par défaut n’apparaissent pas ou en l’absence d’étiquette, sélectionnez **Générer les étiquettes par défaut** pour les créer et pouvoir ainsi les utiliser dans le client classique.
+
+    Si vous ne voyez pas le bouton **Générer les étiquettes par défaut** au-dessus de la grille, sélectionnez **Étiquetage unifié** sous **Gérer**. Si l’état d’étiquetage unifié est **Non activé**, sélectionnez **Activer**, puis revenez au volet **Classification** > **Étiquettes**.
+
+    > [!NOTE]
+    > Pour le client d’étiquetage unifié, les étiquettes sont gérées dans Microsoft 365. Pour plus d’informations, consultez [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de confidentialité](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels).
+    >
+
+1. Publiez vos étiquettes sur le Portail Azure pour les rendre accessibles au client classique Azure Information Protection :
+
+    1. Ouvrez la stratégie **Globale**. Sous **Classifications**, sélectionnez **Stratégies** > **Globale**.
+
+    1. Sélectionnez **Ajouter ou supprimer des étiquettes**.
+
+    1. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez toutes les étiquettes, puis **OK**.
+
+    1. De retour dans le panneau **Stratégie : Globale**, sélectionnez le bouton **Enregistrer** ![Enregistrer](media/qs-tutor/save-icon.png "Enregistrer").
+
+        À l’invite, cliquez sur **OK** pour publier vos modifications.
 
 ## <a name="view-your-labels"></a>Afficher vos étiquettes
 
-Sélectionnez **Classifications** > **Étiquettes** et prenez quelques minutes pour vous familiariser avec les étiquettes qui sont affichées sur le volet **Azure Information Protection - Étiquettes** .
+Vous pouvez maintenant vous familiariser avec vos étiquettes.
 
-Si elles ne ressemblent aux étiquettes dans l’image de la section précédente, vous n’utilisez pas les étiquettes par défaut d’Azure Information Protection, mais des étiquettes qui ont peut-être été créées à partir du Centre de sécurité et de conformité Office 365, du centre de sécurité Microsoft 365 ou du centre de conformité Microsoft 365.
+Si la stratégie **Globale** est toujours ouverte, cliquez sur la croix **X** en haut à droite pour fermer le volet. Sous **Classifications**, sélectionnez **Étiquettes**.
+
+Voici les étiquettes de classification Azure Information Protection par défaut :
+
+- **Personnel**
+- **Général**
+- **Confidentiel**
+- **Hautement confidentiel**
+
+Par défaut, des marquages visuels sont déjà configurés pour certaines étiquettes. Il peut s’agir d’un pied de page, d’un en-tête ou d’un filigrane. La protection est également configurée pour d’autres étiquettes.
+
+Sélectionnez une étiquette et parcourez-la pour voir sa configuration détaillée.
 
 > [!TIP]
-> Si vous ne souhaitez pas utiliser vos étiquettes personnalisées, mais les étiquettes par défaut d’Azure Information Protection : 
-> - Supprimez les étiquettes personnalisées et l’option pour générer des étiquettes par défaut s’affiche dans le volet **Étiquettes**, comme décrit dans la [section précédente](#create-and-publish-labels). 
-
-À partir du volet **Azure Information Protection - Étiquettes** :
-
-- Les étiquettes de classification par défaut sont **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification.
-
-- À partir des colonnes **MARKING** et **PROTECTION**, vous pouvez voir que certaines étiquettes contiennent des marquages visuels configurés. Les marquages visuels sont un pied de page, un en-tête et un filigrane. Certaines étiquettes également avoir une protection définie. 
-
-Par exemple : 
-
-![Présentation par guide de démarrage rapide Azure Information Protection des étiquettes par défaut](./media/info-protect-policy-default-labelsv2.png)
-
-Si vous sélectionnez une étiquette, vous voyez des détails pour cette configuration d’étiquette sur un nouveau volet.
+> Développez l’étiquette **Hautement confidentiel** pour voir un exemple de classification comportant des sous-catégories.
+>
 
 ## <a name="view-your-policy-settings"></a>Afficher vos paramètres de stratégie
 
-La première fois que vous vous connectez au service Azure Information Protection à l’aide du portail Azure, les paramètres de stratégie par défaut qui sont utilisés par le client Azure Information Protection (classique) sont toujours créés pour vous. Pour le client classique, les paramètres de stratégie et les étiquettes que nous avons consultés sont téléchargés sur le client dans la stratégie Azure Information Protection.
+La première fois que vous vous connectez au service Azure Information Protection sur le Portail Azure, les paramètres de stratégie par défaut utilisés par le client Azure Information Protection sont toujours créés automatiquement.
 
-Si vous utilisez le client d’étiquetage unifié Azure Information Protection, ce client n’utilise pas ces paramètres de stratégie. Au lieu de cela, ce client télécharge les mêmes étiquettes, mais des paramètres de stratégie différents à partir du Centre de sécurité et de conformité Office 365, du centre de conformité Microsoft 365 ou du centre de sécurité Microsoft 365. Utilisez ces centres d’administration au lieu du portail Azure pour modifier vos étiquettes et stratégies d’étiquette.
+- **Client classique :** les étiquettes et les paramètres de stratégie sont téléchargés sur le client dans la stratégie Azure Information Protection.
+
+- **Client d’étiquetage unifié :** seules les étiquettes sont téléchargées sur le client. Les paramètres de stratégie sont téléchargés à partir du Centre de sécurité et conformité Office 365, du Centre de conformité Microsoft 365 ou du Centre de sécurité Microsoft 365. Utilisez ces centres d’administration au lieu du portail Azure pour modifier vos étiquettes et stratégies d’étiquette.
+
+    Pour plus d’informations, consultez [Présentation des étiquettes de confidentialité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dans la documentation de Microsoft 365.
+
+**Instructions relatives au client classique :**
 
 Pour afficher les paramètres de la stratégie Azure Information Protection par défaut pour le client classique :
 
-1. Sélectionnez **Classifications** > **Stratégies** > **Général** pour afficher les paramètres de la stratégie Azure Information Protection par défaut qui est créée pour votre locataire.
-    
-2. Après les étiquettes, dans la section **Configurer les paramètres à présenter et à appliquer aux utilisateurs finaux d’Information Protection**, les paramètres de la stratégie s’affichent. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
-    
-    ![Paramètres globaux de la stratégie Azure Information Protection](./media/defaultsettings-aip.png)
+1. Sous **Classifications**, sélectionnez **Stratégies** > **Général** afin d’afficher les paramètres de stratégie Azure Information Protection créés par défaut pour votre locataire.
 
-3. Vous pouvez maintenant fermer les volets du portail que vous avez ouverts.
+1. Les paramètres de stratégie apparaissent après les étiquettes, dans la section **Configurer les paramètres à présenter et à appliquer aux utilisateurs finaux d’Information Protection**. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
+
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Paramètres globaux de stratégie Azure Information Protection":::
+
+1. Vous pouvez maintenant fermer les volets du portail que vous avez ouverts.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous utilisez le client classique :
+Les étapes suivantes sont différentes pour le client classique et le client d’étiquetage unifié. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+
+**Si vous utilisez le client classique :**
 
 - Vous trouverez peut-être le tutoriel suivant utile pour poursuivre : [Modifier la stratégie et créer une étiquette pour Azure Information Protection](infoprotect-quick-start-tutorial.md).
+
 - Pour obtenir des instructions détaillées sur la configuration de tous les aspects de la stratégie Azure Information Protection, voir [Configurer la stratégie Azure Information Protection](configure-policy.md).
 
-Si vous utilisez le client d’étiquetage unifié :
+**Si vous utilisez le client d’étiquetage unifié :**
 
-- Consultez [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels) dans la documentation sur la conformité Microsoft 365.
-
-Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+Consultez [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels) dans la documentation sur la conformité Microsoft 365.

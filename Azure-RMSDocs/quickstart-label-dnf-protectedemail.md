@@ -1,32 +1,32 @@
 ---
-title: 'Démarrage rapide : configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails - AIP'
+title: Démarrage rapide – Configuration d’une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails avec Azure Information Protection (AIP)
 description: Configurez une étiquette qui protège l’e-mail d’un utilisateur en appliquant automatiquement la protection Ne pas transférer.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 07/20/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: eb0e23a517b21fb685324dd9dee4c4827ce14945
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 2744289d227127b007cfc022cfab8723dfbdf669
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048321"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927860"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions pour : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
+>[!NOTE]
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Dans ce démarrage rapide, vous allez configurer une étiquette Azure Information Protection existante pour appliquer automatiquement le paramètre de protection Ne pas transférer.
+Dans ce guide de démarrage rapide, vous allez configurer une étiquette Azure Information Protection déjà créée pour appliquer automatiquement le paramètre de protection **Ne pas transférer**.
 
 La stratégie Azure Information Protection actuelle contient déjà des deux étiquettes avec cette configuration :
 
@@ -34,75 +34,52 @@ La stratégie Azure Information Protection actuelle contient déjà des deux ét
 
 - **Hautement confidentiel \ Destinataires uniquement**
 
-Toutefois, si votre stratégie est antérieure, ou si la protection n’a pas été activée lors de la création de la stratégie de votre organisation, ces étiquettes ne seront pas disponibles. 
+Toutefois, si votre stratégie est antérieure, ou si la protection n’a pas été activée lors de la création de la stratégie de votre organisation, ces étiquettes ne seront pas disponibles.
 
-Cette configuration prend moins de 5 minutes.
+**Temps nécessaire :** Cette configuration prend moins de 5 minutes.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
-1. Un abonnement comportant le plan Azure Information Protection 1 ou 2.
-    
-    Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
-
-2. Vous avez ajouté le volet Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
-
-    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).
-
-3. Une étiquette Azure Information Protection à configurer. 
-    
-    Vous pouvez utiliser une des étiquettes par défaut, ou une étiquette que vous avez créée. Si vous avez besoin d’aide pour créer une nouvelle étiquette, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md).
-
-4. Pour tester la nouvelle étiquette : Le client Azure Information Protection (classique) doit être installé sur un ordinateur Windows. 
-    
-    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection.
-    
-    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation sur la conformité Microsoft 365 pour des instructions équivalentes à ce tutoriel. Par exemple, [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels).
-
-5. Pour tester la nouvelle étiquette : Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
-    
-    - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée.
-    
-    - Office 365 ProPlus.
-    
-    - Office Professionnel Plus 2019.
-    
-    - Office Professionnel Plus 2016.
-    
-    - Office Professionnel Plus 2013 avec Service Pack 1.
-    
-    - Office Professionnel Plus 2010 avec Service Pack 2.
+|Condition requise  |Description  |
+|---------|---------|
+|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement comportant le [**plan Azure Information Protection 1 ou 2**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
+|**AIP ajouté au Portail Azure**    |  Vous avez ajouté le volet Azure Information Protection au Portail Azure et vérifié que le service de protection est activé. </br></br>Pour plus d’informations, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).       |
+|**Une étiquette Azure Information Protection à configurer**     | Utilisez une des étiquettes par défaut ou une étiquette que vous avez créée. Pour plus d’informations, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md). |
+|**Client classique installé**    |   Pour que vous puissiez tester la nouvelle étiquette, le client classique doit être installé sur votre ordinateur. </br></br>Le client classique Azure Information Protection est en cours de dépréciation pour mars 2021. Pour le déployer, ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.  |
+|**Un ordinateur Windows, connecté à des applications Office** |Pour tester la nouvelle étiquette, il vous faut un ordinateur Windows (au minimum Windows 7 avec Service Pack 1). </br></br>Sur cet ordinateur, connectez-vous à l’une des versions suivantes des applications Office : </br>- Applications Office, version minimale 1805, build 9330.2078 de [Microsoft 365 Apps for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) si une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est attribuée. </br>- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). </br>- Office Professionnel Plus 2019. </br>- Office Professionnel Plus 2016.</br>- Office Professionnel Plus 2013 avec Service Pack 1. </br>- Office Professionnel Plus 2010 avec Service Pack 2.|
+| | |
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
 
 ## <a name="configure-an-existing-label-to-apply-the-do-not-forward-protection"></a>Configurer une étiquette existante pour appliquer la protection Ne pas transférer
 
-1. Ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général. Accédez ensuite à **Azure Information Protection**. 
-    
+1. Ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général. Accédez ensuite à **Azure Information Protection**.
+
     Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
-    
+
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le volet **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer la protection. 
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le volet **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer la protection.
 
-3. Dans le volet **Étiquette**, recherchez **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger**, le volet **Protection** s’ouvre alors automatiquement si l’option **Non configuré** ou **Supprimer la protection** a été sélectionnée précédemment.
-    
+1. Dans le volet **Étiquette**, recherchez **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger**, le volet **Protection** s’ouvre alors automatiquement si l’option **Non configuré** ou **Supprimer la protection** a été sélectionnée précédemment.
+
     Si le volet **Protection** ne s’ouvre pas automatiquement, sélectionnez **Protection** :
-    
-    ![Configurer la protection d’une étiquette Azure Information Protection](./media/info-protect-protection-bar-configured.png).
 
-4. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
-    
-5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
+    :::image type="content" source="media/info-protect-protection-bar-configured.png" alt-text="Configuration de la protection d’une étiquette Azure Information Protection":::
 
-6. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
+1. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
 
-7. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
+1. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
 
-8. Cliquez sur **OK** dans le volet **Protection**, puis sur **Enregistrer** dans le volet **Étiquette**.
+1. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 
-Votre étiquette est maintenant configurée pour s’afficher uniquement dans Outlook et pour appliquer la protection Ne pas transférer aux e-mails.
+1. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
+
+1. Cliquez sur **OK** dans le volet **Protection**, puis sur **Enregistrer** dans le volet **Étiquette**.
+
+Votre étiquette est maintenant configurée pour s’afficher uniquement dans Outlook et appliquer la protection **Ne pas transférer** aux e-mails.
 
 ## <a name="test-your-new-label"></a>Tester votre nouvelle étiquette
 
@@ -110,21 +87,21 @@ Votre étiquette configurée apparaît uniquement dans Outlook et s’applique a
 
 1. Sur votre ordinateur, ouvrez Outlook et créez un nouvel e-mail. Si Outlook est déjà ouvert, redémarrez-le pour forcer l’actualisation de la stratégie.
 
-2. Spécifiez les destinataires, saisissez le texte de l’e-mail, puis appliquez l’étiquette que vous venez de créer. 
-    
+2. Spécifiez les destinataires, saisissez le texte de l’e-mail, puis appliquez l’étiquette que vous venez de créer.
+
     L’e-mail est classé en fonction du nom de l’étiquette et protégé par la restriction Ne pas transférer.
 
-3. Envoyez l’e-mail. 
+3. Envoyez l’e-mail.
 
-Par conséquent, les destinataires ne peuvent pas transférer l’e-mail, ni l’imprimer, le copier, enregistrer des pièces jointes ou enregistrer l’e-mail sous un autre nom. L’e-mail protégé peut être lu par n’importe quel utilisateur, sur n’importe quel appareil.
+De cette manière, les destinataires ne peuvent pas transférer l’e-mail, l’imprimer, effectuer une copie, enregistrer les pièces jointes ni enregistrer l’e-mail sous un autre nom. L’e-mail protégé peut être lu par n’importe quel utilisateur, sur n’importe quel appareil.
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
 Procédez comme suit si vous souhaitez ignorer cette configuration et retourner votre étiquette de façon à ne pas appliquer la protection :
 
-1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le volet **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous avez configurée. 
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le volet **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous avez configurée.
 
-3. Dans le volet **Étiquette**, recherchez la zone **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Non configuré**, puis cliquez sur **Enregistrer**.
+1. Dans le volet **Étiquette**, recherchez la zone **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Non configuré**, puis cliquez sur **Enregistrer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -134,4 +111,4 @@ Ce démarrage rapide inclut les options minimales pour rapidement configurer une
 
 - [Étiquette qui chiffre le contenu, mais n’en restreint pas l’accès](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)
 
-Pour obtenir des instructions complètes sur la configuration d’une étiquette qui applique une protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md). 
+Pour obtenir des instructions complètes sur la configuration d’une étiquette qui applique une protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md).

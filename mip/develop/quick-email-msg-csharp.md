@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: e9bbbde050f868fda5a31d5bab25e02280e5e826
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 9dca0317e80f1b09331132988aad69bb5f259697
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403310"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135689"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>API de fichier - Traiter les fichiers e-mail .msg (C#)
 
@@ -154,5 +154,5 @@ Utilisez la touche **F6** (Générer la solution) pour générer votre applicati
 
 | Résumé | Message d'erreur | Solution |
 |---------|---------------|----------|
-| NetworkException: Le service RMS a détecté une entrée incorrecte dans la requête. Code d’erreur RMS : Microsoft.RightsManagement.Exceptions.BadInputException | * Parameter Both TemplateId and Policy cannot be null is invalid., CorrelationId=f265b189-ebf6-4b30-a191-41539cdff215, CorrelationId.Description=FileHandler, HttpRequest.Id=04990d53-cf12-4969-9c80-06e365b312f2;d5fb4794-ac84-4445-abc6-647e41df62b2, HttpRequest.SanitizedUrl=https://api.aadrm.com/my/v2/publishinglicenses, HttpResponse.StatusCode=400, NetworkError.Category=FailureResponseCode* | Si votre projet a été généré sans problème, mais que vous voyez une sortie similaire sur la gauche, il est probable que votre templateID ne soit pas valide. Revenez au bloc de code pour corriger l’ID du modèle de protection, puis regénérez et retestez le projet. |
+| NetworkException: Le service RMS a détecté une entrée incorrecte dans la requête. Code d’erreur RMS : Microsoft.RightsManagement.Exceptions.BadInputException | * Parameters are invalid if both TemplateID and Policy are null., CorrelationId=f265b189-ebf6-4b30-a191-41539cdff215, CorrelationId.Description=FileHandler, HttpRequest.Id=04990d53-cf12-4969-9c80-06e365b312f2;d5fb4794-ac84-4445-abc6-647e41df62b2, HttpRequest.SanitizedUrl=https://api.aadrm.com/my/v2/publishinglicenses, HttpResponse.StatusCode=400, NetworkError.Category=FailureResponseCode* | Si votre projet a été généré sans problème, mais que vous voyez une sortie similaire sur la gauche, il est probable que votre templateID ne soit pas valide. Revenez au bloc de code pour corriger l’ID du modèle de protection, puis regénérez et retestez le projet. |
 | TemplateNotFoundException | *Unrecognized template ID., CorrelationId=abb2ef59-ad09-4aa0-b731-f59a92711dad, CorrelationId.Description=FileHandler, HttpRequest.Id=8c688752-ccd2-4dca-ace3-b67b44176689;78538a57-a9fd-4717-8924-33581a04598b* | Si votre projet a été généré sans problème, mais que vous voyez une sortie similaire sur la gauche, il est probable que votre templateID ne soit pas valide. Revenez au bloc de code pour corriger l’ID du modèle de protection, puis regénérez et retestez le projet. |

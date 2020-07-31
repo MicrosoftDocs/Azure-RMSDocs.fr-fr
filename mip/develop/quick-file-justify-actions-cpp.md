@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
-ms.openlocfilehash: f50613340cc4c977239910d5047943d25239b1bc
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403287"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135672"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API de fichier du SDK Microsoft Information Protection - Justification d’action pour abaisser le niveau d’une étiquette de confidentialité dans un fichier (C++)
 
@@ -220,4 +220,4 @@ Générez et testez votre application cliente.
     Press any key to continue . . .
    ```
 
-Notez que si l’étiquette qui est supprimée d’un fichier nécessite une justification selon la stratégie d’étiquette, vous devez suivre une approche similaire pour l’opération `DeleteLabel()`. La fonction `DeleteLabel()` lève une exception `mip::JustificationRequiredError`. Pour que l’étiquette soit supprimée correctement, l’indicateur `isDowngradeJustified` doit avoir la valeur true pour la gestion des exceptions.
+Notez que si l’étiquette qui est supprimée d’un fichier nécessite une justification selon la stratégie d’étiquette, vous devez suivre une approche similaire pour l’opération `DeleteLabel()`. La fonction La fonction `DeleteLabel()` lève une exception `mip::JustificationRequiredError`. Pour que l’étiquette soit supprimée correctement, l’indicateur `isDowngradeJustified` doit avoir la valeur true pour la gestion des exceptions.

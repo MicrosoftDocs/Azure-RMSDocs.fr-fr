@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 926809823e403cb5cd460412f1036000da487725
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 2e727e438f0baf5cb61a59b699da811e36e48d4f
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927775"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802077"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Guide de l’utilisateur : classifier et protéger avec le client Azure Information Protection
 
@@ -88,7 +88,7 @@ Raisons possibles :
 
 - Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez sur **protéger**  >  **l’aide et les commentaires**. Dans la boîte de dialogue, vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n’est pas sous licence pour Office Professionnel Plus**. 
     
-    Vous n’avez pas besoin d’Office professionnel plus si vous avez des applications Office à partir de [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelé Azure information protection pour Office 365).
+    Vous n’avez pas besoin d’Office Professionnel Plus si vous avez des applications Office d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur.
 
 - L’étiquette peut être dans une stratégie délimitée qui n’inclut pas votre compte. Contactez votre support technique ou votre administrateur.
 

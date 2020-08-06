@@ -4,7 +4,7 @@ description: Vous avez perdu un mot, une expression ou un acronyme lié à Micro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0dafc8df5e9c48517b13c9d0204c8d4b159783a3
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 352e41b1ca511e3ef0487eb680a331339ce457dd
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927350"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802196"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
@@ -38,7 +38,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |Terme|Définition|
 |--------|--------------|
 |**AADRM**|Nom du premier module PowerShell pour le service de protection (Azure Rights Management), dérivé de l’abréviation non officielle d’Azure Rights Management lorsqu’il a été nommé précédemment (Windows) Azure Active Directory Rights Management. </br></br>Ce module PowerShell est maintenant remplacé par le module AIPService.|
-|**Activer**|Activez le service de protection Azure Rights Management pour qu’une organisation puisse protéger ses documents et ses e-mails. </br></br>Cette action active également les fonctionnalités IRM dans Exchange Online et Microsoft SharePoint.|
+|**déclencher**|Activez le service de protection Azure Rights Management pour qu’une organisation puisse protéger ses documents et ses e-mails. </br></br>Cette action active également les fonctionnalités IRM dans Exchange Online et Microsoft SharePoint.|
 |**Services AD RMS (Active Directory Rights Management Services)**|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure une protection par gestion des droits en utilisant le chiffrement et des stratégies pour mieux sécuriser les documents, les fichiers et les e-mails.|
 |**AD RMS**|Voir *Services Active Directory Rights Management*.|
 |**AIPService**|Nom actuel du module PowerShell pour le service de protection, qui remplace par l’ancien module AADRM.|
@@ -136,7 +136,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |**Microsoft Information Protection**| Parfois abrégé en *MIP*.<br /><br /> Une infrastructure pour les produits et les fonctionnalités intégrées qui utilisent le même magasin d’étiquetage (« étiquettes unifiées ») et vous aident à protéger les informations sensibles de votre organisation.|
 |**MIP**| Consultez *Microsoft information protection*|
 |**MSDRM**|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. </br></br>Cet ancien client prend en charge les applications développées avec le kit de développement logiciel (SDK) RMS 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
-|**MSIPC**|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. </br></br>Ce client ultérieur prend en charge les applications développées avec le kit de développement logiciel (SDK) RMS 2,0 et prend en charge les applications Microsoft 365 pour Enterprise, Office 2019, Office 2016, Office 2013, SharePoint 2013 et le client Azure Information Protection.|
+|**MSIPC**|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. </br></br>Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 et le client Azure Information Protection.|
 | | |
 
 ### <a name="n"></a>N

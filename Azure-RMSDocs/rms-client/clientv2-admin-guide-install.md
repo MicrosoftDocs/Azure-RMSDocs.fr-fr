@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ebc917204844e893a4ff27659e29fa29aa3638c2
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 010471368d219cc2ba45d24744a17c09ca83b85d
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298051"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802315"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -65,12 +65,12 @@ Pour les versions d’Office 2013 et ultérieures, nous vous recommandons de con
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-- Applications Office version 1805 minimum, Build 9330,2078 à partir d' [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
-- [Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2
+- Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
+- Office 365 ProPlus
+- Office Professionnel Plus 2019
+- Office Professionnel Plus 2016
+- Office Professionnel Plus 2013 avec Service Pack 1
+- Office Professionnel Plus 2010 avec Service Pack 2
 
 D’autres éditions (telles que **standard**) d’Office ne peuvent pas protéger des documents et des e-mails à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour l' **étiquetage** uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs sur le bouton ou la barre de sensibilité de Azure Information Protection.
 

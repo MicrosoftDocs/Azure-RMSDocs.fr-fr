@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables requises pour déployer des A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 758e3ed214815393206ebe04085c9d61b5116d80
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: cb55fb0acedc56c2b866d7ce681320c2dc9c2fcd
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298119"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802118"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour la Azure Information Protection
 
@@ -67,7 +67,7 @@ L’accès conditionnel est pris en charge en préversion pour les documents pro
 
 Des conditions préalables supplémentaires sont requises pour des scénarios spécifiques, par exemple lors de l’utilisation d’Office 2010, de l’authentification par certificat ou multi-Factor Authentication, ou lorsque les valeurs UPN ne correspondent pas aux adresses de messagerie des utilisateurs. Pour plus d’informations, consultez [conditions requises pour la Azure ad supplémentaires pour Azure information protection](requirements-azure-ad.md).
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Qu’est-ce qu’Azure AD Directory ?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Intégrer des domaines de Active Directory locaux avec Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
@@ -132,19 +132,19 @@ Chaque client Azure Information Protection a des conditions préalables supplém
 
 Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de Microsoft **Word**, **Excel**, **PowerPoint**et **Outlook** , à partir des éditions Office suivantes :
 
-- **Applications Office version 1805 minimum**, Build 9330,2078 à partir de [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
+- **Applications Office version 1805 minimum**, Build 9330,2078 à partir d’Office 365 Business ou Microsoft 365 Business. 
 
     Cette édition est prise en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management, également appelée Azure Information Protection pour Office 365.
 
-- **[Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office 365 ProPlus**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
+- **Office professionnel plus 2019**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
+- **Office professionnel plus 2016**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1**
+- **Office professionnel plus 2013 avec Service Pack 1**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2**
+- **Office professionnel plus 2010 avec Service Pack 2**
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement, et les étiquettes qui appliquent la protection ne sont pas affichées pour les utilisateurs. 
 
@@ -231,7 +231,7 @@ Les serveurs pris en charge sont les suivants :
 
 |Type de serveur  |Versions prises en charge  |
 |---------|---------|
-|**Serveur Exchange**     | -Exchange Server 2016 </br>-Exchange Server 2013 </br>-Exchange Server 2010       |
+|**Exchange Server**     | -Exchange Server 2016 </br>-Exchange Server 2013 </br>-Exchange Server 2010       |
 |**Office SharePoint Server**     |-Office SharePoint Server 2016 </br>-Office SharePoint Server 2013 </br>-Office SharePoint Server 2010         |
 |**Serveurs de fichiers qui exécutent Windows Server et utilisent Infrastructure de classification des fichiers (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |

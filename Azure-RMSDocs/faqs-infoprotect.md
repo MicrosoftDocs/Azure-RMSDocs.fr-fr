@@ -12,16 +12,16 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e1b73aeed80314760c402cc313b367d543e7d5ab
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 20698241962b8dfe3e1fd81b7f0538a7ddfdd46a
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483199"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802179"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -32,7 +32,7 @@ Vous avez une question concernant Azure Information Protection qui porte spécif
 
 Actuellement, il existe deux clients Azure Information Protection pour Windows : 
 
-- Le **Azure information protection client d’étiquetage unifié** qui télécharge des étiquettes et des paramètres de stratégie à partir de l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security center, Microsoft 365 Compliance Center. Ce client est désormais en disponibilité générale et peut disposer d’une préversion pour tester des fonctionnalités supplémentaires pour une version ultérieure.
+- Le **Azure information protection client d’étiquetage unifié** qui télécharge des étiquettes et des paramètres de stratégie à partir de l’un des centres d’administration suivants : Office 365 Security & Compliance center, Microsoft 365 Security center, Microsoft 365 Compliance Center. Ce client est désormais en disponibilité générale et peut disposer d’une préversion pour tester des fonctionnalités supplémentaires pour une version ultérieure.
 
 - Le **client Azure information protection (Classic)** qui télécharge des étiquettes et des paramètres de stratégie à partir du portail Azure. Ce client s’appuie sur les versions de disponibilité générale précédentes du client.
 
@@ -54,7 +54,7 @@ Consultez les ressources de documentation suivantes :
 
 Les utilisateurs ne peuvent sélectionner qu’une seule étiquette à la fois pour chaque document ou e-mail, ce qui aboutit la plupart du temps à une classification unique pour chaque élément. Toutefois, si les utilisateurs sélectionnent une sous-étiquette, cela revient à appliquer deux étiquettes à la fois : une étiquette principale et une étiquette secondaire. Les sous-étiquettes permettent d’attribuer à un fichier deux classifications avec une relation parent\enfant afin d’obtenir un niveau de contrôle supplémentaire.
 
-Par exemple, l’étiquette **Confidentiel** peut contenir des sous-étiquettes comme **Juridique** et **Finance**. Vous pouvez appliquer différents marquages de classification visuels et différents modèles Rights Management à ces sous-étiquettes. Un utilisateur ne peut pas sélectionner l’étiquette **Confidentiel** elle-même. Il peut seulement sélectionner une de ses sous-étiquettes, comme **Juridique**. L’étiquette qui s’affiche est donc **Confidentiel \ Juridique**. Les métadonnées de ce fichier incluent une propriété de texte personnalisée pour **Confidentiel**, une propriété de texte personnalisée pour **Juridique** et une autre qui contient les deux valeurs (**Confidentiel Juridique**). 
+Par exemple, l’étiquette **confidentiel** peut contenir des sous-étiquettes telles que **juridique** et **finance**. Vous pouvez appliquer différents marquages de classification visuels et différents modèles Rights Management à ces sous-étiquettes. Un utilisateur ne peut pas sélectionner l’étiquette **confidentiel** elle-même ; une seule de ses sous-étiquettes, par exemple **légal**. L’étiquette qui s’affiche est donc **Confidentiel \ Juridique**. Les métadonnées de ce fichier incluent une propriété de texte personnalisée pour **Confidentiel**, une propriété de texte personnalisée pour **Juridique** et une autre qui contient les deux valeurs (**Confidentiel Juridique**). 
 
 Quand vous utilisez des sous-étiquettes, ne configurez pas de marquages visuels, de protection ou de conditions pour l’étiquette principale. Quand vous utilisez des sous-niveaux, configurez ces paramètres pour la sous-étiquette uniquement. Si vous configurez ces paramètres sur l’étiquette principale et sa sous-étiquette, ce sont les paramètres de la sous-étiquette qui sont prioritaires.
 
@@ -100,6 +100,6 @@ Toutefois, vous pouvez intégrer cette fonctionnalité plus ancienne à des éti
 
 Vous pouvez utiliser cette même technique pour utiliser vos étiquettes avec Outlook sur le web et les applications de messagerie mobile.
 
-Notez qu’il n’est pas nécessaire de le faire si vous utilisez Outlook sur le Web avec Exchange Online, car cette combinaison prend en charge l’étiquetage intégré lorsque vous publiez des étiquettes de sensibilité à partir du Centre de sécurité et de conformité Office 365, Microsoft 365 Security Center ou Microsoft Compliance Center.
+Notez qu’il n’est pas nécessaire de le faire si vous utilisez Outlook sur le Web avec Exchange Online, car cette combinaison prend en charge l’étiquetage intégré lorsque vous publiez des étiquettes de sensibilité à partir du centre de conformité d’Office 365 Security &, Microsoft 365 Security Center ou Microsoft Compliance Center.
 
-Si vous ne pouvez pas utiliser l’étiquetage intégré avec Outlook sur le Web, consultez les étapes de configuration de cette solution de contournement : intégration de la [classification des messages Exchange avec Azure information protection pour une solution d’étiquetage des appareils mobiles](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
+Si vous ne pouvez pas utiliser l’étiquetage intégré avec Outlook sur le Web, consultez les étapes de configuration de cette solution de contournement : [intégration à la classification des messages Exchange héritée](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)

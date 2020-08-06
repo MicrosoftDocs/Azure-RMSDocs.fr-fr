@@ -4,7 +4,7 @@ description: Identifiez les applications et les solutions qui prennent en charge
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ed56f635c4210c9989fb0e02209f4e3c29129a3
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298170"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802162"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -39,7 +39,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Applications Office 365](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Office pour le Web (affichage de documents protégés)](#viewing-protected-documents-in-office-for-the-web)<br />- [Navigateur Web](#web-browser-support)        |
-|[**E-mail**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook à partir d’Office de Microsoft 365 apps pour l’entreprise<br />- [Navigateur Web](#web-browser-support)<br />- [Messagerie Windows](#email-clients-using-exchange-activesync-irm)|
+|[**E-mail**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook à partir d’Office 365 ProPlus<br />- [Navigateur Web](#web-browser-support)<br />- [Messagerie Windows](#email-clients-using-exchange-activesync-irm)|
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    |  -Visio à partir d’Office 365 Apps, Office 2019 et Office 2016 : **. VSDM,** **. vsdx,** **. VSSM**, **. vstm**, **. vssx**, **. vstx** <br />-Azure Information Protection client pour Windows : texte, images, **pfile** <br />-Plug-in RMS SealPath pour AutoCAD : **. DWG**       |
 | | |
 
@@ -123,8 +123,8 @@ Pour plus d’informations, consultez [types de fichiers pris en charge](./rms-c
 ### <a name="office-365-app-support"></a>Prise en charge des applications Office 365
 
 Inclut : 
-- Applications Office version 1805 minimum, Build 9330,2078 à partir de [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). Pris en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure Information Protection pour Office 365).
-- [Microsoft 365 des applications pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
+- Applications Office version 1805 minimum, Build 9330,2078 à partir d’Office 365 Business ou Microsoft 365 Business. Pris en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure Information Protection pour Office 365).
+- Applications Office 365 ProPlus.
 
 ### <a name="viewing-protected-documents-in-office-for-the-web"></a>Affichage de documents protégés dans Office pour le Web
 
@@ -170,16 +170,25 @@ Voir aussi : [Description du service des applications Office](https://technet.m
 
 Les suites clientes Office suivantes prennent en charge la protection des fichiers et des e-mails sur les ordinateurs Windows à l’aide du service Azure Rights Management :
 
-|Version d’Office  |Détails de la prise en charge  |
-|---------|---------|
-|[**Microsoft 365 des applications pour l’entreprise**](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)     |  Les applications Office minimales version 1805, Build 9330,2078, lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure Information Protection pour Office 365)       |
-|[**Applications Microsoft 365 pour l’entreprise**](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)     | Les éditions suivantes d’Office sont incluses avec la plupart des abonnements Office 365, mais pas tous, qui incluent la protection des données de Azure Information Protection. </br>Vérifiez vos informations d’abonnement pour voir si Microsoft 365 applications pour l’entreprise est incluse. Vous trouverez également ces informations dans la [feuille de données Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). </br></br>-Microsoft 365 applications pour l’entreprise 2019 </br>-Microsoft 365 applications pour l’entreprise 2016 </br>-Microsoft 365 applications pour l’entreprise 2013 </br>-Microsoft 365 apps pour Enterprise 2010 avec Service Pack 2       |
+- **Applications Office version 1805 minimum, build 9330,2078 à partir d’office 365 Business ou Microsoft 365 Business** lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
+
+- **Office 365 ProPlus**
+
+    Ces éditions d’Office sont proposées dans la plupart (mais pas dans la totalité) des abonnements Office 365 qui incluent la protection des données à partir d’Azure Information Protection. Vérifiez vos informations d’abonnement pour voir si Office 365 ProPlus est inclus. Vous trouverez également ces informations dans la [feuille de données Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+
+- **Office professionnel plus 2019**
+
+- **Office professionnel plus 2016**
+
+- **Office professionnel plus 2013**
+
+- **Office professionnel plus 2010 avec Service Pack 2**
 
 Toutes les éditions d’Office (à l’exception d’Office 2007) prennent en charge l’utilisation du contenu protégé.
 
-#### <a name="azure-rights-management-service-with-microsoft-365-apps-for-enterprise-2010"></a>Service Azure Rights Management avec les applications Microsoft 365 pour Enterprise 2010
+#### <a name="azure-rights-management-service-with-office-professional-plus-2010-and-service-pack-2-or-office-professional-2010-with-service-pack-2"></a>Service Azure Rights Management avec Office professionnel plus 2010 et Service Pack 2 ou Office Professionnel 2010 avec Service Pack 2
 
-Quand vous utilisez le service Azure Rights Management avec les [applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 et Service Pack 2 ou Office Professionnel 2010 avec Service Pack 2, vous devez également disposer du client AIP pour Windows.
+Quand vous utilisez le service Azure Rights Management avec Office professionnel plus 2010 et Service Pack 2 ou Office Professionnel 2010 avec Service Pack 2, vous devez également disposer du client AIP pour Windows.
 
 En outre, cette configuration :
 
@@ -191,7 +200,7 @@ En outre, cette configuration :
 
 Les suites clientes Office suivantes prennent en charge la protection des fichiers et des e-mails sur macOS à l’aide d’Azure RMS :
 
-- [Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Office 365 ProPlus
 - Office Standard 2019 pour Mac
 - Office Standard 2016 pour Mac
 
@@ -227,7 +236,7 @@ Téléchargez l’application appropriée à partir de la [page Microsoft Azure 
 > 
 ## <a name="rights-management-sharing-app"></a>Application de partage Rights Management
 
-Pour les ordinateurs Mac, l’application de partage Rights Management offre une visionneuse pour les fichiers PDF protégés **(. ppdf),** les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger des fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou [des applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
+Pour les ordinateurs Mac, l’application de partage Rights Management offre une visionneuse pour les fichiers PDF protégés **(. ppdf),** les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou Office 365 ProPlus. 
 
 Pour plus d’informations, consultez le [Forum aux questions sur l’application de partage Microsoft Rights Management pour les plateformes mobiles](https://technet.microsoft.com/dn451248) .
 

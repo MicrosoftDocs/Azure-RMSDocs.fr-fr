@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: a532416acd134c2cb08117af2951aa1fef23ba82
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927367"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073548"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -95,12 +95,12 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone
 
-- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
 > [!NOTE]
->Cette syntaxe respecte la casse. Par exemple, si vous spécifiez la chaîne `Document: ${Item.Name}  Classification: ${Item.Label}` pour le pied de page de l’étiquette **générale** , le texte du pied de page appliqué à un document nommé project.docx sera **document : project.docx classification : général**.
+>Cette syntaxe respecte la casse.
 
 <!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 

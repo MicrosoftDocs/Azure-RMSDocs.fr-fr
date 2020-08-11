@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
+ms.date: 08/10/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
-ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
+ms.openlocfilehash: 7c55faf0138e007ed1a8877ebb60cf01551c4dd3
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87378282"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073735"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus-Azure Information Protection
 
@@ -84,10 +84,10 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problèmes connus liés à AIP dans les applications Office
 
-|Caractéristique  |Problèmes connus  |
+|Fonctionnalité  |Problèmes connus  |
 |---------|---------|
 |**Plusieurs versions d’Office**    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
-|**Affichages multiples** |Si vous utilisez plusieurs écrans et que vous avez ouvert une application Office, la barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des deux écrans. </br></br>Pour vous assurer que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général,** sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence.**    |
+|**Affichages multiples** |Si vous utilisez plusieurs affichages et que vous avez une application Office ouverte : </br></br>-Vous pouvez rencontrer des problèmes de performances dans vos applications Office.</br>-La barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des écrans </br></br>Pour garantir des performances cohérentes et que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général,** sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence.**    |
 |**Prise en charge d’IRM dans Office 2016**| Le paramètre de Registre [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , qui contrôle le chiffrement des métadonnées dans Office 2016, n’est pas pris en charge pour les étiquettes de Azure information protection.|
 |**Marquages de contenu dans Word**    | Azure Information Protection [marquages](configure-policy-markings.md) de contenu peuvent être masqués dans les pieds de page Microsoft Word, lorsque le pied de page contient également un tableau. Pour plus d’informations, consultez la page [quand des marquages visuels sont appliqués](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Fichiers joints aux courriers électroniques** |En raison d’une limitation dans les mises à jour Windows récentes, lorsque [Microsoft Outlook est protégé par Azure Rights Management](office-apps-services-support.md), les fichiers joints aux courriers électroniques peuvent être verrouillés après l’ouverture du fichier. |
@@ -114,13 +114,13 @@ La publication des stratégies peut prendre jusqu’à 24 heures.
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Image étirée dans la visionneuse cliente":::
     
-    Pour plus d’informations, consultez :
+    Pour plus d'informations, voir :
 
     - [**Client classique**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/client-view-use-files.md)
     - [**Client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md)
 
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Informations complémentaires
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

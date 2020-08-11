@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cef1f6f80865f813e613e717ea301176f8fcc317
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 38489d1d1ff7183e5e7a3963b401cdaecf2313dc
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049529"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073650"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -91,7 +91,7 @@ Pour stocker les données de configuration de l’analyseur, utilisez un serveur
 
 - **Un compte avec le rôle sysadmin pour installer le scanneur.**
 
-    Cela permet au processus d’installation de créer automatiquement la base de données de configuration de l’analyseur et d’accorder le rôle de **db_owner** requis au compte de service qui exécute le scanneur.
+    Le rôle sysadmin permet au processus d’installation de créer automatiquement la base de données de configuration du scanneur et d’accorder le rôle de **db_owner** requis au compte de service qui exécute le scanneur.
 
     Si vous ne pouvez pas accorder le rôle sysadmin ou si les stratégies de votre organisation nécessitent la création et la configuration de bases de données manuellement, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).
 
@@ -114,14 +114,14 @@ La taille du disque de la base de données de configuration de l’analyseur var
 100 KB + <file count> *(1000 + 4* <average file name length>)
 ```
 
-Par exemple, pour analyser les fichiers 1 million dont la longueur moyenne du nom de fichier est de 250 octets, allouez 2 Go d’espace disque.
+Par exemple, pour analyser les fichiers 1 million dont la longueur moyenne du nom de fichier est de 250 octets, allouez un espace disque de 2 Go.
 
 Pour plusieurs Scanneurs :
 
 - **Jusqu’à 10 scanneurs,** utilisez :
 
     - 4 processeurs principaux
-    - 8 Go de RAM recommandé
+    - 8 Go de RAM recommandés
 
 - **Plus de 10 scanneurs** (40 maximum), utilisez :
     - 8 processus de base
@@ -169,12 +169,16 @@ Pour plus d’informations, consultez [types de fichiers pris en charge par le c
 
 ## <a name="file-path-requirements"></a>Exigences relatives au chemin de fichier
 
-Pour analyser les fichiers, vos chemins d’accès aux fichiers doivent comporter 260 caractères au maximum, sauf si le scanneur est installé sur Windows 2016 et que l’ordinateur est configuré pour prendre en charge des chemins d’accès longs.
+Par défaut, pour analyser les fichiers, vos chemins d’accès aux fichiers doivent comporter jusqu’à 260 caractères.
 
-Windows 10 et Windows Server 2016 prennent en charge des longueurs de chemin de plus de 260 caractères avec le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)suivant : stratégie de l' **ordinateur local**  >  **Configuration ordinateur**  >  **modèles d’administration**  >  **tous les paramètres**  >  **activer les chemins longs Win32**
+Pour analyser des fichiers avec des chemins d’accès de plus de 260 caractères, installez le scanneur sur un ordinateur avec l’une des versions suivantes de Windows et configurez l’ordinateur en fonction des besoins :
 
-Pour plus d’informations sur la prise en charge des chemins de fichiers longs, consultez la section consacrée à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
-
+|Version de Windows  |Description  |
+|---------|---------|
+|**Windows 2016 ou version ultérieure**     |   Configurer l’ordinateur pour prendre en charge des chemins d’accès longs      |
+|**Windows 10 ou Windows Server 2016**     | Définissez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)suivant : stratégie de l' **ordinateur local**  >  **Configuration ordinateur**  >  **modèles d’administration**  >  **tous les paramètres**  >  **activer les chemins d’accès longs Win32**.    </br></br>Pour plus d’informations sur la prise en charge des chemins de fichiers longs dans ces versions, consultez la section limitation de la [longueur maximale du chemin d’accès](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation du développeur Windows 10.    |
+|**Windows 10, version 1607 ou ultérieure**     |  Abonnez-vous à la fonctionnalité de **MAX_PATH** mise à jour. Pour plus d’informations, consultez [activer des chemins d’accès longs dans Windows 10 versions 1607 et ultérieures](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
+| | |
 ## <a name="usage-statistics-requirements"></a>Exigences relatives aux statistiques d’utilisation
 
 Désactivez les statistiques d’utilisation à l’aide de l’une des méthodes suivantes :
@@ -251,7 +255,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 #### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Créer un utilisateur et lui accorder des droits db_owner manuellement
 
-Pour créer un utilisateur et accorder des droits de db_owner sur cette base de données, demandez à l’administrateur système d’effectuer les opérations suivantes :
+Pour créer un utilisateur et accorder des droits de db_owner sur cette base de données, demandez à l’administrateur système d’effectuer les étapes suivantes :
 
 1. Créer une base de connaissances pour le scanneur :
 

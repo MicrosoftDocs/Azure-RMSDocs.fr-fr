@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/08/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e37f2f3c56bb30075802ae5126179e094d41553
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: e97b66acfc56812f087246128c1bb15c2f22ae40
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048984"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073701"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -172,7 +172,7 @@ Pour prendre en charge les mises à jour automatiques via Windows Update et pou
 
 Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
 
-Par exemple : `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+Par exemple : `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 Nous vous recommandons d’utiliser ce paramètre avec précaution, car des problèmes ont été signalés avec les applications Office. Il arrive que celles-ci se bloquent lorsque le client Azure Information Protection est utilisé avec cette ancienne version de Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
 
@@ -192,17 +192,22 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     
     |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installer|
-    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
-    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
+    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installez|
+    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installez|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installez|
+    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installez|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installez|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
-    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer|
+    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installez|
 
-3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) d’installation exécutable, à une exception près :
+3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).
 
-    - Au lieu de **AllowTelemetry = 0** pour désactiver l’option d’installation, **Aidez-nous à améliorer Azure information protection en envoyant des statistiques d’utilisation à Microsoft**, puis spécifiez **ENABLETELEMETRY = 0**.
+    > [!NOTE]
+    > Par défaut, l’option **aider à améliorer Azure information protection en envoyant des statistiques d’utilisation à** l’installation Microsoft est activée. Pour désactiver cette option, veillez à effectuer l’une des opérations suivantes :
+    >
+    >- Pendant l’installation, spécifiez **AllowTelemetry = 0**
+    >- Après l’installation, mettez à jour la clé de Registre comme suit : **EnableTelemetry = 0**.
+    >
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Guide pratique pour installer le scanneur Azure Information Protection
 

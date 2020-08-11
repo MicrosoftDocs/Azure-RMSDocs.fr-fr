@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 010471368d219cc2ba45d24744a17c09ca83b85d
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 3afb97e9094d74eb98b67b375def7a24f6dcc104
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802315"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073684"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -36,7 +36,7 @@ Les prérequis suivants pour le client d’étiquetage unifié AIP s’ajoutent 
 
 |Condition requise  |Description  |
 |---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | L’installation complète du client d’étiquetage unifié Azure Information Protection par défaut nécessite une version minimale de Microsoft .NET Framework 4.6.2. </br></br>Si ce Framework est absent, l’Assistant Installation du programme d’installation exécutable tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, l’ordinateur doit être redémarré. </br></br>**Remarque :** Bien que cela ne soit pas recommandé, vous pouvez ignorer cette condition préalable lorsque vous utilisez l’Assistant Installation à l’aide d’un [paramètre d’installation personnalisée](#more-information-about-the-downgradedotnetrequirement-installation-parameter).        |
+|**Microsoft .NET Framework 4.6.2**     | L’installation complète du client d’étiquetage unifié Azure Information Protection par défaut nécessite une version minimale de Microsoft .NET Framework 4.6.2. </br></br>Si ce Framework est absent, l’Assistant Installation du programme d’installation exécutable tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, l’ordinateur doit être redémarré.       |
 |**Microsoft .NET Framework 4.5.2**     | Si la visionneuse de Azure Information Protection est installée séparément, l’application de la visionneuse requiert une version minimale de Microsoft .NET Framework 4.5.2. </br></br>**Important :** Si ce Framework est manquant pour la visionneuse, le programme d’installation exécutable ne le télécharge pas ou ne l’installe *pas* .        |
 |**Version minimale de Windows PowerShell 4,0**     |   Le module PowerShell pour le client nécessite une version minimale de Windows PowerShell 4,0, qui peut être nécessaire pour être installé sur des systèmes d’exploitation plus anciens. </br></br>Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). </br></br>**Important :** Le programme d’installation ne vérifie pas ou n’installe *pas* ce composant requis pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.      |
 |**Résolution d’écran supérieure à 800 x 600**    |     Les résolutions de 800 x 600 et les résolutions inférieures ne peuvent pas afficher entièrement la boîte de dialogue **Classifier et protéger - Azure Information Protection** lorsque vous cliquez avec le bouton droit sur un fichier ou dossier dans l’Explorateur de fichiers.    |
@@ -167,7 +167,7 @@ Pour prendre en charge les mises à niveau automatiques à l’aide d’Windows 
 
 Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
 
-Par exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
+Par exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
 
 Nous vous recommandons d’utiliser ce paramètre avec précaution et de savoir qu’il existe des problèmes avec les applications Office qui se sont débloquées lorsque l’Azure Information Protection client d’étiquetage unifié est utilisé avec cette version antérieure du Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
 
@@ -187,12 +187,12 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     
     |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installer|
-    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|
-    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
+    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installez|
+    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installez|
+    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installez|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installez|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
-    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer|
+    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installez|
     
    
 
@@ -201,7 +201,10 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     Vous devrez peut-être spécifier des paramètres d’installation supplémentaires. Pour plus d’informations, consultez les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).
 
     > [!NOTE]
-    > Par défaut, l’option **aider à améliorer Azure information protection en envoyant des statistiques d’utilisation à** l’installation Microsoft est activée. Pour désactiver cette option, veillez à spécifier **ENABLETELEMETRY = 0** au lieu de **AllowTelemetry = 0**.
+    > Par défaut, l’option **aider à améliorer Azure information protection en envoyant des statistiques d’utilisation à** l’installation Microsoft est activée. Pour désactiver cette option, veillez à effectuer l’une des opérations suivantes :
+    >
+    >- Pendant l’installation, spécifiez **AllowTelemetry = 0**
+    >- Après l’installation, mettez à jour la clé de Registre comme suit : **EnableTelemetry = 0**.
     >
 
 ## <a name="next-steps"></a>Étapes suivantes

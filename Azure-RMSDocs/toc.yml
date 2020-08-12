@@ -318,18 +318,14 @@
                     - name: Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
                       href: ./rms-client/upgrade-client-app.md
         - name: Applications Azure Information Protection pour iOS et Android
-          items:
-            - name: Vue d’ensemble
-              href: ./rms-client/mobile-app-faq.md
-            - name: Commencer à utiliser les applications mobiles AIP
-              href: ./rms-client/mobile-app-get-started.md
+          href: ./rms-client/mobile-app-faq.md
         - name: Lecteurs PDF protégés
           href: ./rms-client/protected-pdf-readers.md
         - name: Notes sur le déploiement du client RMS
           href: ./rms-client/client-deployment-notes.md
         - name: Protection RMS avec l’ICF de Windows Server
           items:
-            - name: Vue d’ensemble
+            - name: Vue d'ensemble
               href: ./rms-client/configure-fci.md
             - name: Script PowerShell
               href: ./rms-client/fci-script.md
@@ -345,7 +341,7 @@
           items:
             - name: Avis de dépréciation
               href: ./develop/deprecation-notice.md
-            - name: Vue d'ensemble
+            - name: Vue d’ensemble
               href: ./develop/overview.md
             - name: Prise en main
               href: ./develop/get-started.md

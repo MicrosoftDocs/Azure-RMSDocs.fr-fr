@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: a02fabd167fdbe7f0e2cef826c68920c164a20e4
+ms.sourcegitcommit: c0cd6591a44b213a68a6d1bb47acbb344bb94783
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868788"
+ms.lasthandoff: 08/16/2020
+ms.locfileid: "88256861"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -67,6 +67,8 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
 
 2.7.99.0 de la version du client et du scanneur d’étiquetage unifiée
 
+**Publication** le 07/20/2020
+
 **Correctifs et améliorations :**
 
 Correction des problèmes dans les actions d’étiquetage des fichiers pour les nouveaux journaux d’audit des **étiquettes** .
@@ -111,7 +113,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)
 

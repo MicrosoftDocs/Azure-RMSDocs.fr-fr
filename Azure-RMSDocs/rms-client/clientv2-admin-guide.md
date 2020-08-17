@@ -1,22 +1,22 @@
 ---
 title: Guide d’administration du client d’étiquetage unifié Azure Information Protection
 description: Instructions et informations pour les administrateurs sur un réseau d’entreprise qui sont responsables du déploiement du client d’étiquetage Azure Information Protection unifié pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcd773904dc9570715313a856d512c0bce54811c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 62d1b496df1eb773fdb59b8b4e1dc8c39dd29ca4
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264308"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -199,7 +199,7 @@ Les instructions de mise à niveau du scanneur varient selon que vous effectuez 
 
 2.    Mettez à niveau le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la dernière version du client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`
+3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`
 
 4. Redémarrez le service **Scanneur Azure Information Protection**.
 
@@ -225,7 +225,7 @@ Si vous avez mis à niveau le scanneur à l’aide de la version préliminaire d
 
 2. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant le client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
+3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
     
     Cette étape permet de créer une base de données portant le nom **AIPScannerUL_ \<profile_name> **
 
@@ -246,7 +246,7 @@ Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de 
 
 3. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant le client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
+4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
 
 5. Redémarrez le service **Scanneur Azure Information Protection**.
 
@@ -271,7 +271,7 @@ Vous pouvez utiliser l’une des options suivantes pour désinstaller le client�
 
 - Réexécutez l’exécutable (par exemple, **AzInfoProtection_UL.exe**) et, à partir de la page **modifier l’installation** , cliquez sur **désinstaller**. 
 
-- Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
+- Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection_UL.exe /uninstall`
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour installer le client, consultez [installer le client d’étiquetage unifié Azure information protection pour les utilisateurs](clientv2-admin-guide-install.md).

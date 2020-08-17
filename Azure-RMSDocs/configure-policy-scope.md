@@ -1,10 +1,10 @@
 ---
 title: Configurer des stratégies délimitées pour Azure Information Protection – AIP
 description: Pour configurer différents paramètres et étiquettes pour des utilisateurs spécifiques, vous devez configurer une stratégie délimitée pour Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 10402e9db78dc2e7dda4117bf30a255d9c2b3642
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6c7ab059ff19cc7f8b41bc345521e9e1798e7769
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264359"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
@@ -29,7 +29,7 @@ ms.locfileid: "86048049"
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Quand la stratégie Azure Information Protection se télécharge sur des ordinateurs sur lesquels est installé le [client Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=53018), tous les utilisateurs obtiennent les paramètres et étiquettes de la stratégie par défaut ou les modifications que vous avez configurées pour la stratégie globale. Si vous souhaitez compléter cette configuration pour des utilisateurs spécifiques, en utilisant des paramètres et des étiquettes différents, vous devez créer une **stratégie délimitée** configurée pour ces utilisateurs.
+Quand la stratégie Azure Information Protection se télécharge sur des ordinateurs sur lesquels est installé le client Azure Information Protection, tous les utilisateurs obtiennent les paramètres et étiquettes de la stratégie par défaut ou les modifications que vous avez configurées pour la stratégie globale. Si vous souhaitez compléter cette configuration pour des utilisateurs spécifiques, en utilisant des paramètres et des étiquettes différents, vous devez créer une **stratégie délimitée** configurée pour ces utilisateurs.
 
 ## <a name="how-scoped-policies-work"></a>Fonctionnement des stratégies délimitées
 

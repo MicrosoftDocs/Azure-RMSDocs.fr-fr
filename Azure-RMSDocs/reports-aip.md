@@ -1,9 +1,9 @@
 ---
 title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
-author: mlottner
-ms.author: mlottner
-ms.date: 05/05/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,18 +13,18 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 824e246a0e979a478dbd135e8497434b0c2b6762
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: ecc0a78a942dc4e0c6b1dc89b3d2d2ec57c87f6e
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264376"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. En outre :
+Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. Informations supplémentaires :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -154,7 +154,7 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |Condition requise|Informations complémentaires|
 |---------------|--------------------|
 |Un abonnement Azure qui inclut Log Analytics et qui concerne le même locataire qu’Azure Information Protection|Consultez la page de [tarification d’Azure Monitor](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
-|Pour signaler des informations provenant de clients d’étiquetage : <br /><br />-Azure Information Protection les clients|Le client d’étiquetage unifié et le client classique sont pris en charge. <br /><br />S’il n’est pas déjà installé, vous pouvez télécharger et installer ces clients à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).|
+|Pour signaler des informations provenant de clients d’étiquetage : <br /><br />-Azure Information Protection les clients|Le client d’étiquetage unifié et le client classique sont pris en charge. <br /><br />S’il n’est pas déjà installé, vous pouvez télécharger et installer le client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Pour le déployer, ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.|
 |Pour la création de rapports d’informations à partir de banques de données basées sur le Cloud : <br /><br />-Microsoft Cloud App Security |Pour afficher des informations à partir de Microsoft Cloud App Security, configurez l' [intégration Azure information protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Pour la création de rapports d’informations à partir de magasins de données locaux : <br /><br />-Azure Information Protection scanneur |Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). |
 |Pour obtenir des informations sur les rapports à partir d’ordinateurs Windows 10 :  <br /><br />-Version minimale de 1809 avec Microsoft Defender-protection avancée contre les menaces (Microsoft Defender ATP)|Vous devez activer la fonctionnalité d’intégration de Azure Information Protection à partir de Microsoft Defender Security Center. Pour plus d’informations, consultez [vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
@@ -222,11 +222,11 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
 
 1. Si ce n’est déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](https://portal.azure.com) avec un compte qui possède les [autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Accédez ensuite au volet **Azure Information Protection**. 
     
-    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
+    Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
     
 2. Recherchez les options du menu **gérer** , puis sélectionnez **configurer Analytics (version préliminaire)**.
 
-3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Effectuez l’une des opérations suivantes :
+3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Effectuez l’une des actions suivantes :
     
     - Pour créer un espace de travail Log Analytics : sélectionnez **créer un nouvel espace**de travail, puis dans le volet **espace de travail log Analytics** , fournissez les informations demandées.
     

@@ -1,10 +1,10 @@
 ---
 title: Guide de l’administrateur du client Azure Information Protection
 description: Instructions et informations destinées aux administrateurs d’un réseau d’entreprise en charge du déploiement du client Azure Information Protection pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a913dfbd6e9e992ee90179a59f7351345d1476e1
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: c5a7a774e06f53793151d8de02380b23b0083c4f
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264393"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -28,6 +28,8 @@ ms.locfileid: "86048915"
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>
+> **Pour déployer le client classique AIP,** ouvrez un ticket de support pour obtenir l’accès au téléchargement.
 
 Utilisez les informations de ce guide si vous êtes responsable du client Azure Information Protection sur un réseau d’entreprise, ou si vous souhaitez des informations techniques supplémentaires par rapport au [Guide de l’administrateur du client Azure Information Protection](client-user-guide.md). 
 
@@ -187,7 +189,7 @@ L’équipe Azure Information Protection met régulièrement à jour le client A
 
 Si vous utilisez Windows Update, le client Azure Information Protection met automatiquement à niveau la version en disponibilité générale du client, indépendamment de la manière dont ce dernier a été installé. Les nouvelles versions de client sont publiées dans le catalogue quelques semaines après le lancement.
 
-Vous pouvez également mettre à niveau manuellement le client en téléchargeant la nouvelle version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Installez ensuite la nouvelle version pour mettre à niveau le client. Vous devez utiliser cette méthode pour mettre à niveau des préversions.
+Vous pouvez également mettre à niveau le client manuellement avec une installation de version plus récente. <!--by downloading the new release from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Then install the new version to upgrade the client. -->Vous devez utiliser cette méthode pour mettre à niveau des préversions.
 
 Lorsque vous mettez à niveau manuellement, ne désinstallez la version précédente que si vous changez de méthode d’installation. Par exemple, si vous passez de la version du fichier exécutable (.exe) du client à la version du programme d’installation (.msi) Windows du client. Ou si vous devez installer une version antérieure du client. Par exemple, vous avez installé la préversion actuelle pour la tester et vous devez maintenant revenir à la version actuelle en disponibilité générale.
 
@@ -216,9 +218,9 @@ Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau l
 
 2. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
 
-3. Mettez à niveau le client Azure Information Protection en installant la version actuelle de la mise à la disposition générale à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
+3. Mettez à niveau le client Azure Information Protection en installant la version actuelle de la mise à la disposition générale. <!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).-->
 
-4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
+4. Dans une session PowerShell, exécutez la commande **Update-AIPScanner** avec le même nom de profil que celui que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
 
 5. Uniquement si le scanneur s’exécute sur un ordinateur déconnecté : exécutez à présent [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier contenant les paramètres exportés.
 
@@ -251,7 +253,7 @@ Si vous savez que vous souhaitez déplacer la base de données de configuration 
 
 3. Installez le scanneur à l’aide de [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), en spécifiant la nouvelle instance SQL Server et le nom du profil.
 
-4. Facultatif : Si vous ne souhaitez pas que le scanneur relance l’analyse de tous les fichiers, exportez la table ScannerFiles et importez-la dans la nouvelle base de données.
+4. **Facultatif :** Si vous ne souhaitez pas que le scanneur relance l’analyse de tous les fichiers, exportez la table ScannerFiles et importez-la dans la nouvelle base de données.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 

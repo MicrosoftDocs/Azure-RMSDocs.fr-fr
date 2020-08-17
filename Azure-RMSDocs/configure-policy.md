@@ -1,9 +1,9 @@
 ---
 title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection du client Azure Information Protection (Classic), vous devez configurer la stratégie de Azure Information Protection.
-author: mlottner
-ms.author: mlottner
-ms.date: 1/06/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f1c423aef10c23d84b6f8fcd2eac19872fdaa35b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264325"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -32,7 +32,7 @@ ms.locfileid: "86047947"
 > 
 > Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dans la documentation relative à la conformité de Microsoft 365.
 
-Pour configurer la classification, l’étiquetage et la protection du client classique, vous devez configurer la stratégie de Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs qui ont installé le [client Azure information protection](https://www.microsoft.com/download/details.aspx?id=53018).
+Pour configurer la classification, l’étiquetage et la protection du client classique, vous devez configurer la stratégie de Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs sur lesquels est installé le client Azure Information Protection.
 
 La stratégie contient des paramètres et des étiquettes :
 
@@ -74,7 +74,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
   - **Administrateur des données de conformité**
     
-  - **Administrateur de la sécurité**
+  - **Administrateur de sécurité**
     
     **Lecteur**  -  de sécurité [Azure information protection Analytics](reports-aip.md) uniquement
     
@@ -143,7 +143,7 @@ Utilisez les informations suivantes pour configurer la stratégie Azure Informat
 
 - [Guide pratique pour configurer les paramètres de stratégie](configure-policy-settings.md)
 
-- [Comment créer une nouvelle étiquette](configure-policy-new-label.md)
+- [Comment créer une étiquette](configure-policy-new-label.md)
 
 - [Guide pratique pour ajouter ou supprimer une étiquette](configure-policy-add-remove-label.md)
  

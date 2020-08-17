@@ -4,18 +4,18 @@ description: Configurez une étiquette qui protège l’e-mail d’un utilisateu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2744289d227127b007cfc022cfab8723dfbdf669
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 9f7e93b8053779b4e3f55d2a1c8d20967ae5b441
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927860"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802298"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
@@ -48,7 +48,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 |**AIP ajouté au Portail Azure**    |  Vous avez ajouté le volet Azure Information Protection au Portail Azure et vérifié que le service de protection est activé. </br></br>Pour plus d’informations, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).       |
 |**Une étiquette Azure Information Protection à configurer**     | Utilisez une des étiquettes par défaut ou une étiquette que vous avez créée. Pour plus d’informations, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md). |
 |**Client classique installé**    |   Pour que vous puissiez tester la nouvelle étiquette, le client classique doit être installé sur votre ordinateur. </br></br>Le client classique Azure Information Protection est en cours de dépréciation pour mars 2021. Pour le déployer, ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.  |
-|**Un ordinateur Windows, connecté à des applications Office** |Pour tester la nouvelle étiquette, il vous faut un ordinateur Windows (au minimum Windows 7 avec Service Pack 1). </br></br>Sur cet ordinateur, connectez-vous à l’une des versions suivantes des applications Office : </br>- Applications Office, version minimale 1805, build 9330.2078 de [Microsoft 365 Apps for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) si une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est attribuée. </br>- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). </br>- Office Professionnel Plus 2019. </br>- Office Professionnel Plus 2016.</br>- Office Professionnel Plus 2013 avec Service Pack 1. </br>- Office Professionnel Plus 2010 avec Service Pack 2.|
+|**Un ordinateur Windows, connecté à des applications Office** |Pour tester la nouvelle étiquette, il vous faut un ordinateur Windows (au minimum Windows 7 avec Service Pack 1). </br></br>Sur cet ordinateur, connectez-vous à l’une des versions suivantes des applications Office : </br>- Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée. </br>- Office 365 ProPlus. </br>- Office Professionnel Plus 2019. </br>- Office Professionnel Plus 2016.</br>- Office Professionnel Plus 2013 avec Service Pack 1. </br>- Office Professionnel Plus 2010 avec Service Pack 2.|
 | | |
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).

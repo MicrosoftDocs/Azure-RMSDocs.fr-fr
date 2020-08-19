@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6f36ef984a6d6d10ce06ae690c98153524a7d301
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791487"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564317"
 ---
-# <a name="overview"></a>Overview
+# <a name="overview-of-rights-management-services-sdk-21"></a>Présentation du kit de développement logiciel (SDK) Rights Management Services 2,1
 
 Rights Management Services SDK 2.1 est une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée. Dans votre application avec gestion des droits, les propriétaires de contenu peuvent définir qui peut ouvrir, modifier, imprimer, transférer ou effectuer d’autres actions avec le contenu.
 
@@ -29,12 +29,12 @@ AD RMS est constitué de composants [serveur](ad-rms-server.md) et [client](ad-r
 
 Le composant [client](ad-rms-client.md) peut être exécuté sur un système d’exploitation client ou serveur et il contient des fonctions qui permettent à une application de chiffrer et déchiffrer du contenu, de récupérer des modèles et des listes de révocation, d’acquérir des licences et des certificats auprès d’un serveur, ainsi que d’autres tâches liées à la gestion des droits.
 
-Pour plus d’informations, consultez [Types d’applications](application-types.md).
+Pour plus d’informations, consultez [types d’applications](application-types.md).
 
 Voici quelques scénarios pour lesquels des applications basées sur le SDK Rights Management Services 2.1 peuvent être utilisées.
 
 -   Un cabinet juridique veut empêcher que les e-mails sensibles soient imprimés ou transférés.
--   Les développeurs de logiciels de conception et de fabrication assistées par ordinateur veulent limiter l’accès au module de dessin à un petit groupe d’utilisateurs de la division recherche sans exiger l’utilisation de mots de passe.
+-   Les développeurs de logiciels de conception et de fabrication assistées par ordinateur veulent limiter l’accès au module de dessin à un petit groupe d’utilisateurs de la division Recherche sans exiger l’utilisation de mots de passe.
 -   Les propriétaires d’un site web de conception graphique veulent utiliser une même licence permettant la consultation gratuite de copies basse résolution de leurs images, mais exigeant un paiement pour accéder aux versions haute résolution.
 -   Les propriétaires d’une bibliothèque de documents en ligne veulent octroyer les droits d’afficher, d’imprimer ou de modifier des documents en fonction de l’identité de l’utilisateur.
 -   Une entreprise veut publier des informations sensibles sur les employés sur un site web interne qui limite les droits de consultation et de modification à certains utilisateurs.
@@ -43,7 +43,7 @@ Pour plus d’informations sur le serveur AD RMS, sur le client AD RMS et sur le
 
 Les autres rubriques de cette section traitent de l’architecture RMS et ses implémentations.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 | Rubrique | Description |
 |-------|-------------|

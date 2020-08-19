@@ -1,6 +1,6 @@
 ---
 title: Test de votre application | Azure RMS
-description: Instructions de configuration de votre application pour le test.
+description: Apprenez à préparer le test des applications avec Azure RMS ou un serveur RMS s’exécutant sur Windows Server.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 987b9bb711f96d6622fb1972f13d50fa8cbbfa3d
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 638a8ec54a850a051795c00b2b1aef4ef47866ff
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972026"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564067"
 ---
-# <a name="testing-your-application"></a>Test de votre application
+# <a name="testing-your-application"></a>Tester votre application
 
 Ici, vous apprenez à préparer le test de l’application.
 
@@ -39,7 +39,7 @@ Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exé
 
     Pour obtenir de l’aide sur l’installation de RMS SDK 2.1, consultez [Installer le kit SDK](install-the-rms-sdk.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ce guide n’est pas exhaustif. Pour découvrir comment configurer le client RMS 2.1, consultez [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 

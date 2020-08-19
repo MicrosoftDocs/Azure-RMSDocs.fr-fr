@@ -1,6 +1,6 @@
 ---
 title: Déploiement de votre application - AIP
-description: Cette rubrique décrit et vous guide au-travers du déploiement de votre application
+description: En savoir plus sur le processus de déploiement de votre application Azure Information Protection (AIP)/Rights Management Services (RMS).
 keywords: déployer, RMS, AIP
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: e9a9ce42476cc372b6486b524d99e55edf9d4a11
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971759"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564362"
 ---
 # <a name="deploy-into-production"></a>Déployer en production
 

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68794107"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564100"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Comment : installer, configurer et tester avec un serveur RMS
 
@@ -56,7 +56,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
        Si vous utilisez AD RMS v1.0 SP 2, vous pouvez inscrire le serveur en ligne. L’inscription s’effectue en arrière-plan pendant le processus d’approvisionnement, mais vous devez disposer d’une connexion Internet.
 
-       **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
+       **HKEY \_ Logiciel de l' \_ ordinateur local** \\ **Software** \\ **Microsoft** \\ **DRM** \\ **1,0** \\ **UddiProvider** = 0e3d9bb8-B765-4a68-A329-51548685fed3
 
 3. **Tester avec le serveur RMS**
 
@@ -68,39 +68,46 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
    - Pour la découverte côté serveur, l’administrateur inscrit un point de connexion de service pour le cluster racine RMS auprès d’Active Directory. Ainsi, le client interroge Active Directory pour découvrir le point de connexion de service et établir une connexion avec le serveur.
    - Pour la découverte côté client, vous configurez des paramètres de découverte de service RMS dans le Registre de l’ordinateur sur lequel s’exécute le client RMS 2.1. Ces paramètres indiquent au client RMS 2.1 le serveur RMS à utiliser. Quand de tels paramètres sont définis, la découverte côté serveur n’est pas lancée.
 
-   Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez les [notes sur le déploiement du client RMS 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
+   Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez [RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx) (Notes sur le déploiement de RMS Client 2.0).
 
 4. **EnterpriseCertification**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterpriseCertification
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterpriseCertification
+  ```
 
    **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 5. **EnterprisePublishing**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterprisePublishing
-                  
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterprisePublishing
+  ```
+
    **Valeur** : (Par défaut) :[**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 > [!NOTE]
 > Par défaut, ces clés n’existent pas dans le Registre et doivent être créées.
-> 
+>
+ 
 > [!IMPORTANT]
-> Si vous exécutez une application 32 bits sur une version 64 bits de Windows, vous devez définir ces clés dans l’emplacement de clé suivant :<p>
->   ```    
->   HKEY_LOCAL_MACHINE
->     SOFTWARE
->       Wow6432Node
->         Microsoft
->           MSIPC
->             ```
+> Si vous exécutez une application 32 bits sur une version 64 bits de Windows, vous devez définir ces clés dans l’emplacement de clé suivant :  
+>
+
+```console
+HKEY_LOCAL_MACHINE  
+  SOFTWARE  
+    Wow6432Node  
+      Microsoft  
+        MSIPC  
+```

@@ -1,6 +1,6 @@
 ---
-title: Rrelease notes pour le kit de développement logiciel (SDK) Rights Management Services v4. x
-description: Décrit les modifications et les fonctionnalités importantes de cette version et des versions précédentes.
+title: Notes de publication pour le kit de développement logiciel (SDK) Rights Management Services v4. x
+description: Découvrez les nouveautés et les notes de publication du kit de développement logiciel (SDK) Microsoft Rights Management Service v4. x juillet 2017 et versions antérieures.
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5d4aa9206865493c5fd2c4b2abdb96c3f72e5399
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971946"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563788"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
@@ -164,9 +164,9 @@ Cette section présente des informations sur les versions actuelles et précéde
 
     **Solution** : vérifiez que l’application n’autorise pas les appels de plusieurs instances vers l’API Android.
 
--   Lorsque j’utilise la [méthode méthode protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (\[ \] tableau d’octets, int offset, int length) avec une longueur différente de la valeur *Array. Length* , je ne peux pas consommer le contenu ultérieurement à l’aide du kit de développement logiciel (SDK).
+-   Lorsque j’utilise la méthode [méthode protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (tableau d’octets \[ \] , int offset, int length) avec une longueur différente de la valeur *Array. Length* , je ne peux pas consommer le contenu ultérieurement à l’aide du kit de développement logiciel (SDK).
 
-    **Solution** : il s’agit d’un problème connu. Pour l’atténuer, transmettez toujours un tableau *d' \[ octets* avec la même valeur de longueur que le paramètre de longueur, ou utilisez la méthode [méthode protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx).\[ \] Write (tableau d’octets).
+    **Solution** : il s’agit d’un problème connu. Pour l’atténuer, transmettez toujours un tableau *d' \[ \] octets* avec la même valeur de longueur que le paramètre de longueur, ou utilisez la méthode [méthode protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (tableau d’octets \[ \] ).
 
 **iOS et OS X**
 
@@ -197,7 +197,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 
 
-**Notez**  que les applications MDI ne sont pas prises en charge par notre API iOS.
+**Remarque**    Les applications MDI ne sont pas prises en charge par notre API iOS.
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 

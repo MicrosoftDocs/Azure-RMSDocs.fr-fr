@@ -6,20 +6,20 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 4/16/2020
-ms.openlocfilehash: c10c13212bf19ea27442626aa4bd900aa57a340d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 12aa46260b9c1ed2bac5f1e02c1e358292e86835
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764148"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564379"
 ---
-# <a name="functions"></a>Fonctions
+# <a name="functions-c"></a>Fonctions (C)
 
 ## <a name="mip_cc_auth_callback"></a>mip_cc_auth_callback
 
 définition de la fonction de rappel pour l’acquisition du jeton OAuth2
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -47,7 +47,7 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 définition de la fonction de rappel pour le consentement de l’utilisateur à accéder au point de terminaison de service externe
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -65,7 +65,7 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 
 Créer un dictionnaire de clés/valeurs de chaîne
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -90,7 +90,7 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 Obtenir des paires clé/valeur qui composent un dictionnaire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -115,7 +115,7 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 Libérer les ressources associées à un dictionnaire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -129,7 +129,7 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 
 Définition de fonction de rappel pour l’émission d’une requête HTTP
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -147,7 +147,7 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 Définition de fonction de rappel pour l’annulation d’une requête HTTP
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -163,7 +163,7 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 
 Crée un délégué HTTP qui peut être utilisé pour remplacer la pile HTTP par défaut du MIP
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -186,7 +186,7 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 
 Avertit un délégué HTTP qu’une réponse HTTP est prête
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -209,7 +209,7 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 Libérer les ressources associées à un descripteur délégué HTTP
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -223,7 +223,7 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 
 Définition de fonction de rappel pour l’initialisation d’un enregistreur d’événements
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -239,11 +239,11 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 
 Définition de fonction de rappel pour l’écriture d’une instruction de journal
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| level | niveau de journalisation de l’instruction log. |
+| niveau | niveau de journalisation de l’instruction log. |
 | message | message de l’instruction log. |
 | function | nom de la fonction pour l’instruction de journal. |
 | fichier | nom du fichier dans lequel l’instruction du journal a été générée. |
@@ -263,7 +263,7 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 Crée un délégué d’enregistreur d’événements qui peut être utilisé pour substituer le journal par défaut du MIP.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -288,7 +288,7 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 Libérer les ressources associées à un handle de délégué d’enregistreur d’événements
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -302,7 +302,7 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 
 Créer un contexte MIP pour gérer l’état partagé entre toutes les instances de profil
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -333,7 +333,7 @@ mip_cc_result MIP_CC_CreateMipContext(
 
 Créer un contexte MIP pour gérer l’état partagé entre toutes les instances de profil
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -368,7 +368,7 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 Libérer les ressources associées à un contexte MIP
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -382,7 +382,7 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 
 Obtient le type de protection, qu’il soit défini ou non par un modèle RMS.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -403,7 +403,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 Obtient la taille de la mémoire tampon requise pour stocker le propriétaire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -424,7 +424,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 
 Obtient le propriétaire de la protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -451,7 +451,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -472,7 +472,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 
 Obtient le nom de la protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -499,7 +499,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 Obtient la taille de la mémoire tampon requise pour stocker la description
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -520,7 +520,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 
 Obtient la description de la protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -547,7 +547,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 Obtient l’ID de modèle
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -568,7 +568,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 
 Obtient l’ID d’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -589,7 +589,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 Obtient l’ID de contenu
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -610,7 +610,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 
 Obtient une valeur indiquant si le contenu a ou non un délai d’expiration.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -631,7 +631,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 Obtient le délai d’expiration de la protection (en secondes depuis l’époque)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -652,7 +652,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 
 Obtient une valeur indiquant si l’accès hors connexion est autorisé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -673,7 +673,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 Obtient la taille de la mémoire tampon requise pour stocker le référent
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -694,7 +694,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 
 Obtient le point d’accès de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -721,7 +721,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 Obtient la taille de la mémoire tampon requise pour stocker l’URL de la clé double
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -742,7 +742,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize(
 
 Obtient l’URL de clé double
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -769,7 +769,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl(
 
 Libérer les ressources associées à un descripteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -783,7 +783,7 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 
 Créer une liste de chaînes
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -808,7 +808,7 @@ mip_cc_result MIP_CC_CreateStringList(
 
 Obtenir des chaînes qui composent une liste de chaînes
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -833,7 +833,7 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 Libérer les ressources associées à une liste de chaînes
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -847,7 +847,7 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 
 Définition de fonction de rappel pour la distribution d’une tâche asynchrone
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -863,7 +863,7 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 
 Fonction de rappel pour l’annulation d’une tâche en arrière-plan
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -881,7 +881,7 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 
 Crée un délégué de répartiteur de tâches qui peut être utilisé pour substituer la gestion des tâches Async par défaut du MIP.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -906,7 +906,7 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 Avertit un délégué TaskDispatcher qu’une tâche est planifiée pour s’exécuter maintenant sur le thread actuel
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -923,7 +923,7 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 Libérer les ressources associées à un handle de délégué de tâche de répartiteur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -937,7 +937,7 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 
 Créer un objet de paramètres utilisé pour créer un profil de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -956,7 +956,7 @@ mip_cc_result MIP_CC_CreateTelemetryConfiguration(
 
 Définir un nom d’hôte de télémétrie qui remplacera les paramètres de télémétrie internes
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -979,7 +979,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 Définir un remplacement de la bibliothèque partagée de télémétrie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -989,7 +989,7 @@ Paramètre | Description
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
-**Remarque**: cette propriété est définie lorsqu’un client dispose d’une dll de télémétrie existante qui implémente l’API C du kit de développement logiciel (SDK) Aria/1Ds qui doit être utilisée à la place de mip_ClientTelemetry. dll 
+**Remarque**: cette propriété est définie lorsqu’un client dispose d’une dll de télémétrie existante qui implémente l’API C du kit de développement logiciel (SDK) Aria/1Ds qui doit être utilisée à la place de mip_ClientTelemetry.dll 
 
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
@@ -1002,7 +1002,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 
 Remplacer la pile HTTP de télémétrie par défaut par le propriétaire du client
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1025,7 +1025,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 Remplacer le répartiteur de tâches Async par défaut par le propriétaire du client
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1046,7 +1046,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate(
 
 Définit si le composant de télémétrie est autorisé à envoyer un ping au statut réseau sur un thread d’arrière-plan.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1069,7 +1069,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 
 Définit si le composant de télémétrie est autorisé ou non à écrire des caches sur le disque
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1092,7 +1092,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 Définit si le composant de télémétrie est autorisé ou non à écrire des journaux sur le disque
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1115,7 +1115,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 
 Définit si une application ou un utilisateur a refusé la télémétrie facultative
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1138,7 +1138,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 Définit les paramètres de télémétrie personnalisés
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1159,7 +1159,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 Définit une propriété de télémétrie sur Mask
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1182,7 +1182,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
 
 Libérer les ressources associées à des paramètres de profil de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1196,7 +1196,7 @@ void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemet
 
 Libérer les ressources associées à un moteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1210,7 +1210,7 @@ void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 
 Crée un gestionnaire de protection pour la publication d’un nouveau contenu
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1235,7 +1235,7 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
 
 Crée un gestionnaire de protection pour la consommation de contenu existant
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1260,7 +1260,7 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
 
 Obtient la taille de la mémoire tampon requise pour l’ID du moteur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1281,7 +1281,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
 
 Obtient l’ID du moteur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1308,7 +1308,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
 
 Obtient le nombre de modèles RMS associés à un moteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1333,7 +1333,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
 
 Obtenir la collection de modèles disponibles pour un utilisateur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1362,7 +1362,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
 
 Obtenir la liste des droits octroyés à un utilisateur pour un ID d’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1395,7 +1395,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
 
 Obtient la taille des données clientes associées à un moteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1416,7 +1416,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
 
 Obtenir les données client associées à un moteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1443,7 +1443,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
 
 Créer un objet de paramètres utilisé pour créer un nouveau moteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1468,7 +1468,7 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
 
 Définit les données du client qui seront stockées de façon opaque à côté de ce moteur et qui sont conservées entre les sessions
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1489,7 +1489,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
 
 Configure les paramètres personnalisés, utilisés pour la régulation et le test des fonctionnalités.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1510,7 +1510,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
 
 Définit l’ID de session qui peut être utilisé pour mettre en corrélation les journaux et la télémétrie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1531,7 +1531,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
 
 Définit le Cloud qui affecte les URL de point de terminaison pour toutes les demandes de service
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1554,12 +1554,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloud(
 
 Définit l’URL de base pour toutes les demandes de service
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
 | paramètres | Paramètres du moteur |
-| cloudEndpointBaseUrl | URL de base (par exemplehttps://api.aadrm.com, «») |
+| cloudEndpointBaseUrl | URL de base (par exemple, « https://api.aadrm.com ») |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1577,7 +1577,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
 
 Libérer les ressources associées aux paramètres d’un moteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1591,7 +1591,7 @@ void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings en
 
 Créer un objet de paramètres utilisé pour créer un gestionnaire de protection pour la publication d’un nouveau contenu
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1612,7 +1612,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
 
 Définit si l’algorithme de chiffrement déconseillé (BCE) est préféré pour la compatibilité descendante
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1633,7 +1633,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorith
 
 Définit si les applications prenant en charge non MIP sont autorisées ou non pour ouvrir le contenu protégé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1654,7 +1654,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionA
 
 Définit si PL est au format JSON (la valeur par défaut est XML)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1675,7 +1675,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJs
 
 Définit l’utilisateur délégué
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1698,7 +1698,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
 
 Définit l’utilisateur de pré-licence
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1721,7 +1721,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail(
 
 Créer un objet de paramètres utilisé pour créer un gestionnaire de protection pour la consommation de contenu existant
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1744,7 +1744,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
 
 Créer un objet de paramètres utilisé pour créer un gestionnaire de protection pour la consommation de contenu existant
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1771,7 +1771,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense(
 
 Définit si la création du gestionnaire de protection autorise ou non les opérations HTTP en ligne
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1794,7 +1794,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
 
 Définit l’utilisateur délégué
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1817,7 +1817,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
 
 Obtient la taille de la licence de publication (en octets)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1838,7 +1838,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
 
 Obtient la licence de publication
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1865,7 +1865,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
 
 Obtient la taille de pré-licence (en octets)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1888,7 +1888,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize(
 
 Obtient la pré-licence
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1917,7 +1917,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicense(
 
 Obtient le descripteur de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1938,7 +1938,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
 
 Obtient la liste des droits accordés à un utilisateur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1961,7 +1961,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetRights(
 
 Calcule la taille du contenu protégé, la factorisation dans le remplissage, etc.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -1986,7 +1986,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
 
 Obtient la taille de bloc (en octets) pour le mode de chiffrement utilisé par un gestionnaire de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2007,7 +2007,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
 
 Obtient la taille de la mémoire tampon requise pour stocker l’utilisateur auquel l’accès au contenu protégé a été accordé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2028,7 +2028,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
 
 Obtient l’utilisateur qui a obtenu l’accès au contenu protégé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2055,7 +2055,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
 
 Obtient la taille de la mémoire tampon requise pour stocker le propriétaire du contenu protégé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2076,7 +2076,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
 
 Obtient le propriétaire du contenu protégé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2103,7 +2103,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
 
 Obtient le contenu IE du contenu protégé
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2124,7 +2124,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
 
 Détermine si le gestionnaire de protection utilise un algorithme de chiffrement (ECB) déconseillé pour la compatibilité descendante
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2145,7 +2145,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
 
 Déchiffrer une mémoire tampon
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2177,7 +2177,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
 
 Libérer les ressources associées aux paramètres du gestionnaire de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2191,7 +2191,7 @@ void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler
 
 Libérer les ressources associées aux paramètres du gestionnaire de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2205,7 +2205,7 @@ void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handle
 
 Libérer les ressources associées à un gestionnaire de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2219,7 +2219,7 @@ void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 
 Charger un profil
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2240,7 +2240,7 @@ mip_cc_result MIP_CC_LoadProtectionProfile(
 
 Libérer les ressources associées à un profil de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2254,7 +2254,7 @@ void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 
 Créer un objet de paramètres utilisé pour créer un profil de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2281,7 +2281,7 @@ mip_cc_result MIP_CC_CreateProtectionProfileSettings(
 
 Définit l’ID de session qui peut être utilisé pour mettre en corrélation les journaux et la télémétrie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2302,7 +2302,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
 
 Configure si les licences d’utilisateur final (LUF) seront mises en cache localement
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2323,7 +2323,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
 
 Remplacer la pile HTTP par défaut par le propriétaire du client
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2344,7 +2344,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
 
 Remplacer le répartiteur de tâches Async par défaut par le propriétaire du client
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2365,7 +2365,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
 
 Configure les paramètres personnalisés, utilisés pour la régulation et le test des fonctionnalités.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2386,7 +2386,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
 
 Libérer les ressources associées à des paramètres de profil de protection
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2400,7 +2400,7 @@ void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings 
 
 Obtient l’ID de modèle
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2421,7 +2421,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetId(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2442,7 +2442,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetNameSize(
 
 Obtient le nom du modèle
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2469,7 +2469,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetName(
 
 Obtient la taille de la mémoire tampon requise pour stocker la description
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2490,7 +2490,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescriptionSize(
 
 Obtient la description du modèle
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2517,7 +2517,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
 
 Libérer les ressources associées à un descripteur de modèle
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2531,7 +2531,7 @@ void MIP_CC_ReleaseTemplateDescriptor(mip_cc_template_descriptor templateDescrip
 
 Obtient le type d’une action
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2552,7 +2552,7 @@ mip_cc_result MIP_CC_Action_GetType(
 
 Obtient l’ID d’une action
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2573,7 +2573,7 @@ mip_cc_result MIP_CC_Action_GetId(
 
 Obtenir des actions qui composent un résultat d’action
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2598,7 +2598,7 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 Libérer les ressources associées à un résultat d’action
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2612,7 +2612,7 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom de l’élément d’interface utilisateur de l’action Ajouter un pied de page de contenu
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2633,7 +2633,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 
 Obtient le nom de l’élément d’interface utilisateur de l’action « Ajouter un pied de page de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2660,7 +2660,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 Obtient la taille de la mémoire tampon requise pour stocker le texte de l’action « Ajouter un pied de page de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2681,7 +2681,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 
 Obtient le texte de l’action « Ajouter un pied de page de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2708,7 +2708,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom de police de l’action « Ajouter un pied de page de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2729,7 +2729,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 
 Obtient le nom de police de l’action « Ajouter un pied de page de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2756,7 +2756,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 Obtient la taille de police de l’entier
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2777,7 +2777,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 Obtient la taille de la mémoire tampon requise pour stocker la couleur de police de l’action « Ajouter un pied de page de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2798,7 +2798,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 
 Obtient la couleur de police de l’action « Ajouter un pied de page de contenu » (par exemple, « #000000 »)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2825,7 +2825,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 Obtient l’alignement
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2846,7 +2846,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 
 Obtient la taille de la marge
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2867,7 +2867,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom de l’élément d’interface utilisateur de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2888,7 +2888,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 
 Obtient un nom d’élément d’interface utilisateur de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2915,7 +2915,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 Obtient la taille de la mémoire tampon requise pour stocker le texte de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2936,7 +2936,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 
 Obtient le texte de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2963,7 +2963,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom de police de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -2984,7 +2984,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 
 Obtient le nom de police de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3011,7 +3011,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 Obtient la taille de police de l’entier
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3032,7 +3032,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 Obtient la taille de la mémoire tampon requise pour stocker la couleur de police de l’action « Ajouter un en-tête de contenu »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3053,7 +3053,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 
 Obtient la couleur de police de l’action « Ajouter un en-tête de contenu » (par exemple, « #000000 »)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3080,7 +3080,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 Obtient l’alignement
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3101,7 +3101,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 
 Obtient la taille de la marge
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3122,7 +3122,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom de l’élément d’interface utilisateur de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3143,7 +3143,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 
 Obtient le nom de l’élément d’interface utilisateur de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3170,7 +3170,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 Obtient la disposition du filigrane
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3191,7 +3191,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 Obtient la taille de la mémoire tampon requise pour stocker le texte de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3212,7 +3212,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 
 Obtient le texte de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3239,7 +3239,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom de police de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3260,7 +3260,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 
 Obtient le nom de police de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3287,7 +3287,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 Obtient la taille de police de l’entier
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3308,7 +3308,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 Obtient la taille de la mémoire tampon requise pour stocker la couleur de police de l’action « Ajouter un filigrane »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3329,7 +3329,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 
 Obtient la couleur de police de l’action « Ajouter un filigrane » (par exemple, « #000000 »)
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3356,7 +3356,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 Libérer les ressources associées à une étiquette de contenu
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3370,11 +3370,11 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 
 Obtient l’heure à laquelle l’étiquette a été appliquée
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| contentLabel | Étiquette |
+| contentLabel | Etiquette |
 | creationTime | Sortie Heure à laquelle l’étiquette a été appliquée au document (en secondes depuis l’époque) |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3391,11 +3391,11 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 Obtient la méthode d’assignation d’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| contentLabel | Étiquette |
+| contentLabel | Etiquette |
 | Assignation | Sortie Méthode d’assignation (par exemple, « standard » ou « Privileged ») |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3412,11 +3412,11 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 
 Obtient les propriétés étendues
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| contentLabel | Étiquette |
+| contentLabel | Etiquette |
 | properties | Sortie Dictionnaire de propriétés étendues, mémoire appartenant à l’appelant |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3435,11 +3435,11 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 Obtient une valeur indiquant si une protection a été appliquée ou non par une étiquette.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| contentLabel | Étiquette |
+| contentLabel | Etiquette |
 | isProtectionAppliedByLabel | Sortie Si le document est protégé et que la protection a été appliquée explicitement par cette étiquette. |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3456,7 +3456,7 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 
 Obtient les propriétés d’étiquette génériques à partir d’une instance de nom de contenu
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3479,7 +3479,7 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom d’une action « personnalisée »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3500,7 +3500,7 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 
 Obtient un nom d’action « personnalisé »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3527,7 +3527,7 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 Obtient les propriétés d’une action « personnalisée »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3550,7 +3550,7 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
 
 Définition de la fonction de rappel pour la récupération du document refléter, filtré par nom/préfixe
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3576,7 +3576,7 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
 
 Libérer les ressources associées à une étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3590,11 +3590,11 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 
 Obtient l’ID d’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | ID | Sortie ID d’étiquette |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3611,11 +3611,11 @@ mip_cc_result MIP_CC_Label_GetId(
 
 Obtient la taille de la mémoire tampon requise pour stocker le nom
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | Nom | Sortie Taille de la mémoire tampon pour contenir le nom (en nombre de caractères) |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3632,11 +3632,11 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 
 Obtient le nom de l’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | nameBuffer | Sortie Mémoire tampon dans laquelle le nom sera copié. |
 | nameBufferSize | Taille (en nombre de caractères) du nameBuffer. |
 | actualNameSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3659,11 +3659,11 @@ mip_cc_result MIP_CC_Label_GetName(
 
 Obtient la taille de la mémoire tampon requise pour stocker la description
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | Description | Sortie Taille de la mémoire tampon pour contenir la description (en nombre de caractères) |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3680,11 +3680,11 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 
 Obtient la description de l’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | descriptionBuffer | Sortie Mémoire tampon dans laquelle la description sera copiée. |
 | descriptionBufferSize | Taille (en nombre de caractères) du descriptionBuffer. |
 | actualDescriptionSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3707,11 +3707,11 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 Obtient la taille de la mémoire tampon requise pour stocker la couleur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | Coloriser | Sortie Taille de la mémoire tampon de stockage (en nombre de caractères) |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3728,11 +3728,11 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 
 Obtient la couleur de l’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | colorBuffer | Sortie Mémoire tampon dans laquelle la couleur sera copiée (au format #RRGGBB). |
 | colorBufferSize | Taille (en nombre de caractères) du colorBuffer. |
 | actualColorSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3755,11 +3755,11 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 Obtient le niveau de sensibilité de l’étiquette. Plus la valeur est élevée, plus la sensibilité est importante.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | sensitivity | Sortie Niveau de sensibilité |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3776,11 +3776,11 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 Obtient la taille de la mémoire tampon requise pour stocker l’info-bulle
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | tooltipSize | Sortie Taille de la mémoire tampon pour contenir l’info-bulle (en nombre de caractères) |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3797,11 +3797,11 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 
 Obtient l’info-bulle de l’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | tooltipBuffer | Sortie Mémoire tampon dans laquelle l’info-bulle sera copiée. |
 | tooltipBufferSize | Taille (en nombre de caractères) du tooltipBuffer. |
 | actualTooltipSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3824,11 +3824,11 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 Obtient la taille de la mémoire tampon requise pour stocker l’info-bulle de classification automatique
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | tooltipSize | Sortie Taille de la mémoire tampon pour contenir l’info-bulle (en nombre de caractères) |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3845,11 +3845,11 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 
 Obtient l’info-bulle de classification automatique des étiquettes
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | tooltipBuffer | Sortie Mémoire tampon dans laquelle l’info-bulle sera copiée. |
 | tooltipBufferSize | Taille (en nombre de caractères) du tooltipBuffer. |
 | actualTooltipSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3872,11 +3872,11 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 Obtient une valeur indiquant si une étiquette est active ou non
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | isActive | Sortie Indique si une étiquette est considérée comme active. |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3895,11 +3895,11 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 Obtient l’étiquette parente, le cas échéant.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | parent | Sortie Étiquette parente, le cas échéant, sinon null |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3916,11 +3916,11 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 Obtient le nombre d’étiquettes enfants
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | childrenSize | Sortie Nombre d’enfants |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3937,11 +3937,11 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 
 Obtient les étiquettes enfants
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | childrenBuffer | Sortie Mémoire tampon les étiquettes enfants seront copiées dans. Étiquettes des enfants |
 | childrenBufferSize | Taille (en nombre d’étiquettes) du childrenBuffer. |
 | actualChildrenSize | Sortie Nombre d’étiquettes enfants écrites dans la mémoire tampon |
@@ -3964,11 +3964,11 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 Obtient les paramètres personnalisés définis par la stratégie d’une étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| label | Étiquette |
+| label | Etiquette |
 | paramètres | Sortie Dictionnaire de paramètres, appartenant à l’appelant |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
@@ -3987,7 +3987,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 Obtient les métadonnées de l’action « Metadata » à supprimer
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -3997,7 +3997,7 @@ Paramètre | Description
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
-**Remarque**: la variable’metadataNames’doit être libérée par l’appelant en appelant @note MIP_CC_ReleaseStringList la suppression des métadonnées doit être effectuée avant l’ajout de métadonnées 
+**Remarque**: la variable’metadataNames’doit être libérée par l’appelant en appelant MIP_CC_ReleaseStringList la @note suppression des métadonnées doit être effectuée avant l’ajout de métadonnées 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
@@ -4010,7 +4010,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 Obtient les métadonnées de l’action « Metadata » à ajouter
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4020,7 +4020,7 @@ Paramètre | Description
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
-**Remarque**: la variable « Metadata » doit être libérée par l’appelant en appelant @note MIP_CC_ReleaseDictionary la suppression des métadonnées doit être effectuée avant l’ajout de métadonnées 
+**Remarque**: la variable « Metadata » doit être libérée par l’appelant en appelant MIP_CC_ReleaseDictionary la @note suppression des métadonnées doit être effectuée avant l’ajout de métadonnées 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
@@ -4033,7 +4033,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 Créer un dictionnaire de clés/valeurs de chaîne
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4058,7 +4058,7 @@ mip_cc_result MIP_CC_CreateMetadataDictionary(
 
 Obtenir des entrées de métadonnées qui composent un dictionnaire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4083,7 +4083,7 @@ mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
 
 Libérer les ressources associées à un dictionnaire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4097,7 +4097,7 @@ void MIP_CC_ReleaseMetadataDictionary(mip_cc_metadata_dictionary dictionary);
 
 Libérer les ressources associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4111,7 +4111,7 @@ void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 
 Obtient la taille de la mémoire tampon requise pour l’ID du moteur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4132,7 +4132,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
 
 Obtient l’ID du moteur
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4159,7 +4159,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
 
 Obtient la taille des données clientes associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4180,7 +4180,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
 
 Obtenir des données client associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4207,7 +4207,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
 
 Obtient une valeur indiquant si la stratégie stipule qu’un document doit être étiqueté.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4228,7 +4228,7 @@ mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
 
 Obtient la taille des données clientes associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4249,7 +4249,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
 
 Obtenir des données client associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4276,7 +4276,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
 
 Obtient la taille des données clientes associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4297,7 +4297,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
 
 Obtenir des données client associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4324,7 +4324,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
 
 Obtient une valeur indiquant si la stratégie a des règles automatiques ou de recommandation
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4345,7 +4345,7 @@ mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
 
 Obtient l’heure de la dernière récupération de la stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4366,7 +4366,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
 
 Obtient le nombre d’étiquettes de sensibilité associées au moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4387,7 +4387,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
 
 Obtient les étiquettes de sensibilité associées au moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4414,7 +4414,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
 
 Obtient l’étiquette de sensibilité par ID
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4437,7 +4437,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
 
 Obtient le nombre de types de sensibilité associés au moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4458,7 +4458,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
 
 Obtient les types de sensibilité associés au moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4485,7 +4485,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
 
 Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4508,11 +4508,11 @@ mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
 
 Enregistre un événement spécifique de l’application dans le pipeline d’audit
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
-| level | Niveau de l’événement : info/Error/Warning |
+| niveau | Niveau de l’événement : info/Error/Warning |
 | eventType | Description du type d’événement |
 | eventData | Données associées à l’événement. |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
@@ -4532,7 +4532,7 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
 
 Obtient la taille de l’ID de locataire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4553,7 +4553,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetTenantIdSize(
 
 Obtient l’ID de locataire
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4580,7 +4580,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetTenantId(
 
 Obtient la taille du fichier XML de données de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4601,7 +4601,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
 
 Obtient le XML des données de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4628,7 +4628,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
 
 Obtient la taille des données XML des types de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4649,7 +4649,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
 
 Obtient le XML des données des types de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4676,7 +4676,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
 
 Obtient la taille des données clientes associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4697,7 +4697,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
 
 Obtenir des données client associées à un moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4724,7 +4724,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
 
 Créer un objet de paramètres utilisé pour créer un tout nouveau moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4753,7 +4753,7 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
 
 Définit les données du client qui seront stockées de façon opaque à côté de ce moteur et qui sont conservées entre les sessions
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4774,7 +4774,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
 
 Configure les paramètres personnalisés, utilisés pour la régulation et le test des fonctionnalités.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4795,7 +4795,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
 
 Définit l’ID de session qui peut être utilisé pour mettre en corrélation les journaux et la télémétrie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4816,7 +4816,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
 
 Définit le Cloud qui affecte les URL de point de terminaison pour toutes les demandes de service
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4839,12 +4839,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloud(
 
 Définit l’URL de base pour toutes les demandes de service
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
 | paramètres | Paramètres du moteur |
-| cloudEndpointBaseUrl | URL de base (par exemplehttps://dataservice.protection.outlook.com, «») |
+| cloudEndpointBaseUrl | URL de base (par exemple, « https://dataservice.protection.outlook.com ») |
 | errorInfo | Sortie Facultatif Informations d’échec si le résultat de l’opération est une erreur |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -4862,7 +4862,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
 
 Définit l’utilisateur délégué
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4885,7 +4885,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
 
 Définit le filtre d’étiquette
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4906,7 +4906,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetLabelFilter(
 
 Libérer les ressources associées aux paramètres du moteur de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4920,7 +4920,7 @@ void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 
 Libérer les ressources associées à un gestionnaire de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4934,7 +4934,7 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 
 Obtient l’étiquette actuelle d’un document
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4959,7 +4959,7 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 
 Exécute les règles de stratégie en fonction de l’état fourni et détermine les actions correspondantes
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -4988,7 +4988,7 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 Appelé par l’application après que des actions calculées ont été appliquées et que des données ont été validées sur le disque
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5015,7 +5015,7 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
 
 Déclencher un rappel d’authentification
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5040,7 +5040,7 @@ mip_cc_result MIP_CC_PolicyProfile_AcquireAuthToken(
 
 Charger un profil
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5061,7 +5061,7 @@ mip_cc_result MIP_CC_LoadPolicyProfile(
 
 Libérer les ressources associées à un profil de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5075,7 +5075,7 @@ void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 
 Créer un objet de paramètres utilisé pour créer un profil de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5100,7 +5100,7 @@ mip_cc_result MIP_CC_CreatePolicyProfileSettings(
 
 Définit l’ID de session qui peut être utilisé pour mettre en corrélation les journaux et la télémétrie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5121,7 +5121,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
 
 Remplacer la pile HTTP par défaut par le propriétaire du client
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5142,7 +5142,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
 
 Remplacer le répartiteur de tâches Async par défaut par le propriétaire du client
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5163,7 +5163,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
 
 Configure les paramètres personnalisés, utilisés pour la régulation et le test des fonctionnalités.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5184,7 +5184,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
 
 Libérer les ressources associées à des paramètres de profil de stratégie
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5198,7 +5198,7 @@ void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profileS
 
 Obtient la taille de la mémoire tampon requise pour stocker l’URL de chiffrement à clé double.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5219,7 +5219,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize(
 
 Obtient l’URL de chiffrement à clé double
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5246,7 +5246,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl(
 
 Obtient un ID de modèle d’action « protéger par le modèle »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5267,7 +5267,7 @@ mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
 
 Obtient un ID de modèle d’action « protéger par le modèle avec la double clé »
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5288,7 +5288,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetTemplateId(
 
 Obtient la taille de la mémoire tampon requise pour stocker l’URL de chiffrement à clé double.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5309,7 +5309,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize(
 
 Obtient l’URL de chiffrement à clé double
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5336,7 +5336,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl(
 
 Obtient la taille de la mémoire tampon requise pour stocker l’URL de chiffrement à clé double.
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5357,7 +5357,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize(
 
 Obtient l’URL de chiffrement à clé double
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5384,7 +5384,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl(
 
 Obtient les noms des éléments d’interface utilisateur de l’action supprimer le pied de page de contenu à supprimer
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5407,7 +5407,7 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 Obtient les noms des éléments d’interface utilisateur de l’action supprimer l’en-tête de contenu à supprimer
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5430,7 +5430,7 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 Obtient les noms des éléments d’interface utilisateur de l’action « supprimer le filigrane » à supprimer
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5453,7 +5453,7 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 Libérer les ressources associées à un type de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5467,7 +5467,7 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 
 Obtient la taille de la mémoire tampon requise pour stocker l’ID de package de règles d’un type de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5488,7 +5488,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 
 Obtient l’ID de package de règle d’un type de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5515,7 +5515,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 Obtient la taille de la mémoire tampon requise pour stocker le package de règles d’un type de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|
@@ -5536,7 +5536,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 
 Obtient le package de règles d’un type de sensibilité
 
-**Parameters**
+**Paramètres**
 
 Paramètre | Description
 |---|---|

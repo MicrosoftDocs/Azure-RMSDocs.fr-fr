@@ -1,6 +1,6 @@
 ---
 title: Procédure d’inscription de votre application dans Azure AD - AIP
-description: Décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS.
+description: En savoir plus sur l’inscription des applications et l’activation de RMS dans le Portail Azure et l’authentification des utilisateurs avec la bibliothèque d’authentification Azure Active Directory (ADAL).
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 09823af031db2968c951c6c3610bc14e6a31bd17
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135638"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564397"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
@@ -70,9 +70,9 @@ Il provient de l’étape d’inscription dans le portail Azure.
 > [!NOTE]
 > **L’étendue** n’est pas utilisée, mais peut l’être et est donc réservée à une utilisation future.
 
-    Android: `msauth://packagename/Base64UrlencodedSignature`
+Android : `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS: `<app-scheme>://<bundle-id>`
+Libéré `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.

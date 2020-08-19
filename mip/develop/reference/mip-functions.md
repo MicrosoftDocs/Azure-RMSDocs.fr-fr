@@ -6,16 +6,14 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489246"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563703"
 ---
-# <a name="functions"></a>Fonctions
-
-
+# <a name="functions-c"></a>Fonctions (C++) 
 
 ## <a name="namespace-mip"></a>Espace de noms MIP
 
@@ -26,20 +24,20 @@ public static std :: String GetActionSourceString (ActionSource actionSource)  
 public static std :: String GetDataStateString (MIP ::D ataState State)       |  Obtient le nom de l’état du contenu.
 public const std::string& GetCustomSettingPolicyDataName()       |  Nom du paramètre pour spécifier explicitement les données de stratégie.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier afin d’exporter les données de stratégie SCC.
-public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Nom du paramètre pour spécifier explicitement les données de sensibilité.
+public const std :: String& GetCustomSettingSensitivityTypesDataName ()       |  Nom du paramètre pour spécifier explicitement les données de sensibilité.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier de données de stratégie.
-public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès du fichier de données des types de sensibilité.
-public const std :: String & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nom du paramètre qui autorise l’activation de l’étiquette par des propriétés personnalisées et des propriétés personnalisées par des fonctionnalités d’étiquette.
-public const std :: String & GetCustomSettingPolicyTtlDays ()       |  Le nom du paramètre qui active la durée de vie de la stratégie de remplacement en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
-public const std :: String & GetCustomSettingSensitivityPolicyTtlDays ()       |  Le nom du paramètre qui permet de remplacer la durée de vie de la stratégie de sensibilité en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
-public const std :: Map\<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
-public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromStdStream (const std :: shared_ptr\<std :: IStream\>& stdIStream)       |  Crée un flux à partir d’un std :: IStream.
-public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromStdStream (const std :: shared_ptr\<std :: ostream\>& stdOStream)       |  Crée un flux à partir d’un std :: ostream.
-public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromStdStream (const std :: shared_ptr\<std :: iostream\>& stdIOStream)       |  Crée un flux à partir d’un std :: iostream.
-public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromBuffer (uint8_t * tampon, const int64_t taille)       |  Crée un flux à partir d’une mémoire tampon.
-public MIP_API std :: Vector\<uint8_t\> ReadFromStream (const std :: shared_ptr\<MIP :: Stream\>flux &)       |  Lit tous les octets du flux.
+public const std :: String& GetCustomSettingSensitivityTypesDataFile ()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès du fichier de données des types de sensibilité.
+public const std :: String& GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nom du paramètre qui autorise l’activation de l’étiquette par des propriétés personnalisées et des propriétés personnalisées par des fonctionnalités d’étiquette.
+public const std :: String& GetCustomSettingPolicyTtlDays ()       |  Le nom du paramètre qui active la durée de vie de la stratégie de remplacement en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
+public const std :: String& GetCustomSettingSensitivityPolicyTtlDays ()       |  Le nom du paramètre qui permet de remplacer la durée de vie de la stratégie de sensibilité en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
+public const std :: map \<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
+public MIP_API std :: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std :: shared_ptr \<std::istream\>& stdIStream)       |  Crée un Flux à partir d’un a std::istream.
+public MIP_API std :: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std :: shared_ptr \<std::ostream\>& stdOStream)       |  Crée un Flux à partir d’un a std::ostream.
+public MIP_API std :: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std :: shared_ptr \<std::iostream\>& stdIOStream)       |  Crée un Flux à partir d’un a std::iostream.
+public MIP_API std :: shared_ptr \<mip::Stream\> CreateStreamFromBuffer (uint8_t * buffer, const int64_t Size)       |  Crée un Flux à partir d’une mémoire tampon.
+public MIP_API std :: Vector \<uint8_t\> readFromStream (const std :: shared_ptr \<mip::Stream\>& flux)       |  Lit tous les octets du flux.
 & d’opérateur ActionType public (ActionType a, ActionType b)       |  Opérateur and (&) pour l’énumération de type d’action.
-opérateur ActionType public ^ (ActionType a, ActionType b)       |  Opérateur XOR (^) pour l’énumération de type d’action.
+opérateur ActionType public ^ (ActionType a, ActionType b)       |  Opérateur Xor (^) pour le type Action enum.
 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString fonction)
 Convertit l’énumération assignation en Description de chaîne.
@@ -69,19 +67,19 @@ Paramètres :
   
 **Retourne**: une représentation sous forme de chaîne de l’état du contenu.
   
-### <a name="getcustomsettingpolicydataname-function"></a>GetCustomSettingPolicyDataName function
+### <a name="getcustomsettingpolicydataname-function"></a>GetCustomSettingPolicyDataName fonction)
 Nom du paramètre pour spécifier explicitement les données de stratégie.
 
   
 **Renvoie** : la clé des paramètres personnalisés.
   
-### <a name="getcustomsettingexportpolicyfilename-function"></a>GetCustomSettingExportPolicyFileName function
+### <a name="getcustomsettingexportpolicyfilename-function"></a>GetCustomSettingExportPolicyFileName fonction)
 Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier afin d’exporter les données de stratégie SCC.
 
   
 **Renvoie** : la clé des paramètres personnalisés.
   
-### <a name="getcustomsettingsensitivitytypesdataname-function"></a>GetCustomSettingSensitivityTypesDataName function
+### <a name="getcustomsettingsensitivitytypesdataname-function"></a>GetCustomSettingSensitivityTypesDataName fonction)
 Nom du paramètre pour spécifier explicitement les données de sensibilité.
 
   
@@ -124,7 +122,7 @@ Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
 **Retourne**: état par défaut des fonctionnalités de vol
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
-Crée un flux à partir d’un std :: IStream.
+Crée un Flux à partir d’un a std::istream.
 
 Paramètres :  
 * **stdIStream** : sauvegarde std::istream
@@ -135,7 +133,7 @@ Paramètres :
 **Retourne**: flux d’encapsulation d’un std :: IStream
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
-Crée un flux à partir d’un std :: ostream.
+Crée un Flux à partir d’un a std::ostream.
 
 Paramètres :  
 * **stdIStream** : sauvegarde std::ostream
@@ -146,7 +144,7 @@ Paramètres :
 **Retourne**: flux d’encapsulation d’un std :: ostream
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
-Crée un flux à partir d’un std :: iostream.
+Crée un Flux à partir d’un a std::iostream.
 
 Paramètres :  
 * **stdIOStream** : sauvegarde std::iostream
@@ -157,10 +155,10 @@ Paramètres :
 **Retourne**: flux d’encapsulation d’un std :: iostream
   
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer fonction)
-Crée un flux à partir d’une mémoire tampon.
+Crée un Flux à partir d’une mémoire tampon.
 
 Paramètres :  
-* **buffer** : pointeur vers une mémoire tampon
+* **buffer**: pointeur vers une mémoire tampon
 
 
 
@@ -179,13 +177,13 @@ Paramètres :
 **Retourne**: un vecteur d’octets.
   
 ### <a name="operator-function"></a>opérateur | fonctionnalités
-Opérateur or (|) pour l’énumération de type d’action.
+Opérateur Or (|) pour le type Action enum.
   
-### <a name="operator-function"></a>fonction & operator
+### <a name="operator-function"></a>fonction& Operator
 Opérateur and (&) pour l’énumération de type d’action.
   
 ### <a name="operator-function"></a>fonction operator ^
-Opérateur XOR (^) pour l’énumération de type d’action.
+Opérateur Xor (^) pour le type Action enum.
 
 ## <a name="namespace-mipauditmetadatakeys"></a>espace de noms MIP :: auditmetadatakeys
 
@@ -211,7 +209,7 @@ _Pas encore documenté._
 _Pas encore documenté._
 
 
-## <a name="namespace-miprights"></a>espace de noms `mip::rights` 
+## <a name="namespace-miprights"></a>joint `mip::rights` 
   
 Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
@@ -226,9 +224,9 @@ public std::string Comment()       |  Obtient un identificateur de chaîne pour 
 public std::string Reply()       |  Obtient un identificateur de chaîne pour un droit « répondre ».
 public std::string ReplyAll()       |  Obtient un identificateur de chaîne pour un droit « répondre à tous ».
 public std::string Forward()       |  Obtient un identificateur de chaîne pour un droit « transférer ».
-public std :: Vector\<std :: String\> EmailRights ()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
-public std :: Vector\<std :: String\> EditableDocumentRights ()       |  Obtient une liste de droits qui s’appliquent aux documents.
-public std :: Vector\<std :: String\> CommonRights ()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
+public std :: Vector \<std::string\> EmailRights ()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
+public std :: Vector \<std::string\> EditableDocumentRights ()       |  Obtient une liste de droits qui s’appliquent aux documents.
+public std :: Vector \<std::string\> CommonRights ()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
   
 ### <a name="owner-function"></a>Fonction owner
 Obtient un identificateur de chaîne pour un droit « propriétaire ».
@@ -260,7 +258,7 @@ Obtient un identificateur de chaîne pour un droit « exporter ».
   
 **Renvoie** : identificateur de chaîne de « export » vers la droite
   
-### <a name="extract-function"></a>fonction Extract
+### <a name="extract-function"></a>Extraire une fonction
 Obtient un identificateur de chaîne pour un droit « extraire ».
 
   
@@ -314,7 +312,7 @@ Obtient une liste des droits qui s’appliquent dans tous les scénarios.
   
 **Renvoie** : une liste des droits qui s’appliquent dans tous les scénarios
 
-## <a name="namespace-miproles"></a>espace de noms `mip::roles` 
+## <a name="namespace-miproles"></a>joint `mip::roles` 
   
 Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------

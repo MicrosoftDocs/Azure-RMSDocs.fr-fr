@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 53f9b0b11c89e66fccc10243d48bc2835884ea35
-ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
+ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437833"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788643"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -57,7 +57,7 @@ Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être in
 Utilisez les sections suivantes pour vous aider à déterminer quel client est le mieux adapté à votre organisation :
 
 - [Client d’étiquetage Office intégré](#built-in-office-labeling-client)
-- [Client d’étiquetage unifié Azure Information Protection](#azure-information-protection-unified-labeling-client)
+- [Azure Information Protection client d’étiquetage unifié](#azure-information-protection-unified-labeling-client)
 - [Client Azure Information Protection Classic](#azure-information-protection-classic-client)
 - [Utilisation de plusieurs clients dans le même environnement](#using-multiple-clients-in-the-same-environment)
 
@@ -138,7 +138,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
 |Les personnalisations sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />-Afficher les messages dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
-|Scanneur pour magasins de données locaux :| **Oui** | **Oui<br />** | Non |
+|Scanneur pour magasins de données locaux :| **Oui** | **Oui <br />** | Non |
 |Création centralisée de rapports (analytique) :| **Oui** | **Oui** | Non |
 |Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| Non |
 |Barre Information Protection dans les applications Office :| **Oui** | **Oui**| Non |
@@ -147,17 +147,17 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Marquages visuels dynamiques avec des variables :| **Oui** | **Oui** | Non |
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|
-|Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non  |
+|Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non |
 |Applets de commande d’étiquetage PowerShell :| **Oui** | **Oui** <sup>4</sup> | Non |
 |Prise en charge hors connexion des actions de protection :| **Oui** | **Oui** <sup>5</sup> | **Oui** |
 |Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés :| **Oui** |**Oui**| Non |
-|Prise en charge de HYOK :| **Oui** | Non | Non  |
-|Journalisation de l’utilisation dans observateur d’événements :| **Oui** | Non |Non  |
-|Afficher le bouton ne pas transférer dans Outlook :| **Oui** | Non | Non  |
+|Prise en charge de HYOK :| **Oui** | Non | Non |
+|Journalisation de l’utilisation dans observateur d’événements :| **Oui** | Non |Non |
+|Afficher le bouton ne pas transférer dans Outlook :| **Oui** | Non | Non |
 |Suivre les documentés protégés :| **Oui** | **Oui** <sup>6</sup> | Non |
-|Révoquer les documents protégés :| **Oui** | Non | Non  |
-|Mode Protection uniquement (pas d’étiquettes) :| **Oui** | Non | Non  |
-|Prise en charge du changement de compte :| Non  | Non | **Oui** |
+|Révoquer les documents protégés :| **Oui** | Non | Non |
+|Mode Protection uniquement (pas d’étiquettes) :| **Oui** | Non | Non |
+|Prise en charge du changement de compte :| Non | Non | **Oui** |
 |Prise en charge de Services Bureau à distance :| **Oui** | **Oui** | **Oui** |
 |Prise en charge des services AD RMS :| **Oui** | Non <sup>7</sup> | Non |
 |Supprimer le marquage de contenu externe dans l’application :| **Oui**| **Oui**| Non|
@@ -200,6 +200,9 @@ Lorsque le client Azure Information Protection (Classic) et le Azure Information
 |Étiquettes automatiques et recommandées : | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans les centres d’administration avec les types d’informations sensibles intégrés et des [types d’informations personnalisés](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|
 |Prise en charge des commandes pour les sous-étiquettes sur les pièces jointes : | Activé avec un [paramètre client avancé](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Activé par défaut, aucune configuration n’est requise|
 |Modifier le comportement de protection par défaut pour les types de fichiers : | Vous pouvez utiliser des [modifications du Registre](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) pour remplacer les valeurs par défaut de protection native et générique | Vous pouvez utiliser [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) pour modifier les types de fichiers qui sont protégés|
+|Analyses automatiques | Les analyses complètes sont exécutées automatiquement chaque fois que l’analyseur détecte une modification de la stratégie ou des paramètres d’étiquetage | À partir de la version [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview), les administrateurs peuvent choisir d’ignorer une nouvelle analyse complète après avoir apporté des modifications aux paramètres de la stratégie ou du travail d’analyse du contenu. |
+|Détection de réseau |Les fonctionnalités de découverte du réseau ne sont pas disponibles pour le scanneur classique | Les administrateurs peuvent découvrir des référentiels à risque supplémentaires en analysant une adresse IP ou une plage spécifiée.|
+| | | |
 
 Pour une comparaison détaillée des différences de comportement pour des paramètres de protection spécifiques, consultez [comparaison du comportement des paramètres de protection pour une étiquette](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -217,7 +220,7 @@ Bien que le client d’étiquetage unifié Azure Information Protection soit tou
 
 - Protéger le document PDF en tant que [. ppdf (ancien format)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
-- Afficher le bouton Ne pas transférer dans Outlook
+- Afficher le bouton **ne pas transférer** dans Outlook
 
 - Stratégie de démonstration
 
@@ -240,6 +243,6 @@ Pour installer et configurer les clients Azure Information Protection, utilisez 
 
 - [Client Azure Information Protection](AIP-client.md)
 
-- [Client d’étiquetage unifié Azure Information Protection](unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection client d’étiquetage unifié](unifiedlabelingclient-version-release-history.md)
 
 Pour plus d’informations sur l’utilisation du client d’étiquetage intégré pour les applications Office 365, consultez [étiquettes de sensibilité dans les applications Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).

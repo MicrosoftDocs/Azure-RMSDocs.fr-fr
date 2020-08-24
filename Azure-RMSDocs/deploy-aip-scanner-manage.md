@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6dcad16cdcb2c2d00277ce94b9cf4ab5db94227
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049536"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788745"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution de l’analyseur de Azure Information Protection
 
@@ -87,7 +87,7 @@ Modifiez le niveau de journalisation à l’aide du paramètre *ReportLevel* ave
 
 L’emplacement ou le nom du dossier de rapport ne peut pas être modifié. Si vous souhaitez stocker des rapports dans un autre emplacement, envisagez d’utiliser une jonction de répertoire pour le dossier.
 
-Par exemple, utilisez la commande [MKLINK](/windows-server/administration/windows-commands/mklink) :`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+Par exemple, utilisez la commande [MKLINK](/windows-server/administration/windows-commands/mklink) : `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
 Si vous avez effectué ces étapes après une configuration et une installation initiales, poursuivez [la configuration du scanneur pour appliquer la classification et la protection](deploy-aip-scanner-configure-install.md#configure-the-scanner-to-apply-classification-and-protection).
 
@@ -99,7 +99,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
     ![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
 
-- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
+- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
 
     ```ps
     Stop-AIPScan 
@@ -109,32 +109,34 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
 Pour le [premier cycle d’analyse](#run-a-discovery-cycle-and-view-reports-for-the-scanner), le scanneur inspecte tous les fichiers des magasins de données configurés. Pour les analyses suivantes, seuls les fichiers nouveaux ou modifiés sont inspectés.
 
-L’inspection de nouveau de tous les fichiers est généralement utile lorsque vous souhaitez que les rapports incluent tous les fichiers et lorsque le scanneur s’exécute en mode détection.
+L’inspection de nouveau de tous les fichiers est généralement utile lorsque vous souhaitez que les rapports incluent tous les fichiers, lorsque vous avez des modifications que vous souhaitez appliquer à tous les fichiers et lorsque le scanneur s’exécute en mode découverte.
 
-Exécutez une nouvelle analyse de tous vos fichiers à l’aide de l’une des méthodes suivantes :
+**Pour exécuter manuellement une nouvelle analyse complète :**
 
-- [Exécuter manuellement une nouvelle analyse complète](#manually-run-a-full-rescan)
-- [Déclencher une nouvelle analyse complète en actualisant la stratégie](#trigger-a-full-rescan-by-refreshing-the-policy)
+1. Accédez au volet **travaux d’analyse de contenu Azure information protection** dans le portail Azure.
 
-### <a name="manually-run-a-full-rescan"></a>Exécuter manuellement une nouvelle analyse complète
+1. Sélectionnez votre travail d’analyse de contenu dans la liste, puis sélectionnez l’option **relancer l’analyse de tous les fichiers** :
 
-Forcez le scanneur à inspecter à nouveau tous les fichiers, si nécessaire, à partir du volet **travaux d’analyse de contenu Azure information protection** de la portail Azure.
-
-Sélectionnez votre travail d’analyse de contenu dans la liste, puis sélectionnez l’option **relancer l’analyse de tous les fichiers** :
-
-![Relancer l’analyse pour le scanneur Azure Information Protection](./media/scanner-rescan-files.png)
+    ![Relancer l’analyse pour le scanneur Azure Information Protection](./media/scanner-rescan-files.png)
 
 Lorsqu’une analyse complète est terminée, le type d’analyse passe automatiquement à incrémentiel afin que, pour les analyses suivantes, seuls les fichiers nouveaux ou modifiés soient à nouveau analysés.
 
-### <a name="trigger-a-full-rescan-by-refreshing-the-policy"></a>Déclencher une nouvelle analyse complète en actualisant la stratégie
+> [!TIP]
+> Si vous avez apporté des modifications à votre [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)AIP, le portail Azure vous invite à ignorer une nouvelle analyse complète. Pour vous assurer que votre nouvelle analyse se produit, veillez à sélectionner **non** dans l’invite qui s’affiche.
+> 
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>Déclencher une nouvelle analyse complète en modifiant vos paramètres (versions 2.7.99.0 et antérieures)
 
-Tous les fichiers sont également inspectés chaque fois que le scanneur a des paramètres nouveaux ou modifiés pour l’étiquetage automatique et recommandé. Le scanneur actualise automatiquement la stratégie toutes les quatre heures.
+Dans les versions de scanneur 2.7.99.0 et antérieures, tous les fichiers sont analysés chaque fois que l’analyseur détecte des paramètres nouveaux ou modifiés pour l’étiquetage automatique et recommandé. Le scanneur actualise automatiquement la stratégie toutes les quatre heures.
 
-Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez manuellement le contenu du répertoire **%LocalAppData%\Microsoft\MSIP\mip \\ < *ProcessName*> \mip** et redémarrez le service Azure information protection.
+Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez manuellement le contenu du répertoire **%LocalAppData%\Microsoft\MSIP\mip \<processname> \mip** et redémarrez le service Azure information protection.
 
-> [!NOTE]
-> Si vous avez également modifié les paramètres de protection de vos étiquettes, patientez 15 minutes après l’enregistrement des paramètres de protection mis à jour avant le redémarrage du service Azure Information Protection.
+Si vous avez également modifié les paramètres de protection de vos étiquettes, patientez 15 minutes après l’enregistrement des paramètres de protection mis à jour avant le redémarrage du service Azure Information Protection.
+
+> [!IMPORTANT]
+> Si vous avez effectué une mise à niveau vers la version [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
 >
+> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on,** veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
+> 
 
 ## <a name="troubleshooting-a-stopped-scan"></a>Résolution des problèmes d’analyse arrêtée
 

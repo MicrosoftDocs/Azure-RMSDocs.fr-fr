@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection l’historique des versions du client d’étiquetage unifié-version & la stratégie de support
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 07/15/2020
+ms.date: 08/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a02fabd167fdbe7f0e2cef826c68920c164a20e4
-ms.sourcegitcommit: c0cd6591a44b213a68a6d1bb47acbb344bb94783
+ms.openlocfilehash: 6a264c971be86e324f3541f20ab6c91735619f77
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2020
-ms.locfileid: "88256861"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788694"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -29,7 +29,9 @@ ms.locfileid: "88256861"
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure information protection**  >  **Microsoft Azure information protection client d’étiquetage unifié**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
+Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update. Les versions de Azure information protection ont un nom de produit de **Microsoft Azure information protection**  >  **Microsoft Azure information protection client d’étiquetage unifié**et une classification des **mises à jour**. 
+
+L’inclusion de Azure Information Protection dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou d’Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
 Pour plus d’informations, consultez [mise à niveau et maintenance du client d’étiquetage unifié Azure information protection](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -63,6 +65,96 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
+## <a name="version-2883-public-preview"></a>Version 2.8.83 (version préliminaire publique)
+
+2.8.83 de version de scanneur d’étiquetage unifiée
+
+**Publication** le 08/24/2020
+
+**Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié :**
+- [Analyses complètes facultatives pour les modifications détectées](#optional-full-rescans-for-changes-detected)
+- [Prise en charge de la découverte du réseau](#network-discovery-support)
+
+### <a name="optional-full-rescans-for-changes-detected"></a>Analyses complètes facultatives pour les modifications détectées
+
+Les administrateurs peuvent désormais ignorer une nouvelle analyse complète après avoir apporté des modifications aux stratégies ou aux travaux d’analyse de contenu. Si vous ignorez une nouvelle analyse complète, vos modifications ne sont appliquées que sur les fichiers qui ont été modifiés ou créés depuis la dernière analyse.
+
+Par exemple, vous avez peut-être apporté des modifications qui affectent uniquement l’utilisateur final, comme dans les marquages visuels, et vous ne souhaitez pas prendre le temps nécessaire pour exécuter une nouvelle analyse complète immédiatement. 
+
+Ignorez la nouvelle analyse complète et immédiate, puis revenez plus tard pour [exécuter une nouvelle analyse complète](../deploy-aip-scanner-manage.md#rescanning-files) et appliquer vos modifications dans vos référentiels.
+
+> [!IMPORTANT]
+> Les administrateurs qui modifient leurs stratégies et les travaux d’analyse de contenu doivent maintenant comprendre les effets de ces modifications sur le contenu et déterminer si une nouvelle analyse complète est nécessaire.
+> 
+> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on,** veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
+>
+
+### <a name="network-discovery-support"></a>Prise en charge de la découverte du réseau
+
+Le scanneur d’étiquetage unifié comprend maintenant un nouveau service de **découverte du réseau** , qui vous permet d’analyser les adresses IP ou plages spécifiées pour les partages de fichiers réseau qui peuvent avoir un contenu sensible. 
+
+Le service de **découverte du réseau** met à jour les rapports de **référentiel** avec une liste d’emplacements de partage susceptibles d’être menacés, en fonction des autorisations et des droits d’accès découverts. Vérifiez les rapports de **référentiel** mis à jour pour vous assurer que vos travaux d’analyse de contenu incluent tous les référentiels devant être analysés.
+
+- [Conditions préalables pour la découverte du réseau](#network-discovery-prerequisites)
+- [Utilisation du service de découverte du réseau](#using-the-network-discovery-service)
+
+### <a name="network-discovery-prerequisites"></a>Conditions préalables pour la découverte du réseau
+
+|Condition requise  |Description  |
+|---------|---------|
+|**Analyseur et cluster mis à niveau configurés**     |  Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. </br></br>Pour plus d'informations, consultez les pages suivantes : </br>- [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner) </br>- [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)       |
+|**Azure Information Protection Analytics**     | Assurez-vous que Azure Information Protection Analytics est activé. </br></br>Dans la Portail Azure, accédez à **Azure Information Protection > gérer > configurer Analytics (** préversion). </br></br>Pour plus d’informations, consultez [central Reporting for Azure information protection (version préliminaire publique)](../reports-aip.md).        |
+
+### <a name="using-the-network-discovery-service"></a>Utilisation du service de découverte du réseau
+
+1. Activez la découverte du réseau en exécutant l’applet de commande PowerShell [**install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) . 
+
+    > [!IMPORTANT]
+    > Lors de l’exécution de cette applet de commande, veillez à utiliser un utilisateur faible comme valeur pour le paramètre **StandardDomainsUserAccount** afin de vous assurer que tout accès public aux dépôts est signalé. 
+    >
+    > Cet utilisateur doit être membre du groupe **utilisateurs du domaine** uniquement et utilisé pour simuler un accès public aux dépôts.
+
+1. Dans la Portail Azure, accédez à Azure Information Protection > **travaux d’analyse réseau** et [créez des travaux pour analyser des zones spécifiques de votre réseau](../deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview). 
+
+
+1. Utilisez les rapports générés dans le nouveau volet [**référentiels**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pour rechercher les partages de fichiers réseau supplémentaires qui peuvent être menacés. Ajoutez tous les partages de fichiers risqués à vos [travaux d’analyse de contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) pour analyser les référentiels ajoutés au contenu sensible.
+
+#### <a name="network-discovery-cmdlets"></a>Applets de commande de découverte du réseau
+
+Les applets de commande PowerShell ajoutées pour la **découverte du réseau** sont les suivantes :
+
+|Applet de commande  |Description  |
+|---------|---------|
+|[**MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Obtient le paramètre actuel indiquant si le service de **découverte du réseau** extrait les données d’analyse réseau de la configuration par défaut, en ligne ou hors connexion exportée à partir de la portail Azure.      |
+|[**MIPNetworkDiscoveryJobs**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Obtient la liste des travaux d’analyse réseau actuellement configurés.     |
+|[**MIPNetworkDiscoveryStatus**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     Obtient l’état actuel du service de **découverte du réseau** .    |
+| [**Import-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    Importe la configuration d’un travail d’analyse réseau à partir d’un fichier.     |
+| [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| Installe le service de **découverte du réseau** |
+|[**Set-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   Définit la configuration pour que le service de **découverte du réseau** extraie les données d’analyse réseau de la configuration par défaut, en ligne ou d’un fichier hors connexion exporté à partir du portail Azure.      |
+|[**Start-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  Exécute immédiatement un travail d’analyse réseau spécifique.       |
+|[**Uninstall-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Désinstalle le service de **découverte du réseau** .       |
+
+### <a name="fixes-and-improvements"></a>Correctifs et améliorations
+
+Les correctifs suivants ont été fournis dans la version 2.8.83 de l’Azure Information Protection scanneur d’étiquetage unifié :
+
+|Fonctionnalité  |Problèmes résolus  |
+|---------|---------|
+|**Exigences relatives au chemin de fichier**     |  Améliorations de l’analyse des fichiers avec des chemins d’accès longs. Pour plus d’informations, consultez [file path Requirements](../deploy-aip-scanner-prereqs.md#file-path-requirements).       |
+|**Prise en charge de [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) pour plusieurs ContentDatabases**     |Le scanneur AIP analyse désormais les environnements SharePoint complets lorsqu’il y a plusieurs ContentDatabases.    |
+|**FilePaths [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) pris en charge**     |Le scanneur AIP prend désormais en charge les fichiers SharePoint avec un point dans le chemin, mais aucune extension. </br></br>Par exemple, un fichier avec un chemin d’accès `https://sharepoint.contoso.com/shared documents/meeting-notes` , sans extension, est maintenant analysé avec succès.      |
+|**Prise en charge des types d’informations sensibles personnalisés**     |   Le scanneur AIP prend désormais en charge les [types d’informations sensibles personnalisés](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) qui sont créés dans le centre de sécurité et conformité Microsoft et qui n’appartiennent à aucune stratégie.      |
+
+## <a name="version-271010"></a>Version 2.7.101.0
+
+2.7.101.0 de la version du client et du scanneur d’étiquetage unifiée
+
+**Publication** le 08/23/2020
+
+**Résoudre**
+
+Correction du problème pour les utilisateurs de PPT, d’Excel et de Word, ce qui a entraîné le blocage, le blocage ou l’obligation de répéter l’enregistrement qui était lié aux étiquettes obligatoires configurées avec la protection, le filigrane et/ou le marquage du contenu.
+
 ## <a name="version-27990"></a>Version 2.7.99.0
 
 2.7.99.0 de la version du client et du scanneur d’étiquetage unifiée
@@ -70,6 +162,8 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
 **Publication** le 07/20/2020
 
 **Correctifs et améliorations :**
+
+**Publication** le 07/19/2020
 
 Correction des problèmes dans les actions d’étiquetage des fichiers pour les nouveaux journaux d’audit des **étiquettes** .
 
@@ -83,7 +177,8 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 **Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié :**
 
-- [Utilisez le scanneur pour appliquer des étiquettes en fonction des conditions recommandées](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). Les clients AIP peuvent désormais choisir d’implémenter l’étiquetage automatique côté service uniquement. Cette fonctionnalité permet aux utilisateurs d’AIP de toujours suivre les recommandations au lieu du scénario précédent, qui ne permettait que l’étiquetage automatique côté utilisateur.
+
+- [Utilisez le scanneur pour appliquer des étiquettes en fonction des conditions recommandées](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). Les clients AIP peuvent désormais choisir d’implémenter l’étiquetage automatique côté service uniquement. Cette fonctionnalité permet aux utilisateurs d’AIP de suivre toujours les recommandations au lieu du scénario précédent, qui n’autorise que l’étiquetage automatique côté utilisateur.
 
 - [Découvrez quels fichiers découverts précédemment par le moteur d’analyse ont été supprimés du référentiel analysé](https://docs.microsoft.com/azure/information-protection/reports-aip) Ces fichiers supprimés n’ont pas été précédemment signalés dans AIP Analytics et sont désormais disponibles dans le rapport de découverte du scanneur.
 
@@ -124,9 +219,9 @@ Pour plus d'informations, consultez les pages suivantes :
 
 **Application de TLS 1.2**
 
-À partir de cette version du client Azure Information Protection, seules les versions TLS 1,2 ou ultérieures sont prises en charge.
+À partir de cette version du client Azure Information Protection, seules les versions de TLS 1,2 ou ultérieures sont prises en charge.
     
-Les clients qui ont une configuration TLS qui ne prend pas en charge TLS 1,2 doivent migrer vers le programme d’installation qui prend en charge TLS 1,2 pour utiliser les stratégies de Azure Information Protection, les jetons, l’audit et la protection, ainsi que pour recevoir la communication basée sur Azure Information Protection. 
+Les clients qui ont une configuration TLS qui ne prend pas en charge TLS 1,2 doivent passer à un programme d’installation qui prend en charge TLS 1,2 pour utiliser des stratégies de Azure Information Protection, des jetons, des audits et des protections, et pour recevoir des communications basées sur Azure Information Protection. 
     
 Pour plus d’informations sur la configuration requise, consultez [firewalls and Network infrastructure Requirements](../requirements.md#firewalls-and-network-infrastructure).
 
@@ -150,7 +245,7 @@ Pour plus d’informations sur la configuration requise, consultez [firewalls an
 
 - Les [variables utilisateur dynamiques](../configure-policy-markings.md#using-variables-in-the-text-string) sont désormais affichées dans les marquages visuels d’un document comme prévu.
 
-- Problème où seule la première page du contenu d’un fichier PDF était utilisée pour l’application des règles de classification automatique est maintenant résolue, et la classification automatique basée sur tout le contenu du fichier PDF se déroule désormais comme prévu. Pour plus d’informations sur la classification et l’étiquetage, consultez le [Forum aux questions sur la classification et l’étiquetage](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
+- Problème où seule la première page du contenu d’un fichier PDF était utilisée pour l’application des règles de classification automatique est maintenant résolue, et la classification automatique basée sur tout le contenu du fichier PDF se déroule maintenant comme prévu. Pour plus d’informations sur la classification et l’étiquetage, consultez le [Forum aux questions sur la classification et l’étiquetage](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
 
 - Lorsque plusieurs comptes Exchange sont configurés et que le client Azure Information Protection Outlook est activé, les messages électroniques sont envoyés à partir du compte secondaire comme prévu. Pour plus d’informations sur la configuration du client d’étiquetage unifié avec Outlook, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -196,8 +291,8 @@ Pris en charge jusqu’à 12/29/2020
 - Les endommagements précédents des fichiers txt et PDF protégés sont résolus.
 - Une étiquette incohérente entre les Log Analytics **automatique** et **manuelle** a été corrigée. 
 - Des problèmes d’héritage inattendus identifiés entre les nouveaux e-mails et le dernier e-mail ouvert d’un utilisateur sont désormais résolus.  
-- La protection des fichiers. msg en tant que. msg. fichiers pfile fonctionne à présent comme prévu. 
-- Les autorisations de copropriétaire ajoutées à partir des paramètres définis par l’utilisateur Office sont désormais appliquées comme prévu. 
+- La protection des fichiers **. MSG** en tant que **. msg. fichiers pfile** fonctionne à présent comme prévu. 
+- Les autorisations de copropriétaire ajoutées à partir des paramètres Office définis par l’utilisateur sont désormais appliquées comme prévu. 
 - Lorsque vous entrez des autorisations de mise à niveau vers la version antérieure, le texte ne peut plus être entré lorsque d’autres options sont déjà sélectionnées. 
 
 
@@ -232,7 +327,7 @@ Pris en charge jusqu’à 09/09/2020
     
     Vous pouvez mettre à niveau les analyseurs à partir du client Azure Information Protection (Classic). Après la mise à niveau, qui crée une base de données, le moteur de base de données analyse à nouveau tous les fichiers lors de sa première exécution. Pour obtenir des instructions, consultez [mise à niveau de l’analyseur de Azure information protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) à partir du Guide de l’administrateur.
     
-    Pour plus d’informations, consultez l’annonce du billet de blog : l’étiquetage unifié la préversion du [scanneur AIP offre une montée en charge horizontale et bien plus encore.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
+    Pour plus d’informations, reportez-vous à l’annonce du billet de blog : l’étiquetage unifié la préversion du [scanneur AIP offre une montée en charge horizontale, etc.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - L’applet de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) possède de nouveaux paramètres (*AppID*, *AppSecret*, *TenantId*, *DelegatedUser*et *OnBehalfOf*) pour lorsque vous souhaitez étiqueter des fichiers de manière non interactive, ainsi qu’une nouvelle procédure pour inscrire une application dans Azure ad. Les exemples de scénarios incluent le scanneur et les scripts PowerShell automatisés pour étiqueter les documents. Pour obtenir des instructions, consultez [Comment étiqueter des fichiers de manière non interactive](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) à partir du Guide de l’administrateur.
     
@@ -250,7 +345,7 @@ Pris en charge jusqu’à 09/09/2020
 
 - [Prise en charge des ordinateurs déconnectés](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) en exportant des fichiers à partir d’un client et en les copiant manuellement sur l’ordinateur déconnecté. Notez que cette configuration est prise en charge pour l’étiquetage avec l’Explorateur de fichiers, PowerShell et le scanneur. Cette configuration n’est pas prise en charge pour l’étiquetage avec les applications Office.
 
-- New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), pour rassembler tous les fichiers journaux de%LocalAppData%\Microsoft\MSIP\Logs et les enregistre dans un fichier unique et compressé avec un format. zip. Ce fichier peut ensuite être envoyé à Support Microsoft si vous êtes invité à envoyer des fichiers journaux pour vous aider à examiner un problème signalé.
+- New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), pour rassembler tous les fichiers journaux de%LocalAppData%\Microsoft\MSIP\Logs et les enregistre dans un fichier unique et compressé avec un format. zip. Vous pouvez envoyer ce fichier. zip à Support Microsoft si vous êtes invité à envoyer des fichiers journaux pour vous aider à examiner un problème signalé.
 
 **Correctifs :**
 

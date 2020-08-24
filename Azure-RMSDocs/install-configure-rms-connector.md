@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a02d5bb811bd18698a0ca4ec0a797ff4e31ffa4
-ms.sourcegitcommit: a495476a439a57cf6a4b3446575e344504b3fefb
+ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87554937"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788716"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -35,6 +35,7 @@ Assurez-vous que vous avez pris connaissance de l’instance de cloud Souverain 
 - **AzureUSGovernment2**: Azure Government 2
 - **AzureUSGovernment3**: Azure Government 3
 
+
 ## <a name="installing-the-rms-connector"></a>Installation du connecteur RMS
 
 1.  Identifiez les ordinateurs (deux au minimum) pour exécuter le connecteur RMS. Ces ordinateurs doivent respecter la spécification minimale indiquée dans les conditions préalables.
@@ -46,7 +47,7 @@ Assurez-vous que vous avez pris connaissance de l’instance de cloud Souverain 
 
     Pour installer le connecteur RMS, téléchargez RMSConnectorSetup.exe.
 
-    Informations supplémentaires :
+    En outre :
 
     -   Si vous souhaitez utiliser l’outil de configuration de serveur pour le connecteur RMS afin d’automatiser la configuration des paramètres de Registre sur vos serveurs locaux, téléchargez également GenConnectorConfig.ps1.
 
@@ -69,6 +70,7 @@ Avant de pouvoir configurer le connecteur RMS, vous devez d’abord sélectionne
 :::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="Sélectionnez l’environnement Azure approprié pour authentifier votre nouveau connecteur AAD RM":::
 
 Après avoir sélectionné votre environnement Cloud, entrez votre **nom d’utilisateur** et votre **mot de passe**. Veillez à entrer les informations d’identification d’un compte disposant de privilèges suffisants pour configurer le connecteur RMS. Par exemple, vous pouvez taper, <strong>admin@contoso.com</strong> puis spécifier le mot de passe de ce compte.
+
 
 En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assurez-vous que le compte que vous spécifiez est en mesure de protéger du contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte spécifié ici doit être un membre de ce groupe. Si ce n’est pas le cas, le message d’erreur suivant s’affiche : **la tentative de détection de l’emplacement du service d’administration et de l’organisation a échoué. Assurez-vous que le service Microsoft Rights Management est activé pour votre organisation.**
 
@@ -107,7 +109,7 @@ Vous pouvez utiliser un compte possédant l’un des privilèges suivants :
     >     ```
     >     Par exemple, tapez : **Add-AipServiceRoleBasedAdministrator-EmailAddress melisa@contoso.com -role "ConnectorAdministrator"**
     >
-    >     Bien que ces commandes attribuent le rôle d’administrateur du connecteur, vous pourriez également utiliser le rôle GlobalAdministrator ici.
+    >     Bien que ces commandes affectent le rôle d’administrateur de connecteur, vous pouvez également utiliser le rôle GlobalAdministrator ici.
 
 Pendant le processus d’installation du connecteur RMS, tous les logiciels requis sont validés et installés, Internet Information Services (IIS) est installé si ce n’est pas déjà fait et le logiciel du connecteur est installé et configuré. En outre, vous préparez la configuration d’Azure RMS en créant les éléments suivants :
 

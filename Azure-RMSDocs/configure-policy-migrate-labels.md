@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a0ebdc684bea634707d09fb0b7d4dd8a4175c63b
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 4b97f7930e4d3a22746635a3d43436c59126e6fd
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073667"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788677"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -254,15 +254,13 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Les services qui prennent en charge l’étiquetage unifié sont :
 
-- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI (en préversion)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Office Online et Outlook sur le Web
+- Office Online (en version préliminaire) et Outlook sur le Web
 
-    Pour plus d’informations, consultez [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
-
-- Microsoft SharePoint, OneDrive entreprise ou scolaire, OneDrive pour la famille, équipes et groupes Office 365
+- Microsoft SharePoint, OneDrive entreprise ou scolaire, OneDrive pour la famille, équipes et groupes Office 365 (en version préliminaire)
     
-    Pour plus d’informations, consultez [utiliser des étiquettes de sensibilité avec Microsoft Teams, les groupes Office 365 et les sites SharePoint](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
+    Pour plus d’informations, consultez [utiliser des étiquettes de sensibilité avec Microsoft Teams, les groupes office 365 et les sites SharePoint (version préliminaire publique)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) et [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 - Microsoft Defender Advanced Threat Protection
 

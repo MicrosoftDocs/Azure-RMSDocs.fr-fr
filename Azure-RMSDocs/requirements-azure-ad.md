@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: b23afa0975f5d8f353b3ed8a5d4cf5332712f3b7
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: cc58a32da1bca1ce14704e0eb23ebbd0007073f7
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298186"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788966"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Exigences supplémentaires en matière de Azure AD pour Azure Information Protection
 
@@ -58,13 +58,13 @@ Une fois que vous avez confirmé ces conditions préalables, effectuez l’une d
 
 - **Clients gérés par Microsoft, avec Azure ad ou Office 365**. Configurez Azure MAF pour appliquer l’authentification MFA aux utilisateurs. 
 
-    Pour plus d’informations, consultez : 
+    Pour plus d'informations, consultez les pages suivantes : 
     - [Prise en main avec Azure Multi-Factor Authentication dans le cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
     - [Présentation d'Azure Multi-Factor Authentication](/multi-factor-authentication/multi-factor-authentication)
 
 - **Les locataires fédérés, où les serveurs de Fédération opèrent localement**. Configurez vos serveurs de fédération pour Azure Active Directory ou Office 365. Par exemple, si vous utilisez AD FS, consultez [configurer des méthodes d’authentification supplémentaires pour les AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-    Pour plus d’informations sur ce scénario, consultez [la page fonctionne avec office 365 – Identity Program Now rationalisé](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office. 
+    Pour plus d’informations sur ce scénario, consultez  [la page fonctionne avec office 365 – Identity Program Now rationalisé](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office. 
 
 ## <a name="rights-management-connector--aip-scanner-requirements"></a>Configuration requise pour le connecteur Rights Management/AIP
 
@@ -82,7 +82,7 @@ Les configurations où les valeurs UPN des utilisateurs ne correspondent pas à 
 
 Si vous ne pouvez pas modifier la valeur UPN, configurez d’autres ID pour les utilisateurs concernés et indiquez-leur comment se connecter à Office à l’aide de cet ID de substitution. 
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Configuration des ID de connexion alternatif](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)
 - [Les applications Office demandent régulièrement des informations d’identification à SharePoint, OneDrive et Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).

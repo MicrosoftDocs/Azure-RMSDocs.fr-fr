@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 38489d1d1ff7183e5e7a3963b401cdaecf2313dc
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: f190a97e18533640b2edc60513bb29a7ad7d7728
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073650"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788660"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -53,7 +53,7 @@ Vous devez disposer d’un ordinateur Windows Server pour exécuter le scanneur,
 |**Processeur**     |4 processeurs principaux         |
 |**RAM**     |8 Go         |
 |**Espace disque**     |10 Go d’espace libre (moyenne) pour les fichiers temporaires. </br></br>Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. </br></br>L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo.
-|**Système d’exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque :** À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
+|**Système d'exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque :** À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
 |**Connectivité réseau**     | Votre ordinateur de scanneur peut être un ordinateur physique ou virtuel avec une connexion réseau rapide et fiable aux magasins de données à analyser. </br></br> Si la connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Dans le cas contraire, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPs (port 443) :</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com <br />-  \*. protection.outlook.com |
 | ||
 
@@ -143,7 +143,7 @@ Vous devez configurer des étiquettes qui appliquent automatiquement la classifi
 
 Si vous n’avez pas configuré ces étiquettes, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Appliquer automatiquement une étiquette sensibilité au contenu](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
@@ -179,6 +179,7 @@ Pour analyser des fichiers avec des chemins d’accès de plus de 260 caractère
 |**Windows 10 ou Windows Server 2016**     | Définissez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)suivant : stratégie de l' **ordinateur local**  >  **Configuration ordinateur**  >  **modèles d’administration**  >  **tous les paramètres**  >  **activer les chemins d’accès longs Win32**.    </br></br>Pour plus d’informations sur la prise en charge des chemins de fichiers longs dans ces versions, consultez la section limitation de la [longueur maximale du chemin d’accès](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation du développeur Windows 10.    |
 |**Windows 10, version 1607 ou ultérieure**     |  Abonnez-vous à la fonctionnalité de **MAX_PATH** mise à jour. Pour plus d’informations, consultez [activer des chemins d’accès longs dans Windows 10 versions 1607 et ultérieures](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
+
 ## <a name="usage-statistics-requirements"></a>Exigences relatives aux statistiques d’utilisation
 
 Désactivez les statistiques d’utilisation à l’aide de l’une des méthodes suivantes :
@@ -235,7 +236,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle db_owner pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. Si vous spécifiez votre propre nom de cluster (profil), la base de données de configuration est nommée **AIPScannerUL_<cluster_name>**.
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :

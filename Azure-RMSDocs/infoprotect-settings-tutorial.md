@@ -4,18 +4,18 @@ description: Tutoriel d’introduction qui vous guide dans la configuration des 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 292d7f00aeeb4f13b9d8e2f88b746d6ef967dda9
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 0439e22cd6b2b149bb142c7146e568a048d05df0
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264410"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
@@ -25,6 +25,11 @@ ms.locfileid: "87802247"
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>
+> **Pour déployer le client classique AIP,** ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.
+
+> [!TIP]
+> Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation sur la conformité Microsoft 365 pour des informations sur les paramètres de stratégie des étiquettes de confidentialité. Par exemple, [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels).
 
 Dans ce tutoriel, vous apprenez à effectuer les opérations suivantes :
 > [!div class="checklist"]
@@ -52,11 +57,7 @@ Pour suivre ce tutoriel, il vous faut :
     
     Ces étapes sont décrites dans [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
 
-3. Le client Azure Information Protection (classique) est installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
-    
-    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. 
-    
-    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation sur la conformité Microsoft 365 pour des informations sur les paramètres de stratégie des étiquettes de confidentialité. Par exemple, [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels).
+3. Le client Azure Information Protection (classique) installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
 
 4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     
@@ -74,7 +75,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
 
-C’est parti !
+C’est parti ! Poursuivez avec [Modifier la stratégie Azure Information Protection](#edit-the-azure-information-protection-policy).
 
 ## <a name="edit-the-azure-information-protection-policy"></a>Modifier la stratégie Azure Information Protection
 

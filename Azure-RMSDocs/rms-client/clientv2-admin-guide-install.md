@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3afb97e9094d74eb98b67b375def7a24f6dcc104
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 394c91c7503a9bb8995eacf8c9cec45ab85fe57d
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073684"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788949"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -65,12 +65,12 @@ Pour les versions d’Office 2013 et ultérieures, nous vous recommandons de con
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-- Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
-- Office 365 ProPlus
-- Office Professionnel Plus 2019
-- Office Professionnel Plus 2016
-- Office Professionnel Plus 2013 avec Service Pack 1
-- Office Professionnel Plus 2010 avec Service Pack 2
+- Applications Office version 1805 minimum, Build 9330,2078 à partir d' [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
+- [Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
+- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
+- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1
+- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2
 
 D’autres éditions (telles que **standard**) d’Office ne peuvent pas protéger des documents et des e-mails à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour l' **étiquetage** uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs sur le bouton ou la barre de sensibilité de Azure Information Protection.
 
@@ -100,7 +100,7 @@ Utilisez les instructions suivantes pour installer le client lorsque vous n’ut
     
     Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production. 
 
-2. Pour une installation par défaut, il vous suffit d’exécuter le fichier exécutable, par exemple, **AzInfoProtection_UL.exe**. Toutefois, pour afficher les options d’installation, commencez par exécuter le fichier exécutable avec **/Help**:`AzInfoProtection_UL.exe /help`
+2. Pour une installation par défaut, il vous suffit d’exécuter le fichier exécutable, par exemple, **AzInfoProtection_UL.exe**. Toutefois, pour afficher les options d’installation, commencez par exécuter le fichier exécutable avec **/Help**: `AzInfoProtection_UL.exe /help`
 
     Exemple pour installer le client en mode silencieux : `AzInfoProtection_UL.exe /quiet`
     
@@ -187,12 +187,12 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     
     |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installez|
-    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installez|
-    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installez|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installez|
+    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installer|
+    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|
+    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
-    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installez|
+    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer|
     
    
 

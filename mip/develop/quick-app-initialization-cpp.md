@@ -1,19 +1,19 @@
 ---
-title: Démarrage rapide – Initialisation pour les clients C++ du kit SDK Microsoft Information Protection (MIP)
-description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes du kit SDK Microsoft Information Protection (MIP).
+title: 'Démarrage rapide : initialisation pour les clients du kit de développement logiciel (SDK) MIP C++ utilisant l’API de fichier'
+description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour une application cliente du kit de développement logiciel (SDK) Microsoft Information Protection (MIP) utilisant l’API de fichier.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556076"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564126"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++) 
 
 Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le SDK MIP C++ au moment de l’exécution. 
 
@@ -364,4 +364,4 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
 Maintenant que votre code d’initialisation est terminé, vous êtes prêt pour le guide de démarrage rapide suivant, où vous découvrirez les API de fichier MIP.
 
 > [!div class="nextstepaction"]
-> [Répertorier les étiquettes de sensibilité](quick-file-list-labels-cpp.md)
+> [Lister les étiquettes de confidentialité](quick-file-list-labels-cpp.md)

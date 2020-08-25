@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7dd617a61071542196828a4701ab0c1db8336ee
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802281"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810256"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -82,7 +82,7 @@ Si vous utilisez le service Azure Rights Management et que vous n’avez pas ins
 > [!TIP]
 > Pour trouver de l'aide et des instructions spécifiques à une application qui ont trait à l'utilisation de la protection des données avec ces applications, recherchez « **IRM** » ainsi que le nom et la version de l'application.
 
-#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Pour protéger un document dans Word d’Office 365 ProPlus
+#### <a name="to-protect-a-document-in-word-from-office-365-proplus"></a>Pour protéger un document dans Word d’Office 365 ProPlus
 
 1.  Dans Microsoft Word, créez un document.
 
@@ -101,7 +101,7 @@ Par exemple, un droit d'utilisation Affichage uniquement ne permet pas à l'util
 
 Les droits d'utilisation sont affichés en haut du document grâce à une bannière de restriction. La bannière peut afficher les autorisations appliquées au document, ou un lien pour afficher celles-ci.
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Pour protéger un e-mail à l’aide d’Outlook d’Office 365 ProPlus, en se connectant à Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook-from-office-365-proplus-connecting-to-exchange-online"></a>Pour protéger un e-mail à l’aide d’Outlook d’Office 365 ProPlus, en se connectant à Exchange Online
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 

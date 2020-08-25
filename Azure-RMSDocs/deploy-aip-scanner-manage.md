@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788745"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810284"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution de l’analyseur de Azure Information Protection
 
@@ -124,9 +124,9 @@ Lorsqu’une analyse complète est terminée, le type d’analyse passe automati
 > [!TIP]
 > Si vous avez apporté des modifications à votre [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)AIP, le portail Azure vous invite à ignorer une nouvelle analyse complète. Pour vous assurer que votre nouvelle analyse se produit, veillez à sélectionner **non** dans l’invite qui s’affiche.
 > 
-### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>Déclencher une nouvelle analyse complète en modifiant vos paramètres (versions 2.7.99.0 et antérieures)
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-271010-and-lower"></a>Déclencher une nouvelle analyse complète en modifiant vos paramètres (versions 2.7.101.0 et antérieures)
 
-Dans les versions de scanneur 2.7.99.0 et antérieures, tous les fichiers sont analysés chaque fois que l’analyseur détecte des paramètres nouveaux ou modifiés pour l’étiquetage automatique et recommandé. Le scanneur actualise automatiquement la stratégie toutes les quatre heures.
+Dans versions du scanneur [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) et versions antérieures, tous les fichiers sont analysés chaque fois que l’analyseur détecte des paramètres nouveaux ou modifiés pour l’étiquetage automatique et recommandé. Le scanneur actualise automatiquement la stratégie toutes les quatre heures.
 
 Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez manuellement le contenu du répertoire **%LocalAppData%\Microsoft\MSIP\mip \<processname> \mip** et redémarrez le service Azure information protection.
 

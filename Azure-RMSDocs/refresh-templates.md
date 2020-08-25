@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d531269a9323de2f9157f1dafd8962a4f228733f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: cbdbf45f337b2647bb260c4a9d01c1c777d078a2
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802230"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810335"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -40,6 +40,7 @@ Lorsque vous utilisez le service Azure Rights Management à partir de Azure Info
 |Office 2019 pour Mac et Office 2016 pour Mac|Actualisation automatique lorsque vous ouvrez le contenu protégé. Pour forcer une actualisation, consultez la section suivante, [office 2019 pour Mac et office 2016 pour Mac : comment forcer une actualisation des modèles](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Application de partage RMS pour les ordinateurs Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
 |Office 365 ProPlus avec [étiquetage intégré](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Ce client d’étiquetage intégré ne télécharge pas de modèles, mais y accède en ligne, aucune étape supplémentaire n’est requise.|
+| | |
 
 Lorsque les applications clientes doivent télécharger des modèles (initialement ou actualisés pour des modifications), préparez-vous à attendre jusqu’à 30 minutes avant que le téléchargement soit terminé et que les modèles nouveaux ou mis à jour soient entièrement opérationnels. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration du modèle et la connectivité réseau. 
 

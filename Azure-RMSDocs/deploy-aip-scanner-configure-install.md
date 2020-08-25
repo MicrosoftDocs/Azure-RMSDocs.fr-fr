@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7960c945ee51c5d2d81f26aa75f350aeb87c0f60
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 7f7964081893635052de8f5a8da32f7010f49cc5
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788798"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810352"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -210,7 +210,7 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
 
         Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-        |Chemin  |Syntaxe  |
+        |Path  |Syntaxe  |
         |---------|---------|
         |**Chemin d’accès racine**     | `http://<SharePoint server name>` </br></br>Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. </br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
         |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -276,7 +276,7 @@ Pour plus d’informations, consultez [Comment étiqueter des fichiers de maniè
 Pour recevoir un jeton de Azure AD :
 
 1. Revenez à la Portail Azure pour créer une application Azure AD afin de spécifier un jeton d’accès pour l’authentification.
-1. 
+
 1. À partir de l’ordinateur Windows Server, si votre compte de service de scanneur a reçu le droit **ouvrir une session localement** pour l’installation, connectez-vous avec ce compte et démarrez une session PowerShell. 
 
     Exécutez [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), en spécifiant les valeurs copiées à partir de l’étape précédente :

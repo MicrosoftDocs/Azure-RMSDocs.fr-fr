@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b41195e6eb50dffe5aada630b423a73c0024d244
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: fc4c86c020427066d519fec4ae6363f131ce64c2
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788626"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810255"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -106,4 +106,4 @@ Vous pouvez utiliser cette même technique pour utiliser vos étiquettes avec Ou
 
 Notez qu’il n’est pas nécessaire de le faire si vous utilisez Outlook sur le Web avec Exchange Online, car cette combinaison prend en charge l’étiquetage intégré lorsque vous publiez des étiquettes de sensibilité à partir du centre de conformité d’Office 365 Security &, Microsoft 365 Security Center ou Microsoft Compliance Center.
 
-Si vous ne pouvez pas utiliser l’étiquetage intégré avec Outlook sur le Web, consultez les étapes de configuration de cette solution de contournement : intégration de la [classification des messages Exchange avec Azure information protection pour une solution d’étiquetage des appareils mobiles](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
+Si vous ne pouvez pas utiliser l’étiquetage intégré avec Outlook sur le Web, consultez les étapes de configuration de cette solution de contournement : [intégration à la classification des messages Exchange héritée](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)

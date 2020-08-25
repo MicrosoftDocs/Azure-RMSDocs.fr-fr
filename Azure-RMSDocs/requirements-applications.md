@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 2bf09c4f5ff7587db251b3edeae556621a9aaede
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802162"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810318"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -39,7 +39,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Applications Office 365](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Office pour le Web (affichage de documents protégés)](#viewing-protected-documents-in-office-for-the-web)<br />- [Navigateur Web](#web-browser-support)        |
-|[**E-mail**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook à partir d’Office 365 ProPlus<br />- [Navigateur Web](#web-browser-support)<br />- [Messagerie Windows](#email-clients-using-exchange-activesync-irm)|
+|[**Messagerie**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook à partir d’Office 365 ProPlus<br />- [Navigateur Web](#web-browser-support)<br />- [Messagerie Windows](#email-clients-using-exchange-activesync-irm)|
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    |  -Visio à partir d’Office 365 Apps, Office 2019 et Office 2016 : **. VSDM,** **. vsdx,** **. VSSM**, **. vstm**, **. vssx**, **. vstx** <br />-Azure Information Protection client pour Windows : texte, images, **pfile** <br />-Plug-in RMS SealPath pour AutoCAD : **. DWG**       |
 | | |
 
@@ -48,7 +48,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -Applications Office 365<br />-Office 2019 pour Mac<br />-Office 2016 pour Mac<br />- [Office pour le Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Navigateur Web](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 pour Mac<br />-Outlook 2016 pour Mac<br />- [Navigateur Web](#web-browser-support)     |
+|[**Messagerie**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 pour Mac<br />-Outlook 2016 pour Mac<br />- [Navigateur Web](#web-browser-support)     |
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    | Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)   |
 | | |
 
@@ -57,7 +57,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |-Application GigaTrust pour Android<br />- [Office pour le Web](#viewing-protected-documents-in-office-for-the-web)<br />-Office Mobile (sauf en utilisant des étiquettes de sensibilité, limitées à l’affichage et à la modification des documents protégés) <br />- [Navigateur Web](#web-browser-support)      |
-|[**E-mail**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection application (affichage d’e-mails protégés)<br />-BlackBerry-travail <br />- [Application GigaTrust pour Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook pour Android](#email-clients-using-exchange-activesync-irm)<br />- [E-mail Samsung (S3 et versions ultérieures)](#email-clients-using-exchange-activesync-irm)<br />-Classification TITUS pour les appareils mobiles <br /><br />- [Navigateur Web](#web-browser-support)       |
+|[**Messagerie**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection application (affichage d’e-mails protégés)<br />-BlackBerry-travail <br />- [Application GigaTrust pour Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook pour Android](#email-clients-using-exchange-activesync-irm)<br />- [E-mail Samsung (S3 et versions ultérieures)](#email-clients-using-exchange-activesync-irm)<br />-Classification TITUS pour les appareils mobiles <br /><br />- [Navigateur Web](#web-browser-support)       |
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    |  Application Azure Information Protection (affichage de textes et d’images protégés)  |
 | | |
 
@@ -67,7 +67,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -GigaTrust<br />-Office Mobile <br />- [Office pour le Web](#viewing-protected-documents-in-office-for-the-web)<br />-TITUS docs<br />- [Navigateur Web](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection application (affichage de l’e-mail protégé)<br />-BlackBerry-travail<br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook pour iPad et iPhone](#email-clients-using-exchange-activesync-irm)<br />-TITUS mail <br />- [Navigateur Web](#web-browser-support)     |
+|[**Messagerie**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection application (affichage de l’e-mail protégé)<br />-BlackBerry-travail<br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook pour iPad et iPhone](#email-clients-using-exchange-activesync-irm)<br />-TITUS mail <br />- [Navigateur Web](#web-browser-support)     |
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)     | -Azure Information Protection application (affichage de la protection du texte et des images)<br />-TITUS docs : **pfile**  |
 | | |
 
@@ -76,7 +76,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | -Office Mobile Apps (affichage de documents protégés à l’aide de Azure RMS) <br />- [Navigateur Web](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)    |  -Citrix WorxMail <br />-Outlook Mail (affichage des e-mails protégés) <br />- [Navigateur Web](#web-browser-support)     |
+|[**Messagerie**](#viewing-protected-content-in-email-clients)    |  -Citrix WorxMail <br />-Outlook Mail (affichage des e-mails protégés) <br />- [Navigateur Web](#web-browser-support)     |
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    | Non pris en charge   |
 | | |
 
@@ -85,7 +85,7 @@ Ces applications et solutions sont connues sous le nom de « RMS », et les [r
 |Type  |Applications prises en charge   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Navigateur Web](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)   | - [E-mail BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Navigateur Web](#web-browser-support)      |
+|[**Messagerie**](#viewing-protected-content-in-email-clients)   | - [ E-mail BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Navigateur Web](#web-browser-support)      |
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    | Non pris en charge   |
 | | |
 
@@ -172,7 +172,7 @@ Les suites clientes Office suivantes prennent en charge la protection des fichie
 
 - **Applications Office version 1805 minimum, build 9330,2078 à partir d’office 365 Business ou Microsoft 365 Business** lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
 
-- **Office 365 ProPlus**
+- **Office 365 ProPlus**
 
     Ces éditions d’Office sont proposées dans la plupart (mais pas dans la totalité) des abonnements Office 365 qui incluent la protection des données à partir d’Azure Information Protection. Vérifiez vos informations d’abonnement pour voir si Office 365 ProPlus est inclus. Vous trouverez également ces informations dans la [feuille de données Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 

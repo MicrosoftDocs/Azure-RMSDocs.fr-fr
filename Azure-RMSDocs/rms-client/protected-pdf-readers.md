@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: dd8a895c0fb6fb94311d7e028265bf9bbdbfe668
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 6d14ee2cc1a8b2bddad79f2e5c0cfb7251522840
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927706"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952961"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Quels sont les lecteurs PDF pris en charge pour les fichiers PDF protégés ?
 
@@ -76,11 +76,6 @@ Les versions prises en charge sont les suivantes :
 
 - **Mac :** macOS versions 10,12 et ultérieures 
 
-
-
-<!--
-With Microsoft Edge, when a user encounters a locally saved protected PDF file, they can view the file directly in the browser. If the file is available on SharePoint, the user only needs to click **Open** > **Open in browser** from Microsoft Edge, to view the file. 
--->
 
 **Ample** 
 

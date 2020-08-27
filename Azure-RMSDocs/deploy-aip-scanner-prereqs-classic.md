@@ -4,7 +4,7 @@ description: Répertorie les conditions préalables à l’installation et au d�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 702bff14d27a1dc8b051e994999db877c3991473
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 446369f3a46e99d138455afbb0cc90d9a8635fb2
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049546"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952927"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur Azure Information Protection Classic
 
@@ -134,7 +134,7 @@ Vous devez configurer des étiquettes qui appliquent automatiquement la classifi
 
 Si vous n’avez pas configuré ces étiquettes, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Comment configurer des conditions pour la classification automatique et recommandée](configure-policy-classification.md)
 - [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md)
@@ -197,6 +197,8 @@ Toutefois, dans un environnement de production, les stratégies de votre organis
 
 - [Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
+- [Restriction : vos étiquettes n’ont pas de conditions d’étiquetage automatique](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur de scanneur ne peut pas disposer d’une connexion Internet
 
 Pour prendre en charge un ordinateur déconnecté, procédez comme suit :
@@ -237,7 +239,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     Si vous ne spécifiez pas votre propre nom de cluster (profil) pour le scanneur, la base de données de configuration est nommée **AIPScanner_ \<computer_name> **. </br>Poursuivez avec [la création d’un utilisateur et en accordant des droits de db_owner sur la base de données](#create-a-user-and-grant-db_owner-rights-manually). 
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
@@ -295,6 +297,16 @@ Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre co
 - **Pour le compte de service du scanneur,** utilisez un compte Windows local ou un compte Active Directory.
 
 - **Pour le compte Azure Active Directory,** [spécifiez et utilisez le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
+
+#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restriction : vos étiquettes n’ont pas de conditions d’étiquetage automatique
+
+Si vos étiquettes n’ont pas de conditions d’étiquetage automatique, envisagez d’utiliser l’une des options suivantes lors de la configuration de votre scanneur :
+
+|Option  |Description  |
+|---------|---------|
+|**Découvrir tous les types d’informations**     |  Dans votre [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), définissez l’option **types d’informations sur** **tous**. </br></br>Cette option définit le travail d’analyse de contenu pour analyser votre contenu pour tous les types d’informations sensibles.      |
+|**Définir une étiquette par défaut**     |   Définissez une étiquette par défaut dans votre [stratégie](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), le [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)ou le [référentiel](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>Dans ce cas, le scanner applique l’étiquette par défaut sur tous les fichiers trouvés.       |
+| | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

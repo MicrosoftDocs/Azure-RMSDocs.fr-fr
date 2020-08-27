@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 050876f868e549bd0408a62ef869f6b16c1698c8
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049547"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953097"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Exécution du scanneur classique Azure Information Protection
 
@@ -94,7 +94,7 @@ Modifiez le niveau de journalisation à l’aide du paramètre *ReportLevel* ave
 
 L’emplacement ou le nom du dossier de rapport ne peut pas être modifié. Si vous souhaitez stocker des rapports dans un autre emplacement, envisagez d’utiliser une jonction de répertoire pour le dossier.
 
-Par exemple, utilisez la commande [MKLINK](/windows-server/administration/windows-commands/mklink) :`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+Par exemple, utilisez la commande [MKLINK](/windows-server/administration/windows-commands/mklink) : `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
 Si vous avez effectué ces étapes après une configuration et une installation initiales, poursuivez [la configuration du scanneur pour appliquer la classification et la protection](deploy-aip-scanner-configure-install.md#configure-the-scanner-to-apply-classification-and-protection).
 
@@ -106,7 +106,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
     ![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
 
-- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
+- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
     
     ```ps
     Stop-AIPScan 
@@ -139,7 +139,7 @@ Tous les fichiers sont également inspectés dans les scénarios suivants chaque
 
 Le scanneur actualise automatiquement la stratégie toutes les heures, ainsi que chaque fois que le service démarre et que la stratégie se trouve à plus d’une heure.
 
-Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez manuellement le fichier de stratégie **Policy.msip** du répertoire **%LocalAppData%\Microsoft\MSIP** et redémarrez le service Azure information protection.
+Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez manuellement le fichier de stratégie **Policy.msip**  du répertoire **%LocalAppData%\Microsoft\MSIP** et redémarrez le service Azure information protection.
 
 > [!NOTE]
 > Si vous avez également modifié les paramètres de protection de vos étiquettes, patientez 15 minutes après l’enregistrement des paramètres de protection mis à jour avant le redémarrage du service Azure Information Protection.
@@ -182,7 +182,7 @@ L’outil de diagnostic vérifie les détails suivants, puis exporte un fichier 
 - Indique si les règles configurées sont valides
 
 > [!TIP]
-> Si vous exécutez la commande sous un utilisateur qui n’est pas l’utilisateur du scanneur, veillez à ajouter le paramètre **-OnBehalf** . <!--For more information, see <x>.-->
+> Si vous exécutez la commande sous un utilisateur qui n’est pas l’utilisateur du scanneur, veillez à ajouter le paramètre **-OnBehalf** . 
 >
 
 > [!NOTE]
@@ -193,7 +193,7 @@ L’outil de diagnostic vérifie les détails suivants, puis exporte un fichier 
 
 Les événements de journalisation du scanneur AIP suivants sont stockés dans le journal des événements **applications et services** Windows nommé **Azure information protection**.
 
-|ID de l'événement  |Activité  |Description  |
+|ID de l’événement  |Activité  |Description  |
 |---------|---------|---------|
 |**910**     | Cycle du scanneur démarré        | Consigné lorsque le service du scanneur est démarré et commence à rechercher les fichiers dans les référentiels de données que vous avez spécifiés.        |
 |**911**     |   Cycle du scanneur terminé      | Consigné lorsque le scanneur a terminé une analyse manuelle ou que le scanneur a terminé un cycle pour une planification continue.       |

@@ -4,7 +4,7 @@ description: Répertorie les conditions préalables à l’installation et au d�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f190a97e18533640b2edc60513bb29a7ad7d7728
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788660"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952893"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -53,7 +53,7 @@ Vous devez disposer d’un ordinateur Windows Server pour exécuter le scanneur,
 |**Processeur**     |4 processeurs principaux         |
 |**RAM**     |8 Go         |
 |**Espace disque**     |10 Go d’espace libre (moyenne) pour les fichiers temporaires. </br></br>Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. </br></br>L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo.
-|**Système d'exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque :** À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
+|**Système d’exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque :** À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
 |**Connectivité réseau**     | Votre ordinateur de scanneur peut être un ordinateur physique ou virtuel avec une connexion réseau rapide et fiable aux magasins de données à analyser. </br></br> Si la connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Dans le cas contraire, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPs (port 443) :</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com <br />-  \*. protection.outlook.com |
 | ||
 
@@ -204,6 +204,8 @@ Toutefois, dans un environnement de production, les stratégies de votre organis
 
 - [Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
+- [Restriction : vos étiquettes n’ont pas de conditions d’étiquetage automatique](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur de scanneur ne peut pas disposer d’une connexion Internet
 
 Pour prendre en charge un ordinateur déconnecté, procédez comme suit :
@@ -295,6 +297,17 @@ Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre co
 - **Pour le compte de service du scanneur,** utilisez un compte Windows local ou un compte Active Directory.
 
 - **Pour le compte Azure Active Directory,** spécifiez votre compte local pour le paramètre *OnBehalfOf* avec set-AIPAuthentication. Pour plus d’informations, consultez [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+
+#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restriction : vos étiquettes n’ont pas de conditions d’étiquetage automatique
+
+Si vos étiquettes n’ont pas de conditions d’étiquetage automatique, envisagez d’utiliser l’une des options suivantes lors de la configuration de votre scanneur :
+
+|Option  |Description  |
+|---------|---------|
+|**Découvrir tous les types d’informations**     |  Dans votre [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), définissez l’option **types d’informations sur** **tous**. </br></br>Cette option définit le travail d’analyse de contenu pour analyser votre contenu pour tous les types d’informations sensibles.      |
+|**Utiliser l’étiquetage recommandé**     |  Dans votre [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), affectez la valeur **on**à l’option **considérer l’étiquetage recommandé comme automatique** .</br></br> Ce paramètre configure le scanneur pour appliquer automatiquement toutes les étiquettes recommandées sur votre contenu.      |
+|**Définir une étiquette par défaut**     |   Définissez une étiquette par défaut dans votre [stratégie](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), le [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)ou le [référentiel](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>Dans ce cas, le scanner applique l’étiquette par défaut sur tous les fichiers trouvés.       |
+| | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

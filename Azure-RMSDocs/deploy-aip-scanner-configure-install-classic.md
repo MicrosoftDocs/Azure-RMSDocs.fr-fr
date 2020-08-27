@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c10aed757d625cf78fadc2b3d5889025c460ab75
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a890f7d9096b628489ceeaa156a9ce124d1535b3
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049565"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953029"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configuration et installation du Azure Information Protection scanneur classique
 
@@ -88,7 +88,7 @@ Pour configurer votre scanneur :
     |Section  |Paramètres  |
     |---------|---------|
     |**Paramètres du travail d’analyse du contenu**     |    - **Planifier**: conserver la valeur par défaut **manuelle** </br>- **Types d’informations à découvrir**: changer en **stratégie uniquement** </br>- **Configurer les référentiels**: ne pas configurer pour l’instant, car le travail d’analyse de contenu doit d’abord être enregistré.         |
-    |**Application des stratégies**     | - **Appliquer**: sélectionner **désactivé** </br>- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** </br>- **Étiquette par**défaut : conserver la valeur par défaut de la **stratégie** par défaut </br>- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
+    |**Application de la stratégie**     | - **Appliquer**: sélectionner **désactivé** </br>- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** </br>- **Étiquette par**défaut : conserver la valeur par défaut de la **stratégie** par défaut </br>- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
     |**Configurer les paramètres du fichier**     | - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »**: conserver la valeur par défaut **activée** </br>- **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion** </br>- **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**        |
     | | |
 
@@ -101,7 +101,7 @@ Pour configurer votre scanneur :
     >
     Pour ajouter votre premier magasin de données, dans le volet **Ajouter un nouveau travail d’analyse de contenu** , sélectionnez configurer les **référentiels** pour ouvrir le volet **dépôts** :
 
-    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configurer des référentiels de données pour le scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configuration de référentiels de données pour le scanneur Azure Information Protection":::
 
 1. Dans le volet **Référentiels**, sélectionnez **Ajouter** :
 
@@ -120,7 +120,7 @@ Pour configurer votre scanneur :
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Chemin d’accès  |Syntax  |
+    |Path  |Syntaxe  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` </br></br>Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. </br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -130,12 +130,6 @@ Pour configurer votre scanneur :
 
     Pour les autres paramètres de ce volet, ne les modifiez pas pour cette configuration initiale, mais conservez-les en tant que **travail d’analyse du contenu par défaut**. Le paramètre par défaut signifie que le référentiel de données hérite des paramètres du travail d’analyse de contenu.
 
-    <!--
-    > [!IMPORTANT]
-    > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-    >
-    > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-    -->
 
 1. Si vous souhaitez ajouter un autre référentiel de données, répétez les étapes 8 et 9.
 
@@ -264,8 +258,8 @@ Pour aligner les types de fichiers pris en charge avec le client, où tous les f
 1. Spécification :
 
     - `*`Caractère générique en tant que clé de Registre
-    - `Encryption`comme valeur (REG_SZ)
-    - `Default`en tant que données de valeur
+    - `Encryption` comme valeur (REG_SZ)
+    - `Default` en tant que données de valeur
 
 1. Vérifiez si les clés **MSIPC** et **FileProtection** existent. Créez-les manuellement si ce n’est pas le cas, puis créez une sous-clé pour chaque extension de nom de fichier.
 
@@ -354,9 +348,6 @@ Utilisez les options et les conseils suivants pour vous aider à optimiser les p
 |**Réduire les délais d’expiration du scanneur** | Diminuez les délais d’attente du scanneur avec les [Paramètres avancés du client](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). Les délais d’analyse réduits permettent d’obtenir de meilleurs taux d’analyse et une consommation de mémoire inférieure. </br></br>**Remarque :** La diminution du délai d’attente du scanneur signifie que certains fichiers peuvent être ignorés.
 | | |
 
-<!-- removed with local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### <a name="additional-factors-that-affect-performance"></a>Facteurs supplémentaires qui affectent les performances
 
@@ -367,8 +358,8 @@ Les facteurs supplémentaires qui affectent les performances du scanneur sont le
 |**Temps de chargement/réponse**     |Les temps de chargement et de réponse actuels des magasins de données qui contiennent les fichiers à analyser affectent également les performances du scanneur.         |
 |**Mode scanneur** (détection/application)    | Le mode de détection a généralement un taux d’analyse plus élevé que le mode d’application. </br></br>La découverte requiert une seule action de lecture de fichier, tandis que le mode d’application requiert des actions de lecture et d’écriture.        |
 |**Modifications de stratégie**     |Les performances de votre scanneur peuvent être affectées si vous avez apporté des modifications aux conditions de la stratégie de Azure Information Protection. </br></br>Votre premier cycle d’analyse, lorsque le scanneur doit inspecter chaque fichier, prend plus de temps que les cycles d’analyse suivants qui, par défaut, inspectent uniquement les fichiers nouveaux et modifiés. </br></br>Si vous modifiez les conditions, tous les fichiers sont analysés à nouveau. Pour plus d’informations, consultez [rescaning Files](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Constructions Regex**    | Les performances de l’analyseur sont affectées par la manière dont vos expressions Regex pour les conditions personnalisées sont construites. </br></br> Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. </br></br>Par exemple : </br>-Évitez les [quantificateurs gourmands](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Utiliser des groupes sans capture comme `(?:expression)` au lieu de`(expression)`    |
-|**Log level**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.</br></br>- La valeur **off** permet d’obtenir des performances optimales </br>- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. </br></br>Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Constructions Regex**    | Les performances de l’analyseur sont affectées par la manière dont vos expressions Regex pour les conditions personnalisées sont construites. </br></br> Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. </br></br>Par exemple : </br>-Évitez les [quantificateurs gourmands](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Utiliser des groupes sans capture comme `(?:expression)` au lieu de `(expression)`    |
+|**Niveau de journalisation**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.</br></br>- La valeur **off** permet d’obtenir des performances optimales </br>- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. </br></br>Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Fichiers en cours d’analyse**     |-À l’exception des fichiers Excel, les fichiers Office sont analysés plus rapidement que les fichiers PDF. </br></br>-Les fichiers non protégés sont plus rapides à analyser que les fichiers protégés. </br></br>-Les fichiers volumineux sont évidemment plus longs à analyser que les petits fichiers.         |
 | | |
 

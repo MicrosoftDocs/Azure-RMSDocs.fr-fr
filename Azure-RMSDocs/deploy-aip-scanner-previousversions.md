@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bc737b4826d16b98bb8361425fbeabe243bb1a66
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 43ff7296f3b35cf63347fef678d3c0d173a5e39c
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953012"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Déploiement des versions précédentes du scanneur Azure Information Protection
 
@@ -117,7 +117,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 ```
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
@@ -201,7 +201,7 @@ Versions prises en charge pour SharePoint : SharePoint Server 2019, SharePoint 
     Add-AIPScannerRepository -Path <path>
     ```
 
-    Par exemple, `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Par exemple : `Add-AIPScannerRepository -Path \\NAS\Documents`
 
     Pour obtenir d’autres exemples, utilisez la commande PowerShell Help `Get-Help Add-AIPScannerRepository -examples` pour cette applet de commande.
 
@@ -269,7 +269,7 @@ Dans son paramétrage par défaut, le scanneur s’exécute une seule fois en mo
     Set-AIPScannerConfiguration -Enforce On -Schedule Always
     ```
 
-    Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Pour plus d’informations sur chaque paramètre de configuration, utilisez la commande d’aide PowerShell suivante :`Get-Help Set-AIPScannerConfiguration -detailed`
+    Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Pour plus d’informations sur chaque paramètre de configuration, utilisez la commande d’aide PowerShell suivante : `Get-Help Set-AIPScannerConfiguration -detailed`
 
 2. Notez l’heure actuelle et redémarrez le scanneur en exécutant la commande suivante :
     
@@ -413,13 +413,6 @@ Pour optimiser les performances de l’analyseur :
 
     L’inspection du contenu des fichiers à la recherche d’une correspondance avec vos conditions de configuration ainsi que le chiffrement et le déchiffrement des fichiers sont des actions qui sollicitent le processeur de manière intense. Surveillez les cycles d’analyse standard de vos magasins de données spécifiés pour déterminer si un manque de ressources processeur affecte les performances de l’analyseur.
 
-<!--   removed w local folders 
-- **Do not scan local folders on the computer running the scanner service**
-    
-    If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
-
-If necessary, install multiple instances of the scanner. Each scanner instance requires its own configuration database in a different SQL Server instance.
--->
 
 Autres facteurs qui affectent les performances de l’analyseur :
 
@@ -453,7 +446,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
     - Les gros fichiers prennent évidemment plus de temps à analyser que les petits fichiers.
 
-- De plus :
+- En outre :
 
     - Vérifiez que le compte de service qui exécute le scanneur dispose uniquement des droits décrits dans la section [conditions préalables du scanneur](#prerequisites-for-the-azure-information-protection-scanner) , puis configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) pour désactiver le niveau d’intégrité faible du scanneur.
 

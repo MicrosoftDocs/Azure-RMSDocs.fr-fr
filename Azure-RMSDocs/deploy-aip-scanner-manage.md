@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810284"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953063"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution de l’analyseur de Azure Information Protection
 
@@ -175,7 +175,7 @@ L’outil de diagnostic vérifie les détails suivants, puis exporte un fichier 
 - Indique si les règles configurées sont valides
 
 > [!TIP]
-> Si vous exécutez la commande sous un utilisateur qui n’est pas l’utilisateur du scanneur, veillez à ajouter le paramètre **-OnBehalf** . <!--For more information, see <x>.-->
+> Si vous exécutez la commande sous un utilisateur qui n’est pas l’utilisateur du scanneur, veillez à ajouter le paramètre **-OnBehalf** . 
 >
 
 > [!NOTE]

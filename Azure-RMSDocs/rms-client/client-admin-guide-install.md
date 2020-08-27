@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee3d79a408b397724985279c5926c0770f1d43d9
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: eaa3c47599a2d314dd0af24442efcefe16ff3c61
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264461"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952910"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -29,7 +29,7 @@ ms.locfileid: "88264461"
 >[!NOTE]
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
-> **Pour déployer le client classique AIP,** ouvrez un ticket de support pour obtenir l’accès au téléchargement.
+> **Pour déployer le client classique AIP,** ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.
 
 Avant d’installer le client Azure Information Protection sur votre réseau d’entreprise, vérifiez que vos ordinateurs disposent des versions et des applications nécessaires du système d’exploitation pour Azure Information Protection : [Configuration requise pour Azure Information Protection](../requirements.md).
 
@@ -101,12 +101,6 @@ Pour plus d’informations, consultez [Mise à niveau et maintenance du client A
 ### <a name="to-install-the-azure-information-protection-client-by-using-the-executable-installer"></a>Pour installer le client Azure Information Protection en utilisant le programme d’installation exécutable
 
 Utilisez les instructions suivantes pour installer le client lorsque vous n’utilisez pas le catalogue Microsoft Update, ou que vous déployez le fichier .msi à l’aide d’une méthode de déploiement central comme Intune.
-
-<!--
-1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
-
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
--->
 
 1. Pour une installation par défaut, exécutez simplement le fichier exécutable, par exemple **AzInfoProtection.exe**. 
 
@@ -190,12 +184,6 @@ Pour le déploiement central, utilisez les informations suivantes qui sont spéc
 
 Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilisez ces instructions avec [Ajouter des applications avec Microsoft Intune](/intune/deploy-use/add-apps).
 
-<!--
-
-1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
-    
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
--->
 1. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
     |Version d’Office|Système d’exploitation|Logiciel|Action|

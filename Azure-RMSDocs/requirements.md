@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables requises pour déployer des A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c984af422a867f8821c21a6e52df37e5d36437c7
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788932"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952825"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour la Azure Information Protection
 
@@ -132,19 +132,19 @@ Chaque client Azure Information Protection a des conditions préalables supplém
 
 Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de Microsoft **Word**, **Excel**, **PowerPoint**et **Outlook** , à partir des éditions Office suivantes :
 
-- **Applications Office version 1805 minimum**, Build 9330,2078 à partir de [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
+- **Applications Office version 1805 minimum**, Build 9330,2078 à partir d’Office 365 Business ou Microsoft 365 Business. 
 
     Cette édition est prise en charge uniquement lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management, également appelée Azure Information Protection pour Office 365.
 
-- **[Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office 365 ProPlus**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
+- **Office professionnel plus 2019**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
+- **Office professionnel plus 2016**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1**
+- **Office professionnel plus 2013 avec Service Pack 1**
 
-- **[Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2**
+- **Office professionnel plus 2010 avec Service Pack 2**
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement, et les étiquettes qui appliquent la protection ne sont pas affichées pour les utilisateurs. 
 
@@ -231,14 +231,10 @@ Les serveurs pris en charge sont les suivants :
 
 |Type de serveur  |Versions prises en charge  |
 |---------|---------|
-|**Microsoft Exchange Server**     | -Exchange Server 2016 </br>-Exchange Server 2013 </br>-Exchange Server 2010       |
+|**Exchange Server**     | -Exchange Server 2016 </br>-Exchange Server 2013 </br>-Exchange Server 2010       |
 |**Office SharePoint Server**     |-Office SharePoint Server 2016 </br>-Office SharePoint Server 2013 </br>-Office SharePoint Server 2010         |
 |**Serveurs de fichiers qui exécutent Windows Server et utilisent Infrastructure de classification des fichiers (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
-
-<!-- i think that half of this note was removed at some point, without this other half. keeping it here in case we ever need it..>
-    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
--->
 
 Pour plus d’informations, consultez [déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
@@ -246,10 +242,10 @@ Pour plus d’informations, consultez [déploiement du connecteur Azure Rights M
 
 Les systèmes d’exploitation suivants prennent en charge le service Azure Rights Management, qui assure la protection des données pour AIP :
 
-|Système d’exploitation  |Versions prises en charge  |
+|Système d''exploitation  |Versions prises en charge  |
 |---------|---------|
 |**Ordinateurs Windows**     |-Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
-|**MacOS**     |   la version minimale de macOS est 10.8 (Mountain Lion)      |
+|**macOS**     |   la version minimale de macOS est 10.8 (Mountain Lion)      |
 |**Téléphones et tablettes Android**     | Version minimale d’Android 6,0        |
 |**iPhone et iPad**     | Version minimale d’iOS 11,0        |
 |**Téléphones et tablettes Windows** | Windows 10 Mobile|

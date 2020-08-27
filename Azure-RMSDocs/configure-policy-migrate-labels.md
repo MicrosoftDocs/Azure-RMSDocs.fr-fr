@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b97f7930e4d3a22746635a3d43436c59126e6fd
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: c1b80fd786666faa20fe9f67fb72d67ed65a7392
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788677"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953114"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -147,8 +147,8 @@ Les clients Azure Information Protection (Classic) peuvent utiliser tous les par
 |Protection cloud avec des autorisations définies par l’utilisateur pour Word, Excel et PowerPoint |Oui|Les centres d’administration disposent désormais d’une option de configuration pour les autorisations définies par l’utilisateur. <br /><br /> Si vous publiez une étiquette avec cette configuration, vérifiez les résultats de l’application de l’étiquette à partir du [tableau suivant](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protection HYOK avec des autorisations définies par l’utilisateur dans Outlook (Ne pas transférer) |Non|Aucune option de configuration pour HYOK. Nous vous déconseillons de publier une étiquette avec cette configuration. Si vous le faites néanmoins, prenez connaissance des résultats de l’application de l’étiquette listés dans le [tableau suivant](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Nom de police personnalisé, taille et couleur de police personnalisée par code RVB pour les marquages visuels (en-tête, pied de page, filigrane)  |Oui|La configuration pour les marquages visuels est limitée à une liste de couleurs et de tailles de police. Vous pouvez publier cette étiquette sans rien changer, même si les valeurs configurées n’apparaissent pas dans les centres d’administration. <br /><br />Pour modifier ces options, vous pouvez utiliser la Portail Azure ou l’applet [**de commande New-label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center. Pour faciliter l’administration, envisagez de modifier la couleur de l’une des options listées dans les centres d’administration. <br /><br />**Remarque**: le centre d’administration de la conformité du centre de sécurité & prend en charge une liste prédéfinie de définitions de polices. Les polices et les couleurs personnalisées sont prises en charge uniquement par le biais de l’applet [**de commande New-label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center.|
-|Variables dans les marquages visuels (en-tête, pied de page) |Oui|Cette configuration d’étiquette est prise en charge uniquement par les clients AIP, et non par l’étiquetage intégré d’Office. </br></br>Si vous utilisez l’étiquetage intégré et que vous publiez cette étiquette sans modification, les variables s’affichent sous forme de texte sur les clients plutôt que d’afficher les valeurs dynamiques. <!--Before you publish the label, edit the strings to remove the variables.-->|
-|Marquages visuels par application|Oui|Cette configuration d’étiquette est prise en charge uniquement par les clients AIP, et non par l’étiquetage intégré d’Office. </br></br>Si vous utilisez l’étiquetage intégré et que vous publiez cette étiquette sans modification, la configuration du marquage visuel s’affiche sous forme de texte de variable au lieu des marquages visuels que vous avez configurés pour s’afficher dans chaque application.  <!--Publish this label only if it is suitable for all apps. We recommend editing the strings to remove the app variables if needed.-->|
+|Variables dans les marquages visuels (en-tête, pied de page) |Oui|Cette configuration d’étiquette est prise en charge uniquement par les clients AIP, et non par l’étiquetage intégré d’Office. </br></br>Si vous utilisez l’étiquetage intégré et que vous publiez cette étiquette sans modification, les variables s’affichent sous forme de texte sur les clients plutôt que d’afficher les valeurs dynamiques. |
+|Marquages visuels par application|Oui|Cette configuration d’étiquette est prise en charge uniquement par les clients AIP, et non par l’étiquetage intégré d’Office. </br></br>Si vous utilisez l’étiquetage intégré et que vous publiez cette étiquette sans modification, la configuration du marquage visuel s’affiche sous forme de texte de variable au lieu des marquages visuels que vous avez configurés pour s’afficher dans chaque application.  |
 |Protection « uniquement pour moi » |Oui|Les centres d’administration ne vous permettent pas d’enregistrer les paramètres de chiffrement que vous appliquez maintenant, sans spécifier d’utilisateurs. Dans le Portail Azure, cette configuration génère une étiquette qui applique la [protection « juste pour moi »](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection). <br /><br /> Vous pouvez également créer une étiquette qui applique le chiffrement et spécifier un utilisateur avec des autorisations, puis modifier le modèle de protection associé à l’aide de PowerShell. Tout d’abord, utilisez l’applet [de commande New-AipServiceRightsDefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition) (Voir l’exemple 3), puis [Set-AipServiceTemplateProperty](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples) avec le paramètre *RightsDefinitions* .|
 |Conditions et paramètres associés <br /><br /> Inclut l’étiquetage automatique et recommandé ainsi que leurs info-bulles|Non applicable|Reconfigurez vos conditions en utilisant l’étiquetage d’automatique comme configuration distincte des paramètres d’étiquette.|
 
@@ -168,10 +168,6 @@ Les paramètres de protection qui se comportent de la même façon n’apparaiss
 |HYOK (AD RMS) avec des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers :| Visible dans Word, Excel, PowerPoint et l’Explorateur de fichiers<br /><br /> Quand cette étiquette est appliquée :<br /><br /> - La protection HYOK est appliquée aux documents et aux e-mails| Visible dans Word, Excel et PowerPoint <br /><br /> Quand cette étiquette est appliquée : <br /><br />- La protection n’est pas appliquée et la protection est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée|Visible dans Word, Excel et PowerPoint <br /><br /> Quand cette étiquette est appliquée : <br /><br />- La protection n’est pas appliquée et la protection est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée |
 |HYOK (AD RMS) avec des autorisations définies par l’utilisateur pour Outlook :|Visible dans Outlook<br /><br />Quand cette étiquette est appliquée :<br /><br />- « Ne pas transférer » avec la protection HYOK est appliqué aux e-mails|Visible dans Outlook<br /><br />Quand cette étiquette est appliquée :<br /><br /> - La protection n’est pas appliquée et elle est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée|Visible dans Outlook<br /><br />Quand cette étiquette est appliquée :<br /><br />- La protection n’est pas appliquée et elle est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée [[1]](#footnote-1)|
 
-<!-- removed
-|Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key|Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
-
- -->
 ###### <a name="footnote-1"></a>Note 1
 
 Dans Outlook, la protection est conservée avec une exception : lorsqu’un e-mail a été protégé avec l’option de chiffrement seul, cette protection est supprimée.
@@ -254,13 +250,15 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Les services qui prennent en charge l’étiquetage unifié sont :
 
-- [Power BI (en préversion)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Office Online (en version préliminaire) et Outlook sur le Web
+- Office Online et Outlook sur le Web
 
-- Microsoft SharePoint, OneDrive entreprise ou scolaire, OneDrive pour la famille, équipes et groupes Office 365 (en version préliminaire)
+    Pour plus d’informations, consultez [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+
+- Microsoft SharePoint, OneDrive entreprise ou scolaire, OneDrive pour la famille, équipes et groupes Office 365
     
-    Pour plus d’informations, consultez [utiliser des étiquettes de sensibilité avec Microsoft Teams, les groupes office 365 et les sites SharePoint (version préliminaire publique)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) et [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+    Pour plus d’informations, consultez [utiliser des étiquettes de sensibilité avec Microsoft Teams, les groupes Office 365 et les sites SharePoint](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
 
 - Microsoft Defender Advanced Threat Protection
 

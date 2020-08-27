@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c72d1764ace998b21c17be97639239da2a6a6c19
-ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
+ms.openlocfilehash: e893f7515ed18d749d43eeadc2f0893ea9a9dee9
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334179"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952995"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -27,8 +27,6 @@ ms.locfileid: "87334179"
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Vous avez une question sur Azure Information Protection ou sur le service Azure Rights Management (Azure RMS) ? Vous trouverez peut-être une réponse ici.
-
-<!-- These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).-->
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-microsoft-information-protection"></a>Quelle est la différence entre Azure Information Protection et Microsoft Information Protection ?
 
@@ -165,7 +163,7 @@ Toutefois, si vous souhaitez affecter des autorisations d’administration à d�
 - [Administrateur Azure Information Protection](#azure-information-protection-administrator)
 - [Administrateur de conformité ou administrateur des données de conformité](#compliance-administrator-or-compliance-data-administrator)
 - [Lecteur de sécurité ou lecteur global](#security-reader-or-global-reader)
-- [Administrateur de sécurité](#security-administrator)
+- [Administrateur de la sécurité](#security-administrator)
 - [Administrateur général et administrateur du connecteur Azure Rights Management](#azure-rights-management-global-administrator-and-connector-administrator)
 
 En outre, notez les points suivants lors de la gestion des tâches et des rôles d’administration :

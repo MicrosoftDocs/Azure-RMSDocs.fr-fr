@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af4a6989dca815d204fee72aafa6d839d2673fc4
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 85a7325bf2bd80294436b233fb81fddbe707ea6e
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952859"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176614"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus-Azure Information Protection
 
@@ -36,6 +36,20 @@ Si vous avez un fichier conteneur qui inclut des fichiers classifiés et protég
 La visionneuse Azure Information Protection ne peut pas ouvrir les pièces jointes dans un document PDF protégé. Dans ce scénario, lorsque le document est ouvert dans la visionneuse, les pièces jointes ne sont pas visibles.
 
 Pour plus d’informations, consultez [le Guide de l’administrateur : types de fichiers pris en charge par le client Azure information protection](rms-client/client-admin-guide-file-types.md).
+
+## <a name="known-issues-for-installing-the-aip-client"></a>Problèmes connus liés à l’installation du client AIP
+
+Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs sur lesquels la [protection contre l’exploitation](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée.
+
+Veillez à désactiver la protection contre les attaques avant d’installer AIP. 
+
+Pour désactiver la protection contre les attaques par le biais de PowerShell, exécutez la commande suivante :
+
+```PowerShell
+Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
+```
+
+Pour plus d’informations, consultez [Azure information Protection Requirements](requirements.md).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Prise en charge de PowerShell pour le client Azure Information Protection
 
@@ -80,8 +94,7 @@ La publication des stratégies peut prendre jusqu’à 24 heures.
     - [**Client classique**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/client-view-use-files.md)
     - [**Client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md)
 
-
-## <a name="more-information"></a>Informations complémentaires
+## <a name="more-information"></a>Plus d’informations
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

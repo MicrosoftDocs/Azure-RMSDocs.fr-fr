@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eaa3c47599a2d314dd0af24442efcefe16ff3c61
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: bb2f7d2cacad3623eb590c338a7f19585e9c80d1
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952910"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176648"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -78,6 +78,8 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
         Pour Excel : `MSIP.ExcelAddin`
 
         Pour PowerPoint : `MSIP.PowerPointAddin`
+
+- Le client AIP n’est pas pris en charge sur les ordinateurs sur lesquels la [protection contre l’exploitation](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée. Veillez à [désactiver la protection contre l’exploitation](../known-issues.md#known-issues-for-installing-the-aip-client) avant d’installer le client AIP.  
 
 > [!IMPORTANT]
 > L’installation du client Azure Information Protection nécessite les autorisations d’administrateur local.
@@ -172,7 +174,7 @@ Pour prendre en charge les mises à jour automatiques via Windows Update et pou
 
 Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
 
-Par exemple : `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+Exemple : `AzInfoProtection.exe DowngradeDotNetRequirement=True`.
 
 Nous vous recommandons d’utiliser ce paramètre avec précaution, car des problèmes ont été signalés avec les applications Office. Il arrive que celles-ci se bloquent lorsque le client Azure Information Protection est utilisé avec cette ancienne version de Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
 

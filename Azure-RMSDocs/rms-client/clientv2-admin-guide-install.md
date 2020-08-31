@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 394c91c7503a9bb8995eacf8c9cec45ab85fe57d
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: ec73048a8dcb306a1b8bc94670a80f9cbd8d2861
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788949"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176631"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -43,7 +43,8 @@ Les prérequis suivants pour le client d’étiquetage unifié AIP s’ajoutent 
 |**Assistant de connexion Microsoft Online Services 7.250.4303.0**     |   Les ordinateurs qui exécutent Office 2010 requièrent l’Assistant de connexion Microsoft Online Services version 7.250.4303.0, qui est inclus dans l’installation du client. </br></br>Si vous disposez d’une version ultérieure de l’Assistant de connexion, désinstallez-la avant d’installer le client d’étiquetage unifié Azure Information Protection. </br></br>Par exemple, vérifiez la version et désinstallez l’Assistant de connexion à l’aide du **panneau de configuration**  >  **programme et fonctionnalités**  >  **désinstaller ou modifier un programme**.      |
 |**KB 4482887**     | Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. </br></br>Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.        |
 |**Autorisations d’administrateur**| L’installation du client d’étiquetage unifié Azure Information Protection requiert des autorisations d’administrateur local.| 
-|   |  |
+|**Désactiver la protection contre les attaques**   |Le client AIP n’est pas pris en charge sur les ordinateurs sur lesquels la [protection contre l’exploitation](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée. Veillez à [désactiver la protection contre l’exploitation](../known-issues.md#known-issues-for-installing-the-aip-client) avant d’installer le client AIP.  |
+|||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>Configurer votre stratégie de groupe pour empêcher la désactivation d’AIP
 
@@ -65,12 +66,12 @@ Pour les versions d’Office 2013 et ultérieures, nous vous recommandons de con
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-- Applications Office version 1805 minimum, Build 9330,2078 à partir d' [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également connu sous le nom de Azure information protection pour Office 365)
-- [Applications Microsoft 365 pour l’entreprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1
-- [Applications Microsoft 365 pour Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2
+- Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
+- Office 365 ProPlus
+- Office Professionnel Plus 2019
+- Office Professionnel Plus 2016
+- Office Professionnel Plus 2013 avec Service Pack 1
+- Office Professionnel Plus 2010 avec Service Pack 2
 
 D’autres éditions (telles que **standard**) d’Office ne peuvent pas protéger des documents et des e-mails à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour l' **étiquetage** uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs sur le bouton ou la barre de sensibilité de Azure Information Protection.
 
@@ -167,7 +168,7 @@ Pour prendre en charge les mises à niveau automatiques à l’aide d’Windows 
 
 Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
 
-Par exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
+Exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`.
 
 Nous vous recommandons d’utiliser ce paramètre avec précaution et de savoir qu’il existe des problèmes avec les applications Office qui se sont débloquées lorsque l’Azure Information Protection client d’étiquetage unifié est utilisé avec cette version antérieure du Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
 

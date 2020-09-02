@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 8b72c0b8efe31ad570bed684dbe63283c5f79b47
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788643"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316635"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -200,7 +200,7 @@ Lorsque le client Azure Information Protection (Classic) et le Azure Information
 |Étiquettes automatiques et recommandées : | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans les centres d’administration avec les types d’informations sensibles intégrés et des [types d’informations personnalisés](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|
 |Prise en charge des commandes pour les sous-étiquettes sur les pièces jointes : | Activé avec un [paramètre client avancé](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Activé par défaut, aucune configuration n’est requise|
 |Modifier le comportement de protection par défaut pour les types de fichiers : | Vous pouvez utiliser des [modifications du Registre](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) pour remplacer les valeurs par défaut de protection native et générique | Vous pouvez utiliser [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) pour modifier les types de fichiers qui sont protégés|
-|Analyses automatiques | Les analyses complètes sont exécutées automatiquement chaque fois que l’analyseur détecte une modification de la stratégie ou des paramètres d’étiquetage | À partir de la version [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview), les administrateurs peuvent choisir d’ignorer une nouvelle analyse complète après avoir apporté des modifications aux paramètres de la stratégie ou du travail d’analyse du contenu. |
+|Analyses automatiques | Les analyses complètes sont exécutées automatiquement chaque fois que l’analyseur détecte une modification de la stratégie ou des paramètres d’étiquetage | À partir de la version [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), les administrateurs peuvent choisir d’ignorer une nouvelle analyse complète après avoir apporté des modifications aux paramètres de la stratégie ou du travail d’analyse du contenu. |
 |Détection de réseau |Les fonctionnalités de découverte du réseau ne sont pas disponibles pour le scanneur classique | Les administrateurs peuvent découvrir des référentiels à risque supplémentaires en analysant une adresse IP ou une plage spécifiée.|
 | | | |
 

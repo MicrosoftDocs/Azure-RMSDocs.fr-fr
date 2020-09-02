@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ec73048a8dcb306a1b8bc94670a80f9cbd8d2861
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 5874103f099898bef603dd56c85371a65d24a74c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176631"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316652"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -111,8 +111,6 @@ Utilisez les instructions suivantes pour installer le client lorsque vous n’ut
     
     - **ServiceLocation** : utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010 et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent un message. [Plus d’informations](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement** : utilisez ce paramètre pour éviter d’avoir à disposer de Microsoft Framework .NET version 4.6.2. [Plus d’informations](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-    
     - **AllowTelemetry = 0** : Utilisez ce paramètre pour désactiver l’option d’installation **Participer à l’amélioration d’Azure Information Protection en envoyant des statistiques d’utilisation à Microsoft**. 
 
 3. Pour achever l'installation : 
@@ -161,18 +159,6 @@ Utilisez la procédure suivante pour identifier la valeur à spécifier pour le 
 
 Exemple d’installation du client en mode silencieux pour Office 2010 et Azure RMS : `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
-
-#### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Plus d’informations sur le paramètre d’installation DowngradeDotNetRequirement
-
-Pour prendre en charge les mises à niveau automatiques à l’aide d’Windows Update et pour une intégration fiable avec les applications Office, le client d’étiquetage Azure Information Protection unifié utilise Microsoft .NET Framework version 4.6.2. Par défaut, l’installation interactive à partir de l’exécutable vérifie que cette version est installée et essaie de l’installer si elle est manquante. L’installation nécessite le redémarrage de l’ordinateur.
-
-Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
-
-Exemple : `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`.
-
-Nous vous recommandons d’utiliser ce paramètre avec précaution et de savoir qu’il existe des problèmes avec les applications Office qui se sont débloquées lorsque l’Azure Information Protection client d’étiquetage unifié est utilisé avec cette version antérieure du Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
-
-Rappelez-vous également que si vous utilisez Windows Update pour que le Azure Information Protection client d’étiquetage unifié soit mis à jour, vous devez disposer d’un autre mécanisme de déploiement de logiciels pour mettre à niveau le client vers des versions ultérieures.
 
 ### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>Pour installer le client d’étiquetage unifié Azure Information Protection à l’aide du programme d’installation. msi
 

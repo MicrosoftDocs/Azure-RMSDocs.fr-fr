@@ -4,7 +4,7 @@ description: Instructions d’installation et de configuration du Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcc798a8b9b4a2e0472aad77123571ab03070324
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 956b9f65c9dd5a4a5fdf66d3f70770ff5e7162d2
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953148"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316907"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "88953148"
 >[!NOTE] 
 > Si vous utilisez le scanneur classique AIP, consultez [installation et configuration du Azure information protection scanneur classique](deploy-aip-scanner-configure-install-classic.md).
 
-Avant de commencer à configurer et à installer le scanneur Azure Information Protection, vérifiez que votre système est conforme aux [conditions préalables requises](deploy-aip-scanner-prereqs.md).
+Avant de commencer à configurer et à installer le scanneur Azure Information Protection, vérifiez que votre système est conforme aux [conditions préalables requises](deploy-aip-scanner-prereqs.md). 
 
 Lorsque vous êtes prêt, passez aux étapes suivantes :
 
@@ -57,7 +57,14 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
 
 Pour configurer votre scanneur : 
 
-1. [Connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)et accédez au volet de **Azure information protection** . 
+1. Connectez-vous au [portail Azure](https://portal.azure.com) avec l’un des rôles suivants :
+
+    - **Administrateur de conformité**
+    - **Administrateur des données de conformité**
+    - **Administrateur de sécurité**
+    - **Administrateur général**
+
+    Ensuite, accédez au volet **Azure information protection** .
     
     Par exemple, dans la zone de recherche des ressources, services et documents, commencez à taper **Information** et sélectionnez **Azure Information Protection**.
 
@@ -85,7 +92,7 @@ Pour configurer votre scanneur :
 
 ### <a name="create-a-network-scan-job-public-preview"></a>Créer un travail d’analyse réseau (préversion publique)
 
-À partir de la version 2.8.83, vous pouvez analyser votre réseau à la recherche de référentiels risqués. Ajoutez un ou plusieurs référentiels trouvés à un travail d’analyse de contenu pour les analyser à la recherche de contenu sensible.
+À partir de la version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), vous pouvez analyser votre réseau à la recherche de référentiels risqués. Ajoutez un ou plusieurs référentiels trouvés à un travail d’analyse de contenu pour les analyser à la recherche de contenu sensible.
 
 > [!NOTE]
 > L’interface de **découverte du réseau** est actuellement en cours de déploiement progressif et sera disponible dans toutes les régions du 15 septembre 2020. 
@@ -111,7 +118,7 @@ Pour configurer votre scanneur :
         
     |Paramètre  |Description  |
     |---------|---------|
-    |**Nom du travail d’analyse réseau**     |Entrez un nom explicite pour ce travail.  Ce champ doit obligatoirement être renseigné.       |
+    |**Nom du travail d’analyse réseau**     |Entrez un nom explicite pour ce travail.  Ce champ est obligatoire.       |
     |**Description**     |   Entrez une description explicite.      |
     |**Sélectionner le cluster.**     |Dans la liste déroulante, sélectionnez le cluster que vous souhaitez utiliser pour analyser les emplacements réseau configurés.  </br></br>**Conseil :** Lorsque vous sélectionnez un cluster, assurez-vous que les nœuds du cluster que vous affectez peuvent accéder aux plages d’adresses IP configurées via SMB.      |
     |**Configurer des plages d’adresses IP à découvrir**     |   Cliquez pour définir une adresse IP ou une plage. </br></br>Dans le volet **choisir des plages** d’adresses IP, entrez un nom facultatif, puis une adresse IP de début et une adresse IP de fin pour votre plage. </br></br>**Conseil :** Pour analyser uniquement une adresse IP spécifique, entrez l’adresse IP identique dans les champs adresse IP de **début** et adresse IP de **fin** .      |

@@ -13,18 +13,18 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecc0a78a942dc4e0c6b1dc89b3d2d2ec57c87f6e
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 1bd48cd64616785a3b8f7c62a3e944cc5eb80097
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264376"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316822"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. Informations supplémentaires :
+Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. En outre :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -107,6 +107,12 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 - ID d’utilisateur (adresse e-mail ou UPN).
 
 - Nom de l’appareil de l’utilisateur.
+
+- Adresse IP de l’appareil de l’utilisateur. 
+
+- Le nom du processus approprié, par exemple **Outlook** ou **MSIP. app**.
+
+- Nom de l’application qui a effectué l’étiquetage, comme **Outlook** ou l' **Explorateur de fichiers**
 
 - Pour les documents : chemin et nom de fichier des documents qui sont étiquetés.
 

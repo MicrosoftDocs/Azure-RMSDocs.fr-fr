@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953063"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316873"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution de l’analyseur de Azure Information Protection
 
@@ -99,7 +99,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
     ![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
 
-- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
+- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
 
     ```ps
     Stop-AIPScan 
@@ -133,7 +133,7 @@ Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez 
 Si vous avez également modifié les paramètres de protection de vos étiquettes, patientez 15 minutes après l’enregistrement des paramètres de protection mis à jour avant le redémarrage du service Azure Information Protection.
 
 > [!IMPORTANT]
-> Si vous avez effectué une mise à niveau vers la version [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
+> Si vous avez effectué une mise à niveau vers la version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
 >
 > Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on,** veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 > 

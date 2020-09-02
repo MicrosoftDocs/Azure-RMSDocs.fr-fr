@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables requises pour déployer des A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: e3d50f6857c2f7c3fd5f104d79997b00feeb2664
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952825"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316890"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour la Azure Information Protection
 
@@ -122,7 +122,7 @@ En outre, Server Core et nano Server ne sont pas pris en charge.
 
 ### <a name="additional-requirements-per-client"></a>Exigences supplémentaires par client
 
-Chaque client Azure Information Protection a des conditions préalables supplémentaires. Pour plus d’informations, consultez :
+Chaque client Azure Information Protection a des conditions préalables supplémentaires. Pour plus d'informations, consultez :
 
 - [Prérequis du client d’étiquetage unifié Azure Information Protection](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
@@ -216,8 +216,9 @@ Veillez à autoriser l’accès à tous les ports pour les balises de service su
 Le service Azure Information Protection dépend également de deux adresses IP spécifiques :
  - **13.107.6.181** 
  - **13.107.9.181**
+ - **Port 443**pour le trafic HTTPS
 
-Veillez à créer des règles pour autoriser l’accès sortant à ces adresses IP spécifiques.
+Veillez à créer des règles pour autoriser l’accès sortant à ces adresses IP spécifiques et via ce port.
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Serveurs locaux pris en charge pour la protection des données Azure Rights Management
 

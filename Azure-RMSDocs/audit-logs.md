@@ -4,7 +4,7 @@ description: En savoir plus sur les journaux d’audit générés par Azure Info
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6edae5a207208d640b0d851b1d664475e3b72d46
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 14d8101da8b00071256e9ed3e4ae06002f96acbb
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953080"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316788"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Informations de référence sur le journal d’audit Azure Information Protection (version préliminaire publique)
 
@@ -41,11 +41,11 @@ Microsoft Azure Information Protection génère des journaux d’audit au niveau
 
 Les journaux d’audit d' **accès** sont générés pour les activités suivantes :
 
-|Signalé par  |Plate-forme  |Application  |Action/Description  |
+|Signalé par  |Plateforme  |Application  |Action/Description  |
 |---------|---------|---------|---------|
-|Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié     | Windows        | Office        |Généré pour la première fois dans chaque session qu’un fichier étiqueté ou protégé est enregistré.<br>Le journal comprend toutes les correspondances de type d’informations.     |
-|Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié     |Windows         |Office         |Généré chaque fois qu’un fichier étiqueté ou protégé est créé.       |
-|Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié     | Windows, SharePoint, OneDrive        | Office        | Généré chaque fois qu’un fichier étiqueté ou protégé est ouvert. </br></br>**Remarque :** Pour les fichiers protégés, les journaux d’audit d’accès sont générés uniquement lorsque le fichier est ouvert et que le contenu est correctement déchiffré et exposé à l’utilisateur. </br>Pour les e-mails protégés dans Outlook, les journaux d’audit d’accès sont également générés chaque fois que l’utilisateur tente d’ouvrir un e-mail chiffré, même si le déchiffrement est bloqué en raison d’autorisations insuffisantes.          |
+|Azure Information Protection : client classique uniquement | Windows        | Office        |Généré pour la première fois dans chaque session qu’un fichier étiqueté ou protégé est enregistré.<br>Le journal comprend toutes les correspondances de type d’informations.      |
+|Azure Information Protection : client classique uniquement     |Windows         |Office         |Généré chaque fois qu’un fichier étiqueté ou protégé est créé.       |
+|Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié     | Windows, SharePoint, OneDrive        | Office        | Généré chaque fois qu’un fichier étiqueté ou protégé est ouvert. </br></br>**Remarque :** Pour les fichiers protégés, les journaux d’audit d’accès sont générés uniquement lorsque le fichier est ouvert et que le contenu est correctement déchiffré et exposé à l’utilisateur. </br>Pour les e-mails protégés dans Outlook, les journaux d’audit d’accès sont également générés chaque fois que l’utilisateur tente d’ouvrir un e-mail chiffré, même si le déchiffrement est bloqué en raison d’autorisations insuffisantes.         |
 |SDK Microsoft Information Protection (MIP)     | Quelconque        | Applications tierces        | Généré chaque fois qu’un fichier nommé ou protégé est accédé par une application tierce qui le prend en charge.       |
 |Service RMS     | Windows        | Office         |Généré chaque fois qu’un document nommé ou protégé est accédé.       |
 
@@ -54,7 +54,7 @@ Les journaux d’audit d' **accès** sont générés pour les activités suivant
 
 Les journaux d’audit de **refus d’accès** sont générés pour les activités suivantes :
 
-|Signalé par  |Plate-forme  |Application  |Action/Description   |
+|Signalé par  |Plateforme  |Application  |Action/Description   |
 |---------|---------|---------|---------|
 |Service RMS     | Windows        | Office         |Généré chaque fois qu’un utilisateur tente d’accéder à un document protégé pour lequel il n’a pas d’autorisations.
 
@@ -62,7 +62,7 @@ Les journaux d’audit de **refus d’accès** sont générés pour les activit�
 
 Les journaux d’audit de la **protection des modifications** sont générés pour les activités suivantes :
 
-|Signalé par  |Plate-forme  |Application  |Action/Description   |
+|Signalé par  |Plateforme  |Application  |Action/Description   |
 |---------|---------|---------|---------|
 |Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié     | Windows, SharePoint, OneDrive        | Office        | Généré chaque fois que la protection d’un document sans étiquette est modifiée manuellement.         |
 |SDK Microsoft Information Protection (MIP)     | Quelconque        | Applications tierces        | Généré chaque fois que la protection d’un document sans étiquette est modifiée manuellement.<br>Généré uniquement s’il est pris en charge par l’application tierce.       |
@@ -71,19 +71,19 @@ Les journaux d’audit de la **protection des modifications** sont générés po
 
 **Découvrez** les journaux d’audit générés pour les activités suivantes :
 
-|Signalé par  |Plate-forme  |Application  |Action/Description   |
+|Signalé par  |Plateforme  |Application  |Action/Description   |
 |---------|---------|---------|---------|
-|Azure Information Protection :</br>-Scanneur classique </br>-Scanneur d’étiquetage unifié     | Windows        | Office        |Généré chaque fois qu’un fichier est analysé par le scanneur AIP.<br>Le journal contient les informations suivantes :<br>-Types d’informations identiques<br>-Étiquettes |
+|Azure Information Protection : scanneur classique uniquement | Windows        | Office        |Généré chaque fois qu’un fichier est analysé par le scanneur AIP.<br>Le journal contient les informations suivantes :<br>-Types d’informations identiques<br>-Étiquettes |
 |SDK Microsoft Information Protection (MIP) | Quelconque | Applications tierces | Généré chaque fois qu’un fichier est analysé par une application tierce qui le prend en charge. </br>Le journal contient les informations suivantes :</br>-Types d’informations identiques</br>-Étiquettes|
 
 ## <a name="downgrade-label-audit-logs"></a>Déclasser les journaux d’audit des étiquettes
 
 Les journaux d’audit des **étiquettes de rétrogradation** sont générés pour les activités suivantes :
 
-| Signalé par      | Plate-forme                       | Application              | Action/Description      |
+| Signalé par      | Plateforme                       | Application              | Action/Description      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
 |Azure Information Protection :</br>-Scanneur et client classiques</br>-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible.|
-| Microsoft Defender ATP            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible. |
+| Microsoft Defender - PACM            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible. |
 | SDK Microsoft Information Protection (MIP)          | Quelconque                            | Applications tierces | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible.<br>Généré uniquement s’il est pris en charge par l’application tierce. |
 
 ## <a name="file-removed-audit-logs"></a>Fichiers journaux d’audit supprimés
@@ -93,7 +93,7 @@ Les journaux d’audit des **étiquettes de rétrogradation** sont générés po
 
 Les journaux d’audit des **fichiers supprimés** sont générés pour les activités suivantes :
 
-| Signalé par                                                                              | Plate-forme | Application                     | Action/Description                                                          |
+| Signalé par                                                                              | Plateforme | Application                     | Action/Description                                                          |
 | ---------------------------------------------------------------------------------------- | -------- | ------------------------------- | ------------------------------------------------------------------------------ |
 | Scanneur Azure Information Protection, client d’étiquetage unifié | Windows  | Office et types de fichiers pris en charge | Généré chaque fois que l’analyseur AIP détecte qu’un fichier précédemment analysé a été supprimé. |
 
@@ -101,17 +101,17 @@ Les journaux d’audit des **fichiers supprimés** sont générés pour les acti
 
 De nouveaux journaux d’audit des **étiquettes** sont générés pour les activités suivantes :
 
-| Signalé par                                                                      | Plate-forme                       | Application              | Action/Description                                                                                      |
+| Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :</br>-Scanneur et client classiques</br>-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une nouvelle étiquette est appliquée.                                                                  |
-| Microsoft Defender ATP                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une nouvelle étiquette de document est appliquée.                                                                  |
+| Microsoft Defender - PACM                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une nouvelle étiquette de document est appliquée.                                                                  |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois qu’une nouvelle étiquette de document est appliquée.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
 
 ## <a name="new-protection-audit-logs"></a>Nouveaux journaux d’audit de protection
 
 De nouveaux journaux d’audit de **protection** sont générés pour les activités suivantes :
 
-| Signalé par                                                                      | Plate-forme                       | Application              | Action/Description                                                                                      |
+| Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois que la protection est ajoutée manuellement, sans étiquette.                                                                  |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois que la protection est ajoutée manuellement, sans étiquette.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
@@ -120,17 +120,17 @@ De nouveaux journaux d’audit de **protection** sont générés pour les activi
 
 **Supprimer** les journaux d’audit des étiquettes sont générés pour les activités suivantes :
 
-| Signalé par                                                                      | Plate-forme                       | Application              | Action/Description                                                                                      |
+| Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :</br>-Scanneur et client classiques</br>-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une étiquette est supprimée.                                                                  |
-| Microsoft Defender ATP                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette est supprimée.                                                                  |
+| Microsoft Defender - PACM                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette est supprimée.                                                                  |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois qu’une étiquette est supprimée.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
 
 ## <a name="remove-protection-audit-logs"></a>Supprimer les journaux d’audit de protection
 
 **Supprimer** les journaux d’audit de protection sont générés pour les activités suivantes :
 
-| Signalé par                                                                      | Plate-forme                       | Application              | Action/Description                                                                                      |
+| Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :</br>-Client classique</br>-Client d’étiquetage unifié | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois que la protection est supprimée manuellement, sans étiquette.                                                                  |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois que la protection est supprimée manuellement, sans étiquette.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
@@ -139,8 +139,8 @@ De nouveaux journaux d’audit de **protection** sont générés pour les activi
 
 Les journaux d’audit des **étiquettes de mise à niveau** sont générés pour les activités suivantes :
 
-| Signalé par                                                                      | Plate-forme                       | Application              | Action/Description                                                                                      |
+| Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :</br>-Scanneur et client classiques</br>-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.                                                                   |
-| Microsoft Defender ATP                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.                                                                   |
+| Microsoft Defender - PACM                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.                                                                   |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |

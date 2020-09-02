@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 274ef1ef2a7196aa9c25b8f488d83da77eba7c6c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952893"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316805"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -208,15 +208,35 @@ Toutefois, dans un environnement de production, les stratégies de votre organis
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur de scanneur ne peut pas disposer d’une connexion Internet
 
+Alors que le client d’étiquetage unifié ne peut pas appliquer la protection sans connexion Internet, le scanneur peut toujours appliquer des étiquettes basées sur des stratégies importées.
+
 Pour prendre en charge un ordinateur déconnecté, procédez comme suit :
 
-1. Configurez des étiquettes dans votre stratégie, puis importez la stratégie à l’aide de l’applet de commande [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) . Alors que le client d’étiquetage unifié ne peut pas appliquer la protection sans connexion Internet, le scanneur peut toujours appliquer des étiquettes basées sur des stratégies importées.
+1.  Configurez des étiquettes dans votre stratégie, puis utilisez la [procédure pour prendre en charge les ordinateurs déconnectés](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) afin d’activer la classification et l’étiquetage hors connexion.
 
-1. Configurez le scanneur dans le Portail Azure en créant un cluster de scanneur. Si vous avez besoin d’aide pour cette étape, consultez [Configurer le scanneur dans le portail Azure](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Activer la gestion hors connexion pour les travaux d’analyse de contenu :
 
-1. Exportez votre travail de contenu à partir du volet **Azure information protection-travaux d’analyse de contenu** à l’aide de l’option d' **exportation** .
+    1. Configurez le scanneur pour qu’il fonctionne en mode **hors connexion** à l’aide de l’applet de commande [Set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
 
-1. Dans une session PowerShell, exécutez [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier contenant les paramètres exportés.
+    1. Configurez le scanneur dans le Portail Azure en créant un cluster de scanneur. Pour plus d’informations, consultez [configurer le scanneur dans le portail Azure](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+    1. Exportez votre travail de contenu à partir du volet **Azure information protection-travaux d’analyse de contenu** à l’aide de l’option d' **exportation** .
+    
+    1. Importez la stratégie à l’aide de l’applet [de commande Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) . 
+    
+    Les résultats des travaux d’analyse de contenu hors connexion se trouvent à l’emplacement suivant : **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
+    
+1. Activer la gestion hors connexion des travaux d’analyse réseau :
+
+    1. Configurez le service de découverte du réseau pour qu’il fonctionne en mode hors connexion à l’aide de l’applet de commande [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
+
+    1. Configurez le travail Network Scan dans le Portail Azure. Pour plus d’informations, consultez [création d’un travail d’analyse réseau](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    
+    1. Exportez votre travail d’analyse réseau à partir du volet **Azure information protection-tâches d’analyse réseau (** préversion) à l’aide de l’option d' **exportation** . 
+    
+    1.  Importez le travail d’analyse réseau à l’aide du fichier qui correspond à notre nom de cluster à l’aide de l’applet [de commande Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) .  
+    
+    Les résultats des travaux d’analyse réseau hors connexion se trouvent à l’emplacement suivant : **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
 

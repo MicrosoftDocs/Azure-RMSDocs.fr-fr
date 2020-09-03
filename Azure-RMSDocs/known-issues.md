@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 85a7325bf2bd80294436b233fb81fddbe707ea6e
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 926c24ae3bd7960df21aba508bdf2edc83f29e9f
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176614"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422379"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus-Azure Information Protection
 
@@ -73,6 +73,7 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 |**Marquages de contenu dans Word**    | Azure Information Protection [marquages](configure-policy-markings.md) de contenu peuvent être masqués dans les pieds de page Microsoft Word, lorsque le pied de page contient également un tableau. Pour plus d’informations, consultez la page [quand des marquages visuels sont appliqués](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Fichiers joints aux courriers électroniques** |En raison d’une limitation dans les mises à jour Windows récentes, lorsque [Microsoft Outlook est protégé par Azure Rights Management](office-apps-services-support.md), les fichiers joints aux courriers électroniques peuvent être verrouillés après l’ouverture du fichier. |
 |**Fusion et publipostage**    |  La fonctionnalité de [fusion et](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) publipostage d’Office n’est pas prise en charge avec les fonctionnalités de Azure information protection.       |
+| **Courriers électroniques S/MIME** | L’ouverture des e-mails S/MIME dans le volet de lecture d’Outlook peut entraîner des problèmes de performances. </br></br>Pour éviter les problèmes de performances avec les e-mails S/MIME, activez la propriété avancée [**OutlookSkipSmimeOnReadingPaneProperty**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . </br></br>**Remarque :** L’activation de cette propriété empêche l’affichage de la barre AIP ou de la classification des messages dans le volet de lecture d’Outlook. |
 | | |
 
 ## <a name="known-issues-in-policies"></a>Problèmes connus dans les stratégies
@@ -94,7 +95,7 @@ La publication des stratégies peut prendre jusqu’à 24 heures.
     - [**Client classique**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/client-view-use-files.md)
     - [**Client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md)
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Informations complémentaires
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

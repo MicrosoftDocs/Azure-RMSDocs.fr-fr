@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee77dc60e1300f494508479925963178413c48d9
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: ebaf12c3784f0a34a36f3a61aa687e1c61fe3126
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316845"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422447"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -150,14 +150,17 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Afficher la barre Information Protection dans les applications Office](#display-the-information-protection-bar-in-office-apps)|
+|JustificationTextForUserText | [Personnaliser les textes d’invite de justification pour les étiquettes modifiées](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationRule| [Personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages)|
 |OutlookDefaultLabel|[Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookJustifyTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookSkipSmimeOnReadingPaneProperty | [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)|
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -168,6 +171,8 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
 |ScannerFSAttributesToSkip | [Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
+|SharepointWebRequestTimeout| [Configurer des délais d’attente SharePoint](#configure-sharepoint-timeouts)|
+|SharepointFileWebRequestTimeout |[Configurer des délais d’attente SharePoint](#configure-sharepoint-timeouts)|
 |UseCopyAndPreserveNTFSOwner | [Conserver les propriétaires NTFS pendant l’étiquetage](#preserve-ntfs-owners-during-labeling-public-preview)
 
 Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée « global » :
@@ -1783,6 +1788,18 @@ Par défaut, le délai d’attente pour les interactions SharePoint est de deux 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME
+
+Des problèmes de performances peuvent se produire dans Outlook lorsque les courriers électroniques S/MIME sont ouverts dans le volet de lecture. Pour éviter ces problèmes, activez la propriété avancée **OutlookSkipSmimeOnReadingPaneProperty** . 
+
+L’activation de cette propriété empêche l’affichage de la barre AIP et des classifications de courrier électronique dans le volet de lecture.
+
+Par exemple, si votre stratégie est nommée **Global**, l’exemple de commande PowerShell suivant active la propriété **OutlookSkipSmimeOnReadingPaneProperty** :
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneProperty="true"}
+```
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26a6b96a8f0de79d78bb5fdb456158f15e86b1e0
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a7705a284690094c3db2ac5fd3ac3e3eca1ed2e5
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048814"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423126"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
 >
-> **Les clients disposant d’un support Microsoft étendu pour Windows 7 et Office 2010 peuvent également bénéficier de la prise en charge Azure Information Protection pour ces versions. Pour plus d’informations, consultez votre contact de support.*
+>*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -111,7 +111,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
     
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     
-    - **URI de redirection (facultatif)**: **Web** et`https://localhost`
+    - **URI de redirection (facultatif)**: **Web** et `https://localhost`
 
 4. Dans le volet **AIP-DelegatedUser** , copiez la valeur de l’ID de l' **application (client)**. La valeur ressemble à l’exemple suivant : `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
@@ -121,7 +121,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 7. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
     
-    - **Description**:`Azure Information Protection unified labeling client`
+    - **Description**: `Azure Information Protection unified labeling client`
     - **Expires**: spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
 
 8. De retour sur le volet **AIP-DelegatedUser-certificates & secrets** , dans la section **secrets client** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` . Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 

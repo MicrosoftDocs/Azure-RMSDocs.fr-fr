@@ -4,19 +4,19 @@ description: Instructions pour afficher un fichier protégé qui vous oblige à 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8d7779a14b7fd7ca4a78a7b69e0c8c243c0fe07d
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: ca7c845b01d6aaf592592d7d57b062619c8a38ee
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423058"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447104"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 

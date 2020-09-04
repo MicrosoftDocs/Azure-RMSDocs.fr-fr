@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9566a20489ab24b1e13ca434caa4c2377902a058
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: 9a6d2ae357490b57b71b52e33ffef9827ecdceac
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89422854"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447036"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus-Azure Information Protection
 
@@ -65,7 +65,7 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problèmes connus liés à AIP dans les applications Office
 
-|Fonctionnalité  |Problèmes connus  |
+|Caractéristique  |Problèmes connus  |
 |---------|---------|
 |**Plusieurs versions d’Office**    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
 |**Affichages multiples** |Si vous utilisez plusieurs affichages et que vous avez une application Office ouverte : </br></br>-Vous pouvez rencontrer des problèmes de performances dans vos applications Office.</br>-La barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des écrans </br></br>Pour garantir des performances cohérentes et que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général,** sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence.**    |

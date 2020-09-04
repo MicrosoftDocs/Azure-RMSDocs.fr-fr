@@ -4,19 +4,19 @@ description: Instructions sur la classification et la protection de vos document
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 622cec286817917dbca13035c634f62eccc2ecf7
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: be6e853e8536db130436818aabc8b5289d16393e
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423211"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447274"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : classifier et protéger avec le client d’étiquetage unifié Azure Information Protection
 

@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d5801d4b76e3e7f08203889dc4ac348d9dd2d746
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: fd96b54c25e92824bc216f452a6458706a4f906e
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423245"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447308"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 

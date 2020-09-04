@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/31/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1db7dd9a2d662689520480d7c5c8002a0b232450
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: 69799cb3ce484e5cd594e5520069bfec3586766c
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423075"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447223"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -216,7 +216,7 @@ Les correctifs suivants ont été fournis dans la version 2.8.85 du client d’�
 - Info-bulle met à jour pour afficher la classification la plus élevée [des pièces jointes](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling), en tenant compte de la classification de l’e-mail et de la pièce jointe. 
 - Les correctifs **apportés au rapport constituent un** texte de problème lors de la modification des stratégies d’étiquetage de sensibilité à l’aide de l’applet [**de commande Set-LabelPolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy)
 - Corrige les erreurs affichées lorsque l’applet de commande [**Set-AipFileLabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) est utilisée avec un ID d’étiquette non valide.
-- Correctifs de performances pour le [déchiffrement des messages SMIME](clientv2-view-use-files.md) dans le volet de lecture d’Outlook. Pour implémenter ce correctif, activez la propriété avancée [**OutlookSkipSmimeOnReadingPaneProperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) .
+- Correctifs de performances pour le déchiffrement des messages SMIME dans le volet de lecture d’Outlook. Pour implémenter ce correctif, activez la propriété avancée [**OutlookSkipSmimeOnReadingPaneProperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) .
 - Correctifs pour le [déchiffrement des fichiers PST](clientv2-admin-guide-file-types.md) qui contiennent des fichiers chiffrés par mot de passe. Le déchiffrement des fichiers PST n’échoue plus si le fichier PST contient un fichier protégé par mot de passe.
 - La suppression d’une étiquette de protection qui n’est pas incluse dans votre [stratégie délimitée](../configure-policy-scope.md) ne supprime plus la protection du contenu.
 

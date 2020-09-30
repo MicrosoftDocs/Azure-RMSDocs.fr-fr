@@ -123,7 +123,7 @@
           items:
             - name: Vue d’ensemble
               href: configure-applications.md
-            - name: "Services Office\_365"
+            - name: "Services Microsoft\_365"
               href: configure-office365.md
             - name: Applications Office
               href: configure-office-apps.md
@@ -325,7 +325,7 @@
           href: ./rms-client/client-deployment-notes.md
         - name: Protection RMS avec l’ICF de Windows Server
           items:
-            - name: Vue d'ensemble
+            - name: Vue d’ensemble
               href: ./rms-client/configure-fci.md
             - name: Script PowerShell
               href: ./rms-client/fci-script.md

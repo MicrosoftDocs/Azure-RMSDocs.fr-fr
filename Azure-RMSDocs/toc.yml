@@ -135,7 +135,7 @@
           href: configure-super-users.md
         - name: Configuration de la stratégie Azure Information Protection
           items:
-            - name: Vue d’ensemble
+            - name: Vue d'ensemble
               href: configure-policy.md
             - name: La stratégie par défaut
               href: configure-policy-default.md
@@ -263,7 +263,7 @@
                       href: ./rms-client/clientv2-admin-guide-powershell.md
                 - name: Guide de l’utilisateur
                   items:
-                    - name: Vue d’ensemble
+                    - name: Vue d'ensemble
                       href: ./rms-client/clientv2-user-guide.md
                     - name: Télécharger et installer le client
                       href: ./rms-client/install-unifiedlabelingclient-app.md
@@ -335,7 +335,7 @@
         - name: Guide du développeur
           href: ./develop/developers-guide.md
         - name: Microsoft Information Protection
-          href: 'https://aka.ms/mipsdkdocs'
+          href: /information-protection/develop/
         - name: "Rights Management SDK\_4.2"
           href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
           items:
@@ -486,7 +486,7 @@
     - name: Conformité et informations annexes
       href: compliance.md
     - name: Informations de référence sur PowerShell
-      href: 'https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps'
+      href: /powershell/azure/aip/overview?view=azureipps
     - name: Informations de référence sur le journal d’audit
       href: audit-logs.md
     - name: Terminologie

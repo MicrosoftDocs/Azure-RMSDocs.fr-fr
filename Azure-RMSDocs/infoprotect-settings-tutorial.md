@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f0a84362a36609c90c6419d2c1be8746b3e52207
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: fcdf8fdba470a085af83410de0e9bcd4677ec664
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788898"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428801"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
@@ -61,17 +61,17 @@ Pour suivre ce tutoriel, il vous faut :
 
 4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     
-    - Applications Office, version minimale 1805, build 9330.2078 de [Microsoft 365 Apps for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) si une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est attribuée.
+    - Applications Office, version minimale 1805, build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium si une licence Azure Rights Management (également appelé Azure Information Protection pour Microsoft 365) vous est attribuée.
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
+    - Microsoft 365 Apps for Enterprise.
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019.
+    - Office Professionnel Plus 2019.
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016.
+    - Office Professionnel Plus 2016.
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 avec Service Pack 1.
+    - Office Professionnel Plus 2013 avec Service Pack 1.
     
-    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 avec Service Pack 2.
+    - Office Professionnel Plus 2010 avec Service Pack 2.
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
 

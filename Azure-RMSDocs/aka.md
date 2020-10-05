@@ -5,23 +5,23 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 067e96c31c7bca2a098cbdf0f7b215c05bc4fa61
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
-ms.translationtype: MT
+ms.openlocfilehash: 0eb7119831e09abaa9655f6860053431edea7c23
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224612"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428756"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 La solution Azure Information Protection (parfois abrégée AIP) s’appuie sur de nombreuses technologies développées de longue date par Microsoft dans le domaine de la protection de la gestion des droits. En raison de cette évolution, vous connaissez peut-être cette solution par l’un de ses anciens noms, tout comme vous pouvez voir des références à ces noms dans de la documentation, des interfaces utilisateur et des fichiers journaux. 
 
@@ -68,7 +68,7 @@ Notez que l’abréviation **DRM**, qui est bien connue pour la gestion des droi
 
 Oui, s’il s’agit de la solution cloud. Azure Information Protection offre de nouvelles possibilités à l’entreprise en matière de classification et d’étiquetage de ses documents et e-mails qui, en retour, peuvent appliquer une protection Rights Management. 
 
-Toutefois, Azure Rights Management sert toujours de technologie de protection pour Azure Information Protection et pour les services Office 365 qui utilisent la protection Rights Management dans le cloud. Aussi, dans le contexte de la technologie de protection utilisée par Azure Information Protection, « Azure Rights Management » (Azure RMS) reste un nom actuellement utilisé.
+Toutefois, Azure Rights Management sert toujours de technologie de protection pour Azure Information Protection et pour les services Microsoft 365 qui utilisent la protection Rights Management dans le cloud. Aussi, dans le contexte de la technologie de protection utilisée par Azure Information Protection, « Azure Rights Management » (Azure RMS) reste un nom actuellement utilisé.
 
 De même, « Active Directory Rights Management Services » (AD RMS) reste un nom utilisé pour le rôle de serveur Windows Server qui propose une protection Rights Management en local. Cette technologie de protection peut être utilisée avec Azure Information Protection, ainsi qu’elle peut être adaptée pour un très petit pourcentage de documents et e-mails qui doivent être protégés par une clé en local. Dans ce scénario, nous faisons souvent référence à AD RMS comme à une solution HYOK (« hold your own key »).
 

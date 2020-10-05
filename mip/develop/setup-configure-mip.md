@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 171132bd2e41dcde4dd879eb9314d909bccd74c3
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971674"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428291"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP)
 
-Les guides de démarrage rapide et les tutoriels sont centrés sur la création d’applications qui utilisent les API et les bibliothèques du kit SDK MIP. Cet article explique comment installer et configurer votre abonnement Office 365 et votre station de travail cliente, en préparation à l’utilisation du kit SDK.
+Les guides de démarrage rapide et les tutoriels sont centrés sur la création d’applications qui utilisent les API et les bibliothèques du kit SDK MIP. Cet article explique comment installer et configurer votre abonnement Microsoft 365 et votre station de travail cliente, en préparation de l’utilisation du kit SDK.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -102,7 +102,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
 
    **Téléchargements Tar.gz/.Zip**
 
-   Les téléchargements Tar.gz et .Zip contiennent plusieurs fichiers compressés supplémentaires, un pour chaque API. Les fichiers compressés sont nommés comme suit, où \<API\> = `file`, `protection` ou `upe`, et \<OS\> = la plateforme : `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Par exemple, le fichier pour les binaires et en-têtes de l’API de protection sur Debian serait : `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Chaque fichier .tar.gz/.zip contenu se divise en trois répertoires :
+   Les téléchargements Tar.gz et .Zip contiennent plusieurs fichiers compressés supplémentaires, un pour chaque API. Les fichiers compressés sont nommés comme suit, où \<API\> = `file`, `protection` ou `upe` et \<OS\> = la plateforme : `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Par exemple, le fichier pour les binaires et en-têtes de l’API de protection sur Debian serait : `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Chaque fichier .tar.gz/.zip contenu se divise en trois répertoires :
 
    - **Bins** : fichiers binaires compilés pour chaque architecture de plateforme, le cas échéant.
    - **Include** : fichiers d’en-tête (C++).
@@ -125,7 +125,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
    - Cliquez sur l’icône Windows en bas à gauche.
    - Tapez « Chemin » et appuyez sur la touche « Entrée » lorsque vous voyez l’élément **Modifier les variables d’environnement système** apparaître.
    - Dans la boîte de dialogue **Propriétés système**, cliquez sur **Variables d’environnement**.
-   - Dans la boîte de dialogue **Variables d’environnement**, cliquez sur la ligne de la variable **Path** sous **Variables utilisateur pour \<utilisateur\>** , puis cliquez sur **Modifier...**
+   - Dans la boîte de dialogue **Variables d’environnement**, cliquez sur la ligne de la variable **Path** sous **Variables utilisateur pour \<user\>** , puis cliquez sur **Modifier...** .
    - Dans la boîte de dialogue **Modifier la variable d’environnement**, cliquez sur **Nouveau**, ce qui crée une nouvelle ligne d’édition. Ajoutez une nouvelle ligne pour chaque sous-répertoire `file\bins\debug\amd64`, `protection\bins\debug\amd64` et `upe\bins\debug\amd64` en utilisant son chemin complet. Les répertoires du kit SDK sont stockés dans un format `<API>\bins\<target>\<platform>`, où :
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
@@ -143,7 +143,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Inscrire une application cliente auprès d’Azure Active Directory
 
-Dans le cadre du processus de provisionnement de l’abonnement Office 365, un locataire Azure Active Directory (Azure AD) associé est créé. Le locataire Azure AD assure la gestion des identités et des accès pour les *comptes d’utilisateur* et les *comptes d’application* Office 365. Les applications qui requièrent un accès à des API sécurisées (telles que les API MIP) nécessitent un compte d’application.
+Dans le cadre du processus de provisionnement de l’abonnement Microsoft 365, un locataire Azure Active Directory (Azure AD) associé est créé. Le locataire Azure AD assure la gestion des identités et des accès pour les *comptes d’utilisateur* et les *comptes d’application* Microsoft 365. Les applications qui requièrent un accès à des API sécurisées (telles que les API MIP) nécessitent un compte d’application.
 
 Pour l’authentification et l’autorisation au moment de l’exécution, les comptes sont représentés par un *principal de sécurité*, qui est dérivé des informations d’identité du compte. Un principal de sécurité qui représente un compte d’application est appelé [*principal de service*](/azure/active-directory/develop/developer-glossary#service-principal-object).
 

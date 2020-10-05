@@ -1,40 +1,40 @@
 ---
-title: Comment faire pour rétrograder/supprimer une étiquette qui a besoin d’une justification (C#)
+title: Guide pratique pour rétrograder/supprimer une étiquette qui nécessite une justification (C#)
 description: Cet article explique comment supprimer une étiquette qui nécessite une justification ou la faire passer à une version antérieure.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 88c55d973dde25e1571750e51e36f5fa726770f5
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403219"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421135"
 ---
-# <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API du fichier du kit de développement logiciel (SDK) Microsoft Information Protection : justification de l’action pour réduire une étiquette de sensibilité sur un fichier (C#)
+# <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API de fichier du SDK Microsoft Information Protection - Justification d’action pour abaisser une étiquette de confidentialité dans un fichier (C#)
 
-Ce guide de démarrage rapide traite de la gestion d’une étiquette de rétrogradation lorsque la stratégie de l’étiquette requiert une justification. Ici, nous allons utiliser `IFileHandler` l’interface pour modifier les étiquettes d’un fichier. Pour plus d’informations, consultez la [référence d’API](/dotnet/api/?term=microsoft.informationprotection).
+Ce guide de démarrage rapide traite de la gestion d’une opération de rétrogradation d’étiquette quand la stratégie d’étiquette nécessite une justification. Ici, nous allons utiliser l’interface `IFileHandler` pour changer les étiquettes d’un fichier. Pour plus d’informations, consultez la [référence d’API](/dotnet/api/?term=microsoft.informationprotection).
 
 ## <a name="prerequisites"></a>Prérequis
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- [Démarrage rapide complet : définir/obtenir des étiquettes de sensibilité (C#)](quick-file-set-get-label-csharp.md) qui génère une solution Visual Studio de démarrage pour répertorier les étiquettes de sensibilité d’une organisation et pour définir et lire des étiquettes de sensibilité dans un fichier. Ce guide de démarrage rapide « comment faire pour rétrograder/supprimer une étiquette qui a besoin d’une justification C# » s’appuie sur le précédent.
+- Effectuez d’abord les étapes du [Démarrage rapide : Définir/obtenir les étiquettes de confidentialité (C#)](quick-file-set-get-label-csharp.md) pour créer une solution Visual Studio de démarrage, en vue de lister les étiquettes de confidentialité d’une organisation, et de définir et lire les étiquettes de confidentialité d’un fichier. Le guide de démarrage rapide « Guide pratique pour rétrograder/supprimer une étiquette qui nécessite une justification (C#) » s’appuie sur le précédent.
 - Éventuellement : Passez en revue les [concepts relatifs aux gestionnaires de fichiers](concept-handler-file-cpp.md) dans le SDK MIP.
 
 ## <a name="add-logic-to-set-a-lower-label-to-a-protected-file"></a>Ajouter une logique en vue de définir une étiquette de niveau inférieur pour un fichier protégé
 
-Ajoutez une logique pour définir une étiquette de sensibilité sur un fichier à l’aide de l’objet de gestionnaire de fichiers.
+Ajoutez une logique pour définir une étiquette de confidentialité dans un fichier en utilisant l’objet Gestionnaire de fichiers.
 
-1. Ouvrez la solution Visual Studio que vous avez créée dans le précédent «démarrage rapide : définir/recevoir des étiquettes de sensibilité (C#).
+1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « Démarrage rapide : Définir/obtenir des étiquettes de confidentialité (C#).
 
 2. À l’aide de l’Explorateur de solutions, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
 3. Remplacez la valeur `<label-id>` du guide de démarrage rapide précédent par une étiquette de confidentialité qui nécessite une justification pour abaisser son niveau. Dans ce guide de démarrage rapide, nous allons commencer par définir cette étiquette, puis nous allons tenter d’abaisser son niveau à l’aide des extraits de code fournis dans les étapes suivantes.
 
-4. À la fin du `Main()` corps, au-dessous `Console.ReadKey()` et au-dessus du bloc d’arrêt de l’application (là où vous vous étiez arrêté dans le démarrage rapide précédent), insérez le code suivant.
+4. Vers la fin du corps de `Main()`, sous `Console.ReadKey()` et au-dessus du bloc d’arrêt de l’application (où nous nous sommes arrêtés dans le guide de démarrage rapide précédent), insérez le code suivant.
 
     ```csharp
     //Set paths and label ID
@@ -87,7 +87,7 @@ Ajoutez une logique pour définir une étiquette de sensibilité sur un fichier 
 
     ```
 
-5. Vers la fin de main (), recherchez le bloc d’arrêt de l’application créé dans le démarrage rapide précédent et ajoutez les lignes du gestionnaire ci-dessous pour libérer les ressources.
+5. Vers la fin de Main(), identifiez le bloc d’arrêt d’application créé dans le guide de démarrage rapide précédent et ajoutez les lignes du gestionnaire ci-dessous pour libérer les ressources.
 
     ````csharp
     downgradeHandler = null;
@@ -99,7 +99,7 @@ Ajoutez une logique pour définir une étiquette de sensibilité sur un fichier 
    | Espace réservé | Valeur |
    |:----------- |:----- |
    | \<downgraded-labled-output\> | Chemin du fichier de sortie dans lequel vous souhaitez enregistrer le fichier modifié. |
-   | \<new-label-id\> | Un ID de modèle, copié à partir de la sortie de console dans le démarrage rapide précédent, par exemple : `bb7ed207-046a-4caf-9826-647cff56b990` . Vérifiez que son niveau de confidentialité est inférieur à celui de l’étiquette du fichier protégé précédemment. |
+   | \<new-label-id\> | ID de modèle, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `bb7ed207-046a-4caf-9826-647cff56b990`. Vérifiez que son niveau de confidentialité est inférieur à celui de l’étiquette du fichier protégé précédemment. |
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l’application
 
@@ -129,4 +129,4 @@ Générez et testez votre application cliente.
     Press a key to continue.
    ```
 
-Notez qu’une approche similaire s’applique également à `DeleteLabel()` l’opération, au cas où l’étiquette supprimée d’un fichier nécessite une justification selon la stratégie par étiquette.`DeleteLabel()` la fonction lève une `JustificationRequiredException` exception et `IsDowngradeJustified` l’indicateur doit avoir la valeur true dans la gestion des exceptions avant de pouvoir supprimer une étiquette.
+Notez qu’une approche similaire s’applique aussi à l’opération `DeleteLabel()` si l’étiquette qui est supprimée d’un fichier nécessite une justification selon la stratégie d’étiquette. La fonction `DeleteLabel()` lance une exception `JustificationRequiredException` et l’indicateur `IsDowngradeJustified` doit avoir la valeur true dans la gestion des exceptions avant de supprimer une étiquette.

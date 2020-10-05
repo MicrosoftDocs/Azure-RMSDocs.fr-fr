@@ -4,15 +4,15 @@ description: Guide de démarrage rapide vous montrant comment écrire la logique
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 07/30/2019
+ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: fa8b41850468ed545512f8facc488ff0517a8b41
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 406068f5770f489c66963fc34a462ec7e205765b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972082"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91108959"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C#)
 
@@ -50,7 +50,7 @@ Tout d’abord, nous créons et configurons la solution et le projet Visual Stud
      - Sélectionnez le package « Microsoft.InformationProtection.File ».
      - Cliquez sur « Installer », puis cliquez sur « OK » lorsque la boîte de dialogue de confirmation **Aperçu des modifications** apparaît.
 
-3. Répétez les étapes ci-dessus pour ajouter le package de l’API de fichier du SDK MIP, mais cette fois, ajoutez « Microsoft.IdentityModel.Clients.ActiveDirectory » à l’application.
+3. Répétez les étapes ci-dessus pour ajouter le package de l’API de fichier SDK MIP, en ajoutant cette fois « Microsoft.Identity.Client » à l’application.
 
 ## <a name="implement-an-authentication-delegate"></a>Implémenter un délégué d’authentification
 
@@ -60,38 +60,50 @@ Maintenant, créez une implémentation pour un délégué d’authentification, 
 
 1. Cliquez avec le bouton droit sur le nom du projet dans Visual Studio, sélectionnez **Ajouter**, puis sélectionnez **Classe**.
 2. Entrez « AuthDelegateImplementation » dans le champ **Nom**. Cliquez sur **Ajouter**.
-3. Ajoutez les instructions using pour la bibliothèque d’authentification Active Directory (ADAL) et la bibliothèque MIP :
+3. Ajoutez les instructions using de la Bibliothèque d’authentification Microsoft (ADAL) et de la bibliothèque MIP :
 
      ```csharp
      using Microsoft.InformationProtection;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      ```
 
 4. Définissez `AuthDelegateImplementation` pour hériter `Microsoft.InformationProtection.IAuthDelegate` et implémenter une variable privée de `Microsoft.InformationProtection.ApplicationInfo` ainsi qu’un constructeur qui accepte le même type.
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
-     {
+    {
         private ApplicationInfo _appInfo;
-        private string redirectUri = "mip-sdk-app://authorize";
+        // Microsoft Authentication Library IPublicClientApplication
+        private IPublicClientApplication _app;
         public AuthDelegateImplementation(ApplicationInfo appInfo)
         {
             _appInfo = appInfo;
         }
-     }
+
+    }
      ```
 
-L’objet `ApplicationInfo` contient trois propriétés. `_appInfo.ApplicationId` sera utilisé dans la classe `AuthDelegateImplementation` pour fournir l’ID client à la bibliothèque d’authentification. `ApplicationName` et `ApplicationVersion` figureront dans les rapports d’analyse Azure Information Protection.
+    L’objet `ApplicationInfo` contient trois propriétés. `_appInfo.ApplicationId` sera utilisé dans la classe `AuthDelegateImplementation` pour fournir l’ID client à la bibliothèque d’authentification. `ApplicationName` et `ApplicationVersion` figureront dans les rapports d’analyse Azure Information Protection.
 
-5. Ajoutez la méthode `public string AcquireToken()`. Cette méthode doit accepter `Microsoft.InformationProtection.Identity` ainsi que trois chaînes : l’URL authority, l’URI resource et les revendications, si nécessaire. Ces variables de chaîne seront passées à la bibliothèque d’authentification par l’API et ne doivent pas être modifiées. Leur modification peut entraîner l’échec de l’authentification.
+5. Ajoutez la méthode `public string AcquireToken()`. Cette méthode doit accepter `Microsoft.InformationProtection.Identity` ainsi que trois chaînes : l’URL authority, l’URI resource et les revendications, si nécessaire. Ces variables de chaîne seront passées à la bibliothèque d’authentification par l’API et ne doivent pas être modifiées. Entrez le GUID issu du Portail Azure de votre locataire. Si vous modifiez d’autres chaînes que le GUID du locataire, l’authentification risque d’échouer.
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource, string claims)
-     {
-          AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
-          return result.AccessToken;
-     }
+    public string AcquireToken(Identity identity, string authority, string resource, string claims)
+    {
+        var authorityUri = new Uri(authority);
+        authority = String.Format("https://{0}/{1}", authorityUri.Host, "<Tenant-GUID>");
+
+        _app = PublicClientApplicationBuilder.Create(_appInfo.ApplicationId).WithAuthority(authority).WithDefaultRedirectUri().Build();
+        var accounts = (_app.GetAccountsAsync()).GetAwaiter().GetResult();
+
+        // Append .default to the resource passed in to AcquireToken().
+        string[] scopes = new string[] { resource[resource.Length - 1].Equals('/') ? $"{resource}.default" : $"{resource}/.default" };
+        var result = _app.AcquireTokenInteractive(scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount)
+                   .ExecuteAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+
+        return result.AccessToken;
+    }
+
      ```
 
 ## <a name="implement-a-consent-delegate"></a>Implémenter un délégué de consentement
@@ -122,7 +134,7 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
 
 3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, la création d’un `MipContext`, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez `MIP.Initialize()`, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier.
 
-4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription de l’application Azure AD créée précédemment.
+4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription d’application Azure AD que nous avons créée.
 
 ```csharp
 using System;
@@ -151,7 +163,6 @@ namespace mip_sdk_dotnet_quickstart
 ## <a name="construct-a-file-profile-and-engine"></a>Construire un moteur et un profil de fichier
 
 Comme nous l’avons mentionné précédemment, des objets de profil et de moteur sont nécessaires pour les clients du SDK utilisant des API MIP. Terminez la phase de codage de ce guide de démarrage rapide en ajoutant le code qui charge les DLL natives et qui instancie ensuite les objets de profil et de moteur.
-
 
 
    ```csharp
@@ -220,6 +231,7 @@ namespace mip_sdk_dotnet_quickstart
    |:----------- |:----- |:--------|
    | \<application-id\> | L’ID d’application Azure AD affecté à l’application inscrite dans « Installation et configuration du kit SDK MIP » (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | Un nom convivial défini par l’utilisateur pour votre application. | AppInitialization |
+   | \<Tenant-GUID\> | ID de votre locataire Azure AD | ID de locataire |
 
 
 4. À présent, effectuez une build finale de l’application et corrigez les erreurs éventuelles. Votre code doit s’exécuter correctement.
@@ -229,4 +241,4 @@ namespace mip_sdk_dotnet_quickstart
 Maintenant que votre code d’initialisation est terminé, vous êtes prêt pour le guide de démarrage rapide suivant, où vous découvrirez les API de fichier MIP.
 
 > [!div class="nextstepaction"]
-> [Répertorier les étiquettes de sensibilité](quick-file-list-labels-csharp.md)
+> [Lister les étiquettes de confidentialité](quick-file-list-labels-csharp.md)

@@ -1,39 +1,39 @@
 ---
-title: 'Procédure de republication du scénario C #'
-description: Cet article vous aidera à comprendre le scénario de réutilisation du gestionnaire de protection pour les scénarios de republication.
+title: Guide pratique de republication de scénario C#
+description: Cet article aide à comprendre le scénario de réutilisation du gestionnaire de protection dans les scénarios de republication.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 2b6e0b866144c4883ece29936c1a23cc946c5976
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: c72d284363c1ca988692d18b7007a88c88d808b5
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403338"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421134"
 ---
-# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Kit de développement logiciel (SDK) Microsoft Information Protection-Guide de démarrage rapide sur la republication (C#)
+# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Kit SDK Microsoft Information Protection – Guide de démarrage rapide de la republication de l’API de fichier (C#)
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Pour obtenir une vue d’ensemble de ce scénario et l’endroit où il peut être utilisé, reportez-vous à [republication dans MIP SDK](concept-republishing.md).
+Pour une vue d’ensemble de ce scénario et de son contexte d’utilisation, consultez [Republication dans le kit SDK MIP](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Guide de [démarrage rapide : définir/obtenir des étiquettes de sensibilité (C#)](quick-file-set-get-label-csharp.md) en premier, qui génère une solution de démarrage Visual Studio, pour répertorier les étiquettes de sensibilité d’une organisation, pour définir et lire des étiquettes de sensibilité à partir d’un fichier. Ce guide de démarrage rapide « procédure de republication d’un fichier protégé-C# » s’appuie sur le précédent.
-- Éventuellement : consultez les [gestionnaires de fichiers](concept-handler-file-cpp.md) dans les concepts du kit de développement logiciel MIP.
-- Éventuellement : passez en revue les [gestionnaires de protection](concept-handler-protection-cpp.md) dans les concepts du kit de développement logiciel MIP.
+- Effectuez d’abord les étapes du [Démarrage rapide : Définition/récupération des étiquettes de confidentialité (C#)](quick-file-set-get-label-csharp.md) pour créer une solution Visual Studio de démarrage, en vue de lister les étiquettes de confidentialité d’une organisation, et de définir et lire celles d’un fichier. Ce guide de démarrage rapide « Guide pratique de republication d’un fichier protégé – C# » s’appuie sur le précédent.
+- Éventuellement : passez en revue les [Gestionnaires de fichiers](concept-handler-file-cpp.md) dans les concepts du kit SDK MIP.
+- Éventuellement : passez en revue les [Gestionnaires de protection](concept-handler-protection-cpp.md) dans les concepts du kit SDK MIP.
 
-## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Ajouter une logique pour modifier et republier un fichier protégé
+## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Ajout d’une logique pour modifier et republier un fichier protégé
 
-1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « démarrage rapide : définir/recevoir des étiquettes de sensibilité (C#) ».
+1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « Démarrage rapide : Définition/récupération des étiquettes de confidentialité (C#) ».
 
 2. À l’aide de l’Explorateur de solutions, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
-3. À la fin du `Main()` corps, au-dessous `Console.ReadKey()` et au-dessus du bloc d’arrêt de l’application (là où vous vous étiez arrêté dans le démarrage rapide précédent), insérez le code suivant.
+3. Vers la fin du corps de `Main()`, sous `Console.ReadKey()` et au-dessus du bloc d’arrêt de l’application (où nous nous sommes arrêtés dans le guide de démarrage rapide précédent), insérez le code suivant :
 
 ```csharp
 string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
@@ -88,7 +88,7 @@ if (protectionHandler.AccessCheck("Edit"))
 }
 ```
 
-4. Vers la fin de main () Rechercher le bloc d’arrêt de l’application créé dans le démarrage rapide précédent et ajouter les lignes du gestionnaire ci-dessous pour libérer les ressources.
+4. Vers la fin de Main(), identifiez le bloc d’arrêt d’application créé dans le guide de démarrage rapide précédent et ajoutez les lignes du gestionnaire ci-dessous pour libérer les ressources :
 
     ````csharp
         protectedFileHandler = null;
@@ -99,8 +99,8 @@ if (protectionHandler.AccessCheck("Edit"))
 
    | Espace réservé | Valeur |
    |:----------- |:----- |
-   | \<protected-file-path\> | Fichier protégé du démarrage rapide précédent. |
-   | \<reprotected-file-path\> | Chemin d’accès du fichier de sortie pour le fichier modifié à republier. |
+   | \<protected-file-path\> | Fichier protégé issu du guide de démarrage rapide précédent. |
+   | \<reprotected-file-path\> | Chemin du fichier de sortie pour la republication du fichier modifié. |
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l’application
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 171132bd2e41dcde4dd879eb9314d909bccd74c3
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 5edca37acb2f817173142c6638775c2e95bd7439
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428291"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588238"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP)
 
@@ -22,7 +22,7 @@ Les guides de démarrage rapide et les tutoriels sont centrés sur la création 
 
 Veillez à consulter les rubriques suivantes avant de commencer :
 
-- [Qu’est-ce que le Centre de sécurité et conformité Office 365 ?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [Qu’est-ce que le Centre de sécurité et conformité Office 365 ?](/office365/securitycompliance/security-and-compliance)
 - [Qu’est-ce qu’Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Comment la protection fonctionne-t-elle dans Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 

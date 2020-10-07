@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 3f74606e8f5caf4b4d0d480ba36830129249c9cf
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564126"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588306"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++) 
 
@@ -342,7 +342,7 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
 
    | Espace réservé | valeur | Exemple |
    |:----------- |:----- |:--------|
-   | \<application-id\> | L’ID d’application Azure AD (GUID) attribué à l’application qui a été inscrite à l’[étape 2 de l’article « Installation et configuration du kit SDK MIP »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory). Remplacez les deux instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-id\> | L’ID d’application Azure AD (GUID) attribué à l’application qui a été inscrite à l’[étape 2 de l’article « Installation et configuration du kit SDK MIP »](./setup-configure-mip.md#register-a-client-application-with-azure-active-directory). Remplacez les deux instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion de « ; ») et, si possible, correspondre au nom d’application que vous avez utilisé dans votre inscription Azure AD. | `"AppInitialization"` |
    | \<application-version\> | Informations de version définies par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion de « ; »). | `"1.1.0.0"` |
    | \<engine-account\> | Le compte utilisé pour l’identité du moteur. Lorsque vous vous authentifiez avec un compte d’utilisateur lors de l’acquisition du jeton, il doit correspondre à cette valeur. | `"user1@tenant.onmicrosoft.com"` |

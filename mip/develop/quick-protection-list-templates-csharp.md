@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: ec6439747b7a826a09851739a96ccdec3f5705f4
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 7b9a8d916b0c3c4b8aaa006abdf27cd8c02a7f6e
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972116"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588255"
 ---
 # <a name="quickstart-list-templates-c"></a>Démarrage rapide : Répertorier les modèles (C#)
 
@@ -23,7 +23,7 @@ Ce guide de démarrage rapide vous montre comment utiliser l’API Protection du
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Initialisation d’une application cliente - API Protection (C#)](quick-protection-app-initialization-csharp.md) pour créer une solution Visual Studio de démarrage. Ce guide de démarrage rapide « Répertorier les modèles de protection » s’appuie sur le précédent, qui permet de créer correctement la solution de démarrage.
-- Éventuellement : Passez en revue les concepts [Modèles RMS](https://docs.microsoft.com/azure/information-protection/configure-policy-templates).
+- Éventuellement : Passez en revue les concepts [Modèles RMS](/azure/information-protection/configure-policy-templates).
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>Ajouter une logique pour répertorier les modèles de protection
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d8f48a058f03b43e4f4835106c5f882942623740
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927979"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587879"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -96,11 +96,11 @@ Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail 
 
     Toujours dans le volet **Ajouter un nouveau profil**, sélectionnez **Configurer les référentiels** pour ouvrir le volet **Référentiels** :
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Configuration de référentiels de données pour le scanneur Azure Information Protection":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
 
 1. Dans le volet **Référentiels**, sélectionnez **Ajouter** :
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Ajout d’un référentiel de données pour le scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
 
 1. Dans le volet **Référentiel**, spécifiez le dossier que vous avez créé plus tôt. Par exemple : `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ Vous pouvez maintenant installer le scanneur avec le profil que vous avez créé
 
 1. Sélectionnez votre nom de profil, puis l’option **Analyser maintenant** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Lancement de l’analyse du scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
 
     Si cette option n’est pas disponible une fois que vous avez sélectionné votre profil, le scanneur n’est pas connecté à Azure Information Protection. Vérifiez votre configuration et votre connectivité Internet.
 
@@ -171,7 +171,7 @@ Dans Excel :
 
     Dans le volet **Azure Information Protection - Profils**, assurez-vous que votre profil est sélectionné, puis sélectionnez l’option **Analyser maintenant** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Lancement de l’analyse du scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
 
 1. Affichez les nouveaux résultats lorsque l’analyse est terminée.
 
@@ -213,5 +213,5 @@ Si vous souhaitez classifier et protéger les fichiers contenant des information
 
 **Pour le client d’étiquetage unifié :**
 
-- [Appliquer automatiquement une étiquette sensibilité au contenu](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Appliquer automatiquement une étiquette sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+- [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels)

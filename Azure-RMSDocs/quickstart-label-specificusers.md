@@ -66,7 +66,7 @@ Commencez par créer votre nouvelle étiquette.
     |**Description**     |   Info-bulle qui aide les utilisateurs à savoir quand sélectionner cette nouvelle étiquette. </br> Par exemple : **Données métier limitées à l’équipe commerciale**.     |
     | | | 
 
-1. Vérifiez que l’option est marquée **Activé** **** (valeur par défaut), puis sélectionnez **Enregistrer** ![Enregistrer](media/qs-tutor/save-icon.png "Enregistrer").
+1. Vérifiez que l’option **Activé** est **choisie** (valeur par défaut), puis sélectionnez **Enregistrer** ![Enregistrer](media/qs-tutor/save-icon.png "Enregistrer").
 
     Sélectionnez la croix **X** en haut à droite pour fermer le volet **Nouvelle étiquette**.
 

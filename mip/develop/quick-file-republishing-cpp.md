@@ -1,46 +1,46 @@
 ---
-title: Procédure de republication du scénario C++
-description: Cet article vous aidera à comprendre le scénario de réutilisation du gestionnaire de protection pour les scénarios de republication.
+title: Guide pratique pour republier un scénario C++
+description: Cet article aide à comprendre le scénario de réutilisation du gestionnaire de protection dans les scénarios de republication.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 929959135d4889ec65fcc5122837d6e8a09235e9
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: 49fac8fb748cec60abbe3af779670c928c1608a1
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403355"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421114"
 ---
-# <a name="file-api-re-publishing-quickstart-c"></a>Démarrage rapide de la republication de l’API de fichier (C++)
+# <a name="file-api-re-publishing-quickstart-c"></a>Démarrage rapide sur la republication de l’API de fichier (C++)
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Pour obtenir une vue d’ensemble de ce scénario et l’endroit où il peut être utilisé, reportez-vous à [republication dans MIP SDK](concept-republishing.md).
+Pour une vue d’ensemble de ce scénario et de son contexte d’utilisation, consultez [Republication dans le kit SDK MIP](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Effectuez d’abord les étapes du [Démarrage rapide : Définir/Obtenir les étiquettes de confidentialité (C++)](quick-file-set-get-label-cpp.md) pour créer une solution Visual Studio de démarrage, en vue de lister les étiquettes de confidentialité d’une organisation, et de définir et lire les étiquettes de confidentialité d’un fichier. Ce guide de démarrage rapide « comment faire pour rétrograder/supprimer une étiquette nécessitant une justification C++ » s’appuie sur le précédent.
-- Éventuellement : consultez les [gestionnaires de fichiers](concept-handler-file-cpp.md) dans les concepts du kit de développement logiciel MIP.
-- Éventuellement : passez en revue les [gestionnaires de protection](concept-handler-protection-cpp.md) dans les concepts du kit de développement logiciel MIP.
+- Effectuez d’abord les étapes du [Démarrage rapide : Définir/Obtenir les étiquettes de confidentialité (C++)](quick-file-set-get-label-cpp.md) pour créer une solution Visual Studio de démarrage, en vue de lister les étiquettes de confidentialité d’une organisation, et de définir et lire les étiquettes de confidentialité d’un fichier. Le guide de démarrage rapide « Guide pratique pour rétrograder/supprimer une étiquette qui nécessite une justification (C++) » s’appuie sur le précédent.
+- Éventuellement : passez en revue les [Gestionnaires de fichiers](concept-handler-file-cpp.md) dans les concepts du kit SDK MIP.
+- Éventuellement : passez en revue les [Gestionnaires de protection](concept-handler-protection-cpp.md) dans les concepts du kit SDK MIP.
 
-## <a name="add-logic-to-filehandler-observer-class"></a>Ajouter une logique à la classe FileHandler observer
+## <a name="add-logic-to-filehandler-observer-class"></a>Ajouter une logique à la classe FileHandler Observer
 
-Pour pouvoir utiliser le déchiffrement d’un fichier protégé à l’aide de `GetDecryptedTemporaryFileAsync()` la méthode exposée par `mip::FileHandler` , les rappels de la méthode Async pour la réussite et l’échec doivent être définis comme indiqué ci-dessous.
+Pour pouvoir déchiffrer un fichier protégé à l’aide de la méthode `GetDecryptedTemporaryFileAsync()` exposée par `mip::FileHandler`, vous devez définir les rappels pour la méthode async pour l’échec et le succès comme indiqué ci-dessous.
 
 1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « Démarrage rapide : Définir/Obtenir des étiquettes de confidentialité (C++).
 
-2. À l’aide de Explorateur de solutions, ouvrez le `filehandler_observer.h` fichier de dans votre projet. Vers la fin de la définition de FileHandler, avant d' `};` Ajouter les lignes ci-dessous pour la déclaration de méthode.
+2. À l’aide de l’Explorateur de solutions, ouvrez le fichier `filehandler_observer.h` dans votre projet. Vers la fin de la définition de FileHandler, avant `};`, ajoutez les lignes ci-dessous pour la déclaration de méthode.
 
     ```cpp
         void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr<void>& context) override;
         void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
     ```
 
-3. À l’aide de Explorateur de solutions, ouvrez le `filehandler_observer.cpp` fichier dans votre projet. Vers la fin du fichier, ajoutez les lignes ci-dessous pour les définitions de méthode.
+3. À l’aide de l’Explorateur de solutions, ouvrez le fichier `filehandler_observer.cpp` dans votre projet. Vers la fin du fichier, ajoutez les lignes ci-dessous pour les définitions de méthode.
 
     ```cpp
 
@@ -55,11 +55,11 @@ Pour pouvoir utiliser le déchiffrement d’un fichier protégé à l’aide de 
         }
     ```
 
-## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Ajouter une logique pour modifier et republier un fichier protégé
+## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Ajout d’une logique pour modifier et republier un fichier protégé
 
 1. À l’aide de l’Explorateur de solutions, ouvrez le fichier .cpp dans votre projet qui contient l’implémentation de la méthode `main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
-2. Vers la fin du corps principal (), sous System (« pause »); et supérieur retournent 0 ; (là où vous vous êtes arrêté dans le démarrage rapide précédent), insérez le code suivant :
+2. Vers la fin du corps de main(), sous system("pause"); et au-dessus de return 0; (où vous vous êtes arrêté dans le guide de démarrage rapide précédent), insérez le code suivant :
 
 ```cpp
 //Originally protected file's path.
@@ -121,7 +121,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 }
 ```
 
-3. Vers la fin de main () Rechercher le bloc d’arrêt de l’application créé dans le démarrage rapide précédent et ajouter les lignes du gestionnaire ci-dessous pour libérer les ressources.
+3. Vers la fin de Main(), identifiez le bloc d’arrêt d’application créé dans le guide de démarrage rapide précédent et ajoutez les lignes du gestionnaire ci-dessous pour libérer les ressources :
 
     ````csharp
         protectedFileHandler = nullptr;
@@ -133,16 +133,16 @@ if (protectionHandler->AccessCheck("Edit")) {
 
    | Espace réservé | Valeur |
    |:----------- |:----- |
-   | \<protected-file-path\> | Fichier protégé du démarrage rapide précédent. |
-   | \<reprotected-file-path\> | Chemin d’accès du fichier de sortie pour le fichier modifié à republier. |
+   | \<protected-file-path\> | Fichier protégé issu du guide de démarrage rapide précédent. |
+   | \<reprotected-file-path\> | Chemin du fichier de sortie pour la republication du fichier modifié. |
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l’application
 
 Générez et testez votre application cliente.
 
-1. Utilisez CTRL-MAJ-B (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
+1. Utilisez CTRL-MAJ-B ( **Générer la solution** ) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 ( **Démarrer le débogage** ) pour exécuter votre application.
 
-2. Si votre projet est généré et s’exécute correctement, l’application demande un jeton d’accès chaque fois que le kit SDK appelle votre méthode `AcquireOAuth2Token()`. Comme vous l’avez fait précédemment dans le démarrage rapide « définir/obtenir une étiquette de sensibilité », exécutez votre script PowerShell pour obtenir le jeton à chaque fois, à l’aide des valeurs fournies pour $authority et $resourceUrl.
+2. Si votre projet est généré et s’exécute correctement, l’application demande un jeton d’accès chaque fois que le kit SDK appelle votre méthode `AcquireOAuth2Token()`. Comme vous l’avez fait précédemment dans le guide de démarrage rapide « Définir/Obtenir des étiquettes de confidentialité (C++) », exécutez votre script PowerShell pour obtenir le jeton à chaque fois, en utilisant les valeurs fournies pour $authority et $resourceUrl.
 
   ```console
     Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

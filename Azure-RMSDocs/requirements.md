@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables nécessaires pour déployer A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d24383a3ae5312d9c690fdac61b0cbdf52072163
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
+ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178146"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92429188"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -57,7 +57,7 @@ Si vous avez des questions sur les abonnements ou les licences, ne les postez pa
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Pour prendre en charge l’authentification et l’autorisation pour Azure Information Protection, vous devez disposer d’un Azure Active Directory (AD). Pour utiliser des comptes d'utilisateur à partir de votre directeur local (AD DS), vous devez également configurer une intégration d'annuaire.
+Pour prendre en charge l’authentification et l’autorisation pour Azure Information Protection, vous devez disposer d’un Azure Active Directory (AD). Pour utiliser des comptes d'utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer l’intégration d'annuaire.
 
 - **L’authentification unique (SSO)** étant prise en charge pour Azure Information Protection, les utilisateurs ne sont pas invités de manière répétée à fournir leurs informations d’identification. Si vous utilisez une autre solution de fournisseur pour la fédération, vérifiez auprès de ce dernier comment la configurer pour Azure AD. WS-Trust est une exigence courante pour ces solutions afin de prendre en charge l’authentification unique. 
 
@@ -114,13 +114,13 @@ Si vous utilisez des machines virtuelles, vérifiez si le fournisseur de logicie
 
 Par exemple, pour les solutions Citrix, vous devrez peut-être [désactiver les hooks d’API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) pour Office et le client d’étiquetage unifié Azure Information Protection ou le client Azure Information Protection. 
 
-Ces applications utilisent les fichiers suivants, respectivement : **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
+Ces applications utilisent les fichiers suivants, respectivement : **winword.exe** , **excel.exe** , **outlook.exe** , **powerpnt.exe** , **msip.app.exe** , **msip.viewer.exe**
 
 ### <a name="server-support"></a>Prise en charge du serveur
 
 Pour chaque version de serveur répertoriée ci-dessus, les clients Azure Information Protection sont pris en charge pour les Services Bureau à distance. 
 
-Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le dossier **%Appdata%\Microsoft\Protect**.
+Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le dossier **%Appdata%\Microsoft\Protect** .
 
 En outre, Server Core et Nano Server ne sont pas pris en charge.
 
@@ -134,9 +134,9 @@ Chaque client Azure Information Protection dispose d’une configuration requise
 
 ## <a name="applications"></a>Applications
 
-Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de **Word**, **Excel**, **PowerPoint** et **Outlook** de Microsoft à partir de toutes les éditions Office suivantes :
+Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de **Word** , **Excel** , **PowerPoint** et **Outlook** de Microsoft à partir de toutes les éditions Office suivantes :
 
-- **Applications Office, version minimale 1805**, build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium. 
+- **Applications Office, version minimale 1805** , build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium. 
 
     Cette édition est prise en charge uniquement lorsqu’une licence pour Azure Rights Management, également appelé Azure Information Protection pour Microsoft 365 est attribuée à l’utilisateur.
 
@@ -168,12 +168,18 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 Azure Information Protection présente les exigences supplémentaires suivantes :
 
-- **Client d’étiquetage unifié**. Pour télécharger des étiquettes et des stratégies d’étiquette, autorisez l’URL suivante sur HTTPs : * **.protection.outlook.com**
+- **Client d’étiquetage unifié** . Pour télécharger des étiquettes et des stratégies d’étiquettes, autorisez l’URL suivante sur HTTPS : * *_.protection.outlook.com_* .
 
-- **Proxys web**. Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification de connexion Active Directory de l’utilisateur.
+- **Proxys web** . Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification de connexion Active Directory de l’utilisateur.
 
+    Pour prendre en charge les fichiers **Proxy.pac** si vous utilisez un proxy pour acquérir un jeton, ajoutez la nouvelle clé de Registre suivante :
+
+    - **Chemin :** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Clé :** `UseDefaultCredentialsInProxy`
+    - **Type :** `DWORD`
+    - **Valeur :** `1`
     
-- **Connexions client à service TLS**. N’interrompez pas la connexion du client au service TLS, par exemple, pour effectuer une inspection au niveau du paquet vers l’URL **aadrm.com**. Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
+- **Connexions client à service TLS** . N’interrompez pas la connexion du client au service TLS, par exemple, pour effectuer une inspection au niveau du paquet vers l’URL **aadrm.com** . Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
      
     Pour déterminer si votre connexion cliente est terminée avant d’atteindre le service Rights Management Azure, utilisez les commandes PowerShell suivantes :
 

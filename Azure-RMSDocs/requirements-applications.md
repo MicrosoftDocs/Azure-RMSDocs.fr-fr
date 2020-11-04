@@ -4,7 +4,7 @@ description: Identifiez les applications et les solutions qui offrent une prise 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3115cbbce67f3997ad12f1fdb8a4ddd1f5ed2ca6
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
+ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178186"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93245111"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -47,8 +47,8 @@ Ces applications et solutions sont appelées « compatibles RMS », et offrent
 
 |Type  |Applications prises en charge   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  - Applications Microsoft 365<br />- Office 2019 pour Mac<br />- Office 2016 pour Mac<br />- [Office pour le Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Navigateur web](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 pour Mac<br />- Outlook 2016 pour Mac<br />- [Navigateur web](#web-browser-support)     |
+|**Word, Excel, PowerPoint**    |  - Microsoft 365 Apps, version 16.40 ou ultérieure <br />- Office 2019 pour Mac, version 16.40 ou ultérieure<br />- Office 2016 pour Mac, version 16.16.27 ou ultérieure<br />- [Office pour le Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Navigateur web](#web-browser-support)    |
+|[**E-mail**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 pour Mac, version 16.40 ou ultérieure<br />- Outlook 2016 pour Mac, version 16.16.27 ou ultérieure<br />- [Navigateur web](#web-browser-support)     |
 |[**Autres types de fichiers**](#supported-text-and-image-file-types)    | Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)   |
 | | |
 

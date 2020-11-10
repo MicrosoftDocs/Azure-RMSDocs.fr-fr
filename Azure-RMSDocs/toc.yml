@@ -4,8 +4,6 @@
   items:
     - name: "Qu’est-ce qu’Azure Information Protection\_?"
       href: what-is-information-protection.md
-    - name: Gestion des droits Azure Information Protection
-      href: what-is-azure-rms.md
     - name: Configuration requise pour AIP
       items:
         - name: Vue d’ensemble
@@ -19,24 +17,24 @@
 - name: Démarrages rapides
   expanded: true
   items:
-    - name: Bien démarrer dans le portail Azure
-      href: quickstart-viewpolicy.md
-    - name: Rechercher les informations sensibles dont vous disposez
-      href: quickstart-findsensitiveinfo.md
-    - name: Configurer une étiquette pour protéger les e-mails - client classique
-      href: quickstart-label-dnf-protectedemail.md
-    - name: Créer une étiquette pour des utilisateurs spécifiques - client classique
-      href: quickstart-label-specificusers.md
+    - name: Déploiement du client
+      href: quickstart-deploy-client.md
 - name: Didacticiels
   items:
-    - name: Modifier la stratégie et créer une étiquette - client classique
-      href: infoprotect-quick-start-tutorial.md
-    - name: Configurer des paramètres de stratégie qui fonctionnent ensemble - client classique
-      href: infoprotect-settings-tutorial.md
-    - name: Configurer des paramètres clients pour contrôler le surpartage - client classique
-      href: infoprotect-oversharing-tutorial.md
+    - name: Installation du scanneur
+      href: tutorial-install-scanner.md
+    - name: Découverte de votre contenu sensible
+      href: tutorial-scan-networks-and-content.md
+    - name: Prévention du surpartage
+      href: tutorial-preventing-oversharing.md
+    - name: Migration depuis le client classique vers le client d’étiquetage unifié
+      href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
+    - name: Classification et protection AIP
+      href: aip-classification-and-protection.md
+    - name: Gestion des droits Azure Information Protection
+      href: what-is-azure-rms.md
     - name: Protection Rights Management
       items:
         - name: Comment fonctionne la protection Rights Management
@@ -135,7 +133,7 @@
           href: configure-super-users.md
         - name: Configuration de la stratégie Azure Information Protection
           items:
-            - name: Vue d'ensemble
+            - name: Vue d’ensemble
               href: configure-policy.md
             - name: La stratégie par défaut
               href: configure-policy-default.md
@@ -263,7 +261,7 @@
                       href: ./rms-client/clientv2-admin-guide-powershell.md
                 - name: Guide de l’utilisateur
                   items:
-                    - name: Vue d'ensemble
+                    - name: Vue d’ensemble
                       href: ./rms-client/clientv2-user-guide.md
                     - name: Télécharger et installer le client
                       href: ./rms-client/install-unifiedlabelingclient-app.md
@@ -343,7 +341,7 @@
               href: ./develop/deprecation-notice.md
             - name: Vue d’ensemble
               href: ./develop/overview.md
-            - name: Prise en main
+            - name: Prendre en main
               href: ./develop/get-started.md
               items:
                 - name: Nouveautés

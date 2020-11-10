@@ -12,12 +12,12 @@ metadata:
   ms.author: mlottner
   manager: rkarlin
   ms.date: 04/02/2019
-  ms.openlocfilehash: 63026df891e74f05bf8bcf570f852840aa991cce
-  ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+  ms.openlocfilehash: a2f73c9aa0207af5b7ba77b3b53c271eb8722cb2
+  ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/07/2020
-  ms.locfileid: "86048423"
+  ms.lasthandoff: 11/09/2020
+  ms.locfileid: "94379161"
 landingContent:
 - title: À propos d’Azure Information Protection
   linkLists:
@@ -35,22 +35,22 @@ landingContent:
       url: requirements.md
   - linkListType: quickstart
     links:
-    - text: Bien démarrer dans le portail Azure
-      url: quickstart-viewpolicy.md
-    - text: Rechercher des informations sensibles
-      url: quickstart-findsensitiveinfo.md
-  - linkListType: deploy
+    - text: Déployer le client d’étiquetage unifié
+      url: quickstart-deploy-client.md
+  - linkListType: tutorial
     links:
-    - text: Feuille de route pour le déploiement
-      url: deployment-roadmap.md
-    - text: Scénarios courants
-      url: how-to-guides.md
+    - text: Installer le scanneur
+      url: tutorial-install-scanner.md
+    - text: Analyser les réseaux et le contenu
+      url: tutorial-scan-networks-and-content.md
+    - text: Empêcher le surpartage
+      url: tutorial-preventing-oversharing.md
 - title: Rester à jour
   linkLists:
   - linkListType: whats-new
     links:
     - text: 5 sessions Ignite principales recommandées
-      url: what-is-information-protection.md#microsoft-ignite
+      url: what-is-information-protection.md#additional-resources
     - text: Dernière version du client d’étiquetage unifié
       url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: Classer et protéger les données dans des magasins de données locaux
@@ -63,10 +63,10 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 'Client classique : Paramètres avancés'
-      url: ./rms-client/client-admin-guide-customizations.md
     - text: 'Client d’étiquetage unifié : Paramètres avancés'
       url: ./rms-client/clientv2-admin-guide-customizations.md
+    - text: 'Client classique : Paramètres avancés'
+      url: ./rms-client/client-admin-guide-customizations.md
 - title: Kit SDK Microsoft Information Protection
   linkLists:
   - linkListType: overview
@@ -91,8 +91,8 @@ landingContent:
       url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
   - linkListType: how-to-guide
     links:
-    - text: Migrer des étiquettes Azure Information Protection
-      url: configure-policy-migrate-labels.md
+    - text: Effectuer une migration vers le client d’étiquetage unifié
+      url: tutorial-migrating-to-ul.md
 - title: Surveiller l’utilisation des étiquettes et découvrir les informations sensibles
   linkLists:
   - linkListType: how-to-guide

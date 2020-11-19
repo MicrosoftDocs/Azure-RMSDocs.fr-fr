@@ -81,6 +81,10 @@
               href: migrate-from-ad-rms-phase5.md
     - name: Stratégies Azure Information Protection
       href: overview-policy.md
+    - name: Sécurité
+      items:
+        - name: Base de référence de la sécurité
+          href: security-baseline.md
 - name: Guides pratiques
   items:
     - name: Guides pratiques pour les scénarios courants
@@ -341,7 +345,7 @@
               href: ./develop/deprecation-notice.md
             - name: Vue d’ensemble
               href: ./develop/overview.md
-            - name: Prendre en main
+            - name: Prise en main
               href: ./develop/get-started.md
               items:
                 - name: Nouveautés

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f947edadde9b4dfecb91adf9bcb8fefe168bf38b
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: d452f2c6c1d58af8f352664e087514f798bc1b5b
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927832"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503568"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
 
@@ -38,7 +38,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 |Condition requise  |Description  |
 |---------|---------|
-|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement comportant le [**plan Azure Information Protection 1 ou 2**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
+|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
 |**AIP ajouté au Portail Azure**    |  Vous avez ajouté le volet Azure Information Protection au Portail Azure et vérifié que le service de protection est activé. </br></br>Pour plus d’informations, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).       |
 |**Un groupe à extension messagerie dans Azure AD**     | Il vous faut un groupe à extension messagerie dans Azure AD, contenant les utilisateurs qui verront et appliqueront la nouvelle étiquette. </br></br>Si vous n’avez pas de groupe adapté, créez-en un nommé **Sales Team** et ajoutez au moins un utilisateur. |
 |**Client classique installé**    |   Pour que vous puissiez tester la nouvelle étiquette, le client classique doit être installé sur votre ordinateur. </br></br>Le client classique Azure Information Protection est en cours de dépréciation pour mars 2021. Pour le déployer, ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.  |

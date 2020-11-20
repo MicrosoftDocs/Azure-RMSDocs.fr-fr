@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 29c79c49de5d28c82281614846f5938ecbf40f89
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: b0128abb8d75418596459ac142a49dbbfa06b646
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91587896"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503619"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
@@ -33,7 +33,7 @@ Pour effectuer ce démarrage rapide, les éléments suivants sont requis :
 
 - L’accès à votre compte [**Portail Azure**](https://portal.azure.com/)
 
-- Un abonnement comportant le [**plan Azure Information Protection 1 ou 2**](https://azure.microsoft.com/pricing/details/information-protection/)
+- Un abonnement comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/).
 
     Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
@@ -41,7 +41,7 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 ## <a name="add-azure-information-protection-to-the-azure-portal"></a>Ajouter Azure Information Protection au Portail Azure
 
-Même si vous disposez d’un abonnement comportant le plan Azure Information Protection 1 ou 2, AIP n’est pas automatiquement disponible sur le Portail Azure.
+Même si vous disposez d’un abonnement comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/), AIP n’est pas disponible automatiquement sur le Portail Azure.
 
 Pour ajouter AIP au Portail Azure, procédez ainsi :
 
@@ -64,7 +64,7 @@ Le service de protection est maintenant activé automatiquement pour les nouveau
 
 1. Vérifiez que la protection est activée pour votre locataire. Par exemple :
 
-    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Ajout d’Azure Information Protection au Portail Azure":::
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Vérification de l’activation d’AIP":::
 
     Si la protection n’est pas activée et que vous devez l’activer, sélectionnez **Activer** ![Activer AIP](media/qs-tutor/activate.png "Activer AIP"). Quand l’activation est terminée, la barre d’informations affiche **Activation terminée**.
 
@@ -76,7 +76,7 @@ Votre entreprise peut déjà disposer d’étiquettes, car elles ont été cré�
 
     Il se peut que des étiquettes par défaut aient déjà été créées. L’illustration suivante indique les étiquettes créées par défaut avec Azure Information Protection :
 
-    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Ajout d’Azure Information Protection au Portail Azure":::
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Étiquettes par défaut Azure Information Protection":::
 
     **Si les étiquettes par défaut n’apparaissent pas ou en l’absence d’étiquette** :
 
@@ -139,7 +139,7 @@ Pour afficher les paramètres de la stratégie Azure Information Protection par 
 
 1. Les paramètres de stratégie apparaissent après les étiquettes, dans la section **Configurer les paramètres à présenter et à appliquer aux utilisateurs finaux d’Information Protection**. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
 
-    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Ajout d’Azure Information Protection au Portail Azure":::
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Paramètres globaux de stratégie Azure Information Protection":::
 
 1. Vous pouvez maintenant fermer les volets du portail que vous avez ouverts.
 

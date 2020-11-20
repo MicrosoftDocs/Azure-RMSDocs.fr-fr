@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8d86d6f114bd1a0886883b9cda277ffd6ae9904b
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377131"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503415"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Tutoriel : Empêcher les partages inappropriés dans Outlook avec Azure Information Protection (AIP)
 
@@ -40,7 +40,7 @@ Avant de commencer ce tutoriel, veillez à disposer de la configuration système
 |Prérequis  |Description  |
 |---------|---------|
 |**Configuration requise pour la machine**     | Veillez à : <br /><br />- Disposer d’un ordinateur Windows, avec le client d’étiquetage unifié Azure Information Protection installé. Pour plus d’informations, consultez [Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection (AIP)](quickstart-deploy-client.md) <br /><br />- Avoir PowerShell installé et pouvoir l’exécuter en tant qu’administrateur. <br /><br />- Pouvoir vous connecter à Outlook. Vous devrez peut-être redémarrer Outlook plusieurs fois au cours de ce tutoriel.     |
-|**Abonnement à Azure Information Protection**     |   Vous devez avoir un [abonnement](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Azure incluant le **Plan 2 d’Azure Information Protection**.      |
+|**Abonnement à Azure Information Protection**     |   Il vous faut un abonnement Azure comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />Si vous n’avez aucun de ces abonnements, créez un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
 |**Des étiquettes de sensibilité et une stratégie de test**     |  Une étiquette de sensibilité **Général** configurée dans votre stratégie. <br /><br />Configurez des étiquettes de sensibilité dans le Centre d’administration d’étiquetage, notamment le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité Microsoft 365. Pour plus d’informations, consultez la [documentation Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Nous vous recommandons d’utiliser une stratégie de test pour ce tutoriel afin de ne pas affecter votre stratégie en cours. <br />Veillez à avoir le nom de votre stratégie sous la main ainsi que le GUID pour votre étiquette **Général**.   |
 | | |
 

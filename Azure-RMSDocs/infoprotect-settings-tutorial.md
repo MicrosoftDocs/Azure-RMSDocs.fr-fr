@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fcdf8fdba470a085af83410de0e9bcd4677ec664
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 2f5a9778ecd75b124f0d03e21217f5edab0c8fb1
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428801"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503432"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
@@ -49,7 +49,7 @@ Ce tutoriel prend environ 15 minutes.
 
 Pour suivre ce tutoriel, il vous faut :
 
-1. Un abonnement comportant le plan Azure Information Protection 1 ou 2.
+1. Un abonnement comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/).
     
     Si vous n’avez pas ce type d’abonnement, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 

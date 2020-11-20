@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d7c70cd8b9f44bb4babd00deb4229dc5cab0d214
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377134"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503687"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutoriel : Installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -33,10 +33,10 @@ Pour installer le scanneur d’étiquetage unifié et suivre ce tutoriel, vous a
 
 |Condition requise  |Description  |
 |---------|---------|
-|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement Azure incluant le [plan Azure Information Protection 1 ou 2](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />Si vous n’avez aucun de ces abonnements, créez un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
+|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement Azure comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />Si vous n’avez aucun de ces abonnements, créez un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
 |**Accès administrateur au portail Azure** |Vérifiez que vous pouvez vous connecter au [portail Azure](https://portal.azure.com/) avec un des comptes d’administrateur suivants : <br /><br />- **Administrateur de conformité**<br />- **Administrateur des données de conformité**<br />- **Administrateur de la sécurité**<br />- **Administrateur général** |
 |**Client installé**    |   Installez le client d’étiquetage unifié AIP sur votre ordinateur pour accéder à l’installation du scanneur. <br /><br />Téléchargez et exécutez **AzInfoProtection_UL.exe** à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). <br /><br />Une fois l’installation terminée, vous pouvez être invité à redémarrer votre ordinateur ou votre logiciel Office. Redémarrez si nécessaire pour continuer. <br /><br />Pour plus d’informations, consultez [Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection (AIP)](quickstart-deploy-client.md)|
-|**SQL Server**     | Pour exécuter le scanneur, SQL Server doit être installé sur la machine du scanneur. <br /><br /> Pour l’installer, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/sql-server/sql-server-editions-express) et sélectionnez **Télécharger maintenant** sous l’option d’installation que vous voulez utiliser. Dans le programme d’installation, sélectionnez le type d’installation **De base**. <br /><br />**Remarque** : Nous vous recommandons d’installer SQL Server Entreprise pour les environnements de production et l’édition Express seulement pour les environnements de test.       |
+|**SQL Server**     | Pour exécuter le scanneur, SQL Server doit être installé sur la machine du scanneur. <br /><br /> Pour l’installer, accédez à la [page de téléchargement de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads), puis sélectionnez **Télécharger maintenant** sous l’option d’installation que vous voulez utiliser. Dans le programme d’installation, sélectionnez le type d’installation **De base**. <br /><br />**Remarque** : Nous vous recommandons d’installer SQL Server Entreprise pour les environnements de production et l’édition Express seulement pour les environnements de test.       |
 |**Compte Active Directory Azure**     |  Quand vous utilisez un environnement standard connecté au cloud, le compte de service de domaine que vous utilisez pour le scanneur doit être synchronisé avec [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ce n’est pas nécessaire si vous travaillez hors connexion. <br /><br />Si vous avez un doute sur votre compte, contactez un de vos administrateurs système pour vérifier l’état de la synchronisation.   |
 |**Des étiquettes de sensibilité et une stratégie publiée** |Vous devez avoir créé des étiquettes de sensibilité et publié une stratégie avec au moins une étiquette dans le Centre d’administration d’étiquetage, pour le compte de service du scanneur. <br /><br />Configurez des étiquettes de sensibilité dans le Centre d’administration d’étiquetage, notamment le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité Microsoft 365. Pour plus d’informations, consultez la [documentation Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
 | | |

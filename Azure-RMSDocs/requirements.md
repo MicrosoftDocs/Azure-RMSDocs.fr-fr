@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
-ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
+ms.openlocfilehash: 5e52571568a54cf015269fde76603e334f0bc7b6
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92429188"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503551"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -45,9 +45,11 @@ Pour vérifier que l’abonnement inclut les fonctionnalités Azure Information 
 Si vous avez des questions sur les licences, lisez le [Forum aux questions](https://azure.microsoft.com/pricing/details/information-protection#faq) sur les licences.
 
 > [!TIP]
-> Vous voulez savoir si votre plan Microsoft 365 ou Exchange Online autonome prend en charge les [nouvelles fonctionnalités de chiffrement de messages Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) pour envoyer des e-mails protégés à des adresses e-mail personnelles ? Par exemple, Gmail, Yahoo et Microsoft. Consultez les ressources suivantes :
+> Vous voulez savoir si votre plan prend en charge les [nouvelles fonctionnalités de chiffrement de messages Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) pour envoyer des e-mails protégés à des adresses e-mail personnelles ? Par exemple, Gmail, Yahoo et Microsoft. Consultez les ressources suivantes :
 >
 > - [Description du service Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
+>
+> - [Comparaison des licences Conformité Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description)
 >
 > - [Office 365 Éducation](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
@@ -114,13 +116,13 @@ Si vous utilisez des machines virtuelles, vérifiez si le fournisseur de logicie
 
 Par exemple, pour les solutions Citrix, vous devrez peut-être [désactiver les hooks d’API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) pour Office et le client d’étiquetage unifié Azure Information Protection ou le client Azure Information Protection. 
 
-Ces applications utilisent les fichiers suivants, respectivement : **winword.exe** , **excel.exe** , **outlook.exe** , **powerpnt.exe** , **msip.app.exe** , **msip.viewer.exe**
+Ces applications utilisent les fichiers suivants, respectivement : **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
 
 ### <a name="server-support"></a>Prise en charge du serveur
 
 Pour chaque version de serveur répertoriée ci-dessus, les clients Azure Information Protection sont pris en charge pour les Services Bureau à distance. 
 
-Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le dossier **%Appdata%\Microsoft\Protect** .
+Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le dossier **%Appdata%\Microsoft\Protect**.
 
 En outre, Server Core et Nano Server ne sont pas pris en charge.
 
@@ -134,9 +136,9 @@ Chaque client Azure Information Protection dispose d’une configuration requise
 
 ## <a name="applications"></a>Applications
 
-Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de **Word** , **Excel** , **PowerPoint** et **Outlook** de Microsoft à partir de toutes les éditions Office suivantes :
+Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de **Word**, **Excel**, **PowerPoint** et **Outlook** de Microsoft à partir de toutes les éditions Office suivantes :
 
-- **Applications Office, version minimale 1805** , build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium. 
+- **Applications Office, version minimale 1805**, build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium. 
 
     Cette édition est prise en charge uniquement lorsqu’une licence pour Azure Rights Management, également appelé Azure Information Protection pour Microsoft 365 est attribuée à l’utilisateur.
 
@@ -168,9 +170,9 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 Azure Information Protection présente les exigences supplémentaires suivantes :
 
-- **Client d’étiquetage unifié** . Pour télécharger des étiquettes et des stratégies d’étiquettes, autorisez l’URL suivante sur HTTPS : * *_.protection.outlook.com_* .
+- **Client d’étiquetage unifié**. Pour télécharger des étiquettes et des stratégies d’étiquettes, autorisez l’URL suivante sur HTTPS : **_.protection.outlook.com_*.
 
-- **Proxys web** . Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification de connexion Active Directory de l’utilisateur.
+- **Proxys web**. Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification de connexion Active Directory de l’utilisateur.
 
     Pour prendre en charge les fichiers **Proxy.pac** si vous utilisez un proxy pour acquérir un jeton, ajoutez la nouvelle clé de Registre suivante :
 
@@ -179,7 +181,7 @@ Azure Information Protection présente les exigences supplémentaires suivantes�
     - **Type :** `DWORD`
     - **Valeur :** `1`
     
-- **Connexions client à service TLS** . N’interrompez pas la connexion du client au service TLS, par exemple, pour effectuer une inspection au niveau du paquet vers l’URL **aadrm.com** . Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
+- **Connexions client à service TLS**. N’interrompez pas la connexion du client au service TLS, par exemple, pour effectuer une inspection au niveau du paquet vers l’URL **aadrm.com**. Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
      
     Pour déterminer si votre connexion cliente est terminée avant d’atteindre le service Rights Management Azure, utilisez les commandes PowerShell suivantes :
 

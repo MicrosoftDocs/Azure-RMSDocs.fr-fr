@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0ab3f66437882f6c458b3e4793be935d5f14686d
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91587879"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503653"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -33,7 +33,7 @@ Pour effectuer ce démarrage rapide, les éléments suivants sont requis :
 
 |Condition requise  |Description  |
 |---------|---------|
-|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement comportant le [**plan Azure Information Protection 1 ou 2**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
+|**Un abonnement avec prise en charge**     |  Il vous faut un abonnement comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
 |**Client installé**    |   Le client classique ou le client d’étiquetage unifié doit être installé sur votre ordinateur. </br></br>- Pour installer le client d’étiquetage unifié, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) et téléchargez **AzInfoProtection_UL.exe** sur la page Azure Information Protection. </br>- Pour déployer le client classique AIP, ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.       |
 |**SQL Server Express**     | SQL Server Express doit être installé sur votre ordinateur. </br></br> Pour l’installer, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/sql-server/sql-server-editions-express) et sélectionnez **Télécharger maintenant** sous l’option Express. Dans le programme d’installation, sélectionnez le type d’installation **De base**.        |
 |**Azure AD**     |  Votre compte de domaine doit être synchronisé avec Azure AD. </br></br>Si vous avez un doute sur votre compte, contactez l’un de vos administrateurs système.      |
@@ -96,11 +96,11 @@ Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail 
 
     Toujours dans le volet **Ajouter un nouveau profil**, sélectionnez **Configurer les référentiels** pour ouvrir le volet **Référentiels** :
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Configuration de référentiels de données pour le scanneur Azure Information Protection":::
 
 1. Dans le volet **Référentiels**, sélectionnez **Ajouter** :
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Ajout d’un référentiel de données pour le scanneur Azure Information Protection":::
 
 1. Dans le volet **Référentiel**, spécifiez le dossier que vous avez créé plus tôt. Par exemple : `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ Vous pouvez maintenant installer le scanneur avec le profil que vous avez créé
 
 1. Sélectionnez votre nom de profil, puis l’option **Analyser maintenant** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Lancement de l’analyse du scanneur Azure Information Protection":::
 
     Si cette option n’est pas disponible une fois que vous avez sélectionné votre profil, le scanneur n’est pas connecté à Azure Information Protection. Vérifiez votre configuration et votre connectivité Internet.
 
@@ -171,7 +171,7 @@ Dans Excel :
 
     Dans le volet **Azure Information Protection - Profils**, assurez-vous que votre profil est sélectionné, puis sélectionnez l’option **Analyser maintenant** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Ajout d’un profil pour le scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Lancement de l’analyse du scanneur Azure Information Protection":::
 
 1. Affichez les nouveaux résultats lorsque l’analyse est terminée.
 

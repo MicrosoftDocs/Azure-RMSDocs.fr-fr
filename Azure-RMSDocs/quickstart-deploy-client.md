@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2d0723dcbc28ef5d9820c23f41c6d36e860303c5
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: 210e556a2ecaab2dec7eb46b4b3b9b3c2c968ea4
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94423429"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503398"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "94423429"
 
 Le client d’étiquetage unifié Azure Information Protection (AIP) fait partie de la solution [Microsoft Information Protection](https://aka.ms/MIPdocs) et étend les fonctionnalités intégrées pour l’étiquetage de la sensibilité fournies par Microsoft 365. 
 
-Le client fournit la prise en charge de l’étiquetage et de la protection pour l’utilisateur final dans l’Explorateur de fichiers et dans PowerShell. Il permet également aux administrateurs de parcourir les réseaux et les partages de contenu pour y rechercher du contenu sensible. 
+Le client assure la prise en charge de l’étiquetage et de la protection pour l’utilisateur final dans l’Explorateur de fichiers et PowerShell, en plus des applications Office. L’analyseur fourni avec le client d’étiquetage unifié permet aux administrateurs d’analyser les réseaux et les partages de contenu à la recherche de contenu sensible. 
 
 Pour les organisations sans plateforme de protection des informations, le client fournit une visionneuse pour le contenu protégé par d’autres organisations utilisant Microsoft Information Protection.
 

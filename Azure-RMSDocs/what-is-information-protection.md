@@ -9,15 +9,15 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq1
+ms.custom: contperfq2
 search.appverid:
 - MET150
-ms.openlocfilehash: 5167d790c557661181b03f90055dfc75b0b1cf72
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 4a945f07532786c268886a44de23430be9a78700
+ms.sourcegitcommit: 822b23024cfd01ea41ac6ae9370489193782f078
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94379244"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634697"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -35,7 +35,7 @@ Microsoft Information Protection est la structure de protection des informations
 
 ## <a name="aip-unified-labeling-client"></a>Client d’étiquetage unifié AIP
 
-Le client d’étiquetage unifié Azure Information Protection étend les fonctionnalités d’étiquetage, de classification et de protection à des types de fichiers supplémentaires ainsi qu’à l’Explorateur de fichiers et à PowerShell. 
+Le client d’étiquetage unifié Azure Information Protection étend les fonctionnalités d’étiquetage, de classification et de protection à des types de fichiers supplémentaires, ainsi qu’à l’Explorateur de fichiers et à PowerShell. 
 
 Par exemple, dans l’Explorateur de fichiers, cliquez avec le bouton droit sur un ou plusieurs fichiers et sélectionnez **Classer et protéger** pour gérer la fonctionnalité AIP sur les fichiers sélectionnés.
 
@@ -47,7 +47,7 @@ Téléchargez le client depuis la [page de téléchargement de Microsoft Azure I
     
 ## <a name="aip-on-premises-scanner"></a>Scanneur local AIP
 
-Le scanneur local Azure Information Protection permet aux administrateurs d’analyser leurs réseaux et leurs partages de fichiers à la recherche de contenu sensible qui doit être étiqueté, classifié et/ou protégé.
+L’analyseur local Azure Information Protection permet aux administrateurs d’analyser leurs réseaux et référentiels de fichiers locaux à la recherche de contenu sensible à étiqueter, à classer ou à protéger.
 
 Le scanneur local est installé via des applets de commande PowerShell fournies dans le cadre du client d’étiquetage unifié, et peut être géré en utilisant PowerShell et la zone Azure Information Protection dans le portail Azure.
 

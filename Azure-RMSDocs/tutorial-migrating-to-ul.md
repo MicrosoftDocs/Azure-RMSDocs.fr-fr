@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e4c1ae01b35a19fc3cc84f207f4f17b510926931
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377259"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503636"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>Tutoriel : Migration depuis le client classique d’Azure Information Protection (AIP) vers le client d’étiquetage unifié
 
@@ -103,7 +103,7 @@ Poursuivez avec [Copier vos stratégies vers la plateforme d’étiquetage unifi
 
 ### <a name="synchronizing-labeling-edits"></a>Synchronisation des modifications de l’étiquetage
 
-Une fois que vous avez migré vos étiquettes vers votre Centre d’administration, toutes les modifications que vous continuez à apporter aux étiquettes migrées dans le portail Azure sont synchronisées automatiquement vers la même étiquette dans le Centre d’administration pour l’étiquetage unifié.
+Une fois que vous avez migré vos étiquettes dans votre centre d’administration de l’étiquetage (Centre de sécurité Microsoft 365, Centre de conformité Microsoft 365 ou Centre Sécurité et conformité Microsoft 365), toutes les nouvelles modifications que vous apportez aux étiquettes migrées sur le Portail Azure sont synchronisées automatiquement avec la même étiquette dans le centre d’administration dans une optique d’étiquetage unifié.
 
 Cependant, les modifications apportées aux étiquettes migrées dans votre Centre d’administration ne sont *pas* resynchronisées vers le portail Azure. Si vous effectuez des modifications dans le Centre d’administration et que vous voulez qu’elles soient mises à jour dans le portail Azure, revenez au portail pour publier la mise à jour.
 

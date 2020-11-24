@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281951"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568554"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Qu’est-ce que le scanneur classique Azure Information Protection ?
 
@@ -34,10 +34,10 @@ Le scanneur AIP s’exécute en tant que service sur Windows Server et vous perm
 
 - **Chemins UNC** pour les partages réseau qui utilisent le protocole SMB (Server Message Block).
 
-- **Bibliothèques de documents SharePoint et dossier** pour sharepoint server 2019 via sharepoint server 2013. SharePoint 2010 est également pris en charge pour les clients disposant de la [prise en charge étendue de cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+- **Bibliothèques de documents SharePoint et dossier** pour sharepoint server 2019 via sharepoint server 2013. 
 
 > [!NOTE]
-> Pour analyser et étiqueter des fichiers sur des référentiels cloud, utilisez [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) au lieu du scanneur.
+> Pour analyser et étiqueter des fichiers sur des référentiels cloud, utilisez [Cloud App Security](/cloud-app-security/) au lieu du scanneur.
 >
 ## <a name="azure-information-protection-classic-scanner-overview"></a>Présentation du scanneur classique Azure Information Protection
 
@@ -47,7 +47,7 @@ L’illustration suivante montre l’architecture du scanneur AIP, où le scanne
 
 :::image type="content" source="media/classic-scanner-arch.png" alt-text="Architecture du scanneur Azure Information Protection Classic":::
 
-Pour inspecter vos fichiers, le scanneur utilise les IFilters installés sur l’ordinateur. Pour déterminer si les fichiers doivent être étiquetés, le scanneur utilise les types d’informations de sensibilité de protection contre la perte de données (DLP) et la détection de modèle Office 365 intégrés, ou les modèles Regex Office 365.
+Pour inspecter vos fichiers, le scanneur utilise les IFilters installés sur l’ordinateur. Pour déterminer si les fichiers doivent être étiquetés, le scanneur utilise Microsoft 365 les types d’informations de confidentialité intégrés de protection contre la perte de données (DLP) et la détection de modèle, ou Microsoft 365 des modèles Regex.
 
 Le scanneur utilise le client Azure Information Protection et peut classer et protéger les mêmes types de fichiers que le client. Pour plus d’informations, consultez [types de fichiers pris en charge par le client Azure information protection](./rms-client/client-admin-guide-file-types.md).
 

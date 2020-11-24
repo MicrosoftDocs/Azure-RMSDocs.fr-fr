@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fd96b54c25e92824bc216f452a6458706a4f906e
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: edfd5a5f309228c7f75a895e40826b65af74e1d7
+ms.sourcegitcommit: 04b9d7ee1ce8b6662ceda5a13b7b0d5630c91d28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447308"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "95568541"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -26,20 +26,22 @@ ms.locfileid: "89447308"
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Utilisez les informations suivantes pour les configurations avancées dont vous pouvez avoir besoin pour des scénarios spécifiques ou un sous-ensemble d’utilisateurs lorsque vous gérez le client d’étiquetage unifié Azure Information Protection.
+Utilisez les informations suivantes pour les configurations avancées nécessaires pour des scénarios ou des utilisateurs spécifiques lors de la gestion du client d’étiquetage unifié AIP.
 
-Ces paramètres requièrent la modification du registre ou la spécification de paramètres avancés. Les paramètres avancés utilisent [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
+> [!NOTE]
+> Ces paramètres requièrent la modification du registre ou la spécification de paramètres avancés. Les paramètres avancés utilisent [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
+> 
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Comment configurer des paramètres avancés pour le client à l’aide d’Office 365 Security & Compliance Center PowerShell
 
 Quand vous utilisez Office 365 Security & Compliance Center PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Par exemple :
 
-- Le paramètre permettant d’afficher la barre d’Information Protection dans les applications Office est un ***paramètre avancé***de la stratégie d’étiquette.
-- Le paramètre permettant de spécifier une couleur d’étiquette est un ***paramètre avancé d’étiquette***.
+- Le paramètre permettant d’afficher la barre d’Information Protection dans les applications Office est un **paramètre avancé** de la stratégie *.
+- Le paramètre permettant de spécifier une couleur d’étiquette est un _*_paramètre avancé d’étiquette_*_.
 
-Dans les deux cas, une fois que vous êtes [connecté à Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), spécifiez le paramètre *AdvancedSettings* avec l’identité (nom ou GUID) de la stratégie ou de l’étiquette, et spécifiez des paires clé/valeur dans une [table de hachage](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Utilisez la syntaxe suivante :
+Dans les deux cas, une fois que vous êtes [connecté à Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), spécifiez le paramètre _AdvancedSettings * avec l’identité (nom ou GUID) de la stratégie ou de l’étiquette, et spécifiez des paires clé/valeur dans une [table de hachage](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Utilisez la syntaxe suivante :
 
 Pour un paramètre de stratégie étiquette, valeur de chaîne unique :
 
@@ -126,16 +128,18 @@ Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 - **Fournir aux utilisateurs un lien vers une page d’aide personnalisée**
 
-Lorsque plusieurs stratégies d’étiquette sont configurées pour un utilisateur, chacune avec des paramètres de stratégie potentiellement différents, le dernier paramètre de stratégie est appliqué en fonction de l’ordre des stratégies dans le centre d’administration. Pour plus d’informations, consultez priorité de la [stratégie d’étiquette (ordre important)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters) .
+Lorsque plusieurs stratégies d’étiquette sont configurées pour un utilisateur, chacune avec des paramètres de stratégie potentiellement différents, le dernier paramètre de stratégie est appliqué en fonction de l’ordre des stratégies dans le centre d’administration. Pour plus d’informations, consultez priorité de la [stratégie d’étiquette (ordre important)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters) .
 
-Les paramètres avancés des étiquettes suivent la même logique pour la précédence : lorsqu’une étiquette est dans plusieurs stratégies d’étiquette et que cette étiquette a des paramètres avancés, le dernier paramètre avancé est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
+Les paramètres avancés de la stratégie d’étiquette sont appliqués à l’aide de la même logique, à l’aide du dernier paramètre de stratégie. 
 
-Les paramètres avancés de la stratégie d’étiquette sont appliqués dans l’ordre inverse : à une exception près, les paramètres avancés de la première stratégie sont appliqués, en fonction de l’ordre des stratégies dans le centre d’administration. L’exception est le paramètre avancé *OutlookDefaultLabel*, qui définit une autre étiquette par défaut pour Outlook. Pour ce paramètre avancé de stratégie d’étiquette uniquement, le dernier paramètre est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
-
+> [!NOTE]
+> Une exception existe actuellement pour le paramètre de stratégie [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) Advanced label, qui vous permet de définir une autre étiquette par défaut pour Outlook.
+> 
+> Si vous avez des conflits pour le paramètre OutlookDefaultLabel, la configuration est effectuée à partir du *premier* paramètre de stratégie, en fonction de l’ordre de la stratégie dans le centre d’administration.
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Paramètres avancés disponibles pour les stratégies d’étiquette
 
-Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) et [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) et [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
@@ -160,7 +164,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |OutlookJustifyUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookSkipSmimeOnReadingPaneProperty | [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)|
+|OutlookSkipSmimeOnReadingPaneEnabled | [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)|
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -183,7 +187,7 @@ Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’
 
 #### <a name="available-advanced-settings-for-labels"></a>Paramètres avancés disponibles pour les étiquettes
 
-Utilisez le paramètre *AdvancedSettings* avec [New-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) et [Set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+Utilisez le paramètre *AdvancedSettings* avec [New-label](/powershell/module/exchange/policy-and-compliance/new-label) et [Set-label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
@@ -258,7 +262,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 
-Quand vous configurez ce paramètre, l’applet de commande  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **Set-AIPFileLabel** est activée pour permettre la suppression de la protection des fichiers PST, rar, 7zip et MSG.
+Quand vous configurez ce paramètre, l’applet de commande  [PowerShell](./clientv2-admin-guide-powershell.md) **Set-AIPFileLabel** est activée pour permettre la suppression de la protection des fichiers PST, rar, 7zip et MSG.
 
 - Clé : **EnableContainerSupport**
 
@@ -307,22 +311,16 @@ Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier 
 | Valeur de chaîne| Client| Scanneur|
 |-------------|-------|--------|
 |\*|Valeur par défaut : appliquer la protection à tous les types de fichiers|Appliquer la protection à tous les types de fichiers|
-|\<null value>| Appliquer la protection aux types de fichiers Office et aux fichiers PDF| Valeur par défaut : appliquer la protection aux types de fichiers Office et aux fichiers PDF|
 |ConvertTo-JSON (". jpg", ". png")|En plus des fichiers PDF et des types de fichiers Office, appliquer la protection aux extensions de nom de fichier spécifiées | En plus des fichiers PDF et des types de fichiers Office, appliquer la protection aux extensions de nom de fichier spécifiées
+| | | |
 
-Exemple 1 : commande PowerShell pour le client unifié pour protéger uniquement les types de fichiers Office et les fichiers PDF, où votre stratégie d’étiquette est nommée « client » :
-
-```PowerShell
-Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-Exemple 2 : commande PowerShell pour le scanneur afin de protéger tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
+Exemple 1 : commande PowerShell pour le scanneur afin de protéger tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-Exemple 3 : commande PowerShell pour le scanneur afin de protéger les fichiers. txt et. csv en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
+Exemple 2 : commande PowerShell pour le scanneur afin de protéger les fichiers. txt et. csv en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -367,22 +365,21 @@ Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json
 Avec ce paramètre, les extensions suivantes («. txt ",". xml ",". bmp ",". JT ",". jpg ",". jpeg ",". jpe ",". jif ",". JFIF ",". JFI ",". png ",". TIF ",". TIFF ",". gif ") deviennent toujours P \<EXT> . L’exclusion notable est que « PTXT » ne devient pas « txt. pfile ». 
 **AdditionalPPrefixExtensions** fonctionne uniquement si la protection de fichiers pfile avec la propriété Advanced- [**PFileSupportedExtension**](#pfilesupportedextension) est activée. 
 
-Par exemple, dans le cas où la commande suivante est utilisée :
-
-```PowerShell
-Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-La protection PFile n’est pas possible et la valeur de **AdditionalPPrefixExtensions** est ignorée. 
-
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Supprimer « Pas maintenant » pour les documents quand vous utilisez l’étiquetage obligatoire
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 
-Quand vous utilisez le paramètre de stratégie étiquette de **tous les documents et e-mails doit avoir une étiquette**, les utilisateurs sont invités à sélectionner une étiquette lorsqu’ils enregistrent un document Office pour la première fois et lorsqu’ils envoient un message électronique. Pour les documents, les utilisateurs peuvent sélectionner **Pas maintenant** pour ignorer temporairement l’invite à sélectionner une étiquette et revenir au document. En revanche, ils ne peuvent pas fermer le document enregistré sans l’étiqueter. 
+Quand vous utilisez le paramètre de stratégie étiquette de **tous les documents et e-mails doit avoir une étiquette**, les utilisateurs sont invités à sélectionner une étiquette lorsqu’ils enregistrent un document Office pour la première fois et lorsqu’ils envoient un message électronique à partir d’Outlook.
 
-Quand vous configurez ce paramètre, l’option **Pas maintenant** n’est pas proposée, et les utilisateurs sont obligés de sélectionner une étiquette au premier enregistrement du document.
+Pour les documents, les utilisateurs peuvent sélectionner **Pas maintenant** pour ignorer temporairement l’invite à sélectionner une étiquette et revenir au document. En revanche, ils ne peuvent pas fermer le document enregistré sans l’étiqueter. 
 
+Quand vous configurez le paramètre **PostponeMandatoryBeforeSave** , l’option **Not Now** est supprimée, de sorte que les utilisateurs doivent sélectionner une étiquette lorsque le document est enregistré pour la première fois.
+
+> [!TIP]
+> Le paramètre **PostponeMandatoryBeforeSave** garantit également que les documents partagés sont étiquetés avant d’être envoyés par courrier électronique. 
+>
+>Par défaut, même si **tous les documents et e-mails doivent avoir une étiquette** activée dans votre stratégie, les utilisateurs sont promus uniquement vers des fichiers d’étiquette associés à des courriers électroniques à partir d’Outlook.  
+> 
 Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
 - Clé : **PostponeMandatoryBeforeSave**
@@ -399,7 +396,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 
 Cette configuration utilise des [Paramètres avancés](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 
-Il existe deux méthodes pour supprimer des classifications d’autres solutions d’étiquetage. La première méthode supprime toute forme de documents Word où le nom de forme correspond au nom défini dans la propriété avancée **WordShapeNameToRemove**, la deuxième méthode vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels à partir de documents Word, Excel et PowerPoint, comme défini dans la propriété avancée **RemoveExternalContentMarkingInApp** . 
+Il existe deux méthodes pour supprimer des classifications d’autres solutions d’étiquetage. La première méthode supprime toute forme de documents Word où le nom de la forme correspond au nom défini dans la propriété avancée **WordShapeNameToRemove**, la deuxième méthode vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels dans des documents Word, Excel et PowerPoint, comme défini dans la propriété avancé **RemoveExternalContentMarkingInApp** . 
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>Utiliser la propriété avancée WordShapeNameToRemove
 
@@ -443,7 +440,7 @@ Lorsque le client d’étiquetage unifié obtient cette configuration dans sa st
 
 Cette configuration n’est pas prise en charge pour Outlook. Sachez également que quand vous l’utilisez avec Word, Excel et PowerPoint, elle peut affecter négativement les performances de ces applications pour les utilisateurs. La configuration vous permet de définir des paramètres par application, par exemple, rechercher du texte dans les en-têtes et les pieds de page des documents Word, mais pas dans les feuilles de calcul Excel ni dans les présentations PowerPoint.
 
-Étant donné que les critères spéciaux affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’applications Office (**W**ORD, E**X**cel, **P**owerPoint) à ceux qui doivent être recherchés.
+Étant donné que les critères spéciaux affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’applications Office (**W** ORD, E **X** cel, **P** owerPoint) à ceux qui doivent être recherchés.
 Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 - Clé : **RemoveExternalContentMarkingInApp**
 
@@ -508,9 +505,9 @@ Pour supprimer ce pied de page multiligne, vous créez les deux entrées suivant
 
 - Clé : **ExternalContentMarkingToRemove**
 
-- Valeur de clé 1 : ** \* confidentiel***
+- Valeur de clé 1 : **\* confidentiel***
 
-- Valeur de clé 2 : ** \* étiquette appliquée*** 
+- Valeur de clé 2 : **\* étiquette appliquée*** 
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
@@ -522,9 +519,11 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 Les pieds de page dans PowerPoint sont implémentés en tant que formes. Pour éviter de supprimer les formes qui contiennent le texte que vous avez spécifié, mais qui ne sont ni des en-têtes ni des pieds de page, utilisez un paramètre client avancé supplémentaire nommé **PowerPointShapeNameToRemove**. Nous recommandons également d’utiliser ce paramètre pour éviter de vérifier le texte dans toutes les formes, qui est un processus gourmand en ressources.
 
-Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si PowerPoint est inclus dans la valeur de la clé **RemoveExternalContentMarkingInApp**, toutes les formes sont vérifiées à la recherche du texte que vous spécifiez dans la valeur ** ExternalContentMarkingToRemove**. 
+- Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si PowerPoint est inclus dans la valeur de la clé **RemoveExternalContentMarkingInApp**, toutes les formes sont vérifiées à la recherche du texte que vous spécifiez dans la valeur **ExternalContentMarkingToRemove**. 
 
-Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :
+- Si cette valeur est spécifiée, seules les formes qui remplissent les critères de nom de forme et ont également un texte qui correspond à la chaîne fournie avec **ExternalContentMarkingToRemove** sera supprimée.
+
+**Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :**
 
 1. Dans PowerPoint, affichez le volet **Sélection** : onglet **Mise en forme** > groupe **Organiser** > **volet sélection**.
 
@@ -532,7 +531,7 @@ Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de p
 
 Utilisez le nom de la forme afin de spécifier une valeur de chaîne pour la clé **PowerPointShapeNameToRemove**. 
 
-Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
+**Exemple :** Le nom de la forme est **FC**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
 
 - Clé : **PowerPointShapeNameToRemove**
 
@@ -675,8 +674,10 @@ Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel
 
 Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
 
+Pour obtenir un exemple de procédure pas à pas de configuration de ces paramètres, consultez la vidéo [Azure information protection configuration contextuelle Outlook](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+
 > [!TIP]
-> Pour obtenir un exemple de procédure pas à pas de configuration de ces paramètres, consultez la vidéo [Azure information protection configuration contextuelle Outlook](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+> Pour garantir l’affichage des fenêtres contextuelles, même lorsque les documents sont partagés à partir d’Outlook **(partage de > de fichiers > joindre une copie),** Configurez également le paramètre avancé [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
 
@@ -888,6 +889,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## <a name="limit-cpu-consumption"></a>Limiter la consommation de l’UC
 
+Le scanneur limite la consommation des ressources pour garantir que le processeur de l’ordinateur n’est jamais supérieur à 85%. 
+
 Depuis la version 2.7. x. x du scanner, nous vous recommandons de limiter la consommation de l’UC à l’aide de la méthode de paramètres avancés **ScannerMaxCPU** et **ScannerMinCPU** suivante. 
 
 > [!IMPORTANT]
@@ -1004,7 +1007,7 @@ Le paramètre client avancé :
 
 - Clé : **labelByCustomProperties**
 
-- Valeur : l' **étiquette des îlots sécurisés contient Internal, classification. \* Interne. \* **
+- Valeur : l' **étiquette des îlots sécurisés contient Internal, classification. \* Interne. \***
 
 Exemple de commande PowerShell, où votre étiquette est nommée « général » :
 
@@ -1016,7 +1019,7 @@ Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure 
 
 Lorsque vous avez besoin de plusieurs règles pour la même étiquette, définissez plusieurs valeurs de chaîne pour la même clé. 
 
-Dans cet exemple, les étiquettes des îles sécurisées nommées « confidentiel » et « secret » sont stockées dans la propriété personnalisée nommée **classification**et vous souhaitez que le Azure information protection client d’étiquetage unifié applique l’étiquette de sensibilité nommée « confidentiel » :
+Dans cet exemple, les étiquettes des îles sécurisées nommées « confidentiel » et « secret » sont stockées dans la propriété personnalisée nommée **classification** et vous souhaitez que le Azure information protection client d’étiquetage unifié applique l’étiquette de sensibilité nommée « confidentiel » :
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
@@ -1024,7 +1027,9 @@ Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=Con
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>Étendre vos règles de migration d’étiquette aux e-mails
 
-Vous pouvez utiliser vos paramètres avancés labelByCustomProperties avec les courriers électroniques Outlook en plus des documents Office en spécifiant un paramètre avancé de stratégie d’étiquette supplémentaire. Toutefois, ce paramètre a un impact négatif connu sur les performances d’Outlook. par conséquent, configurez ce paramètre supplémentaire uniquement si vous avez une forte exigence pour l’entreprise et n’oubliez pas de le définir sur une valeur de chaîne NULL lorsque vous avez terminé la migration à partir de l’autre solution d’étiquetage.
+Vous pouvez utiliser la configuration que vous avez définie avec le paramètre avancé [*labelByCustomProperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) pour les courriers électroniques Outlook, en plus des documents Office, en spécifiant un paramètre avancé de stratégie d’étiquette supplémentaire. 
+
+Toutefois, ce paramètre a un impact négatif connu sur les performances d’Outlook. par conséquent, configurez ce paramètre supplémentaire uniquement si vous avez une forte exigence pour l’entreprise et n’oubliez pas de le définir sur une valeur de chaîne NULL lorsque vous avez terminé la migration à partir de l’autre solution d’étiquetage.
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
@@ -1040,7 +1045,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="Tr
 
 ### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Étendre vos règles de migration d’étiquette à des propriétés SharePoint
 
-Vous pouvez utiliser vos paramètres avancés labelByCustomProperties avec des propriétés SharePoint que vous pouvez exposer en tant que colonnes aux utilisateurs.
+Vous pouvez utiliser la configuration que vous avez définie avec le paramètre avancé [*labelByCustomProperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) pour les propriétés SharePoint que vous pouvez exposer en tant que colonnes aux utilisateurs en spécifiant un paramètre avancé de stratégie d’étiquette supplémentaire.
 
 Ce paramètre est pris en charge lorsque vous utilisez Word, Excel et PowerPoint.
 
@@ -1123,7 +1128,7 @@ Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertT
 
 Cette configuration utilise des [Paramètres avancés](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) d’étiquette que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 
-Utilisez ces paramètres uniquement lorsque vous disposez d’un [déploiement S/MIME](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) opérationnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection pour les e-mails plutôt que Rights Management protection à partir de Azure information protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
+Utilisez ces paramètres uniquement lorsque vous disposez d’un [déploiement S/MIME](/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) opérationnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection pour les e-mails plutôt que Rights Management protection à partir de Azure information protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
 
 Pour configurer un paramètre avancé pour une signature numérique S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée :
 
@@ -1167,7 +1172,7 @@ Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Activer la classification pour qu’elle s’exécute en continu en arrière-plan
 
-Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) pour les étiquettes que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell. Ce paramètre est en préversion et est susceptible de changer.
+Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) pour les étiquettes que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell. 
 
 Quand vous configurez ce paramètre, il modifie le comportement par défaut de la façon dont le Azure Information Protection client d’étiquetage unifié applique les étiquettes automatiques et recommandées aux documents :
 
@@ -1183,13 +1188,15 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 - Clé : **RunPolicyInBackground**
 - Valeur : **true**
 
-
-
 Exemple de commande PowerShell : 
 
 ```PowerShell
 Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 ```
+
+> [!NOTE]
+> Cette fonctionnalité est actuellement en PRÉVERSION. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
+> 
 
 ## <a name="specify-a-color-for-the-label"></a>Spécifier une couleur pour l’étiquette
 
@@ -1213,7 +1220,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## <a name="sign-in-as-a-different-user"></a>Se connecter avec l’identité d’un autre utilisateur
 
-Dans un environnement de production, les utilisateurs n’ont généralement pas besoin de se connecter en tant qu’utilisateur différent lorsqu’ils utilisent le client d’étiquetage unifié Azure Information Protection. Toutefois, en tant qu’administrateur, vous devrez peut-être vous connecter sous un autre nom d’utilisateur pendant une phase de test. 
+La connexion avec plusieurs utilisateurs n’est pas prise en charge par AIP en production. Cette procédure décrit comment se connecter en tant qu’utilisateur différent à des fins de test uniquement.
 
 Vous pouvez vérifier le compte auquel vous êtes actuellement connecté à l’aide de la boîte de dialogue **Microsoft Azure information protection** : Ouvrez une application Office et, sous l’onglet dossier de **démarrage** , cliquez sur le bouton **sensibilité** , puis sélectionnez **aide et commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
 
@@ -1225,7 +1232,7 @@ Pour se connecter avec l’identité d’un autre utilisateur :
 
 2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si vous ne voyez pas d’invite dans votre application Office pour vous connecter au service Azure Information Protection, revenez à la boîte de dialogue **Microsoft Azure information protection** et sélectionnez **se connecter** à partir de la section **État du client** mis à jour.
 
-En outre :
+De plus :
 
 - Si le client d’étiquetage unifié Azure Information Protection est toujours connecté avec l’ancien compte après avoir effectué ces étapes, supprimez tous les cookies d’Internet Explorer, puis répétez les étapes 1 et 2.
 
@@ -1255,7 +1262,7 @@ Instructions :
 
 4. À partir de cet ordinateur, exportez les fichiers journaux.
     
-    Par exemple, exécutez l’applet de commande [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) ou utilisez l’option **Exporter les journaux** de la boîte de dialogue [aide et commentaires](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) du client. 
+    Par exemple, exécutez l’applet de commande [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) ou utilisez l’option **Exporter les journaux** de la boîte de dialogue [aide et commentaires](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) du client. 
     
     Les fichiers journaux sont exportés sous la forme d’un fichier compressé unique.
 
@@ -1275,7 +1282,7 @@ Par défaut, le Azure Information Protection client d’étiquetage unifié écr
  
 Pour modifier le niveau de journalisation de ces fichiers, localisez le nom de la valeur suivante dans le registre et définissez les données de la valeur sur le niveau de journalisation requis :
 
-**HKEY_CURRENT_USER \SOFTWARE\Microsoft\MSIP\LogLevel**
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
@@ -1328,7 +1335,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 > * FILE_ATTRIBUTE_RECALL_ON_OPEN
 > * FILE_ATTRIBUTE_TEMPORARY
 
-Pour obtenir la liste de tous les attributs de fichier qui peuvent être définis dans le paramètre avancé **ScannerFSAttributesToSkip** , consultez [constantes d’attribut de fichier Win32](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants) .
+Pour obtenir la liste de tous les attributs de fichier qui peuvent être définis dans le paramètre avancé **ScannerFSAttributesToSkip** , consultez [constantes d’attribut de fichier Win32](/windows/win32/fileio/file-attribute-constants) .
 
 ## <a name="preserve-ntfs-owners-during-labeling-public-preview"></a>Conserver les propriétaires NTFS lors de l’étiquetage (version préliminaire publique)
 
@@ -1347,6 +1354,10 @@ Exemple de commande PowerShell, lorsque votre stratégie d’étiquette est nomm
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
 ```
 
+> [!NOTE]
+> Cette fonctionnalité est actuellement en PRÉVERSION. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
+> 
+
 ## <a name="customize-justification-prompt-texts-for-modified-labels"></a>Personnaliser les textes d’invite de justification pour les étiquettes modifiées
 
 Personnaliser les invites de justification qui s’affichent à la fois dans Office et le client AIP, lorsque les utilisateurs finaux modifient les étiquettes de classification sur les documents et les e-mails.
@@ -1355,13 +1366,13 @@ Par exemple, en tant qu’administrateur, il se peut que vous souhaitiez rappele
 
 :::image type="content" source="../media/justification-office.png" alt-text="Texte d’invite de justification personnalisé":::
 
-Pour modifier **le texte par** défaut affiché, utilisez la propriété avancée **JustificationTextForUserText** avec l’applet de commande [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) . Définissez la valeur sur le texte que vous souhaitez utiliser à la place.
+Pour modifier **le texte par** défaut affiché, utilisez la propriété avancée **JustificationTextForUserText** avec l’applet de commande [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) . Définissez la valeur sur le texte que vous souhaitez utiliser à la place.
 
 Par exemple :
 
 ``` PowerShell
 
-[Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+[Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
 
 ## <a name="customize-outlook-popup-messages"></a>Personnaliser les messages de la fenêtre contextuelle Outlook
@@ -1372,9 +1383,15 @@ Les administrateurs AIP peuvent personnaliser les messages contextuels qui s’a
 - Messages d’avertissement invitant les utilisateurs à vérifier le contenu qu’ils envoient
 - Messages de justification qui demandent aux utilisateurs de justifier le contenu qu’ils envoient
 
+> [!IMPORTANT]
+> Cette procédure remplacera tous les paramètres que vous avez déjà définis à l’aide de la propriété avancée **OutlookUnlabeledCollaborationAction** .
+>
+> En production, nous vous recommandons d’éviter les complications en utilisant la propriété avancée **OutlookUnlabeledCollaborationAction** pour définir vos règles *ou* en définissant des règles complexes avec un fichier JSON, comme indiqué ci-dessous, mais *pas les deux*.
+>
+
 **Pour personnaliser vos messages Outlook :**
 
-1. Créez des fichiers **. JSON** , chacun avec une règle qui configure la façon dont Outlook affiche les messages contextuels à vos utilisateurs. Pour plus d’informations, consultez Syntaxe de la [règle. JSON](#rule-value-json-syntax) et [exemple de code Popup customziation. JSON](#sample-popup-customziation-json-code).
+1. Créez des fichiers **. JSON** , chacun avec une règle qui configure la façon dont Outlook affiche les messages contextuels à vos utilisateurs. Pour plus d’informations, consultez Syntaxe de la [règle. JSON](#rule-value-json-syntax) et [exemple de personnalisation contextuelle. code JSON](#sample-popup-customization-json-code).
 
 1. Utilisez PowerShell pour définir des paramètres avancés qui contrôlent les messages contextuels que vous configurez. Exécutez un ensemble de commandes distinct pour chaque règle que vous souhaitez configurer.
 
@@ -1386,7 +1403,7 @@ Les administrateurs AIP peuvent personnaliser les messages contextuels qui s’a
     $filedata = Get-Content "<Path to json file>”
     Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{<Key> ="$filedata"}
     ```
-    Où : 
+    Où : 
 
     - `<Path to json file>` est le chemin d’accès au fichier JSON que vous avez créé. Par exemple : **C:\Users\msanchez\Desktop\ \dlp\OutlookCollaborationRule_1.json**.
     - `<Policy name>` nom de la stratégie que vous souhaitez configurer. 
@@ -1394,18 +1411,20 @@ Les administrateurs AIP peuvent personnaliser les messages contextuels qui s’a
     
         `OutlookCollaborationRule_<x>` 
 
-    Pour plus d’informations, consultez [classement de vos règles Outlook customziation](#ordering-your-outlook-customziation-rules) et [syntaxe JSON](#rule-value-json-syntax)de la valeur de règle.
+    Pour plus d’informations, consultez [classement des règles de personnalisation Outlook](#ordering-your-outlook-customization-rules) et [syntaxe JSON](#rule-value-json-syntax)de la valeur de règle.
 
    
 > [!TIP]
 > Pour une organisation supplémentaire, nommez votre fichier avec la même chaîne que la clé utilisée dans votre commande PowerShell. Par exemple, nommez votre fichier **OutlookCollaborationRule_1.jssur,** puis utilisez également **OutlookCollaborationRule_1** comme clé.
+>
+> Pour garantir l’affichage des fenêtres contextuelles, même lorsque les documents sont partagés à partir d’Outlook **(partage de > de fichiers > joindre une copie),** Configurez également le paramètre avancé [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
 > 
 
-### <a name="ordering-your-outlook-customziation-rules"></a>Classement de vos règles Outlook customziation
+### <a name="ordering-your-outlook-customization-rules"></a>Classement des règles de personnalisation d’Outlook
 
 AIP utilise le numéro de série de la clé que vous entrez pour déterminer l’ordre de traitement des règles. Lors de la définition des clés utilisées pour chaque règle, définissez vos règles plus restrictives avec des nombres inférieurs, suivies de règles moins restrictives avec des nombres plus élevés.
 
-Une fois qu’une correspondance de règle spécifique a été trouvée, AIP arrête le traitement des règles et effectue l’action associée à la règle de correspondance. (Logique**de sortie de la première correspondance >** )
+Une fois qu’une correspondance de règle spécifique a été trouvée, AIP arrête le traitement des règles et effectue l’action associée à la règle de correspondance. (Logique **de sortie de la première correspondance >** )
     
 **Exemple :**
 
@@ -1417,14 +1436,14 @@ Dans ce scénario, classez votre clé de règle de **secret de bloc** , qui est 
 
 ### <a name="rule-value-json-syntax"></a>Syntaxe de la valeur de la règle. JSON
 
-Définissez le snytax JSON de votre règle comme suit :
+Définissez la syntaxe JSON de votre règle comme suit :
 
 ``` JSON
 "type" : "And",
 "nodes" : []
 ```
 
-Vous devez disposer d’au moins deux nœuds, le premier représentant la condition de la règle et la dernière represending de l’action de la règle. Pour plus d'informations, consultez les pages suivantes :
+Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d'informations, consultez les pages suivantes :
 
 - [Syntaxe de condition de règle](#rule-condition-syntax)
 - [Syntaxe de l’action de règle](#rule-action-syntax)
@@ -1440,21 +1459,21 @@ Les types de nœuds pris en charge sont les suivants :
 | **And**   | Effectue *et* sur tous les nœuds enfants     |
 | **Ou**    |Effectue *ou* sur tous les nœuds enfants       |
 | **Pas**   | *N’effectue pas* pour son propre enfant      |
-| **Mais**    | Retourne la valeur *not* pour son propre enfant, provoquant son comportement comme **All**        |
-| **SentTo,** suivi des **domaines : listOfDomains**    |Vérifie l’un des éléments suivants : </br>-Si le parent est **Except,** vérifie si **tous** les destinataires se trouvent dans l’un des domaines.</br>-Si le parent est autre que **, à l’exception de,** **vérifie si l’un des** destinataires est dans l’un des domaines.   |
-| **EMailLabel,** suivi de l’étiquette | Celui-ci peut avoir l'une des valeurs suivantes :  </br>-ID d’étiquette </br>-NULL, s’il n’est pas étiqueté             |
-| **AttachmentLabel,** suivi par **label** et **supportedExtensions**    | Celui-ci peut avoir l'une des valeurs suivantes :  </br></br>**:** </br>-Si le parent est **Except,** vérifie si **toutes** les pièces jointes avec une extension prise en charge existent dans l’étiquette</br>-Si le parent est autre que **, à l’exception de,** vérifie si l' **une** des pièces jointes avec une extension prise en charge existe dans l’étiquette </br>-S’il n’est pas étiqueté et **étiquette = null** </br></br> **false :** Pour tous les autres cas 
+| **Except**    | Retourne la valeur *not* pour son propre enfant, provoquant son comportement comme **All**        |
+| **SentTo,** suivi des **domaines : listOfDomains**    |Vérifie l’un des éléments suivants : <br />-Si le parent est **Except,** vérifie si **tous** les destinataires se trouvent dans l’un des domaines.<br />-Si le parent est autre que **, à l’exception de,** **vérifie si l’un des** destinataires est dans l’un des domaines.   |
+| **EMailLabel,** suivi de l’étiquette | Celui-ci peut avoir l'une des valeurs suivantes :  <br />-ID d’étiquette <br />-NULL, s’il n’est pas étiqueté             |
+| **AttachmentLabel,** suivi par **label** et **supportedExtensions**    | Celui-ci peut avoir l'une des valeurs suivantes :  <br /><br />**:** <br />-Si le parent est **Except,** vérifie si **toutes** les pièces jointes avec une extension prise en charge existent dans l’étiquette<br />-Si le parent est autre que **, à l’exception de,** vérifie si l' **une** des pièces jointes avec une extension prise en charge existe dans l’étiquette <br />-S’il n’est pas étiqueté et **étiquette = null** <br /><br /> **false :** Pour tous les autres cas 
 | | |
 
 #### <a name="rule-action-syntax"></a>Syntaxe de l’action de règle
 
 Les actions de règle peuvent être l’une des suivantes :
 
-|Action  |Syntaxe  |Exemple de message  |
+|Action  |Syntax  |Exemple de message  |
 |---------|---------|---------|
-|**Bloquer**     |    `Block (List<language, [title, body]>)`     |    ***E-mail bloqué***</br></br>  *Vous vous apprêtez à envoyer du contenu classifié comme **secret** à un ou plusieurs destinataires non approuvés :*</br>*`rsinclair@contoso.com`*</br></br>*La stratégie de votre organisation n’autorise pas cette action. Envisagez de supprimer ces destinataires ou de remplacer le contenu.*|
-|**Viendra**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation requise***</br></br>*Vous vous apprêtez à envoyer du contenu classé comme **général** à un ou plusieurs destinataires non approuvés :*</br>*`rsinclair@contoso.com`*</br></br>*La stratégie de votre organisation requiert une confirmation pour l’envoi de ce contenu.*       |
-|**Prouver**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` </br></br>Y compris jusqu’à trois options.        |  ***Justification requise*** </br></br>*La stratégie de votre organisation nécessite une justification pour envoyer le contenu classé comme **général** à des destinataires non approuvés.*</br></br>*-Je confirme que les destinataires sont approuvés pour partager ce contenu*</br>*-Mon responsable a approuvé le partage de ce contenu*</br>*-Other, comme expliqué* |
+|**Bloquer**     |    `Block (List<language, [title, body]>)`     |    **_E-mail bloqué_* _<br /><br />  _You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **secret** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation n’autorise pas cette action. Envisagez de supprimer ces destinataires ou de remplacer le contenu. *|
+|**Viendra**     | `Warn (List<language,[title,body]>)`        |  **_Confirmation obligatoire_* _<br /><br />_You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **général** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation nécessite une confirmation pour l’envoi de ce contenu. *       |
+|**Prouver**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` <br /><br />Y compris jusqu’à trois options.        |  **_Justification obligatoire_* _ <br /><br />_Your stratégie d’organisation nécessite une justification pour envoyer le contenu classé comme **général** à des destinataires non approuvés. *<br /><br />* -Je confirme que les destinataires sont approuvés pour partager ce contenu *<br />* -mon responsable a approuvé le partage de ce contenu *<br />* -autre, comme expliqué * |
 | | | |
 
 ##### <a name="action-parameters"></a>Paramètres d’action
@@ -1478,7 +1497,7 @@ Tous les textes prennent en charge les paramètres dynamiques suivants :
 > Les noms de langue parent uniquement sont également pris en charge, par exemple `en` uniquement.
 > 
 
-### <a name="sample-popup-customziation-json-code"></a>Exemple de code Popup customziation. JSON
+### <a name="sample-popup-customization-json-code"></a>Exemple de personnalisation de la fenêtre contextuelle. code JSON
 
 Les jeux de code **. JSON** suivants montrent comment vous pouvez définir une série de règles qui contrôlent la façon dont Outlook affiche les messages contextuels pour vos utilisateurs.
 
@@ -1486,7 +1505,7 @@ Les jeux de code **. JSON** suivants montrent comment vous pouvez définir une s
 - [**Exemple 2**: bloquer les pièces jointes Office non classifiées](#example-2-block-unclassified-office-attachments)
 - [**Exemple 3**: demander à l’utilisateur d’accepter l’envoi d’un e-mail ou d’une pièce jointe confidentiel](#example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment)
 - [**Exemple 4**: signaler un message sans étiquette, et une pièce jointe avec une étiquette spécifique](#example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label)
-- [**Exemple 5**: demander un justification, avec deux options prédéfinies et une option de texte libre supplémentaire](#example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option)
+- [**Exemple 5**: demander une justification, avec deux options prédéfinies et une option de texte libre supplémentaire](#example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option)
 
 #### <a name="example-1-block-internal-emails-or-attachments"></a>Exemple 1 : bloquer les e-mails internes ou les pièces jointes
 
@@ -1540,7 +1559,7 @@ Dans cet exemple, **89a453df-5df4-4976-8191-259d0cf9560a** est l’ID de l’ét
 
 #### <a name="example-2-block-unclassified-office-attachments"></a>Exemple 2 : bloquer les pièces jointes Office non classifiées
 
-Le code **. JSON** suivant bloque l’envoi de pièces jointes Office ou de messages électroniques non classifiés à des recipeints externes.
+Le code **. JSON** suivant bloque l’envoi de pièces jointes Office ou de messages électroniques non classifiés à des destinataires externes.
 
 Dans l’exemple suivant, la liste des pièces jointes qui requiert un étiquetage est : **. doc,. docm,. docx,. dot,. dotm,. dotx,. potm,. potx,. PPS,. PPSM,. ppsx,. ppt,. pptm,. pptx,. vdw,. VSD,. VSDM,. vsdx,. VSS,. VSSM,. VST,. vstm,. vssx** ,. vstx,.,. xlsb,. xlt,. xltm,. xltx
 
@@ -1717,7 +1736,7 @@ Par défaut, les e-mails qui ont des pièces jointes étiquetées ne reçoivent 
 }
 ```
 
-#### <a name="example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option"></a>Exemple 5 : demander un justification, avec deux options prédéfinies et une option de texte libre supplémentaire
+#### <a name="example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option"></a>Exemple 5 : demander une justification, avec deux options prédéfinies et une option de texte libre supplémentaire
 
 Le code **. JSON** suivant fait en sorte qu’Outlook invite l’utilisateur à justifier son action. Le texte de la justification comprend deux options prédéfinies, ainsi qu’une troisième option de texte libre.
 
@@ -1771,7 +1790,7 @@ Le code **. JSON** suivant fait en sorte qu’Outlook invite l’utilisateur à 
 
 Par défaut, le délai d’attente pour les interactions SharePoint est de deux minutes, après quoi l’opération de tentative d’AIP échoue.
 
-À partir de la [version 2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), les administrateurs AIP peuvent contrôler ce délai d’attente à l’aide des propriétés avancées suivantes, à l’aide d’une syntaxe **hh : mm : SS** pour définir les délais d’attente :
+À partir de la [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), les administrateurs AIP peuvent contrôler ce délai d’attente à l’aide des propriétés avancées suivantes, à l’aide d’une syntaxe **hh : mm : SS** pour définir les délais d’attente :
 
 - **SharepointWebRequestTimeout**. Détermine le délai d’expiration de toutes les requêtes Web AIP sur SharePoint. Valeur par défaut = 2 minutes.
 
@@ -1791,14 +1810,14 @@ Par défaut, le délai d’attente pour les interactions SharePoint est de deux 
 
 ## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME
 
-Des problèmes de performances peuvent se produire dans Outlook lorsque les courriers électroniques S/MIME sont ouverts dans le volet de lecture. Pour éviter ces problèmes, activez la propriété avancée **OutlookSkipSmimeOnReadingPaneProperty** . 
+Des problèmes de performances peuvent se produire dans Outlook lorsque les courriers électroniques S/MIME sont ouverts dans le volet de lecture. Pour éviter ces problèmes, activez la propriété avancée **OutlookSkipSmimeOnReadingPaneEnabled** . 
 
 L’activation de cette propriété empêche l’affichage de la barre AIP et des classifications de courrier électronique dans le volet de lecture.
 
-Par exemple, si votre stratégie est nommée **Global**, l’exemple de commande PowerShell suivant active la propriété **OutlookSkipSmimeOnReadingPaneProperty** :
+Par exemple, si votre stratégie est nommée **Global**, l’exemple de commande PowerShell suivant active la propriété **OutlookSkipSmimeOnReadingPaneEnabled** :
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneProperty="true"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneEnabled="true"}
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 446369f3a46e99d138455afbb0cc90d9a8635fb2
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 4c466fbbad6314a6b0ea0dddb85d07d359a42467
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952927"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568566"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur Azure Information Protection Classic
 
@@ -28,7 +28,7 @@ ms.locfileid: "88952927"
 > 
 > Si vous utilisez le scanneur d’étiquetage unifié, consultez [Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure information protection](deploy-aip-scanner-prereqs.md).
 
-Avant d’installer le scanneur Azure Information Protection, assurez-vous que votre système est conforme aux exigences suivantes :
+Avant d’installer le Azure Information Protection scanneur local, assurez-vous que votre système est conforme aux exigences de base de [Azure information protection](requirements.md), ainsi qu’aux exigences suivantes spécifiques au scanneur :
 
 - [Configuration requise pour Windows Server](#windows-server-requirements)
 - [Exigences relatives au compte de service](#service-account-requirements)
@@ -73,7 +73,7 @@ Ce compte de service a la configuration suivante :
 |---------|---------|
 |Attribution **de droits d’utilisateur d’ouverture de session locale**     |Requis pour installer et configurer le scanneur, mais pas pour exécuter des analyses.  </br></br>Une fois que vous avez confirmé que le scanneur peut détecter, classer et protéger les fichiers, vous pouvez supprimer ce droit du compte de service.  </br></br>S’il n’est pas possible d’accorder ce droit même pendant une brève période de temps en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).         |
 |**Ouvrir une session en tant que service**, attribution des droits utilisateur.     |  Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur.        |
-|**Autorisations pour les référentiels de données**     |- **Partages de fichiers ou fichiers locaux :** Accordez des autorisations de **lecture**, d' **écriture**et de **modification** pour analyser les fichiers, puis appliquez la classification et la protection conformément à la configuration.  <br /><br />- **SharePoint :** Accordez des autorisations **contrôle total** pour analyser les fichiers, puis appliquez la classification et la protection conformément à la configuration.  <br /><br />- **Mode de découverte :** Pour exécuter le scanneur en mode détection uniquement, l’autorisation **lecture** est suffisante.         |
+|**Autorisations pour les référentiels de données**     |- **Partages de fichiers ou fichiers locaux :** Accordez des autorisations de **lecture**, d' **écriture** et de **modification** pour analyser les fichiers, puis appliquez la classification et la protection conformément à la configuration.  <br /><br />- **SharePoint :** Accordez des autorisations **contrôle total** pour analyser les fichiers, puis appliquez la classification et la protection conformément à la configuration.  <br /><br />- **Mode de découverte :** Pour exécuter le scanneur en mode détection uniquement, l’autorisation **lecture** est suffisante.         |
 |**Pour les étiquettes qui reprotègent ou suppriment la protection**     | Pour vous assurer que le scanneur a toujours accès aux fichiers protégés, définissez ce compte comme [super utilisateur](configure-super-users.md) pour Azure information protection et assurez-vous que la fonctionnalité de super utilisateur est activée. </br></br>En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que le compte de service est inclus dans les contrôles d’intégration que vous avez configurés.|
 | ||
 
@@ -83,7 +83,9 @@ Pour stocker les données de configuration de l’analyseur, utilisez un serveur
 
 - **Instance locale ou distante.**
 
-    Nous vous recommandons d’héberger les SQL Server et le service du scanneur sur des ordinateurs différents, sauf si vous travaillez avec un petit déploiement. 
+    Nous vous recommandons d’héberger SQL Server et le service de scanneur sur des ordinateurs différents, sauf si vous utilisez un petit déploiement. En outre, nous vous recommandons d’avoir une instance SQL dédiée qui sert uniquement la base de données du scanneur et qui n’est pas partagée avec d’autres applications.
+
+    Si vous travaillez sur un serveur partagé, assurez-vous que le [nombre de cœurs recommandé](#windows-server-requirements) est gratuit pour que la base de données du scanneur fonctionne.
 
     SQL Server 2012 est la version minimale pour les éditions suivantes :
 
@@ -99,7 +101,7 @@ Pour stocker les données de configuration de l’analyseur, utilisez un serveur
 
 - **Capacité.** Pour obtenir des conseils sur la capacité, consultez [exigences de stockage et planification de la capacité pour SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Classement non sensible à la casse](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver15)**
+- **[Classement non sensible à la casse](/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Plusieurs bases de données de configuration sur le même serveur SQL Server sont prises en charge lorsque vous spécifiez un nom de cluster personnalisé (profil) pour le scanneur.
@@ -148,9 +150,9 @@ Pour plus d'informations, consultez les pages suivantes :
 
 Pour analyser les dossiers et bibliothèques de documents SharePoint, assurez-vous que votre serveur SharePoint est conforme aux exigences suivantes :
 
-- **Versions prises en charge.** Les versions prises en charge sont les suivantes : SharePoint 2019, SharePoint 2016, SharePoint 2013 et SharePoint 2010. D’autres versions de SharePoint ne sont pas prises en charge pour le scanneur.
+- **Versions prises en charge.** Les versions prises en charge sont les suivantes : SharePoint 2019, SharePoint 2016 et SharePoint 2013. D’autres versions de SharePoint ne sont pas prises en charge pour le scanneur.
 
-- **Version.** Lorsque vous utilisez le contrôle de [version](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), le scanneur inspecte et étiquette la dernière version publiée. Si le scanneur étiquette une approbation de fichier et de [contenu](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) est requise, ce fichier doit être approuvé pour être disponible pour les utilisateurs.  
+- **Version.** Lorsque vous utilisez le contrôle de [version](/sharepoint/governance/versioning-content-approval-and-check-out-planning), le scanneur inspecte et étiquette la dernière version publiée. Si le scanneur étiquette une approbation de fichier et de [contenu](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) est requise, ce fichier doit être approuvé pour être disponible pour les utilisateurs.  
 
 - **Batteries de serveurs SharePoint de grande taille.** Pour les grandes batteries de serveurs SharePoint, regardez si vous devez augmenter le seuil d’affichage de liste (par défaut, 5 000) pour le scanneur pour accéder à tous les fichiers. Pour plus d’informations, consultez [gérer des listes et des bibliothèques de grande taille dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
@@ -168,15 +170,15 @@ Pour plus d’informations, consultez [types de fichiers pris en charge par le c
 
 Pour analyser les fichiers, vos chemins d’accès aux fichiers doivent comporter 260 caractères au maximum, sauf si le scanneur est installé sur Windows 2016 et que l’ordinateur est configuré pour prendre en charge des chemins d’accès longs.
 
-Windows 10 et Windows Server 2016 prennent en charge des longueurs de chemin de plus de 260 caractères avec le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)suivant : stratégie de l' **ordinateur local**  >  **Configuration ordinateur**  >  **modèles d’administration**  >  **tous les paramètres**  >  **activer les chemins longs Win32**
+Windows 10 et Windows Server 2016 prennent en charge des longueurs de chemin de plus de 260 caractères avec le [paramètre de stratégie de groupe](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10)suivant : stratégie de l' **ordinateur local**  >  **Configuration ordinateur**  >  **modèles d’administration**  >  **tous les paramètres**  >  **activer les chemins longs Win32**
 
-Pour plus d’informations sur la prise en charge des chemins de fichiers longs, consultez la section consacrée à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
+Pour plus d’informations sur la prise en charge des chemins de fichiers longs, consultez la section consacrée à la [longueur maximale des chemins](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
 
 ## <a name="usage-statistics-requirements"></a>Exigences relatives aux statistiques d’utilisation
 
 Désactivez les statistiques d’utilisation à l’aide de l’une des méthodes suivantes :
 
-- Affectation de la valeur 0 au paramètre [AllowTelemetry](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-install#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
+- Affectation de la valeur 0 au paramètre [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
 - Assurez-vous que l’option **contribuer à l’amélioration des Azure information protection en envoyant des statistiques d’utilisation à Microsoft** reste désélectionnée pendant le processus d’installation du scanneur.
 
@@ -237,15 +239,15 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
       
     En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle db_owner pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. 
 
-    Si vous ne spécifiez pas votre propre nom de cluster (profil) pour le scanneur, la base de données de configuration est nommée **AIPScanner_ \<computer_name> **. </br>Poursuivez avec [la création d’un utilisateur et en accordant des droits de db_owner sur la base de données](#create-a-user-and-grant-db_owner-rights-manually). 
+    Si vous ne spécifiez pas votre propre nom de cluster (profil) pour le scanneur, la base de données de configuration est nommée **AIPScanner_ \<computer_name>**. </br>Poursuivez avec [la création d’un utilisateur et en accordant des droits de db_owner sur la base de données](#create-a-user-and-grant-db_owner-rights-manually). 
 
-En outre :
+De plus :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
     
-    - HKEY_LOCAL_MACHINE \SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
 
 Si, après avoir configuré ces autorisations, vous voyez une erreur lors de l’installation du scanneur, l’erreur peut être ignorée et vous pouvez démarrer manuellement le service du scanneur.
 
@@ -305,7 +307,7 @@ Si vos étiquettes n’ont pas de conditions d’étiquetage automatique, envisa
 |Option  |Description  |
 |---------|---------|
 |**Découvrir tous les types d’informations**     |  Dans votre [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), définissez l’option **types d’informations sur** **tous**. </br></br>Cette option définit le travail d’analyse de contenu pour analyser votre contenu pour tous les types d’informations sensibles.      |
-|**Définir une étiquette par défaut**     |   Définissez une étiquette par défaut dans votre [stratégie](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), le [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)ou le [référentiel](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>Dans ce cas, le scanner applique l’étiquette par défaut sur tous les fichiers trouvés.       |
+|**Définir une étiquette par défaut**     |   Définissez une étiquette par défaut dans votre [stratégie](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), le [travail d’analyse de contenu](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)ou le [référentiel](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>Dans ce cas, le scanner applique l’étiquette par défaut sur tous les fichiers trouvés.       |
 | | |
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -14,16 +14,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 352e41b1ca511e3ef0487eb680a331339ce457dd
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: f5b2dd317a6cdcf5d5d164f6431f8aa3163550da
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802196"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568572"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -34,13 +34,14 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 
 [Un](#a)  |  [B](#b)  |  [C](#c)  |  [D](#d)  |  [E](#e)  |  [G](#g)  |  [H](#h)  |  [Je](#i)  |  [K](#k)  |  [L](#l)  |  [M](#m) [N](#n)  |  [O](#o)  |  [P](#p)  |  [R](#r)  |  [S](#s)  |  [T](#t)  |  [U](#u)
 
-### <a name="a"></a>Un
+### <a name="a"></a>A
 |Terme|Définition|
 |--------|--------------|
 |**AADRM**|Nom du premier module PowerShell pour le service de protection (Azure Rights Management), dérivé de l’abréviation non officielle d’Azure Rights Management lorsqu’il a été nommé précédemment (Windows) Azure Active Directory Rights Management. </br></br>Ce module PowerShell est maintenant remplacé par le module AIPService.|
 |**déclencher**|Activez le service de protection Azure Rights Management pour qu’une organisation puisse protéger ses documents et ses e-mails. </br></br>Cette action active également les fonctionnalités IRM dans Exchange Online et Microsoft SharePoint.|
-|**Services AD RMS (Active Directory Rights Management Services)**|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure une protection par gestion des droits en utilisant le chiffrement et des stratégies pour mieux sécuriser les documents, les fichiers et les e-mails.|
+|**Services AD RMS (Active Directory Rights Management Services)**|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure une protection par gestion des droits en utilisant le chiffrement et des stratégies pour mieux sécuriser les documents, les fichiers et les e-mails.|
 |**AD RMS**|Voir *Services Active Directory Rights Management*.|
+|**AIP** |Consultez *Azure information protection*.|
 |**AIPService**|Nom actuel du module PowerShell pour le service de protection, qui remplace par l’ancien module AADRM.|
 |**AzureInformationProtection**|Nom du module PowerShell pour l’Azure Information Protection client d’étiquetage classique ou unifié.|
 |**Azure Information Protection**|Service cloud qui utilise des étiquettes pour classifier et protéger les documents et e-mails. </br></br> Azure Rights Management offre une protection à l’aide de stratégies de chiffrement, d’identité et d’autorisation.|
@@ -49,7 +50,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |**Stratégie Azure Information Protection**|Configuration définie par l’administrateur pour les clients et services qui utilisent les paramètres de stratégie et les étiquettes Azure Information Protection.|
 |**Scanneur Azure Information Protection**|Service qui s’exécute sur Windows Server et vous permet de découvrir, classifier et protéger des documents sur des partages réseau, ainsi que des sites et des bibliothèques SharePoint Server.|
 |**Client d’étiquetage unifié Azure Information Protection**|Parfois abrégé en *client d’étiquetage unifié*.<br /><br />Le client pour les ordinateurs Windows qui permet aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de sensibilité et les paramètres de stratégie d’étiquette du centre de conformité d’Office 365 Security &, le centre de sécurité Microsoft 365 et le centre de conformité des Microsoft 365. </br></br>Remplace le client Azure Information Protection Classic.|
-|**Azure RMS**|Voir *Azure Rights Management*.|
+|**Azure RMS**|Voir *Azure Rights Management*.|
 |**Visionneuse Azure Information Protection**|Application qui s’exécute sur des ordinateurs Windows et des appareils mobiles pour afficher les fichiers protégés.|
 |**Azure Rights Management**|Également connu sous le nom de *service Azure Rights Management*, souvent abrégé en *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails. </br></br>Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management*: souvent abrégé en service Rights Management Windows Azure ad.<br /><br />- *RMS Online*: nom proposé à l’origine, que vous pouvez parfois voir apparaître dans les messages d’erreur et les entrées du fichier journal.|
 | | |
@@ -59,7 +60,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |Terme|Définition|
 |--------|--------------|
 |**apporter votre propre clé**|Souvent abrégé *BYOK*.<br /><br />Option de configuration et de topologie choisie par une organisation pour générer et gérer sa propre clé de locataire pour Azure Information Protection.|
-|**étiquetage intégré**|Une fonctionnalité d’application ou de service Office 365 pour prendre en charge les étiquettes de sensibilité sans qu’il soit nécessaire d’installer un client d’étiquetage supplémentaire. Également appelée *étiquetage natif*.|
+|**étiquetage intégré**|Une Microsoft 365 une application ou une fonctionnalité de service pour prendre en charge les étiquettes de sensibilité sans nécessiter l’installation d’un client d’étiquetage supplémentaire. Également appelée *étiquetage natif*.|
 |**BYOK**|Voir *Bring your own key*.|
 | | |
 
@@ -135,8 +136,8 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |--------|--------------|
 |**Microsoft Information Protection**| Parfois abrégé en *MIP*.<br /><br /> Une infrastructure pour les produits et les fonctionnalités intégrées qui utilisent le même magasin d’étiquetage (« étiquettes unifiées ») et vous aident à protéger les informations sensibles de votre organisation.|
 |**MIP**| Consultez *Microsoft information protection*|
-|**MSDRM**|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. </br></br>Cet ancien client prend en charge les applications développées avec le kit de développement logiciel (SDK) RMS 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
-|**MSIPC**|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. </br></br>Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 et le client Azure Information Protection.|
+|**MSDRM**|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. </br></br>Cet ancien client prend en charge les applications développées avec RMS SDK 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
+|**MSIPC**|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. </br></br>Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 et le client Azure Information Protection.|
 | | |
 
 ### <a name="n"></a>N
@@ -176,7 +177,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |**application de partage Rights Management**|Maintenant remplacée par le client Azure Information Protection.|
 |**RMS**|Voir *services Rights Management*.|
 |**Connecteur RMS**|Voir *Connecteur Rights Management*.|
-|**RMS pour les particuliers**|Abonnement gratuit permettant à l’utilisateur d’utiliser Rights Management quand son organisation n’a pas d’abonnement Office 365 ou Azure Active Directory.|
+|**RMS pour les particuliers**|Abonnement gratuit permettant à l’utilisateur d’employer Rights Management quand son organisation n’a pas d’abonnement Office 365 ou Azure Active Directory.|
 |**Application de partage RMS**|Voir *application de partage Rights Management*.|
 |**Modèle RMS**|Voir *modèle de protection*.|
 

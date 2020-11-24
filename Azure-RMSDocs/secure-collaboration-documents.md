@@ -1,10 +1,10 @@
 ---
 title: Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 description: Flux de travail de bout en bout pour la collaboration autour de documents protégés par Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 61567869b889ba72c61e736804c313fd4e0bfbb0
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483386"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568560"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -37,7 +37,7 @@ Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateu
 
 - **Pour les utilisateurs n’ayant pas de compte Azure Active Directory** : spécifiez une adresse e-mail qui sera utilisée avec un compte Microsoft. Ce compte peut déjà exister, ou les utilisateurs peuvent le créer au moment de l’ouverture du document protégé. 
     
-    Pour ouvrir des documents avec un compte Microsoft, les utilisateurs doivent utiliser des applications Office 365 (Démarrer en un clic). Les autres éditions et versions de Microsoft Office ne prennent pas encore en charge l’ouverture de documents Office protégés avec un compte Microsoft.
+    Pour ouvrir des documents avec un compte Microsoft, les utilisateurs doivent utiliser des applications Microsoft 365 (démarrer en un clic). Les autres éditions et versions de Microsoft Office ne prennent pas encore en charge l’ouverture de documents Office protégés avec un compte Microsoft.
 
 - **Pour tout utilisateur authentifié** : cette option est appropriée lorsque vous n’avez pas besoin de contrôler l’accès au document protégé, à condition que l’utilisateur puisse être authentifié. L’authentification peut avoir lieu via Azure AD, à l’aide d’un compte Microsoft, ou même via un fournisseur de réseaux sociaux fédérés ou un code secret à usage unique quand le contenu est protégé par les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
@@ -47,13 +47,13 @@ En tant qu’administrateur, vous pouvez configurer une étiquette Azure Informa
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Exemple de configuration d’une étiquette afin d’appliquer une protection prenant en charge la collaboration interne et externe
 
 
-Cet exemple décrit la procédure de configuration d’une étiquette existante afin d’appliquer une protection permettant aux utilisateurs de votre organisation de collaborer autour de documents avec tous les utilisateurs d’une autre organisation disposant d’Office 365 ou d’Azure AD, avec un groupe d’une autre organisation disposant d’Office 365 ou d’Azure AD et avec un utilisateur qui n’a pas de compte dans Azure AD et utilise à la place une adresse e-mail Gmail.
+Cet exemple montre comment configurer une étiquette existante pour appliquer la protection afin que les utilisateurs de votre organisation puissent collaborer sur des documents avec tous les utilisateurs d’une autre organisation disposant d’Microsoft 365 ou d’Azure AD, d’un groupe d’une autre organisation possédant Microsoft 365 ou Azure AD, et d’un utilisateur qui n’a pas de compte dans Azure AD et qui utilisera à la place son adresse e-mail gmail.
 
 Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez [Exemple 5 : étiquette qui crypte le contenu, mais n’en restreint pas l’accès](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
-2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
+2. Assurez-vous que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
 3. Dans le volet **Ajouter des autorisations** : 
     
@@ -61,9 +61,9 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
     
    - Pour tous les utilisateurs de la première organisation externe : sélectionnez **Entrez les détails** et tapez le nom d’un domaine dans le locataire de l’organisation. Par exemple, fabrikam.com.
     
-   - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple, sales@contoso.com.
+   - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple : sales@contoso.com.
     
-   - Pour l’utilisateur qui n’a pas de compte Azure AD : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple, bengi.turan@gmail.com. 
+   - Pour l’utilisateur qui n’a pas de compte Azure AD : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple : bengi.turan@gmail.com. 
 
 4. Pour accorder les mêmes autorisations à tous les utilisateurs : dans **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
     
@@ -81,7 +81,7 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
 
 Maintenant que cette étiquette est configurée, elle peut être appliquée aux documents de différentes manières, notamment :
 
-|Différentes manières d’appliquer l’étiquette|Informations complémentaires|
+|Différentes manières d’appliquer l’étiquette|Autres informations|
 |---------------|----------|
 |Un utilisateur sélectionne manuellement l’étiquette lorsque le document est créé dans l’application Office.|Les utilisateurs sélectionnent l’étiquette à partir du bouton **Protéger** du ruban Office ou à partir de la barre Azure Information Protection.|
 |Les utilisateurs sont invités à sélectionner une étiquette au moment de l’enregistrement d’un nouveau document.|Vous avez configuré le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection nommé **Tous les documents et e-mails doivent avoir une étiquette**.|
@@ -139,20 +139,17 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 |Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
 |Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
-|iOS|Oui [[1]](#footnote-1)|Non|
-|Android|Oui [[1]](#footnote-1)|Non|
-|MacOS|Oui [[1]](#footnote-1)|Non|
+|iOS|Oui [[1]](#footnote-1)|Oui (version 1385219 et versions ultérieures) |
+|Android|Oui [[1]](#footnote-1)|Oui (version 13029 et versions ultérieures)|
+|MacOS|Oui [[1]](#footnote-1)|No|
 
-###### <a name="footnote-1"></a>Note de bas de page 1
+###### <a name="footnote-1"></a>Note 1
 Prend en charge les comptes d’utilisateur, les groupes à extension messagerie, tous les membres. Les comptes d’utilisateur et les groupes à extension messagerie peuvent inclure des comptes Invité. Tous les membres sauf les comptes Invité.
 
-###### <a name="footnote-2"></a>Note 2
-Actuellement pris en charge uniquement par les applications Office 365 (Démarrer en un clic).
+###### <a name="footnote-2"></a>Note 2
+Actuellement pris en charge par les applications Microsoft 365 uniquement.
 
-
-
-
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Consultez d’autres [exemples de configuration](configure-policy-protection.md#example-configurations) pour que les étiquettes appliquent une protection dans des scénarios courants. Cet article contient également des informations supplémentaires sur les paramètres de protection.
 

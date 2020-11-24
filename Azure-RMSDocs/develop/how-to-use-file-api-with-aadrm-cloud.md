@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: fc2b1ab888de2cba020d22201807aabc64b85d8d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: a760f59effa09cf55f7618e6ab965c5e95f015d3
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564194"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568302"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
 
 [!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
-Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management. Pour plus d’informations, consultez [Prise en main d’Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
+Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management. Pour plus d’informations, consultez [Prise en main d’Azure Rights Management](../requirements.md).
 
 **Important**  
 Pour utiliser votre application de service de Rights Management Services SDK 2.1 avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Azure RMS Requirements : abonnements Cloud prenant en charge Azure RMS](../requirements.md)
@@ -33,12 +33,12 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
 ## <a name="prerequisites"></a>Prérequis
 
 -   RMS SDK 2.1 doit être installé et configuré. Pour plus d’informations, consultez [Prise en main de RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
--   Vous devez [créer une identité de service par le biais d’ACS](https://msdn.microsoft.com/library/gg185924.aspx) à l’aide de l’option de clé symétrique, ou par d’autres moyens, et noter les informations clés de ce processus.
+-   Vous devez [créer une identité de service par le biais d’ACS](/previous-versions/azure/azure-services/gg185924(v=azure.100)) à l’aide de l’option de clé symétrique, ou par d’autres moyens, et noter les informations clés de ce processus.
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Connexion au service Rights Management Azure
 
-- Appelez [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx).
-- Définissez [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
+- Appelez [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize).
+- Définissez [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty).
 
   ```cpp
   int mode = IPC_API_MODE_SERVER;
@@ -48,10 +48,10 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
   **Remarque**  Pour plus d’informations, consultez [Définition du mode de sécurité d’API](setting-the-api-security-mode-api-mode.md)
 
 
--   Les étapes suivantes sont la configuration de la création d’une instance d’une structure d' [ \_ invite de commandes \_ IPC](https://msdn.microsoft.com/library/hh535278.aspx) avec le membre *membre pccredential*  ([ \_ informations d’identification IPC](https://msdn.microsoft.com/library/hh535275.aspx)) rempli avec les informations de connexion du service Azure Rights Management.
--   Utilisez les informations de la création de votre identité de service de clé symétrique (voir les conditions préalables répertoriées précédemment dans cette rubrique) pour définir les paramètres *paramètres wszserviceprincipal*, *wszBposTenantId*et *cbKey* lorsque vous créez une instance d’une structure de [ \_ \_ \_ clé symétrique d’informations d’identification IPC](https://msdn.microsoft.com/library/dn133062.aspx) .
+-   Les étapes suivantes sont la configuration de la création d’une instance d’une structure d' [ \_ invite de commandes \_ IPC](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx) avec le membre *membre pccredential*  ([ \_ informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential)) rempli avec les informations de connexion du service Azure Rights Management.
+-   Utilisez les informations de la création de votre identité de service de clé symétrique (voir les conditions préalables répertoriées précédemment dans cette rubrique) pour définir les paramètres *paramètres wszserviceprincipal*, *wszBposTenantId* et *cbKey* lorsque vous créez une instance d’une structure de [ \_ \_ \_ clé symétrique d’informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key) .
 
-**Remarque** : En raison d’une condition existante avec notre service de découverte, si vous n’êtes pas en Amérique du Nord, les informations d’identification de clé symétrique des autres régions ne sont pas acceptées. Vous devez donc spécifier les URL des locataires directement. Cette opération s’effectue par le biais du paramètre *pConnectionInfo* (type [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx)) des fonctions [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) ou [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
+**Remarque** : En raison d’une condition existante avec notre service de découverte, si vous n’êtes pas en Amérique du Nord, les informations d’identification de clé symétrique des autres régions ne sont pas acceptées. Vous devez donc spécifier les URL des locataires directement. Cette opération s’effectue par le biais du paramètre *pConnectionInfo* (type [IPC\_CONNECTION\_INFO](/previous-versions/windows/desktop/msipc/ipc-connection-info)) des fonctions [IpcGetTemplateList](/previous-versions/windows/desktop/msipc/ipcgettemplatelist) ou [IpcGetTemplateIssuerList](/previous-versions/windows/desktop/msipc/ipcgettemplateissuerlist).
 
 ## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>Générer une clé symétrique et recueillir les informations nécessaires
 
@@ -85,7 +85,7 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
 
 ### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>Instructions pour trouver **TenantBposId** et les **Urls**
 
--   Installez le [Module Powershell Azure RMS](https://technet.microsoft.com/library/jj585012.aspx).
+-   Installez le [Module Powershell Azure RMS](../install-powershell.md).
 -   Démarrez Powershell et exécutez les commandes suivantes pour obtenir la configuration RMS du locataire.
 
     `Import-Module AIPService`
@@ -95,7 +95,7 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
     `Get-AipServiceConfiguration`
 
 
-- Créez une instance d’une  [ \_ \_ \_ clé symétrique des informations d’identification IPC](https://msdn.microsoft.com/library/dn133062.aspx) et définissez quelques membres.
+- Créez une instance d’une  [ \_ \_ \_ clé symétrique des informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key) et définissez quelques membres.
 
   ```cpp
   // Create a key structure.
@@ -107,9 +107,9 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
   symKey.wszBposTenantId = "your tenant identifier";
   ```
 
-Pour plus d’informations, [consultez \_ \_ \_ clé symétrique des informations d’identification IPC](https://msdn.microsoft.com/library/dn133062.aspx).
+Pour plus d’informations, [consultez \_ \_ \_ clé symétrique des informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key).
 
-- Créez une instance d’une structure d' [ \_ informations d’identification IPC](https://msdn.microsoft.com/library/hh535275.aspx) contenant votre instance de [ \_ \_ \_ clé symétrique des informations d’identification IPC](https://msdn.microsoft.com/library/dn133062.aspx) .
+- Créez une instance d’une structure d' [ \_ informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential) contenant votre instance de [ \_ \_ \_ clé symétrique des informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key) .
 
   **Remarque**   -Les membres *ConnectionInfo* sont définis avec des URL de l’appel précédent à `Get-AipServiceConfiguration` et sont notées ici avec ces noms de champs.
 
@@ -139,7 +139,7 @@ Pour plus d’informations, [consultez \_ \_ \_ clé symétrique des information
 ### <a name="identify-a-template-and-then-encrypt"></a>Identifier un modèle, puis procéder au chiffrement
 
 - Sélectionnez un modèle à utiliser pour le chiffrement.
-    Appelez [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) en passant la même instance de [IPC \_ prompt \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx).
+    Appelez [IpcGetTemplateList](/previous-versions/windows/desktop/msipc/ipcgettemplatelist) en passant la même instance de [IPC \_ prompt \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx).
 
   ```cpp
   PCIPC_TIL pTemplates = NULL;
@@ -153,9 +153,9 @@ Pour plus d’informations, [consultez \_ \_ \_ clé symétrique des information
          &pTemplates);
   ```
 
-- Avec le modèle d’une version antérieure de cette rubrique, appelez [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx), en passant la même instance d' [IPC \_ prompt \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx).
+- Avec le modèle d’une version antérieure de cette rubrique, appelez [IpcfEncrcyptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile), en passant la même instance d' [IPC \_ prompt \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx).
 
-  Exemple d’utilisation de [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx) :
+  Exemple d’utilisation de [IpcfEncrcyptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile) :
 
   ```cpp
   LPCWSTR wszContentTemplateId = pTemplates->aTi[0].wszID;
@@ -168,7 +168,7 @@ Pour plus d’informations, [consultez \_ \_ \_ clé symétrique des information
          &wszOutputFilePath);
   ```
 
-  Exemple d’utilisation de [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx) :
+  Exemple d’utilisation de [IpcfDecryptFile](/previous-versions/windows/desktop/msipc/ipcfdecryptfile) :
 
   ```cpp
   hr = IpcfDecryptFile(wszInputFilePath,
@@ -182,17 +182,17 @@ Vous avez maintenant terminé les étapes nécessaires pour permettre à votre a
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-* [Prise en main d’Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx)
+* [Prise en main d’Azure Rights Management](../requirements.md)
 * [Bien démarrer avec le kit SDK RMS 2.1](getting-started-with-ad-rms-2-0.md)
-* [Créer une identité de service via ACS](https://msdn.microsoft.com/library/gg185924.aspx)
-* [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
-* [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
-* [\_invite IPC \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx)
-* [\_informations d’identification IPC](https://msdn.microsoft.com/library/hh535275.aspx)
-* [\_clé symétrique des informations d’identification IPC \_ \_](https://msdn.microsoft.com/library/dn133062.aspx)
-* [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx)
-* [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx)
-* [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)
-* [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx)
-* [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
-* [IpcCreateLicenseFromTemplateID](https://msdn.microsoft.com/library/hh535257.aspx)
+* [Créer une identité de service via ACS](/previous-versions/azure/azure-services/gg185924(v=azure.100))
+* [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty)
+* [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize)
+* [\_invite IPC \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx)
+* [\_informations d’identification IPC](/previous-versions/windows/desktop/msipc/ipc-credential)
+* [\_clé symétrique des informations d’identification IPC \_ \_](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key)
+* [IpcGetTemplateIssuerList](/previous-versions/windows/desktop/msipc/ipcgettemplateissuerlist)
+* [IpcGetTemplateList](/previous-versions/windows/desktop/msipc/ipcgettemplatelist)
+* [IpcfDecryptFile](/previous-versions/windows/desktop/msipc/ipcfdecryptfile)
+* [IpcfEncrcyptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile)
+* [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)
+* [IpcCreateLicenseFromTemplateID](/previous-versions/windows/desktop/msipc/ipccreatelicensefromtemplateid)

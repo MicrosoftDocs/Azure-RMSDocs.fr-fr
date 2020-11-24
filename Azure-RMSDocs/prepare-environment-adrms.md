@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9196f02e63f7eb433237613fe44c43cf74ab3262
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: f4bbef451f161f40d29a7a890161592db76373a5
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869026"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567780"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Préparez l’environnement pour Azure Rights Management lorsque vous avez AD RMS
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Conseils pour l’utilisation des services AD RMS (Active Directory Rights Management Services)
@@ -39,7 +39,7 @@ Si le service Azure Rights Management est activé et que vous utilisez aussi AD 
     
     Pour plus d’informations sur ces configurations de registre, consultez [Activation de la découverte du service côté client à l’aide du Registre Windows](./rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry) et [Redirection du trafic du serveur de licences](./rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic).   
 
-Si AD RMS est déployé pour votre organisation, envisagez si vous pouvez migrer vers Azure Information Protection. Azure Information Protection présente de nombreux avantages par rapport à AD RMS. Par exemple, une meilleure prise en charge des appareils mobiles et l’intégration avec les services Office 365, ainsi qu’avec Exchange Server et SharePoint Server. Pour plus d’informations, consultez [Comparaison d’Azure Information Protection avec AD RMS](compare-on-premise.md).
+Si AD RMS est déployé pour votre organisation, envisagez si vous pouvez migrer vers Azure Information Protection. Azure Information Protection présente de nombreux avantages par rapport à AD RMS. Par exemple, une meilleure prise en charge des appareils mobiles et de l’intégration avec les services Microsoft 365, ainsi qu’avec Exchange Server et SharePoint Server. Pour plus d’informations, consultez [Comparaison d’Azure Information Protection avec AD RMS](compare-on-premise.md).
 
 Lorsque vous migrez vers Azure Information Protection, vous ne perdez pas l’accès à un contenu précédemment protégé et vous n’avez pas besoin de ôter la protection ou de reprotéger votre contenu. Les documents et les e-mails qui ont été protégés par AD RMS peuvent toujours être ouverts même après le désapprovisionnement de AD RMS.
 
@@ -64,9 +64,9 @@ Exécutez l’une des procédures suivantes pour désactiver Azure Rights Manage
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>Pour désactiver Rights Management à partir du Centre d’administration Microsoft 365
 
-1. Accédez à la [page Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) réservée aux administrateurs Office 365.
+1. Accédez à la [page Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) pour Microsoft 365 les administrateurs.
     
-    Si vous êtes invité à vous connecter, utilisez un compte qui est administrateur général pour Office 365.
+    Si vous êtes invité à vous connecter, utilisez un compte d’administrateur général pour Microsoft 365.
 
 2. Dans la page **Gestion des droits**, cliquez sur **Désactiver**.
 

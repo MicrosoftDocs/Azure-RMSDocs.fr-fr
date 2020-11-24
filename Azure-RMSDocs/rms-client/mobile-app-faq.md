@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cd7705a9010d0b692d7f613550c9aa6052c123d9
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
+ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073762"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "95568398"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Qu’est-ce que l’application Azure Information Protection pour iOS ou Android ?
 
@@ -27,7 +27,7 @@ L’application mobile d’Azure Information Protection (AIP) pour iOS et Androi
 
 Par exemple, si des e-mails protégés s’affichent dans votre application mobile de messagerie standard en tant que pièces jointes, vous souhaiterez peut-être utiliser l’application mobile AIP pour afficher cet e-mail.
 
-Pour plus d’informations, consultez [applications prenant en charge Azure Rights Management la protection des données](../requirements-applications.md).
+Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](../requirements-applications.md).
 
 > [!NOTE]
 > Les applications mobiles AIP sont *uniquement des visionneuses* et ne vous permettent pas de créer de nouveaux courriers électroniques ou de répondre à des courriers électroniques, ni de créer ou de modifier des fichiers protégés. Les applications mobiles AIP ne peuvent pas non plus ouvrir des pièces jointes à des e-mails ou des fichiers PDF protégés.
@@ -41,9 +41,9 @@ Téléchargez et installez les applications mobiles AIP à partir de l’un des 
 
 :::image type="content" source="../media/develop/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::
 
-**Google Play**
+**Google Play**
 
-:::image type="content" source="../media/develop/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false":::
+:::image type="content" source="../media/develop/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false":::
 
 **Page de téléchargement AIP**
 
@@ -57,9 +57,25 @@ Si votre appareil mobile est géré par Microsoft Intune, vous pouvez téléchar
 
 Pour plus d’informations, contactez votre administrateur système.
 
-## <a name="view-protected-files-on-your-device"></a>Afficher les fichiers protégés sur votre appareil
+## <a name="ios-view-protected-files-on-your-device"></a>iOS : afficher les fichiers protégés sur votre appareil
 
-1. Une fois que vous avez [installé l’application mobile AIP](#download-and-install-the-aip-app-for-your-device), ouvrez un fichier ou un e-mail protégé. 
+Une fois que vous avez [installé l’application mobile AIP](#download-and-install-the-aip-app-for-your-device), ouvrez un fichier ou un e-mail protégé. 
+
+1. Si vous êtes invité à sélectionner une application pour ouvrir le fichier, appuyez sur le bouton partager pour partager le fichier à la place.
+
+    Sélectionnez **partager le fichier via...** , puis sélectionnez **copier dans la visionneuse AIP.**
+
+    Par exemple :
+
+    :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Partager avec la visionneuse AIP dans iOS" border="false":::
+
+1. Connectez-vous ou sélectionnez un certificat comme invité.
+
+    Une fois que vous avez été authentifié, l’e-mail ou le fichier s’ouvre dans la visionneuse AIP.
+ 
+## <a name="android-view-protected-files-on-your-device"></a>Android : afficher les fichiers protégés sur votre appareil
+
+Une fois que vous avez [installé l’application mobile AIP](#download-and-install-the-aip-app-for-your-device), ouvrez un fichier ou un e-mail protégé. 
 
 1. Lorsque vous êtes invité à sélectionner une application, sélectionnez la visionneuse AIP :
 
@@ -68,7 +84,7 @@ Pour plus d’informations, contactez votre administrateur système.
 1. Connectez-vous ou sélectionnez un certificat comme invité.
 
     Une fois que vous avez été authentifié, l’e-mail ou le fichier s’ouvre dans la visionneuse AIP.
- 
+
 ## <a name="aip-mobile-app-requirements"></a>Configuration requise pour l’application mobile AIP
 
 Les applications mobiles AIP pour iOS et Android prennent en charge les types de fichiers et les environnements suivants :

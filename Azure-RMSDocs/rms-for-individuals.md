@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d02f0e3e848e4a4743f7e61344f12108cca8c714
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: d7cd108b74d42a9d7bb7aab0480328b642697288
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136913"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567762"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals et Azure Information Protection
 
@@ -47,7 +47,7 @@ Une fois le compte créé, la dernière page affiche des liens pour télécharge
 
     Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement pour Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données par le biais d’Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si aucun de ces abonnements n’est détecté, vous n’avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l’inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement n’est détecté, vous passez à l’étape suivante.
 
-4. Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et présente l’objet suivant : **Terminer l’inscription à Microsoft Azure Information Protection**.
+4. Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Microsoft 365 ( support@email.microsoftonline.com ) et a l’objet **terminer l’inscription à Microsoft Azure information protection**.
 
 5. À la réception de l’e-mail, cliquez sur **Oui, c’est moi** pour vérifier votre adresse e-mail et terminer le processus d’inscription.
 
@@ -62,5 +62,5 @@ Maintenant que votre compte est créé, si vous êtes invité à vous connecter 
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-RMS for Individuals est un exemple d’utilisation de la fonctionnalité d’inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur le fonctionnement de cette fonctionnalité, consultez la rubrique [qu’est-ce que l’inscription en libre-service pour Azure Active Directory ?](/azure/active-directory/users-groups-roles/directory-self-service-signup) dans la documentation de Azure Active Directory.
+RMS for Individuals est un exemple d’utilisation de la fonctionnalité d’inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur le fonctionnement de cette fonctionnalité, voir [qu’est-ce que Self-Service s’abonner à Azure Active Directory ?](/azure/active-directory/users-groups-roles/directory-self-service-signup) dans la documentation de Azure Active Directory.
 

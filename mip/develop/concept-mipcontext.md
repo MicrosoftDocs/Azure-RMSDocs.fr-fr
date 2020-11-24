@@ -6,20 +6,20 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 97b6720a4501ab389099b7c2d49fa7cfbf81e00b
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: ed5c960215c67d424a31f7293a94b42629251eb4
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555668"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "95568433"
 ---
 # <a name="microsoft-information-protection-sdk---mipcontext-object-concepts"></a>Microsoft Information Protection SDK-concepts des objets MipContext
 
 ## <a name="mipcontext"></a>MipContext
 
-`MipContext` est l’objet de niveau le plus élevé dans le kit de développement logiciel (SDK). Il est responsable de la gestion de l’État sur tous les profils qui peuvent être créés dans le cadre d’une application ou d’un service. En outre, il gère la libération des ressources du kit de développement logiciel (SDK) MIP une fois l’objet MipContext détruit.
+`MipContext` est l’objet de niveau le plus élevé dans le kit de développement logiciel (SDK). Il est responsable de la gestion de l’État sur tous les profils qui peuvent être créés dans le cadre d’une application ou d’un service. En outre, il gère la libération des ressources du kit de développement logiciel (SDK) MIP une fois l’objet MipContext détruit. Seul un seul `MipContext` par processus est autorisé. La création de plusieurs peut entraîner un comportement inattendu.
 
-Plus précisément, `MipContext` définit les éléments suivants :
+En particulier, `MipContext` fournit des paramètres pour les options suivantes :
 
 - `mip::ApplicationInfo` dans le kit de développement logiciel (SDK), utilisé pour l’ID d’application, la version et le nom de l’application.
 - Chemin d’accès où les informations d’État MIP doivent être stockées, si elles sont activées.
@@ -28,11 +28,11 @@ Plus précisément, `MipContext` définit les éléments suivants :
 - Remplacement de la configuration de la télémétrie.
 - Activez les fonctionnalités en version préliminaire du kit de développement logiciel (SDK) qui se trouvent derrière les indicateurs de fonctionnalité.
 
-Une fois qu’un objet de `mip::MipContext` a été créé, l’objet `MipContext` peut être utilisé pour créer des objets `mip::FileProfile` (ou `PolicyProfile`/`ProtectionProfile`).
+Une fois qu’un objet de `mip::MipContext` a été créé, l' `MipContext` objet peut être utilisé pour créer des `mip::FileProfile` objets (ou `PolicyProfile` / `ProtectionProfile` ).
 
 ### <a name="mipcontext-functions"></a>MipContext, fonctions
 
-`mip::MipContext` expose trois fonctions statiques importantes utilisées pour créer et détruire des objets `MipContext`.
+`mip::MipContext` expose trois fonctions statiques importantes utilisées pour créer et détruire des `MipContext` objets.
 
 #### `mip::MipContext::Create()`
 
@@ -57,7 +57,7 @@ Crée une nouvelle instance MipContext à utiliser lors de l’initialisation de
 
 #### `mip::mipContext::Shutdown()`
 
-Libère toutes les ressources MIP. Doit être appelé avant l’arrêt de l’application. Le destructeur `MipContext` l’appellera également lorsque l’objet `MipContext` sera détruit.
+Libère toutes les ressources MIP. Doit être appelé avant l’arrêt de l’application. Le `MipContext` destructeur appelle également cette fonction lorsque l' `MipContext` objet est détruit.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

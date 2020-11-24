@@ -1,33 +1,33 @@
 ---
 title: Administration de la protection à partir de Azure Information Protection à l’aide de PowerShell
 description: Découvrez comment vous pouvez utiliser le module PowerShell pour le service de protection à partir de Azure Information Protection, pour administrer ce service pour votre locataire.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: efb7f76b89e9918100c9fd092fe321c738fd44ba
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 49e2d716362ebc637015a1032ff373f1d33b9860
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224646"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567444"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Administration de la protection à partir de Azure Information Protection à l’aide de PowerShell
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Avez-vous besoin d’utiliser PowerShell pour administrer le service de protection de Azure Information Protection ? Ce n’est peut-être pas nécessaire si l’ensemble de votre configuration peut être effectuée dans le portail Azure ou dans le Centre d’administration Microsoft 365. Toutefois, vous devez utiliser PowerShell pour certaines configurations avancées et vous pouvez aussi préférer utiliser PowerShell pour avoir un contrôle de ligne de commande et des scripts plus efficaces.
 
 Le tableau de la section suivante répertorie certains des scénarios de configuration avancée qui utilisent PowerShell. Lorsque la configuration peut également être effectuée sans utiliser PowerShell, cette information est également incluse dans le tableau.
 
-Pour obtenir la liste complète des applets de commande disponibles pour ce module, avec plus d’informations sur chacune d’elles, consultez [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
+Pour obtenir la liste complète des applets de commande disponibles pour ce module, avec plus d’informations sur chacune d’elles, consultez [AIPService](/powershell/module/aipservice/#aipservice).
 
 > [!NOTE]
 > Pour installer ce module PowerShell, consultez [installation du module PowerShell AIPService](install-powershell.md).

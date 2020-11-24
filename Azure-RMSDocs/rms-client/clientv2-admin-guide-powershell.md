@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25851b966b5c28baab003bb949ecf9144cacf66a
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 2133259809b87a66fe5e63e10e1273a0412208b7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447193"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568055"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447193"
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Lorsque vous installez le client d’étiquetage unifié Azure Information Protection, les commandes PowerShell sont installées automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
@@ -37,17 +37,20 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
-> [!TIP]
-> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> Stratégie de l' **ordinateur local**  >  Configuration de l' **ordinateur**  >  **Modèles d’administration**  >  **Tous les paramètres**  >  **Activer les chemins d’accès longs Win32** 
-> 
-> Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
->
-> Pour plus d’informations, consultez la section consacréee à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
-
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
 > [!IMPORTANT]
 > Le module AzureInformationProtection ne prend pas en charge la configuration de paramètres avancés pour les étiquettes ou les stratégies d’étiquette. Pour ces paramètres, vous avez besoin d’Office 365 Security & Compliance Center PowerShell. Pour plus d’informations, consultez [configurations personnalisées pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-customizations.md).
+> [!NOTE]
+> Si vous avez migré à partir de Azure RMS, Notez que les applets de commande associées à RMS sont dépréciées pour une utilisation dans l’étiquetage unifié. Certaines d’entre elles ont été remplacées par de nouvelles applets de commande pour l’étiquetage unifié. Pour plus d’informations, consultez [mappage des applets de commande d’étiquetage de RMS à Unified](#rms-to-unified-labeling-cmdlet-mapping).
+>
+
+> [!TIP]
+> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) disponible à compter de la version 1607 de Windows 10 :<br /> Stratégie de l' **ordinateur local**  >  Configuration de l' **ordinateur**  >  **Modèles d’administration**  >  **Tous les paramètres**  >  **Activer les chemins d’accès longs Win32** 
+> 
+> Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
+>
+> Pour plus d’informations, consultez la section consacréee à la [longueur maximale des chemins](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Conditions préalables à l’utilisation du module AzureInformationProtection
 
@@ -69,6 +72,25 @@ Les scénarios classiques de suppression de la protection des fichiers pour les 
 
 Pour supprimer la protection des fichiers, vous devez disposer d’un droit d’utilisation Rights Management ou être un super utilisateur. Pour la découverte de données ou la récupération de données, la fonctionnalité de super utilisateur est généralement utilisée. Pour activer cette fonctionnalité et configurer votre compte comme super utilisateur, consultez [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](../configure-super-users.md).
 
+## <a name="rms-to-unified-labeling-cmdlet-mapping"></a>Mappage des applets de commande d’étiquetage de RMS à Unified
+
+Le tableau suivant mappe les applets de commande relatives à RMS avec les applets de commande mises à jour utilisées pour l’étiquetage unifié.
+
+Par exemple, si vous avez utilisé **New-RMSProtectionLicense** avec la protection RMS et que vous avez effectué la migration vers l’étiquetage unifié, utilisez **New-AIPCustomPermissions** à la place.
+
+|Applet de commande RMS  |Applet de commande Unified Labeling  |
+|---------|---------|
+|[RMSFileStatus](/powershell/module/azureinformationprotection/get-rmsfilestatus)     |  [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)        |
+|[RMSServer](/powershell/module/azureinformationprotection/get-rmsserver)     |  Non pertinent pour l’étiquetage unifié.      |
+|[RMSServerAuthentication](/powershell/module/azureinformationprotection/get-rmsserverauthentication)      |   [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Clear-RMSAuthentication](/powershell/module/azureinformationprotection/clear-rmsauthentication)     | [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication)     |  [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)      |
+|[RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Non pertinent pour l’étiquetage unifié  |
+|[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions)et [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), avec le paramètre **CustomPermissions**      |
+|[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), avec le paramètre **RemoveProtection** |
+| | |
+
+
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection
 
 Vous pouvez exécuter les applets de commande d’étiquetage de manière non interactive à l’aide de l’applet de commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication).
@@ -82,7 +104,7 @@ L’ordinateur qui exécute l’applet de commande AIPAuthentication télécharg
 > [!NOTE]
 > Si vous utilisez des stratégies d’étiquette pour différents utilisateurs, vous devrez peut-être créer une nouvelle stratégie d’étiquette qui publie toutes vos étiquettes et publier la stratégie sur ce compte d’utilisateur délégué uniquement.
 
-Lorsque le jeton de Azure AD expire, vous devez exécuter à nouveau l’applet de commande pour acquérir un nouveau jeton. Vous pouvez configurer le jeton d’accès dans Azure AD pendant un an, deux ans ou pour ne jamais expirer. Les paramètres de Set-AIPAuthentication utilisent des valeurs d’un processus d’inscription d’application dans Azure AD, comme décrit dans la section suivante.
+Lorsque le jeton de Azure AD expire, vous devez exécuter à nouveau l’applet de commande pour acquérir un nouveau jeton. Vous pouvez configurer le jeton d’accès dans Azure AD pendant un an, deux ans ou pour ne jamais expirer. Les paramètres de Set-AIPAuthentication utilisent les valeurs d’un processus d’inscription d’application dans Azure AD, comme décrit dans la section suivante.
 
 Pour le compte d’utilisateur délégué :
 
@@ -101,7 +123,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
 
-2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory**  >  **gérer**les  >  **inscriptions d’applications**. 
+2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory**  >  **gérer** les  >  **inscriptions d’applications**. 
 
 3. Sélectionnez **+ nouvel enregistrement**. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
@@ -115,7 +137,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 4. Dans le volet **AIP-DelegatedUser** , copiez la valeur de l’ID de l' **application (client)**. La valeur ressemble à l’exemple suivant : `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-5. Dans la barre latérale, sélectionnez **gérer**les  >  **certificats & les secrets**.
+5. Dans la barre latérale, sélectionnez **gérer** les  >  **certificats & les secrets**.
 
 6. Sur le volet **AIP-DelegatedUser-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**.
 
@@ -128,7 +150,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
     
     Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
-9. Dans la barre latérale, sélectionnez **gérer**les  >  **autorisations d’API**.
+9. Dans la barre latérale, sélectionnez **gérer** les  >  **autorisations d’API**.
 
 10. Dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une autorisation**.
 
@@ -143,7 +165,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 14. De retour dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une nouvelle autorisation** .
 
-15. Dans le volet **demander des autorisations AIP** , sélectionnez les **API utilisées par mon organisation**et recherchez **service de synchronisation Microsoft information protection**.
+15. Dans le volet **demander des autorisations AIP** , sélectionnez les **API utilisées par mon organisation** et recherchez **service de synchronisation Microsoft information protection**.
 
 16. Dans le volet **demander des autorisations d’API** , sélectionnez autorisations de l' **application**.
 
@@ -159,24 +181,24 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
     
     ![Autorisations d’API pour l’application inscrite dans Azure AD](../media/api-permissions-app.png)
 
-Maintenant que vous avez terminé l’inscription de cette application avec un secret, vous êtes prêt à exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *AppID*et *AppSecret*. En outre, vous aurez besoin de votre ID de locataire. 
+Maintenant que vous avez terminé l’inscription de cette application avec un secret, vous êtes prêt à exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *AppID* et *AppSecret*. En outre, vous aurez besoin de votre ID de locataire. 
 
 > [!TIP]
->Vous pouvez copier rapidement votre ID de locataire à l’aide de portail Azure : **Azure Active Directory**  >  **gérer**l’ID de répertoire des  >  **Propriétés**  >  **Directory ID**.
+>Vous pouvez copier rapidement votre ID de locataire à l’aide de portail Azure : **Azure Active Directory**  >  **gérer** l’ID de répertoire des  >  **Propriétés**  >  **Directory ID**.
 
 1. Ouvrez Windows PowerShell avec l' **option Exécuter en tant qu’administrateur**. 
 
 2. Dans votre session PowerShell, créez une variable pour stocker les informations d’identification du compte d’utilisateur Windows qui s’exécuteront de manière non interactive. Par exemple, si vous avez créé un compte de service pour le scanneur :
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential "CONTOSO\srv-scanner"
     ```
 
     Vous êtes invité à entrer le mot de passe de ce compte.
 
-2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Spécifiez également les valeurs d’inscription de votre application, votre ID de locataire et le nom du compte d’utilisateur délégué dans Azure AD. Par exemple :
+2. Exécutez l’applet de commande Set-AIPAuthentication, avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Spécifiez également les valeurs d’inscription de votre application, votre ID de locataire et le nom du compte d’utilisateur délégué dans Azure AD. Par exemple :
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
 
@@ -186,7 +208,7 @@ Maintenant que vous avez terminé l’inscription de cette application avec un s
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online` . Par exemple : 
 
-```ps
+```PowerShell
 Get-Help Set-AIPFileLabel -online
 ```
 

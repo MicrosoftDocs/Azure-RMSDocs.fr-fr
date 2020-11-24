@@ -1,17 +1,17 @@
 ---
 title: AddContentFooterAction de classe
 description: 'Documente la classe addcontentfooteraction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 58c0767f2c880a52ef4a831e5d57670820187fc7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 58f4e72361f9dfbe1e13b1d636f5cb6acd287784
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763772"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567329"
 ---
 # <a name="class-addcontentfooteraction"></a>AddContentFooterAction de classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Obtenir la marge du pied de page à partir du b
 API utilisée pour marquer l’élément de pied de page de contenu.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom est retourné dans [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) si le pied de page de contenu doit être supprimé.
+**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom est retourné dans RemoveContentFooterAction si le pied de page de contenu doit être supprimé.
   
 ### <a name="gettext-function"></a>GetText, fonction
 Obtenir le texte devant être placé dans le pied de page de contenu.

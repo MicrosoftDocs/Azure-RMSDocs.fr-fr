@@ -1,17 +1,17 @@
 ---
 title: 'classe FileProfile :: Settings'
 description: 'Documente la classe fileprofile :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 8202dc85cf54b7629d688442a0b386d4ca725ac7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 5ab95e72c1b6198b8619f1fe6b0f850562ff00df
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762746"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566910"
 ---
 # <a name="class-fileprofilesettings"></a>classe FileProfile :: Settings 
 Settings utilisé par FileProfile lors de sa création et tout au long de sa durée de vie.
@@ -19,15 +19,15 @@ Settings utilisé par FileProfile lors de sa création et tout au long de sa dur
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: shared_ptr\<mipContext\>& MipContext, CacheStorageType CacheStorageType, std :: shared_ptr\<ConsentDelegate\> ConsentDelegate, std :: shared_ptr\<observateur\> observer)  |  Constructeur FileProfile::Settings.
+Paramètres publics (const std :: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, std :: shared_ptr \<ConsentDelegate\> consentDelegate, std :: shared_ptr \<Observer\> observer)  |  Constructeur FileProfile::Settings.
 public CacheStorageType GetCacheStorageType () const  |  Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
-public std :: shared_ptr\<ConsentDelegate\> GetConsentDelegate () const  |  Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
-public std :: shared_ptr\<observer\> GetObserver () const  |  Obtient l’observateur qui reçoit les notifications des événements liés à FileProfile.
-public std :: shared_ptr\<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
-public std :: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
-public void SetHttpDelegate (const std :: shared_ptr\<httpDelegate\>& HttpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
-public std :: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
-public void SetTaskDispatcherDelegate (const std :: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
+public std::shared_ptr\<Observer\> GetObserver() const  |  Obtient l’observateur qui reçoit les notifications des événements liés à FileProfile.
+public std :: shared_ptr \<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public std :: shared_ptr \<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public void SetTaskDispatcherDelegate (const std :: shared_ptr \<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
 public const std::string& GetSessionId() const  |  Obtient l’ID de session.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configure si les licences utilisateur final (LUF) sont mises en cache localement.

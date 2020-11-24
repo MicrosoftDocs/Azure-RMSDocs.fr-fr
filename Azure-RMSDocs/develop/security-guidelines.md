@@ -11,12 +11,12 @@ ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: fe9afaa7bc9951ce7264e4e27e308c39e3718551
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67521191"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568272"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Bonnes pratiques de sécurité pour Information Protection
 
@@ -49,11 +49,11 @@ Il existe plusieurs catégories principales de vulnérabilités dans un système
 
 Ces rubriques portent principalement sur les problèmes de fuites. L’intégrité d’un système d’API dépend de sa capacité, au fil du temps, à protéger les informations et à autoriser l’accès seulement à des entités désignées. Ces rubriques abordent également les problèmes de corruption. Les problèmes de refus ne sont pas couverts.
 
-Microsoft ne teste pas ni ne vérifie les résultats des tests liés au respect de la norme minimale. Le partenaire est responsable du respect des normes minimales. Microsoft fournit deux niveaux supplémentaires de recommandations pour aider à limiter les menaces courantes. En règle générale, ces suggestions sont cumulatives. Par exemple, le respect des recommandations préférées implique que vous respectez les normes minimales là où elles sont applicables, sauf indication contraire.
+Microsoft ne teste pas et ne passe pas en revue les résultats des tests liés au respect de la norme minimale. Le partenaire est responsable du respect des normes minimales. Microsoft fournit deux niveaux supplémentaires de recommandations pour aider à limiter les menaces courantes. En règle générale, ces suggestions sont cumulatives. Par exemple, le respect des recommandations préférées implique que vous respectez les normes minimales là où elles sont applicables, sauf indication contraire.
 
 |Niveau de norme|Description|
 |---|---|
-|Norme minimale| Une application qui traite des informations protégées doit répondre à la norme minimale pour qu’elle puisse être signée avec le certificat de production reçu de Microsoft. Les partenaires utilisent généralement le certificat de hiérarchie de production, au moment de la publication finale du logiciel. Les tests internes propres à un partenaire sont utilisés pour vérifier si l’application répond à cette norme minimale. Le respect de la norme minimale n’est pas et ne doit pas être considéré comme une garantie de sécurité par Microsoft. Microsoft ne teste pas ni ne vérifie les résultats des tests liés au respect de la norme minimale. Le partenaire est responsable du respect de ce minimum.|
+|Norme minimale| Une application qui traite des informations protégées doit répondre à la norme minimale pour qu’elle puisse être signée avec le certificat de production reçu de Microsoft. Les partenaires utilisent généralement le certificat de hiérarchie de production, au moment de la publication finale du logiciel. Les tests internes propres à un partenaire sont utilisés pour vérifier si l’application répond à cette norme minimale. Le respect de la norme minimale n’est pas et ne doit pas être considéré comme une garantie de sécurité par Microsoft. Microsoft ne teste pas et ne passe pas en revue les résultats des tests liés au respect de la norme minimale. Le partenaire est responsable du respect de ce minimum.|
 |Norme recommandée| Les instructions recommandées permettent d’optimiser la sécurité des applications et d’indiquer de quelle manière le SDK peut évoluer à mesure que des critères de sécurité supplémentaires sont implémentés. Les fournisseurs peuvent différencier leurs applications en développant selon ce niveau plus élevé des directives de sécurité.|
 |Norme préférée| Cette norme est la catégorie de sécurité la plus élevée actuellement définie. Les fournisseurs qui développent des applications commercialisées comme hautement sécurisées doivent respecter cette norme. Les applications conformes à cette norme sont susceptibles d’être moins vulnérables aux attaques.|
 
@@ -73,7 +73,7 @@ Le SDK Information Protection ne prend pas en charge la modification de code à 
 - Vous ne pouvez pas modifier le chargement différé en apportant des modifications au commutateur d’éditeur de liens /DELAYLOAD à l’exécution ou après celle-ci.
 - Vous ne pouvez pas modifier le chargement différé en fournissant votre propre version de la fonction helper Delayimp.lib.
 - Vous ne pouvez pas décharger des modules qui ont été chargés en différé par des modules authentifiés alors que l’environnement du SDK Information Protection existe.
-- Vous ne pouvez pas utiliser le commutateur d’éditeur de liens **`/DELAY:UNLOAD`** pour activer le déchargement de modules différés.
+- Vous ne pouvez pas utiliser le commutateur de l' **`/DELAY:UNLOAD`** éditeur de liens pour activer le déchargement des modules retardés.
 
 ## <a name="incorrectly-interpreting-license-rights"></a>Interprétation incorrecte des droits de licence
 
@@ -94,15 +94,15 @@ Azure Information Protection permet à un utilisateur de déchiffrer ou non des 
 
 ### <a name="recommended-standard"></a>Norme recommandée
 
-Néant à l'heure actuelle.
+Aucune pour le moment.
 
 ### <a name="preferred-standard"></a>Norme préférée
 
-Néant à l'heure actuelle.
+Aucune pour le moment.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Les bonnes pratiques pour implémenter des applications à l’aide du SDK Azure Information Protection incluent les articles suivants :
 
-- [Modèles de menace et prévention](https://msdn.microsoft.com/library/aa362751.aspx)
-- [Attaques de sécurité](https://msdn.microsoft.com/library/aa362736.aspx)
+- [Modèles de menace et prévention](/previous-versions//aa362751(v=vs.85))
+- [Attaques de sécurité](/previous-versions//aa362736(v=vs.85))

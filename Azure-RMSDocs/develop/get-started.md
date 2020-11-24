@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 38f9c8b6d5b916e025409e1f639749d186c20faa
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 8813cc218e1d7084e6d683496bbdca9205cea68a
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068588"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567479"
 ---
-# <a name="get-started"></a>Prise en main
+# <a name="get-started"></a>Bien démarrer
 
 [!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
@@ -32,8 +32,8 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
 
    |                                                 RMS SDK 4.2                                                 |
    |-------------------------------------------------------------------------------------------------------------|
-   |                       [SDK Android](https://go.microsoft.com/fwlink/p/?LinkId=404271)                       |
-   |                         [SDK iOS](https://go.microsoft.com/fwlink/p/?LinkId=404272)                         |
+   |                       [Kit de développement logiciel (SDK) Android](https://go.microsoft.com/fwlink/p/?LinkId=404271)                       |
+   |                         [Kit de développement logiciel (SDK) iOS](https://go.microsoft.com/fwlink/p/?LinkId=404272)                         |
    | [SDK Linux / C++](https://github.com/AzureAD/rms-sdk-for-cpp) disponible sur Github comme projet open source |
    |                        [SDK OS X](https://go.microsoft.com/fwlink/p/?LinkId=404273)                         |
    |                      [Windows Phone](https://go.microsoft.com/fwlink/p/?LinkId=524758)                      |
@@ -55,6 +55,6 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
    |Rubrique|Description|
    |-----|-----------|
    |[Nouveautés](release-notes.md)|MS RMS SDK 4.2 améliore encore le niveau de simplicité et de flexibilité pour la mise en œuvre d’applications RMS.|
-   |[Configurer l’environnement de développement](setup-developer-environment.md)|Les rubriques suivantes vous montrent comment configurer votre environnement de développement pour l’utilisation des API d’AD RMS SDK pour votre système d’exploitation.|
+   |[Configuration de l’environnement de développement](setup-developer-environment.md)|Les rubriques suivantes vous montrent comment configurer votre environnement de développement pour l’utilisation des API d’AD RMS SDK pour votre système d’exploitation.|
    |[Exemples de code](code-examples.md)|MS RMS SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge.|
    |[Ressources de la communauté](community-resources.md)|Active Directory Rights Management Services est également pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.|

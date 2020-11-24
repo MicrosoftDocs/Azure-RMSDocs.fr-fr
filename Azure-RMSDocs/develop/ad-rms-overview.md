@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 001cace1cdc3a9fd3e5cc1dd1a06a77215bd438c
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564317"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567978"
 ---
 # <a name="overview-of-rights-management-services-sdk-21"></a>Présentation du kit de développement logiciel (SDK) Rights Management Services 2,1
 
@@ -39,7 +39,7 @@ Voici quelques scénarios pour lesquels des applications basées sur le SDK Righ
 -   Les propriétaires d’une bibliothèque de documents en ligne veulent octroyer les droits d’afficher, d’imprimer ou de modifier des documents en fonction de l’identité de l’utilisateur.
 -   Une entreprise veut publier des informations sensibles sur les employés sur un site web interne qui limite les droits de consultation et de modification à certains utilisateurs.
 
-Pour plus d’informations sur le serveur AD RMS, sur le client AD RMS et sur leurs fonctionnalités, consultez le contenu TechNet concernant la [documentation d’AD RMS pour les professionnels de l’informatique](https://TechNet.Microsoft.Com/library/cc771234.aspx).
+Pour plus d’informations sur le serveur AD RMS, sur le client AD RMS et sur leurs fonctionnalités, consultez le contenu TechNet concernant la [documentation d’AD RMS pour les professionnels de l’informatique](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10)).
 
 Les autres rubriques de cette section traitent de l’architecture RMS et ses implémentations.
 
@@ -55,4 +55,4 @@ Les autres rubriques de cette section traitent de l’architecture RMS et ses im
 
 * [Concepts RMS](application-types.md)
 * [Prise en main](getting-started-with-ad-rms-2-0.md)
-* [Documentation d’AD RMS pour les professionnels de l’informatique](https://technet.microsoft.com/library/cc771234.aspx)
+* [Documentation d’AD RMS pour les professionnels de l’informatique](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10))

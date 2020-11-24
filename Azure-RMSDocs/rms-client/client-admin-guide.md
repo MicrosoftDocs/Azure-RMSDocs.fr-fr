@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b450eb1356eb36bc7b3c18573146985e5c346d
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: fc6a8cd4e891e007c9cf23d5dcb9f2381e068ac8
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952978"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568122"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -74,7 +74,7 @@ Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Devez-vous déployer le client Azure Information Protection ?
 
-Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de conformité d’Office 365 Security &](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, et les conditions suivantes s’appliquent :
+Déployez le client Azure Information Protection si vous n’utilisez pas d' [étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) dans Microsoft 365 mais à la place, à l’aide d’étiquettes de Azure information protection que vous téléchargez à partir d’Azure, et que l’une des conditions suivantes s’applique :
 
 - Vous souhaitez classifier (et éventuellement protéger) des documents et des e-mails en sélectionnant des étiquettes à partir de vos applications Office (Word, Excel, PowerPoint, Outlook).
 
@@ -143,21 +143,21 @@ L’option **Réinitialiser les paramètres** déconnecte l’utilisateur, suppr
     
     En général, pour les réseaux d’entreprise, ces paramètres sont configurés à l’aide de la stratégie de groupe, auquel cas ils sont automatiquement réappliqués lorsque la stratégie de groupe est actualisée sur l’ordinateur. Par contre, certains paramètres peuvent avoir été configurés ponctuellement, par le biais d’un script ou manuellement. Dans ce cas, vous devez prendre des mesures supplémentaires pour reconfigurer ces paramètres. Par exemple, les ordinateurs peuvent exécuter un script ponctuellement afin de configurer des paramètres pour une redirection vers Azure Information Protection, car vous procédez à la migration depuis AD RMS et vous disposez toujours d’un point de connexion de service sur votre réseau. Après la réinitialisation du client, l’ordinateur doit réexécuter ce script.
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - L’utilisateur actuellement connecté est déconnecté.
 
 #### <a name="client-status-section"></a>Section **État du client**
 
-Utilisez la valeur **Connecté en tant que** pour confirmer que le nom d’utilisateur affiché identifie le compte à utiliser pour l’authentification avec Azure Information Protection. Ce nom d’utilisateur doit correspondre à un compte que vous utilisez pour Office 365 ou Azure Active Directory. Le compte doit également appartenir à un locataire configuré pour Azure Information Protection.
+Utilisez la valeur **Connecté en tant que** pour confirmer que le nom d’utilisateur affiché identifie le compte à utiliser pour l’authentification avec Azure Information Protection. Ce nom d’utilisateur doit correspondre à un compte utilisé pour Microsoft 365 ou Azure Active Directory. Le compte doit également appartenir à un locataire configuré pour Azure Information Protection.
 
 Si vous avez besoin de vous connecter avec un nom d’utilisateur différent de celui qui est affiché, consultez la personnalisation [Se connecter avec l’identité d’un autre utilisateur](client-admin-guide-customizations.md#sign-in-as-a-different-user).
 
@@ -169,7 +169,7 @@ Utilisez l’information **Version** pour vérifier la version installée sur le
 
 ## <a name="support-for-multiple-languages"></a>Prise en charge multilingue
 
-Le client Azure Information Protection prend en charge les mêmes langues qu’Office 365. Pour obtenir la liste de ces langues, consultez la section **Office 365, Exchange Online Protection et Power BI** dans la page [Disponibilité internationale](https://products.office.com/business/international-availability) des produits Office.
+Le client Azure Information Protection prend en charge les mêmes langues que celles prises en charge par Microsoft 365. Pour obtenir la liste de ces langues, consultez la page [disponibilité internationale](https://products.office.com/business/international-availability) d’Office.
 
 Pour ces langues, les options de menu, boîtes de dialogue et messages du client Azure Information Protection s’affichent dans la langue de l’utilisateur. Il existe un programme d’installation unique qui détecte la langue. Ainsi, aucune configuration supplémentaire n’est nécessaire pour installer le client Azure Information Protection pour différentes langues. 
 
@@ -206,9 +206,9 @@ Utilisez les instructions suivantes pour mettre à niveau le scanneur d’une ve
 
 À partir de la version 1.48.204.0, le processus de mise à niveau des versions précédentes modifie automatiquement le scanneur pour qu’il récupère ses paramètres de configuration du Portail Azure. Le schéma est également mis à jour pour la base de données de configuration du scanneur, et cette base de données est également renommée à partir d’AzInfoProtection :
 
-- Si vous ne spécifiez pas votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_ \<computer_name> **. 
+- Si vous ne spécifiez pas votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_ \<computer_name>**. 
 
-- Si vous spécifiez votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_ \<profile_name> **.
+- Si vous spécifiez votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_ \<profile_name>**.
 
 Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau le scanneur, nous vous recommandons les étapes suivantes :
 
@@ -220,7 +220,7 @@ Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau l
 
 3. Mettez à niveau le client Azure Information Protection en installant la version actuelle de la mise à la disposition générale. 
 
-4. Dans une session PowerShell, exécutez la commande **Update-AIPScanner** avec le même nom de profil que celui que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
+4. Dans une session PowerShell, exécutez la commande **Update-AIPScanner** avec le même nom de profil que celui que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
 
 5. Uniquement si le scanneur s’exécute sur un ordinateur déconnecté : exécutez à présent [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier contenant les paramètres exportés.
 

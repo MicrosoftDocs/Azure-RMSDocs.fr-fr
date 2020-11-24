@@ -4,19 +4,19 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e760ae71b07c72dc761e51c9ebc07bb52c5b006c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 0b75dd62f4910a2416806e7b0e8a8682e99fe102
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047794"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568181"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -86,7 +86,7 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
 4. Dans le volet **condition** , sélectionnez **types d’informations** si vous souhaitez utiliser une condition prédéfinie, ou **personnalisé** si vous souhaitez spécifier les vôtres :
     - Pour **Types d’informations** : sélectionnez une condition dans la liste des conditions disponibles, puis sélectionnez le nombre minimal d’occurrences et déterminez si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
-        Les types d’informations utilisent les types d’informations sensibles et la détection de modèle de protection contre la perte de données (DLP) d’Office 365. Vous avez le choix entre les nombreux types courants d’informations sensibles, dont certains sont spécifiques à certaines régions. Pour plus d’informations, voir [Éléments recherchés par les types d’informations sensibles](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) dans la documentation d’Office 365.
+        Les types d’informations utilisent les types d’informations de sensibilité de protection contre la perte de données (DLP) Microsoft 365 et la détection de modèle. Vous avez le choix entre les nombreux types courants d’informations sensibles, dont certains sont spécifiques à certaines régions. Pour plus d’informations, consultez la documentation relative aux [types d’informations sensibles](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) dans la documentation de Microsoft 365.
         
         La liste des types d’informations que vous pouvez sélectionner à partir du portail Azure est régulièrement mise à jour pour inclure les nouveaux ajouts DLP Office. Toutefois, elle exclut tous les types d’informations sensibles personnalisés que vous avez définis et téléchargés sous la forme d’un package de règles dans le Centre de sécurité et conformité Office 365.
         
@@ -97,7 +97,7 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
     
     - Pour **Personnalisé** : spécifiez un nom et une expression pour la correspondance, sans guillemets ni caractères spéciaux. Spécifiez ensuite s’il s’agit d’une expression régulière, si la casse doit être respectée, le nombre minimal d’occurrences, et si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
-        Les expressions régulières utilisent les modèles regex d’Office 365. Pour vous aider à spécifier des expressions régulières pour vos conditions personnalisées, consultez la version spécifique suivante de la [syntaxe des expressions régulières Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) dans Boost.
+        Les expressions régulières utilisent les modèles regex d’Office 365. Pour vous aider à spécifier des expressions régulières pour vos conditions personnalisées, consultez la version spécifique suivante de la [syntaxe des expressions régulières Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) dans Boost. Les expressions régulières personnalisées doivent être conformes à [la documentation .net](/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net). En outre, le caractère d’échappement de Perl 5 est utilisé pour spécifier Unicode (sous la forme \x{# # # #...}, où # # # #... est une série de chiffres hexadécimaux) n’est **pas** pris en charge.
         
 5. Si nécessaire, changez les options **Nombre minimal d’occurrences** et **Comptabiliser seulement les occurrences avec des valeurs uniques**, puis sélectionnez **Enregistrer**. 
     

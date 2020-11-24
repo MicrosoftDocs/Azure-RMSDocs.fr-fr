@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 536d3662c5e3e7a90a8da2f6b9d97f522d1f4111
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: fb2a081b03ae8b92fa58073b37336066f087da4c
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136934"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567714"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
@@ -54,7 +54,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 ## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Paramètres de Registre Exchange 2013 ou Exchange 2016
 
-**Chemin du Registre :** HKEY_LOCAL_MACHINE \Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
 **Tapez :** Reg_SZ
 
@@ -105,7 +105,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 ## <a name="exchange-2010-registry-settings"></a>Paramètres de Registre Exchange 2010
 
-**Chemin du Registre :** HKEY_LOCAL_MACHINE \Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
 **Tapez :** Reg_SZ
 
@@ -201,7 +201,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 ## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Paramètres de Registre du serveur de fichiers et de l’Infrastructure de classification des fichiers
 
-**Chemin du Registre :** HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+**Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
 **Tapez :** Reg_SZ
 

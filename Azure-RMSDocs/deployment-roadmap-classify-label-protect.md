@@ -12,16 +12,16 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f4039b1c74ae8b341c5afb13a02a743267f00930
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: a3b81890343cd390a42e17dee24708af4367bd8a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298401"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568007"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Plan de déploiement AIP pour la classification, l’étiquetage et la protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -42,7 +42,7 @@ Cette feuille de route est prise en charge pour les étiquettes AIP créées ave
 
 ## <a name="deployment-process"></a>Processus de déploiement
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. [Vérifier votre abonnement et attribuer des licences utilisateur](#confirm-your-subscription-and-assign-user-licenses)
 1. [Préparer votre locataire à l’utilisation d’Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -64,13 +64,13 @@ Ensuite, attribuez des licences à partir de cet abonnement à chaque utilisateu
 > [!IMPORTANT]
 > N’attribuez pas manuellement des licences utilisateur de l’abonnement RMS for Individuals gratuit et n’utilisez pas cette licence pour administrer le service Azure Rights Management pour votre organisation. 
 >
-> Ces licences apparaissent sous la forme **Rights Management Adhoc** dans le Centre d’administration Microsoft 365 et **RIGHTSMANAGEMENT_ADHOC** quand vous exécutez l’applet de commande PowerShell Azure AD [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+> Ces licences apparaissent sous la forme **Rights Management Adhoc** dans le Centre d’administration Microsoft 365 et **RIGHTSMANAGEMENT_ADHOC** quand vous exécutez l’applet de commande PowerShell Azure AD [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
 >
 > Pour plus d’informations, consultez [RMS for Individuals et Azure information protection](./rms-for-individuals.md).
 > 
 ## <a name="prepare-your-tenant-to-use-azure-information-protection"></a>Préparer votre locataire à l’utilisation d’Azure Information Protection
 
-Avant de commencer à utiliser Azure Information Protection, assurez-vous que vous disposez de comptes d’utilisateur et de groupes dans Office 365 ou Azure Active Directory que AIP peut utiliser pour authentifier et autoriser vos utilisateurs.
+Avant de commencer à utiliser Azure Information Protection, assurez-vous que vous disposez de comptes d’utilisateur et de groupes dans Microsoft 365 ou Azure Active Directory qu’AIP peut utiliser pour authentifier et autoriser vos utilisateurs.
 
 Si nécessaire, créez ces comptes et groupes, ou synchronisez-les à partir de votre annuaire local. 
 
@@ -106,7 +106,7 @@ Déterminez si vous allez utiliser le client d’étiquetage standard AIP ou AIP
     Pour plus d’informations sur la configuration des étiquettes et des paramètres de stratégie, consultez :
 
     - **Client classique :** [configuration](./configure-policy.md) de la stratégie de Azure information protection
-    - **Client d’étiquetage unifié :** [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+    - **Client d’étiquetage unifié :** [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels)
     
 1. **Déployer votre client**
 
@@ -180,19 +180,19 @@ Pour préparer la protection des données, procédez comme suit :
 
 ## <a name="configure-labels-and-settings-applications-and-services-for-data-protection"></a>Configurer des étiquettes et des paramètres, des applications et des services pour la protection des données
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. **Mettre à jour vos étiquettes pour appliquer la protection**
     
     Utilisez l’un des guides suivants, en fonction de votre client :
 
     - Classique : [Comment configurer une étiquette pour la protection de Rights Management](./configure-policy-protection.md)
-    - Étiquetage unifié : [restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+    - Étiquetage unifié : [restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels)
     
     > [!IMPORTANT]
     > Les utilisateurs peuvent appliquer des étiquettes dans Outlook qui appliquent Rights Management protection même si Exchange n’est pas configuré pour la gestion des droits relatifs à l’information (IRM). 
     > 
-    > Cependant, tant qu’Exchange n’est pas configuré pour IRM ou pour le [chiffrement de messages Office 365 avec de nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), votre organisation ne peut pas bénéficier des fonctionnalités complètes de la protection Azure Rights Management avec Exchange. Cette configuration supplémentaire est incluse dans la liste suivante (l’étape 2 pour Exchange Online et l’étape 5 pour Exchange sur site). 
+    > Toutefois, tant qu’Exchange n’est pas configuré pour IRM ou [Microsoft 365 le chiffrement des messages avec de nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), votre organisation n’obtient pas toutes les fonctionnalités de l’utilisation de la protection Azure Rights Management avec Exchange. Cette configuration supplémentaire est incluse dans la liste suivante (l’étape 2 pour Exchange Online et l’étape 5 pour Exchange sur site). 
     > 
 
 1. **Configurer des applications et des services Office**
@@ -216,16 +216,16 @@ Effectuez les étapes suivantes :
     - **Client classique :** [utilisation de PowerShell avec le client Azure information protection](./rms-client/client-admin-guide-powershell.md)
     - **Client d’étiquetage unifié :** [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md)
 
-    Pour les banques de données basées sur le cloud, utilisez [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+    Pour les banques de données basées sur le cloud, utilisez [Azure Cloud App Security](/cloud-app-security). 
 
     > [!TIP]
-    > La classification et la protection des fichiers existants en bloc ne sont pas l’un des principaux cas d’utilisation de Cloud App Security. les [solutions de contournement documentées](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) peuvent vous aider à obtenir la classification et la protection de vos fichiers.
+    > La classification et la protection des fichiers existants en bloc ne sont pas l’un des principaux cas d’utilisation de Cloud App Security. les [solutions de contournement documentées](/cloud-app-security/azip-integration#enable-azure-information-protection) peuvent vous aider à obtenir la classification et la protection de vos fichiers.
 
 6. **Déployez le connecteur pour les bibliothèques protégées par IRM sur SharePoint Server et les e-mails protégés par IRM pour Exchange sur site**
     
     Si vous avez SharePoint et Exchange sur site, et souhaitez utiliser leurs fonctionnalités de gestion des droits relatifs à l’information (IRM), installez et configurez le connecteur Rights Management. 
 
-    Pour plus d’informations, consultez [déploiement du connecteur Azure Rights Management](./deploy-rms-connector.md).
+    Pour plus d’informations, consultez [Déploiement du connecteur Azure Rights Management](./deploy-rms-connector.md).
 
 ## <a name="use-and-monitor-your-data-protection-solutions"></a>Utiliser et superviser vos solutions de protection des données
 

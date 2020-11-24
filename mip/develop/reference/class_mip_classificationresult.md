@@ -1,17 +1,17 @@
 ---
 title: ClassificationResult de classe
 description: 'Documente la classe classificationresult :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b87db224bdd7a571c22de9e382ff9faf3ce656b8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 4e64abc1cca11f11b19238282c9061dc26b29290
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763528"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567228"
 ---
 # <a name="class-classificationresult"></a>ClassificationResult de classe 
 Classe qui contient le résultat d’un appel de classification sur l’État d’exécution.
@@ -24,6 +24,7 @@ public std::string GetName() const  |  Obtient le nom de la stratégie de classi
 public int GetCount() const  |  Obtenir le nombre d’instances.
 public int GetConfidenceLevel() const  |  Obtenir la confiance dans le résultat.
 public std :: String GetSensitiveInformationDetections () const  |  Obtient les détections d’informations sensibles.
+public virtuel std :: Vector \<std::shared_ptr\<mip::DetailedClassificationResult\> \> GetDetailedClassificationAttributes () const  |  Procurez-vous les bandes de détection spécifiques si la classification est activée.
   
 ## <a name="members"></a>Membres
   
@@ -53,3 +54,9 @@ Obtient les détections d’informations sensibles.
 
   
 **Retourne**: chaîne JSON de toutes les détections d’informations sensibles. Si la variable n’est pas vide, doit être un format JSON valide.
+  
+### <a name="getdetailedclassificationattributes-function"></a>GetDetailedClassificationAttributes fonction)
+Procurez-vous les bandes de détection spécifiques si la classification est activée.
+
+  
+**Retourne**: un vecteur de nombres d’instances à différents seuils de confiance

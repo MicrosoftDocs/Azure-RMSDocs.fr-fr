@@ -1,17 +1,17 @@
 ---
 title: 'classe ProtectionProfile :: Settings'
 description: 'Documente la classe protectionprofile :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: f0b9ef139762621205f69d46094a6729f3ec19d9
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 8808aeeea19c854ef72a9e6f91dd496906c2e2db
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763891"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567094"
 ---
 # <a name="class-protectionprofilesettings"></a>classe ProtectionProfile :: Settings 
 Settings utilisé par ProtectionProfile lors de sa création et tout au long de sa durée de vie.
@@ -19,22 +19,22 @@ Settings utilisé par ProtectionProfile lors de sa création et tout au long de 
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: shared_ptr\<mipContext\>& MipContext, CacheStorageType CacheStorageType, const std :: shared_ptr\<ConsentDelegate\>& ConsentDelegate, const std :: shared_ptr\<ProtectionProfile :: observer\>& observer)  |  Constructeur ProtectionProfile::Settings qui spécifie un observateur à utiliser pour les opérations asynchrones.
-Paramètres publics (const std :: shared_ptr\<mipContext\>& MipContext, CacheStorageType CacheStorageType, const std :: shared_ptr\<ConsentDelegate\>& ConsentDelegate)  |  Constructeur ProtectionProfile::Settings utilisé pour les opérations synchrones.
+Paramètres publics (const std :: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, const std :: shared_ptr \<ConsentDelegate\>& consentDelegate, const std :: shared_ptr \<ProtectionProfile::Observer\>& observer)  |  Constructeur ProtectionProfile::Settings qui spécifie un observateur à utiliser pour les opérations asynchrones.
+Paramètres publics (const std :: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, const std :: shared_ptr \<ConsentDelegate\>& consentDelegate)  |  Constructeur ProtectionProfile::Settings utilisé pour les opérations synchrones.
 public CacheStorageType GetCacheStorageType () const  |  Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
-public std :: shared_ptr\<ConsentDelegate\> GetConsentDelegate () const  |  Obtient le délégué de consentement utilisé pour la connexion aux services.
-public std :: shared_ptr\<ProtectionProfile :: observer\> GetObserver () const  |  Obtient l’observateur qui reçoit les notifications des événements liés à ProtectionProfile.
-public std :: shared_ptr\<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
-public std :: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
-public void SetHttpDelegate (const std :: shared_ptr\<httpDelegate\>& HttpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
-public std :: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
-public void SetTaskDispatcherDelegate (const std :: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Obtient le délégué de consentement utilisé pour la connexion aux services.
+public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Obtient l’observateur qui reçoit les notifications des événements liés à ProtectionProfile.
+public std :: shared_ptr \<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public std :: shared_ptr \<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public void SetTaskDispatcherDelegate (const std :: shared_ptr \<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
 public const std::string& GetSessionId() const  |  Obtient l’ID de session.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configure si les licences utilisateur final (LUF) sont mises en cache localement.
 public bool CanCacheLicenses () const  |  Obtient une valeur indiquant si les licences d’utilisateur final (LUF) sont mises en cache localement.
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public void SetCustomSettings (const std :: Vector \<std::pair\<std::string, std::string\> \>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public const std :: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
   
 ## <a name="members"></a>Membres
   

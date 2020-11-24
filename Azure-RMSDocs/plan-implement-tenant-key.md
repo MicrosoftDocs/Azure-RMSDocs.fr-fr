@@ -13,16 +13,16 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 59029ba4ebd55cc687d529eec01c58c5cced15c3
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 24479014fcbd0bd93b65d6958d004deb9c7e0c95
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953199"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568103"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -104,4 +104,4 @@ Utilisez DKE lorsque votre organisation :
 > DKE est similaire à une zone de dépôt de sécurité qui nécessite une clé de banque et une clé de client pour accéder.
 > DKE-protection nécessite à la fois la clé détenue par Microsoft et la clé détenue par le client pour déchiffrer le contenu protégé.
 
-Pour plus d’informations, consultez [chiffrement à clé double](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365. 
+Pour plus d’informations, consultez [chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365.

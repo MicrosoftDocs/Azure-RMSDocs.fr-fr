@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 63876f55d38b3f97f41ad3a0b350ede8234202d3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 30a5dd75aece0afbbed67c9e7fb92c4169f0a1a8
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788653"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567996"
 ---
 # <a name="client"></a>Client
 
@@ -31,10 +31,10 @@ Le client RMS 2.1 expose des fonctionnalités qui permettent aux utilisateurs d
 
 RMS SDK 2.1 fonctionne avec le client RMS 2.1. Les applications avec gestion des droits et basées sur RMS SDK 2.1 doivent utiliser le client RMS 2.1.
 
-Pour plus d’informations, consultez la [documentation TechNet sur le client RMS 2.1](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx).
+Pour plus d’informations, consultez la [documentation TechNet sur le client RMS 2.1](../rms-client/client-deployment-notes.md).
 
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [Vue d’ensemble](ad-rms-overview.md)
-* [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
-* [Documentation TechNet sur le client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
+* [Permettre à votre application de service d’opérer avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
+* [Documentation TechNet sur le client RMS 2.1](../rms-client/client-deployment-notes.md)

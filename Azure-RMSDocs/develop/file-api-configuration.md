@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 891f27a971c72465a4a0e61b1b2097c42fa06bd4
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135621"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568313"
 ---
 # <a name="file-api-configuration"></a>Configuration de l’API de fichier
 
@@ -66,7 +66,7 @@ Pour spécifier le comportement de la protection, définissez la valeur **Encryp
 > [!Note]
 > Ce paramètre n’a aucune incidence sur le déchiffrement. Tout fichier chiffré, que ce soit via la protection Native ou la protection Pfile, peut être déchiffré du moment que l’utilisateur dispose du droit **EXTRACT**.
 
-- **Native** : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers portant l’extension .ptxt. La liste des extensions de fichiers pouvant bénéficier d’une protection native est dressée ci-après.
+- **Native** : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p *zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers portant l’extension .ptxt. La liste des extensions de fichiers pouvant bénéficier d’une protection native est dressée ci-après.
 
 - **Pfile** : Le chiffrement PFile est utilisé. L’extension .pfile est ajoutée à l’extension d’origine du fichier chiffré. Par exemple, une fois le chiffrement effectué, un fichier .txt a l’extension .txt.pfile.
 
@@ -82,7 +82,7 @@ Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le com
 -   **Fichiers txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** : Le chiffrement natif est activé (xxx devient pxxx)
 -   **Tous les autres fichiers** : Le chiffrement avec protection de fichier (pfile) est activé (xxx devient xxx.pfile)
 
-Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) se produit.
+Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes) se produit.
 
 ### <a name="file-api---file-support-details"></a>API de fichier - Détails de la prise en charge des fichiers
 
@@ -149,4 +149,4 @@ HKEY_LOCAL_MACHINE
 ## <a name="related-articles"></a>Articles connexes
 
 - [Notes pour les développeurs](developer-notes.md)
-- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes)

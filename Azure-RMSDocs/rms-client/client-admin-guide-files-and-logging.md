@@ -1,10 +1,10 @@
 ---
 title: Fichiers du client Azure Information Protection et journalisation de l’utilisation
 description: Informations sur les fichiers du client et la journalisation de l’utilisation du client Azure Information Protection pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 676a58b6dc16a8a61b1a528f5b5d0a043c427c09
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 4a8ee6c5f3879786b76a8466b198b0b4040a540f
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048950"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568134"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -57,9 +57,9 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
     - Définir l’étiquette : ID d’informations 101
     
-    - Définir l’étiquette (inférieure) : ID d’informations 101
+    - Définir l’étiquette (inférieure) : ID d’informations 102
     
-    - Définir l’étiquette (plus élevée) : ID d’informations 101
+    - Définir l’étiquette (plus élevée) : ID d’informations 103
     
     - Supprimer l’étiquette : ID d’informations 104
     
@@ -81,7 +81,7 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
     
 - Source de l’action :
     
-    - Manuelle 
+    - Manuel 
     
     - Recommandé
     

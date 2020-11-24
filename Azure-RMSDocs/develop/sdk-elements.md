@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3c9bca4e474306d3e73df8d9d41a7c4ef9c6e5e2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0b2e741a1ad50c28248bc36fd3895971d429d5f5
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790816"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567815"
 ---
 # <a name="development-environment-files"></a>Fichiers d’environnement de développement
 
@@ -27,7 +27,7 @@ Cette rubrique présente les fichiers d’environnement de développement et leu
 
 Le SDK Rights Management Services 2.1 comprend les fichiers suivants, qui sont installés sur votre ordinateur à l’emplacement par défaut ou à l’emplacement que vous avez spécifié : %MsipcSDKDir%.
 
-|File|Chemin d’accès|Description|
+|Fichier|Path|Description|
 |----|----|-----------|
 |ReadMe.htm| \ | Contient un lien vers l’aide de RMS et les [notes de publication](release-notes-rtm.md).|
 |Isvtier5appsigningprivkey.dat|\bin|Contient la clé privée utilisée pour générer un manifeste pour une utilisation pendant le développement d’une application prenant en charge RMS.|
@@ -44,7 +44,7 @@ Le SDK Rights Management Services 2.1 comprend les fichiers suivants, qui sont 
 |Ipcerror.h|\inc|Contient les codes d’erreur publics exportés par RMS SDK 2.1.|
 |Ipcfile.h|\inc|Contient les interfaces de l’API de fichier exportées par RMS SDK 2.1.|
 |Msipc.lib|\lib|Bibliothèque à laquelle se lier pour créer des applications x86 à l’aide de RMS SDK 2.1.|
-|Msipc_s.lib|\lib|Fournit le point d’entrée d’[IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) pour les applications x86.|
+|Msipc_s.lib|\lib|Fournit le point d’entrée d’[IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) pour les applications x86.|
 |Msipc.lib|\lib\x64|Bibliothèque à laquelle se lier pour créer des applications x64 à l’aide de RMS SDK 2.1.|
-|Msipc_s.lib|\lib\x64|Fournit le point d’entrée d’[IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) pour les applications x64.|
+|Msipc_s.lib|\lib\x64|Fournit le point d’entrée d’[IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) pour les applications x64.|
 |Genmanifest.exe|\tools|Génère un manifeste pour une utilisation pendant le développement d’une application prenant en charge RMS.|

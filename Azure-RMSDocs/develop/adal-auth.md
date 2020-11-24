@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 568ed4dee01c59f8808442a4499b8a858f9ebcf5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971963"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568074"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configuration de votre application pour l’authentification ADAL
 
@@ -29,11 +29,11 @@ Cette rubrique décrit les étapes de configuration de votre application pour l�
 
 Vous devez disposer des éléments suivants :
 
-- Un [abonnement à Microsoft Azure](https://azure.microsoft.com/) (une version d’évaluation gratuite suffit). Pour plus d’informations, consultez [Inscription à RMS for Individuals](../rms-for-individuals-user-sign-up.md)
-- Un abonnement à Microsoft Azure Rights Management (un compte [RMS for Individuals](https://technet.microsoft.com/library/dn592127.aspx) gratuit suffit).
+- Un [abonnement à Microsoft Azure](https://azure.microsoft.com/) (une version d’évaluation gratuite suffit). Pour plus d’informations, consultez [Inscription à RMS for Individuals](../rms-for-individuals.md)
+- Un abonnement à Microsoft Azure Rights Management (un compte [RMS for Individuals](../rms-for-individuals.md) gratuit suffit).
 
 > [!NOTE]
-> Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner à un *compte professionnel ou scolaire*plutôt qu’à un *compte Microsoft* (par exemple, Hotmail).
+> Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner à un *compte professionnel ou scolaire* plutôt qu’à un *compte Microsoft* (par exemple, Hotmail).
 
 Après vous être inscrit à Microsoft Azure :
 

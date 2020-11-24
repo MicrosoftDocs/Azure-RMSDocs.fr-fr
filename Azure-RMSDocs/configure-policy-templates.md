@@ -1,10 +1,10 @@
 ---
 title: Configurer et gérer des modèles pour Azure Information Protection – AIP
 description: Configurez et gérez les modèles de protection, également appelés modèles de gestion des droits, à partir du Portail Azure.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/24/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6af7c9af0e954c6eb2cb2e4cb29a796d4cdfdb99
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 2cf3c5c9c353c74287fb6f94ecc6d1c161e2198d
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048032"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568259"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -35,7 +35,7 @@ Les modèles de protection, également appelés modèles Rights Management, sont
 
 - Les modèles qui ne sont pas intégrés à vos étiquettes pour votre locataire sont affichés dans la section **modèles de protection** après vos étiquettes dans le volet **Azure information protection-étiquettes** . Pour accéder à ce volet, sélectionnez l’option de menu **classifications**  >  **étiquettes** . Vous pouvez convertir ces modèles en étiquettes, ou les lier à des étiquettes lorsque vous configurez la protection de vos étiquettes. 
 
-**Quand vous avez un abonnement qui n’inclut que la protection uniquement (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
+**Si vous avez un abonnement qui comprend uniquement la protection (un abonnement Microsoft 365 qui comprend le service Azure Rights Management) :**
 
 - Les modèles de votre locataire sont affichés dans la section **modèles de protection** dans le volet **Azure information protection-étiquettes** . Pour accéder à ce volet, sélectionnez l’option de menu **classifications**  >  **étiquettes** . Aucune étiquette n’apparaît. Vous pouvez également voir les paramètres de configuration qui sont spécifiques à la classification et à l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
@@ -44,7 +44,7 @@ Les modèles de protection, également appelés modèles Rights Management, sont
 
 ## <a name="default-templates"></a>Modèles par défaut
 
-Lorsque vous obtenez votre abonnement pour Azure Information Protection ou un abonnement Office 365 qui inclut le service Azure Rights Management, deux modèles par défaut sont créés automatiquement pour votre client. Ces modèles restreignent l’accès aux utilisateurs autorisés de votre organisation. Lorsque ces modèles sont créés, ils disposent des autorisations répertoriées dans la documentation [Configuration des droits d’utilisation pour Azure information protection](configure-usage-rights.md#rights-included-in-the-default-templates) .
+Lorsque vous obtenez votre abonnement pour Azure Information Protection ou pour un abonnement Microsoft 365 qui comprend le service de Rights Management Azure, deux modèles par défaut sont créés automatiquement pour votre locataire. Ces modèles restreignent l’accès aux utilisateurs autorisés de votre organisation. Lorsque ces modèles sont créés, ils disposent des autorisations répertoriées dans la documentation [Configuration des droits d’utilisation pour Azure information protection](configure-usage-rights.md#rights-included-in-the-default-templates) .
 
 En outre, les modèles sont configurés pour autoriser l’accès hors connexion pendant sept jours et n’ont pas de date d’expiration.
 
@@ -66,9 +66,9 @@ Si vous avez obtenu votre abonnement récemment, vos modèles par défaut sont c
 
 Si vous avez obtenu votre abonnement il y a quelque temps, vos modèles par défaut peuvent être créés avec les noms suivants :
 
-- **\<organization name>-Confidentiel**
+- **\<organization name> -Confidentiel**
 
-- **\<organization name>-Affichage confidentiel uniquement** 
+- **\<organization name> -Affichage confidentiel uniquement** 
 
 Vous pouvez renommer (et reconfigurer) ces modèles par défaut lorsque vous utilisez le portail Azure.
 
@@ -91,7 +91,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, assurez-vous 
 
 - Vous ne pouvez pas copier ou supprimer un modèle dans le portail Azure. Lorsque le modèle est converti en étiquette, vous pouvez configurer l’étiquette pour qu’elle cesse d’utiliser le modèle en sélectionnant **Non configuré** pour l’option **Définir des autorisations pour les documents et e-mails contenant cette étiquette**. Ou, vous pouvez supprimer l’étiquette. Toutefois, dans les deux cas, le modèle n’est pas supprimé et demeure à l’état archivé.
     
-    Vous pouvez maintenant supprimer le modèle à l’aide de l’applet de commande PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) . Vous pouvez également utiliser cette applet de commande PowerShell pour les modèles qui ne sont pas convertis en étiquettes. Cependant, pour garantir que le contenu précédemment protégé puisse être ouvert et utilisé comme prévu, nous vous déconseillons généralement de supprimer des modèles. En guise de bonne pratique, supprimez uniquement des modèles si vous êtes sûr qu’ils n’ont pas été utilisés pour protéger des documents ou des e-mails en production. Par précaution, vous souhaiterez peut-être d’abord exporter le modèle en tant que sauvegarde, à l’aide de l’applet de commande [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate) . 
+    La suppression de modèles à l’aide de l’applet de commande PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) est **définitive**. Vous pouvez également utiliser cette applet de commande PowerShell pour les modèles qui ne sont pas convertis en étiquettes. Cependant, pour garantir que le contenu précédemment protégé puisse être ouvert et utilisé comme prévu, nous vous déconseillons généralement de supprimer des modèles. En guise de bonne pratique, supprimez uniquement des modèles si vous êtes sûr qu’ils n’ont pas été utilisés pour protéger des documents ou des e-mails en production. Par précaution avant de supprimer définitivement un modèle à l’aide de PowerShell, envisagez d’exporter le modèle en tant que sauvegarde à l’aide de l’applet de commande [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate) . 
 
 - Actuellement, si vous modifiez et enregistrez un modèle de service, cela supprime la configuration d’étendue. L’équivalent d’un modèle étendu dans la stratégie Azure Information Protection est une [stratégie étendue](configure-policy-scope.md). Si vous convertissez le modèle en étiquette, vous pouvez sélectionner une étendue existante.
     
@@ -109,7 +109,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, assurez-vous 
 
 2. À partir de l’option de menu **classifications**  >  **étiquettes** : dans le volet **Azure information protection-étiquettes** , développez **modèles de protection**, puis recherchez le modèle que vous souhaitez configurer.
     
-3. Sélectionnez le modèle, puis dans le volet **étiquette** , vous pouvez modifier le nom et la description du modèle, le cas échéant, en modifiant le **nom complet** et la **Description**de l’étiquette. Ensuite, sélectionnez **protection** qui a la valeur **Azure (clé Cloud)** pour ouvrir le volet **protection** .
+3. Sélectionnez le modèle, puis dans le volet **étiquette** , vous pouvez modifier le nom et la description du modèle, le cas échéant, en modifiant le **nom complet** et la **Description** de l’étiquette. Ensuite, sélectionnez **protection** qui a la valeur **Azure (clé Cloud)** pour ouvrir le volet **protection** .
 
 4. Dans le volet **protection** , vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour plus d’informations sur la configuration des paramètres de protection, consultez [Comment configurer une étiquette pour la protection de Rights Management](configure-policy-protection.md)
     
@@ -146,7 +146,7 @@ Vous pouvez créer des modèles à l’aide du portail ou de PowerShell.
 
 ### <a name="template-creation-using-powershell"></a>Création de modèle à l’aide de PowerShell
 
-Pour créer un modèle de protection à l’aide de PowerShell avec le nom, la description, la stratégie et le paramètre d’état souhaité spécifiés, utilisez l’applet de commande [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate?view=azureipps) . 
+Pour créer un modèle de protection à l’aide de PowerShell avec le nom, la description, la stratégie et le paramètre d’état souhaité spécifiés, utilisez l’applet de commande [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) . 
 
 
 ### <a name="template-creation-using-the-portal"></a>Création de modèle à l’aide du portail
@@ -177,5 +177,4 @@ Il peut prendre jusqu'à 15 minutes pour qu’un ordinateur exécutant le clien
 
 Tout ce que vous pouvez configurer dans le portail Azure pour créer et gérer vos modèles, vous pouvez le faire à l’aide de PowerShell. En outre, PowerShell fournit davantage d’options qui ne sont pas disponibles dans le portail. Pour plus d’informations, consultez [Référence PowerShell pour les modèles de protection](configure-templates-with-powershell.md). 
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
-
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).

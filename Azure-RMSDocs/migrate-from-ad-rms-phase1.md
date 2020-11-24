@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf40f0ec6cbd2363f58aa403ec1f74c54b57d66
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 8a84ab3927859e384a96887b5636f4723ab942d5
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048678"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567768"
 ---
 # <a name="migration-phase-1---preparation"></a>Phase de migration 1 : Préparation
 
@@ -64,7 +64,7 @@ Par exemple : **5c6bb73b-1038-4EEC-863d-49bded473437.RMS.na.aadrm.com**
 
 Pour la plupart des migrations, comme il n’est pas pratique de migrer tous les clients à la fois, vous pouvez les migrer par lots. Cela signifie que, pendant une période donnée, certains clients utilisent Azure Information Protection et d’autres continuent à utiliser AD RMS. Pour prendre en charge les utilisateurs avant et après la migration, utilisez les contrôles d’intégration et déployez un script de prémigration. Cette étape est nécessaire pendant le processus de migration afin que les utilisateurs qui n’ont pas encore migré puissent consommer le contenu qui a été protégé par les utilisateurs migrés qui utilisent maintenant Azure Rights Management.
 
-1. Créez un groupe nommé, par exemple, **AIPMigrated**. Vous pouvez créer ce groupe dans Active Directory et le synchroniser dans le cloud, ou dans Office 365 ou Azure Active Directory. N’attribuez pas d’utilisateurs à ce groupe pour l’instant. Lors d’une prochaine étape, quand les utilisateurs auront migré, vous les ajouterez au groupe.
+1. Créez un groupe nommé, par exemple, **AIPMigrated**. Ce groupe peut être créé dans Active Directory et synchronisé dans le Cloud, ou il peut être créé dans Microsoft 365 ou Azure Active Directory. N’attribuez pas d’utilisateurs à ce groupe pour l’instant. Lors d’une prochaine étape, quand les utilisateurs auront migré, vous les ajouterez au groupe.
 
     Notez l’ID d’objet de ce groupe. Pour ce faire, vous pouvez utiliser Azure AD PowerShell. Par exemple, pour la version 1.0 du module, utilisez la commande [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup). Vous pouvez aussi copier l’ID d’objet du groupe à partir du portail Azure.
 
@@ -123,7 +123,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Tapez :** Reg_SZ
 
-**Valeur :**`https://\<Your Tenant URL\>/_wmcs/licensing`
+**Valeur :** `https://\<Your Tenant URL\>/_wmcs/licensing`
 
 **Données :**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 

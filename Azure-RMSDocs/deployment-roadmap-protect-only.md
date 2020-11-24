@@ -12,16 +12,16 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecf9257a69a5046592cb52f810e171859df238a4
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: f56373bfd3aa37b13b89a552e1767bd954c81bde
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298396"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568001"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Plan de déploiement Azure Information Protection pour la protection uniquement
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -38,9 +38,9 @@ Cette feuille de route est recommandée pour les clients disposant d’un abonne
 
 ## <a name="deployment-process"></a>Processus de déploiement
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
-1. [Vérifiez que vous disposez d’un abonnement qui comprend le service de protection AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) [
+1. [Confirmer que vous disposez d’un abonnement qui comprend le service de protection AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Préparer votre locataire à l’utilisation d’Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
 1. [Installer le Azure Information Protection Classic et le client configurer des applications et des services pour Rights Management](#install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management)
 1. [Utiliser et superviser vos solutions de protection des données](#use-and-monitor-your-data-protection-solutions)
@@ -55,7 +55,7 @@ Attribuez une licence de cet abonnement à chaque utilisateur de votre organisat
 > [!IMPORTANT]
 > N’attribuez pas manuellement des licences utilisateur à partir de l’abonnement gratuit RMS for individuals et n’utilisez pas cette licence pour administrer le service Azure Rights Management dans votre organisation. 
 >
-> Ces licences apparaissent sous la forme **Rights Management Adhoc** dans le Centre d’administration Microsoft 365 et **RIGHTSMANAGEMENT_ADHOC** quand vous exécutez l’applet de commande PowerShell Azure AD [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+> Ces licences apparaissent sous la forme **Rights Management Adhoc** dans le Centre d’administration Microsoft 365 et **RIGHTSMANAGEMENT_ADHOC** quand vous exécutez l’applet de commande PowerShell Azure AD [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
 >
 > Pour plus d’informations sur la façon dont l’abonnement RMS for individuals est automatiquement accordé et attribué aux utilisateurs, consultez [RMS for individuals et Protection des informations Azure](./rms-for-individuals.md).
 
@@ -65,7 +65,7 @@ Avant de commencer à utiliser le service de protection d’Azure Information Pr
 
 1. **Configurez vos comptes et groupes d’utilisateurs pour AIP.**
 
-    Vérifiez que votre locataire Office 365 contient les comptes et groupes d’utilisateurs qu’Azure Information Protection utilisera pour authentifier et autoriser les utilisateurs de votre organisation. Si nécessaire, créez ces comptes et groupes, ou synchronisez-les à partir de votre annuaire local. 
+    Assurez-vous que votre locataire Microsoft 365 contient les comptes d’utilisateur et les groupes qui seront utilisés par Azure Information Protection pour authentifier et autoriser les utilisateurs de votre organisation. Si nécessaire, créez ces comptes et groupes, ou synchronisez-les à partir de votre annuaire local. 
 
     Pour plus d’informations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
@@ -105,7 +105,7 @@ Avant de commencer à utiliser le service de protection d’Azure Information Pr
 
 ## <a name="install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management"></a>Installer le Azure Information Protection Classic et le client configurer des applications et des services pour Rights Management
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. **Déployer le client Azure Information Protection Classic**
     
@@ -137,13 +137,13 @@ Effectuez les étapes suivantes :
     
     Si vous voulez utiliser des services locaux avec le service de protection, installez et configurez le connecteur Microsoft Rights Management. 
 
-    Pour plus d’informations, consultez [déploiement du connecteur Azure Rights Management](./deploy-rms-connector.md).
+    Pour plus d’informations, consultez [Déploiement du connecteur Azure Rights Management](./deploy-rms-connector.md).
 
 ## <a name="use-and-monitor-your-data-protection-solutions"></a>Utiliser et superviser vos solutions de protection des données
 
 Vous êtes maintenant prêt à protéger vos données et à consigner la manière dont votre entreprise utilise le service de protection. 
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](./help-users.md)
 - [Journalisation et analyse de l’utilisation de la protection à partir de Azure Information Protection](./log-analyze-usage.md)

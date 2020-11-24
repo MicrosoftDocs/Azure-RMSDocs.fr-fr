@@ -14,23 +14,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 332054ba4423ff26cf69023cc1ee6723076b253e
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: cfdee38bc12393f130abcbfc5d69b1fbd65f5ecd
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564299"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567965"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>Comment : ajouter des droits de propriétaire explicites
 
-Votre application doit ajouter explicitement les droits « Owner » lors de la création d’une licence à partir de rien (à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
+Votre application doit ajouter explicitement les droits « Owner » lors de la création d’une licence à partir de rien (à l’aide de [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)).
 
 ## <a name="prerequisites"></a>Prérequis
 
-Quand votre application crée un handle de licence en utilisant [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), elle doit également accorder explicitement les droits (autorisations) complets de propriétaire.
+Quand votre application crée un handle de licence en utilisant [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch), elle doit également accorder explicitement les droits (autorisations) complets de propriétaire.
 
 > [!NOTE]
-> La définition d’un utilisateur comme « Owner » en utilisant [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) avec la propriété **IPC\_LI\_OWNER** n’accorde pas toutes les autorisations de propriétaire.
+> La définition d’un utilisateur comme « Owner » en utilisant [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty) avec la propriété **IPC\_LI\_OWNER** n’accorde pas toutes les autorisations de propriétaire.
 
 L’exemple de code suivant représente uniquement les étapes de création et d’ajout des droits spécifiques à une licence donnée.
 
@@ -38,7 +38,7 @@ L’exemple de code suivant représente uniquement les étapes de création et d
  
 ## <a name="step-1-example-scenario"></a>Étape 1 : Exemple de scénario
 
-Dans cet exemple, les droits nécessaires sont ajoutés à une licence créée avec [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). L’exemple montre la création et l’attribution des droits à la licence via une liste de droits.
+Dans cet exemple, les droits nécessaires sont ajoutés à une licence créée avec [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch). L’exemple montre la création et l’attribution des droits à la licence via une liste de droits.
 
 Les deux droits suivants sont ajoutés à ces utilisateurs :
 
@@ -110,5 +110,5 @@ if(FAILED(hr))
 ## <a name="related-topics"></a>Rubriques connexes
 
 - [Notes pour les développeurs](developer-notes.md)
-- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
-- [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
+- [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty)
+- [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)

@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 127682099f082d81c93e5951b149033a96d9504b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046536"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568031"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -56,7 +56,7 @@ Conditions préalables pour ces instructions :
     
   - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur si ceux-ci sont requis pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
     
-- Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
+- Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Microsoft 365, y compris leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
     
 - Ce scénario ne prend pas en charge les modèles départementaux. vous devez donc utiliser un modèle qui n’est pas configuré pour une étendue ou utiliser l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) et le paramètre *du enableinlegacyapps* .
 
@@ -120,7 +120,7 @@ Notez que si vous apportez des changements au modèle Rights Management que vous
 
 3.  Exécutez le script. Si vous ne vous signez pas le script (plus sécurisé), vous devez configurer Windows PowerShell sur les serveurs qui l'exécutent. Par exemple, exécutez une session Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis tapez : **Set-ExecutionPolicy RemoteSigned**. Toutefois, cette configuration laisse s’exécuter tous les scripts non signés quand ils sont stockés sur ce serveur (moins sécurisé).
 
-    Pour plus d’informations sur la signature des scripts Windows PowerShell, voir [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) dans la bibliothèque de documentation PowerShell.
+    Pour plus d’informations sur la signature des scripts Windows PowerShell, voir [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) dans la bibliothèque de documentation PowerShell.
 
 4.  Enregistrez le fichier localement sur chaque serveur de fichiers qui exécute le Gestionnaire de ressources de fichier avec l’infrastructure de classification des fichiers. Par exemple, enregistrez le fichier dans **C:\RMS-Protection**. Si vous utilisez un chemin ou un nom de dossier différent, choisissez un chemin et un dossier ne contenant pas d’espaces. Sécurisez ce fichier à l'aide d'autorisations NTFS afin que les utilisateurs non autorisés ne puissent pas le modifier.
 
@@ -152,7 +152,7 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
         -   **Description**: tapez **classifier tous les fichiers dans le &lt; dossier nom du dossier &gt; pour Rights Management**.
 
-            Remplacez le * &lt; nom &gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**
+            Remplacez le *&lt; nom &gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**
 
         -   **Étendue**: Ajoutez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
@@ -162,7 +162,7 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
     -   **Méthode de classification**: Sélectionnez **Classificateur de dossiers**
 
-    -   Nom de**Propriété** : Sélectionnez **RMS**.
+    -   Nom de **Propriété** : Sélectionnez **RMS**.
 
     -   **Valeur** de propriété : sélectionnez **Oui**.
 
@@ -194,7 +194,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
         -   **Description** : Tapez **Protéger les fichiers dans &lt;nom de dossier&gt; avec Rights Management et un modèle à l’aide d’un script Windows PowerShell.**
 
-            Remplacez le * &lt; nom &gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l'aide d'un script Windows PowerShell**.
+            Remplacez le *&lt; nom &gt; du dossier* par le nom de dossier que vous avez choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l'aide d'un script Windows PowerShell**.
 
         -   **Étendue**: Sélectionnez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
@@ -263,7 +263,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
     2.  Cliquez sur **Attendre la fin de l’exécution de la tâche**, puis sur **OK**.
 
-4.  Attendez que la boîte de dialogue **Exécution de la tâche de gestion des fichiers ** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Le champ **Fichiers** doit indiquer le nombre de fichiers figurant dans le dossier que vous avez choisi. Vérifiez que les fichiers figurant dans le dossier choisi sont à présent protégés par Rights Management. Par exemple, si vous avez choisi le dossier C:\FileShare, tapez la commande suivante dans une session Windows PowerShell, et vérifiez qu’aucun fichier n’est dans l’état **Non protégé** :
+4.  Attendez que la boîte de dialogue **Exécution de la tâche de gestion des fichiers** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Le champ **Fichiers** doit indiquer le nombre de fichiers figurant dans le dossier que vous avez choisi. Vérifiez que les fichiers figurant dans le dossier choisi sont à présent protégés par Rights Management. Par exemple, si vous avez choisi le dossier C:\FileShare, tapez la commande suivante dans une session Windows PowerShell, et vérifiez qu’aucun fichier n’est dans l’état **Non protégé** :
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -304,5 +304,4 @@ Pour faire cette modification, utilisez une des propriétés de classification p
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
-
+Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)

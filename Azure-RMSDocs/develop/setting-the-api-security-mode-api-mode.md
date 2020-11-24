@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 942192690e06422246fa0ed7a4fb2d1d3ccf6cd6
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 5061a3a4375333224989f9a690c22a317e827fac
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563598"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568271"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Comment : définir le mode de sécurité de l’API
 
-Vous pouvez choisir le mode de sécurité qu’exécute votre application API de fichier à l’aide de la fonction [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
+Vous pouvez choisir le mode de sécurité qu’exécute votre application API de fichier à l’aide de la fonction [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty).
 
-Pour initialiser votre application pour qu’elle s’exécute en *mode serveur*, appelez la fonction [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) et choisissez le mode de sécurité [IPC\_API\_MODE\_SERVER](https://msdn.microsoft.com/library/hh535236.aspx). Par défaut, votre application s’exécute en *mode client*, ** \_ \_ \_ client en mode d’API IPC**.
+Pour initialiser votre application pour qu’elle s’exécute en *mode serveur*, appelez la fonction [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty) et choisissez le mode de sécurité [IPC\_API\_MODE\_SERVER](/previous-versions/windows/desktop/msipc/api-mode-values). Par défaut, votre application s’exécute en *mode client*, **\_ \_ \_ client en mode d’API IPC**.
 
 Pour plus d’informations sur le *mode serveur*, consultez [Application types](application-types.md) (Types d’applications).
 
@@ -34,5 +34,5 @@ Pour plus d’informations sur le *mode serveur*, consultez [Application types](
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [Types d’applications](application-types.md)
-* [Valeurs de mode de l’API](https://msdn.microsoft.com/library/hh535236.aspx)
-* [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
+* [Valeurs de mode de l’API](/previous-versions/windows/desktop/msipc/api-mode-values)
+* [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty)

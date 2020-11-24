@@ -1,17 +1,17 @@
 ---
 title: TemplateNotFoundError de classe
 description: 'Documente la classe templatenotfounderror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9c8a1f1d89c581950bc1760a7bcb339e10114c2a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0ba4eae1c1c3d846c5e696a55a8a089b18a583ed
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764231"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567395"
 ---
 # <a name="class-templatenotfounderror"></a>TemplateNotFoundError de classe 
 L’ID de modèle n’est pas reconnu par le service RMS.
@@ -20,25 +20,38 @@ L’ID de modèle n’est pas reconnu par le service RMS.
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: String mMessage  | _Pas encore documenté._
-public std :: map\<std :: String, std :: String\> mDebugInfo  | _Pas encore documenté._
+public std :: map \<std::string, std::string\> mDebugInfo  | _Pas encore documenté._
+public std :: String mName  | _Pas encore documenté._
+public ErrorCode GetErrorCode, () const  |  Obtient le errorCode de l’entrée incorrecte.
 public char const* what() const  |  Obtenir le message d’erreur.
-public std :: shared_ptr\<Error\> Clone () const  |  Cloner l’erreur.
+public std::shared_ptr\<Error\> Clone() const  |  Cloner l’erreur.
 public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
 public const std :: String& GetErrorName () const  |  Obtenir le nom de l’erreur.
 public const std :: String& GetMessage () const  |  Obtenir le message d’erreur.
 public void SetMessage (const std :: String& MSG)  |  Définir le message d’erreur.
 public void AddDebugInfo (const std :: String& clé, const std :: String& value)  |  Ajouter une entrée d’informations de débogage.
-public const std :: map\<std :: String, std :: String\>& GetDebugInfo () const  |  Obtient les informations de débogage.
+public const std :: map \<std::string, std::string\>& GetDebugInfo () const  |  Obtient les informations de débogage.
+énumération ErrorCode  |  Code d’erreur de l’erreur d’entrée incorrecte.
   
 ## <a name="members"></a>Membres
   
 ### <a name="mmessage"></a>mMessage
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="mdebuginfo"></a>mDebugInfo
-_Pas encore documenté._
+Pas encore documenté.
 
+  
+### <a name="mname"></a>mName
+Pas encore documenté.
+
+  
+### <a name="geterrorcode-function"></a>GetErrorCode, fonction)
+Obtient le errorCode de l’entrée incorrecte.
+
+  
+**Retourne**: ErrorCode d’une erreur d’entrée incorrecte
   
 ### <a name="what-function"></a>fonction
 Obtenir le message d’erreur.
@@ -94,3 +107,12 @@ Obtient les informations de débogage.
 
   
 **Retourne**: informations de débogage (clés/valeurs)
+  
+### <a name="errorcode-enum"></a>ErrorCode (énumération)
+
+ Valeurs                         | Descriptions                                
+--------------------------------|---------------------------------------------
+Général            | Erreur d’entrée générale incorrecte
+FileIsTooLargeForProtection            | Le fichier est trop volumineux pour la protection
+
+Code d’erreur de l’erreur d’entrée incorrecte.

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d309f08866bc01cde2725581ccef796bdbe96e98
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 45b5b2b76abb7a2b2c5dcb826ed15774fb81c606
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563564"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568265"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Comment : utiliser des paramètres de chiffrement
 
@@ -41,7 +41,7 @@ Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (aussi appelé « algorithmes déconseillés »)
 
-Vous pouvez utiliser les indicateurs de package de chiffrement (voir [Chiffrement préféré](https://msdn.microsoft.com/library/dn974065.aspx)) conjointement à l’indicateur de propriété de licence *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
+Vous pouvez utiliser les indicateurs de package de chiffrement (voir [Chiffrement préféré](/previous-versions/windows/desktop/msipc/preferred-encryption)) conjointement à l’indicateur de propriété de licence *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
 
 Voici quelques extraits de code simples qui montrent comment utiliser la nouvelle propriété de licence.
 

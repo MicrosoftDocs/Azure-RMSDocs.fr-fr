@@ -1,8 +1,8 @@
 ---
 title: Configurer les étiquettes pour des langues différentes dans Azure Information Protection
 description: Vous pouvez ajouter la prise en charge de différentes langues pour les étiquettes que les utilisateurs voient dans la barre Information Protection et pour tous les modèles visibles par l’utilisateur, en spécifiant les langues dans la stratégie Azure Information Protection et en important vos traductions.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a582a32a149fcaf6146c5deb13d8b88f682d7b0d
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: f39ba64ed2702f4f994d5626697fa5185e546f2b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048270"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568164"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "86048270"
 > [!NOTE]
 > Ces instructions s’appliquent au client Azure Information Protection (classique) et pas au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> Si vous recherchez des informations pour configurer différentes langues pour les étiquettes de sensibilité, utilisez Office 365 Security & Compliance PowerShell et le paramètre *LocaleSettings* pour [Set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+> Si vous recherchez des informations pour configurer différentes langues pour les étiquettes de sensibilité, utilisez Office 365 Security & Compliance PowerShell et le paramètre *LocaleSettings* pour [Set-label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 Bien que les étiquettes par défaut pour Azure Information Protection prennent en charge plusieurs langues, vous devez configurer la prise en charge pour les noms et les descriptions d’étiquette que vous spécifiez. Cette configuration nécessite les actions suivantes :
 
@@ -56,7 +56,7 @@ Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pou
     
     Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **gérer**les  >  **langues** : dans le volet **Azure information protection-langues** , sélectionnez **Ajouter une nouvelle langue pour la traduction**. Sélectionnez les langues à ajouter, puis sélectionnez **OK**. Vous pouvez taper le nom de la langue dans la zone de recherche ou faire défiler la liste des langues disponibles
+2. À partir de l’option de menu **gérer** les  >  **langues** : dans le volet **Azure information protection-langues** , sélectionnez **Ajouter une nouvelle langue pour la traduction**. Sélectionnez les langues à ajouter, puis sélectionnez **OK**. Vous pouvez taper le nom de la langue dans la zone de recherche ou faire défiler la liste des langues disponibles
 
 3. Les langues que vous avez sélectionnées s’affichent désormais dans le volet **Azure information protection-langues** :
     
@@ -115,6 +115,3 @@ Dans les scénarios suivants, les noms localisés des étiquettes (et sous-étiq
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration des options disponibles pour une étiquette et d’autres paramètres de vos stratégies Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
-
-
-

@@ -1,17 +1,17 @@
 ---
 title: ContentLabel de classe
 description: 'Documente la classe contentlabel :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e69a4a8146eb7e7251645ef83a8db0926d383166
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: a60244b9db9b3087dde71cbdbcf63ba170cb06c3
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763401"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567197"
 ---
 # <a name="class-contentlabel"></a>ContentLabel de classe 
 Abstraction d’une étiquette Microsoft Information Protection appliquée à un élément de contenu, généralement un document.
@@ -20,11 +20,11 @@ Elle contient également des propriétés pour une instance d’étiquette appli
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetCreationTime () const  |  Obtenir l’heure de création de l’étiquette.
+public std :: Chrono :: time_point \<std::chrono::system_clock\> GetCreationTime () const  |  Obtenir l’heure de création de l’étiquette.
 public AssignmentMethod GetAssignmentMethod() const  |  Obtenir la méthode d’assignation de l’étiquette.
-public const std :: Vector\<MetadataEntry\>& GetExtendedProperties () const  |  Obtient les propriétés étendues.
+public const std :: Vector \<MetadataEntry\>& GetExtendedProperties () const  |  Obtient les propriétés étendues.
 public bool IsProtectionAppliedFromLabel() const  |  Indique si la protection a été appliquée par l’étiquette ou non.
-public std :: shared_ptr\<label\> getLabel () const  |  Obtient l’objet d’étiquette réel appliqué au contenu.
+public std::shared_ptr\<Label\> GetLabel() const  |  Obtient l’objet d’étiquette réel appliqué au contenu.
   
 ## <a name="members"></a>Membres
   

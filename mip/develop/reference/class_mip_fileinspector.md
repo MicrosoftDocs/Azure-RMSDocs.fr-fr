@@ -1,17 +1,17 @@
 ---
 title: FileInspector de classe
 description: 'Documente la classe fileinspector :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 7411026725983bc92a37275d56495b991cfa9570
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: e53cd0d81013d8a0b4b50b759bd8efb7c0d509b4
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762945"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566942"
 ---
 # <a name="class-fileinspector"></a>FileInspector de classe 
   
@@ -20,4 +20,4 @@ ms.locfileid: "81762945"
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-_Pas encore documenté._
+Pas encore documenté.

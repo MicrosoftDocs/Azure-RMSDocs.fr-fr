@@ -12,12 +12,12 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0b3a2b19efe157dc62c76349f859cdb7baf24bb1
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5957894b004fba25fb50ad921174116648378f66
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047641"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568080"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 
@@ -44,7 +44,7 @@ Utilisez les ressources suivantes pour le client classique :
 > [!TIP]
 > Il existe également une application Azure Information Protection pour iOS et Android. Pour plus d’informations, consultez [Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-faq.md ).
 > 
-> Pour les ordinateurs Mac : utilisez l’application partage RMS et lisez le [Forum aux questions sur Rights Management application de partage pour les plateformes mobiles et Mac](https://technet.microsoft.com/dn451248).
+> Pour les ordinateurs Mac : utilisez l’application partage RMS et lisez le [Forum aux questions sur Rights Management application de partage pour les plateformes mobiles et Mac](/previous-versions/msdn10/dn451248(v=msdn.10)).
 
 ## <a name="install-instructions"></a>Instructions d’installation
 

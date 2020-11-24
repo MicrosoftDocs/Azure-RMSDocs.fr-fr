@@ -1,17 +1,17 @@
 ---
 title: DocumentState de classe
 description: 'Documente la classe documentstate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 674e43b89a43fe90fa1fb38fb7c6d1d51a7326e0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: ad1c99a76c3078c86ec80a4ec6e1cc7d244cbbeb
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763321"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567006"
 ---
 # <a name="class-documentstate"></a>DocumentState de classe 
   
@@ -20,13 +20,13 @@ ms.locfileid: "81763321"
 --------------------------------|---------------------------------------------
 public std::string GetContentIdentifier() const  |  Obtient la description du contenu qui décrit le document. exemple pour un fichier : [path\filename] exemple pour un e-mail : [Subject : sender].
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
-public std :: Vector\<MetadataEntry\> GetContentMetadata (const std :: Vector\<std :: String\>& Names, const std ::\<Vector std ::\> String& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
-public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  Obtenir le descripteur de protection.
+public std :: Vector \<MetadataEntry\> GetContentMetadata (const std :: vector \<std::string\>& Names, const std :: Vector \<std::string\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Obtenir le descripteur de protection.
 public ContentFormat GetContentFormat() const  |  Obtient le format du contenu.
-public virtuel unsigned int GetContentMetadataVersion () const  |  Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.
-public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: Vector\<std :: shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
-public virtuel std :: map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
-public virtuel std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetLastModifiedTime () const  |  Retourne un point d’heure au dernier moment où le document a été modifié.
+MetadataVersion virtuel public GetContentMetadataVersion () const  |  Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.
+public virtuel std :: shared_ptr \<ClassificationResults\> GetClassificationResults (const std :: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
+public virtuel std :: map \<std::string, std::string\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
+public virtuel std :: Chrono :: time_point \<std::chrono::system_clock\> GetLastModifiedTime () const  |  Retourne un point d’heure au dernier moment où le document a été modifié.
   
 ## <a name="members"></a>Membres
   

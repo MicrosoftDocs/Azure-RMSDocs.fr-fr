@@ -1,17 +1,17 @@
 ---
 title: 'classe PolicyProfile :: observer'
 description: 'Documente la classe policyprofile :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5fc8dab4c74b613ff199d16c7b39205476b87249
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 35768afacc22202721fb093c91e4a28a02a99d65
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760612"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567372"
 ---
 # <a name="class-policyprofileobserver"></a>classe PolicyProfile :: observer 
 Interface Observer permettant aux clients d’obtenir les notifications des événements liés aux profils.
@@ -20,17 +20,17 @@ Toutes les erreurs héritent de mip::Error. Le client ne doit pas rappeler le mo
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess (const std :: shared_ptr\<PolicyProfile\>& Profile, const std ::\<shared_ptr\> void& Context)  |  Appelé quand le chargement d’un profil a réussi.
-public virtual void OnLoadFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
-public virtual void OnListEnginesSuccess (const std :: Vector\<std :: String\>& engineIds, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la liste des moteurs a été générée avec succès.
-public virtual void OnListEnginesFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
-public virtuel void OnUnloadEngineSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé quand le déchargement d’un moteur a réussi.
-public virtual void OnUnloadEngineFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand le déchargement d’un moteur a provoqué une erreur.
-public virtual void OnAddEngineSuccess (const std :: shared_ptr\<PolicyEngine\>& moteur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
+public virtual void OnLoadSuccess(const std::shared_ptr\<PolicyProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Appelé quand le chargement d’un profil a réussi.
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
+public virtual void OnListEnginesSuccess (const std :: Vector \<std::string\>& engineIds, const std :: shared_ptr \<void\>& Context)  |  Appelé quand la liste des moteurs a été générée avec succès.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
+public virtual void OnUnloadEngineSuccess(const std::shared_ptr\<void\>& context)  |  Appelé quand le déchargement d’un moteur a réussi.
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand le déchargement d’un moteur a provoqué une erreur.
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<PolicyEngine\>& engine, const std::shared_ptr\<void\>& context)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
 public virtual void OnAddEngineStarting (bool requiresPolicyFetch)  |  Appelée avant la création du moteur pour décrire si les données de stratégie du moteur doivent être extraites du serveur ou si elles peuvent être créées à partir de données mises en cache localement.
-public virtual void OnAddEngineFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
-public virtuel void OnDeleteEngineSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a réussi.
-public virtual void OnDeleteEngineFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Appelé quand la suppression d’un moteur a réussi.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Appelé lorsque la stratégie a été modifiée pour le moteur avec l’ID donné, ou lorsque les types de sensibilité personnalisée chargés ont été modifiés.
   
 ## <a name="members"></a>Membres

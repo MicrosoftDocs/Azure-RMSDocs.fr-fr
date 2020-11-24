@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 841669b3db3e86e2ea6f1860a9d8e9d915c4d28d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564241"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568320"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -36,9 +36,9 @@ La configuration Azure pour cette application vous oblige à créer un ID de loc
 
 ### <a name="azure-ad-tenant-configuration"></a>Configuration du locataire Azure AD
 
-Pour configurer l’environnement de Azure AD pour Azure Information Protection, suivez les instructions de la [Azure information protection activation du service de protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Pour configurer l’environnement de Azure AD pour Azure Information Protection, suivez les instructions de la [Azure information protection activation du service de protection](/information-protection/deploy-use/activate-service).
 
-Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Pour ce faire, procédez comme suit : [administration de la protection à partir de Azure information protection à l’aide de PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) .
+Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Pour ce faire, procédez comme suit : [administration de la protection à partir de Azure information protection à l’aide de PowerShell](/information-protection/deploy-use/administer-powershell) .
 
 ### <a name="getting-your-tenant-id"></a>Obtention de votre ID de locataire
 

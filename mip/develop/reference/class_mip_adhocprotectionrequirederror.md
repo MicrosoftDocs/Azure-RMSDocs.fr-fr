@@ -1,17 +1,17 @@
 ---
 title: AdhocProtectionRequiredError de classe
 description: 'Documente la classe adhocprotectionrequirederror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 0cbd82862816c5996ce84a5861e6ea19c3c91ff1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 9293a27fb862e99cadb3ac0e8d6ee8f01367ebde
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763693"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567294"
 ---
 # <a name="class-adhocprotectionrequirederror"></a>AdhocProtectionRequiredError de classe 
 La protection ad hoc doit être configurée pour terminer l’action sur le fichier.
@@ -21,4 +21,4 @@ La protection ad hoc doit être configurée pour terminer l’action sur le fich
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-_Pas encore documenté._
+Pas encore documenté.

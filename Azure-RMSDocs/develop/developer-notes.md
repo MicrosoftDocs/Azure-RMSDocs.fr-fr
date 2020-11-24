@@ -14,25 +14,25 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: cfa9f00d7a69966c3a6819294e72c8dfccac02fc
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 76516086a4d2963dfa6b3aa293d0c49a28285c09
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564258"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568326"
 ---
 # <a name="rights-management-services-sdk-21-developer-guidance"></a>Guide de développement du kit de développement logiciel (SDK) Rights Management Services 2,1
 
 Cette section traite de recommandations spécifiques pour plusieurs scénarios de développement importants, ainsi que des informations générales sur le développement avec ce SDK. Les scénarios de cette section sont spécifiques à cette version de Rights Management Services SDK 2.1 et peuvent être modifiés dans les versions ultérieures.
 - [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md) - Authentification auprès d’Azure RMS pour votre application à l’aide de la bibliothèque d’authentification ADAL (Azure Active Directory Authentication Library).
-- [Comment : ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) -votre application doit ajouter explicitement des droits « propriétaire » lors de la création d’une licence à partir de zéro ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
+- [Comment : ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) -votre application doit ajouter explicitement des droits « propriétaire » lors de la création d’une licence à partir de zéro ([IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)).
 - [Comment : déboguer une application avec gestion des droits](debugging-applications-that-use-ad-rms.md) - Cette rubrique indique comment déboguer votre application et utiliser le journal des événements Windows.
 - [Comment déployer une application dans un locataire du client](how-to-deploy-app.md) - Cette rubrique souligne les étapes nécessaires au déploiement d’une application depuis son locataire Azure AD de développement dans un locataire Azure AD de production.
 - [Comment : activer le suivi et la révocation des documents](tracking-content.md) - Cette rubrique décrit les instructions de base pour implémenter le suivi des documents pour le contenu ainsi que l’exemple de code pour les mises à jour de métadonnées et la création d’un bouton **Suivre l'utilisation** pour votre application.
 - [Comment : activer les notifications par e-mail](how-to-enable-email-notification.md) - Les notifications par e-mail permettent à un propriétaire de contenu protégé d’être averti quand un utilisateur accède à son contenu.
 - [Comment : permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md) - Cette rubrique décrit les étapes permettant de configurer votre application de service pour qu’elle utilise Azure Rights Management.
 - [Comment : installer et configurer un serveur RMS](how-to-install-and-configure-an-rms-server.md) - Cette rubrique décrit les étapes de connexion à un serveur RMS ou à Azure RMS à des fins de test de votre application avec gestion des droits.
-- [Comment : définir le mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md) - Vous pouvez choisir le mode de sécurité qu’exécute votre application API de fichier à l’aide de la fonction [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
+- [Comment : définir le mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md) - Vous pouvez choisir le mode de sécurité qu’exécute votre application API de fichier à l’aide de la fonction [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty).
 - [Comment : utiliser des paramètres de chiffrement](working-with-encryption.md) - Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques extraits de code pour illustrer leur utilisation.
 - [Types d’applications](application-types.md) : cette rubrique traite des types d’applications que vous pouvez choisir de créer avec une gestion des droits.
 - [Configuration de l’API de fichier](file-api-configuration.md) - Le comportement de l’API de fichier peut être configuré via des paramètres du Registre.

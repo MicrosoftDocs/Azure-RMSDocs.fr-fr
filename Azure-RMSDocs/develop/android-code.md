@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: be43f28a737b45926e247caf2bce932484641052
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 075eae9729ac9175e570a8f0386dadcbfc22bb05
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971912"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568332"
 ---
 # <a name="android-code-examples"></a>Exemples de code Android
 
@@ -42,11 +42,11 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
 
 ### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé RMS
 
-- **Étape 1** : Créer un [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
+- **Étape 1** : Créer un [ProtectedFileInputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java).
 
     **Source** : *MsipcAuthenticationCallback.java*
 
-    **Description** : instancier un objet [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) et implémenter l’authentification du service.  Utilisez [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) pour obtenir un jeton en passant une instance de **AuthenticationRequestCallback**, comme le paramètre *mRmsAuthCallback*, à l’API MSIPC. Reportez-vous à l’appel à [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) vers la fin de la section de l’exemple de code suivant.
+    **Description** : instancier un objet [ProtectedFileInputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) et implémenter l’authentification du service.  Utilisez [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java) pour obtenir un jeton en passant une instance de **AuthenticationRequestCallback**, comme le paramètre *mRmsAuthCallback*, à l’API MSIPC. Reportez-vous à l’appel à [ProtectedFileInputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) vers la fin de la section de l’exemple de code suivant.
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -112,7 +112,7 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
 
     **Source**: *MsipcAuthenticationCallback. Java*.
 
-    **Description** : cette étape utilise la bibliothèque ADAL pour implémenter un [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) avec des exemples de paramètres d’authentification. Pour en savoir plus, consultez la [bibliothèque d'authentification Azure AD (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
+    **Description** : cette étape utilise la bibliothèque ADAL pour implémenter un [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) avec des exemples de paramètres d’authentification. Pour en savoir plus, consultez la [bibliothèque d'authentification Azure AD (ADAL)](/previous-versions/azure/jj573266(v=azure.100)).
 
 
    ``` java
@@ -189,7 +189,7 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
                      }
    ```
 
-- **Étape 3** : Vérifier l’existence de l’autorisation **Edit** pour cet utilisateur avec ce contenu via la méthode [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx).
+- **Étape 3** : Vérifier l’existence de l’autorisation **Edit** pour cet utilisateur avec ce contenu via la méthode [UserPolicy.accessCheck](/previous-versions/windows/desktop/msipcthin2/userpolicy-accesscheck-method-java).
 
     **Source** : *TextEditorFragment.java*
 
@@ -209,7 +209,7 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
 
 Ce scénario commence par obtenir une liste de modèles, sélectionne le premier pour créer une stratégie, puis nous crée et écrit dans le nouveau fichier protégé.
 
-- **Étape 1** : afficher la liste de modèles via un objet [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx).
+- **Étape 1** : afficher la liste de modèles via un objet [TemplateDescriptor](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-class-java).
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -252,7 +252,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-- **Étape 2** : créer une [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) en utilisant le premier modèle de la liste.
+- **Étape 2** : créer une [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) en utilisant le premier modèle de la liste.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -297,7 +297,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
--  **Étape 3** : créer un [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) et y écrire du contenu.
+-  **Étape 3** : créer un [ProtectedFileOutputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java) et y écrire du contenu.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -363,7 +363,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
 
 ### <a name="scenario-open-a-custom-protected-file"></a>Scénario : Ouvrir un fichier protégé personnalisé
 
-- **Étape 1** : créer une [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) à partir d’une *serializedContentPolicy*.
+- **Étape 1** : créer une [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) à partir d’une *serializedContentPolicy*.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -421,7 +421,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
    ```
 
 
-- **Étape 2** : créer un [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) en utilisant la [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) de l’**étape 1**.
+- **Étape 2** : créer un [CustomProtectedInputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-class-java) en utilisant la [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) de l’**étape 1**.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -493,7 +493,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-- **Étape 3** : lire du contenu provenant du [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) dans *mDecryptedContent*, puis fermer.
+- **Étape 3** : lire du contenu provenant du [CustomProtectedInputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-class-java) dans *mDecryptedContent*, puis fermer.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -535,7 +535,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
 
     **Source** : *MsipcTaskFragment.java*
 
-    **Description** : Dans la pratique, les objets suivants sont créés en utilisant des entrées de l’utilisateur à partir de l’interface de l’appareil : [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) et [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **Description** : Dans la pratique, les objets suivants sont créés en utilisant des entrées de l’utilisateur à partir de l’interface de l’appareil : [UserRights](/previous-versions/windows/desktop/msipcthin2/userrights-class-java) et [PolicyDescriptor](/previous-versions/windows/desktop/msipcthin2/policydescriptor-interface-java).
 
     ``` java
       // create userRights list
@@ -552,7 +552,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-- **Étape 2** : créer une [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) personnalisée à partir du descripteur de stratégie *selectedDescriptor*.
+- **Étape 2** : créer une [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) personnalisée à partir du descripteur de stratégie *selectedDescriptor*.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -562,7 +562,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-- **Étape 3** : créer et écrire du contenu dans [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx), puis fermer.
+- **Étape 3** : créer et écrire du contenu dans [CustomProtectedOutputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-class-java), puis fermer.
 
     **Source** : *MsipcTaskFragment.java*
 

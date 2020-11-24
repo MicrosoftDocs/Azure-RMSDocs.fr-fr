@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 41ae437f06a3d90f391ead9dc843e86c1b54fcd8
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 0382a1a97d65938c5d90d10d4e572697558223cc
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068678"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568356"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
 
@@ -27,14 +27,14 @@ ms.locfileid: "80068678"
 
 Les applications du Windows Store peuvent utiliser le Kit Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
-Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
+Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
 
--   [Conditions préalables](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -42,8 +42,8 @@ Vous devez disposer des logiciels suivants sur votre système de développement�
 -   Système d’exploitation [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
 -   [SDK Windows pour Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows pour Windows 8.0/8.1)
--   Package RMS SDK 4.2 pour les applications du Windows Store. Pour plus d’informations, consultez [Prise en main](get-started.md).
--   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
+-   Package RMS SDK 4.2 pour les applications du Windows Store. Pour plus d’informations, consultez [prise en main](get-started.md).
+-   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](/previous-versions/azure/jj573266(v=azure.100)), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, des informations sur les appareils et les environnements, les notes de publication et les questions les plus fréquentes (FAQ).
 
@@ -56,16 +56,16 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Ouvrez Visual Studio.
 -   Cliquez sur **Fichier**, sur **Nouveau**, puis sur **Projet**.
--   Dans la boîte de dialogue **Nouveau projet**, cliquez sur **Visual C\#** , sélectionnez **Application vide (Windows)** , puis cliquez sur **OK**.
+-   Dans la boîte de dialogue **nouveau projet** , cliquez sur **Visual C \#** et sélectionnez **application vide (Windows)** , puis cliquez sur **OK**.
 
-    ![Créer un projet](../media/winrtsetup-newproj.png)
+    ![Création d’un projet](../media/winrtsetup-newproj.png)
 
 -   Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.
 
-    ![Ajouter une référence](../media/winrtsetup-addref.png)
+    ![Ajouter la référence](../media/winrtsetup-addref.png)
 
 -   Dans la boîte de dialogue **Ajouter une référence**, cliquez sur **Parcourir**, puis sélectionnez le fichier *Microsoft.RightsManagement.dll* figurant dans le dossier dans lequel vous avez extrait le package du SDK.
--   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**
+-   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1** - &gt; **Extensions** et cochez la case **package Windows Visual C++ Runtime pour Windows**
 
     ![Ajouter des extensions](../media/winrtsetup-refmngr.png)
 
@@ -75,14 +75,14 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Mise en route](get-started.md)
+[Prise en main](get-started.md)
 
 [Nouveautés](release-notes.md)
 
-[Terminologie et concepts du développement](core-concepts.md)
+[Concepts et termes de développement](core-concepts.md)
 
 [Windows 8](https://windows.microsoft.com/windows-8/meet)
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
+[Référence de l’API Windows](/previous-versions/windows/desktop/msipcthin2/winrt)

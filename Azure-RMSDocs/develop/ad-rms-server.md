@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b396d65b821f258d08e867bad8331b8603d8ccb9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: eae7071115f417e6ea66a98c1bf8820440938718
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788635"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567960"
 ---
-# <a name="server"></a>Server (Serveur)
+# <a name="server"></a>Serveur
 
 Cette rubrique décrit l’objectif et les fonctions du serveur RMS pour Azure et Windows Server.
 
@@ -39,16 +39,16 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 | Administration | Héberge le site web d’administration qui vous permet de gérer RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences. Vous pouvez utiliser l’API de script Active Directory Rights Management Services pour écrire des scripts d’administration.|
 | Certification de compte |Crée des certificats d’ordinateur qui identifient les ordinateurs dans la hiérarchie de certificats RMS, et des certificats de compte de droits qui associent des utilisateurs à des ordinateurs spécifiques. Pour plus d’informations, consultez Activation d’un ordinateur et Activation d’un utilisateur.<p><p>Ce service s’exécute sur le serveur de certification racine. |
 |Licences | Émet une *licence utilisateur final*. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
-|Visual Studio | Crée une *licence d’émission* qui définit les stratégies pouvant être énumérés dans une licence utilisateur final. Pour plus d’informations, consultez [Création d’une licence d’émission](https://msdn.microsoft.com/library/Aa362355).<p><p>Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
+|Publication | Crée une *licence d’émission* qui définit les stratégies pouvant être énumérés dans une licence utilisateur final. Pour plus d’informations, consultez [Création d’une licence d’émission](/previous-versions/windows/desktop/adrms_sdk/creating-an-issuance-license).<p><p>Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 |Précertification | Permet à un serveur demander un *certificat de compte de droits* pour le compte d’un utilisateur. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 |Localisateur de service | Fournit l’URL des services de certification, de gestion des licences et de publication des comptes à Active Directory pour qu’ils puissent être détectés par les clients RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 
 ## <a name="related-topics"></a>Rubriques connexes ##
 * [Vue d’ensemble](ad-rms-overview.md)
-* [Microsoft Internet Information Services](https://www.iis.net/overview)
-* [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
+* [Internet Information Services Microsoft](https://www.iis.net/overview)
+* [Permettre à votre application de service d’opérer avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
 * [Microsoft Windows Rights Management Services avec Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)
-* [API de script Active Directory Rights Management Services](https://msdn.microsoft.com/library/Bb968797)
-* [Activation d’un ordinateur](https://msdn.microsoft.com/library/Cc530377)
-* [Activation d’un utilisateur](https://msdn.microsoft.com/library/Cc530378)
-* [Création d’une licence d’émission](https://msdn.microsoft.com/library/Aa362355)
+* [API de script Active Directory Rights Management Services](/previous-versions/windows/desktop/adrms_script/adrms-script-portal)
+* [Activation d’un ordinateur](/previous-versions/windows/desktop/adrms_sdk/activating-a-computer)
+* [Activation d’un utilisateur](/previous-versions/windows/desktop/adrms_sdk/activating-a-user)
+* [Création d’une licence d’émission](/previous-versions/windows/desktop/adrms_sdk/creating-an-issuance-license)

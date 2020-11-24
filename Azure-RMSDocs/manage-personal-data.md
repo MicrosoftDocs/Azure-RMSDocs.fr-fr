@@ -1,23 +1,23 @@
 ---
 title: Gérer les données personnelles pour Azure Information Protection
 description: Informations sur les données personnelles qui sont utilisées par Azure Information Protection et sur la manière de les afficher, les exporter et les supprimer.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 10/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b808fd6e3c1080d7c6d9f06384408bd196aadc45
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 89f46156ec8e22c0e44a99c9e3d8d5f79b260129
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136818"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567641"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -130,7 +130,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### <a name="document-tracking-logs"></a>Journaux de suivi des documents
 
-Exécutez l’applet de commande [AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) pour récupérer des informations à partir du site de suivi des documents sur un utilisateur spécifique. Pour accéder aux informations de suivi associées aux journaux de document, utilisez l’applet de commande [AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
+Exécutez l’applet de commande [AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) pour récupérer des informations à partir du site de suivi des documents sur un utilisateur spécifique. Pour accéder aux informations de suivi associées aux journaux de document, utilisez l’applet de commande [AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) .
 
 Par exemple :
 ```
@@ -224,7 +224,7 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
 
 - **Lecteur général**
 
-Les données personnelles que vous affichez et spécifiez à l’aide du module AIPService (ou de l’ancien module, AADRM) sont accessibles uniquement aux utilisateurs qui ont reçu les rôles administrateur **Azure information protection**, administrateur de **conformité**, administrateur des **données de conformité**ou administrateur **général** de Azure Active Directory ou le rôle d’administrateur général pour le service de protection.
+Les données personnelles que vous affichez et spécifiez à l’aide du module AIPService (ou de l’ancien module, AADRM) sont accessibles uniquement aux utilisateurs qui ont reçu les rôles administrateur **Azure information protection**, administrateur de **conformité**, administrateur des **données de conformité** ou administrateur **général** de Azure Active Directory ou le rôle d’administrateur général pour le service de protection.
 
 ## <a name="updating-personal-data"></a>Mise à jour des données personnelles
 

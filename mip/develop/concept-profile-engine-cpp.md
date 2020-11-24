@@ -6,18 +6,18 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 51934a4a285368a00aaf23780c7fd6c2f315ed7d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 8c414b5b66525169b1c55ae83f60e91e69188b53
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563951"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "95568439"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux objets de profil et de moteur
 
 ## <a name="profiles"></a>Profils
 
-Où `MipContext` est la classe pour le stockage des paramètres propres au kit de développement logiciel (SDK), le profil est la classe racine pour toutes les opérations d’étiquetage MIP et de protection spécifiques dans le SDK MIP. Avant d’utiliser l’un des trois ensembles d’API, l’application cliente doit créer un profil. Les opérations ultérieures sont effectuées par le profil ou par d’autres objets *ajoutés* au profil.
+Où `MipContext` est la classe pour le stockage des paramètres propres au kit de développement logiciel (SDK), le profil est la classe racine pour toutes les opérations d’étiquetage MIP et de protection spécifiques dans le SDK MIP. Avant d’utiliser l’un des trois ensembles d’API, l’application cliente doit créer un profil. Les opérations ultérieures sont effectuées par le profil ou par d’autres objets *ajoutés* au profil. Un seul objet de profil par processus est recommandé. La création de plusieurs peut entraîner un comportement inattendu. 
 
 Il existe trois types de profil dans le kit SDK MIP :
 

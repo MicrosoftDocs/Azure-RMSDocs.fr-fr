@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: 0d24a2fedad93ecca3b4d5a48f5434746a7a7c4e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 2939a4c64ab3e1a47704811875c6a7e941bcfe3c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763836"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567342"
 ---
 # <a name="structures"></a>Structures
 
@@ -62,7 +62,7 @@ Descripteur opaque vers l’objet MIP
 | Champ | Description |
 |---|---|
 | typeId | Nombre magique identifiant de manière unique des types de descripteurs spécifiques  |
-| data | Données de handle brutes  |
+| Données | Données de handle brutes  |
 
 
 ```c
@@ -90,7 +90,7 @@ Paire clé/valeur
 
 | Champ | Description |
 |---|---|
-| key | Clé  |
+| key | Clé :  |
 | value | Valeur  |
 
 
@@ -327,51 +327,38 @@ typedef struct {
 
 ## <a name="mip_cc_document_state"></a>mip_cc_document_state
 
-Définition de la fonction de rappel pour la récupération du document refléter, filtré par nom/préfixe
+Définition de fonction de rappel pour la récupération du document refléter, filtrée par nom/préfixe.
+
+| Champ | Description |
+|---|---|
+| dataState | État des données de document lorsque l’application interagit avec elle. |
+| contentMetadataCallback | Rappel des métadonnées du document. |
+| protectionDescriptor | Descripteur de protection si le document est actuellement protégé, sinon null.  |
+| contentFormat | Format du document (fichier ou courrier électronique).  |
+| auditMetadata | Métadonnées spécifiques à l’application facultatives qui sont utilisées lors de l’envoi de rapports d’audit. Valeurs reconnues : 'sender' : adresse e-mail de l’expéditeur ; « Recipients » : tableau JSON des destinataires du courrier électronique ; 'LastModifiedBy' : adresse de messagerie de l’utilisateur qui a modifié un document pour la dernière fois ; 'LastModifiedDate & ' : date de la dernière modification d’un document  |
+| contentMetadataVersion | Version des métadonnées du document, la valeur par défaut doit être 0.  |
+| contentMetadataVersionFormat | Décrit le mode de traitement du contrôle de version des métadonnées.  |
 
 ```c
 typedef struct {
-  /**
-   * Human-readable document description visible in tenant audit portal
-   *     Example for a file: [path\filename]
-   *     Example for an email: [Subject:Sender]
-   */
+
   const char* contentId;
 
-  /**
-   * State of document data as application interacts with it
-   */
+
   mip_cc_data_state dataState;
 
-  /**
-   * Document metadata callback
-   */
   mip_cc_metadata_callback contentMetadataCallback;
 
-  /**
-   * Protection descriptor if document is currently protected, else null
-   */
   mip_cc_protection_descriptor protectionDescriptor;
 
-  /**
-   * Format of document (file vs. email)
-   */
   mip_cc_content_format contentFormat;
 
-  /**
-   * Optional application-specific metadata that is used when sending audit reports
-   *     Recognized values:
-   *       'Sender': Sender email address
-   *       'Recipients': JSON array of email recipients
-   *       'LastModifiedBy': Email address of the user who last modified a document
-   *       'LastModifiedDate': Date a document was last modified
-   */
   mip_cc_dictionary auditMetadata;
-  
-  /**
-   * Document metadata version, default should be 0.
-   */
-  unsigned int contentMetadataVersion;
+
+  uint32_t contentMetadataVersion;
+
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
 } mip_cc_document_state;
 
 ```
@@ -384,7 +371,7 @@ Entrée de métadonnées
 |---|---|
 | key | Entrée de clé |
 | value | Entrée de valeur  |
-| version | L’entrée de version doit être initialisée à 0, sauf si elle est connue |
+| Version | L’entrée de version doit être initialisée à 0, sauf si elle est connue |
 
 
 ```c

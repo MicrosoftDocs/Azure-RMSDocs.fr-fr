@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3caecdd8d5b5cc173ebe148eaefe3f2202613ab3
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: d187e7ae4237d0e92b480750f74596109f440cbe
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135655"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568217"
 ---
 # <a name="how-to-enable-email-notification"></a>Comment : activer les notifications par e-mail
 
 Les notifications par e-mail permettent à un propriétaire de contenu protégé d’être averti quand un utilisateur accède à son contenu.
 
-Pour configurer votre notification par courrier électronique pour une licence donnée, utilisez [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) avec le paramètre de type de propriété *dwPropID*, en tant que [ \_ \_ \_ \_ données spécifiques à l’application IPC Li](https://msdn.microsoft.com/library/hh535287.aspx) et les champs de données d’application sous la forme d’une [liste de \_ valeurs de nom \_ \_ IPC](https://msdn.microsoft.com/library/hh535277.aspx).
+Pour configurer votre notification par courrier électronique pour une licence donnée, utilisez [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty) avec le paramètre de type de propriété *dwPropID*, en tant que [ \_ \_ \_ \_ données spécifiques à l’application IPC Li](/previous-versions/windows/desktop/msipc/license-property-types) et les champs de données d’application sous la forme d’une [liste de \_ valeurs de nom \_ \_ IPC](/previous-versions/windows/desktop/msipc/ipc-name-value-list).
 
 **C++**:
 
@@ -48,7 +48,7 @@ result = IpcSetLicenseProperty(licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, e
 Le tableau suivant contient les champs de données de l’application (les paires nom/valeur des propriétés) pour les e-mails de notification RMS.
 
 
-|Nom de la propriété | Type de données | Exemple de valeur | Remarques |
+|Nom de la propriété | Type de données | Exemple de valeur | Notes |
 |--------------|-----------|---------------|-------|
 |MS.Content.Name|string|« FinancialReport.docx »|Il s’agit d’un identificateur associé au contenu protégé.<br><br> Pour les fichiers protégés, cette valeur doit être le nom du fichier, sans les informations de chemin.<br><br> Pour les autres types de contenu, par exemple, les e-mails, cette valeur peut correspondre à l’objet de l’e-mail ou bien être vide.|
 |MS.Notify.Enabled|string|« true » &#124; « false »|Si cette valeur est définie sur « true », un e-mail de notification est envoyé au propriétaire de la licence de publication quand un utilisateur tente d’utiliser sa licence pour obtenir une licence utilisateur final.|
@@ -60,6 +60,6 @@ Le tableau suivant contient les champs de données de l’application (les paire
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
-- [\_ \_ \_ données spécifiques de l’application IPC Li \_](https://msdn.microsoft.com/library/hh535287.aspx)
-- [IPC \_ \_ \_ liste de valeurs de nom](https://msdn.microsoft.com/library/hh535277.aspx).
+- [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty)
+- [\_ \_ \_ données spécifiques de l’application IPC Li \_](/previous-versions/windows/desktop/msipc/license-property-types)
+- [IPC \_ \_ \_ liste de valeurs de nom](/previous-versions/windows/desktop/msipc/ipc-name-value-list).

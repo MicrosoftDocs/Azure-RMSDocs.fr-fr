@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 35eb3d59031fb30de1c9d6b1c6cdd2745f7d7ef2
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264325"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568247"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "88264325"
 > [!NOTE]
 > La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dans la documentation relative à la conformité de Microsoft 365.
+> Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) dans la documentation relative à la conformité de Microsoft 365.
 
 Pour configurer la classification, l’étiquetage et la protection du client classique, vous devez configurer la stratégie de Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs sur lesquels est installé le client Azure Information Protection.
 
@@ -48,7 +48,7 @@ Azure Information Protection prend en charge différents niveaux d’abonnement 
 
 - Azure Information Protection P1 : Prise en charge de la plupart des fonctionnalités de classification, d’étiquetage et de protection, mais pas la classification automatique ou le HYOK.
 
-- Office 365 incluant le service Azure Rights Management : prise en charge de la protection, mais pas de la classification et de l’étiquetage.
+- Microsoft 365 qui comprend le service Azure Rights Management : la prise en charge de la protection, mais pas la classification et l’étiquetage.
 
 Les options qui nécessitent un abonnement Azure Information Protection P2 sont identifiées dans le portail.
 
@@ -56,7 +56,7 @@ Si votre organisation a différents types d’abonnements, vous êtes responsabl
 
 - **Si votre organisation possède une combinaison de licences Azure Information Protection P1 et Azure Information Protection P2** : pour les utilisateurs qui ont une licence P2, créez et utilisez une ou plusieurs [stratégies délimitées](configure-policy-scope.md) lorsque vous configurez des options qui nécessitent une licence Azure Information Protection P2. Assurez-vous que votre stratégie globale ne contient pas d’options qui nécessitent une licence Azure Information Protection P2.
 
-- **Si votre organisation a un abonnement à Azure Information Protection, mais que certains utilisateurs possèdent uniquement une licence pour Office 365 qui inclut le service Azure Rights Management** : pour les utilisateurs qui n’ont pas de licence pour Azure Information Protection, modifiez le Registre sur leurs ordinateurs pour qu’ils ne téléchargent pas la stratégie Azure Information Protection. Pour obtenir des instructions, consultez le guide d’administration pour la personnalisation suivante : [Appliquer le mode Protection uniquement si votre organisation possède différents types de licences](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **Lorsque votre organisation dispose d’un abonnement pour Azure information protection mais que certains utilisateurs disposent uniquement d’une licence pour Microsoft 365 incluant le service Rights Management Azure**: pour les utilisateurs qui n’ont pas de licence pour Azure information protection, modifiez le registre sur leurs ordinateurs afin qu’ils ne téléchargent pas la stratégie Azure information protection. Pour obtenir des instructions, consultez le guide d’administration pour la personnalisation suivante : [Appliquer le mode Protection uniquement si votre organisation possède différents types de licences](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Pour plus d’informations sur les abonnements, consultez [De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
@@ -163,7 +163,7 @@ Utilisez les informations suivantes pour configurer la stratégie Azure Informat
 
 - [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md)
 
-- [Guide pratique pour migrer des étiquettes Azure Information Protection sur Office 365](configure-policy-migrate-labels.md)
+- [Comment migrer des étiquettes Azure Information Protection vers Microsoft 365](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>Étiquettes d’information stockées dans des e-mails et des documents
 
@@ -186,4 +186,3 @@ Pour obtenir des exemples montrant comment personnaliser la stratégie Azure Inf
 - [Configurer les paramètres de stratégie Azure Information Protection qui interagissent](infoprotect-settings-tutorial.md)
 
 Pour plus d’informations sur l’exécution de votre stratégie, consultez [rapports centraux pour Azure information protection](reports-aip.md).
-

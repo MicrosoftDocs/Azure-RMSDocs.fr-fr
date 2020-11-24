@@ -1,17 +1,17 @@
 ---
 title: AddWatermarkActionData de classe
 description: 'Documente la classe addwatermarkactiondata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ea7bf76775e8b77f2272129f0c07d7b82bfdafb0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 08098341c1bb0a6d8f91534d669a5fc5ef901ee2
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763729"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567311"
 ---
 # <a name="class-addwatermarkactiondata"></a>AddWatermarkActionData de classe 
   
@@ -28,24 +28,24 @@ virtuel public ~ AddWatermarkActionData ()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="gettext-function"></a>GetText, fonction
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getfontname-function"></a>GetFontName fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getfontcolor-function"></a>GetFontColor fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getfontsize-function"></a>GetFontSize fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getwatermarklayout-function"></a>GetWatermarkLayout fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="addwatermarkactiondata-function"></a>~ AddWatermarkActionData fonction)
-_Pas encore documenté._
+Pas encore documenté.

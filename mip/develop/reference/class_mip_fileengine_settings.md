@@ -1,33 +1,33 @@
 ---
 title: 'classe FileEngine :: Settings'
 description: 'Documente la classe fileengine :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 05fb06ec06943b39209c980236643e50d873d451
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763269"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566974"
 ---
 # <a name="class-fileenginesettings"></a>classe FileEngine :: Settings 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: String& engineId, const std :: shared_ptr\<AuthDelegate\>& AuthDelegate, const std :: String& ClientData :, const std :: String& paramètres régionaux, bool loadSensitivityTypes)  |  Constructeur FileEngine::Settings pour le chargement d’un moteur existant.
-Paramètres publics (const Identity& Identity, const std :\<:\> shared_ptr AuthDelegate& AuthDelegate, const std :: String& ClientData :, const std :: String& locale, bool loadSensitivityTypes)  |  Constructeur FileProfile::Settings pour la création d’un moteur.
+Paramètres publics (const std :: String& engineId, const std :: shared_ptr \<AuthDelegate\>& authDelegate, const std :: string& ClientData :, const std :: string& paramètres régionaux, bool loadSensitivityTypes)  |  Constructeur FileEngine::Settings pour le chargement d’un moteur existant.
+Paramètres publics (const Identity& Identity, const std :: shared_ptr \<AuthDelegate\>& authDelegate, const std :: string& ClientData :, const std :: string& locale, bool loadSensitivityTypes)  |  Constructeur FileProfile::Settings pour la création d’un moteur.
 public const std::string& GetEngineId() const  |  Retourne l’ID du moteur.
 public void SetEngineId(const std::string& id)  |  Définir l’ID du moteur.
 public const Identity& GetIdentity() const  |  Retourne l’identité du moteur.
 public void SetIdentity(const Identity& identity)  |  Définit l’identité du moteur.
 public const std::string& GetClientData() const  |  Retourne les données clientes du moteur.
 public const std::string& GetLocale() const  |  Retourne les paramètres régionaux du moteur.
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& value)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetCustomSettings (const std :: Vector \<std::pair\<std::string, std::string\> \>& valeur)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std :: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
 public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
 public void SetCloud (Cloud Cloud)  |  Définit éventuellement le Cloud cible.
@@ -43,10 +43,14 @@ public void EnablePFile (valeur bool)  |  Définit l’indicateur qui spécifie 
 public const bool IsPFileEnabled ()  |  Obtient l’indicateur qui spécifie si produit fichiers pfile.
 public void SetDelegatedUserEmail (const std :: String& delegatedUserEmail)  |  Définit l’utilisateur délégué.
 public const std :: String& GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
-public void SetLabelFilter (const std :: Vector\<LabelFilterType\>& labelFilter)  |  Définit le filtre d’étiquette.
-public const std :: Vector\<LabelFilterType\>& GetLabelFilter () const  |  Obtient le filtre d’étiquette.
-public void SetAuthDelegate (const std :: shared_ptr\<authDelegate\>& AuthDelegate)  |  Définissez le délégué d’authentification du moteur.
-public std :: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Obtient le délégué d’authentification du moteur.
+public void SetLabelFilter (const std :: Vector \<LabelFilterType\>& deprecatedLabelFilters)  |  Définit le filtre d’étiquette.
+public const std :: Vector \<LabelFilterType\>& GetLabelFilter () const  |  Obtient les filtres d’étiquette définis via la fonction déconseillée SetLabelFilter.
+public void ConfigureFunctionality (LabelFilterType labelFilterType, bool Enabled)  |  Active ou désactive la fonctionnalité.
+public const std :: map \<LabelFilterType, bool\>& GetConfiguredFunctionality () const  |  Obtient les fonctionnalités configurées.
+public void SetClassifierEnabled (classifieur classifierType, bool Enabled)  |  Active ou désactive la prise en charge des types de classification.
+public const std :: map \<Classifier, bool\>& GetConfiguredClassifierSupport () const  |  Obtient les substitutions de classifieur prises en charge.
+public void SetAuthDelegate (const std :: shared_ptr \<AuthDelegate\>& authDelegate)  |  Définissez le délégué d’authentification du moteur.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Obtient le délégué d’authentification du moteur.
   
 ## <a name="members"></a>Membres
   
@@ -179,7 +183,7 @@ Retourne l’indicateur du moteur de protection uniquement - sans étiquette/str
 Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la charge sont activées.
 
   
-**Retourne**la valeur true si l’option est activée. sinon, false.
+**Retourne** la valeur true si l’option est activée. sinon, false.
   
 ### <a name="enablepfile-function"></a>EnablePFile fonction)
 Définit l’indicateur qui spécifie si produit fichiers pfile.
@@ -188,7 +192,7 @@ Définit l’indicateur qui spécifie si produit fichiers pfile.
 Obtient l’indicateur qui spécifie si produit fichiers pfile.
 
   
-**Retourne**la valeur true si l’option est activée. sinon, false.
+**Retourne** la valeur true si l’option est activée. sinon, false.
   
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail fonction)
 Définit l’utilisateur délégué.
@@ -215,11 +219,47 @@ Paramètres :
 Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles. Si la valeur n’est pas définie, HyokProtection et DoubleKeyProtection sont filtrés.
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter fonction)
-Obtient le filtre d’étiquette.
+Obtient les filtres d’étiquette définis via la fonction déconseillée SetLabelFilter.
 
   
 **Retourne**: filtre d’étiquette.
 Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles.
+  
+### <a name="configurefunctionality-function"></a>ConfigureFunctionality fonction)
+Active ou désactive la fonctionnalité.
+
+Paramètres :  
+* **labelFilterType**: type de fonctionnalité. 
+
+
+* **activé**: true pour activer, false pour désactiver
+
+
+HyokProtection, DoubleKeyProtection, DoubleKeyUserDefinedProtection sont désactivés par défaut et doivent être activés
+  
+### <a name="getconfiguredfunctionality-function"></a>GetConfiguredFunctionality fonction)
+Obtient les fonctionnalités configurées.
+
+  
+**Retourne**: un mappage des types à une valeur booléenne indiquant si elle est activée ou non.
+  
+### <a name="setclassifierenabled-function"></a>SetClassifierEnabled fonction)
+Active ou désactive la prise en charge des types de classification.
+
+Paramètres :  
+* **classifierType**: type de classifieur 
+
+
+* **activé**: true pour activer, false pour désactiver
+
+
+Seuls les classifers SensitiveInformation sont activés par défaut
+  
+### <a name="getconfiguredclassifiersupport-function"></a>GetConfiguredClassifierSupport fonction)
+Obtient les substitutions de classifieur prises en charge.
+
+  
+**Retourne**: un mappage des types à une valeur booléenne indiquant s’ils ont été remplacés par la prise en charge
   
 ### <a name="setauthdelegate-function"></a>SetAuthDelegate fonction)
 Définissez le délégué d’authentification du moteur.

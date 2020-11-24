@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: a07db66ed4edec0e80e3afa44741faecbe6a945b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972048"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568290"
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
@@ -29,10 +29,10 @@ Les applications iOS et OS X peuvent utiliser le SDK Microsoft Rights Management
 
 Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
 
-**Remarque**  ce SDK ne prend pas en charge iPod Touch.
+**Remarque**    Ce kit de développement logiciel (SDK) ne prend pas en charge iPod Touch.
 
 
--   [Conditions préalables](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
@@ -50,7 +50,7 @@ Nous vous recommandons de disposer des logiciels suivants sur votre système de 
 
     Vous pouvez utiliser ce SDK pour développer pour iOS 7.0 et OS X 10.8 et versions ultérieures.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](/previous-versions/azure/jj573266(v=azure.100)). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) ou [ADAL pour OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -103,7 +103,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Vous êtes maintenant prêt à créer vos propres applications iOS/OS X.
 
-### <a name="see-also"></a> Voir aussi
+### <a name="see-also"></a>Voir aussi
 
 * [Prise en main](get-started.md)
 
@@ -111,4 +111,4 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 * [Concepts et termes de développement](core-concepts.md)
 
-* [informations de référence sur l’API iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
+* [informations de référence sur l’API iOS/OS X](/previous-versions/windows/desktop/msipcthin2/ios)

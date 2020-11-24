@@ -1,8 +1,8 @@
 ---
 title: Configurer une étiquette Azure Information Protection à des fins de protection – AIP
 description: Lorsque vous configurez une étiquette pour utiliser la protection de Rights Management, vous pouvez protéger vos documents et vos e-mails les plus sensibles.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 141a8e6642745dc36dfd596d11b8153e20c09e69
-ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
+ms.openlocfilehash: 3ff562aba7243964275314875a52152ec7053fe2
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334162"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568487"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection de Rights Management
 
@@ -56,7 +56,7 @@ Pour plus d’informations sur la protection d’Azure Rights Management et sur 
 Lorsque l’étiquette applique la protection, il est impossible d’enregistrer un document protégé sur OneDrive ou SharePoint. Ces emplacements ne prennent pas en charge les fonctionnalités suivantes pour les fichiers protégés : co-création, Office pour le Web, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données (DLP).
 
 > [!TIP]
-> Lorsque vous [migrez vos étiquettes](configure-policy-migrate-labels.md) vers des étiquettes de confidentialité unifiées et que vous les publiez à partir d’un des centres d’administration d’étiquetage tels que le Centre de conformité Microsoft 365, les étiquettes qui appliquent la protection sont alors prises en charge pour ces emplacements. Pour plus d’informations, consultez [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> Lorsque vous [migrez vos étiquettes](configure-policy-migrate-labels.md) vers des étiquettes de confidentialité unifiées et que vous les publiez à partir d’un des centres d’administration d’étiquetage tels que le Centre de conformité Microsoft 365, les étiquettes qui appliquent la protection sont alors prises en charge pour ces emplacements. Pour plus d’informations, consultez  [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange ne doit pas être configuré pour Azure Information Protection avant que les utilisateurs ne puissent appliquer des étiquettes dans Outlook pour protéger leurs e-mails. Toutefois, tant qu’Exchange n’est pas configuré pour Azure Information Protection, vous n’obtenez pas toutes les fonctionnalités de la protection Azure Rights Management avec Exchange. Par exemple, les utilisateurs ne peuvent pas afficher les e-mails protégés sur un téléphone mobile ou avec Outlook sur le web, les e-mails protégés ne peuvent pas être indexés pour la recherche, et vous ne pouvez pas configurer Exchange Online DLP pour la protection de Rights Management. Pour qu’Exchange puisse prendre en charge ces scénarios supplémentaires, consultez les ressources suivantes :
 
@@ -113,7 +113,11 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
        Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement résultant lorsque les utilisateurs appliquent l’étiquette est le même que l’option [ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails) .
         
        Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : lorsque cette option est définie, l’étiquette est affichée dans ces applications. Le comportement lorsque les utilisateurs appliquent l’étiquette consiste à afficher la boîte de dialogue pour que les utilisateurs sélectionnent les autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs choisissent l’un des [niveaux d’autorisation prédéfinis](configure-usage-rights.md#rights-included-in-permissions-levels), accèdent aux utilisateurs ou groupes, ou les spécifient, et s’ils le souhaitent, définissent une date d’expiration. Assurez-vous que les utilisateurs disposent des instructions et des conseils nécessaires pour fournir ces valeurs.
-    
+
+        > [!NOTE]
+        > Azure Information Protection la prise en charge de la définition des autorisations définies par l’utilisateur est actuellement disponible en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
+        >
+     
    - **Sélectionner un modèle prédéfini** : pour utiliser l’un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Notez que cette option ne s’affiche pas pour les nouvelles étiquettes si vous modifiez une étiquette qui utilisait l’option **Définir les autorisations**.
     
      Pour sélectionner un modèle prédéfini, le modèle doit être publié (pas archivé) et il ne doit pas déjà être lié à une autre étiquette. Lorsque vous sélectionnez cette option, vous pouvez utiliser un bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
@@ -156,7 +160,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      ###### <a name="information-about-the-protection-settings"></a>Informations sur les paramètres de protection
     
-     |Paramètre|Plus d’informations|Paramètre recommandé
+     |Paramètre|Autres informations|Paramètre recommandé
      |-----------|--------------------|--------------------|
      |**Expiration du contenu du fichier**|Définissez une date ou un nombre de jours limite pour l’ouverture par les utilisateurs sélectionnés des documents protégés par ces paramètres. Pour les e-mails, l’expiration n’est pas toujours appliquée en raison des mécanismes de mise en cache utilisés par certains clients de messagerie.<br /><br />Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, cette dernière prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais** sauf s’il est associé à une exigence temporelle spécifique.|
      |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter avant de pouvoir ouvrir le document ou l’e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent obtenir des résultats d’accès différents pour le même document ou e-mail si la stratégie ou l’appartenance au groupe a changé par rapport au moment où ils ont accédé au contenu pour la dernière fois. Cela peut inclure le refus d’accès à un document si ce dernier a été [révoqué](./rms-client/client-track-revoke.md).|Selon la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet**  =  **7** pour les données sensibles de l’entreprise qui pourraient nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation est un bon compromis entre flexibilité et sécurité. Elle peut concerner les contrats, les rapports de sécurité, les synthèses de prévision et les données commerciales, par exemple.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient nuire à l’entreprise si elles étaient partagées avec des personnes non autorisées. Cette recommandation privilégie la sécurité par rapport à la flexibilité, et elle garantit qu’en cas de révocation du document, tous les utilisateurs autorisés sont dans l’incapacité d’ouvrir le document immédiatement. Elle peut concerner les informations relatives aux employés et aux clients, les mots de passe, le code source et les rapports financiers préannoncés, par exemple.|
@@ -214,11 +218,11 @@ Vos utilisateurs saisissent l’adresse e-mail Gmail dans le champ **À**.  Ensu
 
 1. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
-2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)**.
+2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
 
-3. Assurez-vous que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
+3. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 
-4. Si cette option est sélectionnée, désélectionnez l’option suivante : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
+4. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
 
 5. Cliquez sur **OK** dans le volet **Protection**, puis sur **Enregistrer** dans le volet **Étiquette**.
 
@@ -334,4 +338,4 @@ La configuration de l’étiquette est extrêmement simple :
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy). 
 
-Les règles de flux de messagerie Exchange peuvent également appliquer une protection, en fonction de vos étiquettes. Pour plus d’informations et d’exemples, consultez [Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection](configure-exo-rules.md).  
+Les règles de flux de messagerie Exchange peuvent également appliquer une protection, en fonction de vos étiquettes. Pour plus d’informations et d’exemples, consultez [Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection](configure-exo-rules.md).

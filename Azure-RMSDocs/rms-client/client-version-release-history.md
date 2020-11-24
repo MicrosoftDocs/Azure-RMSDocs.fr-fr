@@ -4,7 +4,7 @@ description: Découvrez les nouveautés et les modifications d’une version du 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a51376fc2d6114f7d23ec937b4d8ea1238d1655
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 146fa9442aa5fcb05cebab27f1d4104bd33328f0
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953233"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568470"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -40,12 +40,11 @@ Pour plus d’informations, consultez [Mise à niveau et maintenance du client A
 
 Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. À l’exception de cette section, la documentation n’inclut pas d’informations sur les versions du client non prises en charge. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
-Les versions préliminaires ne doivent pas être déployées auprès des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
-
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge :
 
 |Version du client|Date de publication|
 |--------------|-------------|
+|1.54.33.0 | 23/10/2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|27/11/2018|
@@ -64,11 +63,13 @@ Le format de date utilisé sur cette page est *mois/jour/année*.
 
 À compter du 6/2/2019, le service d’étiquetage pour Azure Information Protection nécessite des connexions qui utilisent TLS 1,2.
 
-Toutes les versions du client de 1.4.21.0 publiées 03/15/2017 prennent en charge TLS 1,2. Les versions clientes **1.3.155.2**, **1.2.4.0**et **1.1.23.0** n’utilisent pas TLS 1,2 et ne peuvent donc plus télécharger la stratégie de Azure information protection.
+Toutes les versions du client de 1.4.21.0 publiées 03/15/2017 prennent en charge TLS 1,2. Les versions clientes **1.3.155.2**, **1.2.4.0** et **1.1.23.0** n’utilisent pas TLS 1,2 et ne peuvent donc plus télécharger la stratégie de Azure information protection.
 
 ### <a name="release-history"></a>Historique des mises en production
 
 Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge du client Azure Information Protection pour Windows. La dernière version est répertoriée en première position.
+
+Notez que les fonctionnalités de Azure Information Protection sont actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas listés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, nous vous recommandons de vérifier s’il n’est pas résolu dans la toute dernière version GA. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
@@ -77,7 +78,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 ## <a name="version-154590"></a>Version 1.54.59.0
 
-**Publication**: 12/02/2020
+**Publication**: 02/12/2020
 
 Cette version comprend uniquement des correctifs. 
 
@@ -90,16 +91,6 @@ Cette version comprend uniquement des correctifs.
 - Les problèmes de stabilité du client lors de l’utilisation de fichiers PDF protégés sont résolus. 
 
 - Les étiquettes de protection sont maintenant supprimées comme prévu si l’étiquette est supprimée de l’e-mail pendant le processus de création de l’e-mail. 
-
-## <a name="version-154330"></a>Version 1.54.33.0
-
-**Publication**: 10/23/2019
-
-Pris en charge jusqu’à 08/12/2020
-
-Cette version comprend la version MSIPC 1.0.4008.0813 du client RMS.
-
-Cette version propose des correctifs généraux pour la stabilité et les performances.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

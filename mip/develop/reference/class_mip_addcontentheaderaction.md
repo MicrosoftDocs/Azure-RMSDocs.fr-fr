@@ -1,17 +1,17 @@
 ---
 title: AddContentHeaderAction de classe
 description: 'Documente la classe addcontentheaderaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 090bf4e1ad70238d6023a914fba4786a97a25a0d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763761"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567324"
 ---
 # <a name="class-addcontentheaderaction"></a>AddContentHeaderAction de classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Obtenir la marge de l’en-tête à partir du b
 API utilisée pour marquer l’élément d’en-tête de contenu.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient l’en-tête de contenu. Le même nom est retourné dans [RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) si l’en-tête de contenu doit être supprimé.
+**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient l’en-tête de contenu. Le même nom est retourné dans RemoveContentHeaderAction si l’en-tête de contenu doit être supprimé.
   
 ### <a name="gettext-function"></a>GetText, fonction
 Obtenir le texte devant être placé dans l’en-tête de contenu.

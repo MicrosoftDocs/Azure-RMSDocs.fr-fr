@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2e727e438f0baf5cb61a59b699da811e36e48d4f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: da5c20824af73ed28a602cffb79c3e4167db5bf7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802077"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568115"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Guide de l’utilisateur : classifier et protéger avec le client Azure Information Protection
 
@@ -39,7 +39,7 @@ Cependant, vous pouvez également classer et protéger les fichiers à l’aide 
 Si votre étiquette applique une protection à un document, il n’est pas approprié d’enregistrer un document protégé sur SharePoint ou OneDrive. Ces emplacements ne prennent pas en charge les éléments suivants pour les fichiers protégés : co-création, Office pour le Web, recherche, aperçu du document, miniature et eDiscovery.
 
 > [!TIP]
-> Demandez à votre administrateur de migrer vos étiquettes vers des étiquettes de sensibilité unifiée prises en charge pour ces emplacements lorsque [SharePoint est activé pour les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> Demandez à votre administrateur de migrer vos étiquettes vers des étiquettes de sensibilité unifiée prises en charge pour ces emplacements lorsque [SharePoint est activé pour les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partager un fichier en toute sécurité avec des personnes extérieures à votre organisation
 
@@ -88,7 +88,7 @@ Raisons possibles :
 
 - Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez sur **protéger**  >  **l’aide et les commentaires**. Dans la boîte de dialogue, vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n’est pas sous licence pour Office Professionnel Plus**. 
     
-    Vous n’avez pas besoin d’Office Professionnel Plus si vous avez des applications Office d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur.
+    Vous n’avez pas besoin d’Office professionnel plus si vous avez des applications Office à partir de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure Information Protection pour Office 365).
 
 - L’étiquette peut être dans une stratégie délimitée qui n’inclut pas votre compte. Contactez votre support technique ou votre administrateur.
 
@@ -195,4 +195,3 @@ Plus d’instructions pratiques dans le guide de l’utilisateur Azure Informati
 Pour des instructions de configuration permettant d’activer le paramètre de stratégie **Rendre l’option des autorisations personnalisées disponible aux utilisateurs**, consultez [Configuration des paramètres de stratégie Azure Information Protection](../configure-policy-settings.md).
 
 Autres instructions de configuration : [Configuration de la stratégie Azure Information Protection](../configure-policy.md).
-

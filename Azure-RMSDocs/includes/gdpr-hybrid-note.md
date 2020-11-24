@@ -1,6 +1,6 @@
 ---
-title: fichier descriptif
-description: fichier descriptif
+title: Fichier Include
+description: Fichier Include
 services: azure-policy
 author: eross-msft
 ms.service: azure-policy
@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.date: 07/01/2018
 ms.author: lizross
 ms.custom: include file
-ms.openlocfilehash: 99039744ae3fc37b7959b6fdfd65bda131d2a617
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 5b279a36f5b53a9dafe2e33137b3a2a015435896
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326718"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567792"
 ---
 >[!Note]
->Si vous voulez afficher ou supprimer des données personnelles, veuillez consulter les conseils de Microsoft dans [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) et dans la [section RGPD du site Conformité de Microsoft 365 Entreprise](https://docs.microsoft.com/microsoft-365/compliance/gdpr). Si vous recherchez des informations générales sur le RGPD, consultez la [section sur le RGPD du portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Si vous souhaitez afficher ou supprimer des données personnelles, consultez les conseils de Microsoft dans [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) et dans la [section RGPD du site de conformité Microsoft 365 entreprise](/microsoft-365/compliance/gdpr) . Si vous recherchez des informations générales sur le RGPD, consultez la [section RGPD du portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

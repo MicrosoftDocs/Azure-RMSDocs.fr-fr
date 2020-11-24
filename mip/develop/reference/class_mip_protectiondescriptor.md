@@ -1,17 +1,17 @@
 ---
 title: ProtectionDescriptor de classe
 description: 'Documente la classe protectiondescriptor :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b4257be5475b1225f79efe00c11df4b79ee67ee9
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 16095a9183fb0dd89306a4769cd21499afc09d55
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763947"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567156"
 ---
 # <a name="class-protectiondescriptor"></a>ProtectionDescriptor de classe 
 Description de la protection associée à un élément de contenu.
@@ -26,14 +26,14 @@ public std::string GetDescription() const  |  Obtient la description de la prote
 public std::string GetTemplateId() const  |  Obtient l’ID du modèle de protection, le cas échéant.
 public std::string GetLabelId() const  |  Obtient l’ID de l’étiquette, le cas échéant.
 public std :: String GetContentId () const  |  Obtient l’ID de contenu, le cas échéant.
-public std :: Vector\<UserRights\> GetUserRights () const  |  Obtient la collection de mappages utilisateurs-droits.
-public std :: Vector\<UserRoles\> GetUserRoles () const  |  Obtient la collection de mappages utilisateurs-rôles.
+public std::vector\<UserRights\> GetUserRights() const  |  Obtient la collection de mappages utilisateurs-droits.
+public std::vector\<UserRoles\> GetUserRoles() const  |  Obtient la collection de mappages utilisateurs-rôles.
 public bool DoesContentExpire () const  |  Vérifie si le contenu a une heure d’expiration ou non.
-public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetContentValidUntil () const  |  Obtient l’heure d’expiration de la protection.
+public std :: Chrono :: time_point \<std::chrono::system_clock\> GetContentValidUntil () const  |  Obtient l’heure d’expiration de la protection.
 public bool DoesAllowOfflineAccess() const  |  Indique si la protection autorise l’accès au contenu hors connexion ou non.
 public std::string GetReferrer() const  |  Obtient l’adresse du référent de protection.
-public std :: map\<std :: String, std :: String\> GetEncryptedAppData () const  |  Obtient les données propres à l’application qui ont été chiffrées.
-public std :: map\<std :: String, std :: String\> GetSignedAppData () const  |  Obtient les données spécifiques de l’application qui ont été signées.
+public std :: map \<std::string, std::string\> GetEncryptedAppData () const  |  Obtient les données propres à l’application qui ont été chiffrées.
+public std :: map \<std::string, std::string\> GetSignedAppData () const  |  Obtient les données spécifiques de l’application qui ont été signées.
 public std :: String GetDoubleKeyUrl () const  |  Obtient l’URL de clé double à utiliser pour la protection personnalisée.
   
 ## <a name="members"></a>Membres
@@ -84,7 +84,7 @@ Obtient l’ID de contenu, le cas échéant.
 Obtient la collection de mappages utilisateurs-droits.
 
   
-**Retourne** : collection de mappages utilisateurs-droits. La valeur de la propriété [UserRights](class_mip_userrights.md) est vide si l’utilisateur actif n’a pas accès à ces informations (c’est-à-dire s’il n’est pas le propriétaire et qu’il ne dispose pas du droit VIEWRIGHTSDATA).
+**Retourne** : collection de mappages utilisateurs-droits. La valeur de la propriété UserRights est vide si l’utilisateur actif n’a pas accès à ces informations (c’est-à-dire s’il n’est pas le propriétaire et qu’il ne dispose pas du droit VIEWRIGHTSDATA).
   
 ### <a name="getuserroles-function"></a>GetUserRoles fonction)
 Obtient la collection de mappages utilisateurs-rôles.
@@ -96,7 +96,7 @@ Obtient la collection de mappages utilisateurs-rôles.
 Vérifie si le contenu a une heure d’expiration ou non.
 
   
-**Retourne**la valeur true si le contenu peut expirer, sinon false.
+**Retourne** la valeur true si le contenu peut expirer, sinon false.
   
 ### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil fonction)
 Obtient l’heure d’expiration de la protection.
@@ -120,13 +120,13 @@ Obtient l’adresse du référent de protection.
 Obtient les données propres à l’application qui ont été chiffrées.
 
   
-**Retourne** : données spécifiques à l’application. Un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été chiffrées par le service de protection. Ces données chiffrées sont indépendantes des données signées accessibles via ProtectionDescriptor :: GetSignedAppData.
+**Retourne** : données spécifiques à l’application. Un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été chiffrées par le service de protection. Ces données chiffrées ne dépendent pas des données signées accessibles par ProtectionDescriptor::GetSignedAppData
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData fonction)
 Obtient les données spécifiques de l’application qui ont été signées.
 
   
-**Retourne** : données spécifiques à l’application. Un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été signées par le service de protection. Ces données signées sont indépendantes des données chiffrées accessibles via ProtectionDescriptor :: GetEncryptedAppData.
+**Retourne** : données spécifiques à l’application. Un ProtectionHandler peut contenir un dictionnaire des données spécifiques à l’application qui ont été signées par le service de protection. Ces données signées ne dépendent pas des données chiffrées accessibles par ProtectionDescriptor::GetEncryptedAppData
   
 ### <a name="getdoublekeyurl-function"></a>GetDoubleKeyUrl fonction)
 Obtient l’URL de clé double à utiliser pour la protection personnalisée.

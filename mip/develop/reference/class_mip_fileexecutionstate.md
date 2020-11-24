@@ -1,17 +1,17 @@
 ---
 title: FileExecutionState de classe
 description: 'Documente la classe fileexecutionstate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ca29755d4533d6b7dd51280c2fb71b631bbb9b5c
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c84f7aa81fd628a8af9598653f0895dc0dd934d2
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763147"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566973"
 ---
 # <a name="class-fileexecutionstate"></a>FileExecutionState de classe 
   
@@ -19,8 +19,8 @@ ms.locfileid: "81763147"
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
-public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: shared_ptr\<fileHandler\> &, const std :: Vector\<std :: shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
-public virtuel std :: map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
+public virtuel std :: shared_ptr \<ClassificationResults\> GetClassificationResults (const std :: shared_ptr \<FileHandler\> &, const std :: Vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
+public virtuel std :: map \<std::string, std::string\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
   
 ## <a name="members"></a>Membres
   

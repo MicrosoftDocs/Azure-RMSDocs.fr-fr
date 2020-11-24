@@ -1,17 +1,17 @@
 ---
 title: HttpResponse de classe
 description: 'Documente la classe HttpResponse :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 6e37613adce0397ed543c4df793a59e74795fb26
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0a08b2bea4834375a01897b3d657772112463b89
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762466"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566877"
 ---
 # <a name="class-httpresponse"></a>HttpResponse de classe 
 Interface qui décrit une seule réponse HTTP, implémentée par l’application cliente lors du remplacement de HttpDelegate.
@@ -21,8 +21,8 @@ Interface qui décrit une seule réponse HTTP, implémentée par l’application
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Obtient l’ID de réponse.
 public int32_t GetStatusCode() const  |  Obtenir le code d’état de la réponse.
-public const std :: Vector\<Uint8_t\>& GetBody () const  |  Obtenir le corps de la requête.
-public const std :: map\<std :: String, std :: String, CaseInsensitiveComparator\>& GetHeaders () const  |  Obtenir les en-têtes de requête.
+public const std :: Vector \<uint8_t\>& GetBody () const  |  Obtenir le corps de la requête.
+public const std :: map \<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders () const  |  Obtenir les en-têtes de requête.
   
 ## <a name="members"></a>Membres
   

@@ -14,19 +14,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 87aa190a87426e61d919b8781444239c4ce5d3c7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4f33a7a730ad8f6f48870ce4b2450007712e7bf1
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790763"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567809"
 ---
-# <a name="terms"></a>Conditions
+# <a name="terms"></a>Termes
 
 Une collection de définitions pour les développeurs propres à Azure Information Protection.
 
 **Algorithme déprécié**  
-Paramètre modal qui implémente un ancien schéma de protection de contenu, se référant en particulier au mode de chiffrement ECB (Electronic CodeBook). Dans ce SDK, le paramètre vous permet de générer des licences compatibles avec la bibliothèque MSDRM utilisée par le Kit [AD Rights Management SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
+Paramètre modal qui implémente un ancien schéma de protection de contenu, se référant en particulier au mode de chiffrement ECB (Electronic CodeBook). Dans ce SDK, le paramètre vous permet de générer des licences compatibles avec la bibliothèque MSDRM utilisée par le Kit [AD Rights Management SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal).
 
 Ce paramètre peut inciter l’application à protéger le contenu non conformément aux normes de vos clients pour la protection de contenu.
 
@@ -37,4 +37,3 @@ Ce paramètre empêche votre application de tirer parti des améliorations de ch
 Ce format, également appelé PFile, est le format de fichier par défaut pour AD RMS qui fait office de norme pour les applications RMS.
 
 Le format PFile est transparent pour le développeur d’applications, car il est intégré dans la conception du SDK Microsoft Rights Management 4.2.
-

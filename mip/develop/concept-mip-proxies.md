@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2020
 ms.author: tommos
-ms.openlocfilehash: 967301e8356b8d0380c9c8b66bc2073de4dd8481
-ms.sourcegitcommit: 3ebc57dde712f44286497b9876af1042066f5d01
+ms.openlocfilehash: fdbcf9d618612021a971af34380b65dc062c2802
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093180"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567917"
 ---
 # <a name="microsoft-information-protection-sdk---proxy-support"></a>SDK Microsoft Information Protection-prise en charge du proxy
 
@@ -42,7 +42,7 @@ Les applications du kit de développement logiciel (SDK) MIP s’exécutant sous
 * Configuration manuelle de proxy statique :
   * WinHTTP configuré à l’aide de la commande netsh
 
-Pour plus d’informations sur la configuration de WinHTTP, consultez la [documentation WinHTTP](https://docs.microsoft.com/windows/win32/winhttp/winhttp-start-page).
+Pour plus d’informations sur la configuration de WinHTTP, consultez la [documentation WinHTTP](/windows/win32/winhttp/winhttp-start-page).
 
 ## <a name="proxies-on-other-platforms"></a>Proxies sur d’autres plateformes
 
@@ -50,7 +50,7 @@ Le kit de développement logiciel MIP ne prend pas en charge les proxies, mais t
 
 ## <a name="custom-http-delegate"></a>Délégué HTTP personnalisé
 
-Le kit de développement logiciel (SDK) Microsoft Information Protection prend en charge l’implémentation d’un délégué HTTP personnalisé qui peut remplacer la pile HTTP par défaut du kit de développement logiciel (SDK). Lorsque des fonctionnalités sont absentes ou qu’une implémentation HTTP spécifique est requise, ce délégué peut être implémenté en ajoutant une nouvelle classe qui hérite de [`mip::HttpDelegate`](https://docs.microsoft.com/information-protection/develop/reference/class_mip_httpdelegate) .
+Le kit de développement logiciel (SDK) Microsoft Information Protection prend en charge l’implémentation d’un délégué HTTP personnalisé qui peut remplacer la pile HTTP par défaut du kit de développement logiciel (SDK). Lorsque des fonctionnalités sont absentes ou qu’une implémentation HTTP spécifique est requise, ce délégué peut être implémenté en ajoutant une nouvelle classe qui hérite de [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) .
 
 Cette `mip::HttpDelegate` classe dérivée de est définie via `mip::FileProfile::Settings` :
 
@@ -67,11 +67,11 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 ## <a name="other-workarounds"></a>Autres solutions de contournement
 
-Lorsqu’un délégué HTTP personnalisé n’est pas une option, il est nécessaire de contourner votre proxy et d’autoriser une connectivité réseau directe pour les points de terminaison d’étiquetage et de protection MIP, ainsi que pour Azure Active Directory. Si la [journalisation d’audit](https://docs.microsoft.com/azure/information-protection/reports-aip) est souhaitée, le point de terminaison de journalisation d’audit est également requis.
+Lorsqu’un délégué HTTP personnalisé n’est pas une option, il est nécessaire de contourner votre proxy et d’autoriser une connectivité réseau directe pour les points de terminaison d’étiquetage et de protection MIP, ainsi que pour Azure Active Directory. Si la [journalisation d’audit](/azure/information-protection/reports-aip) est souhaitée, le point de terminaison de journalisation d’audit est également requis.
 
 | Point de terminaison           | HostName                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Service de protection | https://api.aadrm.com                                                                                                                                                   |
 | Stratégie             | https:// \* . protection.Outlook.com                                                                                                                                       |
 | Journalisation d’audit      | https:// \* . Events.Data.Microsoft.com, https:// \* . Aria.Microsoft.com (iOS uniquement)                                                                                          |
-| Authentification     | [Consulter la documentation Azure AD](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+| Authentification     | [Consulter la documentation Azure AD](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |

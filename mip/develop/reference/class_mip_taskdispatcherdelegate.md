@@ -1,17 +1,17 @@
 ---
 title: TaskDispatcherDelegate de classe
 description: 'Documente la classe taskdispatcherdelegate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b7cd2267b795540a8bb4035a695f5b34f0580b87
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 057ba0d4de58ab4dedf8d3e2f8b2a42b0e5f969a
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764278"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567030"
 ---
 # <a name="class-taskdispatcherdelegate"></a>TaskDispatcherDelegate de classe 
 Classe qui définit l’interface du répartiteur de tâches du kit de développement logiciel (SDK) MIP.
@@ -19,9 +19,9 @@ Classe qui définit l’interface du répartiteur de tâches du kit de développ
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void DispatchTask (const std :: String& IDTâche, std :: function\<void ()\> Task)  |  Exécuter une tâche sur un thread d’arrière-plan.
-public void DispatchTask (const std :: String& IDTâche, std :: function\<void ()\> Task, int64_t delaySeconds)  |  Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
-public void ExecuteTaskOnIndependentThread (const std :: String& IDTâche, std :: function\<void ()\> Task)  |  Exécuter immédiatement une tâche sur un thread indépendant.
+public void DispatchTask (const std :: String& IDTâche, std :: function \<void()\> , tâche)  |  Exécuter une tâche sur un thread d’arrière-plan.
+public void DispatchTask (const std :: String& IDTâche, std :: function \<void()\> Task, Int64_t delaySeconds)  |  Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
+public void ExecuteTaskOnIndependentThread (const std :: String& IDTâche, std :: function \<void()\> , tâche)  |  Exécuter immédiatement une tâche sur un thread indépendant.
 public bool CancelTask (const std :: String& taskId)  |  Annuler une tâche en arrière-plan.
 public void CancelAllTasks ()  |  Annule toutes les tâches en arrière-plan.
   
@@ -72,7 +72,7 @@ Paramètres :
 
 
   
-**Retourne**la valeur true si la tâche a été annulée avec succès, sinon false.
+**Retourne** la valeur true si la tâche a été annulée avec succès, sinon false.
   
 ### <a name="cancelalltasks-function"></a>CancelAllTasks fonction)
 Annule toutes les tâches en arrière-plan.

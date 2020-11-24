@@ -1,17 +1,17 @@
 ---
 title: 'classe ProtectionEngine :: observer'
 description: 'Documente la classe protectionengine :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ca1f9c3251df30166b123ae31c8e3c5fceef67fc
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 7a576882376caa8cc5f9c5c1b3d3036ee7e57b21
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764608"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567149"
 ---
 # <a name="class-protectionengineobserver"></a>classe ProtectionEngine :: observer 
 Interface qui reçoit les notifications relatives à ProtectionEngine.
@@ -20,16 +20,16 @@ Cette interface doit être implémentée par les applications utilisant le SDK d
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess (const std :: Vector\<std :: shared_ptr\<TemplateDescriptor\> \>& templateDescriptors, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque les modèles ont été récupérés.
-public virtual void OnGetTemplatesFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque la récupération de modèles a généré une erreur.
-public virtual void OnGetRightsForLabelIdSuccess (const std :: shared_ptr\<std :: Vector\<std :: String\> \>& droits, const std :: shared_ptr\<void\>& Context)  |  Appelé en cas de récupération réussie des droits.
-public virtual void OnGetRightsForLabelIdFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé lors de la récupération des droits pour un ID d’étiquette pour l’utilisateur.
-public virtuel void OnLoadUserCertSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque le certificat de l’utilisateur a été chargé avec succès.
-public virtual void OnLoadUserCertFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé en cas d’échec du chargement du certificat de l’utilisateur.
-public virtuel void OnRegisterContentForTrackingAndRevocationSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque l’inscription du contenu pour le suivi & révocation est réussie.
-public virtual void OnRegisterContentForTrackingAndRevocationFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque l’inscription du contenu pour le suivi & révocation échoue.
-public virtuel void OnRevokeContentSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé en cas de réussite de la révocation de.
-public virtual void OnRevokeContentFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé en cas d’échec de la révocation du contenu.
+public virtual void OnGetTemplatesSuccess (const std :: Vector \<std::shared_ptr\<TemplateDescriptor\> \>& templateDescriptors, const std :: shared_ptr \<void\>& Context)  |  Appelé lorsque les modèles ont été récupérés.
+public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé lorsque la récupération de modèles a généré une erreur.
+public virtual void OnGetRightsForLabelIdSuccess (const std :: shared_ptr \<std::vector\<std::string\> \>& droits, const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas de récupération réussie des droits.
+public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé lors de la récupération des droits pour un ID d’étiquette pour l’utilisateur.
+public virtuel void OnLoadUserCertSuccess (const std :: shared_ptr \<void\>& contexte)  |  Appelé lorsque le certificat de l’utilisateur a été chargé avec succès.
+public virtual void OnLoadUserCertFailure (const std :: exception_ptr& erreur, const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas d’échec du chargement du certificat de l’utilisateur.
+public virtuel void OnRegisterContentForTrackingAndRevocationSuccess (const std :: shared_ptr \<void\>& contexte)  |  Appelé lorsque l’inscription du contenu pour le suivi & révocation est réussie.
+public virtual void OnRegisterContentForTrackingAndRevocationFailure (const std :: exception_ptr& erreur, const std :: shared_ptr \<void\>& contexte)  |  Appelé lorsque l’inscription du contenu pour le suivi & révocation échoue.
+public virtuel void OnRevokeContentSuccess (const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas de réussite de la révocation de.
+public virtual void OnRevokeContentFailure (const std :: exception_ptr& erreur, const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas d’échec de la révocation du contenu.
   
 ## <a name="members"></a>Membres
   
@@ -40,10 +40,10 @@ Paramètres :
 * **templateDescriptors**: référence à la liste des descripteurs de modèles 
 
 
-* **context** : le même contexte que celui transmis à [ProtectionProfile::LoadAsync](class_mip_protectionengine.md)
+* **context** : le même contexte que celui transmis à ProtectionProfile::LoadAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: GetTemplatesAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnGetTemplatesSuccess ou ProtectionEngine :: observer :: OnGetTemplatesFailure.
+Une application peut transmettre n’importe quel type de contexte (par exemple, std::promise, std::function) à ProtectionEngine::GetTemplatesAsync, et ce même contexte est transféré tel quel à ProtectionEngine::Observer::OnGetTemplatesSuccess ou à ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### <a name="ongettemplatesfailure-function"></a>OnGetTemplatesFailure fonction)
 Appelé lorsque la récupération de modèles a généré une erreur.
@@ -64,10 +64,10 @@ Paramètres :
 * **rights** : référence à la liste des droits récupérés 
 
 
-* **Context**: le même contexte qui a été passé à [ProtectionEngine :: GetRightsForLabelIdAsync](class_mip_protectionengine.md).
+* **context** : même contexte que celui qui a été passé à ProtectionEngine::GetRightsForLabelIdAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: GetRightsForLabelIdAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnGetRightsForLabelIdSuccess ou ProtectionEngine :: observer :: OnGetRightsForLabelIdFailure.
+Une application peut transmettre n’importe quel type de contexte (par exemple, std::promise, std::function) à ProtectionEngine::GetRightsForLabelIdAsync, et ce même contexte est transféré tel quel à ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess ou à ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### <a name="ongetrightsforlabelidfailure-function"></a>OnGetRightsForLabelIdFailure fonction)
 Appelé lors de la récupération des droits pour un ID d’étiquette pour l’utilisateur.
@@ -85,10 +85,10 @@ Une application peut transmettre n’importe quel type de contexte (par exemple,
 Appelé lorsque le certificat de l’utilisateur a été chargé avec succès.
 
 Paramètres :  
-* **Context**: le même contexte qui a été passé à ProtectionEngine :: LoadUserCert.
+* **Context**: le même contexte qui a été passé à ProtectionEngine :: LoadUserCert
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à [ProtectionEngine :: LoadUserCertAsync et ce même contexte sera transféré en l’État à [ProtectionEngine :: observer :: OnLoadUserCertSuccess](class_mip_protectionengine_observer.md) ou [ProtectionEngine :: observer :: OnLoadUserCertFailure](class_mip_protectionengine_observer.md)
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: LoadUserCertAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnLoadUserCertSuccess ou ProtectionEngine :: observer :: OnLoadUserCertFailure
   
 ### <a name="onloadusercertfailure-function"></a>OnLoadUserCertFailure fonction)
 Appelé en cas d’échec du chargement du certificat de l’utilisateur.
@@ -106,10 +106,10 @@ Une application peut passer n’importe quel type de contexte (par exemple, std�
 Appelé lorsque l’inscription du contenu pour le suivi & révocation est réussie.
 
 Paramètres :  
-* **Context**: le même contexte qui a été passé à ProtectionEngine :: RegisterContentForTrackingAndRevocationAsync.
+* **Context**: le même contexte qui a été passé à ProtectionEngine :: RegisterContentForTrackingAndRevocationAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: RegisterContentForTrackingAndRevocationAsync et ce même contexte sera transféré en l’État à [ProtectionEngine :: observer :: OnRegisterContentForTrackingAndRevocationSuccess](class_mip_protectionengine_observer.md) ou [ProtectionEngine :: observer :: OnRegisterContentForTrackingAndRevocationFailure](class_mip_protectionengine_observer.md)
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: RegisterContentForTrackingAndRevocationAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnRegisterContentForTrackingAndRevocationSuccess ou ProtectionEngine :: observer :: OnRegisterContentForTrackingAndRevocationFailure
   
 ### <a name="onregistercontentfortrackingandrevocationfailure-function"></a>OnRegisterContentForTrackingAndRevocationFailure fonction)
 Appelé lorsque l’inscription du contenu pour le suivi & révocation échoue.
@@ -127,10 +127,10 @@ Une application peut passer n’importe quel type de contexte (par exemple, std�
 Appelé en cas de réussite de la révocation de.
 
 Paramètres :  
-* **Context**: le même contexte qui a été passé à ProtectionEngine :: RevokeContentAsync.
+* **Context**: le même contexte qui a été passé à ProtectionEngine :: RevokeContentAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: RevokeContentAsync et ce même contexte sera transféré en l’État à [ProtectionEngine :: observer :: OnRevokeContentSuccess](class_mip_protectionengine_observer.md) ou [ProtectionEngine :: observer :: OnRevokeContentFailure](class_mip_protectionengine_observer.md)
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: RevokeContentAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnRevokeContentSuccess ou ProtectionEngine :: observer :: OnRevokeContentFailure
   
 ### <a name="onrevokecontentfailure-function"></a>OnRevokeContentFailure fonction)
 Appelé en cas d’échec de la révocation du contenu.

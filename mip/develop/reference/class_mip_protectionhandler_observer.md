@@ -1,17 +1,17 @@
 ---
 title: 'classe ProtectionHandler :: observer'
 description: 'Documente la classe protectionhandler :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 66453d343505cc57427e177eac258b83a2663eb0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 092448f4af5c27625b8a19f7cfea039e9bcd8071
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764438"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567138"
 ---
 # <a name="class-protectionhandlerobserver"></a>classe ProtectionHandler :: observer 
 Interface qui reçoit les notifications relatives à ProtectionHandler.
@@ -20,8 +20,8 @@ Cette interface doit être implémentée par les applications utilisant le SDK d
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateProtectionHandlerSuccess (const std :: shared_ptr\<protectionHandler\>& ProtectionHandler, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque ProtectionHandler a été créé avec succès.
-public virtual void OnCreateProtectionHandlerFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé lorsque la création de ProtectionHandler a échoué.
+public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr\<ProtectionHandler\>& protectionHandler, const std::shared_ptr\<void\>& context)  |  Appelé lorsque ProtectionHandler a été créé avec succès.
+public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé lorsque la création de ProtectionHandler a échoué.
   
 ## <a name="members"></a>Membres
   

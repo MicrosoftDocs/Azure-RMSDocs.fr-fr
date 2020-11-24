@@ -14,21 +14,21 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2c96bbc94b30728466a53dc471ebf7375e845e09
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b469bccfa26fbedad498ff230250865b52a34411
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791381"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567977"
 ---
-# <a name="api-reference"></a>Référence d'API
+# <a name="api-reference"></a>Informations de référence sur l'API
 
 Le SDK Microsoft Rights Management 2.1 prend en charge l’activation de RMS de clients Windows. Pour plus d’informations sur des points spécifiques, consultez [Notes de publication](release-notes-rtm.md).
-- [Constantes](https://msdn.microsoft.com/library/hh535291.aspx)
-- [Types de données](https://msdn.microsoft.com/library/hh535288.aspx)
-- [Fonctions](https://msdn.microsoft.com/library/hh535289.aspx)
-- [Structures](https://msdn.microsoft.com/library/hh535294.aspx)
-- [Codes d'erreur](https://msdn.microsoft.com/library/hh535248.aspx)
+- [Constantes](/previous-versions/windows/desktop/msipc/msipc-constants)
+- [Types de données](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-data-types)
+- [Fonctions](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-functions)
+- [Structures](/previous-versions/windows/desktop/msipc/msipc-structures)
+- [Codes d’erreur](/previous-versions/windows/desktop/msipc/error-codes)
 
 
 

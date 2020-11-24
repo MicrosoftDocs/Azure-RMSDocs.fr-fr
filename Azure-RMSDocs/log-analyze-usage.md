@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c18c3e6524e6c42ee4b639b42778a8a8217b12d0
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: fc3dd9487548849d16f625092c2ff3dd121e4e54
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136790"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567647"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Journalisation et analyse de l’utilisation de la protection à partir de Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez ces informations pour vous aider à comprendre comment utiliser la journalisation de l’utilisation pour le service de protection (Azure Rights Management) à partir de Azure Information Protection. Ce service de protection fournit la protection des données pour les documents et e-mails de votre organisation, et il peut journaliser chaque demande. Ces demandes incluent les cas où les utilisateurs protègent des documents et des e-mails, mais également consomment ce contenu, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par des opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection. 
 
@@ -87,7 +87,7 @@ Pour télécharger vos journaux d’utilisation, vous allez utiliser le module P
     
     * Pour télécharger les journaux correspondant à une plage de dates (par exemple du 1er au 14 février 2016), exécutez la commande suivante : `Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
-Si vous spécifiez uniquement le jour, comme dans nos exemples, l’heure est supposée être 00:00:00 dans votre heure locale, puis convertie en temps universel coordonné (UTC). Quand vous spécifiez une heure à l’aide des paramètres -fromdate ou -todate (par exemple, -fordate "2/1/2016 15:00:00"), ces date et heure sont converties au format UTC. La commande obtenir-AipServiceUserLog obtient ensuite les journaux pour cette période UTC.
+Si vous spécifiez uniquement le jour, comme dans nos exemples, l’heure est supposée être 00:00:00 dans votre heure locale, puis convertie en temps universel coordonné (UTC). Quand vous spécifiez une heure à l’aide des paramètres -fromdate ou -todate (par exemple, -fordate "2/1/2016 15:00:00"), ces date et heure sont converties au format UTC. La commande Get-AipServiceUserLog obtient ensuite les journaux pour cette période UTC.
 
 Vous ne pouvez pas spécifier moins d’une journée entière à télécharger.
 
@@ -126,9 +126,9 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |   Nom du champ   | Type de données W3C |                                                                                                                                                                          Description                                                                                                                                                                          |                                                            Valeur d'exemple                                                            |
 |----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 |      date      |     Date      |                                                                                                                     Date UTC du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                                     |                                                             25-06-2013                                                              |
-|      time      |     Temps      |                                                                                                            Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                            |                                                              21:59:28                                                               |
+|      time      |     Heure      |                                                                                                            Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                            |                                                              21:59:28                                                               |
 |     row-id     |     Texte      |                                                                           GUID unique de cet enregistrement de journal. En l’absence de valeur, utilisez la valeur correlation-id pour identifier l’entrée.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
-|  request-type  |     Nom      |                                                                                                                                                            Nom de l’API RMS demandée.                                                                                                                                                            |                                                           AcquireLicense                                                            |
+|  request-type  |     Name      |                                                                                                                                                            Nom de l’API RMS demandée.                                                                                                                                                            |                                                           AcquireLicense                                                            |
 |    user-id     |    String     |                                                               Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.                                                                |                                                          ‘joe@contoso.com’                                                          |
 |     result     |    String     |                                                                                                                  « Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.                                                                                                                   |                                                              « Succès »                                                              |
 | correlation-id |     Texte      |                                                                                                 GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |
@@ -148,7 +148,7 @@ Bien que le champ user-id indique généralement l'utilisateur qui effectue la d
 
 -   Valeur **'microsoftrmsonline@&lt;votreIDdeClient&gt;.rms.&lt;région&gt;.aadrm.com'**.
 
-    Cela indique qu’un service Office 365, tel qu’Exchange Online ou Microsoft SharePoint, fait la demande. Dans la chaîne, * &lt; YourTenantID &gt; * est le GUID de votre locataire et * &lt; région &gt; * est la région dans laquelle votre locataire est inscrit. Par exemple, **na** correspond à l'Amérique du Nord, **eu** correspond à l'Europe et **ap** correspond à l'Asie.
+    Cela indique qu’un service Office 365, tel qu’Exchange Online ou Microsoft SharePoint, fait la demande. Dans la chaîne, *&lt; YourTenantID &gt;* est le GUID de votre locataire et *&lt; région &gt;* est la région dans laquelle votre locataire est inscrit. Par exemple, **na** correspond à l'Amérique du Nord, **eu** correspond à l'Europe et **ap** correspond à l'Asie.
 
 -   Si vous utilisez le connecteur RMS :
 
@@ -202,7 +202,7 @@ Il existe de nombreux types de demandes pour le service de protection, mais le t
 |UpdateTemplate|Un appel est fait à partir du portail Azure pour mettre à jour un modèle existant.|
 
 
-## <a name="powershell-reference"></a>Informations de référence sur PowerShell
+## <a name="powershell-reference"></a>Référence sur PowerShell
 
 La seule applet de commande PowerShell dont vous avez besoin pour accéder à la journalisation de l’utilisation de la protection est [AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog). 
 

@@ -12,14 +12,14 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
+ms.sourcegitcommit: bf8867a2270bd9e9695f2a5fe53fa5653faf7f94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316873"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "95567948"
 ---
-# <a name="running-the-azure-information-protection-scanner"></a>Exécution de l’analyseur de Azure Information Protection
+# <a name="running-the-azure-information-protection-scanner"></a>Exécution du scanneur Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
 
@@ -49,7 +49,7 @@ Effectuez ces étapes autant de fois que nécessaire lorsque votre contenu chang
 
     Dans votre session PowerShell, vous pouvez également exécuter la commande suivante :
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -63,7 +63,7 @@ Effectuez ces étapes autant de fois que nécessaire lorsque votre contenu chang
 
     - **Utilisez une commande PowerShell.** Exécutez `Get-AIPScannerStatus` pour surveiller la modification de l’État.
 
-1. Une fois l’analyse terminée, examinez les rapports stockés dans le répertoire ** % *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports** .
+1. Une fois l’analyse terminée, examinez les rapports stockés dans le répertoire **% *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports** .
 
     - Les fichiers de résumé .txt incluent la durée de l’analyse, le nombre de fichiers analysés et le nombre de fichiers correspondants aux types d’informations.
 
@@ -101,7 +101,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
 - **Exécutez une commande PowerShell.** Exécutez la commande suivante :
 
-    ```ps
+    ```PowerShell
     Stop-AIPScan 
     ```
 
@@ -133,7 +133,7 @@ Pour actualiser la stratégie plus tôt, par exemple pendant le test, supprimez 
 Si vous avez également modifié les paramètres de protection de vos étiquettes, patientez 15 minutes après l’enregistrement des paramètres de protection mis à jour avant le redémarrage du service Azure Information Protection.
 
 > [!IMPORTANT]
-> Si vous avez effectué une mise à niveau vers la version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
+> Si vous avez effectué une mise à niveau vers la version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
 >
 > Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on,** veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 > 
@@ -144,14 +144,14 @@ Si le scanneur s’arrête de manière inattendue et ne termine pas l’analyse 
 
 - **Nombre de ports dynamiques**. Vous devrez peut-être augmenter le nombre de ports dynamiques pour le système d’exploitation hébergeant les fichiers. Le renforcement du serveur pour SharePoint peut être l’une des raisons expliquant pourquoi le scanneur dépasse le nombre de connexions réseau autorisées et s’arrête.
 
-    Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, regardez si le message d’erreur suivant est consigné pour le scanneur dans le fichier ** % *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
+    Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, regardez si le message d’erreur suivant est consigné pour le scanneur dans le fichier **% *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
 
     **Impossible de se connecter au serveur distant---> System .net. Sockets. SocketException : une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est normalement autorisée sur IP : port**
 
     > [!NOTE]
     > Ce fichier sera compressé s’il existe plusieurs journaux.
 
-    Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmentation de la plage, consultez [Paramètres modifiables pour améliorer les performances du réseau](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmentation de la plage, consultez [Paramètres modifiables pour améliorer les performances du réseau](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **Seuil du mode liste.** Pour les batteries de serveurs SharePoint de grande taille, vous devrez peut-être augmenter le seuil d’affichage de liste. Par défaut, le seuil d’affichage de liste est défini sur 5 000.
 
@@ -161,7 +161,7 @@ Si le scanneur s’arrête de manière inattendue et ne termine pas l’analyse 
 
 Si vous rencontrez des problèmes avec Azure information scanner, vérifiez que votre déploiement est sain à l’aide de la commande PowerShell suivante :
 
-```ps
+```PowerShell
 Start-AIPScannerDiagnostics
 ```
 

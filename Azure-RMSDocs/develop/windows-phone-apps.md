@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8c36466511749b6148f58c439702c8cd0f252a64
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 541315cba8d1c14d7284ac6f15c38728fbd4a553
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068507"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568367"
 ---
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 
@@ -29,40 +29,40 @@ Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK�
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Conditions préalables](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
 
--   Système d’exploitation [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
+-   Le système d’exploitation [Windows 8.1](https://windows.microsoft.com/windows-8/meet) .
 -   [Outils de développement Windows Phone 8.1 (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows Phone 8.0/8.1)
--   Package MS RMS SDK 4.2 pour Windows Phone. Pour plus d’informations, consultez [Prise en main](get-started.md).
--   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
+-   Package MS RMS SDK 4.2 pour Windows Phone. Pour plus d’informations, consultez [prise en main](get-started.md).
+-   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](/previous-versions/azure/jj573266(v=azure.100)), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, des informations sur les appareils et les environnements, les notes de publication et les questions les plus fréquentes (FAQ).
 
-Passez en revue les informations contenues dans le guide de [développement Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx) dans le Centre de développement Windows Phone.
+Passez en revue les informations contenues dans le guide de [développement Windows Phone](/previous-versions/windows/apps/ff402535(v=vs.105)) dans le Centre de développement Windows Phone.
 
 ## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
 
 -   Ouvrez *Visual Studio*.
 -   Cliquez sur **Fichier**. Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
--   Dans la boîte de dialogue **Nouveau projet**, sélectionnez **Visual C\#** , **Application vide (Windows Phone)** , puis cliquez sur **OK**.
+-   Dans la boîte de dialogue **nouveau projet** , sélectionnez **Visual \# C**, sélectionnez **application vide (Windows Phone)**, puis cliquez sur **OK**.
 
-    ![Créer un projet](../media/wpsetup-newproj.png)
+    ![Création d’un projet](../media/wpsetup-newproj.png)
 
 -   Dans l’Explorateur de solutions, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.
 
-    ![Ajouter une référence](../media/wpsetup-addref.png)
+    ![Ajouter la référence](../media/wpsetup-addref.png)
 
 -   Cliquez sur **Parcourir** dans l’angle inférieur gauche de la boîte de dialogue **Ajouter une référence**, puis sélectionnez le fichier *Microsoft.RightsManagment.dll* figurant dans le dossier dans lequel vous avez extrait le package.
--   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**
+-   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1** - &gt; **Extensions** et cochez la case **package Windows Visual C++ Runtime pour Windows**
 
     ![Ajouter des extensions](../media/wpsetup-refmngr.png)
 
@@ -72,15 +72,15 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Mise en route](get-started.md)
+[Prise en main](get-started.md)
 
 [Nouveautés](release-notes.md)
 
-[Concepts de base](core-concepts.md)
+[Concepts fondamentaux](core-concepts.md)
 
-[Développement Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)
+[Développement Windows Phone](/previous-versions/windows/apps/ff402535(v=vs.105))
 
-[Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
+[Référence de l’API Windows](/previous-versions/windows/desktop/msipcthin2/winrt)
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 

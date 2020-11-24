@@ -1,17 +1,17 @@
 ---
 title: 'classe FileProfile :: observer'
 description: 'Documente la classe fileprofile :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 4dd3ff426e92fdd28cac211eb6953b8d30eb5ae5
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 62e578f8f3527a4749fedfc88a2b32de5c6e95db
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762749"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566934"
 ---
 # <a name="class-fileprofileobserver"></a>classe FileProfile :: observer 
 Interface Observer permettant aux clients d’obtenir les notifications des événements liés aux profils.
@@ -21,16 +21,16 @@ Toutes les erreurs héritent de mip::Error. Le client ne doit pas rappeler le mo
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtual ~Observer()  | _Pas encore documenté._
-public virtual void OnLoadSuccess (const std :: shared_ptr\<MIP :: FileProfile\>& Profile, const std ::\<shared_ptr\> void& Context)  |  Appelé quand le chargement d’un profil a réussi.
-public virtual void OnLoadFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
-public virtual void OnListEnginesSuccess (const std :: Vector\<std :: String\>& engineIds, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la liste des moteurs a été générée avec succès.
-public virtual void OnListEnginesFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
-public virtuel void OnUnloadEngineSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé quand le déchargement d’un moteur a réussi.
-public virtual void OnUnloadEngineFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand le déchargement d’un moteur a provoqué une erreur.
-public virtual void OnAddEngineSuccess (const std :: shared_ptr\<MIP :: FileEngine\>& moteur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
-public virtual void OnAddEngineFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
-public virtuel void OnDeleteEngineSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a réussi.
-public virtual void OnDeleteEngineFailure (const std :: exception_ptr& erreur, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
+public virtual void OnLoadSuccess(const std::shared_ptr\<mip::FileProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Appelé quand le chargement d’un profil a réussi.
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
+public virtual void OnListEnginesSuccess (const std :: Vector \<std::string\>& engineIds, const std :: shared_ptr \<void\>& Context)  |  Appelé quand la liste des moteurs a été générée avec succès.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
+public virtual void OnUnloadEngineSuccess(const std::shared_ptr\<void\>& context)  |  Appelé quand le déchargement d’un moteur a réussi.
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand le déchargement d’un moteur a provoqué une erreur.
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<mip::FileEngine\>& engine, const std::shared_ptr\<void\>& context)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Appelé quand la suppression d’un moteur a réussi.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Appelé quand la stratégie a été changée pour le moteur avec l’ID spécifié.
 public virtual void OnAddPolicyEngineStarting (bool requiresPolicyFetch)  |  Appelée avant la création du moteur pour décrire si les données de stratégie du moteur de stratégie doivent être extraites du serveur ou si elles peuvent être créées à partir de données mises en cache localement.
 protected Observer()  | _Pas encore documenté._
@@ -38,7 +38,7 @@ protected Observer()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="observer-function"></a>~ Fonction observer
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess fonction)
@@ -84,4 +84,4 @@ Paramètres :
 Ce rappel facultatif peut être utilisé par une application pour être informé qu’une opération AddEngineAsync nécessite ou non une opération HTTP (avec le délai associé) à effectuer.
   
 ### <a name="observer-function"></a>Fonction observer
-_Pas encore documenté._
+Pas encore documenté.

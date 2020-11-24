@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: c3292782a3a824db1166e255be3935978c8b8ce9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953097"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567899"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Exécution du scanneur classique Azure Information Protection
 
@@ -70,7 +70,7 @@ Effectuez ces étapes autant de fois que nécessaire lorsque votre contenu chang
 
         Ce journal signale également le moment où le scanneur a terminé l’analyse, y compris un résumé des résultats. Recherchez l’ID d’événement d’information **911**. Pour plus d’informations, consultez [ID et descriptions du journal des événements pour le scanneur](#event-log-ids-and-descriptions-for-the-scanner).
 
-1. Une fois l’analyse terminée, examinez les rapports stockés dans le répertoire ** % *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports** .
+1. Une fois l’analyse terminée, examinez les rapports stockés dans le répertoire **% *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports** .
 
     - Les fichiers de résumé .txt incluent la durée de l’analyse, le nombre de fichiers analysés et le nombre de fichiers correspondants aux types d’informations.
 
@@ -106,7 +106,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
     ![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
 
-- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
+- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
     
     ```ps
     Stop-AIPScan 
@@ -151,14 +151,14 @@ Si le scanneur s’arrête de manière inattendue et ne termine pas l’analyse 
 
 - **Nombre de ports dynamiques**. Vous devrez peut-être augmenter le nombre de ports dynamiques pour le système d’exploitation hébergeant les fichiers. Le renforcement du serveur pour SharePoint peut être l’une des raisons expliquant pourquoi le scanneur dépasse le nombre de connexions réseau autorisées et s’arrête.
 
-    Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, regardez si le message d’erreur suivant est consigné pour le scanneur dans le fichier ** % *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
+    Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, regardez si le message d’erreur suivant est consigné pour le scanneur dans le fichier **% *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
 
     **Impossible de se connecter au serveur distant---> System .net. Sockets. SocketException : une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est normalement autorisée sur IP : port**
 
     > [!NOTE]
     > Ce fichier sera compressé s’il existe plusieurs journaux.
 
-    Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmentation de la plage, consultez [Paramètres modifiables pour améliorer les performances du réseau](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmentation de la plage, consultez [Paramètres modifiables pour améliorer les performances du réseau](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **Seuil du mode liste.** Pour les batteries de serveurs SharePoint de grande taille, vous devrez peut-être augmenter le seuil d’affichage de liste. Par défaut, le seuil d’affichage de liste est défini sur 5 000.
 

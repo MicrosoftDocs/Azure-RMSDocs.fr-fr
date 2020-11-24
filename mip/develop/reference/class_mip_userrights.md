@@ -1,17 +1,17 @@
 ---
 title: UserRights de classe
 description: 'Documente la classe UserRights :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 1a3bf2c6c8f417d30fac24263f672f2603347960
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 37943d284eaa00524797605158e320c25e52e17b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764248"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567390"
 ---
 # <a name="class-userrights"></a>UserRights de classe 
 Groupe d’utilisateurs et droits qui leur sont associés.
@@ -19,9 +19,9 @@ Groupe d’utilisateurs et droits qui leur sont associés.
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRights (const std :: Vector\<std :: String\>& Users, const std ::\<Vector std ::\> String& Rights)  |  Constructeur UserRights.
-public const std :: Vector\<std :: String\>& Users () const  |  Obtient les utilisateurs associés à un ensemble de droits.
-public const std :: Vector\<std :: String\>& droits () const  |  Obtient les droits associés à un groupe d’utilisateurs.
+public UserRights (const std :: Vector \<std::string\>& Users, const std :: vector \<std::string\>& Rights)  |  Constructeur UserRights.
+public const std :: Vector \<std::string\>& Users () const  |  Obtient les utilisateurs associés à un ensemble de droits.
+public const std :: Vector \<std::string\>& droits () const  |  Obtient les droits associés à un groupe d’utilisateurs.
   
 ## <a name="members"></a>Membres
   

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 7066b6a13afd6c7a71b0b0740e3ffd71d56e3a43
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564397"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568073"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
@@ -37,9 +37,9 @@ Avant de pouvoir déployer votre application, vous devez signer un contrat IPIA 
 ## <a name="implement-user-authentication-for-your-app"></a>Implémenter l’authentification utilisateur pour votre application
 Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, quand votre jeton d’accès doit être actualisé ou quand le jeton d’accès a expiré.
 
-- Android - Interfaces [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) et [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
-- iOS/OS X - Protocole [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
--  Windows Phone/Windows RT - Interface [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
+- Android - Interfaces [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) et [AuthenticationCompletionCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java).
+- iOS/OS X - Protocole [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc).
+-  Windows Phone/Windows RT - Interface [IAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/iauthenticationcallback).
 - Linux - Interface [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
 ### <a name="what-library-to-use-for-authentication"></a>Bibliothèque à utiliser pour l’authentification
@@ -72,7 +72,7 @@ Il provient de l’étape d’inscription dans le portail Azure.
 
 Android : `msauth://packagename/Base64UrlencodedSignature`
 
-Libéré `<app-scheme>://<bundle-id>`
+iOS : `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.

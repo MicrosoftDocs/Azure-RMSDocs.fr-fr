@@ -1,17 +1,17 @@
 ---
-title: Présentation du wrapper C# du kit SDK Microsoft information protection
-description: Présentation rapide de la prise en main du wrapper .NET MIP SDK et des différences entre le wrapper .NET et C++ le kit de développement logiciel (SDK).
+title: Présentation du wrapper C# de Microsoft Information Protection SDK
+description: Présentation rapide de la prise en main du wrapper .NET MIP SDK et des différences entre le wrapper .NET et le kit de développement logiciel (SDK) C++.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 21fc590388615b2917ca62fdd848b3a63ce26912
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: da563bc385658d716d6813710495d91b42bbcc83
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556110"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567834"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Prise en main avec le wrapper Microsoft Information Protection .NET
 
@@ -19,7 +19,7 @@ Le wrapper .NET du kit de développement logiciel (SDK) Microsoft Information Pr
 
 Le wrapper managé et toutes les dépendances peuvent être installés par le biais de NuGet dans Visual Studio.
 
-## <a name="supported-platforms"></a>Plates-formes prises en charge
+## <a name="supported-platforms"></a>Plateformes prises en charge
 
 Le wrapper Microsoft Information Protection .NET est pris en charge sur les plateformes .NET suivantes :
 
@@ -36,15 +36,15 @@ Aucun package supplémentaire n’est requis. Toutes les bibliothèques tierces 
 
 ## <a name="wrapper-details"></a>Détails du Wrapper
 
-Le wrapper .NET est un wrapper managé généré par [SWIG](https://swig.org/) . Le wrapper utilise des C++ bibliothèques compilées à partir du kit de développement logiciel (SDK) Microsoft information protection. Ces dll sont les mêmes que celles incluses dans la C++ version du kit de développement logiciel (SDK).
+Le wrapper .NET est un wrapper managé généré par [SWIG](https://swig.org/) . Le wrapper utilise les bibliothèques C++ compilées du kit de développement logiciel (SDK) Microsoft Information Protection. Ces dll sont les mêmes que celles incluses dans la version C++ du kit de développement logiciel (SDK).
 
 ## <a name="concept-overlap"></a>Chevauchement du concept
 
-Il existe quelques différences fondamentales entre la C++ version du kit de développement logiciel (SDK) et le wrapper managé.
+Il existe quelques différences fondamentales entre la version C++ du kit de développement logiciel (SDK) et le wrapper managé.
 
-* Le wrapper .NET ne requiert pas l’utilisation d’observateurs pour les opérations asynchrones. Toutes les opérations asynchrones sont implémentées via le [modèle asynchrone basé sur des tâches](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
-* Le wrapper .NET requiert les délégués qui font partie du C++ Kit de développement logiciel (SDK) : AuthDelegate et ConsentDelegate. Ces délégués sont implémentés via les interfaces `IAuthDelegate` et `IConsentDelegate`
+* Le wrapper .NET ne requiert pas l’utilisation d’observateurs pour les opérations asynchrones. Toutes les opérations asynchrones sont implémentées via le [modèle asynchrone basé sur des tâches](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+* Le wrapper .NET requiert les délégués qui font partie du kit de développement logiciel (SDK) C++ : AuthDelegate et ConsentDelegate. Ces délégués sont implémentés via les interfaces `IAuthDelegate` et `IConsentDelegate`
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Ensuite, passez en revue [démarrage rapide-initialisation du kit de développement logiciel C# (MIP) SDK de Microsoft information protection](quick-app-initialization-csharp.md) pour commencer à créer une application console de base avec un MIP.
+Ensuite, passez en revue le Guide de [démarrage rapide (QuickStart) du kit information protection de développement logiciel (MIP) SDK C#](quick-app-initialization-csharp.md) pour commencer à créer une application console de base prenant en charge MIP.

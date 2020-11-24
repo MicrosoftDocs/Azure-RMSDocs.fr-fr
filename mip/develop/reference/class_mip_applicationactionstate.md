@@ -1,17 +1,17 @@
 ---
 title: ApplicationActionState de classe
 description: 'Documente la classe applicationactionstate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 389fd02b47153c6953fefad3ba068add6ff431ee
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 936f64f24211f000dc26153f17bd094f4d7d3c8d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763673"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567288"
 ---
 # <a name="class-applicationactionstate"></a>ApplicationActionState de classe 
   
@@ -19,10 +19,10 @@ ms.locfileid: "81763673"
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public LabelState GetNewLabelState () const  |  Obtient le nouvel état de l’étiquette.
-public std :: shared_ptr\<label\> GetNewLabel () const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
-STD public ::p air\<bool, std :: String\> IsDowngradeJustified () const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
+public std :: shared_ptr \<Label\> GetNewLabel () const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
+STD public ::p air \<bool, std::string\> IsDowngradeJustified () const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Obtenir la méthode d’assignation de la nouvelle étiquette.
-public virtuel std :: Vector\<std ::p air\<std :: String, std :: String\> \> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
+public virtuel std :: Vector \<std::pair\<std::string, std::string\> \> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
 public ActionType GetSupportedActions() const  |  Obtient une énumération masquée qui décrit tous les types d’action pris en charge.
 public bool IsRecommendationEnabled () const  |  Obtient une valeur booléenne qui indique que l’action recommander retourne. par défaut, doit avoir la valeur true, sauf si l’utilisateur spécifie Else.
   

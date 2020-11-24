@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6c7ab059ff19cc7f8b41bc345521e9e1798e7769
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: f57529603a8d96a8621195ea4168eb2fe9cc3dc8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264359"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567540"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
@@ -53,7 +53,7 @@ Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans l
 
 2. À partir de l’option de menu **classifications**  >  **stratégies** : dans le volet **Azure information protection-stratégies** , sélectionnez **Ajouter une nouvelle stratégie**. Vous voyez alors le volet **stratégie** qui affiche votre stratégie globale existante, où vous pouvez désormais configurer votre nouvelle stratégie délimitée.
 
-3. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Sélectionnez ensuite **spécifier les utilisateurs/groupes qui obtiennent cette stratégie**et dans les volets suivants, vous pouvez rechercher et sélectionner les utilisateurs et les groupes pour cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement.
+3. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Sélectionnez ensuite **spécifier les utilisateurs/groupes qui obtiennent cette stratégie** et dans les volets suivants, vous pouvez rechercher et sélectionner les utilisateurs et les groupes pour cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement.
     
     Pour des raisons de performances, l’appartenance au groupe des stratégies délimitées est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection).
 

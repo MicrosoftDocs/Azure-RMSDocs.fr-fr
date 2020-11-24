@@ -1,17 +1,17 @@
 ---
 title: ProtectionDescriptorBuilder de classe
 description: 'Documente la classe protectiondescriptorbuilder :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 11890665b02ade782edcff6c23296ab70c9368f8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2e5573a896ef0935c33e85a2ed7f73451ced8e7c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764472"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567155"
 ---
 # <a name="class-protectiondescriptorbuilder"></a>ProtectionDescriptorBuilder de classe 
 Construit un ProtectionDescriptor qui décrit la protection associée à un élément de contenu.
@@ -19,14 +19,14 @@ Construit un ProtectionDescriptor qui décrit la protection associée à un él�
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std :: shared_ptr\<Build\> ProtectionDescriptor ()  |  Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Définit un nom pour la stratégie de protection.
 public void SetDescription(const std::string& value)  |  Définit la description de la stratégie de protection.
-public void SetContentValidUntil (const std :: Chrono :: time_point\<std :: Chrono :: system_clock\>& valeur)  |  Définit l’heure d’expiration de la stratégie de protection.
+public void SetContentValidUntil (const std :: Chrono :: time_point \<std::chrono::system_clock\>& valeur)  |  Définit l’heure d’expiration de la stratégie de protection.
 public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
-public void SetEncryptedAppData (const std :: map\<std :: String, std :: String\>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
-public void SetSignedAppData (const std :: map\<std :: String, std :: String\>& value)  |  Définit les données spécifiques de l’application qui doivent être signées.
+public void SetEncryptedAppData (const std :: map \<std::string, std::string\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
+public void SetSignedAppData (const std :: map \<std::string, std::string\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être signées.
 public void SetDoubleKeyUrl (const std :: String& doubleKeyUrl)  |  Définit l’URL de clé double à utiliser pour la protection personnalisée.
   
 ## <a name="members"></a>Membres

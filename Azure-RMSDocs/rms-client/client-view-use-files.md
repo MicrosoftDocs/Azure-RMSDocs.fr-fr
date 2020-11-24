@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fe3309ac4ca51668b0c351f90baa79c97607e96a
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298034"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568056"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : afficher les fichiers protégés avec la visionneuse de Azure Information Protection
 
@@ -49,7 +49,7 @@ Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’app
 
 Pour que vous puissiez afficher le fichier protégé, le service Rights Management qui a été utilisé pour protéger le fichier doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie votre nom d’utilisateur et votre mot de passe. Dans certains cas, ces informations d’identification peuvent être mises en cache et donc vous ne voyez pas d’invite vous demandant de vous connecter. Dans d'autres cas, vous êtes invité à fournir vos informations d’identification.
 
-Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous servir (pour Office 365 ou Azure) et n’utilise pas une version locale équivalente (AD RMS), vous avez deux options :
+Si votre organisation ne dispose pas d’un compte Cloud que vous pouvez utiliser (pour Microsoft 365 ou Azure) et qu’elle n’utilise pas une version locale équivalente (AD RMS), vous avez deux options :
 
 - Si vous avez reçu un e-mail protégé, suivez les instructions pour vous connecter avec votre fournisseur d’identité sociale (comme Google pour un compte Gmail) ou demandez un code secret à usage unique.
 

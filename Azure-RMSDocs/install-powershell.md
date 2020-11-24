@@ -1,8 +1,8 @@
 ---
 title: Installer le module PowerShell AIPService pour Azure Information Protection
 description: Instructions pour installer PowerShell pour le service de protection à partir de Azure Information Protection. Le nom de ce module est AIPService.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 23c18236413aaa2056d3eaaa30a64430de1e608b
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 57d8ac29ea58eab7820d642876e246b5ff985c4e
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136830"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568338"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installation du module PowerShell AIPService
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations suivantes pour vous aider à installer le module Windows PowerShell pour le service de protection à partir de Azure Information Protection. Le nom de ce module est AIPService et remplace la version précédente nommée AADRM.
 
@@ -56,7 +56,7 @@ Le module AIPService se trouve sur le [PowerShell Gallery](https://www.powershel
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>Pour installer le module AIPService à partir de la PowerShell Gallery
 
-Si vous n’avez jamais utilisé PowerShell Gallery, consultez [Bien démarrer avec PowerShell](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6). Suivez les instructions relatives à la configuration requise de la galerie, avec notamment l’installation du module PowerShellGet et du fournisseur NuGet.
+Si vous n’avez jamais utilisé PowerShell Gallery, consultez [Bien démarrer avec PowerShell](/powershell/scripting/gallery/getting-started). Suivez les instructions relatives à la configuration requise de la galerie, avec notamment l’installation du module PowerShellGet et du fournisseur NuGet.
 
 Pour plus d’informations sur le module AIPService sur la PowerShell Gallery, consultez la [page AIPService](https://www.powershellgallery.com/packages/AIPService).
 
@@ -100,7 +100,7 @@ Get-Help Connect-AipService -online
 
 Pour plus d'informations :
 
-- Liste complète des applets de commande disponibles : [module AIPService](/powershell/module/aipservice/?view=azureipps#aipservice)
+- Liste complète des applets de commande disponibles : [module AIPService](/powershell/module/aipservice/)
 
 - Liste des principaux scénarios de configuration qui prennent en charge PowerShell : [administration de la protection à partir de Azure information protection à l’aide de PowerShell](administer-powershell.md)
 

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 22b6cd2ebc3d2caf3da74691753e6f4f5cc6c05b
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 3c50c4579d32add393b680616106b37e92d2364c
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135728"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568296"
 ---
 # <a name="iosos-x-code-examples"></a>Exemples de code iOS/OS X
 
@@ -39,9 +39,9 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
 ### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé RMS
 
 
-- **Étape 1** : Créer un objet [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)
+- **Étape 1** : Créer un objet [MSProtectedData](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-interface-objc)
 
-  **Description** : Instancier un objet [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) par le biais de sa méthode de création qui implémente l’authentification de service à l’aide de [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) pour obtenir un jeton en passant une instance de **MSAuthenticationCallback**, comme paramètre *authenticationCallback*, à l’API MSIPC. Consultez l’appel à [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) dans la section d’exemple de code suivante.
+  **Description** : Instancier un objet [MSProtectedData](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-interface-objc) par le biais de sa méthode de création qui implémente l’authentification de service à l’aide de [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc) pour obtenir un jeton en passant une instance de **MSAuthenticationCallback**, comme paramètre *authenticationCallback*, à l’API MSIPC. Consultez l’appel à [MSProtectedData protectedDataWithProtectedFile](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-protecteddatawithprotectedfile-completionblock-method-objc) dans la section d’exemple de code suivante.
 
     ```objectivec
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -61,7 +61,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
 
 - **Étape 2** : Configurer l’authentification à l’aide de la bibliothèque d’authentification Active Directory (ADAL).
 
-  **Description** : Lors de cette étape, nous allons utiliser la bibliothèque ADAL pour implémenter un [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) avec des exemples de paramètres d’authentification. Pour plus d’informations sur l’utilisation de la bibliothèque ADAL, consultez la Bibliothèque d’authentification Azure AD (ADAL).
+  **Description** : Lors de cette étape, nous allons utiliser la bibliothèque ADAL pour implémenter un [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc) avec des exemples de paramètres d’authentification. Pour plus d’informations sur l’utilisation de la bibliothèque ADAL, consultez la Bibliothèque d’authentification Azure AD (ADAL).
 
     ```objectivec
       // AuthenticationCallback holds the necessary information to retrieve an access token.
@@ -102,7 +102,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
        }
     ```
 
-- **Étape 3** : Vérifier l’existence de l’autorisation de modification pour cet utilisateur avec ce contenu par le biais de la méthode [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) d’un objet [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx).
+- **Étape 3** : Vérifier l’existence de l’autorisation de modification pour cet utilisateur avec ce contenu par le biais de la méthode [MSUserPolicy accessCheck](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-accesscheck-method-objc) d’un objet [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc).
 
     ```objectivec
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
@@ -120,7 +120,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé à l’aide d’un modèle
 
-Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx), nous sélectionnons le premier pour créer une stratégie, puis nous créons et écrivons dans le nouveau fichier protégé.
+Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTemplateDescriptor](/previous-versions/windows/desktop/msipcthin2/mstemplatedescriptor-interface-objc), nous sélectionnons le premier pour créer une stratégie, puis nous créons et écrivons dans le nouveau fichier protégé.
 
 -   **Étape 1** : Obtenir la liste des modèles
 
@@ -136,7 +136,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
         }
     ```
 
--   **Étape 2** : Créer un [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) à l’aide du premier modèle de la liste.
+-   **Étape 2** : Créer un [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) à l’aide du premier modèle de la liste.
 
     ```objectivec
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -153,7 +153,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
         }
     ```
 
--   **Étape 3** : Créer un [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx) et y écrire du contenu.
+-   **Étape 3** : Créer un [MSMutableProtectedData](/previous-versions/windows/desktop/msipcthin2/msmutableprotecteddata-interface-objc) et y écrire du contenu.
 
     ```objectivec
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
@@ -172,7 +172,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
 ### <a name="scenario-open-a-custom-protected-file"></a>Scénario : Ouvrir un fichier protégé personnalisé
 
 
--   **Étape 1** : Créer un [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) à partir d’un *serializedContentPolicy*.
+-   **Étape 1** : Créer un [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) à partir d’un *serializedContentPolicy*.
 
     ```objectivec
         + (void)userPolicyWith:(NSData *)protectedData
@@ -202,7 +202,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
          }
     ```
 
--   **Étape 2** : Créer un [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) à l’aide du [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) de l’**Étape 1** et le lire.
+-   **Étape 2** : Créer un [MSCustomProtectedData](/previous-versions/windows/desktop/msipcthin2/msmutablecustomprotecteddata-interface-objc) à l’aide du [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) de l’**Étape 1** et le lire.
 
     ```objectivec
         + (void)customProtectedDataWith:(NSData *)protectedData
@@ -236,7 +236,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
 
 -   **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créer un descripteur de stratégie.
 
-    **Description** : Dans la pratique, les objets suivants doivent être créés à l’aide d’entrées d’utilisateur à partir de l’interface de l’appareil : [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) et [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
+    **Description** : Dans la pratique, les objets suivants doivent être créés à l’aide d’entrées d’utilisateur à partir de l’interface de l’appareil : [MSUserRights](/previous-versions/windows/desktop/msipcthin2/msuserrights-interface-objc) et [MSPolicyDescriptor](/previous-versions/windows/desktop/msipcthin2/mspolicydescriptor-interface-objc).
 
     ```objectivec
         + (void)policyDescriptor
@@ -249,7 +249,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
         }
     ```
 
--   **Étape 2** : Créer un [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) personnalisé à partir du descripteur de stratégie, *selectedDescriptor*.
+-   **Étape 2** : Créer un [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) personnalisé à partir du descripteur de stratégie, *selectedDescriptor*.
 
     ```objectivec
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
@@ -265,7 +265,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
         }
     ```
 
--   **Étape 3** :Créer et écrire du contenu dans [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx), puis le fermer.
+-   **Étape 3** :Créer et écrire du contenu dans [MSMutableCustomProtectedData](/previous-versions/windows/desktop/msipcthin2/msmutablecustomprotecteddata-interface-objc), puis le fermer.
 
     ```objectivec
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect

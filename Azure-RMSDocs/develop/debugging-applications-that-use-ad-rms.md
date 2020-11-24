@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c0b53c0f749427f785bf12afa6b3f8cda461947e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7b8d3a47949483baca3768670bfcdbdf457f62ef
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792542"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567492"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Comment : déboguer une application avec gestion des droits
 
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
 
 Le nom du journal des événements est Microsoft-RMS-MSIPC/Debug. Cela signifie que votre journal apparaît dans l’Observateur d’événements Windows sous la forme « Journaux des applications et des services\\Microsoft\\RMS\\MSIPC\\Debug ».
 
-**Remarque**  Le journal est activé par défaut et la valeur 3 est définie pour le niveau de commentaires.
+**Remarque**    Le journal est activé par défaut et défini sur le niveau de détail 3.
 
  
 
@@ -64,4 +64,4 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**Remarque**  Dans l’Observateur d’événements Windows, dans le menu **Affichage**, sélectionnez **Afficher les journaux d’analyse et de débogage** pour afficher le journal de débogage MSIPC.
+**Remarque**    Dans le observateur d’événements Windows, dans le menu **affichage** , sélectionnez **afficher les journaux d’analyse et de débogage** pour rendre le journal de débogage MSIPC visible.

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: f94f885f77d15ec5c38894a4801b08908e65a166
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 60420046a1b8c102143a6d6b0dcd2d7b01f55821
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555804"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567773"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de fichiers
 
@@ -36,15 +36,15 @@ Dans cet article, nous couvrirons les méthodes suivantes :
 - `DeleteLabel()`
 - `CommitAsync()`
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Configuration requise
 
 La création d’un `FileHandler` pour travailler avec un fichier spécifique nécessite :
 
-- Un `FileProfile`
+- `FileProfile`
 - L’ajout d’un `FileEngine` au `FileProfile`
 - Une classe qui hérite de `mip::FileHandler::Observer`
 
-## <a name="create-a-file-handler"></a>Créer un gestionnaire de fichiers
+## <a name="create-a-file-handler"></a>Créer un descripteur de fichier
 
 La première étape requise dans la gestion de tous les fichiers dans l’API de fichier consiste à créer un objet `FileHandler`. Cette classe implémente toutes les fonctionnalités requises pour obtenir, définir, mettre à jour, supprimer et valider les modifications des étiquettes dans des fichiers.
 
@@ -69,7 +69,7 @@ Une fois l’objet `FileHandler` créé avec succès, des opérations de fichier
 
 Il existe quelques conditions requises pour pouvoir lire correctement les métadonnées d’un fichier et les convertir afin de pouvoir les utiliser dans des applications.
 
-- L’étiquette qui est lue doit encore exister dans le service O365. Si elle a été supprimée complètement, le kit SDK ne parviendra pas à obtenir des informations sur cette étiquette et renverra une erreur.
+- L’étiquette en cours de lecture doit toujours exister dans le service Microsoft 365. Si elle a été supprimée complètement, le kit SDK ne parviendra pas à obtenir des informations sur cette étiquette et renverra une erreur.
 - Les métadonnées du fichier doivent être intactes. Ces métadonnées incluent :
   - Attribute1
   - Attribute2
@@ -93,11 +93,11 @@ Les données d’étiquette peuvent être lues à partir de l’objet `label` et
 
 ## <a name="set-a-label"></a>Définir une étiquette
 
-La définition d’une étiquette est un processus en deux parties. Tout d’abord, après avoir créé un gestionnaire qui pointe vers le fichier en question, l’étiquette peut être définie en appelant `FileHandler->SetLabel()` avec certains paramètres : `mip::Label`, `mip::LabelingOptions`et `mip::ProtectionOptions`. Tout d’abord, nous devons résoudre l’ID d’étiquette en étiquette, puis définir les options d’étiquetage. 
+La définition d’une étiquette est un processus en deux parties. Tout d’abord, après avoir créé un gestionnaire qui pointe vers le fichier en question, l’étiquette peut être définie en appelant `FileHandler->SetLabel()` avec certains paramètres : `mip::Label` , `mip::LabelingOptions` et `mip::ProtectionOptions` . Tout d’abord, nous devons résoudre l’ID d’étiquette en étiquette, puis définir les options d’étiquetage. 
 
 ### <a name="resolve-label-id-to-miplabel"></a>Résoudre l’ID d’étiquette en MIP :: label
 
-Le premier paramètre de la fonction **setLabel** est un `mip::Label`. Souvent, l’application utilise des identificateurs d’étiquette plutôt que des étiquettes. L’identificateur d’étiquette peut être résolu en `mip::Label` en appelant **GetLabelById** sur le fichier ou le moteur de stratégie :
+Le premier paramètre de la fonction **setLabel** est un `mip::Label` . Souvent, l’application utilise des identificateurs d’étiquette plutôt que des étiquettes. L’identificateur d’étiquette peut être résolu en `mip::Label` appelant **GetLabelById** sur le moteur de stratégie ou de fichier :
 
 ```cpp
 mip::Label label = mEngine->GetLabelById(labelId);
@@ -105,14 +105,14 @@ mip::Label label = mEngine->GetLabelById(labelId);
 
 ### <a name="labeling-options"></a>Options d’étiquetage
 
-Le deuxième paramètre requis pour définir l’étiquette est `mip::LabelingOptions`. 
+Le deuxième paramètre requis pour définir l’étiquette est `mip::LabelingOptions` . 
 
 `LabelingOptions` spécifie des informations supplémentaires sur l’étiquette comme le `AssignmentMethod` et la justification d’une action.
 
 - `mip::AssignmentMethod` est simplement un énumérateur qui peut prendre trois valeurs : `STANDARD`, `PRIVILEGED` ou `AUTO`. Passez en revue la référence de `mip::AssignmentMethod` pour plus de détails.
 - Une justification est nécessaire uniquement si la stratégie de service la requiert *et* lors de la diminution de la sensibilité *existante* d’un fichier.
 
-Cette capture illustre la création de l’objet `mip::LabelingOptions` et la définition de la justification et du message de rétrogradation.
+Cette capture montre comment créer l' `mip::LabelingOptions` objet et définir la justification et le message de rétrogradation.
 
 ```cpp
 auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
@@ -121,9 +121,9 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 ### <a name="protection-settings"></a>Paramètres de protection
 
-Certaines applications peuvent avoir besoin d’effectuer des opérations pour le compte d’une identité d’utilisateur délégué. La classe `mip::ProtectionSettings` permet à l’application de définir l’identité déléguée *par gestionnaire*. Auparavant, la délégation était effectuée par les classes de moteur. Cela présentait des inconvénients significatifs dans la surcharge des applications et les allers-retours de service. En déplaçant les paramètres utilisateur délégué vers `mip::ProtectionSettings` et en faisant cette partie de la classe Handler, nous éliminons cette surcharge, ce qui améliore les performances des applications qui effectuent de nombreuses opérations pour le compte de divers jeux d’identités utilisateur. 
+Certaines applications peuvent avoir besoin d’effectuer des opérations pour le compte d’une identité d’utilisateur délégué. La `mip::ProtectionSettings` classe permet à l’application de définir l’identité déléguée *par gestionnaire*. Auparavant, la délégation était effectuée par les classes de moteur. Cela présentait des inconvénients significatifs dans la surcharge des applications et les allers-retours de service. En déplaçant les paramètres utilisateur délégué vers `mip::ProtectionSettings` et en faisant cette partie de la classe de gestionnaire, nous éliminons cette surcharge, ce qui améliore les performances des applications qui effectuent de nombreuses opérations pour le compte de divers jeux d’identités utilisateur. 
 
-Si la délégation n’est pas requise, transmettez simplement `mip::ProtectionSettings()` à la fonction **setLabel** . Si la délégation est nécessaire, vous pouvez la créer en créant un objet `mip::ProtectionSettings` et en définissant l’adresse de messagerie déléguée :
+Si la délégation n’est pas requise, transmettez simplement `mip::ProtectionSettings()` à la fonction **setLabel** . Si la délégation est nécessaire, vous pouvez la créer en créant un `mip::ProtectionSettings` objet et en définissant l’adresse de messagerie déléguée :
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 
@@ -132,7 +132,7 @@ protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
 
 ### <a name="set-the-label"></a>Définir l’étiquette
 
-Après avoir extrait le `mip::Label` à partir de l’ID, défini les options d’étiquetage et, éventuellement, défini les paramètres de protection, l’étiquette peut maintenant être définie.
+Après avoir extrait le `mip::Label` de l’ID, défini les options d’étiquetage et, éventuellement, défini les paramètres de protection, l’étiquette peut maintenant être définie.
 
 Si vous n’avez pas défini les paramètres de protection, définissez l’étiquette en appelant `SetLabel` sur le gestionnaire :
 

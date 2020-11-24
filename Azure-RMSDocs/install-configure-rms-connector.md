@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788716"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568350"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -47,7 +47,7 @@ Assurez-vous que vous avez pris connaissance de l’instance de cloud Souverain 
 
     Pour installer le connecteur RMS, téléchargez RMSConnectorSetup.exe.
 
-    En outre :
+    Informations supplémentaires :
 
     -   Si vous souhaitez utiliser l’outil de configuration de serveur pour le connecteur RMS afin d’automatiser la configuration des paramètres de Registre sur vos serveurs locaux, téléchargez également GenConnectorConfig.ps1.
 
@@ -187,7 +187,7 @@ Le nom de serveur URL du connecteur peut être n’importe quel nom figurant sou
 > [!IMPORTANT]
 > Nous recommandons de ne pas modifier ce nom après avoir configuré les serveurs Exchange ou SharePoint de manière à utiliser le connecteur, sans quoi vous devriez alors supprimer ces serveurs de toutes les configurations IRM et ensuite les reconfigurer.
 
-Une fois le nom créé dans le système DNS et configuré pour une adresse IP, configurez l’équilibrage de charge pour cette adresse qui dirige le trafic vers les serveurs du connecteur. Pour ce faire, vous pouvez utiliser n’importe quel équilibreur de charge basé sur l’IP, qui inclut la fonctionnalité d’équilibrage de charge réseau (NLB) dans Windows Server. Pour plus d’informations, consultez le [Guide de déploiement de l’équilibrage de charge](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Une fois le nom créé dans le système DNS et configuré pour une adresse IP, configurez l’équilibrage de charge pour cette adresse qui dirige le trafic vers les serveurs du connecteur. Pour ce faire, vous pouvez utiliser n’importe quel équilibreur de charge basé sur l’IP, qui inclut la fonctionnalité d’équilibrage de charge réseau (NLB) dans Windows Server. Pour plus d’informations, consultez le [Guide de déploiement de l’équilibrage de charge](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)).
 
 Utilisez les paramètres suivants pour configurer le cluster d’équilibrage de charge réseau :
 
@@ -215,8 +215,8 @@ Si vous utilisez l’option HTTPS, assurez-vous que tous les serveurs qui exécu
 > Vous pouvez utiliser les informations et les ressources suivantes pour vous aider à demander et installer un certificat d’authentification de serveur et lier ce certificat au site web par défaut dans IIS :
 >
 > - Si vous utilisez une autorité de certification d’entreprise (CA) et Active Directory Certificate Services (AD CS) pour déployer ces certificats d’authentification de serveur, vous pouvez dupliquer et ensuite utiliser le modèle de certificat de serveur web. Ce modèle utilise l'option **Fourni dans la demande** pour le nom du sujet du certificat, ce qui signifie que vous pouvez fournir le nom de domaine complet du nom du connecteur RMS pour le nom du sujet du certificat ou le nom alternatif du sujet pour votre demande de certificat.
-> -   Si vous utilisez une autorité de certification autonome ou achetez ce certificat auprès d’une autre société, consultez [Configuring Internet Server Certificates (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) (Configurer des certificats de serveurs IIS 7) dans la bibliothèque de documents relatifs au [Serveur web (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) sur TechNet.
-> - Pour configurer IIS de manière à utiliser le certificat, consultez [Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) (Ajouter une liaison à un site IIS 7) dans la bibliothèque de documents relatifs au [Serveur web (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) sur TechNet.
+> -   Si vous utilisez une autorité de certification autonome ou achetez ce certificat auprès d’une autre société, consultez [Configuring Internet Server Certificates (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731977(v=ws.10)) (Configurer des certificats de serveurs IIS 7) dans la bibliothèque de documents relatifs au [Serveur web (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) sur TechNet.
+> - Pour configurer IIS de manière à utiliser le certificat, consultez [Add a Binding to a Site (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731692(v=ws.10)) (Ajouter une liaison à un site IIS 7) dans la bibliothèque de documents relatifs au [Serveur web (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) sur TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configuration du connecteur RMS pour un serveur proxy web
 Si vos serveurs de connecteur sont installés sur un réseau qui ne dispose pas d’une connectivité Internet directe et requiert la configuration manuelle d’un serveur proxy Web pour l’accès Internet sortant, vous devez configurer le registre sur ces serveurs pour le connecteur RMS.
@@ -255,4 +255,3 @@ Si vous n’avez pas encore téléchargé ces fichiers, vous pouvez le faire à 
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que le connecteur RMS est installé et configuré, vous êtes en mesure de configurer vos serveurs locaux de manière à l’utiliser. Accédez à [Configuration des serveurs pour le connecteur Azure Rights Management](configure-servers-rms-connector.md).
-

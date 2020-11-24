@@ -6,7 +6,7 @@ author: kkanakas
 ms.author: kartikka
 manager: barbkess
 ms.date: 02/27/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 5150c9f3339f442f7898f273d2275cd267e8d6b8
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: cc562d826d73d959d80ef4db2967d950827ec216
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791151"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567467"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Déploiement d’une application de service sur un autre locataire
 

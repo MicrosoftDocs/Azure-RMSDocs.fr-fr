@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 56d465d8efbc0b5bc2c6b87e1b60e34cb4e091f8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298221"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567581"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
@@ -33,7 +33,7 @@ Les déploiements les plus performants sont ceux qui identifient des cas d’uti
 |Scénario : je souhaite...|Instructions|
 |----------------|---------------|
 |Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
-|Aider les utilisateurs à protéger leurs e-mails contenant des informations sensibles|[Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](quickstart-label-dnf-protectedemail.md)|
+|Aider les utilisateurs à protéger leurs e-mails contenant des informations sensibles|[Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](quickstart-label-dnf-protectedemail.md)|
 |Aider les utilisateurs à classer les données qu’ils ont créées ou modifiées, et à les protéger si elles contiennent des informations sensibles| [Tutoriel : Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md)|
 |Aider les utilisateurs à collaborer sur un document protégé|[Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md)|
 |Protéger automatiquement les e-mails des utilisateurs qui sont envoyés en dehors de l’organisation| [Configuration des règles de flux de messagerie pour les étiquettes Azure Information Protection](configure-exo-rules.md)

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 25a45be35851035411436a58fc72682ff4e6d66d
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564100"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568211"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Comment : installer, configurer et tester avec un serveur RMS
 
@@ -68,7 +68,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
    - Pour la découverte côté serveur, l’administrateur inscrit un point de connexion de service pour le cluster racine RMS auprès d’Active Directory. Ainsi, le client interroge Active Directory pour découvrir le point de connexion de service et établir une connexion avec le serveur.
    - Pour la découverte côté client, vous configurez des paramètres de découverte de service RMS dans le Registre de l’ordinateur sur lequel s’exécute le client RMS 2.1. Ces paramètres indiquent au client RMS 2.1 le serveur RMS à utiliser. Quand de tels paramètres sont définis, la découverte côté serveur n’est pas lancée.
 
-   Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez [RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx) (Notes sur le déploiement de RMS Client 2.0).
+   Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez [RMS Client 2.0 Deployment Notes](../rms-client/client-deployment-notes.md) (Notes sur le déploiement de RMS Client 2.0).
 
 4. **EnterpriseCertification**
 

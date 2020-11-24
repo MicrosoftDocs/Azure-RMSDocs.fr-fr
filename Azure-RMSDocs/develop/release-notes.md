@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563788"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568380"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
@@ -44,7 +44,7 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 
 La mise à jour de la version de juillet incluait l’incrémentation de la révision du kit de développement logiciel (SDK), actuellement nommé 4.2.5.
 
-- Android SDK : votre application peut désormais **définir le niveau d’enregistrement à la volée** avec Android SDK. Pour plus d’informations, consultez [Comment : activer la journalisation des erreurs et des performances](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- Android SDK : votre application peut désormais **définir le niveau d’enregistrement à la volée** avec Android SDK. Pour plus d’informations, consultez [Comment : activer la journalisation des erreurs et des performances](/information-protection/develop/enabling-logging)
 - Le kit de développement logiciel (SDK) iOS ne prend pas en charge le niveau d’enregistrement.
 - Le kit de développement logiciel (SDK) retourne désormais une erreur pour un jeton d’accès de valeur NULL.
 
@@ -66,29 +66,29 @@ Avec cette version, le kit de développement logiciel (SDK) RMS pour les apparei
 
 -   le suivi des documents, RMS On-line uniquement, pour les systèmes d’exploitation iOS/OS X et Android.
 
-    Pour plus d’informations et de conseils d’utilisation sur iOS/OS X, consultez la classe [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) qui fournit des informations de suivi et la méthode d’enregistrement de suivi des documents supplémentaire sur [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Des ajouts similaires ont été effectués pour [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) et [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) sur Android.
+    Pour plus d’informations et de conseils d’utilisation sur iOS/OS X, consultez la classe [MSLicenseMetadata](/previous-versions/windows/desktop/msipcthin2/mslicensemetadata-class-objc) qui fournit des informations de suivi et la méthode d’enregistrement de suivi des documents supplémentaire sur [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc). Des ajouts similaires ont été effectués pour [LicenseMetadata](/previous-versions/windows/desktop/msipcthin2/licensemetadata-interface-java) et [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) sur Android.
 
     Pour obtenir une description détaillée de la fonctionnalité de suivi des documents, consultez [Procédure : utilisation du suivi des documents](how-to-use-document-tracking.md).
 
 -   Ensemble de méthodes synchrones parallèles aux versions asynchrones de l’API Android :
 
-    [Méthode synchrone CustomProtectedInputStream.create](https://msdn.microsoft.com/library/mt631362.aspx)
+    [Méthode synchrone CustomProtectedInputStream.create](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-create-synchronous-method-java)
 
-    [Méthode synchrone CustomProtectedOutputStream.create](https://msdn.microsoft.com/library/mt631363.aspx)
+    [Méthode synchrone CustomProtectedOutputStream.create](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-create-synchronous-method)
 
-    [Méthode synchrone ProtectedFileInputStream.create](https://msdn.microsoft.com/library/mt631375.aspx)
+    [Méthode synchrone ProtectedFileInputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-create-synchronous-method)
 
-    [Méthode synchrone ProtectedFileOutputStream.create](https://msdn.microsoft.com/library/mt631376.aspx)
+    [Méthode synchrone ProtectedFileOutputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-create-synchronous-method-java)
 
-    [Méthode synchrone TemplateDescriptor.getTemplates](https://msdn.microsoft.com/library/mt631380.aspx)
+    [Méthode synchrone TemplateDescriptor.getTemplates](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-gettemplates-synchronous-method-java)
 
-    [Méthode synchrone UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
+    [Méthode synchrone UserPolicy.acquire](/previous-versions/windows/desktop/msipcthin2/userpolicy-acquire-synchronous-method-java)
 
-    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)**](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-policydescriptor-------synchronous-method-java)
 
-    [Méthode synchrone UserPolicy.create (TemplateDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
+    [Méthode synchrone UserPolicy.create (TemplateDescriptor…)](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-templatedescriptor-------synchronous-method-java)
 
--   Une nouvelle classe [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx) a été ajoutée à l’API Android.
+-   Une nouvelle classe [ProtectedBuffer](/previous-versions/windows/desktop/msipcthin2/protectedbuffer-class) a été ajoutée à l’API Android.
 -   Mises à jour visant à améliorer les messages d’erreur et l’expérience de dépannage.
 -   Améliorations significatives des performances pour les opérations de chiffrement.
 
@@ -108,7 +108,7 @@ Cette version ajoute la prise en charge pour les mises à jour suivantes :
 
     Le chiffrement et le déchiffrement des applications peuvent fonctionner de manière indépendante et en parallèle.
 
-    Pour plus d’informations, consultez [MSProtector](https://msdn.microsoft.com/library/mt210993.aspx).
+    Pour plus d’informations, consultez [MSProtector](/previous-versions/windows/desktop/msipcthin2/msprotector-class-objc).
 
     Paramètres de contrôle d’enregistrement activés.
 
@@ -116,7 +116,7 @@ Cette version ajoute la prise en charge pour les mises à jour suivantes :
 
     Ajout de la prise en charge de l’effacement du cache.
 
-    Pour plus d’informations, consultez [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
+    Pour plus d’informations, consultez [MSProtection:resetStateWithCompletionBlock](/previous-versions/windows/desktop/msipcthin2/msprotection-resetstatewithcompletionblock-method-objc).
 
 ### <a name="february-2015-update---adds-windows-store-application-support"></a>Mise à jour de février 2015 : ajout de la prise en charge de l’application Windows Store
 
@@ -132,11 +132,11 @@ La version 4.1 du kit de développement logiciel (SDK) RMS ajoute les fonctionna
 
 -   Extensions API du kit de développement logiciel (SDK) Android et iOS/OS X pour le traitement du *consentement de l’utilisateur*, ce qui permet à l’utilisateur de confirmer les comportements du kit de développement logiciel (SDK). Actuellement, le suivi des documents et l’accès à des URL de service AD RMS inconnues constituent les types de consentement pris en charge.
 
-    Pour plus d’informations, consultez par exemple la version de l’API Android de l’[interface ConsentCallback](https://msdn.microsoft.com/library/dn833503.aspx).
+    Pour plus d’informations, consultez par exemple la version de l’API Android de l’[interface ConsentCallback](/previous-versions/windows/desktop/msipcthin2/consentcallback-interface-java).
 
 -   Les systèmes d’exploitation iOS 8 et OS X 10.10 (Yosemite) sont désormais pris en charge. Quelques modifications de nom de propriété requises par Xcode 6 ont également eu lieu.
 
-    Par exemple, MSUserPolicy.name est devenu [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx).
+    Par exemple, MSUserPolicy.name est devenu [MSUserPolicy.policyName](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-name-property-objc).
 
 ## <a name="release-notes"></a>Notes de publication
 
@@ -146,7 +146,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 -   **Prise en charge d’AD RMS** : les administrateurs informatiques peuvent utiliser les applications compatibles avec RMS sur des appareils mobiles avec les extensions d’appareil mobile du nouveau serveur AD RMS.
 -   **Consommation hors connexion** : les utilisateurs peuvent accéder aux données protégées par RMS hors connexion.
--   **Authentification séparée** : les développeurs peuvent utiliser leur propre bibliothèque d’authentification pour Azure RMS et AD RMS (ou utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://MSDN.Microsoft.Com/library/jj573266.aspx) recommandée).
+-   **Authentification séparée** : les développeurs peuvent utiliser leur propre bibliothèque d’authentification pour Azure RMS et AD RMS (ou utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](/previous-versions/azure/jj573266(v=azure.100)) recommandée).
 -   **Interface utilisateur séparée** : les développeurs peuvent créer leur propre interface utilisateur pour protéger et utiliser des documents protégés par RMS.
 -   **Reconception de l’API** : les développeurs bénéficient désormais d’une API de chiffrement et de déchiffrement simple et transparente, qui assure la cohérence des comportements RMS et de l’expérience utilisateur avec un minimum d’effort.
 
@@ -164,9 +164,9 @@ Cette section présente des informations sur les versions actuelles et précéde
 
     **Solution** : vérifiez que l’application n’autorise pas les appels de plusieurs instances vers l’API Android.
 
--   Lorsque j’utilise la méthode [méthode protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (tableau d’octets \[ \] , int offset, int length) avec une longueur différente de la valeur *Array. Length* , je ne peux pas consommer le contenu ultérieurement à l’aide du kit de développement logiciel (SDK).
+-   Lorsque j’utilise la méthode [méthode protectedfileoutputstream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java). Write (tableau d’octets \[ \] , int offset, int length) avec une longueur différente de la valeur *Array. Length* , je ne peux pas consommer le contenu ultérieurement à l’aide du kit de développement logiciel (SDK).
 
-    **Solution** : il s’agit d’un problème connu. Pour l’atténuer, transmettez toujours un tableau *d' \[ \] octets* avec la même valeur de longueur que le paramètre de longueur, ou utilisez la méthode [méthode protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (tableau d’octets \[ \] ).
+    **Solution** : il s’agit d’un problème connu. Pour l’atténuer, transmettez toujours un tableau *d' \[ \] octets* avec la même valeur de longueur que le paramètre de longueur, ou utilisez la méthode [méthode protectedfileoutputstream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java). Write (tableau d’octets \[ \] ).
 
 **iOS et OS X**
 
@@ -192,8 +192,8 @@ Cette section présente des informations sur les versions actuelles et précéde
 
     Les méthodes suivantes ne doivent pas être exécutées simultanément. Pour surveiller l’achèvement de l’exécution, utilisez l’approche de bloc d’achèvement comme indiqué.
 
-    - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
-    - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
+    - [MSProtectedData.protectedDataWithProtectedFile](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-protecteddatawithprotectedfile-completionblock-method-objc)
+    - [MSCustomProtectedData.customProtectedDataWithPolicy](/previous-versions/windows/desktop/msipcthin2/mscustomprotecteddata-customprotecteddatawithpolicy-protecteddata-contentstartposition-contentsize-completionblock-method-objc)
 
 
 
@@ -203,7 +203,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 **Toutes les plateformes**
 
-**Q** : Je ne vois pas d’interface utilisateur de sélection des **autorisations personnalisées** dans le flux de travail de protection. Pourquoi ?
+**Q** : Je ne vois pas d’interface utilisateur de sélection des **autorisations personnalisées** dans le flux de travail de protection. Pourquoi ?
 
 **R** : Il s’agit d’un problème connu qui sera traité ultérieurement.
 
@@ -211,7 +211,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 **R** : Si vous souhaitez demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
 
-**Q** : Je ne vois aucune discussion relative à la hiérarchie de test dans la documentation. Pourquoi ?
+**Q** : Je ne vois aucune discussion relative à la hiérarchie de test dans la documentation. Pourquoi ?
 
 **R** : Le concept de hiérarchie de test n’existe pas dans les nouveaux kits de développement logiciel (SDK) AD RMS. Vous travaillerez toujours avec la hiérarchie de production.
 
@@ -234,7 +234,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 **R** : Xcode 5.0 avec iOS 7 et versions ultérieures.
 
-**Q** : J’ai appelé une méthode cancel() sur une opération, mais je reçois toujours une notification indiquant que l’opération est terminée. Pourquoi ?
+**Q** : J’ai appelé une méthode cancel() sur une opération, mais je reçois toujours une notification indiquant que l’opération est terminée. Pourquoi ?
 
 **R** : Toutes les opérations ne peuvent pas être annulées. Les opérations d’annulation sont donc exécutées dans la mesure du possible.
 

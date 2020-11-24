@@ -12,12 +12,12 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 06ffea8f623e55eaa482020a9bc8d7583f8c84f7
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d811cf998b6e2d5ce04c4e3ff2208030de15e49c
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935229"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567846"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Conformité et informations annexes pour Azure Information Protection
 
@@ -47,11 +47,11 @@ Toutefois, certaines informations utiles peuvent aider votre conseiller juridiqu
 
 ## <a name="security-compliance-and-auditing"></a>Sécurité, conformité et audit
 
-Consultez la section [Respect des obligations réglementaires, de conformité et de sécurité](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) de l’article [Quels problèmes Azure RMS résout-il ?](./azure-rms-problems-it-solves.md) pour plus d’informations sur les certifications spécifiques au service Azure Rights Management. De plus :
+Consultez la section [Respect des obligations réglementaires, de conformité et de sécurité](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) de l’article [Quels problèmes Azure RMS résout-il ?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) pour plus d’informations sur les certifications spécifiques au service Azure Rights Management. Informations supplémentaires :
 
 - Pour connaître les certifications externes pour Azure Information Protection : [Centre de confidentialité de Microsoft Azure](https://azure.microsoft.com/support/trust-center/)
 
-- Pour plus d'informations sur FIPS 140 : [Validation FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
+- Pour plus d'informations sur FIPS 140 : [Validation FIPS 140](/windows/security/threat-protection/fips-140-validation)
 
 Pour obtenir des informations techniques approfondies sur le fonctionnement de la technologie de protection, consultez [Fonctionnement d’Azure RMS](./how-does-it-work.md) 
 
@@ -67,5 +67,5 @@ Pour obtenir des informations techniques approfondies sur le fonctionnement de l
 
 - Documentation Azure Active Directory : [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Documentation Office 365 Entreprise : [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
+- Documentation Microsoft 365 : [Microsoft 365 pour la documentation et les ressources d’entreprise](/Office365/Enterprise/)
 

@@ -15,16 +15,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 5c90580a099d1eab3d6d9cca297fda24d7339820
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: ad1739534335705a928fa7f184e5e26010faa2ae
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298204"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567786"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et support pour Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -54,7 +54,7 @@ Vous trouverez des informations supplémentaires et plus détaillées sur le [bl
 
 Le blog technique de Azure Information Protection présente également un résumé des [modifications de la documentation chaque mois](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Ces modifications peuvent inclure une documentation nouvelle et mise à jour pour la nouvelle version, des modifications des instructions de prise en charge, ainsi que des corrections et des clarifications pour les mises en production existantes.
 
-Ces publications de mises à jour de documents sont intitulées : «**Azure information protection la \<month year> mise à jour de la documentation pour **».
+Ces publications de mises à jour de documents sont intitulées : «**Azure information protection la \<month year> mise à jour de la documentation pour**».
 
 ## <a name="support-options-and-community-resources"></a>Options de support et ressources communautaires
 Les sections suivantes fournissent des informations sur les options de support et de dépannage, ainsi que sur les ressources communautaires.
@@ -70,9 +70,9 @@ Pour les autres clients, utilisez les canaux de support du tableau suivant, en f
 |Abonnement|Instructions|
 |----------------|---------------|
 |Azure Information Protection (autonome)|1. Sélectionnez **nouvelle demande de support** dans [aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans la portail Azure.<br /><br />2. quand vous y êtes invité, dans le volet de **base** , choisissez **technique** pour le **type de problème** et **information protection** pour le service. <br /><br />3. en outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec le support technique inclus** : vous voyez cette option si vous avez un abonnement d’évaluation ou payant pour Azure.<br /><br /> - **Support technique - inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
-|Azure Information Protection et abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support produit pour les entreprises – Aide de l’administrateur](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le Centre d’administration Microsoft 365.|
+|Azure Information Protection et un abonnement Microsoft 365<br /><br />Rights Management Azure avec un abonnement Microsoft 365|Consultez [Contacter le support produit pour les entreprises – Aide de l’administrateur](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le Centre d’administration Microsoft 365.|
 |Azure Information Protection avec Enterprise Mobility + Security (EMS)|1. Sélectionnez **nouvelle demande de support** dans [aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans la portail Azure.<br /><br />2. quand vous y êtes invité, dans le volet de **base** , choisissez **technique** pour le **type de problème** et **information protection** pour le service. <br /><br />3. en outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec le support technique inclus** : vous voyez cette option si vous avez un abonnement d’évaluation ou payant pour Azure.<br /><br /> - **Support technique - inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
-|Azure Information Protection avec Microsoft 365 Enterprise|Utilisez les [canaux de support Office 365](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
+|Azure Information Protection avec Microsoft 365 Enterprise|Utilisez les [canaux de support Microsoft 365](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Pour d’autres options de support, demandez à votre contact Microsoft. 
 

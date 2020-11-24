@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9b13f31a13d447dcd620f986cac17c74f0a7de17
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a354e9f787cf079e2c67a03fb58d330ab7785ce3
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048661"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567906"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -26,7 +26,7 @@ ms.locfileid: "86048661"
 
 Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 4 à 6 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
 
 Cette étape est un processus comprenant deux phases :
 
@@ -75,7 +75,7 @@ Votre déploiement AD RMS actuel utilise l’une des configurations suivantes po
 - Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe.
 
 > [!NOTE]
->  Pour plus d’informations sur l’utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d’AD RMS avec des modules de sécurité matériels](https://technet.microsoft.com/library/jj651024.aspx).
+>  Pour plus d’informations sur l’utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d’AD RMS avec des modules de sécurité matériels](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj651024(v=ws.11)).
 
 Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Lorsque vous gérez votre propre clé de locataire Azure Information Protection, elle est parfois appelée « Bring Your Own Key » (BYOK). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
@@ -154,7 +154,7 @@ Si vos modèles dans AD RMS utilisé le groupe **tout le monde** , le groupe éq
 
 Quand vous gérez des modèles et des étiquettes dans le portail Azure, ce groupe apparaît comme le nom de domaine de votre locataire dans Azure AD. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **contoso.onmicrosoft.com**. Pour ajouter ce groupe, l’option affiche **ajouter \<organization name> -tous les membres**.
 
-Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell suivant pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [utilisation de Windows PowerShell pour administrer des AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell suivant pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [utilisation de Windows PowerShell pour administrer des AD RMS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221079(v=ws.10)).
 
 Vous pouvez facilement ajouter des utilisateurs externes à des modèles quand vous convertissez ces derniers en étiquettes dans le portail Azure. Ensuite, dans le volet **Ajouter des autorisations** , choisissez entrer les **Détails** pour spécifier manuellement les adresses de messagerie de ces utilisateurs.
 

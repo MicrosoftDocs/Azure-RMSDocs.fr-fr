@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: ef1306dbcbd4727f4e6c0207e328e7df3da8ed74
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 24de585a77268611115342154a55cf6d78c443ad
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971895"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567971"
 ---
 # <a name="android-setup"></a>Configuration pour Android
 
@@ -29,7 +29,7 @@ Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 p
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Conditions préalables](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
@@ -49,11 +49,11 @@ Nous vous recommandons de disposer des logiciels suivants sur votre système de 
 
     Ce SDK peut être utilisé pour développer pour Android 4.0.3 (API niveau 15) et ultérieur.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](/previous-versions/azure/jj573266(v=azure.100)). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Remarque :**  si votre application n’utilise pas la bibliothèque Adal comme bibliothèque d’authentification OAuth 2,0, vous devez consulter cette aide Android, [quelques réflexions SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Remarque**    Si votre application n’utilise pas la bibliothèque ADAL comme bibliothèque d’authentification OAuth 2,0, vous devez consulter ce guide Android, [quelques réflexions SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
 
 
@@ -65,7 +65,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
-**Notez**  la version préliminaire de MS Kit de développement logiciel (SDK) RMS 4,2 : dans cette version préliminaire, les captures d’écran n’ont pas été mises à jour pour afficher la modification du nom des chemins d’accès de com/Microsoft/protection à com/Microsoft/rightsmanagment. Le texte a cependant été mis à jour.
+**Remarque**    Version préliminaire de MS kit de développement logiciel (SDK) RMS 4,2 : dans cette version préliminaire, les captures d’écran n’ont pas été mises à jour pour afficher la modification du nom des chemins d’accès de com/Microsoft/protection à com/Microsoft/rightsmanagment. Le texte a cependant été mis à jour.
 
 
 -   Ouvrez l’environnement de développement Eclipse.
@@ -86,7 +86,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     ![Créez l’activité](../media/Android-setup-04.png)
 
--   Cliquez sur **Suivant** et indiquez un nom pour l’activité. Vous pouvez conserver *MainActivity* comme nom par défaut avec le nom de mise en page *main activité\_*.
+-   Cliquez sur **Suivant** et indiquez un nom pour l’activité. Vous pouvez conserver *MainActivity* comme nom par défaut avec le nom de mise en page *\_ main activité*.
 
     ![Spécifiez un nom pour l’activité](../media/Android-setup-05a.jpg)
 
@@ -98,14 +98,14 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 **Référencement du SDK**
 
-- Accédez au dossier dans lequel vous avez extrait le *fichier\_ADRMS\_Android SDK. zip*. Dans le dossier « SDK > com > microsoft > rightsmanagement », vérifiez que les fichiers *.classpath*, *.project* et *project.properties* ne sont pas marqués en lecture seule.
+- Accédez au dossier dans lequel vous avez extrait le *\_ \_sdk.zipAndroid ADRMS*. Dans le dossier « SDK > com > microsoft > rightsmanagement », vérifiez que les fichiers *.classpath*, *.project* et *project.properties* ne sont pas marqués en lecture seule.
 - Pour faire référence au SDK, vous devez l’importer dans l’espace de travail.
 
   Dans Eclipse, cliquez sur **Fichier**. Dans le menu **Fichier**, cliquez sur **Importer**. Dans la boîte de dialogue **Importer**, sélectionnez **Android / Code Android existant dans l’espace de travail**.
 
   ![Importez-le dans l’espace de travail](../media/Android-setup-07.png)
 
-- Cliquez sur **Suivant**. Accédez à sélectionner le dossier dans lequel vous avez extrait *le\_fichier\_ADRMS Android SDK. zip*. Le SDK doit apparaître dans la liste comme **com.microsoft.rightsmanagement**.
+- Cliquez sur **Suivant**. Accédez à sélectionner le dossier dans lequel vous avez extrait *le \_ \_sdk.zipAndroid ADRMS*. Le SDK doit apparaître dans la liste comme **com.microsoft.rightsmanagement**.
 
   ![Naviguez pour sélectionner le dossier](../media/Android-setup-08c.jpg)
 
@@ -121,7 +121,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 - Cliquez sur **OK**.
 
-  Étant donné que le MS kit de développement logiciel (SDK) RMS 4,2 se connecte à AAD RM, l’application doit se voir accorder l' **État réseau\_\_** **Internet** et accès. Pour cela, ouvrez le fichier *AndroidManifest.xml* à la racine du projet.
+  Étant donné que le MS kit de développement logiciel (SDK) RMS 4,2 se connecte à AAD RM, l’application doit se voir accorder l' **\_ \_ État réseau** **Internet** et accès. Pour cela, ouvrez le fichier *AndroidManifest.xml* à la racine du projet.
 
   Pour ajouter les autorisations, cliquez sur **Ajouter**, puis sélectionnez **Utilise les autorisations**.
 
@@ -138,11 +138,11 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
   <uses-permission/>
   ```
 
-**Remarque**  le kit de développement logiciel (SDK) utilise *Android. support. v4*
+**Remarque**    Le kit de développement logiciel (SDK) utilise *Android. support. v4*
 
 -   Vous êtes maintenant prêt à créer vos propres applications Android.
 
-### <a name="see-also"></a> Voir aussi
+### <a name="see-also"></a>Voir aussi
 
 [Prise en main](get-started.md)
 
@@ -150,4 +150,4 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 [Concepts et termes de développement](core-concepts.md)
 
-[Informations de référence sur l’API Android](https://msdn.microsoft.com/library/dn758245.aspx)
+[Informations de référence sur l’API Android](/previous-versions/windows/desktop/msipcthin2/android)

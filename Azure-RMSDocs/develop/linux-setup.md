@@ -6,19 +6,19 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6d6986683529018ae8d7811fc8dc1bf91bf13a82
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: d3bfc8a207d5c234c8e20ea555d8694b0099cd6d
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068601"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567587"
 ---
 # <a name="linux-setup"></a>Installation Linux
 
@@ -30,11 +30,11 @@ Plusieurs versions des systèmes d’exploitation Linux peuvent désormais utili
 - [Comment créer et utiliser](#how-to-build-and-use)
 - [Voir aussi](#see-also)
 
-## <a name="supported-operating-systems"></a>Systèmes d'exploitation pris en charge
+## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge
 
-- Ubuntu 14.04
+- Ubuntu 14.04
 - OpenSUSE 13.2
-- CentOS 7
+- CentOS 7
 
 Les bibliothèques et les exemples ont aussi été correctement compilés sur Windows et OSX, mais ils ne sont pas entièrement pris en charge actuellement.
  
@@ -45,6 +45,6 @@ Les bibliothèques et les exemples ont aussi été correctement compilés sur Wi
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Mise en route](get-started.md)
+- [Prise en main](get-started.md)
 - [Nouveautés](release-notes.md)
-- [Terminologie et concepts du développement](core-concepts.md)
+- [Concepts et termes de développement](core-concepts.md)

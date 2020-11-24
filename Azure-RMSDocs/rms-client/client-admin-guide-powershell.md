@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 7c5f2975b93e907d244db7c95975105f58ed1b94
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868992"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568128"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -40,11 +40,11 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
 > [!TIP]
-> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> Stratégie de l' **ordinateur local**  >  Configuration de l' **ordinateur**  >  **Modèles d’administration**  >  **Tous les paramètres**  >  **Activer les chemins d’accès longs Win32** 
+> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) disponible à compter de la version 1607 de Windows 10 :<br /> Stratégie de l' **ordinateur local**  >  Configuration de l' **ordinateur**  >  **Modèles d’administration**  >  **Tous les paramètres**  >  **Activer les chemins d’accès longs Win32** 
 > 
 > Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
 >
-> Pour plus d’informations, consultez la section consacréee à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
+> Pour plus d’informations, consultez la section consacréee à la [longueur maximale des chemins](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
 
 Le [scanneur Azure Information Protection](../deploy-aip-scanner.md) utilise les applets de commande du module AzureInformationProtection pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
 
@@ -139,7 +139,7 @@ Les sections suivantes expliquent comment obtenir et spécifier ces valeurs manu
 
 ##### <a name="to-get-the-bpostenantid"></a>Pour obtenir le BposTenantId
 
-Exécutez l’applet de commande AipServiceConfiguration à partir du module Azure RMS Windows PowerShell :
+Exécutez l’applet de commande Get-AipServiceConfiguration à partir du module Azure RMS Windows PowerShell :
 
 1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [installation du module PowerShell AIPService](../install-powershell.md).
 
@@ -150,7 +150,7 @@ Exécutez l’applet de commande AipServiceConfiguration à partir du module Azu
     Connect-AipService
     ```
 
-    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur du locataire Azure Information Protection. Normalement, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365.
+    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur du locataire Azure Information Protection. En règle générale, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Microsoft 365.
     
 4. Exécutez `Get-AipServiceConfiguration` et copiez la valeur BPOSId.
     
@@ -193,7 +193,7 @@ Créez un principal de service en exécutant l’applet de commande `New-MsolSer
     Connect-MsolService
     ```
 
-    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur du locataire Azure AD (normalement, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365).
+    Lorsque vous y êtes invité, entrez vos informations d’identification d’administrateur client Azure AD (en général, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Microsoft 365).
 
 4. Exécutez l’applet de commande New-MsolServicePrincipal pour créer un principal du service :
 
@@ -257,7 +257,7 @@ Pour plus d’informations sur les super utilisateurs, consultez [configuration 
 
 Quand vous utilisez un compte de principal de service pour protéger des fichiers et télécharger des modèles à l’extérieur de la région Azure Amérique du Nord, vous devez modifier le Registre : 
 
-1. Exécutez à nouveau l’applet de commande AipServiceConfiguration et notez les valeurs de **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
+1. Exécutez à nouveau l’applet de commande Get-AipServiceConfiguration et prenez note des valeurs pour **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
 
 2. Sur tous les ordinateurs où vous allez exécuter les applets de commande AzureInformationProtection, ouvrez l’Éditeur du Registre.
 
@@ -541,9 +541,9 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
 
-2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory**  >  **gérer**les  >  **inscriptions d’applications**. 
+2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory**  >  **gérer** les  >  **inscriptions d’applications**. 
 
-3. Sélectionnez **+ nouvelle inscription**pour créer votre application Web App/API. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
+3. Sélectionnez **+ nouvelle inscription** pour créer votre application Web App/API. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
    - **Nom** : `AIPOnBehalfOf`
         
@@ -551,7 +551,7 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
     
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     
-    - **URI de redirection (facultatif)**: **Web** et`http://localhost`
+    - **URI de redirection (facultatif)**: **Web** et `http://localhost`
 
 4. Dans le volet **AIPOnBehalfOf** , copiez la valeur de l’ID de l' **application (client)**. La valeur ressemble à l’exemple suivant : `57c3c1c3-abf9-404e-8b2b-4652836c8c66` . Cette valeur est utilisée pour le paramètre *WebAppId* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
@@ -565,7 +565,7 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 9. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
     
-    - **Description**:`Azure Information Protection client`
+    - **Description**: `Azure Information Protection client`
     - **Expires**: spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
 
 9. De retour dans le volet **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets clients** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` . Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
@@ -582,11 +582,11 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 13. Dans le volet **Ajouter une étendue** , spécifiez les éléments suivants, en utilisant les chaînes suggérées comme exemples, puis sélectionnez **Ajouter une étendue**:
     - **Nom de l’étendue** : `user-impersonation`
-    - **Qui peut donner son consentement ?**: **administrateurs et utilisateurs**
+    - **Qui peut donner son consentement ?**  : **Administrateurs et utilisateurs**
     - **Nom d’affichage du consentement administrateur** : `Access Azure Information Protection scanner`
     - **Description du consentement de l’administrateur** : `Allow the application to access the scanner for the signed-in user`
-    - **Nom complet du consentement**de l’utilisateur :`Access Azure Information Protection scanner`
-    - **Description du consentement**de l’utilisateur :`Allow the application to access the scanner for the signed-in user`
+    - **Nom d’affichage du consentement utilisateur** : `Access Azure Information Protection scanner`
+    - **Description du consentement de l’utilisateur** : `Allow the application to access the scanner for the signed-in user`
     - **État**: **activé** (valeur par défaut)
 
 
@@ -594,20 +594,20 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 15. Sélectionnez **Autorisations de l’API**.
 
-16. Dans le **AIPOnBehalfOf**  |  volet**autorisations** de l’API AIPOnBehalfOf, sélectionnez **+ Ajouter une autorisation**.
+16. Dans le **AIPOnBehalfOf**  |  volet **autorisations** de l’API AIPOnBehalfOf, sélectionnez **+ Ajouter une autorisation**.
 
 17. Choisissez **Azure Right Management**, sélectionnez **autorisations déléguées** , puis sélectionnez **créer et accéder au contenu protégé pour les utilisateurs**.
 
 18. Cliquez sur **Ajouter une autorisation**.
 
-19. De retour dans le volet autorisations de l' **API** , dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour <your tenant name> ** et sélectionnez **Oui** pour l’invite de confirmation.
+19. De retour dans le volet autorisations de l' **API** , dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour <your tenant name>** et sélectionnez **Oui** pour l’invite de confirmation.
 
 20. Dans le volet **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native maintenant.
 
 21. Dans le volet **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
     - **Nom** : `AIPClient`
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
-    - **URI de redirection (facultatif)**: **client Public (mobile & Desktop)** et`http://localhost`
+    - **URI de redirection (facultatif)**: **client Public (mobile & Desktop)** et `http://localhost`
 
 22. Dans le volet **AIPClient** , copiez la valeur de l’ID de l' **application (client)**. La valeur ressemble à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` . 
     
@@ -621,9 +621,9 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 26. Dans le volet **demander des autorisations d’API** , sélectionnez **mes API**.
 
-27. Dans la section **Sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis activez la case à cocher **User-emprunt d’identité**comme autorisation. Sélectionnez **Ajouter des autorisations**. 
+27. Dans la section **Sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis activez la case à cocher **User-emprunt d’identité** comme autorisation. Sélectionnez **Ajouter des autorisations**. 
 
-28. De retour dans le volet autorisations de l' **API** , dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour \<*your tenant name*> ** et sélectionnez **Oui** pour l’invite de confirmation.
+28. De retour dans le volet autorisations de l' **API** , dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour \<*your tenant name*>** et sélectionnez **Oui** pour l’invite de confirmation.
 
 Vous avez maintenant terminé la configuration des deux applications et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* et *NativeAppId*. À partir de nos exemples :
 
@@ -701,9 +701,9 @@ Procédure générale :
 
 2. Sur l’ordinateur qui étiquettera et protégera les fichiers, ouvrez le Planificateur de tâches et créez une nouvelle tâche. Configurez cette tâche pour qu’elle s’exécute en tant que le compte de service qui étiquettera et protégera les fichiers, puis configurez les valeurs suivantes pour les **Actions** :
 
-   - **Action**:`Start a program`
-   - **Programme/script**:`Powershell.exe`
-   - **Ajouter des arguments (facultatif)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **Action**: `Start a program`
+   - **Programme/script**: `Powershell.exe`
+   - **Ajouter des arguments (facultatif)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      Pour la ligne d’argument, spécifiez vos propres noms de chemin d’accès et de fichier, s’ils sont différents de ceux de l’exemple.
 

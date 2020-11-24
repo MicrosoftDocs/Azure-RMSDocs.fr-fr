@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f69c7071c7e4bb257d4325f4404c51a6e0a81046
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 7de557bcfe7cb06310abc8d662626d86271b8a4e
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298272"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568013"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Déploiement du connecteur Azure Rights Management
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, windows server 2012 R2, windows server 2012*
 
-Utilisez ces informations pour découvrir le connecteur Azure Rights Management et pour savoir comment le déployer correctement dans votre organisation. Ce connecteur assure la protection des données pour les déploiements locaux existants qui utilisent Microsoft **Exchange Server**, **SharePoint Server**ou des serveurs de fichiers qui exécutent Windows Server et **infrastructure de classification des fichiers** (FCI).
+Utilisez ces informations pour découvrir le connecteur Azure Rights Management et pour savoir comment le déployer correctement dans votre organisation. Ce connecteur assure la protection des données pour les déploiements locaux existants qui utilisent Microsoft **Exchange Server**, **SharePoint Server** ou des serveurs de fichiers qui exécutent Windows Server et **infrastructure de classification des fichiers** (FCI).
 
 
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Vue d'ensemble du connecteur Microsoft Rights Management
@@ -61,7 +61,7 @@ Avant d'installer le connecteur RMS, assurez-vous que les conditions requises su
 |Condition requise|Informations complémentaires|
 |---------------|--------------------|
 |Le service de protection est activé|[Activation du service de protection à partir de Azure Information Protection](activate-service.md)|
-|Synchronisation des annuaires entre vos forêts Active Directory locales et Azure Active Directory|Une fois RMS activé, Azure Active Directory doit être configuré pour travailler avec les utilisateurs et les groupes de votre base de données Active Directory.<br /><br />**Important** : vous devez effectuer cette étape de synchronisation des annuaires pour que le connecteur RMS fonctionne, même pour un réseau de test. Même si vous pouvez utiliser Office 365 et Azure Active Directory avec des comptes crées manuellement dans Azure Active Directory, ce connecteur nécessite que les comptes Azure Active Directory soient synchronisés avec les services de domaine Active Directory. La synchronisation manuelle des mots de passe n'est pas suffisante.<br /><br />Pour plus d’informations, consultez les ressources suivantes :<br /><br />- [Intégrer des domaines de Active Directory locaux avec Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Comparaison des outils d’intégration d’annuaire d’identités hybrides](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
+|Synchronisation des annuaires entre vos forêts Active Directory locales et Azure Active Directory|Une fois RMS activé, Azure Active Directory doit être configuré pour travailler avec les utilisateurs et les groupes de votre base de données Active Directory.<br /><br />**Important** : vous devez effectuer cette étape de synchronisation des annuaires pour que le connecteur RMS fonctionne, même pour un réseau de test. Bien que vous puissiez utiliser des Microsoft 365 et des Azure Active Directory à l’aide de comptes que vous créez manuellement dans Azure Active Directory, ce connecteur exige que les comptes de Azure Active Directory soient synchronisés avec Active Directory Domain Services ; la synchronisation manuelle des mots de passe n’est pas suffisante.<br /><br />Pour plus d’informations, consultez les ressources suivantes :<br /><br />- [Intégrer des domaines de Active Directory locaux avec Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Comparaison des outils d’intégration d’annuaire d’identités hybrides](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
 |Au moins deux ordinateurs membres sur lesquels installer le connecteur RMS :<br /><br />-Un ordinateur physique ou virtuel 64 bits exécutant l’un des systèmes d’exploitation suivants : Windows Server 2016, Windows Server 2012 R2 et Windows Server 2012.<br /><br />- 1 Go de RAM minimum.<br /><br />- 64 Go d’espace disque minimum.<br /><br />- Au moins une interface réseau.<br /><br />-Accès à Internet via un pare-feu (ou un proxy Web) qui ne requiert pas d’authentification.<br /><br />- Un emplacement au sein d’une forêt ou d’un domaine qui approuve les autres forêts de l’organisation contenant les installations des serveurs Exchange ou SharePoint à utiliser avec le connecteur RMS.|Pour une tolérance de panne et une haute disponibilité, vous devez installer le connecteur RMS sur un minimum de deux ordinateurs.<br /><br />**Conseil** : si vous utilisez Outlook Web Access ou des appareils mobiles qui utilisent Exchange ActiveSync IRM et qu’il est essentiel de maintenir l’accès aux messages électroniques et pièces jointes protégés par Azure RMS, nous vous recommandons de déployer un groupe de serveurs de connecteur faisant l’objet d’un équilibrage de charge pour garantir une haute disponibilité.<br /><br />Vous n'avez pas besoin de serveurs dédiés pour exécuter le connecteur, mais vous devez l'installer sur un ordinateur différent des serveurs qui utiliseront le connecteur.<br /><br />**Important** : n’installez pas le connecteur sur un ordinateur qui exécute Exchange Server, SharePoint Server ou un serveur de fichiers configuré pour l’infrastructure de classification des fichiers si vous voulez utiliser la fonctionnalité depuis ces services avec Azure RMS. En outre, n'installez pas ce connecteur sur un contrôleur de domaine.<br /><br />Si vous avez des charges de travail de serveur que vous souhaitez utiliser avec le connecteur RMS, mais que leurs serveurs se trouvent dans des domaines qui ne sont pas approuvés par le domaine depuis lequel vous souhaitez exécuter le connecteur, vous pouvez installer des serveurs supplémentaires pour le connecteur RMS dans ces domaines non approuvés ou dans d’autres domaines de leur forêt. <br /><br />Le nombre de serveurs de connecteur que vous pouvez exécuter pour votre organisation n’est pas limité et tous les serveurs de connecteur installés dans une organisation partagent la même configuration. Toutefois, pour configurer le connecteur pour autoriser des serveurs, vous devez être en mesure de rechercher le serveur ou les comptes de service que vous souhaitez autoriser, ce qui signifie que vous devez exécuter l’outil d’administration RMS dans une forêt depuis laquelle vous pouvez rechercher ces comptes.|
 
 
@@ -87,7 +87,7 @@ Avant d'installer le connecteur RMS, assurez-vous que les conditions requises su
 
     -   [Configuration d’un serveur Exchange pour utiliser le connecteur](configure-servers-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
 
-    -   [Configuration d’un serveur SharePoint afin d’utiliser le connecteur](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
+    -   [Configuration d'un serveur SharePoint afin d'utiliser le connecteur](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
 
     -   [Configuration d’un serveur de fichiers pour l’infrastructure de classification des fichiers afin d’utiliser le connecteur](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 

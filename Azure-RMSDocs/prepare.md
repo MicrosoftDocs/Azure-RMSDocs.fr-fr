@@ -1,9 +1,9 @@
 ---
 title: Préparer des utilisateurs et des groupes pour Azure Information Protection
 description: Vérifiez que vous disposez des comptes d’utilisateur et de groupe dont vous avez besoin pour démarrer la classification, l’étiquetage et la protection des documents et des e-mails de votre organisation.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,16 +12,16 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 880e3b8acd3d17bcb3aec424e3aef96c2aeadbaf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: cc54660ce021b2d00a80ad3292ed17c5c13c204a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048304"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568145"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et des groupes pour Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Avant de déployer Azure Information Protection pour votre organisation, assurez-vous de disposer de comptes pour les utilisateurs et les groupes d’Azure AD pour le locataire de votre organisation.
 
@@ -55,7 +55,7 @@ Il existe trois scénarios d’utilisation des utilisateurs et des groupes avec 
 
 - Les contrôles d’accès incluent une date d’expiration et si une connexion à Internet est nécessaire pour l’accès. 
 
-**Pour configurer le service Azure Rights Management ** afin de prendre en charge des scénarios spécifiques, et par conséquent, uniquement les administrateurs, sélectionnez ces groupes. Les exemples comprennent la configuration des éléments suivants :
+**Pour configurer le service Azure Rights Management** afin de prendre en charge des scénarios spécifiques, et par conséquent, uniquement les administrateurs, sélectionnez ces groupes. Les exemples comprennent la configuration des éléments suivants :
 
 - Les super utilisateurs, afin que les services désignés ou les personnes puissent ouvrir du contenu chiffré si nécessaire pour la récupération de données ou eDiscovery.
 
@@ -73,15 +73,15 @@ Pour affecter des droits d’utilisation et des contrôles d’accès et configu
 
 - Pour autoriser les utilisateurs, deux attributs dans Azure AD sont utilisés : **proxyAddresses** et **userPrincipalName**.
 
-- L’attribut **AD Azure proxyAddresses** stocke toutes les adresses de messagerie d’un compte et peut être rempli de différentes façons. Par exemple, un utilisateur dans Office 365 possédant une boîte aux lettres Exchange Online dispose automatiquement d’une adresse de messagerie stockée dans cet attribut. Si vous attribuez une adresse de messagerie de secours pour un utilisateur Office 365, celle-ci est également enregistrée dans cet attribut. Il peut également être alimenté par les adresses de messagerie synchronisées à partir de comptes locaux. 
+- L’attribut **AD Azure proxyAddresses** stocke toutes les adresses de messagerie d’un compte et peut être rempli de différentes façons. Par exemple, un utilisateur Microsoft 365 disposant d’une boîte aux lettres Exchange Online a automatiquement une adresse de messagerie stockée dans cet attribut. Si vous attribuez une autre adresse de messagerie pour un utilisateur Microsoft 365, celle-ci est également enregistrée dans cet attribut. Il peut également être alimenté par les adresses de messagerie synchronisées à partir de comptes locaux. 
 
     Azure Information Protection peut utiliser n’importe quelle valeur de cet attribut proxyAddresses Azure AD, à condition que le domaine ait été ajouté à votre locataire (un « domaine vérifié »). Pour en savoir plus sur la vérification des domaines :
 
     - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Pour Office 365 : [Ajouter un domaine à office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Pour Office 365 : [Ajouter un domaine à office 365](/office365/admin/setup/add-domain)
 
-- L’attribut **AD Azure userPrincipalName** est utilisé uniquement lorsque le compte de votre locataire n’a aucune valeur dans l’attribut proxyAddresses Azure AD. Par exemple, vous créez un utilisateur dans le portail Azure, ou un utilisateur pour Office 365 n’ayant pas de boîte aux lettres.
+- L’attribut **AD Azure userPrincipalName** est utilisé uniquement lorsque le compte de votre locataire n’a aucune valeur dans l’attribut proxyAddresses Azure AD. Par exemple, vous créez un utilisateur dans le Portail Azure ou vous créez un utilisateur pour Microsoft 365 qui n’a pas de boîte aux lettres.
 
 ### <a name="assigning-usage-rights-and-access-controls-to-external-users"></a>Attribution de droits d’utilisation et de contrôles d’accès à des utilisateurs externes
 
@@ -99,7 +99,7 @@ Pour affecter des étiquettes :
 
 - Pour configurer des stratégies étendues qui affectent des étiquettes supplémentaires aux membres du groupe, vous pouvez utiliser n’importe quel type de groupe dans Azure AD disposant d’une adresse de messagerie contenant un domaine vérifié pour le locataire de l’utilisateur. Un groupe possédant une adresse de messagerie est souvent appelé groupe à extension de messagerie.
 
-    Par exemple, vous pouvez utiliser un groupe de sécurité à extension messagerie, un groupe de distribution statique et un groupe Office 365. Vous ne pouvez pas utiliser de groupe de sécurité (dynamique ou statique), car ce type de groupe n’a pas d’adresse de messagerie. Vous ne pouvez pas non plus utiliser une liste de distribution dynamique à partir d’Exchange Online, car ce groupe n’est pas répliqué vers Azure AD.
+    Par exemple, vous pouvez utiliser un groupe de sécurité à extension messagerie, un groupe de distribution statique et un groupe de Microsoft 365. Vous ne pouvez pas utiliser de groupe de sécurité (dynamique ou statique), car ce type de groupe n’a pas d’adresse de messagerie. Vous ne pouvez pas non plus utiliser une liste de distribution dynamique à partir d’Exchange Online, car ce groupe n’est pas répliqué vers Azure AD.
 
 Pour attribuer des droits d’utilisation et des contrôles d’accès :
 
@@ -127,7 +127,7 @@ Dans la liste des attributs pour Azure Rights Management, vous constatez que pou
 
 Vous pouvez utiliser Azure AD PowerShell pour confirmer que les utilisateurs et les groupes sont utilisables avec Azure Information Protection. Vous pouvez également utiliser PowerShell pour vérifier les valeurs pouvant être utilisées pour les autoriser. 
 
-Par exemple, à l’aide du module PowerShell V1 pour Azure Active Directory, [MSOnline](/powershell/module/msonline/?view=azureadps-1.0), dans une session PowerShell, commencez par vous connecter au service et renseignez vos informations d’identification d’administrateur global :
+Par exemple, à l’aide du module PowerShell V1 pour Azure Active Directory, [MSOnline](/powershell/module/msonline/), dans une session PowerShell, commencez par vous connecter au service et renseignez vos informations d’identification d’administrateur global :
 
 ```ps
 Connect-MsolService
@@ -194,7 +194,7 @@ Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Assurez-vous que les groupes que vous souhaitez utiliser avec Azure Information Protection sont affichés. Pour les groupes affichés, les adresses de messagerie figurant dans la colonne **ProxyAddresses** peuvent être utilisées pour autoriser les membres du groupe pour le service Azure Rights Management.
 
-Vérifiez ensuite que les groupes contiennent les utilisateurs (ou les autres groupes) que vous souhaitez utiliser pour Azure Information Protection. Vous pouvez utiliser PowerShell pour ce faire (par exemple, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0)), ou utiliser votre portail de gestion.
+Vérifiez ensuite que les groupes contiennent les utilisateurs (ou les autres groupes) que vous souhaitez utiliser pour Azure Information Protection. Vous pouvez utiliser PowerShell pour ce faire (par exemple, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember)), ou utiliser votre portail de gestion.
 
 Pour les deux scénarios de configuration du service Azure Rights Management utilisant des groupes de sécurité, vous pouvez utiliser la commande PowerShell suivante pour rechercher l’ID d’objet et le nom d’affichage qui peut être utilisé pour identifier ces groupes. Vous pouvez également utiliser le portail Azure pour rechercher ces groupes et copier les valeurs pour l’ID d’objet et le nom d’affichage :
 

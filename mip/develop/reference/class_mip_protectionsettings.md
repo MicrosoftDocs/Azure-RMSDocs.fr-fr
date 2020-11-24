@@ -1,17 +1,17 @@
 ---
 title: ProtectionSettings de classe
 description: 'Documente la classe protectionsettings :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 640963295ec3809aa6478a1c04c5f43f04a5d3b5
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: fbe652b5f94892af9f9c2a83c94685215c07eb13
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763877"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567093"
 ---
 # <a name="class-protectionsettings"></a>ProtectionSettings de classe 
 Interface pour la configuration des options de protection pour la méthode SetLabel.
@@ -29,24 +29,24 @@ public PFileExtensionBehavior GetPFileExtensionBehavior () const  | _Pas encore 
 ## <a name="members"></a>Membres
   
 ### <a name="protectionsettings-function"></a>ProtectionSettings fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="protectionsettings-function"></a>ProtectionSettings fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getdelegateduseremail-function"></a>GetDelegatedUserEmail fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="setpfileextensionbehavior-function"></a>SetPFileExtensionBehavior fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getpfileextensionbehavior-function"></a>GetPFileExtensionBehavior fonction)
-_Pas encore documenté._
+Pas encore documenté.

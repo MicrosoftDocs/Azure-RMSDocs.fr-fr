@@ -1,10 +1,10 @@
 ---
 title: Règles de workflow du courrier Exchange Online pour les étiquettes Azure Information Protection
 description: Instructions et exemples pour configurer des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,15 +12,19 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f1d232a056299349691c2cd38dc3068936b3f32
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 7c20580298bc49e9809a1e629dc2eae4a2716646
+ms.sourcegitcommit: 31c56584f02cf849292dbf2724c036bb5d669df1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482639"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "95568409"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+> *Instructions pour : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>
+> *Si vous utilisez le client d’étiquetage unifié, consultez la [documentation de Microsoft 365](/microsoft-365/compliance/dlp-sensitivity-label-as-condition) pour plus d’informations sur la façon d’empêcher ou d’avertir les utilisateurs de partager des fichiers ou des e-mails avec une étiquette de sensibilité spécifique.*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -33,9 +37,9 @@ Les informations suivantes vous permettent de configurer des règles de flux de 
 
 Les règles de flux de messagerie qui appliquent la protection en tant qu’action sont ignorées si l’e-mail est déjà protégé. Par exemple, un message électronique qui a été protégé par Ne pas transférer ne peut pas être modifié par une règle de flux de messagerie Exchange pour utiliser l’option Chiffrement seul.  
 
-Vous pouvez étendre ces exemples ainsi que les modifier. Par exemple, ajoutez plus de conditions. Pour plus d’informations sur la configuration des règles de flux de messagerie, consultez les [règles de flux de messagerie (règles de transport) dans Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) dans la documentation d’Exchange Online.
+Vous pouvez étendre ces exemples ainsi que les modifier. Par exemple, ajoutez plus de conditions. Pour plus d’informations sur la configuration des règles de flux de messagerie, consultez les [règles de flux de messagerie (règles de transport) dans Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) dans la documentation d’Exchange Online.
 
-Pour plus d’informations sur la configuration des règles de flux de messagerie afin de chiffrer des messages électroniques, consultez [Définir des règles de flux de messagerie pour chiffrer des messages électroniques dans Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) dans la documentation d’Office. 
+Pour plus d’informations sur la configuration des règles de courrier électronique pour chiffrer les messages électroniques, consultez [définir des règles de courrier électronique pour chiffrer les messages électroniques dans Microsoft 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) à partir de la documentation Office. 
 
 ## <a name="prerequisite-know-your-label-guid"></a>Condition préalable : connaître le GUID de votre étiquette
 
@@ -49,18 +53,18 @@ Pour plus d’informations sur les métadonnées stockées par une étiquette et
 
 Pour les exemples suivants, créez une nouvelle règle de flux de messagerie en procédant comme suit :
 
-1. Dans un navigateur web, à l’aide d’un compte professionnel ou scolaire qui dispose des autorisations d’administrateur général, connectez-vous à Office 365. 
+1. Dans un navigateur Web, à l’aide d’un compte professionnel ou scolaire disposant des autorisations d’administrateur général, connectez-vous à Microsoft 365. 
 
-2. Cliquez sur la vignette **Administration**.
+2. Choisissez la vignette **admin** .
 
-3. Dans le Centre d’administration Microsoft 365, choisissez **Centres d’administration** > **Exchange**.
+3. Dans le centre d’administration Microsoft 365, choisissez **administration centres**  >  **Exchange**.
 
-4. Dans le centre d’administration Exchange : **flux de messagerie** > **règles** >  **+**  > **Créer une nouvelle règle**. 
+4. Dans le centre d’administration Exchange : règles de **courrier électronique**  >  **rules**  >  **+**  >  **créez une nouvelle règle**. 
 
 > [!TIP]
 > Si vous rencontrez des problèmes avec l’interface utilisateur lorsque vous configurez vos règles, essayez un autre navigateur, tel qu’Internet Explorer.
 
-Les exemples ont une seule condition qui applique une protection quand un e-mail est envoyé à l’extérieur de l’organisation. Pour plus d’informations sur les autres conditions que vous pouvez sélectionner, consultez les [conditions de règle de flux de messagerie et exceptions (prédicats) dans Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
+Les exemples ont une seule condition qui applique une protection quand un e-mail est envoyé à l’extérieur de l’organisation. Pour plus d’informations sur les autres conditions que vous pouvez sélectionner, consultez les [conditions de règle de flux de messagerie et exceptions (prédicats) dans Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions).
 
 
 ### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemple 1 : Règle qui applique l’option Ne pas transférer à des e-mails étiquetés **Général** lorsqu’ils sont envoyés en dehors de l’organisation
@@ -81,11 +85,11 @@ Dans la stratégie Azure Information Protection, cette étiquette a été config
      
     b. Sélectionnez **Entrer des mots**, puis entrez `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True`.
     
-    c. Sélectionnez **+** , puis **OK**.
+    c. Sélectionnez **+** , puis cliquez sur **OK**.
 
 5. Pour **Procédez comme suit** : sélectionnez **Modifier la sécurité des messages** > **Appliquer le chiffrement de messages Office 365 et la protection des droits** > **Ne pas transférer**, puis sélectionnez **OK**.
     
-    La configuration de votre règle doit maintenant ressembler à ce qui suit : ![règle de courrier électronique Exchange Online configurée pour un Azure Information Protection étiquette-exemple 1](./media/aip-exo-rule-ex1.png)
+    La configuration de votre règle doit maintenant ressembler à ce qui suit :  ![ règle de workflow de courrier Exchange Online configurée pour un Azure information protection étiquette-exemple 1](./media/aip-exo-rule-ex1.png)
 
 7. Sélectionnez **Enregistrer**. 
 
@@ -105,7 +109,7 @@ Cette étiquette est utilisée pour classifier et protéger des documents que vo
  
 4. Pour **et** : sélectionnez **Toutes les pièces jointes**, puis **a ces propriétés, y compris tous ces mots** :
      
-    a. Sélectionnez **+**  > **Spécifier une propriété de pièce jointe personnalisée**.
+    a. Sélectionnez **+**  >  **spécifier une propriété de pièce jointe personnalisée**.
   
     b. Pour **Propriété**, entrez `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled`.
     
@@ -115,17 +119,15 @@ Cette étiquette est utilisée pour classifier et protéger des documents que vo
 
 5. Pour **Procédez comme suit** : sélectionnez **Modifier la sécurité des messages** > **Appliquer le chiffrement de messages Office 365 et la protection des droits** > **Chiffrer**, puis sélectionnez **OK**.
     
-    La configuration de votre règle doit maintenant ressembler à ce qui suit : ![règle de courrier électronique Exchange Online configurée pour un Azure Information Protection étiquette-exemple 2](./media/aip-exo-rule-ex2.png)
+    La configuration de votre règle doit maintenant ressembler à ce qui suit :  ![ règle de workflow de courrier Exchange Online configurée pour un Azure information protection étiquette-exemple 2](./media/aip-exo-rule-ex2.png)
 
 6. Sélectionnez **Enregistrer**. 
 
 Pour plus d’informations sur l’option de chiffrement, consultez [option Chiffrement seul pour les e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la création et la configuration des étiquettes à utiliser avec les règles de flux de messagerie Exchange Online, consultez [Stratégie de configuration d’Azure Information Protection](configure-policy.md).
 
 En outre, pour aider à classifier les messages électroniques contenant des pièces jointes, envisagez d’utiliser le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection suivant : **pour les messages électroniques avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes**.
-
-

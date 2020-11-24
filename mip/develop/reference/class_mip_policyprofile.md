@@ -1,17 +1,17 @@
 ---
 title: PolicyProfile de classe
 description: 'Documente la classe policyprofile :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9f70b8bfa1eee6e994b67c668b5144d6cb74ecad
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0cd8c300aa2c6edb0e06c6cd8306c48d2cb8dafa
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760906"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567377"
 ---
 # <a name="class-policyprofile"></a>PolicyProfile de classe 
 La classe PolicyProfile est la classe de base pour l’utilisation des opérations Microsoft Information Protection. Une application classique a besoin d’une seule classe PolicyProfile, mais elle peut créer plusieurs profils si nécessaire.
@@ -20,15 +20,15 @@ La classe PolicyProfile est la classe de base pour l’utilisation des opératio
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtenir les paramètres définis sur le profil.
-public std :: shared_ptr\<AsyncControl\> ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
-public std :: Vector\<std :: String\> ListEngines ()  |  Liste des moteurs.
-public std :: shared_ptr\<AsyncControl\> UnloadEngineAsync (const std :: String& ID, const std :: shared_ptr\<void\>& Context)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
+public std :: shared_ptr \<AsyncControl\> ListEnginesAsync (const std :: shared_ptr \<void\> contexte&)  |  Démarre une opération d’énumération de moteurs.
+public std :: Vector \<std::string\> ListEngines ()  |  Liste des moteurs.
+public std :: shared_ptr \<AsyncControl\> UnloadEngineAsync (const std :: string& ID, const std :: shared_ptr \<void\>& Context)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
 public void UnloadEngine (const std :: String& ID)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
-public std :: shared_ptr\<AsyncControl\> AddEngineAsync (const PolicyEngine :: Settings& Settings, const std :\<:\> shared_ptr void& Context)  |  Démarre l’ajout d’un nouveau moteur de stratégie au profil.
-public std :: shared_ptr\<PolicyEngine\> AddEngine (const PolicyEngine :: Settings& Settings, const std :\<:\> shared_ptr void& Context)  |  Ajoutez un nouveau moteur de stratégie au profil.
-public std :: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std :: String& ID, const std :: shared_ptr\<void\>& Context)  |  Démarre la suppression du moteur de stratégie avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
+public std :: shared_ptr \<AsyncControl\> AddEngineAsync (const PolicyEngine :: settings& Settings, const std :: shared_ptr \<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de stratégie au profil.
+public std :: shared_ptr \<PolicyEngine\> AddEngine (const PolicyEngine :: settings& Settings, const std :: shared_ptr \<void\>& Context)  |  Ajoutez un nouveau moteur de stratégie au profil.
+public std :: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std :: string& ID, const std :: shared_ptr \<void\>& Context)  |  Démarre la suppression du moteur de stratégie avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
 public void DeleteEngine(const std::string& engineId)  |  Supprimer le moteur de stratégie avec l’ID donné. Toutes les données du moteur spécifié seront supprimées.
-public void AcquireAuthToken (Cloud Cloud, const std :: shared_ptr\<authDelegate\>& AuthDelegate) const  |  Déclenchez un rappel d’authentification.
+public void AcquireAuthToken (Cloud Cloud, const std :: shared_ptr \<AuthDelegate\>& authDelegate) const  |  Déclenchez un rappel d’authentification.
   
 ## <a name="members"></a>Membres
   

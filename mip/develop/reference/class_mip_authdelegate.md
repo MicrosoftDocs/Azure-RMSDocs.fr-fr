@@ -1,17 +1,17 @@
 ---
 title: AuthDelegate de classe
 description: 'Documente la classe authdelegate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: a7cbc6789fc6baa8fbb01ffb8c6d6ea7e9294d4f
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 9a971a7d0e8cf78baa5231225da620c9e1c8fa47
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763628"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567269"
 ---
 # <a name="class-authdelegate"></a>AuthDelegate de classe 
 Délégué pour les opérations liées à l’authentification.
@@ -20,7 +20,7 @@ Délégué pour les opérations liées à l’authentification.
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtuel bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, OAuth2Token& Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
-public virtuel bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, const std :\<:\> shared_ptr void& Context, OAuth2Token& Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
+public virtuel bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, const std :: shared_ptr \<void\>& Context, OAuth2Token& Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
   
 ## <a name="members"></a>Membres
   

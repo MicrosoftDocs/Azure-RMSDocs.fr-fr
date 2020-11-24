@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/15/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 748ca0103885226ae646b4d4fb7761ff84ae0796
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: 0a1ac4e5470df68076585d9f328b28c76377a26d
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95568535"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95735012"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -37,11 +37,11 @@ La visionneuse Azure Information Protection ne peut pas ouvrir les pièces joint
 
 Pour plus d’informations, consultez [le Guide de l’administrateur : types de fichiers pris en charge par le client Azure information protection](rms-client/client-admin-guide-file-types.md).
 
-## <a name="known-issues-for-installing-the-aip-client"></a>Problèmes connus liés à l’installation du client AIP
+## <a name="known-issues-for-aip-and-exploit-protection"></a>Problèmes connus liés à AIP et à la protection contre les attaques
 
-Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs sur lesquels la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée.
+Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3, où la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée.
 
-Veillez à désactiver la protection contre les attaques avant d’installer AIP. 
+Si vous disposez d’une version 2 ou 3 de .NET en plus d’une version de .NET 4. x requise pour votre système, veillez à désactiver la protection contre l’exploitation avant AIP. 
 
 Pour désactiver la protection contre les attaques par le biais de PowerShell, exécutez la commande suivante :
 
@@ -49,7 +49,7 @@ Pour désactiver la protection contre les attaques par le biais de PowerShell, e
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
 
-Pour plus d’informations, consultez [Azure information Protection Requirements](requirements.md).
+Pour plus d’informations, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Prise en charge de PowerShell pour le client Azure Information Protection
 

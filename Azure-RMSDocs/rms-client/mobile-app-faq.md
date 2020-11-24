@@ -1,10 +1,10 @@
 ---
-title: Applications Azure Information Protection pour iOS & Android
-description: Découvrez les principes de base des applications Azure Information Protection (AIP) pour les appareils iOS et Android
+title: Azure Information Protection des applications mobiles pour iOS & Android
+description: Découvrez les principes de base des applications mobiles Azure Information Protection (AIP) pour les appareils iOS et Android
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/07/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
-ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
+ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "95568398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734962"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Qu’est-ce que l’application Azure Information Protection pour iOS ou Android ?
 
 *S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-L’application mobile d’Azure Information Protection (AIP) pour iOS et Android vous permet d’afficher des messages électroniques, des fichiers PDF, des images et des fichiers texte protégés, et sont utiles si vos applications standard pour ces types de fichiers ne prennent pas en charge la protection. 
+L’application mobile Azure Information Protection (AIP) pour iOS et Android est une application de visionneuse qui vous permet d’afficher des messages électroniques, des fichiers PDF, des images et des fichiers texte protégés, et qui sont utiles si vos applications normales pour ces types de fichiers ne prennent pas en charge la protection. 
 
 Par exemple, si des e-mails protégés s’affichent dans votre application mobile de messagerie standard en tant que pièces jointes, vous souhaiterez peut-être utiliser l’application mobile AIP pour afficher cet e-mail.
 

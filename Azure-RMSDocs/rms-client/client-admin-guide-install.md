@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 468e7a5b7ef5482b1027d491adf6b6b4d8271261
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734995"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -79,7 +79,7 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
 
         Pour PowerPoint : `MSIP.PowerPointAddin`
 
-- Le client AIP n’est pas pris en charge sur les ordinateurs sur lesquels la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée. Veillez à [désactiver la protection contre l’exploitation](../known-issues.md#known-issues-for-installing-the-aip-client) avant d’installer le client AIP.  
+- Le client AIP n’est pas pris en charge sur les ordinateurs équipés de .NET version 2 ou 3 et dont la [protection contre l’exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée. Si votre ordinateur dispose de la version 2 ou 3 de .NET en plus d’une version de .NET 4. x indiquée ci-dessus, veillez à [désactiver la protection contre l’exploitation](../known-issues.md#known-issues-for-aip-and-exploit-protection) avant d’installer le client AIP.  
 
 > [!IMPORTANT]
 > L’installation du client Azure Information Protection nécessite les autorisations d’administrateur local.
@@ -90,8 +90,8 @@ Utilisez l’une des options suivantes pour installer le client pour les utilisa
 
 |Option d’installation  |Description  |
 |---------|---------|
-|**Exécuter l’exécutable client (. exe)**  </br></br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | Nous vous recommandons d’exécuter la version. exe du client pour exécuter l’installation de manière interactive ou silencieuse.</br></br> L’exécution du fichier. exe offre la plus grande souplesse et est recommandée car elle vérifie également la plupart des conditions préalables et peut également installer les composants requis manquants. |
-|**Déployer le programme d’installation Windows (. msi) du client** </br></br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Le programme d’installation de Windows Azure Information Protection client est pris en charge uniquement pour les installations sans assistance qui utilisent un mécanisme de déploiement central.</br></br> Par exemple, utilisez le fichier. msi lors du déploiement avec une stratégie de groupe, Configuration Manager et Microsoft Intune.</br></br> Vous devez utiliser la méthode tis pour les PC Windows 10 gérés par Intune et la gestion des appareils mobiles (MDM), car les fichiers. exe ne sont pas pris en charge pour ces ordinateurs.</br></br>**Remarque :** Lorsque vous utilisez l’installation. msi, vous devez vérifier manuellement la configuration requise et installer ou désinstaller tous les logiciels dépendants requis. |
+|**Exécuter l’exécutable client (. exe)**  <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | Nous vous recommandons d’exécuter la version. exe du client pour exécuter l’installation de manière interactive ou silencieuse.<br><br> L’exécution du fichier. exe offre la plus grande souplesse et est recommandée car elle vérifie également la plupart des conditions préalables et peut également installer les composants requis manquants. |
+|**Déployer le programme d’installation Windows (. msi) du client** <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Le programme d’installation de Windows Azure Information Protection client est pris en charge uniquement pour les installations sans assistance qui utilisent un mécanisme de déploiement central.<br><br> Par exemple, utilisez le fichier. msi lors du déploiement avec une stratégie de groupe, Configuration Manager et Microsoft Intune.<br><br> Vous devez utiliser la méthode tis pour les PC Windows 10 gérés par Intune et la gestion des appareils mobiles (MDM), car les fichiers. exe ne sont pas pris en charge pour ces ordinateurs.<br><br>**Remarque :** Lorsque vous utilisez l’installation. msi, vous devez vérifier manuellement la configuration requise et installer ou désinstaller tous les logiciels dépendants requis. |
 
 Après avoir installé le client, effectuez les mises à jour en répétant la même procédure d’installation, ou utilisez Windows Update pour que le client reste automatiquement mis à jour. Vous n’êtes pas obligé de désinstaller les versions héritées du client avant d’installer une nouvelle version.
 

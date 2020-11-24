@@ -1,17 +1,17 @@
 ---
 title: 'classe PolicyProfile :: Settings'
 description: 'Documente la classe policyprofile :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 317a6cfaaac7572ae320860a0d5a11fabce356e9
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2ec38a34f2522448704f1be91d03c62761cafdf6
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760651"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565600"
 ---
 # <a name="class-policyprofilesettings"></a>classe PolicyProfile :: Settings 
 Paramètres utilisés par PolicyProfile lors de sa création et tout au long de sa durée de vie.
@@ -19,18 +19,18 @@ Paramètres utilisés par PolicyProfile lors de sa création et tout au long de 
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: shared_ptr\<mipContext\>& MipContext, CacheStorageType CacheStorageType, const std :: Shared_ptr\<PolicyProfile :: observer\>& observer)  |  Interface pour la configuration du profil.
+Paramètres publics (const std :: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, const std :: shared_ptr \<PolicyProfile::Observer\>& observer)  |  Interface pour la configuration du profil.
 public CacheStorageType GetCacheStorageType () const  |  Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
-public const std :: shared_ptr\<PolicyProfile :: observer\>& GetObserver () const  |  Obtenir l’observateur d’événements.
-public std :: shared_ptr\<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
-public std :: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
-public void SetHttpDelegate (const std :: shared_ptr\<httpDelegate\>& HttpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
-public std :: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
-public void SetTaskDispatcherDelegate (const std :: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  Remplacer la gestion de la répartition des tâches asynchrones par défaut avec le propriétaire du client.
+public const std :: shared_ptr \<PolicyProfile::Observer\>& GetObserver () const  |  Obtenir l’observateur d’événements.
+public std :: shared_ptr \<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public std :: shared_ptr \<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public void SetTaskDispatcherDelegate (const std :: shared_ptr \<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacer la gestion de la répartition des tâches asynchrones par défaut avec le propriétaire du client.
 public void SetSessionId(const std::string& sessionId)  | _Pas encore documenté._
 public const std::string& GetSessionId() const  | _Pas encore documenté._
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public void SetCustomSettings (const std :: Vector \<std::pair\<std::string, std::string\> \>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public const std :: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
 public ~Settings()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
@@ -97,11 +97,11 @@ Paramètres :
 les tâches peuvent faire référence à des objets de profil empêchant sa destruction, car les files d’attente taskdispatcher ne doivent pas être partagées.
   
 ### <a name="setsessionid-function"></a>SetSessionId fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="getsessionid-function"></a>GetSessionId fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings fonction)
@@ -119,4 +119,4 @@ Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation e
 **Retourne** : liste de paires nom/valeur.
   
 ### <a name="settings-function"></a>~ Settings, fonction
-_Pas encore documenté._
+Pas encore documenté.

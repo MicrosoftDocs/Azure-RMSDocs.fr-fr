@@ -1,17 +1,17 @@
 ---
 title: SensitivityTypesRulePackage de classe
 description: 'Documente la classe sensitivitytypesrulepackage :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b6f4f45c9532cb4c87bbe97cedd294184573c873
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 85157a29eac123a849c3b167b1c32cbd15875653
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764371"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565585"
 ---
 # <a name="class-sensitivitytypesrulepackage"></a>SensitivityTypesRulePackage de classe 
   

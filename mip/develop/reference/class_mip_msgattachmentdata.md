@@ -1,25 +1,25 @@
 ---
 title: MsgAttachmentData de classe
 description: 'Documente la classe msgattachmentdata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cec59e4bea8b62ff16005c02fa7a9516c4fb339d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c729b2907878aa383b058689c55072e53541a595
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761444"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565661"
 ---
 # <a name="class-msgattachmentdata"></a>MsgAttachmentData de classe 
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: Vector\<Uint8_t\>& GetBytes ()  |  Obtenir une pièce jointe en tant que vecteur binaire d’octets.
-public std :: shared_ptr\<Stream\> GetStream () const  |  Obtenir la pièce jointe en tant que flux binaire.
+public const std :: Vector \<uint8_t\>& GetBytes ()  |  Obtenir une pièce jointe en tant que vecteur binaire d’octets.
+public std :: shared_ptr \<Stream\> GetStream () const  |  Obtenir la pièce jointe en tant que flux binaire.
 public const std::string& GetName() const  |  Obtenir le nom de la pièce jointe sous forme de chaîne.
 public const std :: String& GetLongName () const  |  Obtenir le nom long de la pièce jointe sous forme de chaîne.
 public const std::string& GetPath() const  |  Obtient le nom du chemin d’accès des pièces jointes en tant que chaîne. Si le chemin d’accès n’est pas vide, référencez la pièce jointe.

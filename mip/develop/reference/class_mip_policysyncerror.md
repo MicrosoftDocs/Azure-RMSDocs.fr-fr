@@ -6,19 +6,19 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
-ms.openlocfilehash: 834677cadc540d6729666caf232c56827237b5ae
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: afb0a11008e221470af966be887a0803d6991392
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560863"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565609"
 ---
 # <a name="class-mippolicysyncerror"></a>mip::PolicySyncError, classe 
 Une tentative de synchronisation des données de stratégie a échoué.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-_Pas encore documenté._
+Pas encore documenté.

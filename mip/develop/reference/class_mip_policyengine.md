@@ -1,17 +1,17 @@
 ---
 title: PolicyEngine de classe
 description: 'Documente la classe policyengine :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 40072d56fd5bd1c577759991f7b98236a58e5ed2
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 733e1ced7a1f5ca1ec8d47709ef4c364c04e37a5
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761138"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565608"
 ---
 # <a name="class-policyengine"></a>PolicyEngine de classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.
@@ -19,24 +19,25 @@ Cette classe fournit une interface pour toutes les fonctions de moteur.
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratégie.
-public const std :: Vector\<std :: shared_ptr\<étiquette\> \>& ListSensitivityLabels ()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
-public const std :: Vector\<std :: shared_ptr\<SensitivityTypesRulePackage\> \>& ListSensitivityTypes () const  |  répertorie les types de sensibilité associés au moteur de stratégie.
+public const Settings& GetSettings() const  |  Obtenir les Settings du moteur de stratégie.
+public const std :: Vector \<std::shared_ptr\<Label\> \>& ListSensitivityLabels ()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
+public const std :: Vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& ListSensitivityTypes () const  |  répertorie les types de sensibilité associés au moteur de stratégie.
 public const std::string& GetMoreInfoUrl() const  |  Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
 public bool IsLabelingRequired() const  |  Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
-public std :: shared_ptr\<label\> GetDefaultSensitivityLabel ()  |  Obtenir l’étiquette de sensibilité par défaut.
-public std :: shared_ptr\<label\> GetLabelById (const std :: String& ID) const  |  Obtient l’étiquette en fonction de l’ID fourni.
-public std :: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
+public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Obtenir l’étiquette de sensibilité par défaut.
+public std :: shared_ptr \<Label\> GetLabelById (const std :: string& ID) const  |  Obtient l’étiquette en fonction de l’ID fourni.
+public std :: shared_ptr \<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
 public const std :: String& GetTenantId () const  |  Obtient l’ID de locataire associé au moteur.
 public const std :: String& GetPolicyDataXml () const  |  Obtient des données de stratégie XML qui décrivent les paramètres, les étiquettes et les règles associés à cette stratégie.
 public const std :: String& GetSensitivityTypesDataXml () const  |  Obtient les données de types de sensibilité XML qui décrivent les types de sensibilité associés à cette stratégie.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\> \>& GetCustomSettings () const  |  Obtient une liste de paramètres personnalisés.
+public const std :: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Obtient une liste de paramètres personnalisés.
 public const std :: String& GetPolicyFileId () const  |  Obtient l’ID du fichier de stratégie.
 public const std :: String& GetSensitivityFileId () const  |  Obtient l’ID du fichier de sensibilité.
 public bool HasClassificationRules () const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.
-public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetLastPolicyFetchTime () const  |  Obtient l’heure de la dernière extraction de la stratégie.
-unsigned int GetWxpMetadataVersion () const non signé  |  Obtient la version de métadonnées WXP (Windows, Excel, PowerPoint) recommandée, actuellement 0 pour l’ancienne version 1 pour la version activée pour la co-création.
+public ClassificationScheme GetClassificationScheme () const  |  Obtient si la stratégie doit être classée en fonction de la dernière.
+public std :: Chrono :: time_point \<std::chrono::system_clock\> GetLastPolicyFetchTime () const  |  Obtient l’heure de la dernière extraction de la stratégie.
+uint32_t public GetWxpMetadataVersion () const  |  Obtient la version de métadonnées WXP (Windows, Excel, PowerPoint) recommandée, actuellement 0 pour l’ancienne version 1 pour la version activée pour la co-création.
   
 ## <a name="members"></a>Membres
   
@@ -149,7 +150,13 @@ Obtient l’ID du fichier de sensibilité.
 Obtient si la stratégie a des règles automatiques ou de recommandation.
 
   
-**Retourne : valeur**booléenne qui indique s’il existe des règles de recommandation ou automatique dans la stratégie.
+**Retourne : valeur** booléenne qui indique s’il existe des règles de recommandation ou automatique dans la stratégie.
+  
+### <a name="getclassificationscheme-function"></a>GetClassificationScheme fonction)
+Obtient si la stratégie doit être classée en fonction de la dernière.
+
+  
+**Retourne**: type de moteur qui indique au client le moteur à utiliser.
   
 ### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime fonction)
 Obtient l’heure de la dernière extraction de la stratégie.
@@ -161,4 +168,4 @@ Obtient l’heure de la dernière extraction de la stratégie.
 Obtient la version de métadonnées WXP (Windows, Excel, PowerPoint) recommandée, actuellement 0 pour l’ancienne version 1 pour la version activée pour la co-création.
 
   
-**Retourne**: unsigned int indecating la version des métadonnées que le locataire prend en charge pour les fichiers WXP.
+**Retourne**: Uint32_t int indecating la version des métadonnées que le locataire prend en charge pour les fichiers WXP.

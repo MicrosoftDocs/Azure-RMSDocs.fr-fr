@@ -1,34 +1,35 @@
 ---
-title: 'MIP, struct :: TelemetryConfiguration'
+title: TelemetryConfiguration struct
 description: Documentation des structures associées au kit de développement logiciel (MIP) Microsoft Information Protection.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 4e3e9be086bbcddea5398ccfbe549ffc2ca1aae6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.date: 09/21/2020
+ms.openlocfilehash: 0599dfb9fdc5d37849c19c9284b2d6fd27cec606
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73567525"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565657"
 ---
-# <a name="struct-miptelemetryconfiguration"></a>MIP, struct :: TelemetryConfiguration 
+# <a name="struct-telemetryconfiguration"></a>TelemetryConfiguration struct 
 Paramètres de télémétrie personnalisés (rarement utilisés)
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: String hostNameOverride  |  Nom de l’instance de télémétrie de l’hôte. S’il n’est pas défini, MIP agit comme son propre hôte.
 public std :: String libraryNameOverride  |  Nom de fichier de la bibliothèque de télémétrie (DLL) de remplacement.
-public std :: shared_ptr\<HttpDelegate\> httpDelegateOverride  |  Si cette valeur est définie, la gestion HTTP sera gérée par cette instance
-public std :: shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  Si cette valeur est définie, la gestion des tâches asynchrones sera gérée par cette instance, taskDispatcherDelegateOverides ne doit pas être partagée, car elle peut contenir des objets de télémétrie et empêcher sa sortie tant que taskDispatcher n’est pas libéré.
+public std :: shared_ptr \<HttpDelegate\> httpDelegateOverride  |  Si cette valeur est définie, la gestion HTTP sera gérée par cette instance
+public std :: shared_ptr \<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  Si cette valeur est définie, la gestion des tâches asynchrones sera gérée par cette instance, taskDispatcherDelegateOverides ne doit pas être partagée, car elle peut contenir des objets de télémétrie et empêcher sa sortie tant que taskDispatcher n’est pas libéré.
 public bool isNetworkDetectionEnabled  |  Si cette valeur est définie, le composant de télémétrie effectue un test ping de l’état du réseau sur le thread
 public bool isLocalCachingEnabled  |  Si cette valeur est définie, le composant de télémétrie utilisera la mise en cache sur disque
 public bool isTraceLoggingEnabled  |  Si cette valeur est définie, le composant de télémétrie écrit les journaux d’avertissements et d’erreurs sur le disque
 public bool isTelemetryOptedOut  |  Si cette valeur est définie, seules les données de télémétrie des données de service nécessaires seront envoyées
 public bool isFastShutdownEnabled  |  Si cette valeur est définie, aucun événement ne sera chargé lors de l’arrêt, les événements d’audit seront téléchargés immédiatement lors de la journalisation
-public std :: Map\<std :: String, std :: String\> customSettings  |  Paramètres de télémétrie personnalisés >
+public std :: map \<std::string, std::string\> customSettings  |  Paramètres de télémétrie personnalisés >
+public std :: map \<std::string, std::vector\<std::string\> \> maskedProperties  |  Événements/propriétés de télémétrie qui doivent être masqués
   
 ## <a name="members"></a>Membres
   
@@ -61,3 +62,6 @@ Si cette valeur est définie, aucun événement ne sera chargé lors de l’arr�
   
 ### <a name="customsettings-struct-member"></a>customSettings, membre de struct
 Paramètres de télémétrie personnalisés >
+  
+### <a name="maskedproperties-struct-member"></a>maskedProperties, membre de struct
+Événements/propriétés de télémétrie qui doivent être masqués

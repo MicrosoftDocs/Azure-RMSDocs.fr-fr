@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: e7d1cacde412ab4ca43256309d2f2c53771d94b0
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563703"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565545"
 ---
 # <a name="functions-c"></a>Fonctions (C++) 
 
@@ -61,9 +61,6 @@ Obtient le nom de l’état du contenu.
 
 Paramètres :  
 * **actionSource**: état du contenu sur lequel le travail est effectué. 
-
-
-
   
 **Retourne**: une représentation sous forme de chaîne de l’état du contenu.
   
@@ -198,15 +195,15 @@ public std :: String LastModifiedDate & ()       | _Pas encore documenté._
 Clés de métadonnées d’audit dans la représentation sous forme de chaîne.
   
 ### <a name="recipients-function"></a>Fonction Recipients
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="lastmodifiedby-function"></a>LastModifiedBy fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
   
 ### <a name="lastmodifieddate-function"></a>LastModifiedDate & fonction)
-_Pas encore documenté._
+Pas encore documenté.
 
 
 ## <a name="namespace-miprights"></a>joint `mip::rights` 

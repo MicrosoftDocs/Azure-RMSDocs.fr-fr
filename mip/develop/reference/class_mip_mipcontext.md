@@ -1,17 +1,17 @@
 ---
 title: MipContext de classe
 description: 'Documente la classe mipcontext :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cf191a1e770d13d84603fe593d63dedb98bbb14b
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c593ebc368b0717d32e873e6924f80af103325ea
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761467"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565668"
 ---
 # <a name="class-mipcontext"></a>MipContext de classe 
 MipContext représente l’état partagé par tous les profils, moteurs et gestionnaires.
@@ -25,9 +25,9 @@ public const ApplicationInfo& GetApplicationInfo() const  |  Obtient la descript
 public const std :: String& GetMipPath () const  |  Obtenir le chemin d’accès de fichier pour les journaux, les caches, etc.
 public bool IsOfflineOnly ()  |  Obtient le paramètre en mode hors connexion uniquement.
 public LogLevel GetThresholdLogLevel () const  |  Obtient le niveau de journalisation du seuil.
-public std :: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Obtient l’implémentation du journal.
+public std :: shared_ptr \<LoggerDelegate\> GetLoggerDelegate ()  |  Obtient l’implémentation du journal.
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Obtient l’implémentation du journal.
-public const std :: map\<FlightingFeature, bool\>& GetFlightingFeatures () const  |  Obtient l’ensemble des fonctionnalités de la fonctionnalité de vol.
+public const std :: map \<FlightingFeature, bool\>& GetFlightingFeatures () const  |  Obtient l’ensemble des fonctionnalités de la fonctionnalité de vol.
   
 ## <a name="members"></a>Membres
   

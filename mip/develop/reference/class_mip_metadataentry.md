@@ -1,17 +1,17 @@
 ---
 title: MetadataEntry de classe
 description: 'Documente la classe metadataentry :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c9c1c8f9683ebb4be079f1817aa92a71e72005ca
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 026fecc8da2008a2798ca8bc44951bc97ec5455a
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766505"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565684"
 ---
 # <a name="class-metadataentry"></a>MetadataEntry de classe 
 Classe d’abstraction pour l’entrée de métadonnées.
@@ -19,13 +19,28 @@ Classe d’abstraction pour l’entrée de métadonnées.
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MetadataEntry (const std :: String& clé, const std :: String& valeur, unsigned int version)  |  Au c’Tor pour une abstraction MetadataEntry.
+public MetadataEntry (const std :: String& clé, const std :: String& value, uint32_t version)  |  Au c’Tor pour une abstraction MetadataEntry.
+public MetadataEntry (const std :: String& clé, const std :: String& valeur, const MetadataVersion& version)  |  Au c’Tor pour une abstraction MetadataEntry.
 public MetadataEntry (const std :: String& clé, const std :: String& valeur)  |  Au c’Tor pour une abstraction MetadataEntry, version est définie à une valeur par défaut de 0.
 public const std :: String& GetKey () const  |  Obtient la clé de l’entrée de métadonnées.
 public const std :: String& GetValue () const  |  Obtient la valeur de l’entrée de métadonnées.
-public unsigned int GetVersion () const  |  Obtient la version de l’entrée de métadonnées.
+public MetadataVersion GetVersion () const  |  Obtient la version de l’entrée de métadonnées.
   
 ## <a name="members"></a>Membres
+  
+### <a name="metadataentry-function"></a>MetadataEntry fonction)
+Au c’Tor pour une abstraction MetadataEntry.
+
+Paramètres :  
+* **clé**: entrée de clé de métadonnées. 
+
+
+* **valeur**: entrée de valeur de métadonnées 
+
+
+* **version**: valeur de la version des métadonnées
+
+
   
 ### <a name="metadataentry-function"></a>MetadataEntry fonction)
 Au c’Tor pour une abstraction MetadataEntry.

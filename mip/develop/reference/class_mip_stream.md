@@ -1,17 +1,17 @@
 ---
 title: Flux de classe
 description: 'Documente la classe Stream :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b2c8be3d6997985b62933d40bf855e48a20ca928
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: a370d6917306f2865c1d91eb7fa90c2880497a04
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764335"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565576"
 ---
 # <a name="class-stream"></a>Flux de classe 
 Classe qui définit l’interface entre le SDK MIP et le contenu basé sur le flux de données (Stream).

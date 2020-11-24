@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: e65dae9c6df3d65a8bccf6bb08d61ff49b21d7ee
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 56ce8aac0e4b8e1435c6fc5ceacad5fef24e3afa
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764172"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565648"
 ---
 # <a name="enumerations"></a>Énumérations
 
@@ -42,7 +42,7 @@ Format du contenu
 | Champ | Description |
 |---|---|
 |  MIP_CONTENT_FORMAT_DEFAULT = 0  | Format de fichier standard  |
-|  MIP_CONTENT_FORMAT_EMAIL = 1    | E-mail  |
+|  MIP_CONTENT_FORMAT_EMAIL = 1    | Courrier  |
 
 
 ```c
@@ -140,7 +140,7 @@ Définit de nouvelles fonctionnalités par nom
 |  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0          | S’appuyer sur un appel HTTP distinct pour déterminer les points de terminaison de service RMS (false par défaut) |
 |  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1            | Mettez en cache les défis OAuth2 par domaine/locataire pour réduire les réponses 401 inutiles. Désactiver pour les applications/services qui gèrent leur propre authentification HTTP (true par défaut)  |
 |  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2      | Activer la mise en cache chiffrée pour les plateformes Linux (false par défaut)  |
-|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3         | Activer le nom d’entreprise unique pour la recherche DNS (par exemple,https://corprights)  |
+|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3         | Activer le nom d’entreprise unique pour la recherche DNS (par exemple, https://corprights)  |
 |  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4                | Activez l’authentification HTTP automatique pour les requêtes envoyées au service de stratégie. Désactiver pour les applications/services qui gèrent leur propre authentification HTTP (true par défaut)  |
 |  MIP_FLIGHTING_FEATURE_URL_REDIRECT_CACHE = 5         | Redirections d’URL de cache pour réduire le nombre d’opérations HTTP  |
 |  MIP_FLIGHTING_FEATURE_PRE_LICENSE = 6                | Activer la vérification de l’API de pré-licence  |
@@ -150,6 +150,7 @@ Définit de nouvelles fonctionnalités par nom
 |  MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10       | Activer optimiser le créateur de mémoire PDF dans protéger et ôter la protection des fichiers PDF  |
 |  MIP_FLIGHTING_FEATURE_REMOVE_DELETED_LABEL_MD = 11   | Activer la suppression des métadonnées de l’étiquette Delete  |
 |  MIP_FLIGHTING_FEATURE_ENFORCE_TLS12 = 12             | Appliquer TLS 1,2 pour les connexions HTTPs non ADRMS  |
+|  MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZTION = 13     | Conserver la linéarisation des fichiers PDF après chiffrement/déchiffrement par optimiser le créateur de mémoire PDF |
 
 
 ```c
@@ -167,6 +168,7 @@ typedef enum {
   MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10,      
   MIP_FLIGHTING_FEATURE_REMOVE_DELETED_LABEL_MD = 11,  
   MIP_FLIGHTING_FEATURE_ENFORCE_TLS12 = 12,            
+  MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZTION = 13,    
 } mip_cc_flighting_feature;
 
 ```
@@ -214,9 +216,9 @@ Log level
 | Champ | Description |
 |---|---|
 |  MIP_LOG_LEVEL_TRACE = 0   | Trace  |
-|  MIP_LOG_LEVEL_INFO        | Info  |
+|  MIP_LOG_LEVEL_INFO        | Informations  |
 |  MIP_LOG_LEVEL_WARNING     | Avertissement  |
-|  MIP_LOG_LEVEL_ERROR       | Error  |
+|  MIP_LOG_LEVEL_ERROR       | Erreur  |
 
 
 ```c
@@ -275,6 +277,7 @@ Résultat de réussite ou d’échec de l’API
 |  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND = 20         | L’ID de modèle n’est pas reconnu  |
 |  MIP_RESULT_ERROR_LABEL_NOT_FOUND = 21            | ID d’étiquette non reconnu  |
 |  MIP_RESULT_ERROR_LABEL_DISABLED = 22             | L’étiquette est désactivée ou inactive  |
+|  MIP_RESULT_ERROR_DOUBLE_KEY_DISABLED = 23        | La fonctionnalité de clé double n’a pas été activée  |
 
 
 ```c
@@ -306,7 +309,30 @@ typedef enum {
   MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND = 20,        
   MIP_RESULT_ERROR_LABEL_NOT_FOUND = 21,           
   MIP_RESULT_ERROR_LABEL_DISABLED = 22,            
+  MIP_RESULT_ERROR_DOUBLE_KEY_DISABLED = 23,       
 } mip_cc_result;
+
+```
+
+## <a name="mip_cc_cipher_mode"></a>mip_cc_cipher_mode
+
+Identificateur du mode de chiffrement
+
+| Champ | Description |
+|---|---|
+|  MIP_CIPHER_MODE_CBC4K = 0               | Mode CBC 4K avec remplissage interne  |
+|  MIP_CIPHER_MODE_ECB = 1                 | Mode ECB  |
+|  MIP_CIPHER_MODE_CBC512NOPADDING = 2     | Mode CBC 512 avec remplissage externe (client)  |
+|  MIP_CIPHER_MODE_CBC4KNOPADDING = 3       | Mode CBC 4K avec remplissage externe (client)  |
+
+
+```c
+typedef enum {
+  MIP_CIPHER_MODE_CBC4K = 0,              
+  MIP_CIPHER_MODE_ECB = 1,                
+  MIP_CIPHER_MODE_CBC512NOPADDING = 2,    
+  MIP_CIPHER_MODE_CBC4KNOPADDING = 3      
+} mip_cc_cipher_mode;
 
 ```
 
@@ -334,40 +360,47 @@ Masque de bits de type action
 
 | Champ | Description |
 |---|---|
-|  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0      | Ajouter un pied de page de contenu au type d’action du document. |
-|  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1      | Ajouter un en-tête de contenu au type d’action du document. |
-|  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2           | Ajouter un filigrane au type d’action du document entier. |
-|  MIP_ACTION_TYPE_CUSTOM = 1 << 3                  | Type d’action personnalisée. |
-|  MIP_ACTION_TYPE_JUSTIFY = 1 << 4                 | Type d’action Justifier. |
-|  MIP_ACTION_TYPE_METADATA = 1 << 5                | Type d’action Modifier les métadonnées. |
-|  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6           | Type d’action Protéger par stratégie ad hoc. |
-|  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7     | Type d’action Protéger par modèle. |
-|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8  | Type d’action Protéger en n’effectuant pas de transfert. |
-|  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9   | Type d’action Supprimer le pied de page de contenu. |
-|  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10  | Type d’action Supprimer l’en-tête de contenu. |
-|  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11      | Type d’action Supprimer la protection. |
-|  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12       | Type d’action Supprimer le filigrane. |
-|  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13            | Type d’action Appliquer une étiquette. |
-|  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14        | Type d’action Recommander une étiquette. |
+|  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0         | Ajouter un pied de page de contenu au type d’action du document. |
+|  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1         | Ajouter un en-tête de contenu au type d’action du document. |
+|  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2              | Ajouter un filigrane au type d’action du document entier. |
+|  MIP_ACTION_TYPE_CUSTOM = 1 << 3                     | Type d’action personnalisée. |
+|  MIP_ACTION_TYPE_JUSTIFY = 1 << 4                    | Type d’action Justifier. |
+|  MIP_ACTION_TYPE_METADATA = 1 << 5                   | Type d’action Modifier les métadonnées. |
+|  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6              | Type d’action Protéger par stratégie ad hoc. |
+|  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7        | Type d’action Protéger par modèle. |
+|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8     | Type d’action Protéger en n’effectuant pas de transfert. |
+|  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9      | Type d’action Supprimer le pied de page de contenu. |
+|  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10     | Type d’action Supprimer l’en-tête de contenu. |
+|  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11         | Type d’action Supprimer la protection. |
+|  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12          | Type d’action Supprimer le filigrane. |
+|  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13               | Type d’action Appliquer une étiquette. |
+|  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14           | Type d’action Recommander une étiquette. |
+|  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15          | Type d’action Protéger par stratégie ad hoc. |
+|  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17 | Type d’action Protéger en n’effectuant pas de transfert. |
+|  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18   | Type d’action protéger par chiffrement. |
 
 
 ```c
 typedef enum {
-  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0,     
-  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1,     
-  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2,          
-  MIP_ACTION_TYPE_CUSTOM = 1 << 3,                 
-  MIP_ACTION_TYPE_JUSTIFY = 1 << 4,                
-  MIP_ACTION_TYPE_METADATA = 1 << 5,               
-  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6,          
-  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7,    
-  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8, 
-  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9,  
-  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10, 
-  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11,     
-  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,      
-  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13,           
-  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       
+  MIP_ACTION_TYPE_ADD_CONTENT_FOOTER = 1 << 0,        
+  MIP_ACTION_TYPE_ADD_CONTENT_HEADER = 1 << 1,        
+  MIP_ACTION_TYPE_ADD_WATERMARK = 1 << 2,             
+  MIP_ACTION_TYPE_CUSTOM = 1 << 3,                    
+  MIP_ACTION_TYPE_JUSTIFY = 1 << 4,                   
+  MIP_ACTION_TYPE_METADATA = 1 << 5,                  
+  MIP_ACTION_TYPE_PROTECT_ADHOC = 1 << 6,             
+  MIP_ACTION_TYPE_PROTECT_BY_TEMPLATE = 1 << 7,       
+  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD = 1 << 8,    
+  MIP_ACTION_TYPE_REMOVE_CONTENT_FOOTER = 1 << 9,     
+  MIP_ACTION_TYPE_REMOVE_CONTENT_HEADER = 1 << 10,    
+  MIP_ACTION_TYPE_REMOVE_PROTECTION = 1 << 11,        
+  MIP_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,         
+  MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13,              
+  MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,          
+  MIP_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15,         
+  // Reserved
+  MIP_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17,
+  MIP_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18,  
 } mip_cc_action_type;
 
 ```
@@ -413,6 +446,9 @@ Actions liées aux étiquettes qu’une application comprend et prend en charge
 |  MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12       | Type d’action Supprimer le filigrane.  |
 |  MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13            | Type d’action Appliquer une étiquette.  |
 |  MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14        | Type d’action Recommander une étiquette.  |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15       | Type d’action Protéger par stratégie ad hoc. |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17  | Type d’action Protéger en n’effectuant pas de transfert. |
+|  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18    | Type d’action protéger par chiffrement. |
 
 
 ```c
@@ -432,6 +468,10 @@ typedef enum {
   MIP_LABEL_ACTION_TYPE_REMOVE_WATERMARK = 1 << 12,      
   MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13,           
   MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       
+  MIP_LABEL_ACTION_TYPE_PROTECT_ADHOC_DK = 1 << 15,      
+  // Reserved
+  MIP_LABEL_ACTION_TYPE_PROTECT_DO_NOT_FORWARD_DK = 1 << 17, 
+  MIP_LABEL_ACTION_TYPE_PROTECT_BY_ENCRYPT_ONLY = 1 << 18,   
 } mip_cc_label_action_type;
 
 ```

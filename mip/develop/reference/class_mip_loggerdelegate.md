@@ -1,17 +1,17 @@
 ---
 title: LoggerDelegate de classe
 description: 'Documente la classe loggerdelegate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e213f243a0e46bb804b224c7a0752a0b9b270103
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 48b01649d3c9b3e8089294d0012fa6393362e98e
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761815"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95565688"
 ---
 # <a name="class-loggerdelegate"></a>LoggerDelegate de classe 
 Une classe qui définit l’interface de l’enregistreur d’événements SDK MIP.
@@ -19,14 +19,14 @@ Une classe qui définit l’interface de l’enregistreur d’événements SDK M
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void Init(const std::string& storagePath)  |  Initialiser l’enregistreur d’événements.
+public void Init(const std::string& storagePath)  |  Initialise l’enregistreur d’événements.
 public void Flush()  |  Vider le l’enregistreur d’événements.
 public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Écrire une instruction de journal dans le fichier journal.
   
 ## <a name="members"></a>Membres
   
 ### <a name="init-function"></a>Fonction init
-Initialiser l’enregistreur d’événements.
+Initialise l’enregistreur d’événements.
 
 Paramètres :  
 * **storagePath** : le chemin d’accès à l’emplacement où l’état persistant, notamment les journaux, peut être stocké.

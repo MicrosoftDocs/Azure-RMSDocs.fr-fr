@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edfd5a5f309228c7f75a895e40826b65af74e1d7
-ms.sourcegitcommit: 04b9d7ee1ce8b6662ceda5a13b7b0d5630c91d28
+ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
+ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95568541"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96034385"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -171,6 +171,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/mod
 |PFileSupportedExtensions|[Changer les types de fichiers à protéger](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Supprimer « Pas maintenant » pour les documents quand vous utilisez l’étiquetage obligatoire](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
+|RemoveExternalMarkingFromCustomLayouts | [Supprimer le marquage de contenu externe des dispositions personnalisées dans PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -462,19 +463,14 @@ Ensuite, vous avez besoin d’au moins un paramètre client avancé de plus, **E
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Comment configurer ExternalContentMarkingToRemove
 
-Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarkingToRemove**, vous disposez de trois options qui utilisent des expressions régulières :
+Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarkingToRemove** , vous disposez de trois options qui utilisent des expressions régulières. Pour chacun de ces scénarios, utilisez la syntaxe indiquée dans la colonne **exemple de valeur** dans le tableau suivant :
 
-- Correspondance partielle pour tout supprimer dans l’en-tête ou le pied de page.
-
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
-
-- Correspondance totale pour juste supprimer des mots spécifiques dans l’en-tête ou le pied de page.
-
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
-
-- Correspondance totale pour tout supprimer dans l’en-tête ou le pied de page.
-
-    Exemple : Les en-têtes ou les pieds de page ont la chaîne **TEXTE À SUPPRIMER**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
+|Option  |Description de l’exemple |Valeur d'exemple|
+|---------|---------|---------|
+|**Correspondance partielle pour supprimer tous les éléments dans l’en-tête ou le pied de page**     | Vos en-têtes ou pieds de page contiennent le **texte de chaîne à supprimer** et vous souhaitez supprimer complètement ces en-têtes ou pieds de page.   |`*TEXT*`  | 
+|**Terminer la correspondance pour supprimer uniquement des mots spécifiques dans l’en-tête ou le pied de page**     |    Vos en-têtes ou pieds de page contiennent le **texte de chaîne à supprimer**, et vous souhaitez supprimer le **texte** Word uniquement, en laissant la chaîne d’en-tête ou de pied de page comme **à supprimer**.      |`TEXT ` |
+|**Terminer la correspondance pour supprimer tous les éléments de l’en-tête ou du pied de page**     |Vos en-têtes ou pieds de page ont le **texte de chaîne à supprimer**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne.         |`^TEXT TO REMOVE$`|
+|     |         | |
 
 
 Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur de chaîne maximale est de 255 caractères et ne peut pas contenir d’espaces blancs. 
@@ -495,7 +491,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="multiline-headers-or-footers"></a>En-têtes ou pieds de page multilignes
 
-Si un texte d’en-tête ou de pied de page prend plus d’une ligne, créez une clé et une valeur pour chaque ligne. Par exemple, vous avez le pied de page suivant sur deux lignes :
+Si un texte d’en-tête ou de pied de page prend plus d’une ligne, créez une clé et une valeur pour chaque ligne. Par exemple, si vous avez le pied de page suivant avec deux lignes :
 
 **Le fichier est classé confidentiel**
 
@@ -517,13 +513,20 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>Optimisation pour PowerPoint
 
-Les pieds de page dans PowerPoint sont implémentés en tant que formes. Pour éviter de supprimer les formes qui contiennent le texte que vous avez spécifié, mais qui ne sont ni des en-têtes ni des pieds de page, utilisez un paramètre client avancé supplémentaire nommé **PowerPointShapeNameToRemove**. Nous recommandons également d’utiliser ce paramètre pour éviter de vérifier le texte dans toutes les formes, qui est un processus gourmand en ressources.
+Les en-têtes et les pieds de page dans PowerPoint sont implémentés en tant que formes. 
+
+Pour éviter de supprimer des formes contenant le texte que vous avez spécifié, mais qui *ne sont pas* des en-têtes ou des pieds de page, utilisez un paramètre client avancé supplémentaire nommé **PowerPointShapeNameToRemove**. Nous recommandons également d’utiliser ce paramètre pour éviter de vérifier le texte dans toutes les formes, qui est un processus gourmand en ressources.
 
 - Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si PowerPoint est inclus dans la valeur de la clé **RemoveExternalContentMarkingInApp**, toutes les formes sont vérifiées à la recherche du texte que vous spécifiez dans la valeur **ExternalContentMarkingToRemove**. 
 
 - Si cette valeur est spécifiée, seules les formes qui remplissent les critères de nom de forme et ont également un texte qui correspond à la chaîne fournie avec **ExternalContentMarkingToRemove** sera supprimée.
 
-**Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :**
+En outre, si vous avez configuré des dispositions personnalisées dans PowerPoint, le comportement par défaut est que les formes qui se trouvent dans des dispositions personnalisées sont ignorées. Pour supprimer explicitement des marquages de contenu externes dans vos dispositions personnalisées, affectez la valeur true à la propriété avancée **RemoveExternalMarkingFromCustomLayouts** **.**
+
+> [!NOTE]
+> Les types de formes PowerPoint pris en charge pour les paramètres client avancés décrits dans cette section sont les suivants : **msoTextBox,** **msoTextEffect** et **msoPlaceholder**
+>
+##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page
 
 1. Dans PowerPoint, affichez le volet **Sélection** : onglet **Mise en forme** > groupe **Organiser** > **volet sélection**.
 
@@ -555,6 +558,22 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
+
+##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>Supprimer le marquage de contenu externe des dispositions personnalisées dans PowerPoint
+
+Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
+
+Par défaut, la logique utilisée pour supprimer des marquages de contenu externes ignore les dispositions personnalisées configurées dans PowerPoint. Pour étendre cette logique aux dispositions personnalisées, affectez la valeur **true** à la propriété avancée **RemoveExternalMarkingFromCustomLayouts** .
+
+- Clé : **RemoveExternalMarkingFromCustomLayouts**
+
+- Valeur : **true**
+
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
 ```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Désactiver les autorisations personnalisées dans l’Explorateur de fichiers

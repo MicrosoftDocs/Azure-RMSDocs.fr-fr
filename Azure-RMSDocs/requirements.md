@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables nécessaires pour déployer A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e52571568a54cf015269fde76603e334f0bc7b6
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 3d90fdf263c15f80e23229bba427cb8d2b68f74e
+ms.sourcegitcommit: 867a8b3d5e90ab21384b1b2322a0c5a7b63b25bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503551"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95417300"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -219,13 +219,14 @@ Pour les autres scénarios de non-migration, où les deux services sont actifs d
 
 ### <a name="service-tags"></a>Étiquettes de service
 
-Veillez à autoriser l’accès à tous les ports pour les Balises de service suivantes :
+Si vous utilisez un point de terminaison Azure et un groupe de sécurité réseau, veillez à autoriser l’accès à tous les ports pour les étiquettes de service suivantes :
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-Le service Azure Information Protection dépend également de deux adresses IP spécifiques :
+De plus, dans ce cas, le service Azure Information Protection dépend également de deux adresses IP spécifiques :
+
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443** pour le trafic HTTPS

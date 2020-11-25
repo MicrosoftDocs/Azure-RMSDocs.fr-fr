@@ -319,7 +319,7 @@
                       href: ./rms-client/client-protection-only-mode.md
                     - name: Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
                       href: ./rms-client/upgrade-client-app.md
-        - name: Applications Azure Information Protection pour iOS et Android
+        - name: Applications mobiles Azure Information Protection pour iOS et Android
           href: ./rms-client/mobile-app-faq.md
         - name: Lecteurs PDF protégés
           href: ./rms-client/protected-pdf-readers.md

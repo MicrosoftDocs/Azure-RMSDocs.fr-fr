@@ -4,7 +4,7 @@ description: Instructions d’installation et de configuration du Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6e90124dfae07e4ccc02a1d047fc15627b7b35f
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568481"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316566"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -238,6 +238,7 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
     |**Bibliothèque SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Dossier SharePoint spécifique**     | `http://<SharePoint server name>/.../<folder name>`        |
+    | | |
     
 
 1. Répétez les étapes précédentes pour ajouter autant de référentiels que nécessaire.
@@ -262,7 +263,7 @@ Une fois que vous avez [configuré le scanneur Azure information protection dans
 
 1. Exécutez l’applet de commande [install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , en spécifiant votre SQL Server instance sur laquelle créer une base de données pour le scanneur de Azure information protection, et le nom du cluster du scanneur que vous avez spécifié dans la section précédente : 
     
-    ```
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
     
@@ -473,15 +474,17 @@ Les facteurs supplémentaires qui affectent les performances du scanneur sont le
 
 Cette section répertorie les applets de commande PowerShell prises en charge pour le scanneur Azure Information Protection.
 
-> [!NOTE]
-> Le scanneur de Azure Information Protection est configuré à partir de la Portail Azure. Par conséquent, les applets de commande utilisées dans les versions précédentes pour configurer les référentiels de données et la liste des types de fichiers analysés sont désormais dépréciées.
-> 
-
 Les applets de commande prises en charge pour le scanneur sont les suivantes :
+
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)
 
 - [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
+
+- [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)
+
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
@@ -493,6 +496,8 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [Set-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
+
 - [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
@@ -503,6 +508,10 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
+- [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
+
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
@@ -512,6 +521,10 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 - [Start-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [Stop-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
+
+- [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

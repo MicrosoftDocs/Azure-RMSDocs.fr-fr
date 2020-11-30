@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a2b69b7744b17c4f5ccce32a1513015fb4e4cbcc
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567672"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316342"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -51,7 +51,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
     - **Aide sur la connexion**
         
-        Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent généralement au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé au client (tenant) Office 365 ou Azure Active Directory. Même si le service Azure Rights Management peut authentifier des comptes Azure AD, certaines applications peuvent également ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent généralement au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé à votre locataire Office 365 ou Azure Active Directory. Même si le service Azure Rights Management peut authentifier des comptes Azure AD, certaines applications peuvent également ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Donnez aux utilisateurs et au support technique des instructions sur le compte à utiliser quand des utilisateurs sont invités à entrer des informations d’identification quand ils ont des applications utilisant le service Azure Rights Management.
         
@@ -76,7 +76,7 @@ En plus d’aider les utilisateurs à protéger des documents et des e-mails, le
 Pour savoir comment utiliser ce client pour les ordinateurs Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office365-office-2019-office-2016-or-office2013"></a>Utilisation de la protection des informations avec Office 365, Office 2019, Office 2016 ou Office 2013
+## <a name="using-information-protection-with-office-365-office-2019-office-2016-or-office-2013"></a>Utilisation de la protection des informations avec Office 365, Office 2019, Office 2016 ou Office 2013
 Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications Office pour poste de travail. Ils ne voient pas non plus le bouton **Protéger** sur le ruban, ni **Classer et protéger** dans l’Explorateur de fichiers. Ces ajouts facilitent la protection des documents et des e-mails. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
 
 > [!TIP]

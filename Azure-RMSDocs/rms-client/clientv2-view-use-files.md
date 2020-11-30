@@ -12,11 +12,11 @@ ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
 ms.openlocfilehash: 76bbfce88fb35241ee5180221267e83a121482b4
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568032"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316753"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 

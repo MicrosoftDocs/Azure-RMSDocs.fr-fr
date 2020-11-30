@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: fcdfc020061428959e2137a46347b49b150ad73a
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568560"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316702"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -81,7 +81,7 @@ Cet exemple montre comment configurer une étiquette existante pour appliquer la
 
 Maintenant que cette étiquette est configurée, elle peut être appliquée aux documents de différentes manières, notamment :
 
-|Différentes manières d’appliquer l’étiquette|Autres informations|
+|Différentes manières d’appliquer l’étiquette|Informations complémentaires|
 |---------------|----------|
 |Un utilisateur sélectionne manuellement l’étiquette lorsque le document est créé dans l’application Office.|Les utilisateurs sélectionnent l’étiquette à partir du bouton **Protéger** du ruban Office ou à partir de la barre Azure Information Protection.|
 |Les utilisateurs sont invités à sélectionner une étiquette au moment de l’enregistrement d’un nouveau document.|Vous avez configuré le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection nommé **Tous les documents et e-mails doivent avoir une étiquette**.|
@@ -138,16 +138,13 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 
 |Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
-|Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
-|iOS|Oui [[1]](#footnote-1)|Oui (version 1385219 et versions ultérieures) |
-|Android|Oui [[1]](#footnote-1)|Oui (version 13029 et versions ultérieures)|
-|MacOS|Oui [[1]](#footnote-1)|No|
+|Windows|Oui [[1]](#footnote-1)|Oui (Microsoft 365 les applications uniquement)|
+|iOS|Oui [[1]](#footnote-1)|Oui (version 2,42 et versions ultérieures) |
+|Android|Oui [[1]](#footnote-1)|Oui (version 16.0.13029 et versions ultérieures)|
+|MacOS|Oui [[1]](#footnote-1)|Oui (version 16,42 et versions ultérieures)|
 
 ###### <a name="footnote-1"></a>Note 1
 Prend en charge les comptes d’utilisateur, les groupes à extension messagerie, tous les membres. Les comptes d’utilisateur et les groupes à extension messagerie peuvent inclure des comptes Invité. Tous les membres sauf les comptes Invité.
-
-###### <a name="footnote-2"></a>Note 2
-Actuellement pris en charge par les applications Microsoft 365 uniquement.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

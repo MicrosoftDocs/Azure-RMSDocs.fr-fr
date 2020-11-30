@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b9eaa35d1fde58863a9f9ef9c5160a2bb103d031
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: ce85af63a70bf6ee4119e5c5fb22a797fb27df16
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568469"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316787"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -60,12 +60,67 @@ Le format de date utilisé sur cette page est *mois/jour/année*.
 
 Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge de l’Azure Information Protection client d’étiquetage unifié pour Windows. La dernière version est répertoriée en première position. Le format de date utilisé sur cette page est *mois/jour/année*.
 
+La dernière version de Azure Information Protection est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
+
 > [!NOTE]
 > Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le client d’étiquetage unifié, nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## <a name="version-291010-public-preview"></a>Version 2.9.101.0 (version préliminaire publique)
+
+2.9.101.0 de version de scanneur d’étiquetage unifiée
+
+**Publication** le 11/30/2020
+
+Les nouvelles fonctionnalités suivantes ont été publiées pour le [scanneur local de l’étiquetage local](../deploy-aip-scanner.md) dans la version 2.9.101.0 :
+
+- [Prise en charge de PowerShell pour les serveurs de scanneur déconnectés](#powershell-support-for-disconnected-scanner-servers)
+- [Prise en charge des référentiels NFS dans les travaux d’analyse de contenu](#support-for-nfs-repositories-in-content-scan-jobs)
+- [Ajout de la prise en charge des types d’informations sensibles](#added-support-for-sensitive-information-types)
+### <a name="powershell-support-for-disconnected-scanner-servers"></a>Prise en charge de PowerShell pour les serveurs de scanneur déconnectés
+Le [Azure information protection analyseur local](../deploy-aip-scanner.md) prend désormais en charge la gestion des travaux d’analyse de contenu, pour les serveurs de scanneurs qui ne peuvent pas se connecter à Internet, via PowerShell.
+
+Pour prendre en charge les serveurs de scanneur déconnectés, nous avons ajouté les nouvelles applets de commande suivantes :
+
+|Applet de commande  |Description  |
+|---------|---------|
+|**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Ajoute un nouveau référentiel à votre travail d’analyse de contenu.        |
+|**[AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Obtient des détails sur votre travail d’analyse de contenu.   |
+|**[AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)**     |  Obtient des détails sur les dépôts définis pour votre travail d’analyse de contenu.       |
+|**[Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)**       |    Supprime votre travail d’analyse de contenu.     |
+| **[Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)**    |   Supprime un référentiel de votre travail d’analyse de contenu.      |
+|**[Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)**     |   Définit les paramètres de votre travail d’analyse de contenu.      |
+**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)**     |   Définit les paramètres d’un référentiel existant dans votre travail d’analyse de contenu.      |
+| | |
+
+
+L’applet de commande [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) a également été ajoutée pour fournir une prise en charge supplémentaire, ce qui vous permet de mettre à jour les paramètres d’installation du service de découverte du réseau via PowerShell.
+
+Pour plus d’informations, consultez [lorsque le serveur de scanneur ne peut pas disposer d’une connexion Internet](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) et [configurer le scanneur](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Prise en charge des référentiels NFS dans les travaux d’analyse de contenu
+
+Vous pouvez désormais ajouter des référentiels NFS à vos travaux d’analyse de contenu, en plus des partages de fichiers SMB et des référentiels SharePoint.
+
+Pour plus d’informations, consultez [créer un travail d’analyse du contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
+
+### <a name="added-support-for-sensitive-information-types"></a>Ajout de la prise en charge des types d’informations sensibles
+Nous avons ajouté la prise en charge de types d’informations sensibles supplémentaires dans Azure Information Protection, tels que le **numéro d’entreprise Australie,** le **numéro de société en Australie** ou la **carte d’identité autrichienne.** 
+
+Pour plus d’informations, consultez les [définitions d’entité de type d’informations sensibles](/microsoft-365/compliance/sensitive-information-type-entity-definitions) dans la documentation de Microsoft 365.
+### <a name="fixes-and-improvements"></a>Correctifs et améliorations
+
+Les correctifs suivants ont été fournis dans la version 2.9.101.0 de l' [Azure information protection scanneur d’étiquetage unifié](../deploy-aip-scanner.md):
+
+- Ajout de la prise en charge des traits d’Union ( **-** ) dans les noms des [bases de données du scanneur](../deploy-aip-scanner-prereqs.md)
+- Mises à jour dans les rapports pour lesquelles l’option **[étiqueter les fichiers en fonction du contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** a la valeur **désactivé**
+- [Amélioration de la consommation de mémoire](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) pour un grand nombre de correspondances de type d’informations
+- Prise en charge des chemins d’accès [locaux SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) qui se terminent par une barre oblique ( **/** )
+- Augmentation de la [Vitesse](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) d’analyse SharePoint
+- Prise en charge pour [éviter un délai d’expiration](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) lors de l’analyse d’un serveur SharePoint.
 
 ## <a name="version-28850"></a>Version 2.8.85.0
 
@@ -75,11 +130,11 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
 
 Cette version comprend les nouvelles fonctionnalités, les correctifs et les améliorations suivants pour le scanneur d’étiquetage et le client unifiés :
 
-- [Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié](#new-features-for-the-unified-labeling-scanner)
-- [Nouvelles fonctionnalités pour le client d’étiquetage unifié](#new-features-for-the-unified-labeling-client)
-- [Correctifs et améliorations](#fixes-and-improvements)
+- [Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié](#new-features-for-the-unified-labeling-scanner-version-28850)
+- [Nouvelles fonctionnalités pour le client d’étiquetage unifié](#new-features-for-the-unified-labeling-client-version-28850)
+- [Correctifs et améliorations](#fixes-and-improvements-version-28850)
 
-### <a name="new-features-for-the-unified-labeling-scanner"></a>Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié
+### <a name="new-features-for-the-unified-labeling-scanner-version-28850"></a>Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié, version 2.8.85.0
 
 - [Analyses complètes facultatives pour les modifications détectées](#optional-full-rescans-for-changes-detected)
 - [Configurer des délais d’attente SharePoint](#configure-sharepoint-timeouts)
@@ -118,7 +173,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
     - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
     
@@ -155,7 +210,7 @@ Les applets de commande PowerShell ajoutées pour la découverte du réseau sont
 |[**Uninstall-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Désinstalle le service de découverte du réseau.       |
 | | |
 
-### <a name="new-features-for-the-unified-labeling-client"></a>Nouvelles fonctionnalités pour le client d’étiquetage unifié
+### <a name="new-features-for-the-unified-labeling-client-version-28850"></a>Nouvelles fonctionnalités pour le client d’étiquetage unifié, version 2.8.85.0
 
 - [Personnalisations de l’administrateur pour les fenêtres contextuelles AIP dans Outlook](#administrator-customizations-for-aip-popups-in-outlook) 
 - [Personnalisations de l’administrateur pour les invites de justification](#administrator-customizations-for-justification-prompts) 
@@ -184,17 +239,17 @@ Pour plus d’informations, consultez [accéder aux journaux d’audit](../audit
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
 
-### <a name="fixes-and-improvements"></a>Correctifs et améliorations
+### <a name="fixes-and-improvements-version-28850"></a>Correctifs et améliorations, version 2.8.85.0
 
-- [Correctifs et améliorations de l’analyseur](#azure-information-protection-scanner-fixed-issues)
-- [Correctifs et améliorations du client](#azure-information-protection-client-fixed-issues)
+- [Correctifs et améliorations de l’analyseur](#azure-information-protection-scanner-fixed-issues-version-28850)
+- [Correctifs et améliorations du client](#azure-information-protection-client-fixed-issues-version-28850)
 
-#### <a name="azure-information-protection-scanner-fixed-issues"></a>Problèmes résolus du scanneur Azure Information Protection
+#### <a name="azure-information-protection-scanner-fixed-issues-version-28850"></a>Azure Information Protection les problèmes résolus du scanneur, version 2.8.85.0
 
 Les correctifs suivants ont été fournis dans la version 2.8.85.0 de l’Azure Information Protection scanneur d’étiquetage unifié :
 
@@ -203,7 +258,7 @@ Les correctifs suivants ont été fournis dans la version 2.8.85.0 de l’Azure 
 - Le scanneur AIP prend désormais en charge les fichiers [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) avec un point dans le chemin, mais aucune extension. Par exemple, un fichier avec un chemin d’accès `https://sharepoint.contoso.com/shared documents/meeting-notes` , sans extension, est maintenant analysé avec succès.
 - Le scanneur AIP prend désormais en charge les [types d’informations sensibles personnalisés](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) qui sont créés dans le centre de sécurité et conformité Microsoft et qui n’appartiennent à aucune stratégie.
 
-#### <a name="azure-information-protection-client-fixed-issues"></a>Problèmes résolus par le client Azure Information Protection
+#### <a name="azure-information-protection-client-fixed-issues-version-28850"></a>Problèmes résolus par le client Azure Information Protection, version 2.8.85.0
 
 Les correctifs suivants ont été fournis dans la version 2.8.85.0 du client d’étiquetage unifié de Azure Information Protection :
 
@@ -281,7 +336,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)
 
@@ -299,6 +354,7 @@ Les clients qui ont une configuration TLS qui ne prend pas en charge TLS 1,2 doi
 Pour plus d’informations sur la configuration requise, consultez [firewalls and Network infrastructure Requirements](../requirements.md#firewalls-and-network-infrastructure).
 
 **Correctifs et améliorations** 
+
 - Améliorations de SQL pour le scanneur :
     - Performances
     - Fichiers avec un grand nombre de types d’informations

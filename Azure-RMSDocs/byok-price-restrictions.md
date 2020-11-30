@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: cfe396cea14effdd77b912b32c7c64296806b4be
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568476"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316226"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>BYOK les détails de votre propre clé pour Azure Information Protection
 
@@ -300,7 +300,7 @@ Pour accorder les autorisations d’utilisateur du principal du service Azure Ri
 az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
 ```
 
-Où :
+Où :
 - **00000012-0000-0000-C000-000000000000** est le GUID à utiliser dans cette commande
 - **ContosoMHSM** est un exemple de nom HSM. Lorsque vous exécutez cette commande, remplacez cette valeur par votre propre nom HSM.
 

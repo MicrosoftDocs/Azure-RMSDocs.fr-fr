@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
-ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
+ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034385"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316838"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -765,12 +765,14 @@ Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par de
     
     - Ajoutée **\<**domain names, comma separated**>**
 
-Par exemple, vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookJustifyTrustedDomains** et **contoso.com**. Par conséquent, un utilisateur peut envoyer un e-mail à john@sales.contoso.com lorsqu’il est étiqueté **confidentiel \ tous les employés** , mais qu’il ne pourra pas envoyer un e-mail avec la même étiquette à un compte gmail.
+Par exemple, supposons que vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . 
+
+Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookBlockTrustedDomains** avec **contoso.com.** Par conséquent, un utilisateur peut envoyer un e-mail à `john@sales.contoso.com` lorsqu’il est étiqueté **confidentiel \ tous les employés**, mais qu’il ne pourra pas envoyer un e-mail avec la même étiquette à un compte gmail.
 
 Exemples de commandes PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
@@ -1462,7 +1464,7 @@ Définissez la syntaxe JSON de votre règle comme suit :
 "nodes" : []
 ```
 
-Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d'informations, consultez les pages suivantes :
+Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d’informations, consultez :
 
 - [Syntaxe de condition de règle](#rule-condition-syntax)
 - [Syntaxe de l’action de règle](#rule-action-syntax)
@@ -1826,6 +1828,24 @@ Par défaut, le délai d’attente pour les interactions SharePoint est de deux 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+### <a name="avoid-scanner-timeouts-in-sharepoint"></a>Éviter les délais d’attente du scanneur dans SharePoint
+
+Si vous avez des chemins d’accès de fichiers longs dans SharePoint version 2013 ou ultérieure, assurez-vous que la valeur [httpRuntime. maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) de votre serveur SharePoint est supérieure aux 260 de caractères par défaut.
+
+Cette valeur est définie dans la classe **HttpRuntimeSection** de la `ASP.NET` Configuration. Si vous devez mettre à jour cette valeur, procédez comme suit :
+
+1. Sauvegardez votre configuration de **web.config** . 
+
+1. Mettez à jour la valeur **maxUrlLength** en fonction des besoins. Par exemple :
+
+    ```c#
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
+    ```
+
+1. Redémarrez votre serveur Web SharePoint et vérifiez qu’il se charge correctement. 
+
+    Par exemple, dans le gestionnaire Windows Internet Information Server (IIS), sélectionnez votre site, puis sous **gérer le site Web**, sélectionnez **redémarrer**. 
 
 ## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME
 

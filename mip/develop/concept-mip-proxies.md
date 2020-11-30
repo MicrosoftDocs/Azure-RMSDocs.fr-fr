@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.date: 07/29/2020
 ms.author: tommos
 ms.openlocfilehash: fdbcf9d618612021a971af34380b65dc062c2802
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567917"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316532"
 ---
 # <a name="microsoft-information-protection-sdk---proxy-support"></a>SDK Microsoft Information Protection-prise en charge du proxy
 
@@ -24,9 +24,9 @@ Aujourd’hui, dans le kit de développement logiciel MIP SDK, les proxies non t
 * La **découverte automatique de proxy** fait référence aux proxys ou aux paramètres détectés via la découverte automatique de proxy Web (WPAD).
 * Le **Proxy explicite** fait référence à un proxy fourni directement au système d’exploitation ou à l’application.
   
-| Plateforme        | Proxy transparent | Proxys authentifiés | Détection automatique de proxy | Proxy explicite |
+| Plate-forme        | Proxy transparent | Proxys authentifiés | Détection automatique de proxy | Proxy explicite |
 | --------------- | ----------------- | --------------------- | -------------------- | -------------- |
-| **Windows**     | Prise en charge         | Non pris en charge         | Prise en charge            | Prise en charge      |
+| **Windows**     | Prise en charge         | Non pris en charge         | Prise en charge            | Pris en charge      |
 | **Linux (tout)** | Prise en charge         | Non pris en charge         | Non pris en charge        | Non pris en charge  |
 | ****       | Prise en charge         | Non pris en charge         | Non pris en charge        | Non pris en charge  |
 | **Android**     | Prise en charge         | Non pris en charge         | Non pris en charge        | Non pris en charge  |

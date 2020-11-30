@@ -13,11 +13,11 @@ ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
-ms.sourcegitcommit: bf8867a2270bd9e9695f2a5fe53fa5653faf7f94
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "95567948"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316379"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution du scanneur Azure Information Protection
 
@@ -99,7 +99,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
     ![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
 
-- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
+- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
 
     ```PowerShell
     Stop-AIPScan 

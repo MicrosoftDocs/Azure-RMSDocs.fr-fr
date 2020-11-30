@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 33e6d4205fbfc2c168514fc30cc20acbd9d8578f
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568553"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316266"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?
 
@@ -32,7 +32,7 @@ Utilisez les informations de cette section pour en savoir plus sur le Azure Info
 
 Le scanneur AIP s’exécute en tant que service sur Windows Server et vous permet de découvrir, classifier et protéger des fichiers sur les banques de données suivantes :
 
-- **Chemins UNC** pour les partages réseau qui utilisent le protocole SMB (Server Message Block).
+- **Chemins UNC** pour les partages réseau qui utilisent les protocoles SMB ou NFS (version préliminaire).
 
 - **Bibliothèques de documents SharePoint et dossier** pour sharepoint server 2019 via sharepoint server 2013. SharePoint 2010 est également pris en charge pour les clients disposant de la [prise en charge étendue de cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 

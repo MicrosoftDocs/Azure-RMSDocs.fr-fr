@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 266ff1c9ff09b9b9b1a2133601f5adf44a4c7d4a
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568565"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316243"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prérequis pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -152,7 +152,7 @@ Le *compte du scanneur* est le compte que vous spécifiez dans le paramètre **D
 
 Si vos étiquettes n’ont pas de conditions d’étiquetage automatique, consultez les [instructions pour les autres configurations](#restriction-your-labels-do-not-have-auto-labeling-conditions) ci-dessous.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [En savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels)
 - [Appliquer automatiquement une étiquette sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically)
@@ -163,11 +163,13 @@ Pour plus d'informations, consultez les pages suivantes :
 
 Pour analyser les dossiers et bibliothèques de documents SharePoint, assurez-vous que votre serveur SharePoint est conforme aux exigences suivantes :
 
-- **Versions prises en charge.** Les versions prises en charge sont les suivantes : SharePoint 2019, SharePoint 2016 et SharePoint 2013. D’autres versions de SharePoint ne sont pas prises en charge pour le scanneur.
-
-- **Version.** Lorsque vous utilisez le contrôle de [version](/sharepoint/governance/versioning-content-approval-and-check-out-planning), le scanneur inspecte et étiquette la dernière version publiée. Si le scanneur étiquette une approbation de fichier et de [contenu](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) est requise, ce fichier doit être approuvé pour être disponible pour les utilisateurs.  
-
-- **Batteries de serveurs SharePoint de grande taille.** Pour les grandes batteries de serveurs SharePoint, regardez si vous devez augmenter le seuil d’affichage de liste (par défaut, 5 000) pour le scanneur pour accéder à tous les fichiers. Pour plus d’informations, consultez [gérer des listes et des bibliothèques de grande taille dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+|Condition requise  |Description  |
+|---------|---------|
+|**Versions prises en charge** | Les versions prises en charge sont les suivantes : SharePoint 2019, SharePoint 2016 et SharePoint 2013. <br> D’autres versions de SharePoint ne sont pas prises en charge pour le scanneur.     |
+|**Contrôle de version**     |  Lorsque vous utilisez le contrôle de [version](/sharepoint/governance/versioning-content-approval-and-check-out-planning), le scanneur inspecte et étiquette la dernière version publiée. <br><br>Si le scanneur étiquette une approbation de fichier et de [contenu](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) est requise, ce fichier doit être approuvé pour être disponible pour les utilisateurs.       |
+|**Batteries de serveurs SharePoint de grande taille** |Pour les grandes batteries de serveurs SharePoint, regardez si vous devez augmenter le seuil d’affichage de liste (par défaut, 5 000) pour le scanneur pour accéder à tous les fichiers. <br><br>Pour plus d’informations, consultez [gérer des listes et des bibliothèques de grande taille dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server). |
+|**Chemins d’accès de fichiers longs**  |Si vous avez des chemins d’accès de fichiers longs dans SharePoint, assurez-vous que la valeur [httpRuntime. maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) de votre serveur SharePoint est supérieure à la valeur par défaut de 260 caractères. <br><br>Pour plus d’informations, consultez [éviter les délais d’attente des scanneurs dans SharePoint](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint). | 
+| | |
 
 ## <a name="microsoft-office-requirements"></a>Configuration requise pour la Microsoft Office
 
@@ -243,11 +245,21 @@ Pour en savoir plus sur la gestion de vos niveaux de stratégie SharePoint, cons
 
 Alors que le client d’étiquetage unifié ne peut pas appliquer la protection sans connexion Internet, le scanneur peut toujours appliquer des étiquettes basées sur des stratégies importées.
 
-Pour prendre en charge un ordinateur déconnecté, procédez comme suit :
+Pour prendre en charge un ordinateur déconnecté, utilisez l’une des méthodes suivantes :
+
+- [Utiliser le portail Azure](#use-the-azure-portal-with-a-disconnected-computer) (recommandé dans la mesure du possible)
+
+- [Utiliser PowerShell](#use-powershell-with-a-disconnected-computer)
+
+#### <a name="use-the-azure-portal-with-a-disconnected-computer"></a>Utiliser le Portail Azure avec un ordinateur déconnecté
+
+Pour prendre en charge un ordinateur déconnecté du Portail Azure, procédez comme suit :
 
 1.  Configurez des étiquettes dans votre stratégie, puis utilisez la [procédure pour prendre en charge les ordinateurs déconnectés](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) afin d’activer la classification et l’étiquetage hors connexion.
 
-1. Activer la gestion hors connexion pour les travaux d’analyse de contenu :
+1. Activez la gestion hors connexion pour le contenu et les travaux d’analyse réseau comme suit :
+
+    **Activer la gestion hors connexion pour les travaux d’analyse de contenu :**
 
     1. Configurez le scanneur pour qu’il fonctionne en mode **hors connexion** à l’aide de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
 
@@ -259,7 +271,7 @@ Pour prendre en charge un ordinateur déconnecté, procédez comme suit :
     
     Les résultats des travaux d’analyse de contenu hors connexion se trouvent à l’emplacement suivant : **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
     
-1. Activer la gestion hors connexion des travaux d’analyse réseau :
+    **Activer la gestion hors connexion des travaux d’analyse réseau :**
 
     1. Configurez le service de découverte du réseau pour qu’il fonctionne en mode hors connexion à l’aide de l’applet de commande [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
@@ -270,6 +282,37 @@ Pour prendre en charge un ordinateur déconnecté, procédez comme suit :
     1.  Importez le travail d’analyse réseau à l’aide du fichier qui correspond à notre nom de cluster à l’aide de l’applet [de commande Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) .  
     
     Les résultats des travaux d’analyse réseau hors connexion se trouvent à l’emplacement suivant : **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
+
+#### <a name="use-powershell-with-a-disconnected-computer"></a>Utiliser PowerShell avec un ordinateur déconnecté
+
+Pour prendre en charge un ordinateur déconnecté à l’aide de PowerShell uniquement, procédez comme suit :
+
+**Gérer vos travaux d’analyse de contenu à l’aide de PowerShell uniquement :**
+
+1. Configurez le scanneur pour qu’il fonctionne en mode **hors connexion** à l’aide de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
+
+1. Créez un travail d’analyse de contenu à l’aide de l’applet de commande [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) , en veillant à utiliser le `-Enforce On` paramètre obligatoire.
+
+1. Ajoutez vos référentiels à l’aide de l’applet de commande [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) , avec le chemin d’accès au référentiel que vous souhaitez ajouter.
+
+    > [!TIP]
+    > Pour empêcher le dépôt d’hériter des paramètres de votre travail d’analyse de contenu, ajoutez le `OverrideContentScanJob On` paramètre, ainsi que les valeurs des paramètres supplémentaires.
+    >
+    > Pour modifier les détails d’un référentiel existant, utilisez la commande [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) .
+    >
+ 
+1. Utilisez les applets de commande [AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob) et [obten-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository) pour retourner des informations sur les paramètres actuels de votre travail d’analyse de contenu. 
+
+1. Utilisez la commande [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) pour mettre à jour les détails d’un référentiel existant.
+
+1. Exécutez votre travail d’analyse de contenu immédiatement si nécessaire, à l’aide de l’applet de commande [Start-AIPScan](/powershell/module/azureinformationprotection/start-aipscan) . 
+
+    Les résultats des travaux d’analyse de contenu hors connexion se trouvent à l’emplacement suivant : **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
+
+1. Si vous devez supprimer un référentiel ou un travail d’analyse de contenu entier, utilisez les applets de commande suivantes :
+
+    - [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+    - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
 

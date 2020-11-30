@@ -14,11 +14,11 @@ ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 635ab25150dd18e50da8b93b4f0ec4c145320e19
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568475"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316804"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
 
@@ -265,7 +265,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |ProtectionBefore|Type de protection avant modification [JSON] |
 |MachineName |FQDN, le cas échéant ; sinon nom d’hôte|
 |DeviceRisk|Score de risque de l’appareil à partir de émission quand il est disponible|
-|Plateforme|Plateforme d’appareils (Win, OSX, Android, iOS) |
+|Plate-forme|Plateforme d’appareils (Win, OSX, Android, iOS) |
 |ApplicationName|Nom convivial de l’application|
 |AIPVersion|Version du client Azure Information Protection qui a effectué l’action d’audit |
 |TenantId|ID de locataire Azure AD |

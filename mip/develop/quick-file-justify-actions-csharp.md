@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
 ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421135"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316515"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API de fichier du SDK Microsoft Information Protection - Justification d’action pour abaisser une étiquette de confidentialité dans un fichier (C#)
 

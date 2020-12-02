@@ -8,11 +8,11 @@ ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
 ms.openlocfilehash: b0aeeabeabf6dc4c3bba39ea2f58374b98bac491
-ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044372"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316736"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C#)
 
@@ -34,16 +34,16 @@ Si vous ne l’avez pas déjà fait, veillez à :
 
 Tout d’abord, nous créons et configurons la solution et le projet Visual Studio initiaux, sur lesquels les autres guides de démarrage rapide s’appuieront.
 
-1. Ouvrez Visual Studio 2017, sélectionnez le menu **Fichier** , **Nouveau** , **Projet**. Dans la boîte de dialogue **Nouveau projet**  :
-   - Dans le volet gauche, sous **Installé** , **Visual C#** , sélectionnez **Windows Desktop**.
+1. Ouvrez Visual Studio 2017, sélectionnez le menu **Fichier**, **Nouveau**, **Projet**. Dans la boîte de dialogue **Nouveau projet** :
+   - Dans le volet gauche, sous **Installé**, **Visual C#** , sélectionnez **Windows Desktop**.
    - Dans le volet central, sélectionnez **Application console (.NET Framework)**
-   - Dans le volet inférieur, mettez à jour les champs **Nom** , **Emplacement** et **Nom de la solution** contenante du projet en conséquence.
+   - Dans le volet inférieur, mettez à jour les champs **Nom**, **Emplacement** et **Nom de la solution** contenante du projet en conséquence.
    - Lorsque vous avez terminé, cliquez sur le bouton **OK** dans le coin inférieur droit.
 
      [![Création d’une solution dans Visual Studio](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. Ajoutez le package Nuget pour l’API de fichier du kit SDK MIP dans votre projet :
-   - Dans l’ **Explorateur de solutions** , cliquez avec le bouton droit sur le nœud du projet (directement sous le nœud supérieur/de solution), puis sélectionnez **Gérer les packages NuGet...**  :
+   - Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet (directement sous le nœud supérieur/de solution), puis sélectionnez **Gérer les packages NuGet...**  :
    - Lorsque l’onglet **Gestionnaire de Package NuGet** s’ouvre dans la zone des onglets du groupe d’éditeurs :
      - Sélectionnez **Parcourir**.
      - Dans la zone de recherche, entrez « Microsoft.InformationProtection ».
@@ -58,7 +58,7 @@ Le kit SDK MIP implémente l’authentification en utilisant l’extensibilité 
 
 Maintenant, créez une implémentation pour un délégué d’authentification, en étendant l’interface `Microsoft.InformationProtection.IAuthDelegate` du SDK et en remplaçant/implémentant la fonction virtuelle `IAuthDelegate.AcquireToken()`. Le délégué de l’authentification est instancié et utilisé plus tard par les objets `FileProfile` et `FileEngine`.
 
-1. Cliquez avec le bouton droit sur le nom du projet dans Visual Studio, sélectionnez **Ajouter** , puis sélectionnez **Classe**.
+1. Cliquez avec le bouton droit sur le nom du projet dans Visual Studio, sélectionnez **Ajouter**, puis sélectionnez **Classe**.
 2. Entrez « AuthDelegateImplementation » dans le champ **Nom**. Cliquez sur **Ajouter**.
 3. Ajoutez les instructions using de la Bibliothèque d’authentification Microsoft (ADAL) et de la bibliothèque MIP :
 
@@ -128,13 +128,13 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
 
 ## <a name="initialize-the-mip-sdk-managed-wrapper"></a>Initialiser le wrapper managé du SDK MIP
 
-1. À partir de l’ **Explorateur de solutions** , ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
+1. À partir de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
 2. Supprimez l’implémentation générée de `main()`.
 
 3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, la création d’un `MipContext`, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez `MIP.Initialize()`, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier.
 
-4. Dans la section `Main()` du fichier *Program.cs* , ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription d’application Azure AD que nous avons créée.
+4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription d’application Azure AD que nous avons créée.
 
 ```csharp
 using System;

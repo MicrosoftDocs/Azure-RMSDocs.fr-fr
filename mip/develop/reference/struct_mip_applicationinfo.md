@@ -1,17 +1,17 @@
 ---
 title: struct ApplicationInfo
-description: Documentation des structures associées au kit de développement logiciel (MIP) Microsoft Information Protection.
+description: Documente la structure ApplicationInfo
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 09/21/2020
-ms.openlocfilehash: 4971d7cf0891308733dafd0dc64d58c02343f1e4
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: d56fdcaccf67f46b2d6632ec6586e2b140717696
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565528"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535584"
 ---
 # <a name="struct-applicationinfo"></a>struct ApplicationInfo 
 Struct qui inclut des informations spécifiques à l’application.

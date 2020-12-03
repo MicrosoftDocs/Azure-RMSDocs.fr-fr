@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e0dedeffe2f10b1d312a865acdc64a1248144776
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568320"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536060"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -51,7 +51,7 @@ Une fois que le service est activé, vous avez besoin des composants PowerShell 
 >Enregistrez la valeur BPOSId (ID de locataire). Vous en aurez besoin au cours des prochaines étapes.
 
 *Exemple de sortie* 
- ![ sortie de l’applet de commande](../media/develop/output-of-Get-AadrmConfiguration.png)
+ ![ Sortie de l’applet de commande AadrmConfiguration](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Déconnectez-vous du service : `Disconnect-AipServiceService`
 
@@ -67,12 +67,12 @@ Suivez ces étapes pour créer un principal du service :
   > Enregistrez la clé symétrique et l’ID de principal d’application pour une utilisation ultérieure.
 
 *Exemple de sortie* 
- ![ sortie de l’applet de commande](../media/develop/output-of-NewMsolServicePrincipal.png)
+ ![ Sortie de l’applet de commande NewMsolServicePrincipal](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Ajoutez votre ID de principal d’application, votre clé symétrique et votre ID de locataire au fichier App.config de l’application.
 
 *Exemple de fichier App.config* 
- ![ sortie de l’applet de commande](../media/develop/example-App.config-file.png)
+ ![ Exemple de fichier App.config](../media/develop/example-App.config-file.png)
 
 - Les valeurs *ClientID* et *RedirectUri* sont mises à votre disposition quand vous inscrivez votre application dans Azure. Pour plus d’informations sur la façon d’inscrire votre application dans Azure et d’obtenir les valeurs *ClientID* et *RedirectUri*, consultez [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md).
 

@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce85af63a70bf6ee4119e5c5fb22a797fb27df16
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
+ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316787"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544638"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -122,6 +122,9 @@ Les correctifs suivants ont été fournis dans la version 2.9.101.0 de l' [Azure
 - Augmentation de la [Vitesse](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) d’analyse SharePoint
 - Prise en charge pour [éviter un délai d’expiration](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) lors de l’analyse d’un serveur SharePoint.
 
+### <a name="known-issues"></a>Problèmes connus
+Dans cette version préliminaire publique, l’application d’étiquettes avec [protection DKE](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) n’est pas prise en charge par le scanneur.
+
 ## <a name="version-28850"></a>Version 2.8.85.0
 
 2.8.85.0 de la version du client et du scanneur d’étiquetage unifiée
@@ -173,7 +176,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
     - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
     
@@ -239,7 +242,7 @@ Pour plus d’informations, consultez [accéder aux journaux d’audit](../audit
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
@@ -336,7 +339,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)
 

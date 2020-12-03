@@ -4,7 +4,7 @@ description: Répertorie les conditions préalables à l’installation et au d�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: f426f62f071885932ad436735e5a1bfe8663fa2f
+ms.sourcegitcommit: 2b9ef3b97609dca6f6d64d78aff83e44d4aafc4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316243"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556023"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prérequis pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -26,7 +26,9 @@ ms.locfileid: "96316243"
 >[!NOTE]
 > Si vous utilisez le scanneur classique, consultez [Configuration requise pour l’installation et le déploiement du Azure information protection scanneur classique](deploy-aip-scanner-prereqs-classic.md).
 
-Avant d’installer le Azure Information Protection scanneur local, assurez-vous que votre système est conforme aux exigences de base de [Azure information protection](requirements.md), ainsi qu’aux exigences suivantes spécifiques au scanneur :
+Avant d’installer le Azure Information Protection scanneur local, assurez-vous que votre système est conforme aux exigences de base de [Azure information protection](requirements.md).
+
+En outre, les conditions requises suivantes sont spécifiques au scanneur :
 
 - [Configuration requise pour Windows Server](#windows-server-requirements)
 - [Exigences relatives au compte de service](#service-account-requirements)
@@ -38,7 +40,7 @@ Avant d’installer le Azure Information Protection scanneur local, assurez-vous
 - [Exigences relatives au chemin de fichier](#file-path-requirements)
 - [Exigences relatives aux statistiques d’utilisation](#usage-statistics-requirements)
 
-Si vous ne pouvez pas satisfaire à toutes les exigences du tableau parce qu’elles sont interdites par les stratégies de votre organisation, consultez la section [autres configurations](#deploying-the-scanner-with-alternative-configurations) .
+Si vous ne pouvez pas répondre à toutes les conditions requises répertoriées pour le scanneur parce qu’elles sont interdites par les stratégies de votre organisation, consultez la section [autres configurations](#deploying-the-scanner-with-alternative-configurations) .
 
 Lors du déploiement du scanneur en production ou du test des performances de plusieurs scanneurs, consultez [exigences de stockage et planification de la capacité pour SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
@@ -152,7 +154,7 @@ Le *compte du scanneur* est le compte que vous spécifiez dans le paramètre **D
 
 Si vos étiquettes n’ont pas de conditions d’étiquetage automatique, consultez les [instructions pour les autres configurations](#restriction-your-labels-do-not-have-auto-labeling-conditions) ci-dessous.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [En savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels)
 - [Appliquer automatiquement une étiquette sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically)
@@ -334,7 +336,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle db_owner pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. Si vous spécifiez votre propre nom de cluster (profil), la base de données de configuration est nommée **AIPScannerUL_<cluster_name>**.
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :

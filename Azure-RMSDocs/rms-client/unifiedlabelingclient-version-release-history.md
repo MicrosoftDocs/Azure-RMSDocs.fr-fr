@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
-ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
+ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544638"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740620"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -104,6 +104,16 @@ Pour plus d’informations, consultez [lorsque le serveur de scanneur ne peut pa
 ### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Prise en charge des référentiels NFS dans les travaux d’analyse de contenu
 
 Vous pouvez désormais ajouter des référentiels NFS à vos travaux d’analyse de contenu, en plus des partages de fichiers SMB et des référentiels SharePoint.
+
+Pour prendre en charge les analyses sur les partages NFS, les services pour NFS doivent être déployés sur l’ordinateur du scanneur :
+
+1. Sur votre ordinateur, accédez à la boîte de dialogue des paramètres **fonctionnalités Windows (activer ou désactiver des fonctionnalités Windows)** .
+
+1. Sélectionnez les éléments suivants : 
+
+    - **Services pour NFS** 
+        - **Outils d’administration**
+        - **Client pour NFS**.
 
 Pour plus d’informations, consultez [créer un travail d’analyse du contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 

@@ -4,7 +4,7 @@ description: Quelques questions fréquemment posées sur Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 36ef25b54fed8d73f33158f2c62670434c5d2f31
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: d528c715b54c063a267694fb974ef685fe264ea3
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568524"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849757"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -73,7 +73,7 @@ Si votre locataire ne se trouve pas sur la plateforme d’étiquetage unifiée, 
 
 Vous pouvez également vérifier en accédant à **Azure information protection**  >  **gérer**  >  l'**étiquetage unifiée** et afficher l’état d' **étiquetage unifiée** :
 
-|Statut |Description  |
+|État |Description  |
 |---------|---------|
 |**Activat**     |  Votre locataire se trouve sur la plateforme d’étiquetage unifiée. <br />Vous pouvez [créer, configurer et publier des étiquettes](/microsoft-365/compliance/create-sensitivity-labels) à partir du centre de conformité Microsoft 365.       |
 |**Non activé**    |  Votre locataire n’est pas sur la plateforme d’étiquetage unifiée. <br />Pour obtenir des instructions et des instructions de migration, consultez [Comment migrer des étiquettes Azure information protection vers des étiquettes de sensibilité unifiée](configure-policy-migrate-labels.md).       |
@@ -182,11 +182,9 @@ En outre, notez les points suivants lors de la gestion des tâches et des rôles
 |---------|---------|
 |**Types de comptes pris en charge**     | Les comptes Microsoft ne sont pas pris en charge pour l’administration déléguée de Azure Information Protection, même si ces comptes sont affectés à l’un des rôles d’administration répertoriés.         |
 |**Contrôles d’intégration**     |Si vous avez configuré des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), cette configuration n’affecte pas la possibilité d’administrer Azure Information Protection, à l’exception du connecteur RMS. <br /><br />Par exemple, si vous avez configuré des contrôles d’intégration de manière à ce que la capacité à protéger le contenu soit limitée au groupe *service informatique* , le compte utilisé pour installer et configurer le connecteur RMS doit être membre de ce groupe.          |
-|**Suppression de la protection**     |  Les administrateurs ne peuvent pas supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure Information Protection. <br /><br />Seuls les utilisateurs qui sont affectés en tant que super utilisateurs peuvent supprimer la protection et uniquement lorsque la fonctionnalité de super utilisateur est activée. <br /><br />Tout utilisateur disposant d’autorisations d’administration pour Azure Information Protection peut activer la fonctionnalité de super utilisateur et affecter des utilisateurs en tant que super utilisateurs, y compris leur propre compte.<br /><br />Ces actions sont enregistrées dans un journal d’administrateur. <br /><br />Pour plus d’informations, consultez la section meilleures pratiques en matière de sécurité dans [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](configure-super-users.md). 
-       |
-|**Migration vers le magasin d’étiquetage unifié**      |  Si vous migrez vos étiquettes de Azure Information Protection vers le magasin d’étiquetage unifié, veillez à lire la section suivante dans la documentation relative à la migration des étiquettes : <br />[Rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform).
-       |
-
+|**Suppression de la protection**     |  Les administrateurs ne peuvent pas supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure Information Protection. <br /><br />Seuls les utilisateurs qui sont affectés en tant que super utilisateurs peuvent supprimer la protection et uniquement lorsque la fonctionnalité de super utilisateur est activée. <br /><br />Tout utilisateur disposant d’autorisations d’administration pour Azure Information Protection peut activer la fonctionnalité de super utilisateur et affecter des utilisateurs en tant que super utilisateurs, y compris leur propre compte.<br /><br />Ces actions sont enregistrées dans un journal d’administrateur. <br /><br />Pour plus d’informations, consultez la section meilleures pratiques en matière de sécurité dans [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](configure-super-users.md). <br><br>**Conseil :** Si votre contenu est stocké dans SharePoint ou OneDrive, les administrateurs peuvent exécuter l’applet de commande [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) pour supprimer l’étiquette de sensibilité et le chiffrement. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document). |
+|**Migration vers le magasin d’étiquetage unifié**      |  Si vous migrez vos étiquettes de Azure Information Protection vers le magasin d’étiquetage unifié, veillez à lire la section suivante dans la documentation relative à la migration des étiquettes : <br />[Rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform). |
+| | |
 ### <a name="azure-information-protection-administrator"></a>Administrateur Azure Information Protection
 
 Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection mais pas d’autres services. 

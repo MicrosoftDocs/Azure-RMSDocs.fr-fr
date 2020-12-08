@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316838"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849859"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -702,6 +702,12 @@ Pour obtenir un exemple de procédure pas à pas de configuration de ces paramè
 
 Pour la stratégie sélectionnée, créez un ou plusieurs des paramètres avancés suivants avec les clés suivantes. Pour les valeurs, spécifiez une ou plusieurs étiquettes par leur GUID, chacune séparée par une virgule.
 
+> [!NOTE]
+> Les paramètres avancés de cette section concernent les quand une étiquette *spécifique* est en cours d’utilisation.
+> 
+> Si vous avez configuré des paramètres avancés pour du contenu sans *étiquette* , par exemple avec le paramètre avancé **[OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** et que vous souhaitez personnaliser vos messages contextuels pour le contenu sans étiquette, utilisez un fichier JSON pour définir vos paramètres avancés. Pour plus d’informations, consultez [personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages).
+> 
+
 Exemple de valeur pour plusieurs GUID d’étiquette sous la forme d’une chaîne séparée par des virgules : 
 
 ```sh
@@ -1253,7 +1259,7 @@ Pour se connecter avec l’identité d’un autre utilisateur :
 
 2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si vous ne voyez pas d’invite dans votre application Office pour vous connecter au service Azure Information Protection, revenez à la boîte de dialogue **Microsoft Azure information protection** et sélectionnez **se connecter** à partir de la section **État du client** mis à jour.
 
-De plus :
+En outre :
 
 - Si le client d’étiquetage unifié Azure Information Protection est toujours connecté avec l’ancien compte après avoir effectué ces étapes, supprimez tous les cookies d’Internet Explorer, puis répétez les étapes 1 et 2.
 
@@ -1464,7 +1470,7 @@ Définissez la syntaxe JSON de votre règle comme suit :
 "nodes" : []
 ```
 
-Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d’informations, consultez :
+Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d'informations, consultez les pages suivantes :
 
 - [Syntaxe de condition de règle](#rule-condition-syntax)
 - [Syntaxe de l’action de règle](#rule-action-syntax)
@@ -1490,7 +1496,7 @@ Les types de nœuds pris en charge sont les suivants :
 
 Les actions de règle peuvent être l’une des suivantes :
 
-|Action  |Syntax  |Exemple de message  |
+|Action  |Syntaxe  |Exemple de message  |
 |---------|---------|---------|
 |**Bloquer**     |    `Block (List<language, [title, body]>)`     |    **_E-mail bloqué_* _<br /><br />  _You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **secret** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation n’autorise pas cette action. Envisagez de supprimer ces destinataires ou de remplacer le contenu. *|
 |**Viendra**     | `Warn (List<language,[title,body]>)`        |  **_Confirmation obligatoire_* _<br /><br />_You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **général** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation nécessite une confirmation pour l’envoi de ce contenu. *       |

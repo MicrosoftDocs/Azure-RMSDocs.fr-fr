@@ -1,10 +1,10 @@
 ---
 title: Forum aux questions sur Azure RMS - AIP
 description: Questions fréquemment posées sur le service de protection des données Azure Rights Management (Azure RMS) d’Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 46d03db1a8e66b0e1753606a4a5e152047e43d22
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567797"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849723"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -88,7 +88,7 @@ Conseil : Pour vérifier si un document a été protégé avec un modèle ou une
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>J’ai un déploiement hybride d’Exchange avec certains utilisateurs sur Exchange Online et d’autres utilisateurs sur Exchange Server. Est-ce compatible avec Azure RMS ?
 Absolument et l’avantage est que les utilisateurs peuvent protéger et utiliser sans problème des e-mails et pièces jointes entre les deux déploiements Exchange. Pour cette configuration, activez [Azure RMS](activate-service.md) et [Gestion des droits relatifs à l’information (IRM) pour Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), puis [déployez et configurez le connecteur RMS](deploy-rms-connector.md) pour Exchange Server.
 
-## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>Si j’utilise cette protection pour mon environnement de production, ma société est-elle enfermée dans la solution ou risque-t-elle de perdre l’accès au contenu protégé par Azure RMS ?
+## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Si j’utilise cette protection pour mon environnement de production, ma société est-elle enfermée dans la solution ou risque-t-elle de perdre l’accès au contenu protégé par Azure RMS ?
 Non, vous gardez toujours le contrôle de vos données et pouvez continuer à y accéder, même si vous décidez de ne plus utiliser le service Azure Rights Management. Pour plus d’informations, consultez [désaffectation et désactivation d’Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Puis-je contrôler les utilisateurs pouvant utiliser Azure RMS pour protéger du contenu ?
@@ -184,6 +184,7 @@ Puisqu’Azure Information Protection permet de partager des fichiers en toute s
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Comment récupérer l’accès à des fichiers protégés par un employé qui a quitté l’organisation ?
 Utilisez la [fonctionnalité de super utilisateur](configure-super-users.md), qui accorde les droits d’utilisation Contrôle total aux utilisateurs autorisés pour tous les documents et e-mails protégés par votre locataire. Les super utilisateurs peuvent toujours lire ce contenu protégé et, si nécessaire, supprimer la protection ou le reprotéger pour d’autres utilisateurs. Cette même fonctionnalité permet à des services autorisés d’indexer et d’inspecter des fichiers si nécessaire.
 
+Si votre contenu est stocké dans SharePoint ou OneDrive, les administrateurs peuvent exécuter l’applet de commande [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) pour supprimer l’étiquette de sensibilité et le chiffrement. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Lorsque je teste la révocation dans le site de suivi des documents, je vois un message m’indiquant que les autres utilisateurs continueront d’avoir accès au document pendant 30 jours. Cette durée est-elle configurable ?
 
 Oui. Ce message indique la [licence d’utilisation](configure-usage-rights.md#rights-management-use-license) de ce fichier en particulier.

@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 7fabd12e3ca0dc08f8c5617b37252ac5adc22948
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735046"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849672"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -66,7 +66,7 @@ Spécifiez les identificateurs programmatiques (ProgID) suivants pour AIP, puis 
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-- Applications Office version 1805 minimum, Build 9330,2078 à partir de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium quand l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure Information Protection pour Office 365)
+- Applications Office, pour les versions répertoriées dans le [tableau des versions prises en charge pour les applications Microsoft 365 par canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), à partir d’Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure information protection pour Office 365)
 - Microsoft 365 Apps for enterprise
 - Office Professionnel Plus 2019
 - Office Professionnel Plus 2016
@@ -172,7 +172,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 1. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
-    |Version d’Office|Système d'exploitation|Logiciel|Action|
+    |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
     |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installer|
     |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|

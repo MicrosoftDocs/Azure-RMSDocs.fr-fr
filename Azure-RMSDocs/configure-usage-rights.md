@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 74f141054d177ccabea88f6521ebb2ba6a930be5
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568241"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849774"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configuration des droits d’utilisation pour Azure Information Protection
 
@@ -94,8 +94,8 @@ Ces modèles par défaut sont créés lors de l’achat de votre abonnement, et 
 
 |Nom complet du modèle|Droits d’utilisation du 6 octobre 2017 à maintenant|Droits d’utilisation avant le 6 octobre 2017|
 |----------------|--------------------|----------|
-|\<*organization name> -Affichage confidentiel uniquement * <br /><br />ou<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
-|\<*organization name>Confidentiel <br /><br />ou <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
+|\<*organization name> -Affichage confidentiel uniquement * <br /><br />or<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
+|\<*organization name>Confidentiel <br /><br />or <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
 
 ## <a name="do-not-forward-option-for-emails"></a>Option Ne pas transférer pour les e-mails
 
@@ -124,7 +124,14 @@ Un utilisateur souhaite envoyer un e-mail à des personnes spécifiques du servi
 
 Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement des messages Office 365, une nouvelle option d’e-mail est disponible : **Chiffrement seul**.
 
-Cette option est disponible pour les locataires qui utilisent Exchange Online et qui peuvent être sélectionnées dans Outlook sur le Web, sous la forme d’une autre option de protection des droits pour une règle de courrier, en tant qu’action DLP d’Office 365 et à partir d’Outlook (version minimale de [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) pour les applications Microsoft 365 pour l’entreprise et version minimale de 1805 lorsque vous avez [Microsoft 365 applications qui prennent en charge Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm) Pour plus d’informations sur l’option Encrypt-Only, consultez le billet de blog suivant de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
+Cette option est disponible pour les locataires qui utilisent Exchange Online et qui peuvent être sélectionnées comme suit :
+
+- **Dans Outlook sur le Web**
+- **Comme une autre option de protection des droits** pour une règle de courrier
+- **En tant qu’action DLP d’Office 365**
+- **À partir d’Outlook,** pour les versions listées dans le [tableau des versions prises en charge pour les applications Microsoft 365es par canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), lorsque vous avez [Microsoft 365 des applications qui prennent en charge Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+
+Pour plus d’informations sur l’option Encrypt-Only, consultez le billet de blog suivant de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
 
 Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de **Enregistrer sous, Exporter** et de **Contrôle total**. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier à partir de l’e-mail, l’imprimer et le transférer. 
 

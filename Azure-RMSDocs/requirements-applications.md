@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
-ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
+ms.openlocfilehash: f25b020a72a48e79b24840a597aefd4cc9e594af
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93245111"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849697"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -40,7 +40,7 @@ Ces applications et solutions sont appelées « compatibles RMS », et offrent
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Applications Microsoft 365](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office pour le Web (affichage de documents protégés)](#viewing-protected-documents-in-office-for-the-web)<br />- [Navigateur web](#web-browser-support)        |
 |[**E-mail**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook de Microsoft 365 Apps for Enterprise<br />- [Navigateur web](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Autres types de fichiers**](#supported-text-and-image-file-types)    |  - Visio d’applications Microsoft 365, Office 2019 et Office 2016 : **.vsdm,** **.vsdx,** **.vssm** , **.vstm** , **.vssx** , **.vstx** <br />- Client Azure Information Protection pour Windows : texte, images, **pfile** <br />- Plug-in SealPath RMS pour AutoCAD : **.dwg**       |
+|[**Autres types de fichiers**](#supported-text-and-image-file-types)    |  - Visio d’applications Microsoft 365, Office 2019 et Office 2016 : **.vsdm,** **.vsdx,** **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Client Azure Information Protection pour Windows : texte, images, **pfile** <br />- Plug-in SealPath RMS pour AutoCAD : **.dwg**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>Applications macOS compatibles RMS
@@ -123,8 +123,8 @@ Pour plus d’informations, consultez les [types de fichiers pris en charge](./r
 ### <a name="microsoft-365-app-support"></a>Prise en charge des applications Microsoft 365
 
 Inclut : 
-- Applications Office, version minimale 1805, build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium. Prise en charge uniquement lorsqu’une licence pour Azure Rights Management (également appelé Azure Information Protection pour Microsoft 365 Business Premium) est attribuée à l’utilisateur.
-- Microsoft 365 Apps for Enterprise.
+- Applications Office, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
+- Microsoft 365 Apps for enterprise
 
 ### <a name="viewing-protected-documents-in-office-for-the-web"></a>Affichage de documents protégés dans Office pour le web
 
@@ -132,9 +132,9 @@ Prise en charge uniquement avec Microsoft SharePoint et OneDrive, et la protecti
 
 ### <a name="web-browser-support"></a>Prise en charge du navigateur web
 
-- Les navigateurs web sont pris en charge pour les fichiers **Word, Excel et PowerPoint** , lorsque les [pièces jointes Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sont protégées à l’aide du [chiffrement des messages par Microsoft 365 avec les nouvelles fonctionnalités](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+- Les navigateurs web sont pris en charge pour les fichiers **Word, Excel et PowerPoint**, lorsque les [pièces jointes Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sont protégées à l’aide du [chiffrement des messages par Microsoft 365 avec les nouvelles fonctionnalités](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
-- Pour les **e-mails** , les navigateurs web sont pris en charge uniquement dans les scénarios suivants :
+- Pour les **e-mails**, les navigateurs web sont pris en charge uniquement dans les scénarios suivants :
 
     - Si l’expéditeur et le destinataire font tous deux partie de la même organisation
     - Si l’expéditeur ou le destinataire utilise Exchange Online
@@ -170,7 +170,7 @@ Voir aussi : [Description du service des applications Office](/office365/servic
 
 Les suites clientes Office suivantes prennent en charge la protection des fichiers et des e-mails sur les ordinateurs Windows à l’aide du service Azure Rights Management :
 
-- **Applications Office, version minimale 1805, build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium** lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Microsoft 365) est attribuée à l’utilisateur.
+- **Applications Office**, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
 
 - **Microsoft 365 Apps for enterprise**
 
@@ -211,7 +211,7 @@ Toutes les éditions d’Office pour Mac 2019 et Office pour Mac 2016 prennent
 > 
 ## <a name="azure-information-protection-apps-for-ios-and-android"></a>Applications Azure Information Protection pour iOS et Android
 
-L’application Azure Information Protection pour iOS et Android fournit une visionneuse pour les e-mails protégés par des droits (fichiers **.rpmsg** ) lorsque ces appareils mobiles n’ont pas d’application de messagerie capable d’ouvrir les e-mails protégés. Cette application permet également d’ouvrir des fichiers PDF, images et fichiers texte protégés par des droits.
+L’application Azure Information Protection pour iOS et Android fournit une visionneuse pour les e-mails protégés par des droits (fichiers **.rpmsg**) lorsque ces appareils mobiles n’ont pas d’application de messagerie capable d’ouvrir les e-mails protégés. Cette application permet également d’ouvrir des fichiers PDF, images et fichiers texte protégés par des droits.
 
 Si vos appareils iOS et Android sont inscrits par Microsoft Intune, les utilisateurs peuvent installer l’application à partir du portail d’entreprise et vous pouvez gérer l’application à l’aide de [stratégies de protection des applications](/intune/apps/app-protection-policies) d’Intune.
 
@@ -221,11 +221,11 @@ Pour plus d’informations sur l’utilisation de l’application, consultez [FA
 
 Le client Azure Information Protection (AIP) comprend deux versions, avec des guides d’administrateur et d’utilisateur pour chaque version :
 
-- **Client d’étiquetage unifié**  :
+- **Client d’étiquetage unifié** :
     - [Guide de l’administrateur](./rms-client/clientv2-admin-guide.md)
     - [Guide d’utilisation](./rms-client/clientv2-user-guide.md)
 
-- **Client classique**  :
+- **Client classique** :
     - [Guide de l’administrateur](./rms-client/client-admin-guide.md)
     - [Guide d’utilisation](./rms-client/client-user-guide.md)
 
@@ -236,7 +236,7 @@ Téléchargez l’application correspondante à partir de la [page Microsoft Azu
 > 
 ## <a name="rights-management-sharing-app"></a>Application de partage Rights Management
 
-Sur les ordinateurs Mac, l’application de partage Rights Management fournit une visionneuse qui permet d’afficher les fichiers PDF protégés ( **.ppdf** ), les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou Microsoft 365 Apps for Enterprise. 
+Sur les ordinateurs Mac, l’application de partage Rights Management fournit une visionneuse qui permet d’afficher les fichiers PDF protégés ( **.ppdf**), les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou Microsoft 365 Apps for Enterprise. 
 
 Pour plus d’informations, consultez la [FAQ relative à l’application de partage Microsoft Rights Management pour plateformes mobiles](/previous-versions/msdn10/dn451248(v=msdn.10)).
 

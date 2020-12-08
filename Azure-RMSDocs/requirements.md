@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d90fdf263c15f80e23229bba427cb8d2b68f74e
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: d750edb4aef5bf0b2c546598bb3007f609e50cf4
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316668"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849691"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -138,9 +138,7 @@ Chaque client Azure Information Protection dispose d’une configuration requise
 
 Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide de **Word**, **Excel**, **PowerPoint** et **Outlook** de Microsoft à partir de toutes les éditions Office suivantes :
 
-- **Applications Office, version minimale 1805**, build 9330.2078 de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium. 
-
-    Cette édition est prise en charge uniquement lorsqu’une licence pour Azure Rights Management, également appelé Azure Information Protection pour Microsoft 365 est attribuée à l’utilisateur.
+- **Applications Office**, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
 
 - **Microsoft 365 Apps for enterprise**
 

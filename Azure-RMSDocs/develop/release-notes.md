@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 65e7e70d6cd144905c37d0c20c05f5841f310c42
+ms.sourcegitcommit: 03fef7cf0a7687962bfd3f0cd221541520f4a317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568380"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862511"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
@@ -38,7 +38,7 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 -   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plateforme WinPhone](#january-2015-update---adds-winphone-platform-support)
 -   [Mise à jour d’octobre 2014 : mise à niveau vers le kit de développement logiciel (SDK) Microsoft RMS 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Notes de publication](#release-notes)
--   [Forum Aux Questions](#frequently-asked-questions)
+-   [Forum aux questions](#frequently-asked-questions)
 
 ### <a name="new-for-july-2017"></a>Nouveautés de juillet 2017
 
@@ -158,7 +158,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 -   Lorsque vous utilisez un exemple d’application sur un appareil Amazon® Kindle pour afficher les pièces jointes .ptxt, vous devez d’abord télécharger le fichier avant de l’afficher.
 
-    **Solution** : problème connu qui sera traité ultérieurement.
+    **Solution** : il s’agit d’un problème connu et il est peu probable qu’il soit traité. Nous vous suggérons d’examiner plutôt le [Kit de développement logiciel (SDK) Microsoft information protection](/information-protection/develop/) .
 
 -   Une application qui utilise le kit de développement logiciel (SDK) peut se bloquer si plusieurs instances sont autorisées.
 
@@ -197,7 +197,7 @@ Cette section présente des informations sur les versions actuelles et précéde
 
 
 
-**Remarque**    Les applications MDI ne sont pas prises en charge par notre API iOS.
+**Remarque** Les applications MDI ne sont pas prises en charge par notre API iOS.
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 

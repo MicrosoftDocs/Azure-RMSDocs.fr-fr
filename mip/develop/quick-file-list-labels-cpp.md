@@ -1,18 +1,18 @@
 ---
 title: Démarrage rapide – Répertorier les étiquettes de sensibilité dans un locataire Microsoft Information Protection (MIP) à l’aide du kit SDK MIP C++
-description: Guide de démarrage rapide illustrant comment utiliser le kit SDK C++ Microsoft Information Protection pour répertorier les étiquettes de sensibilité dans votre locataire.
+description: Guide de démarrage rapide illustrant comment utiliser le kit SDK C++ Microsoft Information Protection pour répertorier les étiquettes de sensibilité dans votre locataire (C++).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971606"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536043"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C++)
 

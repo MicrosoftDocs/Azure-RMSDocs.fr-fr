@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c8ace8c73584cdd6eb0cfe6652d944e1b95f46d8
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 37638bfbc47a4a4d075114540ec65ea5d6372a30
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428818"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849825"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
@@ -60,7 +60,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     
-    - Applications Office, version minimale 1805, build 9330.2078 de Microsoft 365 Apps for business ou Microsoft 365 Business Premium si une licence Azure Rights Management (également appelé Azure Information Protection pour Microsoft 365) vous est attribuée.
+    - Applications Office, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
     
     - Microsoft 365 Apps for enterprise
     

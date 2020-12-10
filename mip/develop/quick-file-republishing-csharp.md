@@ -1,17 +1,17 @@
 ---
 title: Guide pratique de republication de scénario C#
-description: Cet article aide à comprendre le scénario de réutilisation du gestionnaire de protection dans les scénarios de republication.
+description: Cet article vous aide à comprendre comment réutiliser le gestionnaire de protection dans les scénarios de republication (C#).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: c72d284363c1ca988692d18b7007a88c88d808b5
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: c3044feb585e1e3d843f906711644f2ae861b1b5
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421134"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535873"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Kit SDK Microsoft Information Protection – Guide de démarrage rapide de la republication de l’API de fichier (C#)
 

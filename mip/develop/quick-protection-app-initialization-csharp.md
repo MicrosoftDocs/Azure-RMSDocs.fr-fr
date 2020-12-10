@@ -1,17 +1,17 @@
 ---
 title: 'Démarrage rapide : Initialisation d’une application cliente - API Protection (C#)'
-description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes C# du SDK Microsoft Information Protection (MIP) - API Protection.
+description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes C# du SDK Microsoft Information Protection (MIP) - API Protection (C#).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 6222326e569d03fbb208d42aacd7efb7ab406a78
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 0f8ed60420b5a0c4fcc0f8264d54f696f5c439a2
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766369"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535890"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Démarrage rapide : Initialisation d’une application cliente pour les API Protection (C#)
 
@@ -63,7 +63,7 @@ Si ce n’est déjà fait, suivez les étapes indiquées dans [Initialisation d�
 
 3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, la création d’un `MipContext`, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez `MIP.Initialize()`, en passant `MipComponent.Protection` qui charge les bibliothèques nécessaires aux opérations de protection.
 
-4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription de l’application Azure AD créée précédemment.
+4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription d’application Azure AD que nous avons créée.
 
 ```csharp
 using System;

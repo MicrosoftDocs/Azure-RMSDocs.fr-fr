@@ -1,17 +1,17 @@
 ---
 title: Guide pratique pour rétrograder/supprimer une étiquette qui nécessite une justification (C#)
-description: Cet article explique comment supprimer une étiquette qui nécessite une justification ou la faire passer à une version antérieure.
+description: Cet article vous aide à comprendre comment rétrograder ou supprimer une étiquette qui nécessite une justification (C#).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 9543934addfbd7d2b897f420e9178513ffc0c639
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316515"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535975"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API de fichier du SDK Microsoft Information Protection - Justification d’action pour abaisser une étiquette de confidentialité dans un fichier (C#)
 

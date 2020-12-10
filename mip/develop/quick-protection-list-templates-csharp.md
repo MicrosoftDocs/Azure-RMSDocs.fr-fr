@@ -1,18 +1,18 @@
 ---
 title: Démarrage rapide - Répertorier les modèles de protection disponibles pour l’utilisateur authentifié dans un locataire Microsoft Information Protection (MIP) à l’aide du wrapper C# SDK MIP
-description: Ce démarrage rapide vous montre comment utiliser le wrapper C# de l’API Protection du SDK Microsoft Information Protection pour répertorier les modèles de protection disponibles pour un utilisateur.
+description: Guide de démarrage rapide vous montrant comment utiliser le wrapper C# de l’API Protection du SDK Microsoft Information Protection pour répertorier les modèles de protection disponibles pour un utilisateur (C#).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: 7b9a8d916b0c3c4b8aaa006abdf27cd8c02a7f6e
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 88c385d783df55b8270740357372c6345da8701a
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588255"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535923"
 ---
 # <a name="quickstart-list-templates-c"></a>Démarrage rapide : Répertorier les modèles (C#)
 

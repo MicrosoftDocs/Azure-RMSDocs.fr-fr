@@ -1,17 +1,17 @@
 ---
 title: 'Démarrage rapide : initialisation pour les clients du kit de développement logiciel (SDK) MIP C++ utilisant l’API de protection'
-description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes du kit de développement logiciel (SDK) Microsoft Information Protection (MIP) utilisant l’API de protection.
+description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes du kit SDK Microsoft Information Protection (MIP) en utilisant l’API Protection (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 063db1a923e66f108583b17ee998549511265bee
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 1dd25f0239d158c6c88b5b0c96d437fae38ff844
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564139"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535958"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Démarrage rapide : Initialisation d’une application cliente pour les API Protection (C++)
 

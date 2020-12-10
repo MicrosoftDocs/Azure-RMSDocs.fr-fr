@@ -1,17 +1,17 @@
 ---
 title: API de fichier - Traiter les fichiers e-mail .msg (C++)
-description: Cet article vous explique comment utiliser l’API de fichier SDK MIP pour traiter les fichiers .msg.
+description: Cet article vous aide à comprendre comment utiliser l’API de fichier SDK MIP pour traiter les fichiers .msg (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: ef6f8db6915242a830d252eec4509fa67eecbb8c
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: ab070974fc8c03236269a40b2230862e87e19e6b
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403309"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536015"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>API de fichier - Traiter les fichiers e-mail .msg (C++)
 

@@ -1,17 +1,17 @@
 ---
 title: Supprimer une étiquette qui nécessite une justification ou la faire passer à une version antérieure (C++)
-description: Cet article explique comment supprimer une étiquette qui nécessite une justification ou la faire passer à une version antérieure.
+description: Cet article vous aide à comprendre comment rétrograder ou supprimer une étiquette qui nécessite une justification (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
-ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: dd02fe709c0fc946ba7bb5d0c5fec82a0688540c
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135672"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536014"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API de fichier du SDK Microsoft Information Protection - Justification d’action pour abaisser le niveau d’une étiquette de confidentialité dans un fichier (C++)
 

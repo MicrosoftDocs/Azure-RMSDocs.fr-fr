@@ -1,18 +1,18 @@
 ---
 title: 'Démarrage rapide : chiffrer/déchiffrer du texte à l’aide de l’API Protection du SDK C++ MIP'
-description: Ce démarrage rapide vous montre comment utiliser l’API Protection du SDK Microsoft Information Protection C++ pour chiffrer et déchiffrer le texte ad hoc à l’aide d’un modèle de protection.
+description: Guide de démarrage rapide vous montrant comment utiliser l’API Protection du SDK Microsoft Information Protection C++ pour chiffrer et déchiffrer le texte ad hoc à l’aide d’un modèle de protection (C++).
 services: information-protection
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 24d52a73620a7f186c425532f5132cac2a46f405
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 1258bfcd6c47611b439a29406ed0e78b644a5803
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766335"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535839"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>Démarrage rapide : Chiffrer/déchiffrer le texte à l’aide du SDK MIP (C++)
 
@@ -188,7 +188,7 @@ Ajoutez une logique pour chiffrer et déchiffrer le texte ad hoc à l’aide de 
    | Espace réservé | Valeur |
    |:----------- |:----- |
    | \<sample-text\> | Exemple de texte que vous souhaitez protéger, par exemple : `"cipher text"`. |
-   | \<Template-Id\> | ID de modèle que vous souhaitez utiliser pour protéger le texte. Par exemple : `"bb7ed207-046a-4caf-9826-647cff56b990"` |
+   | \<Template-Id\> | ID de modèle que vous souhaitez utiliser pour protéger le texte. Par exemple : `"bb7ed207-046a-4caf-9826-647cff56b990"` |
   
 ## <a name="build-and-test-the-application"></a>Générer et tester l’application
 

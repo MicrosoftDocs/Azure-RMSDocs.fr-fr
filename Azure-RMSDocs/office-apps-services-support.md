@@ -1,8 +1,8 @@
 ---
 title: Prise en charge d’Azure RMS d’Azure Information Protection par les programmes et services Office
 description: Voici comment les programmes Office (comme Word et Outlook) et les services Office (Exchange et SharePoint) pour les utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -12,21 +12,26 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1aba9e7f0d6cea7edde34d66e571a6eef4599555
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 37d6eae1559f34bcbc84edecd3cc42926b4888c4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381593"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Les programmes Office et les services Office pour utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation. Ces programmes Office sont Word, Excel, PowerPoint et Outlook. Les services Office sont Exchange et Microsoft SharePoint. Les configurations Office prenant en charge le service Azure Rights Management utilisent souvent le terme **gestion des droits relatifs à l’information (IRM)**.
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Applications Office : Word, Excel, PowerPoint, Outlook
-Ces programmes prennent en charge la Gestion des droits de façon native et permettent aux utilisateurs d’appliquer la protection à un document enregistré ou à un e-mail à envoyer. Les utilisateurs peuvent utiliser des [modèles](configure-policy-templates.md) pour appliquer la protection. Autre possibilité pour Word, Excel et PowerPoint : les utilisateurs appliquent des paramètres personnalisés pour l’accès, les droits et les restrictions d’utilisation.
+Ces applications prennent en charge Azure Rights Management intégrées et permettent aux utilisateurs d’appliquer la protection à un document enregistré ou à un message électronique à envoyer. Les utilisateurs peuvent utiliser des modèles pour appliquer la protection. Autre possibilité pour Word, Excel et PowerPoint : les utilisateurs appliquent des paramètres personnalisés pour l’accès, les droits et les restrictions d’utilisation.
 
 Par exemple, les utilisateurs peuvent configurer un document Word pour qu’il soit accessible seulement par des personnes de votre organisation. Vous pouvez contrôler si une feuille de calcul Excel peut être modifiée ou limitée à la lecture seule, ou l’empêcher d’être imprimée. Pour les fichiers ayant des contraintes de temps, un délai d’expiration peut être configuré, au terme duquel le fichier ne sera plus accessible. Cette configuration peut être faite directement par les utilisateurs ou en appliquant un modèle de protection. Pour Outlook, les utilisateurs peuvent également choisir l’option **Ne pas transférer** pour éviter toute fuite de données.
 
@@ -51,8 +56,6 @@ Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer d
 
 Si vous utilisez Exchange local, vous pouvez utiliser les fonctionnalités IRM avec le service Azure Rights Management en déployant le connecteur Azure Rights Management. Ce connecteur fait office de relais entre vos serveurs locaux et le service Azure Rights Management.
 
-Pour plus d’informations sur les modèles de protection, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
-
 Pour plus d’informations sur les options de messagerie que vous pouvez utiliser pour protéger des e-mails, consultez [Option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) et [Option Chiffrement seul pour les e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 Si vous êtes prêt à configurer Exchange pour protéger les e-mails :
@@ -60,6 +63,12 @@ Si vous êtes prêt à configurer Exchange pour protéger les e-mails :
 - Pour Exchange Online, consultez [Exchange Online : configuration de la Gestion des droits relatifs à l’information (IRM)](configure-office365.md#exchangeonline-irm-configuration).
 
 - Pour Exchange sur site, consultez [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
+
+Pour plus d'informations, consultez les pages suivantes :
+
+- **Client d’étiquetage unifié**. Configurez les étiquettes de sensibilité et les stratégies d’étiquetage dans le centre d’administration d’étiquetage, y compris le centre de sécurité Microsoft 365, le centre de conformité des Microsoft 365, ou le centre de conformité Microsoft 365 Security &. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels).
+
+- **Client classique**. Configurez les modèles de protection dans le Portail Azure. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
 
 ## <a name="sharepoint-in-microsoft-365-and-sharepoint-server"></a>SharePoint dans Microsoft 365 et SharePoint Server
@@ -107,4 +116,4 @@ Si vous avez Microsoft 365, vous souhaiterez peut-être examiner les [solutions 
 
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management d’Azure Information Protection, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
-Si vous êtes prêt à commencer le déploiement, qui comprend la configuration de ces applications et services, consultez [Feuille de route pour le déploiement d’Azure Information Protection](deployment-roadmap.md).
+Si vous êtes prêt à démarrer le déploiement, ce qui comprend la configuration de ces applications et services, consultez la feuille [de route pour le déploiement d’AIP pour la classification, l’étiquetage et la protection](deployment-roadmap-classify-label-protect.md).

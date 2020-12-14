@@ -5,27 +5,27 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: c5e401f831cfed9080ae1454c6ee73377591c176
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c02e7195d9edf93401b601e4d7ca243e6a14b702
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568193"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383818"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Conserver les informations de votre propre clé (HYOK) pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [chiffrement à clé double](plan-implement-tenant-key.md#double-key-encryption-dke). *
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Conserver vos propres configurations de clé (HYOK) permet aux clients AIP avec le client classique de protéger du contenu très sensible tout en conservant le contrôle total de leur clé. HYOK utilise une clé supplémentaire, détenue par le client et stockée localement pour le contenu hautement sensible, ainsi que la protection basée sur le Cloud par défaut utilisée pour d’autres contenus. 
 
@@ -37,7 +37,7 @@ En règle générale, la protection des documents et e-mails sensibles à l’ai
 
 Les clés basées sur le Cloud sont gérées dans Azure Key Vault, ce qui offre aux clients les avantages suivants :
 
-- **Aucune configuration requise pour l’infrastructure de serveur.** Les solutions Cloud sont plus rapides et plus économiques à déployer et à entretenir que les solutions locales.
+- **Aucune configuration requise pour l’infrastructure de serveur**. Les solutions Cloud sont plus rapides et plus économiques à déployer et à entretenir que les solutions locales.
 
 - **L’authentification basée sur le Cloud facilite le** partage avec les partenaires et les utilisateurs d’autres organisations. 
 
@@ -115,23 +115,23 @@ Les tableaux suivants répertorient les scénarios pris en charge pour la protec
 
 |Application|Protection|Consommation|
 |----------------------|----------|-----------|
-|Office pour Mac : </br>Word, Excel, PowerPoint, Outlook|![Non](media/no-icon.png)|![Oui](media/yes-icon.png)|
+|Office pour Mac : </br>Word, Excel, PowerPoint, Outlook|![non](media/no-icon.png)|![Oui](media/yes-icon.png)|
 | | | |
 
 ### <a name="ios-application-support-for-hyok"></a>prise en charge des applications iOS pour HYOK
 
 |Application|Protection|Consommation|
 |----------------------|----------|-----------|
-|Office Mobile : </br>Word, Excel, PowerPoint|![Non](media/no-icon.png)| ![Oui](media/yes-icon.png)|
-|Office Mobile : </br>Outlook uniquement|![Non](media/no-icon.png)|![Non](media/no-icon.png)|
+|Office Mobile : </br>Word, Excel, PowerPoint|![non](media/no-icon.png)| ![Oui](media/yes-icon.png)|
+|Office Mobile : </br>Outlook uniquement|![non](media/no-icon.png)|![non](media/no-icon.png)|
 |Visionneuse Azure Information Protection|Non applicable|![Oui](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>Prise en charge des applications Android pour HYOK
 
 |Application|Protection|Consommation|
 |----------------------|----------|-----------|
-|Office Mobile : </br>Word, Excel, PowerPoint|![Non](media/no-icon.png)| ![Oui](media/yes-icon.png)|
-|Office Mobile : </br>Outlook uniquement|![Non](media/no-icon.png)|![Non](media/no-icon.png)|
+|Office Mobile : </br>Word, Excel, PowerPoint|![non](media/no-icon.png)| ![Oui](media/yes-icon.png)|
+|Office Mobile : </br>Outlook uniquement|![non](media/no-icon.png)|![non](media/no-icon.png)|
 |Visionneuse Azure Information Protection|Non applicable| ![Oui](media/yes-icon.png)|
 
 
@@ -157,7 +157,7 @@ Un déploiement AD RMS doit remplir les conditions suivantes pour fournir une pr
 |**Configuration de AD RMS**     |Votre système de AD RMS doit être configuré de manière spécifique pour prendre en charge HYOK. Pour plus d’informations, voir [ci-dessous](#ad-rms-configuration-requirements).          |
 |**Synchronisation de répertoires**     |La synchronisation d’annuaires doit être configurée entre votre Active Directory local et le Azure Active Directory. </br></br>Les utilisateurs qui utiliseront des étiquettes de protection HYOK doivent être configurés pour l’authentification unique.         |
 |**Configuration pour les approbations explicitement définies**     |Si vous partagez du contenu protégé par HYOK avec d’autres personnes en dehors de votre organisation, AD RMS devez être configuré pour les approbations explicitement définies dans une relation de point à point directe avec les autres organisations. </br></br>Pour ce faire, utilisez des domaines d’utilisateur approuvé (utilisateurs approuvés) ou des approbations fédérées créées à l’aide de Services ADFS (AD FS).         |
-|**Version prise en charge de Microsoft Office**     | Les utilisateurs qui protègent ou consomment du contenu protégé par HYOK doivent disposer des éléments suivants : </br></br>-Une version d’Office qui prend en charge les informations Rights Management (IRM) </br>-Microsoft Office professionnel plus version 2013 ou ultérieure avec Service Pack 1, exécuté sur Windows 7 Service Pack 1 ou version ultérieure. </br>-Pour l’édition Office 2016 Microsoft Installer (. msi), vous devez disposer de la [mise à jour 4018295 pour Microsoft Office 2016 publiée le 2018 6 mars](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Remarque :** Office 2010 et Office 2007 ne sont pas pris en charge.        |
+|**Version prise en charge de Microsoft Office**     | Les utilisateurs qui protègent ou consomment du contenu protégé par HYOK doivent disposer des éléments suivants : </br></br>-Une version d’Office qui prend en charge les informations Rights Management (IRM) </br>-Microsoft Office professionnel plus version 2013 ou ultérieure avec Service Pack 1, exécuté sur Windows 7 Service Pack 1 ou version ultérieure. </br>-Pour l’édition Office 2016 Microsoft Installer (. msi), vous devez disposer de la [mise à jour 4018295 pour Microsoft Office 2016 publiée le 2018 6 mars](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Remarque**: Office 2010 et Office 2007 ne sont pas pris en charge.        |
 
 > [!IMPORTANT]
 > Pour s’assurer de la haute garantie offerte par HYOK protection, nous vous recommandons d’effectuer les opérations suivantes :
@@ -174,7 +174,7 @@ Pour prendre en charge HYOK, assurez-vous que votre système AD RMS possède les
 
 |Condition requise  |Description  |
 |---------|---------|
-|**Version de Windows**     |Au minimum, l’une des versions suivantes de Windows : </br></br>**Environnements de production :** Windows Server 2012 R2</br>**Environnements de test/évaluation**: Windows Server 2008 R2 avec Service Pack 1        |
+|**Version de Windows**     |Au minimum, l’une des versions suivantes de Windows : </br></br>**Environnements de production**: Windows Server 2012 R2</br>**Environnements de test/évaluation**: Windows Server 2008 R2 avec Service Pack 1        |
 |**Topologie**     |HYOK requiert l’une des topologies suivantes : </br>-Une seule forêt, avec un seul cluster AD RMS </br>-Plusieurs forêts, avec AD RMS clusters dans chacune d’elles. </br></br>**Licences pour plusieurs forêts**</br> Si vous avez plusieurs forêts, chaque cluster AD RMS partage une URL de licence qui pointe vers le même cluster AD RMS. </br>Sur ce cluster AD RMS, importez tous les certificats de domaine d’utilisateur approuvé à partir de tous les autres clusters AD RMS. </br>Pour plus d’informations sur cette topologie, consultez [Domaine d’utilisateur approuvé](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983944(v=ws.10)). </br></br>**Étiquettes de stratégie globale pour plusieurs forêts**</br>Quand vous avez plusieurs clusters AD RMS dans des forêts distinctes, supprimez toutes les étiquettes de la stratégie globale qui appliquent la protection HYOK (AD RMS) et qui configurent une [stratégie délimitée](configure-policy-scope.md) pour chaque cluster. <br>Affectez des utilisateurs pour chaque cluster à leur stratégie délimitée, en vous assurant que vous n’utilisez pas de groupes qui aboutissent à l’affectation d’un utilisateur à plusieurs stratégies délimitées.</br>Chaque utilisateur doit avoir des étiquettes pour un seul cluster AD RMS.          |
 |**Mode de chiffrement**     | Votre AD RMS doit être configuré avec le [mode de chiffrement 2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)). </br>Confirmez le mode en activant l’onglet **général** des propriétés du cluster AD RMS.        |
 |**Configuration de l’URL de certification**     | Chaque serveur de AD RMS doit être configuré pour l’URL de certification. </br>Pour plus d’informations, voir [ci-dessous](#configuring-ad-rms-servers-to-locate-the-certification-url).        |

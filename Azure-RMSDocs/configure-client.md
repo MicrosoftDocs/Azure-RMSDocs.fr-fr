@@ -1,52 +1,49 @@
 ---
 title: Client Azure Information Protection- Installer et configurer
 description: Informations destinées aux administrateurs sur le déploiement des clients Azure Information Protection sur des ordinateurs Windows et des appareils mobiles.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e19400a0901c62bd00f7cd965e23ea01c36be395
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: ca4dfed92aafb690da28e5164496b924c9c3fe7e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849740"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383599"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : installation et configuration pour les clients
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Les ordinateurs qui exécutent Office 2010 requièrent l’Azure Information Protection client (Classic) ou le client d’étiquetage unifié Azure Information Protection pour s’authentifier auprès du service de Azure Information Protection.
+Les ordinateurs qui exécutent Office 2010 requièrent le client Azure Information Protection pour s’authentifier auprès du service Azure Information Protection.
 
-Vous n’êtes pas sûr de la différence entre ces deux clients ?  Voir [quelle est la différence entre le client Azure information protection et le client d’étiquetage unifié Azure information protection ?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+Le client d’étiquetage unifié AIP est recommandé pour tous les ordinateurs Windows, car ils installent un complément Office qui permet aux utilisateurs d’étiqueter et de protéger facilement des documents directement à partir du ruban Office. Le client offre également des fonctionnalités d’étiquetage et de protection pour les types de fichiers qui ne sont pas pris en charge par le service de protection intégré (Azure Rights Management), ainsi qu’une visionneuse pour les fichiers protégés qui ne peuvent pas être ouverts par les applications Office. Il existe une visionneuse similaire pour iOS et Android.
 
-Ces clients sont également recommandés pour tous les ordinateurs Windows, car ils installent un complément Office afin que les utilisateurs puissent facilement étiqueter et protéger des documents et des e-mails directement à partir du ruban Office. Ces clients offrent également un étiquetage et une protection pour les types de fichiers qui ne sont pas pris en charge en mode natif par le service de protection (Azure Rights Management), ainsi qu’une visionneuse pour les fichiers protégés qui ne peuvent pas être ouverts par les applications Office. Il existe une visionneuse similaire pour iOS et Android.
-
-Le client classique prend également en charge un site de suivi de document permettant aux utilisateurs de suivre et de révoquer les fichiers qu’ils ont protégés.
+Si le client standard AIP est installé, vous disposez également d’un site de suivi de document permettant aux utilisateurs de suivre et de révoquer les fichiers qu’ils ont protégés.
 
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Le client Azure Information Protection pour Windows : installation et configuration
 
-Pour une installation et une configuration d’entreprise du client pour Windows, consultez les guides d’administration suivants :
+Pour une installation et une configuration d’entreprise du client pour Windows, consultez le Guide de l' [administrateur du client d’étiquetage Azure information protection unifié](./rms-client/clientv2-admin-guide.md).
 
-- Client d’étiquetage unifié : [Azure information protection Guide de l’administrateur du client d’étiquetage unifié](./rms-client/clientv2-admin-guide.md)
+Si vous souhaitez installer et tester rapidement ces clients pour un seul ordinateur, consultez [Télécharger et installer le client d’étiquetage unifié Azure information protection](./rms-client/install-unifiedlabelingclient-app.md).
 
-- Client classique : [Guide de l’administrateur du client Azure information protection](./rms-client/client-admin-guide.md)
+**Client classique uniquement**: si le client Classic est installé, utilisez ces liens à la place :
 
-Toutefois, si vous souhaitez installer et tester rapidement ces clients pour un seul ordinateur, consultez les instructions suivantes des guides de l’utilisateur :
-
-- Client d’étiquetage unifié : [Télécharger et installer le client d’étiquetage unifié Azure information protection](./rms-client/install-unifiedlabelingclient-app.md)
-
-- Client classique : [Téléchargez et installez le client Azure information protection](./rms-client/install-client-app.md) à partir du Guide de l' [utilisateur du client Azure information protection](./rms-client/client-user-guide.md).
+- [Client Azure Information Protection - Guide de l’administrateur](./rms-client/client-admin-guide.md)
+- [Téléchargez et installez le client Azure information protection](./rms-client/install-client-app.md).
 
 ## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>L’application Azure Information Protection pour iOS et Android : installation et gestion
 

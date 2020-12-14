@@ -1,10 +1,10 @@
 ---
 title: 'Fonctionnement d’Azure RMS : Azure Information Protection'
 description: Description du fonctionnement d’Azure RMS, des contrôles de chiffrement qu’il utilise et des diagrammes étape par étape expliquant le fonctionnement du processus.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9604ca61aff2d01d66e6f328b88ca264ab031785
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 8adba522d85bec9d2d1062c510b10ae9b96368a3
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381746"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d’Azure RMS Sous le capot
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
 
 En ce qui concerne le fonctionnement d’Azure RMS, il est important de comprendre que ce service de protection des données fourni par Azure Information Protection n’affiche pas et ne stocke pas vos données dans le cadre du processus de protection. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d’un document illisibles pour toute personne qui ne fasse pas partie des utilisateurs et services autorisés :
 
@@ -32,7 +34,7 @@ En ce qui concerne le fonctionnement d’Azure RMS, il est important de comprend
 
 Dans l’image suivante, vous pouvez voir comment ce processus fonctionne dans sa globalité. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Elle est unique pour chaque document et se trouve dans l’en-tête du fichier où elle est protégée par votre clé racine de tenant Azure Information Protection (la clé rouge sur l’image). Microsoft peut générer et gérer votre clé de tenant. Vous pouvez également générer et gérer personnellement votre propre clé de tenant.
 
-Durant le processus de protection, quand Azure RMS chiffre, déchiffre, autorise et applique des restrictions, la formule secrète n'est jamais envoyée à Azure.
+Durant le processus de protection, quand Azure RMS chiffre, déchiffre, autorise et applique des restrictions, la formule secrète n’est jamais envoyée à Azure.
 
 ![Protection d’un fichier par Azure RMS](./media/AzRMS_SecretColaFormula_final.png)
 
@@ -49,6 +51,7 @@ Même si vous n’avez pas besoin de connaître en détail le fonctionnement de 
 |Algorithme : AES<br /><br />Longueur de clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
 |Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
 |SHA-256|Signature de certificat|
+| | |
 
 ###### <a name="footnote-1"></a>Note 1 
 
@@ -80,7 +83,8 @@ Les licences et certificats envoyés à un appareil Windows sont protégés par 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas décrivant le fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu
-Pour comprendre plus en détail le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur emploie le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé**initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
+
+Pour comprendre plus en détail le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur emploie le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l’initialisation de l’environnement utilisateur, l’utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
 
@@ -94,7 +98,7 @@ Pour qu’un utilisateur puisse protéger du contenu ou utiliser du contenu prot
 
 **Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord au service Azure Rights Management, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
 
-Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique. L'utilisateur n'est donc pas invité à fournir d'informations d'identification.
+Lorsque le compte de l’utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique. L’utilisateur n’est donc pas invité à fournir d’informations d’identification.
 
 ![Activation du client RMS : étape 2, les certificats sont téléchargés sur le client](./media/AzRMS_useractivation2.png)
 
@@ -109,11 +113,11 @@ Quand un utilisateur protège un document, le client RMS effectue les actions su
 
 ![Protection de document RMS : étape 1, le document est chiffré](./media/AzRMS_documentprotection1.png)
 
-**Ce qui se passe à l’étape 1 **: le client RMS crée une clé aléatoire (clé de contenu), puis chiffre le document en utilisant cette clé, avec l’algorithme de chiffrement symétrique AES.
+**Ce qui se passe à l’étape 1**: le client RMS crée une clé aléatoire (clé de contenu), puis chiffre le document en utilisant cette clé, avec l’algorithme de chiffrement symétrique AES.
 
 ![Protection de document RMS : étape 2, la stratégie est créée](./media/AzRMS_documentprotection2.png)
 
-**Ce qui se passe à l’étape 2 **: le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui comprend les [droits d’utilisation](configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
+**Ce qui se passe à l’étape 2**: le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui comprend les [droits d’utilisation](configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
 
 Le principal attribut Azure AD utilisé pour identifier les utilisateurs et groupes sélectionnés est l’attribut ProxyAddresses d’Azure AD, qui stocke toutes les adresses e-mail pour un utilisateur ou un groupe. Toutefois, si un compte d’utilisateur ne possède aucune valeur dans l’attribut ProxyAddresses d’AD, la valeur UserPrincipalName de l’utilisateur est employée à la place.
 
@@ -130,17 +134,17 @@ Quand un utilisateur veut consommer un document protégé, le client RMS commenc
 
 ![Consommation de document RMS : étape 1, l’utilisateur est authentifié et obtient la liste des droits](./media/AzRMS_documentconsumption1.png)
 
-**Ce qui se passe à l’étape 1 **: l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l’utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
+**Ce qui se passe à l’étape 1**: l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l’utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
 
 ![Consommation de document RMS : étape 2, la licence d’utilisation est retournée au client](./media/AzRMS_documentconsumption2.png)
 
-**Ce qui se passe à l’étape 2 **: le service extrait ensuite la clé de contenu AES de la stratégie déchiffrée. Cette clé est alors chiffrée avec la clé RSA publique de l’utilisateur obtenue avec la requête.
+**Ce qui se passe à l’étape 2**: le service extrait ensuite la clé de contenu AES de la stratégie déchiffrée. Cette clé est alors chiffrée avec la clé RSA publique de l’utilisateur obtenue avec la requête.
 
 Après cela, la clé de contenu rechiffrée est incorporée dans une licence d’utilisation chiffrée avec la liste des droits de l’utilisateur, qui est renvoyée au client RMS.
 
 ![Consommation de document RMS : étape 3, le document est déchiffré et les droits sont appliqués](./media/AzRMS_documentconsumption3.png)
 
-**Ce qui se passe à l’étape 3 **: enfin, le client RMS prend la licence d’utilisation chiffrée et la déchiffre avec sa propre clé privée utilisateur. Cela permet au client RMS de déchiffrer le corps du document si nécessaire, et de l’afficher à l’écran.
+**Ce qui se passe à l’étape 3**: enfin, le client RMS prend la licence d’utilisation chiffrée et la déchiffre avec sa propre clé privée utilisateur. Cela permet au client RMS de déchiffrer le corps du document si nécessaire, et de l’afficher à l’écran.
 
 Le client déchiffre également la liste des droits, et transmet ces derniers à l’application qui les applique dans son interface utilisateur.
 
@@ -155,7 +159,7 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 - **Appareils mobiles** : quand des appareils mobiles protègent ou consomment des fichiers avec le service Azure Rights Management, les flux du processus sont beaucoup plus simples. Les appareils mobiles ne passent pas par le processus d’initialisation utilisateur, car chaque transaction (pour protéger ou consommer du contenu) est indépendante. Comme avec les ordinateurs Windows, les appareils mobiles se connectent au service Azure Rights Management et s’authentifient. Pour protéger du contenu, les appareils mobiles soumettent une stratégie, puis le service Azure Rights Management leur envoie une licence de publication et une clé symétrique pour protéger le document. Pour consommer du contenu, quand des appareils mobiles se connectent au service Azure Rights Management et s’authentifient, ils envoient la stratégie de document au service Azure Rights Management et demandent une licence d’utilisation pour consommer le document. En réponse, le service Azure Rights Management leur envoie les clés nécessaires et les restrictions. Les deux processus utilisent TLS pour protéger l’échange de clés et d’autres communications.
 
-- **Connecteur RMS** : quand le service Azure Rights Management est utilisé avec le connecteur RMS, le flux du processus reste identique. La seule différence est que le connecteur fait office de relais entre les services locaux (comme Exchange Server et SharePoint Server) et le service Azure Rights Management. Le connecteur proprement dit n’effectue aucune opération telle qu’une initialisation de l’environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d'autre. Ce scénario permet d’utiliser le service Azure Rights Management avec des services locaux.
+- **Connecteur RMS** : quand le service Azure Rights Management est utilisé avec le connecteur RMS, le flux du processus reste identique. La seule différence est que le connecteur fait office de relais entre les services locaux (comme Exchange Server et SharePoint Server) et le service Azure Rights Management. Le connecteur proprement dit n’effectue aucune opération telle qu’une initialisation de l’environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d’autre. Ce scénario vous permet d’utiliser le service Azure Rights Management avec des services locaux.
 
 - **Protection générique (.pfile)** : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d’être transmis à l’application cible. Ce scénario vous permet de protéger tous les fichiers, même s’ils ne prennent pas en charge RMS en mode natif.
 
@@ -165,9 +169,14 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 Pour en savoir plus sur le service Azure Rights Management, reportez-vous aux autres articles de la section **Comprendre et explorer**, comme [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md), pour savoir comment intégrer vos applications existantes avec Azure Rights Management afin de bénéficier d’une solution de protection des informations. 
 
-Consultez [Terminologie liée à Azure Information Protection](./terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation du service Azure Rights Management, et n’oubliez pas de lire aussi [Configuration requise pour Azure Information Protection](requirements.md) avant d’entamer votre déploiement. Si vous voulez vous lancer directement et essayer par vous-même, suivez le tutoriel [Modifier la stratégie et créer un nouvelle étiquette](infoprotect-quick-start-tutorial.md).
+Consultez [Terminologie liée à Azure Information Protection](./terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation du service Azure Rights Management, et n’oubliez pas de lire aussi [Configuration requise pour Azure Information Protection](requirements.md) avant d’entamer votre déploiement. Si vous souhaitez vous plonger directement et essayer par vous-même, utilisez le Guide de démarrage rapide et les didacticiels suivants :
 
-Si vous êtes prêt à déployer la protection des données pour votre organisation, utilisez la [Feuille de route pour le déploiement d’Azure Information Protection](deployment-roadmap.md) afin de connaître les étapes de déploiement et accéder à des liens vers des instructions.
+- [Démarrage rapide : Déployer le client d’étiquetage unifié](quickstart-deploy-client.md)
+- [Tutoriel : Installation du scanneur d’étiquetage unifié Azure Information Protection](tutorial-install-scanner.md)
+- [Tutoriel : Recherche de votre contenu sensible avec le scanneur Azure Information Protection (AIP)](tutorial-scan-networks-and-content.md)
+- [Tutoriel : Empêcher les partages inappropriés dans Outlook avec Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+
+Si vous êtes prêt à déployer la protection des données pour votre organisation, utilisez la feuille [de route de déploiement AIP pour la classification, l’étiquetage et la protection](deployment-roadmap-classify-label-protect.md) de vos étapes de déploiement, ainsi que des liens vers des instructions.
 
 > [!TIP]
 > Pour obtenir plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens dans [Informations et prise en charge pour Azure Information Protection](information-support.md).

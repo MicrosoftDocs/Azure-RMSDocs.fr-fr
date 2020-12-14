@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
@@ -13,29 +13,30 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2cf3c5c9c353c74287fb6f94ecc6d1c161e2198d
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c2ce080c290bf3e2b04cc433e9347e3a1e074746
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383055"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) et [restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels) de la documentation de Microsoft 365. *
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>
 
 Les modèles de protection, également appelés modèles Rights Management, sont un regroupement de paramètres de protection définis par l’administrateur pour Azure Information Protection. Ces paramètres incluent les [droits d’utilisation](configure-usage-rights.md) que vous avez choisis pour les utilisateurs autorisés et les contrôles d’accès pour l’accès hors connexion et après l’expiration. Ces modèles sont intégrés à la stratégie Azure Information Protection : 
 
-**Quand vous avez un abonnement qui inclut la classification, l’étiquetage et la protection (Azure Information Protection P1 ou P2) :**
+**Si vous avez un abonnement qui comprend la classification, l’étiquetage et la protection (Azure information protection P1 ou P2)**:
 
 - Les modèles qui ne sont pas intégrés à vos étiquettes pour votre locataire sont affichés dans la section **modèles de protection** après vos étiquettes dans le volet **Azure information protection-étiquettes** . Pour accéder à ce volet, sélectionnez l’option de menu **classifications**  >  **étiquettes** . Vous pouvez convertir ces modèles en étiquettes, ou les lier à des étiquettes lorsque vous configurez la protection de vos étiquettes. 
 
-**Si vous avez un abonnement qui comprend uniquement la protection (un abonnement Microsoft 365 qui comprend le service Azure Rights Management) :**
+**Si vous avez un abonnement qui comprend uniquement la protection (un abonnement Microsoft 365 qui comprend le service Azure Rights Management)**:
 
 - Les modèles de votre locataire sont affichés dans la section **modèles de protection** dans le volet **Azure information protection-étiquettes** . Pour accéder à ce volet, sélectionnez l’option de menu **classifications**  >  **étiquettes** . Aucune étiquette n’apparaît. Vous pouvez également voir les paramètres de configuration qui sont spécifiques à la classification et à l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
@@ -155,7 +156,7 @@ Lorsque vous créez une étiquette à l’aide du portail avec le paramètre de 
 
 1. À partir de l’option de menu **classifications**  >  **étiquettes** : dans le volet **Azure information protection-étiquettes** , sélectionnez **Ajouter une nouvelle étiquette**.
 
-2. Dans le volet **étiquette** , conservez la valeur par défaut **activé : activée**, puis entrez un nom d’étiquette et une description pour le nom et la description du modèle. **On**
+2. Dans le volet **étiquette** , conservez la valeur par défaut **activé : activée**, puis entrez un nom d’étiquette et une description pour le nom et la description du modèle. 
 
 3. Pour **Définir les autorisations pour les documents et e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis sélectionnez **Protection** :
     

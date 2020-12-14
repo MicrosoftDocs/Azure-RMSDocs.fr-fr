@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -13,21 +13,22 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e5e5e4195f22be28bd290ab3cac9d96e6ca142e2
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383004"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows server 2012 R2 et windows server 2012*
-
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour vous aider à configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 du [déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
-**Conditions préalables :** Avant de commencer, assurez-vous que vous disposez des éléments suivants :
+**Conditions préalables**: avant de commencer, assurez-vous que vous disposez des éléments suivants :
     - Le connecteur RMS est installé et configuré
     - Vérifiez les [conditions préalables](deploy-rms-connector.md#prerequisites-for-the-rms-connector) applicables aux serveurs qui utiliseront le connecteur.
 
@@ -63,7 +64,7 @@ Vous devez toujours redémarrer le serveur de fichiers qui est configuré pour u
 
 Modifiez vos paramètres de Registre automatiquement à l’aide de l’outil de configuration de serveur pour le connecteur Microsoft RMS.
 
-**Les avantages sont notamment les suivants :**
+Les **avantages sont** les suivants :
 
 - Pas d'édition directe du registre. Cette opération est automatisée à l'aide d'un script.
 
@@ -78,7 +79,7 @@ Pour plus d’informations, consultez [comment utiliser l’outil de configurati
 
 Les **avantages sont** les suivants : aucune connexion à un serveur exécutant le connecteur RMS n’est requise.
 
-**Les inconvénients sont les suivants :**
+Les **inconvénients sont** les suivants :
 
 - Importante charge administrative susceptible d'engendrer des erreurs.
 
@@ -88,7 +89,7 @@ Les **avantages sont** les suivants : aucune connexion à un serveur exécutant
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Utilisation de l'outil de configuration de serveur pour le connecteur Microsoft RMS
 
-1.  Si vous n’avez pas encore téléchargé le script de l’outil de configuration de serveur pour le connecteur Microsoft RMS **(GenConnectorConfig.ps1),** Téléchargez-le à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Si vous n’avez pas encore téléchargé le script de l’outil de configuration de serveur pour le connecteur Microsoft RMS **(GenConnectorConfig.ps1)**, téléchargez-le à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Enregistrez le fichier **GenConnectorConfig.ps1** sur l’ordinateur sur lequel vous allez exécuter l’outil. 
 
@@ -114,7 +115,7 @@ Les **avantages sont** les suivants : aucune connexion à un serveur exécutant
 
 Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre organisation. 
 
-Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple : `https:\//connector.contoso.com`. 
+Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, `https:\//connector.contoso.com`. 
 
 L'outil utilise ensuite cette URL pour contacter les serveurs qui exécutent le connecteur RMS et obtenir d'autres paramètres servant à créer les configurations requises.
 
@@ -215,7 +216,7 @@ Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du cli
 
 2.  Sur les serveurs SharePoint qui communiquent avec le connecteur RMS, effectuez l'une des opérations suivantes :
 
-    -   **Exécutez l'outil de configuration de serveur pour le connecteur Microsoft RMS.** 
+    -   **Exécuter l’outil de configuration de serveur pour le connecteur Microsoft RMS** 
 
         Pour plus d’informations, consultez [comment utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
@@ -257,7 +258,7 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 
 2. Sur les serveurs de fichiers qui sont configurés pour l'infrastructure de classification des fichiers et appelés à communiquer avec le connecteur RMS, effectuez l'une des opérations suivantes :
 
-    -   **Exécutez l'outil de configuration de serveur pour le connecteur Microsoft RMS.** 
+    -   **Exécuter l’outil de configuration de serveur pour le connecteur Microsoft RMS** 
     
         Pour plus d’informations, consultez [comment utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 

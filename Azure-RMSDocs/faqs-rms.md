@@ -12,23 +12,26 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46d03db1a8e66b0e1753606a4a5e152047e43d22
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 3d376446354e591f9a5742d415b7b7cba75bf887
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382256"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour plus d’informations, consultez également [FAQ pour le client classique uniquement](faqs-classic.md). *
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Vous avez une question sur le service de protection des données Azure Rights Management d’Azure Information Protection ? Vous trouverez peut-être une réponse ici.
 
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>Pour bénéficier de la protection d’Azure Rights Management, les fichiers doivent-ils se trouver dans le cloud ?
+
 Non, il s’agit d’une idée fausse répandue. Le service Azure Rights Management (et plus généralement Microsoft) ne voit pas et ne stocke pas vos données dans le cadre du processus de protection des informations. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure.
 
 Pour plus d’informations, consultez [comment Azure RMS fonctionne-t-il ? Sous le capot](./how-does-it-work.md) pour comprendre comment une formule secrète de Cola, créée et stockée localement, est protégée par le service Azure Rights Management, mais reste en local.
@@ -38,18 +41,6 @@ Pour plus d’informations, consultez [comment Azure RMS fonctionne-t-il ? Sous
 Microsoft propose plusieurs technologies de chiffrement qui vous permettent de protéger vos données dans des scénarios différents et souvent complémentaires. Par exemple, bien que Microsoft 365 offre le chiffrement au repos pour les données stockées dans Microsoft 365, le service Azure Rights Management de Azure Information Protection chiffre de manière indépendante vos données afin qu’elles soient protégées, quel que soit l’emplacement où elles se trouvent ou la manière dont elles sont transmises.
 
 Pour utiliser ces technologies de chiffrement complémentaires, vous devez les activer et les configurer indépendamment. À ce stade, vous pouvez être invité à fournir votre propre clé de chiffrement. Il s’agit du scénario BYOK (« Bring Your Own Key »). Le fait d’activer BYOK avec l’une de ces technologies n’affecte pas les autres. Vous pouvez ainsi utiliser BYOK avec Azure Information Protection et ne pas l’utiliser avec d’autres technologies de chiffrement, ou vice versa. Les clés utilisées par ces différentes technologies peuvent être identiques ou non, selon la façon dont vous configurez les options de chiffrement pour chaque service.
-
-## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Quelle est la différence entre BYOK et HYOK et quand dois-je les utiliser ?
-
-Dans Azure Information Protection, la solution **Bring your own key** vous permet de créer votre propre clé en local pour la protection offerte par Azure Rights Management. Ensuite, vous transférez cette clé à un module de sécurité matériel (HSM, Hardware Security Module) dans Azure Key Vault, mais elle reste en votre possession et vous continuez à la gérer. Si vous ne procédez pas ainsi, la fonctionnalité de protection d’Azure Rights Management utilise une clé automatiquement créée et gérée pour vous dans Azure. Cette configuration par défaut est considérée comme « gérée par Microsoft » plutôt que « gérée par le client » (option BYOK).
-
-Pour en savoir plus sur la solution BYOK et déterminer si vous devez choisir cette topologie de clé pour votre organisation, voir [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
-
-Dans Azure Information Protection, la solution **Hold your own key** (HYOK) est destinée au petit nombre d’organisations disposant d’un ensemble de documents ou d’e-mails qui ne peuvent pas être protégés par une clé stockée dans le cloud. Pour ces organisations, cette restriction s’applique, même si elles ont créé la clé et la gèrent via la solution BYOK. Cette restriction a souvent pour origine des problèmes de conformité et de réglementation, la configuration HYOK devant uniquement être appliquée aux informations « Top Secret », qui ne seront jamais partagées en dehors de l’organisation et seront uniquement utilisées sur le réseau interne, et qui ne devront pas nécessairement être accessibles depuis des appareils mobiles.
-
-Pour ces exceptions (soit un maximum de 10 % des contenus devant être protégés, en moyenne), les organisations peuvent utiliser une solution locale, à savoir Active Directory Rights Management Services, pour créer la clé, qui restera en local. Avec cette solution, les ordinateurs récupèrent leur stratégie Azure Information Protection à partir du cloud, mais ce contenu identifié peut être protégé à l’aide de la clé en local.
-
-Pour en savoir plus sur la solution HYOK et vous assurer que vous comprenez ses limitations et restrictions, tout en bénéficiant de conseils sur son utilisation, voir [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>Puis-je désormais utiliser BYOK avec Exchange Online ?
 
@@ -144,23 +135,7 @@ Pour obtenir la liste des appareils qui prennent en charge le service Azure Righ
 
 Le service Azure Rights Management peut prendre en charge tous les types de fichiers. Dans le cas de texte, d’images, de fichiers Microsoft Office (Word, Excel, PowerPoint), de fichiers .pdf et d’autres types de fichier d’application, Azure Rights Management offre une protection native qui comprend le chiffrement et la mise en application de droits (autorisations). Pour tous les autres types de fichier et d’application, la protection générique offre l’encapsulation et l’authentification des fichiers afin de vérifier si un utilisateur est autorisé à ouvrir le fichier.
 
-Pour obtenir la liste des extensions de noms de fichiers pris en charge en mode natif par Azure Rights Management, consultez [Types de fichiers pris en charge par Azure Information Protection](./rms-client/client-admin-guide-file-types.md). Les extensions de nom de fichier qui ne figurent pas dans la liste sont prises en charge grâce à l’utilisation du client Azure Information Protection qui applique automatiquement une protection générique à ces fichiers.
-
-## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Comment configurer un ordinateur Mac pour protéger et suivre les documents ?
-
-Tout d’abord, assurez-vous que vous avez installé Office pour Mac en utilisant le lien d’installation à partir de https://admin.microsoft.com. Pour obtenir des instructions complètes, consultez [Télécharger et installer ou réinstaller Microsoft 365 ou Office 2019 sur un PC ou un Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
-
-Ouvrez Outlook et créez un profil à l’aide de votre compte professionnel ou scolaire Microsoft 365. Ensuite, créez un nouveau message, puis procédez comme suit pour configurer Office afin qu’il puisse protéger les documents et e-mails à l’aide du service Azure Rights Management :
-
-1. Dans le nouveau message, dans l’onglet **Options**, cliquez sur **Autorisations**, puis cliquez sur **Vérifier les informations d’identification**.
-
-2. Lorsque vous y êtes invité, spécifiez à nouveau les détails de votre compte Microsoft 365 professionnel ou scolaire, puis sélectionnez **se connecter**.
-
-    Cela permet de télécharger les modèles Azure Rights Management, et **Vérifier les informations** est remplacé par des options qui incluent **Aucune restriction**, **Ne pas transférer**, ainsi que les modèles Azure Rights Management qui sont publiés pour votre client. Vous pouvez désormais annuler ce nouveau message.
-
-Pour protéger un message électronique ou un document : dans l’onglet **Options**, cliquez sur **Autorisations** et choisissez une option ou un modèle qui protège votre adresse e-mail ou un document.
-
-Pour effectuer le suivi d’un document une fois que vous l’avez protégé : sur un ordinateur Windows disposant du client Azure Information Protection installé, enregistrez le document avec le site de suivi de documents à l’aide d’une application de bureau ou l’Explorateur de fichiers. Pour obtenir des instructions, consultez [Suivre et révoquer vos documents](./rms-client/client-track-revoke.md). À partir de votre ordinateur Mac, vous pouvez maintenant utiliser votre navigateur web pour accéder au site de suivi des documents (https://track.azurerms.com) pour suivre et révoquer ce document.
+Pour obtenir la liste des extensions de noms de fichiers pris en charge en mode natif par Azure Rights Management, consultez [Types de fichiers pris en charge par Azure Information Protection](./rms-client/clientv2-admin-guide-file-types.md). Les extensions de nom de fichier qui ne figurent pas dans la liste sont prises en charge grâce à l’utilisation du client Azure Information Protection qui applique automatiquement une protection générique à ces fichiers.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quand j’ouvre un document Office protégé par RMS, le fichier temporaire associé devient-il également protégé par RMS ?
 Non. Dans ce scénario, le fichier temporaire associé ne contient pas les données du document d’origine, mais uniquement ce que l’utilisateur entre pendant que le fichier est ouvert. Contrairement au fichier d’origine, le fichier temporaire n’est évidemment pas conçu pour le partage. Il reste sur l’appareil, protégé par des contrôles de sécurité locaux tels que BitLocker et EFS.
@@ -185,15 +160,6 @@ Puisqu’Azure Information Protection permet de partager des fichiers en toute s
 Utilisez la [fonctionnalité de super utilisateur](configure-super-users.md), qui accorde les droits d’utilisation Contrôle total aux utilisateurs autorisés pour tous les documents et e-mails protégés par votre locataire. Les super utilisateurs peuvent toujours lire ce contenu protégé et, si nécessaire, supprimer la protection ou le reprotéger pour d’autres utilisateurs. Cette même fonctionnalité permet à des services autorisés d’indexer et d’inspecter des fichiers si nécessaire.
 
 Si votre contenu est stocké dans SharePoint ou OneDrive, les administrateurs peuvent exécuter l’applet de commande [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) pour supprimer l’étiquette de sensibilité et le chiffrement. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
-## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Lorsque je teste la révocation dans le site de suivi des documents, je vois un message m’indiquant que les autres utilisateurs continueront d’avoir accès au document pendant 30 jours. Cette durée est-elle configurable ?
-
-Oui. Ce message indique la [licence d’utilisation](configure-usage-rights.md#rights-management-use-license) de ce fichier en particulier.
-
-La révocation d’un fichier ne peut être appliquée que lorsque l’utilisateur doit s’authentifier auprès du service Azure Rights Management. Par conséquent, si la période de validité de la licence d’utilisation du fichier est de 30 jours et que l’utilisateur a déjà ouvert le document, il peut continuer d’y accéder pendant toute la durée de la licence d’utilisation. Quand la licence d’utilisation expire, l’utilisateur doit se réauthentifier et l’accès lui est refusé, car le document a été révoqué.
-
-L’utilisateur qui a protégé le document, [l’émetteur Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) n’est pas concerné par cette révocation et peut toujours accéder à ses documents.
-
-Pour un locataire, la période de validité par défaut d’une licence d’utilisation est de 30 jours. Vous pouvez remplacer ce paramètre par un paramètre plus restrictif dans une étiquette ou un modèle. Pour plus d’informations sur la licence d’utilisation et sa configuration, consultez la documentation [Licence d’utilisation Rights Management](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Est-ce que Rights Management peut empêcher les captures d’écran ?
 En n’accordant pas le [droit d’utilisation](configure-usage-rights.md)de **copie** , Rights Management pouvez empêcher la capture d’écran à partir de nombreux outils de capture d’écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 mobile) et Android. Toutefois, appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran. En outre, les navigateurs sur n’importe quel appareil ne peuvent pas empêcher les captures d’écran. L’utilisation du navigateur comprend Outlook sur le Web et Office pour le Web.

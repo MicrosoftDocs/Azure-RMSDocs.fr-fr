@@ -4,8 +4,8 @@ description: Phase 3 de la migration d’AD RMS vers Azure Information Protectio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b58710ebd4486319126bc2f33266d349d23fa888
-ms.sourcegitcommit: 2085eedf24a6f72cbafcbacad023122a04faccc9
+ms.openlocfilehash: d0c643ea787d8ef9a977930aee270af5023c89a7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "95568451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381525"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour la Phase 3 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent l’étape 7 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -85,6 +87,7 @@ Cette méthode convient uniquement pour les clients Windows qui exécutent des a
     |**Poids**|0|  
     |**Numéro de port**|80|  
     |**Hôte offrant ce service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    | | |
 
 2. Définissez une autorisation Deny sur le point de terminaison de publication AD RMS pour les utilisateurs exécutant Microsoft 365 Apps ou Office 2016 (ou version ultérieure) :
 

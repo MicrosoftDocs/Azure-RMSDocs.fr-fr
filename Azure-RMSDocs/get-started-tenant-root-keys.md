@@ -4,7 +4,7 @@ description: Découvrez les étapes suivantes après avoir planifié la gestion 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/21/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,27 +13,33 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1dbced335e32aa874309ead00f7c3f7a5fcc42f9
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 9756710e29c82ef953633697cb989942d1844496
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567678"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382239"
 ---
 # <a name="getting-started-with-tenant-root-keys"></a>Prise en main des clés racines du locataire
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Une fois la planification, la création et la configuration de votre clé de locataire si nécessaire, poursuivez avec les étapes suivantes :
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
+Une fois la [planification, la création et la configuration de votre clé de locataire](plan-implement-tenant-key.md) si nécessaire, poursuivez avec les étapes suivantes :
 
 - [Commencer à utiliser votre clé de locataire](#start-using-your-tenant-key)
 - [Envisagez la journalisation de l’utilisation](#consider-usage-logging)
 
 Pour plus d’informations sur les opérations de cycle de vie prises en charge pour votre clé de locataire, consultez [opérations pour votre clé de locataire Azure information protection](./operations-tenant-key.md).
 
-> [!TIP]
-> Si votre organisation a besoin d’une protection locale pour du contenu hautement sensible, configurez la [protection hyok](configure-adrms-restrictions.md) (clients classiques uniquement) ou la [protection DKE](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (client d’étiquetage unifié uniquement).
-> 
+Si votre organisation a besoin d’une protection locale pour du contenu hautement sensible, configurez la [protection DKE](plan-implement-tenant-key.md#double-key-encryption-dke) (client d’étiquetage unifié uniquement).
+
+Si vous avez besoin d’une protection locale et que vous utilisez le client Classic, configurez la [protection hyok](configure-adrms-restrictions.md) à la place.
+ 
 
 ## <a name="start-using-your-tenant-key"></a>Commencer à utiliser votre clé de locataire
 

@@ -5,32 +5,34 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f56373bfd3aa37b13b89a552e1767bd954c81bde
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 63de1f09defa880d7b639e62a3100b007831bdf7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568001"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382477"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Plan de déploiement Azure Information Protection pour la protection uniquement
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 > [!TIP]
 > Vous pouvez également Rechercher l’un des articles suivants :
 > - [Plan de déploiement AIP pour la classification, l’étiquetage et la protection](deployment-roadmap-classify-label-protect.md)
 > - [Guides de procédures pour les scénarios courants utilisant Azure Information Protection](how-to-guides.md)
->- [Feuille de route Azure Information Protection Release](information-support.md#information-about-new-releases-and-updates)
+> - [Feuille de route Azure Information Protection Release](information-support.md#information-about-new-releases-and-updates)
 
 Suivez les étapes ci-dessous comme recommandations pour vous aider à préparer, implémenter et gérer des Azure Information Protection pour votre organisation, lorsque vous souhaitez implémenter la protection des données uniquement.
 
@@ -38,7 +40,7 @@ Cette feuille de route est recommandée pour les clients disposant d’un abonne
 
 ## <a name="deployment-process"></a>Processus de déploiement
 
-Procédez comme suit :
+Effectuez les étapes suivantes :
 
 1. [Confirmer que vous disposez d’un abonnement qui comprend le service de protection AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Préparer votre locataire à l’utilisation d’Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -63,41 +65,41 @@ Attribuez une licence de cet abonnement à chaque utilisateur de votre organisat
 
 Avant de commencer à utiliser le service de protection d’Azure Information Protection, effectuez la préparation suivante :
 
-1. **Configurez vos comptes et groupes d’utilisateurs pour AIP.**
+1. **Configurer vos comptes d’utilisateur et groupes pour AIP**
 
     Assurez-vous que votre locataire Microsoft 365 contient les comptes d’utilisateur et les groupes qui seront utilisés par Azure Information Protection pour authentifier et autoriser les utilisateurs de votre organisation. Si nécessaire, créez ces comptes et groupes, ou synchronisez-les à partir de votre annuaire local. 
 
     Pour plus d’informations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
-1. **Décidez comment vous souhaitez gérer votre clé de locataire.**
+1. **Décider de la façon dont vous souhaitez gérer votre clé de locataire**
 
     Déterminez si vous voulez que Microsoft gère votre clé de locataire (option par défaut) ou si vous voulez la générer et la gérer vous-même (option BYOK, Bring Your Own Key). Pour renforcer la sécurité, implémentez la protection « conserver votre propre clé » (HYOK). 
 
     Pour plus d’informations, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
-1. **Installez PowerShell pour AIP**.
+1. **Installer PowerShell pour AIP**
 
     Installez le module PowerShell pour AIPService sur au moins un ordinateur qui a accès à Internet. Vous pouvez effectuer cette étape maintenant ou ultérieurement. 
 
     Pour plus d’informations, consultez [installation du module PowerShell AIPService](./install-powershell.md).
 
-1. **AD RMS uniquement : migrez vos données vers le Cloud**.
+1. **AD RMS uniquement : migrez vos données vers le Cloud**
 
     Si vous utilisez actuellement AD RMS : effectuez une migration pour déplacer les clés, modèles et URL dans le cloud. 
 
     Pour plus d’informations, consultez [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-1. **Activez la protection**.
+1. **Activer la protection**
 
     Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si vous effectuez un déploiement en plusieurs phases, configurez des contrôles d’intégration d’utilisateur pour limiter la capacité des utilisateurs à appliquer la protection. 
 
     Pour plus d’informations, consultez [Activation du service de protection à partir d’Azure Information Protection](./activate-service.md).
 
-1. **Configurer des fonctionnalités facultatives si nécessaire**.
+1. **Configurer des fonctionnalités facultatives si nécessaire**
 
     Envisagez de configurer l’une ou l’autre des fonctionnalités suivantes, à l’heure actuelle ou une version ultérieure.
     
-    |Caractéristique  |Description  |
+    |Fonctionnalité  |Description  |
     |---------|---------|
     |**Modèles personnalisés pour les paramètres de protection**     |  Si les modèles par défaut ne sont pas suffisants pour votre organisation, configurez des modèles personnalisés. </br>Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](./configure-policy-templates.md).       |
     |**Journalisation de l’utilisation**     | Configurez la journalisation de l’utilisation pour surveiller la manière dont votre organisation utilise le service de protection. </br>Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](./log-analyze-usage.md).        |
@@ -105,13 +107,13 @@ Avant de commencer à utiliser le service de protection d’Azure Information Pr
 
 ## <a name="install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management"></a>Installer le Azure Information Protection Classic et le client configurer des applications et des services pour Rights Management
 
-Procédez comme suit :
+Effectuez les étapes suivantes :
 
 1. **Déployer le client Azure Information Protection Classic**
     
     Installez le client Classic pour que les utilisateurs prennent en charge Office 2010, afin de protéger les fichiers autres que les documents Office et les e-mails, ainsi que de suivre les documents protégés et de fournir une formation utilisateur pour ce client. 
 
-    Pour plus d’informations, consultez [Client Azure Information Protection pour Windows](./rms-client/aip-client.md).
+    Pour plus d’informations, consultez [Azure information protection Classic client pour Windows](./rms-client/aip-client.md).
 
 2. **Configurer des applications et des services Office**
     

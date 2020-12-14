@@ -1,11 +1,11 @@
 ---
 title: Surveiller le connecteur Azure Rights Management - AIP
 description: Informations vous permettant de surveiller le connecteur et l’utilisation du service Azure Rights Management d’Azure Information Protection par votre organisation.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
@@ -13,16 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab20a68a2895962095bc83904851ef3a9955dd79
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: a440f075e8bbcd4d8c2d8ee8050ef0ab1d203b54
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568098"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381831"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows server 2012 R2 et windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Après avoir installé et configuré le connecteur RMS, vous pouvez utiliser les méthodes et les informations suivantes pour surveiller le connecteur et l’utilisation du service Azure Rights Management d’Azure Information Protection par votre organisation.
 
@@ -181,17 +183,17 @@ Si vous avez besoin d’une journalisation plus détaillée à des fins de diagn
 
 1. Recherchez le fichier web.config dans **%programfiles%\Microsoft Rights Management connector\Web Service**.
 
-2. Recherchez la ligne suivante :
+1. Recherchez la ligne suivante :
 
     ```sh
     <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
     ```
 
-3. Remplacez cette ligne par le texte suivant :
+1. Remplacez cette ligne par le texte suivant :
     ```sh
     <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
     ```
 
-4.  Arrêtez et démarrez les services IIS pour activer le suivi. 
+1.  Arrêtez et démarrez les services IIS pour activer le suivi. 
 
-5.  Quand vous avez capturé les traces dont vous avez besoin, rétablissez la ligne de l’étape 3, puis arrêtez et redémarrez les services IIS.
+1.  Quand vous avez capturé les traces dont vous avez besoin, rétablissez la ligne de l’étape 3, puis arrêtez et redémarrez les services IIS.

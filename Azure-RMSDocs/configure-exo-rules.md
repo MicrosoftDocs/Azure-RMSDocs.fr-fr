@@ -5,29 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c20580298bc49e9809a1e629dc2eae4a2716646
-ms.sourcegitcommit: 31c56584f02cf849292dbf2724c036bb5d669df1
+ms.openlocfilehash: cbb6b583c45ac735f99e4cc51ac91e0401612f88
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "95568409"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383616"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-> *Instructions pour : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Si vous utilisez le client d’étiquetage unifié, consultez la [documentation de Microsoft 365](/microsoft-365/compliance/dlp-sensitivity-label-as-condition) pour plus d’informations sur la façon d’empêcher ou d’avertir les utilisateurs de partager des fichiers ou des e-mails avec une étiquette de sensibilité spécifique.*
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) et les [étiquettes DLP](/microsoft-365/compliance/dlp-sensitivity-label-as-condition) dans la documentation de Microsoft 365. *
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Les informations suivantes vous permettent de configurer des règles de flux de messagerie dans Exchange Online pour utiliser des étiquettes Azure Information Protection et appliquer une protection supplémentaire dans des scénarios spécifiques. Par exemple :
 
@@ -59,7 +58,7 @@ Pour les exemples suivants, créez une nouvelle règle de flux de messagerie en 
 
 3. Dans le centre d’administration Microsoft 365, choisissez **administration centres**  >  **Exchange**.
 
-4. Dans le centre d’administration Exchange : règles de **courrier électronique**  >  **rules**  >  **+**  >  **créez une nouvelle règle**. 
+4. Dans le centre d’administration Exchange : règles de **courrier électronique**  >    >  **+**  >  **créez une nouvelle règle**. 
 
 > [!TIP]
 > Si vous rencontrez des problèmes avec l’interface utilisateur lorsque vous configurez vos règles, essayez un autre navigateur, tel qu’Internet Explorer.
@@ -91,7 +90,7 @@ Dans la stratégie Azure Information Protection, cette étiquette a été config
     
     La configuration de votre règle doit maintenant ressembler à ce qui suit :  ![ règle de workflow de courrier Exchange Online configurée pour un Azure information protection étiquette-exemple 1](./media/aip-exo-rule-ex1.png)
 
-7. Sélectionnez **Enregistrer**. 
+7. Sélectionnez **Enregistrer** 
 
 Pour plus d’informations sur l’option Ne pas transférer, consultez [option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
@@ -121,7 +120,7 @@ Cette étiquette est utilisée pour classifier et protéger des documents que vo
     
     La configuration de votre règle doit maintenant ressembler à ce qui suit :  ![ règle de workflow de courrier Exchange Online configurée pour un Azure information protection étiquette-exemple 2](./media/aip-exo-rule-ex2.png)
 
-6. Sélectionnez **Enregistrer**. 
+6. Sélectionnez **Enregistrer** 
 
 Pour plus d’informations sur l’option de chiffrement, consultez [option Chiffrement seul pour les e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 

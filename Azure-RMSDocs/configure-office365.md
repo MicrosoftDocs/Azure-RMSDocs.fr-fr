@@ -1,8 +1,8 @@
 ---
 title: Configuration des services Microsoft 365 à utiliser Azure RMS-AIP
 description: Informations et instructions permettant aux administrateurs de configurer Microsoft 365 services pour qu’ils fonctionnent avec le service Azure Rights Management à partir de Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
@@ -13,20 +13,22 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30f4789b5f6fcf7c62e5f84f84fc8187acfcff12
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 2caaf42c764b80f0ccba8b9c74191cbd6bd23c88
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383497"
 ---
-# <a name="microsoft365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Microsoft 365 : configuration pour que services en ligne utilise le service de Rights Management Azure
+# <a name="microsoft-365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Microsoft 365 : configuration pour que services en ligne utilise le service de Rights Management Azure
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>S’applique à **: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les sections suivantes pour vous aider à configurer Exchange Online, Microsoft SharePoint et Microsoft OneDrive pour utiliser le service Azure Rights Management à partir de Azure Information Protection.
 
-## <a name="exchangeonline-irm-configuration"></a>Exchange Online : Configuration de la gestion des droits relatifs à l'information
+## <a name="exchange-online-irm-configuration"></a>Exchange Online : configuration de la gestion des droits relatifs à l’information
 
 Pour plus d’informations sur le fonctionnement d’Exchange Online avec le service Azure Rights Management, consultez la section [Exchange Online et Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) dans [Comment les applications et services Office prennent en charge Azure Rights Management](office-apps-services-support.md).
 

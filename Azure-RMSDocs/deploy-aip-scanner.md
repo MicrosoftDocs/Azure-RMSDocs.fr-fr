@@ -12,20 +12,20 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382545"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Concerne**: [client d’étiquetage unifié AIP uniquement](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [qu’est-ce que le Azure information protection scanneur classique ?](deploy-aip-scanner-classic.md)*
 
 >[!NOTE] 
-> Si vous utilisez le scanneur classique, consultez [qu’est-ce que le Azure information protection scanneur classique ?](deploy-aip-scanner-classic.md).
->
 > Pour analyser et étiqueter des fichiers sur des référentiels cloud, utilisez [Cloud App Security](/cloud-app-security/) au lieu du scanneur.
 
 Utilisez les informations de cette section pour en savoir plus sur le Azure Information Protection scanneur d’étiquetage unifié, puis sur la façon d’installer, de configurer, d’exécuter et, le cas échéant, de le résoudre.
@@ -53,7 +53,7 @@ Le scanneur utilise le client Azure Information Protection et peut classer et pr
 Effectuez l’une des opérations suivantes pour configurer vos analyses en fonction des besoins :
 
 - **Exécutez le scanneur en mode détection uniquement** pour créer des rapports qui vérifient ce qui se produit lorsque vos fichiers sont étiquetés.
-- **Exécutez le scanneur pour détecter les fichiers contenant des informations sensibles,** sans configurer les étiquettes qui appliquent la classification automatique.
+- **Exécutez le scanneur pour détecter les fichiers contenant des informations sensibles**, sans configurer les étiquettes qui appliquent la classification automatique.
 - **Exécutez le scanner automatiquement** pour appliquer les étiquettes configurées. 
 - **Définissez une liste de types de fichiers** pour spécifier des fichiers à analyser ou à exclure.
 
@@ -113,7 +113,7 @@ Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, recherchez
 Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmenter si nécessaire, consultez [paramètres pouvant être modifiés pour améliorer les performances du réseau](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 > [!TIP]
-> Pour les batteries de serveurs SharePoint de grande taille, vous devrez peut-être augmenter le seuil d’affichage de liste, qui a une valeur par défaut de **5 000.**
+> Pour les batteries de serveurs SharePoint de grande taille, vous devrez peut-être augmenter le seuil d’affichage de liste, qui a une valeur par défaut de **5 000**.
 >
 > Pour plus d’informations, consultez [gérer les grandes listes et les bibliothèques dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 >
@@ -133,7 +133,7 @@ Le scanneur AIP ne peut pas étiqueter les fichiers dans les circonstances suiva
 
     D’autres types de fichiers peuvent être ajoutés pour la protection lorsque vous [Modifiez les types de fichiers à protéger](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Exemple :** Après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement. 
+**Exemple**: après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement. 
 
 Toutefois, si l’étiquette est configurée pour la classification et la protection et que le type de fichier. txt est inclus pour le scanneur à protéger, le scanneur peut étiqueter le fichier.
 
@@ -145,12 +145,10 @@ Pour plus d’informations sur le déploiement du scanneur, consultez les articl
 - [Configuration et installation du scanneur AIP](deploy-aip-scanner-configure-install.md)
 - [Exécution d’analyses à l’aide du scanneur AIP](deploy-aip-scanner-manage.md)
 
-**Plus d’informations :**
+**Plus d’informations**:
 
 - Consultez notre blog sur les meilleures pratiques pour le scanneur d’étiquetage unifié : [meilleures pratiques pour le déploiement et l’utilisation du scanneur UL AIP](https://aka.ms/AIPScannerBestPractices)
 
 - Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-- Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
-
-- Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md)
+- Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md).

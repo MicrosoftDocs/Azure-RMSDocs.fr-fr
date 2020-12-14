@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e7431ebdf016b89e1750b833dc4fca2d9646b195
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0b13ccec5c4ca4fcdad1ac145a289a727fddd38a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382018"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Phase de migration 4 : Configuration des services de prise en charge
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour la Phase 4 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 8 et 9 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -149,15 +150,15 @@ Ne démarrez pas encore l’étape 5 à partir des instructions du connecteur.
 
 Pour tous les serveurs Exchange, ajoutez les valeurs de registre suivantes pour LicenseServerRedirection, selon les versions d’Exchange :
 
-1. Pour **exchange 2013 et exchange 2016,** ajoutez la valeur de Registre suivante :
+1. Pour **exchange 2013 et exchange 2016**, ajoutez la valeur de Registre suivante :
 
-    - **Chemin du Registre :**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Chemin du Registre**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Tapez :** Reg_SZ
+    - **Type**: REG_SZ
 
-    - **Valeur :** `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **Valeur** : `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
 
-    - **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
+    - **Données**: l’une des options suivantes, selon que vous utilisez le protocole HTTP ou https entre votre serveur Exchange et le connecteur RMS :
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
         
@@ -165,13 +166,13 @@ Pour tous les serveurs Exchange, ajoutez les valeurs de registre suivantes pour 
 
 1. Pour Exchange 2013, ajoutez la valeur de Registre supplémentaire suivante :
 
-    - **Chemin du Registre :**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
+    - **Chemin du Registre**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
 
-    - **Tapez :** Reg_SZ
+    - **Type**: REG_SZ
 
-    - **Valeur :** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/Licensing
+    - **Valeur**: https:// \<AD RMS Extranet Licensing URL\> /_wmcs/Licensing
 
-    - **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
+    - **Données**: l’une des options suivantes, selon que vous utilisez le protocole HTTP ou https entre votre serveur Exchange et le connecteur RMS :
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
 

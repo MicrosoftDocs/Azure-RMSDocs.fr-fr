@@ -5,25 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 5454713bc942daa48fc5c33dfdb66bd1bcdec2e0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316413"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383242"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->[!NOTE]
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) dans la documentation de Microsoft 365. *
+
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>
 
 Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page.
 
@@ -64,7 +67,7 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
     La seule exception est quand vous utilisez l' [enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec les applications Office pour les fichiers qui sont enregistrés dans Microsoft SharePoint, onedrive entreprise ou scolaire, ou onedrive à la page : lorsque l’enregistrement automatique est activé, les marquages visuels ne sont pas appliqués, sauf si vous configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) pour activer la classification en continu en arrière-plan.
 
 > [!NOTE]
-> Pour plus d’informations sur la prise en charge des marquages visuels dans les clients AIP et dans les fonctionnalités Office d’étiquetage intégrées, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
+> Pour plus d’informations sur la prise en charge des marquages visuels dans les clients AIP et dans les fonctionnalités Office d’étiquetage intégrées, consultez [choisir votre solution d’étiquetage Windows](rms-client/use-client.md#choose-your-windows-labeling-solution).
 > 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
@@ -107,7 +110,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 >Cette syntaxe respecte la casse.
 
 >[!TIP]
-> Vous pouvez également utiliser un [Code de champ pour insérer le nom de l’étiquette](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
+> Vous pouvez également utiliser un [Code de champ pour insérer le nom de l’étiquette](faqs-classic.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Définition de marquages visuels différents pour Word, Excel, PowerPoint et Outlook
 
@@ -124,19 +127,19 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 
 Exemples :
 
-- **Définir un texte d’en-tête pour les documents Word uniquement :**
+- **Définir le texte d’en-tête pour les documents Word uniquement**:
 
     `${If.App.Word}This Word document is sensitive ${If.End}`
 
     Dans les en-têtes de document Word uniquement, l’étiquette applique le texte d’en-tête « Ce document Word respecte la casse ». Aucun texte d’en-tête n’est appliqué à d’autres applications Office.
 
-- **Définir un texte de pied de page pour Word, Excel et Outlook et un texte de pied de page différent pour PowerPoint :**
+- **Définissez le texte de pied de page pour Word, Excel et Outlook, ainsi que le texte de pied de page différent pour PowerPoint**:
 
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
 
     Dans Word, Excel et Outlook, l’étiquette applique le texte de pied de page « Ce contenu est confidentiel. » Dans PowerPoint, l’étiquette applique le texte de pied de page « Cette présentation est confidentielle ».
 
-- **Définir un texte en filigrane spécifique pour Word et PowerPoint et un texte en filigrane pour Word, Excel et PowerPoint :**
+- **Définissez un texte de filigrane spécifique pour Word et PowerPoint, puis le texte de filigrane pour Word, Excel et PowerPoint**:
 
     `${If.App.WP}This content is ${If.End}Confidential`
 

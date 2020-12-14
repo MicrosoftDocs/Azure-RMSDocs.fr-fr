@@ -12,19 +12,18 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a24332d284c8f1884d357765f4a30c07fb992df0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316379"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382766"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution du scanneur Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
-
->[!NOTE]
-> Si vous utilisez le scanneur classique, consultez [installation et configuration du Azure information protection scanneur classique](deploy-aip-scanner-configure-install-classic.md).
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Concerne**: [client d’étiquetage unifié AIP uniquement](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le scanneur classique, consultez [exécution du scanneur classique Azure information protection](deploy-aip-scanner-manage-classic.md). *
 
 Une fois que vous avez confirmé la [Configuration requise](deploy-aip-scanner-prereqs.md) et [configuré et installé votre scanneur](deploy-aip-scanner-configure-install.md), [exécutez une analyse de découverte](#run-a-discovery-cycle-and-view-reports-for-the-scanner) pour commencer.
 
@@ -99,7 +98,7 @@ Pour arrêter une analyse en cours d’exécution avant qu’elle ne soit termin
 
     ![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
 
-- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
+- **Exécutez une commande PowerShell.** Exécutez la commande suivante :
 
     ```PowerShell
     Stop-AIPScan 
@@ -111,7 +110,7 @@ Pour le [premier cycle d’analyse](#run-a-discovery-cycle-and-view-reports-for-
 
 L’inspection de nouveau de tous les fichiers est généralement utile lorsque vous souhaitez que les rapports incluent tous les fichiers, lorsque vous avez des modifications que vous souhaitez appliquer à tous les fichiers et lorsque le scanneur s’exécute en mode découverte.
 
-**Pour exécuter manuellement une nouvelle analyse complète :**
+**Pour exécuter manuellement une nouvelle analyse complète**:
 
 1. Accédez au volet **travaux d’analyse de contenu Azure information protection** dans le portail Azure.
 
@@ -135,7 +134,7 @@ Si vous avez également modifié les paramètres de protection de vos étiquette
 > [!IMPORTANT]
 > Si vous avez effectué une mise à niveau vers la version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
 >
-> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on,** veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
+> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 > 
 
 ## <a name="troubleshooting-a-stopped-scan"></a>Résolution des problèmes d’analyse arrêtée
@@ -185,7 +184,5 @@ L’outil de diagnostic vérifie les détails suivants, puis exporte un fichier 
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
-
-- Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md).

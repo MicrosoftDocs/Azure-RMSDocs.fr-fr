@@ -1,11 +1,11 @@
 ---
 title: Migration de clé protégée par HSM vers une autre clé protégée par HSM - AIP
 description: Les instructions qui font partie du chemin de migration de AD RMS à Azure Information Protection, et s’appliquent uniquement si votre clé de AD RMS est protégée par HSM et que vous souhaitez migrer vers Azure Information Protection à l’aide d’une clé de locataire protégée par HSM dans Azure Key Vault.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43df572d29d98127de8cbdf594d85cd58f4db483
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 1ce00be84ddde6493c5b8851fa8473024e08dc00
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049086"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382052"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par HSM et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault. 
 
@@ -51,7 +52,7 @@ Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
 
    - N’effectuez pas les étapes pour **Générer votre clé de locataire** car vous avez déjà l’équivalent dans votre déploiement AD RMS. Au lieu de cela, identifiez les clés utilisées par votre serveur AD RMS à partir de l’installation nCipher et préparez ces clés pour le transfert, puis transférez-les vers Azure Key Vault. 
         
-        Les fichiers de clé chiffrés pour nCipher sont nommés **key_<<em>keyAppName</em>>_<<em>KeyIdentifier</em> > ** localement sur le serveur. Par exemple, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Vous aurez besoin de la valeur **mscapi** comme keyAppName, ainsi que de votre propre valeur pour l’identificateur de clé lorsque vous exécutez la commande KeyTransferRemote pour créer une copie de la clé avec des autorisations réduites.
+        Les fichiers de clé chiffrés pour nCipher sont nommés **key_<<em>keyAppName</em>>_<<em>KeyIdentifier</em> >** localement sur le serveur. Par exemple, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Vous aurez besoin de la valeur **mscapi** comme keyAppName, ainsi que de votre propre valeur pour l’identificateur de clé lorsque vous exécutez la commande KeyTransferRemote pour créer une copie de la clé avec des autorisations réduites.
         
         Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Elle doit ressembler à https \: //ContosoRMS-kV.vault.Azure.net/Keys/ContosoRMS-Byok/aaaabbbbcccc111122223333. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’utiliser cette clé pour sa clé de locataire.
 

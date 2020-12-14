@@ -1,11 +1,11 @@
 ---
 title: Installer et configurer le connecteur Rights Management - AIP
 description: Il s’agit d’informations destinées à vous aider à installer et à configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de l’article Déployer le connecteur Azure Rights Management - AIP.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
@@ -13,16 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ef3a9198af5fb44927438c66262e30acf439f2eb
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568350"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383854"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, 2012 R2 et windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, 2012 R2 et Windows Server 2012 *
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour installer et configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de l’article [Déployer le connecteur Azure Rights Management - AIP](deploy-rms-connector.md).
 
@@ -132,7 +134,7 @@ Si vous devez désinstaller le connecteur RMS, exécutez à nouveau l’Assistan
 
 Si vous rencontrez des problèmes pendant l’installation, consultez le journal d’installation : **%LocalAppData%\Temp\Microsoft Rights Management connector_ \<date and time> . log** 
 
-Par exemple, votre journal d’installation peut ressembler à C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+Par exemple, votre journal d’installation peut ressembler à **C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352. log**
 
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorisation des serveurs à utiliser le connecteur RMS
 Une fois le connecteur RMS installé sur au moins deux ordinateurs, vous êtes prêt à autoriser les serveurs et les services voulus à utiliser le connecteur RMS. Par exemple, les serveurs exécutant Exchange Server 2013 ou SharePoint Server 2013.
@@ -173,7 +175,7 @@ Pour plus d’informations sur les différents rôles de serveur consultez :
         > [!TIP]
         > Si ces deux comptes sont différents, envisagez de créer un groupe unique contenant les deux comptes pour réduire les coûts d’administration.
 
--   Pour les serveurs de fichiers qui utilisent l’infrastructure de classification des fichiers, les services associés s’exécutent en tant que compte du système local, vous devez autoriser le compte d’ordinateur pour les serveurs de fichiers (par exemple, SERVERNAME$) ou un groupe qui contient ces comptes d’ordinateur.
+-   Pour les serveurs de fichiers qui utilisent Infrastructure de classification des fichiers, les services associés s’exécutent en tant que compte système local. vous devez donc autoriser le compte d’ordinateur pour les serveurs de fichiers (par exemple, **NomServeur $**) ou un groupe qui contient ces comptes d’ordinateur.
 
 Une fois que tous les serveurs sont ajoutés, cliquez sur **Fermer**.
 
@@ -191,13 +193,13 @@ Une fois le nom créé dans le système DNS et configuré pour une adresse IP, c
 
 Utilisez les paramètres suivants pour configurer le cluster d’équilibrage de charge réseau :
 
--   Ports : 80 (pour HTTP) ou 443 (pour HTTPS)
+-   **Ports**: 80 (pour http) ou 443 (pour HTTPS)
 
     Pour en savoir plus sur le choix du protocole HTTP ou HTTPS, consultez la section suivante.
 
--   Affinité : Aucune
+-   **Affinité**: aucune
 
--   Méthode de distribution : Égale
+-  **Méthode de distribution**: égale
 
 Ce nom que vous définissez pour le système à équilibrage de charge (pour les serveurs exécutant le service du connecteur RMS) est le nom du connecteur RMS de votre organisation que vous utilisez ultérieurement, lorsque vous configurez les serveurs locaux de manière à utiliser Azure RMS.
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -13,23 +13,28 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382885"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configuration des droits d’utilisation pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> 
+> Par souci d’exhaustivité, cet article contient des valeurs tirées du portail Azure Classic, qui n’est plus en service depuis le 8 janvier 2018.
 
 Quand vous configurez des étiquettes de sensibilité ou des modèles de protection pour le chiffrement, vous sélectionnez les droits d’utilisation qui seront ensuite appliqués automatiquement lorsque l’étiquette ou le modèle est sélectionné par des utilisateurs, des administrateurs ou des services configurés. Par exemple, dans le portail Azure, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou bien vous pouvez configurer les droits individuels. Les utilisateurs peuvent également sélectionner et appliquer les droits d’utilisation eux-mêmes.
 
 Utilisez cet article pour vous aider à configurer les droits d’utilisation que vous souhaitez pour l’application que vous utilisez et pour comprendre comment ces droits sont conçus pour être interprétés par les applications. Toutefois, les applications peuvent varier dans la manière dont elles implémentent les droits. par conséquent, consultez toujours leur documentation et effectuez vos propres tests avec les applications que les utilisateurs utilisent pour vérifier le comportement avant le déploiement en production.
 
-> [!NOTE] 
-> Par souci d’exhaustivité, cet article contient des valeurs tirées du portail Azure Classic, qui n’est plus en service depuis le 8 janvier 2018.
 
 ## <a name="usage-rights-and-descriptions"></a>Droits d’utilisation et descriptions
 Le tableau suivant répertorie et décrit les droits d’utilisation pris en charge par Rights Management, ainsi que la façon dont ils sont utilisés et interprétés. Ils sont répertoriés par leur **nom commun**, généralement la façon dont ils sont affichés ou référencés, sous une forme plus conviviale que la valeur uniterme utilisée dans le code (la valeur **Encodage dans la stratégie**). 
@@ -38,7 +43,9 @@ Dans ce tableau :
 
 - La **constante ou la valeur** de l’API est le nom du kit de développement logiciel (SDK) pour un appel d’API MSIPC, utilisé lorsque vous écrivez une application qui vérifie un droit d’utilisation, ou ajoute un droit d’utilisation à une stratégie.
 
-- Le **Centre d’administration d’étiquetage** fait référence à l’emplacement où vous configurez les étiquettes de sensibilité et peut être soit le centre de conformité Microsoft 365, le Microsoft 365 Security Center, soit le centre de conformité d’Office 365 Security &.
+- Le **Centre d’administration d’étiquetage** fait référence à l’emplacement où vous configurez les étiquettes de sensibilité et peut être soit le centre de conformité Microsoft 365, le Microsoft 365 Security Center, soit le centre de conformité Microsoft 365 Security &.
+
+    Si vous disposez du client Classic, configurez vos étiquettes et vos stratégies d’étiquette dans la Portail Azure.
 
 
 |Droits d’utilisation|Description|Implémentation|
@@ -87,16 +94,6 @@ Non applicable dans le client Azure Information Protection pour Windows.
 ###### <a name="footnote-4"></a>Note 4
 Non inclus dans le centre d’administration d’étiquetage, le Portail Azure ou le client Azure Information Protection pour Windows.
 
-## <a name="rights-included-in-the-default-templates"></a>Droits inclus dans les modèles par défaut
-Le tableau suivant répertorie les droits d’utilisation inclus lorsque les modèles par défaut sont créés. Les droits d’utilisation sont répertoriés par leur [nom commun](#usage-rights-and-descriptions).
-
-Ces modèles par défaut sont créés lors de l’achat de votre abonnement, et les noms et les droits d’utilisation peuvent être [modifiés](configure-policy-templates.md) dans la portail Azure et avec [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
-
-|Nom complet du modèle|Droits d’utilisation du 6 octobre 2017 à maintenant|Droits d’utilisation avant le 6 octobre 2017|
-|----------------|--------------------|----------|
-|\<*organization name> -Affichage confidentiel uniquement * <br /><br />or<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
-|\<*organization name>Confidentiel <br /><br />or <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
-
 ## <a name="do-not-forward-option-for-emails"></a>Option Ne pas transférer pour les e-mails
 
 Les clients et services Exchange (par exemple, le client Outlook, Outlook sur le web, les règles de flux de courrier Exchange et les actions de protection contre la perte de données pour Exchange) disposent d’une option de protection des droits d’information supplémentaire pour les e-mails : **Ne pas transférer**. 
@@ -129,7 +126,7 @@ Cette option est disponible pour les locataires qui utilisent Exchange Online et
 - **Dans Outlook sur le Web**
 - **Comme une autre option de protection des droits** pour une règle de courrier
 - **En tant qu’action DLP d’Office 365**
-- **À partir d’Outlook,** pour les versions listées dans le [tableau des versions prises en charge pour les applications Microsoft 365es par canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), lorsque vous avez [Microsoft 365 des applications qui prennent en charge Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+- **À partir d’Outlook**, pour les versions listées dans le [tableau des versions prises en charge pour les applications Microsoft 365es par canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), lorsque vous avez [Microsoft 365 des applications qui prennent en charge Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
 
 Pour plus d’informations sur l’option Encrypt-Only, consultez le billet de blog suivant de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
 
@@ -196,6 +193,19 @@ La période de validité de la licence d’utilisation par défaut pour un locat
 - Quand vous configurez un modèle à l’aide de PowerShell, la période de validité de la licence d’utilisation prend sa valeur du paramètre *LicenseValidityDuration* dans les applets de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) et [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) .
     
     Pour plus d’informations et de conseils pour la configuration de ce paramètre à l’aide de PowerShell, consultez l’aide relative à chaque applet de commande.
+
+## <a name="rights-included-in-the-default-templates"></a>Droits inclus dans les modèles par défaut
+
+**Concerne**: client classique AIP uniquement
+
+Le tableau suivant répertorie les droits d’utilisation inclus lorsque les modèles par défaut sont créés. Les droits d’utilisation sont répertoriés par leur [nom commun](#usage-rights-and-descriptions).
+
+Ces modèles par défaut sont créés lors de l’achat de votre abonnement, et les noms et les droits d’utilisation peuvent être [modifiés](configure-policy-templates.md) dans la portail Azure et avec [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
+
+|Nom complet du modèle|Droits d’utilisation du 6 octobre 2017 à maintenant|Droits d’utilisation avant le 6 octobre 2017|
+|----------------|--------------------|----------|
+|\<*organization name> -Affichage confidentiel uniquement * <br /><br />ou<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
+|\<*organization name>Confidentiel <br /><br />ou <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
 
 ## <a name="see-also"></a>Voir aussi
 [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)

@@ -1,8 +1,8 @@
 ---
 title: Classer à l’aide du client d’étiquetage unifié Azure Information Protection
 description: Instructions sur la façon de classer vos documents et e-mails lorsque vous utilisez le client d’étiquetage unifié Azure Information Protection pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
 ms.topic: how-to
@@ -11,20 +11,20 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 1cb9f1216b8b77b19b8cabb6d884512330221a87
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 3718c6b93fba7abb08dcbe08675f361b0b666c0d
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385401"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guide de l’utilisateur : classer un fichier ou un e-mail à l’aide du client d’étiquetage unifié Azure Information Protection pour Windows
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Instructions pour**: [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide de l’utilisateur du client Classic](client-classify.md). *
 
 > [!NOTE]
 > Utilisez ces instructions pour classifier (mais pas protéger) vos documents et e-mails. Si vous devez également protéger vos documents et e-mails, consultez les [instructions de classification et protection](clientv2-classify-protect.md). Si vous ne savez pas quel ensemble d’instructions utiliser, contactez votre administrateur ou votre support technique.
@@ -61,7 +61,7 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 - Vous n’avez peut-être pas [installé](install-unifiedlabelingclient-app.md)le client d’étiquetage unifié Azure information protection.
 
-- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection (Classic) est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
+- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection Classic est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
 

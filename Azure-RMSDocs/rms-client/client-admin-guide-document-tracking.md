@@ -1,8 +1,8 @@
 ---
 title: Suivi des documents pour Azure Information Protection
 description: Instructions et informations à l’attention des administrateurs pour la configuration et l’utilisation du suivi des documents pour Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: how-to
@@ -13,23 +13,23 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 66ad27bb61e4cdc24d5c047b8f2c464ba98e5a8d
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 9ea1a6494384827d240f47068ecce6addee84035
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386183"
 ---
-# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection-using-the-classic-client"></a>Guide de l’administrateur : configuration et utilisation du suivi des documents pour Azure Information Protection à l’aide du client classique
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations pour les utilisateurs et administrateurs concernant les dates d’accès à un document protégé et, si nécessaire, un document suivi peut être révoqué.
+Si vous disposez d’un [abonnement qui prend en charge le suivi des documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features) et le client standard AIP, le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations pour les utilisateurs et administrateurs concernant les dates d’accès à un document protégé et, si nécessaire, un document suivi peut être révoqué.
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Utilisation de PowerShell pour gérer le site de suivi de documents
 

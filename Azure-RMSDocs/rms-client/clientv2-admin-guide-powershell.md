@@ -1,30 +1,30 @@
 ---
 title: Utiliser PowerShell avec le client d’étiquetage unifié Azure Information Protection
 description: Instructions et informations permettant aux administrateurs de gérer le Azure Information Protection client d’étiquetage unifié à l’aide de PowerShell.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2133259809b87a66fe5e63e10e1273a0412208b7
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 38e2156b0102c857d13b99233a5bad2331662606
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568055"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385486"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide-powershell.md). *
 
 Lorsque vous installez le client d’étiquetage unifié Azure Information Protection, les commandes PowerShell sont installées automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
@@ -36,6 +36,7 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Pour un dossier partagé, inspectez le contenu du fichier puis étiquetez automatiquement les fichiers sans étiquette, selon les conditions que vous avez spécifiées.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
+| | |
 
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
@@ -54,13 +55,11 @@ Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Pr
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Conditions préalables à l’utilisation du module AzureInformationProtection
 
-Outre la configuration requise pour l’installation du module AzureInformationProtection, il existe d’autres conditions préalables à l’utilisation des applets de commande d’étiquetage pour Azure Information Protection :
+Outre la configuration requise pour l’installation du module **AzureInformationProtection** , il existe d’autres conditions préalables à l’utilisation des applets de commande d’étiquetage pour Azure information protection :
 
 1. Le service Azure Rights Management doit être activé.
 
-2. Pour supprimer la protection des fichiers pour les autres utilisateurs à l’aide de votre propre compte : 
-
-    - La fonctionnalité de super utilisateur doit être activée pour votre organisation et votre compte doit être configuré pour être un super utilisateur d’Azure Rights Management.
+2. Pour supprimer la protection des fichiers pour d’autres utilisateurs à l’aide de votre propre compte, la fonctionnalité de super utilisateur doit être activée pour votre organisation et votre compte doit être configuré pour être un super utilisateur pour Azure Rights Management.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Condition préalable 1 : le service Azure Rights Management doit être activé
 
@@ -184,7 +183,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 Maintenant que vous avez terminé l’inscription de cette application avec un secret, vous êtes prêt à exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *AppID* et *AppSecret*. En outre, vous aurez besoin de votre ID de locataire. 
 
 > [!TIP]
->Vous pouvez copier rapidement votre ID de locataire à l’aide de portail Azure : **Azure Active Directory**  >  **gérer** l’ID de répertoire des  >  **Propriétés**  >  **Directory ID**.
+>Vous pouvez copier rapidement votre ID de locataire à l’aide de portail Azure : **Azure Active Directory**  >  **gérer** l’ID de répertoire des  >  **Propriétés**  >  .
 
 1. Ouvrez Windows PowerShell avec l' **option Exécuter en tant qu’administrateur**. 
 

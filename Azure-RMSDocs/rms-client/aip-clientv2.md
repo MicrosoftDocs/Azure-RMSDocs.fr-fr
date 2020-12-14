@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection client d’étiquetage unifié pour Windows
 description: Ressources d’informations pour le Azure Information Protection client d’étiquetage unifié pour Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
 ms.topic: conceptual
@@ -13,25 +13,25 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f1e753e15d9601083a29f58bee0e2a4a7f16334b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 0988f4c98cc18b1cfb9119187fe203092ea33d4d
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568079"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386149"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client d’étiquetage unifié pour Windows
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->*Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [Azure information protection Classic client for Windows](aip-client.md). *
 
 Le client d’étiquetage unifié Azure Information Protection pour Windows est un client téléchargeable pour les organisations qui utilisent des [étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) pour classifier et protéger des documents et des e-mails. Ce client dispose également d’une visionneuse pour les organisations qui ne disposent pas de leur propre infrastructure de protection des informations, mais qui souhaitent consommer du contenu protégé par d’autres organisations qui utilisent un service Rights Management de Microsoft.
 
 > [!NOTE]
-> Ce client, également appelé simplement client d’étiquetage unifié, remplace le client Azure Information Protection (Classic). Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+> Ce client, également appelé simplement client d’étiquetage unifié, remplace le client Azure Information Protection Classic. Si vous n’êtes pas sûr du client à utiliser, consultez [choisir votre solution d’étiquetage Windows](use-client.md#choose-your-windows-labeling-solution).
 
 Utilisez les ressources suivantes pour le client d’étiquetage unifié :
 

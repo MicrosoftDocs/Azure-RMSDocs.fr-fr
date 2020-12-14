@@ -1,11 +1,11 @@
 ---
-title: Installer le client Azure Information Protection pour les utilisateurs
-description: Instructions et informations destinées aux administrateurs pour le déploiement du client Azure Information Protection pour Windows sur les réseaux d’entreprise.
+title: Installer le client Azure Information Protection Classic pour les utilisateurs
+description: Instructions et informations destinées aux administrateurs pour le déploiement du client Azure Information Protection Classic pour Windows sur les réseaux d’entreprise.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 64735f0a4e9343ced3839f9dcdd9f56985c0b2fa
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734995"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386047"
 ---
-# <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
+# <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Guide de l’administrateur : installer le client Azure Information Protection Classic pour les utilisateurs
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
-> **Pour déployer le client classique AIP,** ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.
+> **Pour déployer le client classique AIP**, ouvrez un ticket de support pour obtenir l’accès au téléchargement.
 
 Avant d’installer le client Azure Information Protection sur votre réseau d’entreprise, vérifiez que vos ordinateurs disposent des versions et des applications nécessaires du système d’exploitation pour Azure Information Protection : [Configuration requise pour Azure Information Protection](../requirements.md).
 
@@ -91,7 +91,7 @@ Utilisez l’une des options suivantes pour installer le client pour les utilisa
 |Option d’installation  |Description  |
 |---------|---------|
 |**Exécuter l’exécutable client (. exe)**  <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | Nous vous recommandons d’exécuter la version. exe du client pour exécuter l’installation de manière interactive ou silencieuse.<br><br> L’exécution du fichier. exe offre la plus grande souplesse et est recommandée car elle vérifie également la plupart des conditions préalables et peut également installer les composants requis manquants. |
-|**Déployer le programme d’installation Windows (. msi) du client** <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Le programme d’installation de Windows Azure Information Protection client est pris en charge uniquement pour les installations sans assistance qui utilisent un mécanisme de déploiement central.<br><br> Par exemple, utilisez le fichier. msi lors du déploiement avec une stratégie de groupe, Configuration Manager et Microsoft Intune.<br><br> Vous devez utiliser la méthode tis pour les PC Windows 10 gérés par Intune et la gestion des appareils mobiles (MDM), car les fichiers. exe ne sont pas pris en charge pour ces ordinateurs.<br><br>**Remarque :** Lorsque vous utilisez l’installation. msi, vous devez vérifier manuellement la configuration requise et installer ou désinstaller tous les logiciels dépendants requis. |
+|**Déployer le programme d’installation Windows (. msi) du client** <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Le programme d’installation de Windows Azure Information Protection client est pris en charge uniquement pour les installations sans assistance qui utilisent un mécanisme de déploiement central.<br><br> Par exemple, utilisez le fichier. msi lors du déploiement avec une stratégie de groupe, Configuration Manager et Microsoft Intune.<br><br> Vous devez utiliser la méthode tis pour les PC Windows 10 gérés par Intune et la gestion des appareils mobiles (MDM), car les fichiers. exe ne sont pas pris en charge pour ces ordinateurs.<br><br>**Remarque**: lors de l’utilisation de l’installation. msi, vous devez vérifier manuellement la configuration requise et installer ou désinstaller tous les logiciels dépendants requis. |
 
 Après avoir installé le client, effectuez les mises à jour en répétant la même procédure d’installation, ou utilisez Windows Update pour que le client reste automatiquement mis à jour. Vous n’êtes pas obligé de désinstaller les versions héritées du client avant d’installer une nouvelle version.
 
@@ -188,7 +188,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 1. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
-    |Version d’Office|Système d'exploitation|Logiciel|Action|
+    |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
     |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installer|
     |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|

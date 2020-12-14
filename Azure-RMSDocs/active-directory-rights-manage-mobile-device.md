@@ -1,27 +1,28 @@
 ---
 title: Active Directory l’extension d’appareil mobile Rights Management Services pour AIP
 description: En savoir plus sur les extensions d’appareils mobiles Active Directory pour AIP
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 59bc53914d73d64c7dc34bbc63b28bf1e70adeb4
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 874a73480e8d15380d9e69a532a1b8ff39d38eb7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567828"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384160"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Extension Appareils mobiles AD RMS (Active Directory Rights Management Services)
 
- 
-S’applique à : Windows Server 2019, 2016, 2012 R2 et 2012
+>***S’applique à**: Windows Server 2019, 2016, 2012 R2 et 2012 *
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Vous pouvez télécharger l’extension d’appareil mobile (AD RMS) services AD RMS (Active Directory Rights Management Services) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=43738) et installer cette extension sur un déploiement de AD RMS existant. Cela permet aux utilisateurs de protéger et de consommer des données sensibles quand leur appareil prend en charge les dernières applications compatibles avec l’API. Par exemple, les utilisateurs peuvent effectuer les opérations suivantes :
 - Utilisez l’application Azure Information Protection pour consommer des fichiers texte protégés dans différents formats (y compris. txt,. csv et. Xml).
@@ -239,6 +240,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez les tableaux 
 |Poids|0
 |Numéro de port|443
 |Hôte offrant ce service|_rmsserver. contoso. com|
+| | |
 
 En plus de ces enregistrements SRV DNS pour votre domaine de messagerie, vous devez créer un autre enregistrement DNS SRV dans le domaine de cluster RMS. Cet enregistrement doit spécifier les noms de domaine complets de votre cluster RMS qui protègent le contenu. Chaque fichier qui est protégé par RMS inclut une URL vers le cluster qui a protégé ce fichier. Les appareils mobiles utilisent l'enregistrement SRV DNS et le nom de domaine complet de l'URL spécifié dans l'enregistrement pour trouver le cluster RMS correspondant qui peut prendre en charge des appareils mobiles.
 
@@ -255,6 +257,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez le tableau su
 |Poids|0
 |Numéro de port|443
 |Hôte offrant ce service|_rmsserver. contoso. com|
+| | |
 
 ## <a name="deploying-the-ad-rms-mobile-device-extension"></a>Déploiement de l'extension Appareils mobiles AD RMS
 
@@ -275,22 +278,22 @@ Si vous avez un serveur proxy entre le cluster AD RMS et les serveurs AD FS, par
 
 1. Ajoutez le nœud suivant au fichier :
 
-```powershell
-   <system.net>
-    <defaultProxy>
-        <proxy  proxyaddress="http://<proxy server>:<port>"
-                bypassonlocal="true"
-        />
-        <bypasslist>
-            <add address="<AD FS URL>" />
-        </bypasslist>
-    </defaultProxy>
-<system.net>
-```
+    ```PowerShell
+       <system.net>
+        <defaultProxy>
+            <proxy  proxyaddress="http://<proxy server>:<port>"
+                    bypassonlocal="true"
+            />
+            <bypasslist>
+                <add address="<AD FS URL>" />
+            </bypasslist>
+        </defaultProxy>
+    <system.net>
+    ```
 1. Apportez les modifications suivantes, puis enregistrez le fichier :
-- Remplacez \<proxy-server> par le nom ou l’adresse de votre serveur proxy.
-- Remplacez \<port> par le numéro de port que le serveur proxy est configuré pour utiliser.
-- Remplacez \<AD FS URL> par l’URL du service de Fédération. N’incluez pas le préfixe HTTP.
+    - Remplacez \<proxy-server> par le nom ou l’adresse de votre serveur proxy.
+    - Remplacez \<port> par le numéro de port que le serveur proxy est configuré pour utiliser.
+    - Remplacez \<AD FS URL> par l’URL du service de Fédération. N’incluez pas le préfixe HTTP.
 
     > [!NOTE]
     > Pour en savoir plus sur le remplacement des paramètres de proxy, consultez la documentation sur la [configuration du proxy](/dotnet/framework/network-programming/proxy-configuration) .
@@ -303,5 +306,3 @@ Répétez cette procédure sur tous les nœuds de votre cluster RMS.
 ## <a name="see-also"></a>Voir aussi
 
 Pour en savoir plus sur les Azure Information Protection, contactez les autres clients AIP et les responsables de produit AIP à l’aide du [groupe Yammer d’API](https://www.yammer.com/askipteam/). 
-
-"

@@ -1,11 +1,11 @@
 ---
-title: Télécharger et installer le client Azure Information Protection
-description: Instructions destinées aux utilisateurs pour installer le client Azure Information Protection pour Windows, afin de pouvoir classifier et protéger des documents et des e-mails.
+title: Télécharger & installer le client classique Azure Information Protection
+description: Instructions permettant aux utilisateurs d’installer le client Azure Information Protection Classic pour Windows, afin que vous puissiez classer et protéger vos documents et e-mails.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
@@ -13,19 +13,21 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 26e9f85a4e5d171232dc8d30f4502557808ac538
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: f27be62467939d116bf36aaee4189911f096aa52
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385129"
 ---
-# <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection
+# <a name="user-guide-download-and-install-the-azure-information-protection-classic-client"></a>Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection Classic
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, reportez-vous au Guide de l' [utilisateur d’étiquetage unifié](install-unifiedlabelingclient-app.md). *
 
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Si votre administrateur n’installe pas le client Azure Information Protection pour vous, vous pouvez le faire vous-même. Vous devez être un administrateur local de votre PC pour installer ce client, de sorte qu’il puisse étiqueter et protéger vos documents et vos e-mails.
 

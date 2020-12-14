@@ -5,26 +5,26 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 12/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7fabd12e3ca0dc08f8c5617b37252ac5adc22948
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 427143c8ee2a93e60be683b3e80b5493c0bab441
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849672"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385469"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Instructions pour**: [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide-install.md). *
 
 Avant d’installer le client d’étiquetage unifié Azure Information Protection sur votre réseau d’entreprise, vérifiez que les ordinateurs disposent des versions et des applications de système d’exploitation requises pour Azure Information Protection : [Configuration requise pour la Azure information protection](../requirements.md). 
 
@@ -37,8 +37,8 @@ Les prérequis suivants pour le client d’étiquetage unifié AIP s’ajoutent 
 |Condition requise  |Description  |
 |---------|---------|
 |**Microsoft .NET Framework 4.6.2**     | L’installation complète du client d’étiquetage unifié Azure Information Protection par défaut nécessite une version minimale de Microsoft .NET Framework 4.6.2. <br><br>Si ce Framework est absent, l’Assistant Installation du programme d’installation exécutable tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, l’ordinateur doit être redémarré.       |
-|**Microsoft .NET Framework 4.5.2**     | Si la visionneuse de Azure Information Protection est installée séparément, l’application de la visionneuse requiert une version minimale de Microsoft .NET Framework 4.5.2. <br><br>**Important :** Si ce Framework est manquant pour la visionneuse, le programme d’installation exécutable ne le télécharge pas ou ne l’installe *pas* .        |
-|**Version minimale de Windows PowerShell 4,0**     |   Le module PowerShell pour le client nécessite une version minimale de Windows PowerShell 4,0, qui peut être nécessaire pour être installé sur des systèmes d’exploitation plus anciens. <br><br>Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). <br><br>**Important :** Le programme d’installation ne vérifie pas ou n’installe *pas* ce composant requis pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.      |
+|**Microsoft .NET Framework 4.5.2**     | Si la visionneuse de Azure Information Protection est installée séparément, l’application de la visionneuse requiert une version minimale de Microsoft .NET Framework 4.5.2. <br><br>**Important**: si cette infrastructure est manquante pour la visionneuse, le programme d’installation exécutable ne le télécharge *pas* ou l’installe.        |
+|**Version minimale de Windows PowerShell 4,0**     |   Le module PowerShell pour le client nécessite une version minimale de Windows PowerShell 4,0, qui peut être nécessaire pour être installé sur des systèmes d’exploitation plus anciens. <br><br>Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). <br><br>**Important**: le programme d’installation ne vérifie pas ou n’installe *pas* ce composant requis pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.      |
 |**Résolution d’écran supérieure à 800 x 600**    |     Les résolutions de 800 x 600 et les résolutions inférieures ne peuvent pas afficher entièrement la boîte de dialogue **Classifier et protéger - Azure Information Protection** lorsque vous cliquez avec le bouton droit sur un fichier ou dossier dans l’Explorateur de fichiers.    |
 |**Assistant de connexion Microsoft Online Services 7.250.4303.0**     |   Les ordinateurs qui exécutent Office 2010 requièrent l’Assistant de connexion Microsoft Online Services version 7.250.4303.0, qui est inclus dans l’installation du client. <br><br>Si vous disposez d’une version ultérieure de l’Assistant de connexion, désinstallez-la avant d’installer le client d’étiquetage unifié Azure Information Protection. <br><br>Par exemple, vérifiez la version et désinstallez l’Assistant de connexion à l’aide du **panneau de configuration**  >  **programme et fonctionnalités**  >  **désinstaller ou modifier un programme**.      |
 |**KB 4482887**     | Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. <br><br>Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.        |
@@ -66,7 +66,7 @@ Spécifiez les identificateurs programmatiques (ProgID) suivants pour AIP, puis 
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-- Applications Office, pour les versions répertoriées dans le [tableau des versions prises en charge pour les applications Microsoft 365 par canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), à partir d’Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure information protection pour Office 365)
+- Applications Office, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
 - Microsoft 365 Apps for enterprise
 - Office Professionnel Plus 2019
 - Office Professionnel Plus 2016
@@ -127,7 +127,7 @@ Utilisez les instructions suivantes pour installer le client lorsque vous n’ut
     
     Par exemple : **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
-    Dans ce fichier journal, recherchez la chaîne suivante : **Produit : Microsoft Azure Information Protection -- Installation effectuée.** En cas d’échec de l’installation, ce fichier journal contient des informations pour vous aider à identifier et résoudre les problèmes.
+    Dans ce fichier journal, recherchez la chaîne suivante : **Product : Microsoft Azure information protection--installation terminée**. En cas d’échec de l’installation, ce fichier journal contient des informations pour vous aider à identifier et résoudre les problèmes.
 
 #### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Plus d’informations sur le paramètre d’installation ServiceLocation
 

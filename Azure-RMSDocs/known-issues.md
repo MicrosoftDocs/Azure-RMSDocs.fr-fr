@@ -11,19 +11,23 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a1ac4e5470df68076585d9f328b28c76377a26d
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384228"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
-Utilisez les listes et les tableaux ci-dessous pour trouver des informations sur les problèmes connus et les limitations liées aux fonctionnalités de Azure Information Protection.
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-> [!NOTE]
-> Cet article fait référence aux problèmes connus dans les clients d’étiquetage classiques et unifiés. Vous ne connaissez pas trop la différence entre ces clients ? Consultez le [Forum aux questions](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
+Utilisez les listes et les tableaux ci-dessous pour trouver des informations sur les problèmes connus et les limitations liées aux fonctionnalités de Azure Information Protection.
 
 ## <a name="client-support-for-container-files-such-as-zip-files"></a>Prise en charge des fichiers de conteneur par les clients, tels que les fichiers. zip
 
@@ -39,7 +43,7 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : types d
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>Problèmes connus liés à AIP et à la protection contre les attaques
 
-Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3, où la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée.
+Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3, où la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée et entraîne le blocage des applications Office.
 
 Si vous disposez d’une version 2 ou 3 de .NET en plus d’une version de .NET 4. x requise pour votre système, veillez à désactiver la protection contre l’exploitation avant AIP. 
 
@@ -65,15 +69,15 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problèmes connus liés à AIP dans les applications Office
 
-|Caractéristique  |Problèmes connus  |
+|Composant  |Problèmes connus  |
 |---------|---------|
 |**Plusieurs versions d’Office**    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
-|**Affichages multiples** |Si vous utilisez plusieurs affichages et que vous avez une application Office ouverte : <br><br>-Vous pouvez rencontrer des problèmes de performances dans vos applications Office.<br>-La barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des écrans <br><br>Pour garantir des performances cohérentes et que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général,** sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence.**    |
+|**Affichages multiples** |Si vous utilisez plusieurs affichages et que vous avez une application Office ouverte : <br><br>-Vous pouvez rencontrer des problèmes de performances dans vos applications Office.<br>-La barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des écrans <br><br>Pour garantir des performances cohérentes et que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général**, sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence**.    |
 |**Prise en charge d’IRM dans Office 2016**| Le paramètre de Registre [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , qui contrôle le chiffrement des métadonnées dans Office 2016, n’est pas pris en charge pour les étiquettes de Azure information protection.|
 |**Marquages de contenu dans Word**    | Les [marquages de contenu](configure-policy-markings.md) AIP dans les en-têtes ou pieds de page de Microsoft Word peuvent être décalés ou placés de manière incorrecte, ou peuvent être masqués entièrement, lorsque ce même en-tête ou pied de page contient également un tableau.<br><br>Pour plus d’informations, consultez la page [quand des marquages visuels sont appliqués](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Fichiers joints aux courriers électroniques** |En raison d’une limitation dans les mises à jour Windows récentes, lorsque [Microsoft Outlook est protégé par Azure Rights Management](office-apps-services-support.md), les fichiers joints aux courriers électroniques peuvent être verrouillés après l’ouverture du fichier. |
 |**Fusion et publipostage**    |  La fonctionnalité [Publipostage](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) n’est pas prise en charge avec les fonctionnalités Azure Information Protection.       |
-| **Courriers électroniques S/MIME** | L’ouverture des e-mails S/MIME dans le volet de lecture d’Outlook peut entraîner des problèmes de performances. <br><br>Pour éviter les problèmes de performances avec les e-mails S/MIME, activez la propriété avancée [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . <br><br>**Remarque :** L’activation de cette propriété empêche l’affichage de la barre AIP ou de la classification des messages dans le volet de lecture d’Outlook. |
+| **Courriers électroniques S/MIME** | L’ouverture des e-mails S/MIME dans le volet de lecture d’Outlook peut entraîner des problèmes de performances. <br><br>Pour éviter les problèmes de performances avec les e-mails S/MIME, activez la propriété avancée [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . <br><br>**Remarque**: l’activation de cette propriété empêche l’affichage de la barre AIP ou de la classification des messages dans le volet de lecture d’Outlook. |
 |**Option Envoyer vers l’Explorateur de fichiers** |Si vous choisissez de cliquer avec le bouton droit sur un fichier dans l’Explorateur de fichiers et que vous sélectionnez **Envoyer à > destinataire du courrier**, le message Outlook qui s’ouvre avec le fichier joint peut ne pas afficher la barre d’outils AIP. <br><br>Si cela se produit et que vous devez utiliser les options de la barre d’outils AIP, commencez votre adresse de messagerie à partir d’Outlook, puis accédez au fichier que vous souhaitez envoyer et joignez-le.|
 | | |
 
@@ -83,7 +87,7 @@ La publication des stratégies peut prendre jusqu’à 24 heures.
 
 ## <a name="known-issues-in-the-aip-client"></a>Problèmes connus dans le client AIP
 
-- **Tailles de fichier maximales. Les fichiers** de plus de 2 Go sont pris en charge pour la protection, mais pas pour le déchiffrement.
+- **Tailles de fichier maximales.** de plus de 2 Go sont pris en charge pour la protection, mais pas pour le déchiffrement.
 
 - **Visionneuse AIP.** La visionneuse AIP affiche des images en mode portrait, et certaines images larges et de vue paysage peuvent sembler étirées.
 
@@ -121,7 +125,7 @@ Bien que vous puissiez inviter des utilisateurs externes à activer un compte d�
 
 Nous vous recommandons d’activer les stratégies d’accès conditionnel basé sur AIP pour vos utilisateurs internes uniquement.
 
-**Activez les stratégies d’accès conditionnel pour AIP pour les utilisateurs internes uniquement :**
+**Activez les stratégies d’accès conditionnel pour AIP pour les utilisateurs internes uniquement**:
 
 1.  Dans le Portail Azure, accédez au panneau **accès conditionnel** , puis sélectionnez la stratégie d’accès conditionnel que vous souhaitez modifier. 
 2.  Sous **affectations**, sélectionnez **utilisateurs et groupes**, puis sélectionnez **tous les utilisateurs**. Assurez-vous que l’option **tous les utilisateurs invités et externes** n’est *pas* sélectionnée.
@@ -131,7 +135,7 @@ Vous pouvez également désactiver entièrement l’autorité de certification d
 
 Pour plus d’informations, consultez la [documentation relative à l’accès conditionnel](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Autres informations
+## <a name="more-information"></a>Informations complémentaires
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

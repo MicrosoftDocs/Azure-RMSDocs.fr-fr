@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 11/18/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: cddb3ad6bd23a58922a87d27dcd6a0a1e82bd312
-ms.sourcegitcommit: 173f46dd5f14c27911faec737be5986a33407477
+ms.openlocfilehash: 8cdeb7ec7bd30d6b15b832eeb080317d5b26ec08
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "95568547"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384619"
 ---
 # <a name="azure-security-baseline-for-azure-information-protection"></a>Ligne de base de sécurité Azure pour Azure Information Protection
 
@@ -50,11 +50,11 @@ Microsoft gère les préfixes d’adresse englobés par la balise de service et 
 
 Passez en revue le score sécurisé de l’identité Azure AD pour vous aider à évaluer votre position de sécurité des identités par rapport aux recommandations de Microsoft en matière de meilleures pratiques. Utilisez le score pour évaluer avec précision votre configuration par rapport aux meilleures pratiques recommandées et apporter des améliorations à votre posture de sécurité.
 
-Standardisez Azure AD pour régir la gestion des identités et des accès de votre organisation dans :
+Normalisez Azure AD pour régir la gestion des identités et des accès de votre organisation dans :
 
 - Microsoft Cloud des ressources, telles que les Portail Azure, le stockage Azure, les machines virtuelles Azure (Linux et Windows), le Azure Key Vault, la plateforme en tant que service (PaaS) et les applications SaaS (Software as a service)
 
-- Les ressources de votre organisation, telles que les applications sur Azure ou les ressources réseau de votre entreprise
+- Les ressources de votre organisation, comme les applications sur Azure ou les ressources réseau de votre entreprise.
 
 Azure AD prend en charge les identités externes pour permettre aux utilisateurs sans compte Microsoft de se connecter à leurs applications et ressources avec leurs comptes non Microsoft.
 
@@ -64,7 +64,7 @@ Azure AD prend en charge les identités externes pour permettre aux utilisateurs
 
 - [Utilisez des fournisseurs d'identité externes pour l’application](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
 
-- [Quel est le score de sécurité d’identité dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [Qu’est-ce que le degré de sécurisation Identity Secure Score dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
 
 **Supervision d’Azure Security Center** : Non applicable
 
@@ -84,7 +84,7 @@ Azure AD prend en charge les identités externes pour permettre aux utilisateurs
 
 **Guide**: Azure information protection est intégré à Azure Active Directory (Azure AD), qui est le service de gestion des identités et des accès par défaut d’Azure. 
 
-Azure Information Protection utilise Azure AD pour assurer la gestion des identités et des accès aux ressources Azure, aux applications Cloud et aux applications locales. Cela comprend les identités d’entreprise telles que les employés, ainsi que les identités externes telles que les partenaires, les fournisseurs et les fournisseurs. Cela permet à l’authentification unique de gérer et de sécuriser l’accès aux données et ressources de votre organisation en local et dans le Cloud. Connectez tous vos utilisateurs, applications et appareils au Azure AD pour un accès transparent et sécurisé, ainsi qu’une visibilité et un contrôle accrus.
+Azure Information Protection utilise Azure AD pour assurer la gestion des identités et des accès aux ressources Azure, aux applications Cloud et aux applications locales. Cela inclut les identités d’entreprise, comme les employés, ainsi que les identités externes, comme les partenaires et les fournisseurs. Cela permet à l’authentification unique de gérer et de sécuriser l’accès aux données et aux ressources de votre organisation localement et dans le cloud. Connectez l’ensemble de vos utilisateurs, applications et appareils à Azure AD pour un accès transparent et sécurisé, ainsi qu’une visibilité et un contrôle accrus.
 
 - [Connectez-vous à Azure Information Protection avec Azure Active Directory](https://docs.microsoft.com/azure/information-protection/requirements)
 
@@ -116,13 +116,13 @@ Aide supplémentaire concernant Azure AD :
 
 - Connexion : le rapport de connexion fournit des informations sur l’utilisation des applications gérées et des activités de connexion des utilisateurs.
 - Journaux d’audit : traçabilité proposée via des journaux d’activité pour toutes les modifications effectuées par diverses fonctionnalités au sein d’Azure AD. Des exemples de journaux d’audit incluent les modifications apportées aux ressources dans Azure AD, telles que l’ajout ou la suppression d’utilisateurs, d’applications, de groupes, de rôles et de stratégies.
-- Connexion risquée : une connexion risquée est un indicateur pour une tentative de connexion qui a pu être effectuée par une personne qui n’est pas le propriétaire légitime d’un compte d’utilisateur.
+- Connexion risquée : une connexion risquée indique une tentative de connexion susceptible de provenir d’un utilisateur autre que le propriétaire légitime d’un compte d’utilisateur.
 - Utilisateurs avec indicateur de risque : un utilisateur à risque correspond à un indicateur de compte d’utilisateur susceptible d’être compromis.
 Ces sources de données peuvent être intégrées à Azure Monitor, à Azure Sentinel ou à des systèmes SIEM tiers.
 
 Azure Security Center pouvez également alerter certaines activités suspectes, telles qu’un nombre excessif de tentatives d’authentification ayant échoué ou des comptes dépréciés dans l’abonnement.
 
-Azure-protection avancée contre les menaces (ATP) est une solution de sécurité qui peut utiliser Active Directory signaux permettant d’identifier, de détecter et d’examiner les menaces avancées, les identités compromises et les actions malveillantes de l’Insider.
+Azure Advanced Threat Protection (ATP) est une solution de sécurité qui peut utiliser les signaux Active Directory pour identifier, détecter et examiner les menaces avancées, les identités compromises et les actions malveillantes internes.
 
 - [Rapports d’activité d’audit dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -196,7 +196,7 @@ Azure Information Protection comprend un rôle de niveau administrateur dans Azu
 
 Utilisez Azure AD pour gérer les ressources, passer en revue les comptes d’utilisateur et accéder régulièrement aux affectations pour vous assurer que les comptes et leur accès sont valides. Effectuez des révisions d’accès Azure AD pour passer en revue les appartenances aux groupes, l’accès aux applications d’entreprise et les attributions de rôles. Détecte les comptes obsolètes avec les rapports de Azure AD. Les fonctionnalités de Privileged Identity Management de Azure AD peuvent être utilisées pour créer un flux de travail de rapport de révision d’accès afin de faciliter le processus de révision.
 
-En outre, Azure Privileged Identity Management peut également être configuré pour alerter en cas de création d’un nombre excessif de comptes d’administrateur et pour identifier les comptes d’administrateur périmés ou mal configurés. Notez que certains services Azure prennent en charge les utilisateurs et les rôles locaux qui ne sont pas gérés par le biais de Azure AD. Les clients devront gérer ces utilisateurs séparément.
+En outre, Azure Privileged Identity Management peut être configuré pour déclencher des alertes lorsqu'un nombre excessif de comptes d'administrateur est créé, et pour identifier les comptes d'administrateur obsolètes ou mal configurés. Notez que certains services Azure prennent en charge les utilisateurs et les rôles locaux qui ne sont pas gérés par le biais de Azure AD. Les clients devront gérer ces utilisateurs séparément.
 
 - [Rôle d’administrateur Azure Information Protection](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
@@ -332,7 +332,7 @@ Azure Information Protection est une solution basée sur le Cloud qui permet aux
 
 ### <a name="am-1-ensure-security-team-has-visibility-into-risks-for-assets"></a>AM-1 : S’assurer que l’équipe de sécurité a une visibilité sur les risques pour les ressources
 
-**Guide**: Assurez-vous que les équipes de sécurité reçoivent des autorisations de lecteur de sécurité dans votre locataire Azure et les abonnements afin qu’ils puissent surveiller les risques de sécurité à l’aide de Azure Security Center. 
+**Conseils** : Assurez-vous que les équipes de sécurité reçoivent des autorisations de lecteur de sécurité dans votre locataire et vos abonnements Azure afin qu’elles puissent surveiller les risques de sécurité à l’aide d’Azure Security Center. 
 
 Selon la façon dont les responsabilités de l’équipe de sécurité sont structurées, la surveillance des risques de sécurité peut tenir de la responsabilité d’une équipe de sécurité centrale ou d’une équipe locale. Cela dit, les insights et les risques liés à la sécurité doivent toujours être agrégés de manière centralisée au sein d’une organisation. 
 
@@ -368,7 +368,7 @@ Remarque : Des autorisations supplémentaires peuvent être nécessaires pour o
 
 Affichez les journaux des utilisateurs fournis par Azure AD avec des rapports de Azure AD et d’autres solutions telles que Azure Monitor, Azure Sentinel ou d’autres outils SIEM/de surveillance pour des scénarios d’utilisation de surveillance et d’analyse plus sophistiqués. 
 
-Il s'agit de : 
+Il s'agit des éléments suivants : 
 
 -   Rapport de connexion – le rapport de connexion fournit des informations sur l’utilisation des applications gérées et des activités de connexion des utilisateurs.
 
@@ -472,9 +472,9 @@ Utilisez Azure Monitor fonctionnalité utilisation et estimation des coûts pour
 
 ### <a name="ir-3-detection-and-analysis--create-incidents-based-on-high-quality-alerts"></a>IR-3 : Détection et analyse – créer des incidents en fonction d’alertes de haute qualité
 
-**Guide**: Assurez-vous de disposer d’un processus pour créer des alertes de haute qualité et mesurer la qualité des alertes. Cela vous permet de tirer les leçons des incidents passés et de classer par ordre de priorité les alertes pour les analystes, afin qu’ils ne perdent pas de temps sur les faux positifs. 
+**Instructions** : Veillez à avoir un processus de création d’alertes de bonne qualité et de mesure de la qualité des alertes. Cela vous permet de tirer les leçons des incidents passés et de classer par ordre de priorité les alertes pour les analystes, afin qu’ils ne perdent pas de temps sur les faux positifs. 
 
-Les alertes de haute qualité peuvent être générées en fonction de l’expérience des incidents passés, des sources de la communauté validées et des outils conçus pour générer et nettoyer les alertes en fusionnant et en mettant en corrélation diverses sources de signal. 
+Vous pouvez créer des alertes de bonne qualité en vous basant sur l’expérience des incidents passés, sur les sources validées par la communauté, et sur des outils conçus pour générer et nettoyer les alertes en fusionnant et en mettant en corrélation différentes sources de signaux. 
 
 Azure Security Center fournit des alertes de haute qualité sur de nombreuses ressources Azure. Vous pouvez utiliser le connecteur de données ASC pour diffuser en continu les alertes vers Azure Sentinel. Azure Sentinel vous permet de créer des règles d’alerte avancées pour générer automatiquement des incidents à des fins d’enquête. 
 
@@ -500,7 +500,7 @@ Les sources de données à examiner comprennent les sources de journalisation ce
 
     - Utilisez la capacité de capture instantanée de la machine virtuelle Azure pour créer un instantané du disque du système en fonctionnement. 
 
-    - Utilisez la capacité native de sauvegarde de la mémoire du système d’exploitation pour créer un instantané de la mémoire du système en fonctionnement.
+    - Utilisez la fonctionnalité de vidage de mémoire intégrée au système d’exploitation pour créer un instantané de la mémoire du système en cours d’exécution.
 
     - Utilisez la capacité de capture instantanée des services Azure ou celle de votre logiciel pour créer des instantanés des systèmes en fonctionnement.
 
@@ -520,7 +520,7 @@ Azure Sentinel fournit des analyses de données approfondies sur pratiquement to
 
 ### <a name="ir-5-detection-and-analysis--prioritize-incidents"></a>IR-5 : Détection et analyse – classer par ordre de priorité les incidents
 
-**Guide**: fournir un contexte aux analystes sur lesquels les incidents doivent se concentrer en premier sur la gravité des alertes et la sensibilité des ressources. 
+**Conseils** : Donnez aux analystes le contexte sur lequel les incidents doivent se concentrer en premier lieu en fonction de la gravité de l’alerte et de la sensibilité des ressources. 
 
 Azure Security Center attribue un niveau de gravité à chaque alerte pour vous aider à hiérarchiser celles devant être examinées en premier. La gravité dépend du niveau de confiance que Security Center accorde à la recherche ou aux données analytiques utilisées pour émettre l’alerte, mais aussi de l’intention malveillante estimée de l’activité à l’origine de l’alerte.
 
@@ -536,7 +536,7 @@ En outre, marquez les ressources à l’aide d’étiquettes et créez un systè
 
 ### <a name="ir-6-containment-eradication-and-recovery--automate-the-incident-handling"></a>IR-6 : Confinement, éradication et récupération – automatiser la gestion des incidents
 
-**Guide**: automatiser les tâches répétitives manuellement pour accélérer le temps de réponse et réduire la charge de travail des analystes. Les tâches manuelles sont plus longues à exécuter, ce qui ralentit chaque incident et réduit le nombre d’incidents qu’un analyste peut traiter. Les tâches manuelles augmentent également la fatigue des analystes, ce qui accroît le risque d’erreur humaine entraînant des retards et dégrade la capacité des analystes à se concentrer efficacement sur des tâches complexes. Utilisez les fonctionnalités d’automatisation des workflows dans Azure Security Center et Azure Sentinel pour déclencher automatiquement des actions ou exécuter un playbook pour répondre aux alertes de sécurité entrantes. Le playbook prend des mesures, telles que l’envoi de notifications, la désactivation de comptes et l’isolement des réseaux problématiques. 
+**Conseils** : Automatisez les tâches manuelles répétitives pour accélérer le temps de réponse et réduire la charge de travail des analystes. Les tâches manuelles sont plus longues à exécuter, ce qui ralentit chaque incident et réduit le nombre d’incidents qu’un analyste peut traiter. Les tâches manuelles augmentent également la fatigue des analystes, ce qui accroît le risque d’erreur humaine entraînant des retards et dégrade la capacité des analystes à se concentrer efficacement sur des tâches complexes. Utilisez les fonctionnalités d’automatisation des workflows dans Azure Security Center et Azure Sentinel pour déclencher automatiquement des actions ou exécuter un playbook pour répondre aux alertes de sécurité entrantes. Le playbook prend des mesures, telles que l’envoi de notifications, la désactivation de comptes et l’isolement des réseaux problématiques. 
 
 - [Configurer l’automatisation du workflow dans Security Center](https://docs.microsoft.com/azure/security-center/workflow-automation)
 
@@ -544,7 +544,7 @@ En outre, marquez les ressources à l’aide d’étiquettes et créez un systè
 
 - [Configurer des réponses automatisées aux menaces dans Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-respond-threats-playbook)
 
-**Supervision d’Azure Security Center** : actuellement non disponible
+**Supervision Azure Security Center** : actuellement non disponible
 
 **Responsabilité** : Customer
 
@@ -590,7 +590,7 @@ Pour plus d’informations, consultez les références suivantes :
 
 ### <a name="pv-8-conduct-regular-attack-simulation"></a>PV-8 : Effectuer une simulation d’attaque régulière
 
-**Conseils**: si nécessaire, procédez à des tests d’intrusion ou à des activités de l’équipe Red Team sur vos ressources Azure, et assurez la mise à jour de toutes les découvertes de sécurité critiques.
+**Conseils** : Selon les besoins, effectuez un test d’intrusion ou des activités Red Team sur vos ressources Azure et résolvez tous les problèmes de sécurité critiques détectés.
 Suivez les règles d’engagement de pénétration du cloud Microsoft pour vous assurer que vos tests d’intrusion sont conformes aux stratégies de Microsoft. Utilisez la stratégie et l’exécution de Red Teaming de Microsoft ainsi que les tests d’intrusion de site actif sur l’infrastructure cloud, les services et les applications gérés par Microsoft.
 
 - [Test d’intrusion dans Azure](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
@@ -605,7 +605,7 @@ Suivez les règles d’engagement de pénétration du cloud Microsoft pour vous 
 
 ## <a name="backup-and-recovery"></a>Sauvegarde et récupération
 
-*Pour plus d’informations, consultez le [test de sécurité Azure : sauvegarde et récupération](/azure/security/benchmarks/security-controls-v2-backup-recovery).*
+*Pour plus d’informations, consultez [Benchmark de sécurité Azure : Sauvegarde et récupération](/azure/security/benchmarks/security-controls-v2-backup-recovery).*
 
 ### <a name="br-4-mitigate-risk-of-lost-keys"></a>BR-4 : Atténuer les risques liés aux clés perdues
 
@@ -638,7 +638,7 @@ Cette stratégie doit inclure les recommandations, stratégies et normes documen
 
 -   Stratégie de contrôle d’accès requise conformément à la classification des données organisationnelles
 
--   Utilisation des fonctionnalités Azure natives et de protection des données tierces
+-   Utilisation de fonctionnalités de protection des données intégrées et tierces Azure
 
 -   Exigences de chiffrement des données pour les cas d’utilisation en transit et au repos
 
@@ -680,7 +680,7 @@ Veillez à ce que la stratégie de segmentation soit implémentée de manière c
 
 ### <a name="gs-3-define-security-posture-management-strategy"></a>GS-3 : Définir la stratégie de gestion de la posture de la sécurité
 
-**Guide**: Mesurez et atténuez en permanence les risques liés à vos ressources individuelles et à l’environnement dans lequel elles sont hébergées. Priorisez les ressources à valeur élevée et les surfaces d’attaque hautement exposées, comme les applications publiées, les points d’entrée et de sortie du réseau, les points de terminaison utilisateur et administrateur, etc.
+**Conseils** : Mesurez et atténuez en permanence les risques liés à vos ressources individuelles et à l’environnement dans lequel elles sont hébergées. Priorisez les ressources à valeur élevée et les surfaces d’attaque hautement exposées, comme les applications publiées, les points d’entrée et de sortie du réseau, les points de terminaison utilisateur et administrateur, etc.
 
 - [Benchmark de sécurité Azure - Gestion de la posture et des vulnérabilités](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
 
@@ -735,7 +735,7 @@ Pour plus d’informations, consultez les références suivantes :
 
 ### <a name="gs-6-define-identity-and-privileged-access-strategy"></a>GS-6 : Définir une stratégie d’accès privilégié et d’identité
 
-**Guide**: établissez une approche d’identité et d’accès privilégié Azure dans le cadre de la stratégie de contrôle d’accès de sécurité globale de votre organisation.  
+**Conseils** : Établissez une approche d’identité Azure et d’accès privilégié dans le cadre de la stratégie de contrôle d’accès de sécurité globale de votre organisation.  
 
 Cette stratégie doit inclure les recommandations, stratégies et normes documentées pour les éléments suivants : 
 
@@ -765,7 +765,7 @@ Pour plus d’informations, consultez les références suivantes :
 
 ### <a name="gs-7-define-logging-and-threat-response-strategy"></a>GS-7 : Définir la stratégie de journalisation et de réponse aux menaces
 
-**Conseils** : Établissez une stratégie de journalisation et de réponse aux menaces pour détecter et corriger rapidement les menaces tout en répondant aux exigences de conformité. Hiérarchisez les analystes en fournissant des alertes de haute qualité et des expériences homogènes afin qu’ils puissent se concentrer sur les menaces plutôt que sur l’intégration et les étapes manuelles. 
+**Conseils** : Établissez une stratégie de journalisation et de réponse aux menaces pour détecter et corriger rapidement les menaces tout en répondant aux exigences de conformité. En priorité, fournissez aux analystes des alertes de bonne qualité et des expériences homogènes afin qu’ils puissent se concentrer sur les menaces plutôt que sur l’intégration et les étapes manuelles. 
 
 Cette stratégie doit inclure les recommandations, stratégies et normes documentées pour les éléments suivants : 
 
@@ -775,11 +775,11 @@ Cette stratégie doit inclure les recommandations, stratégies et normes documen
 
 -   Capture et rétention des journaux pour prendre en charge la détection des menaces, la réponse aux incidents et les besoins de conformité
 
--   Visibilité centralisée des informations de corrélation sur les menaces, avec SIEM, les fonctionnalités Azure natives et d’autres sources 
+-   Visibilité centralisée et corrélation des informations relatives aux menaces, à l’aide de SIEM, des fonctionnalités Azure intégrées et d’autres sources 
 
 -   Plan de communication et de notification avec vos clients, fournisseurs et les parties publiques pertinentes
 
--   Utilisation de plateformes Azure natives et tierces pour la gestion des incidents, comme la journalisation et la détection des menaces, les investigations et la correction et l’éradication des attaques
+-   Utilisation de plateformes Azure intégrées et tierces pour la gestion des incidents, telles que la journalisation et la détection des menaces, l’investigation, la correction et l’éradication des attaques
 
 -   Processus de gestion des incidents et des activités postérieures aux incidents, comme les leçons apprises et la rétention des preuves
 

@@ -11,20 +11,20 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2af1d3fad0e831032d8c7f6aa2a312cdfb7a9558
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3514e97bb454c599fef40660d952f201e18323c2
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568049"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385452"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Instructions pour**: [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide.md). *
 
 Utilisez les informations de ce guide si vous êtes responsable de la Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, ou si vous souhaitez des informations plus techniques que celles figurant dans le Guide de l' [utilisateur du client d’étiquetage unifié Azure information protection](clientv2-user-guide.md). 
 
@@ -50,7 +50,7 @@ Le client d’étiquetage unifié Azure Information Protection comprend les él�
 
 - L’Explorateur de fichiers Windows, avec des options contextuelles permettant aux utilisateurs d’appliquer des étiquettes de classification et la protection aux fichiers.
 
-- Une visionneuse pour afficher les fichiers protégés lorsqu’une application native ne peut pas les ouvrir.
+- Une visionneuse pour afficher les fichiers protégés lorsqu’une application intégrée ne peut pas l’ouvrir.
 
 - Un module PowerShell pour découvrir des informations sensibles dans des fichiers et appliquer ou supprimer des étiquettes de classification et la protection des fichiers. 
     
@@ -75,7 +75,7 @@ Déployez le client d’étiquetage unifié Azure Information Protection si vous
 
 - Vous souhaitez tester un service qui découvre, classifie (et éventuellement protège) les fichiers qui sont stockés en local.
 
-- Vous souhaitez afficher des documents protégés lorsqu’une application native permettant d’afficher le fichier n’est pas installée ou ne parvient pas à ouvrir ces documents.
+- Vous souhaitez afficher des documents protégés quand une application intégrée qui affiche le fichier n’est pas installée ou ne peut pas ouvrir ces documents.
 
 Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative :
 
@@ -114,29 +114,29 @@ Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime
 
 - Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers dans les emplacements suivants. Ces fichiers incluent des certificats clients, des modèles de protection, des étiquettes de sensibilité et des stratégies à partir de votre centre de gestion des étiquettes, ainsi que les informations d’identification de l’utilisateur mises en cache. Les fichiers journaux clients ne sont pas supprimés.
     
-    - %LocalAppData%\Microsoft\DRM
+    - **%LocalAppData%\Microsoft\DRM**
     
-    - %LocalAppData%\Microsoft\MSIPC
+    - **%LocalAppData%\Microsoft\MSIPC**
     
-    - %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>*
+    - **%LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>***
     
-    - %LocalAppData%\Microsoft\MSIP\AppDetails
+    - **%LocalAppData%\Microsoft\MSIP\AppDetails**
     
-    - %LocalAppData%\Microsoft\MSIP\TokenCache
+    - **%LocalAppData%\Microsoft\MSIP\TokenCache**
 
 - Les clés de Registre et les paramètres suivants sont supprimés. Si les paramètres d’une de ces clés de Registre ont des valeurs personnalisées, ils doivent être reconfigurés après la réinitialisation du client.
     
     En général, pour les réseaux d’entreprise, ces paramètres sont configurés à l’aide de la stratégie de groupe, auquel cas ils sont automatiquement réappliqués lorsque la stratégie de groupe est actualisée sur l’ordinateur. Par contre, certains paramètres peuvent avoir été configurés ponctuellement, par le biais d’un script ou manuellement. Dans ce cas, vous devez prendre des mesures supplémentaires pour reconfigurer ces paramètres. Par exemple, les ordinateurs peuvent exécuter un script ponctuellement afin de configurer des paramètres pour une redirection vers Azure Information Protection, car vous procédez à la migration depuis AD RMS et vous disposez toujours d’un point de connexion de service sur votre réseau. Après la réinitialisation du client, l’ordinateur doit réexécuter ce script.
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
+    - **HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC**
 
 - L’utilisateur actuellement connecté est déconnecté.
 
@@ -170,20 +170,20 @@ Le scanneur du client d’étiquetage unifié est mis à la disposition généra
 
 Si vous installez le scanneur pour la première fois sur un ordinateur, téléchargez et installez ce client, puis suivez les instructions de [la procédure de déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md).
 
-Si vous mettez à niveau le scanneur à partir du client Azure Information Protection (Classic) ou d’une version précédente du client d’étiquetage unifié, consultez la section [mise à niveau du scanneur Azure information protection](#upgrading-the-azure-information-protection-scanner) pour obtenir des instructions.
+Si vous mettez à niveau le scanneur à partir du client Azure Information Protection Classic ou d’une version antérieure du client d’étiquetage unifié, consultez la section [Upgrading the Azure information protection scanner](#upgrading-the-azure-information-protection-scanner) pour obtenir des instructions.
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Mise à niveau et maintenance du client d’étiquetage unifié Azure Information Protection
 
 > [!NOTE]
-> Le client d’étiquetage unifié Azure Information Protection prend en charge la mise à niveau du client Azure Information Protection (Classic), ainsi que la mise à niveau à partir de versions précédentes du client d’étiquetage unifié Azure Information Protection.
+> Le client d’étiquetage unifié Azure Information Protection prend en charge la mise à niveau du client classique Azure Information Protection, ainsi que la mise à niveau à partir de versions précédentes du client d’étiquetage unifié Azure Information Protection.
 
 L’équipe Azure Information Protection met régulièrement à jour le Azure Information Protection client d’étiquetage unifié pour les nouvelles fonctionnalités et les nouveaux correctifs. Les annonces sont postées sur le [site Yammer](https://www.yammer.com/AskIPTeam) de l’équipe.
 
 Si vous utilisez Windows Update, le client d’étiquetage unifié Azure Information Protection met automatiquement à niveau la version de disponibilité générale de ce client, quelle que soit la façon dont le client a été installé. Les nouvelles versions de client sont publiées dans le catalogue quelques semaines après le lancement.
 
-Vous pouvez également mettre à niveau manuellement le client en téléchargeant la nouvelle version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Installez ensuite la nouvelle version pour mettre à niveau le client. Vous devez utiliser cette méthode pour mettre à niveau les versions préliminaires et si vous effectuez une mise à niveau à partir du client Azure Information Protection (Classic).
+Vous pouvez également mettre à niveau manuellement le client en téléchargeant la nouvelle version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Installez ensuite la nouvelle version pour mettre à niveau le client. Vous devez utiliser cette méthode pour mettre à niveau les versions préliminaires et si vous effectuez une mise à niveau à partir du client Azure Information Protection Classic.
 
-Si vous effectuez une mise à niveau à partir du client Azure Information Protection (Classic) sur Windows 7, toutes les applications Office redémarrent automatiquement au cours de la mise à niveau du client. Ce redémarrage automatique ne s’applique pas aux systèmes d’exploitation ultérieurs, ou si vous effectuez une mise à niveau à partir d’une version antérieure du client d’étiquetage unifié.
+Si vous effectuez une mise à niveau à partir du client Azure Information Protection Classic sur Windows 7, toutes les applications Office redémarrent automatiquement au cours de la mise à niveau du client. Ce redémarrage automatique ne s’applique pas aux systèmes d’exploitation ultérieurs, ou si vous effectuez une mise à niveau à partir d’une version antérieure du client d’étiquetage unifié.
 
 Lorsque vous mettez à niveau manuellement, ne désinstallez la version précédente que si vous changez de méthode d’installation. Par exemple, si vous passez de la version du fichier exécutable (.exe) du client à la version du programme d’installation (.msi) Windows du client. Ou si vous devez installer une version antérieure du client. Par exemple, vous disposez d’une version préliminaire installée pour le test et vous devez maintenant revenir à la version actuelle de la disponibilité générale.
 
@@ -191,7 +191,7 @@ Utilisez l' [historique des versions et la stratégie de support](unifiedlabelin
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 
-Les instructions de mise à niveau du scanneur varient selon que vous effectuez une mise à niveau à partir d’une version antérieure du scanneur à partir du Azure Information Protection client d’étiquetage unifié ou du client Azure Information Protection (Classic).
+Les instructions de mise à niveau du scanneur varient selon que vous effectuez une mise à niveau à partir d’une version antérieure du scanneur à partir du Azure Information Protection client d’étiquetage unifié ou du client classique Azure Information Protection.
 
 #### <a name="to-upgrade-the-scanner-from-an-earlier-version-of-the-unified-labeling-client"></a>Pour mettre à niveau le scanneur à partir d’une version antérieure du client d’étiquetage unifié
 
@@ -207,17 +207,17 @@ Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de 
 
 #### <a name="to-upgrade-the-scanner-from-the-classic-client"></a>Pour mettre à niveau le scanneur à partir du client Classic
 
-Si vous utilisez actuellement le scanneur de Azure Information Protection à partir du client Azure Information Protection (Classic), vous pouvez le mettre à niveau pour utiliser des types d’informations sensibles et des étiquettes de sensibilité publiées à partir du centre de conformité d’Office 365 Security & (ou Microsoft 365 Security Center ou le centre de conformité des Microsoft 365).
+Si vous utilisez actuellement le scanneur de Azure Information Protection à partir du client classique Azure Information Protection, vous pouvez le mettre à niveau pour utiliser des types d’informations sensibles et des étiquettes de sensibilité publiées à partir du centre de conformité d’Office 365 Security & (ou Microsoft 365 Security Center ou le centre de conformité des Microsoft 365).
 
 La procédure de mise à niveau du scanneur dépend de la version du client classique que vous exécutez actuellement :
 
-- [Mettre à niveau à partir de la version 1.48.204.0 et versions ultérieures](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+- [Mettre à niveau à partir de la version 1.48.204.0 et versions ultérieures](#upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client)
 
-- [Mise à niveau à partir de versions antérieures à 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+- [Mise à niveau à partir de versions antérieures à 1.48.204.0](#upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040)
 
 La mise à niveau crée une base de données nommée **AIPScannerUL_ \<profile_name>**, et la base de données de l’analyseur précédente est conservée si vous en avez besoin pour la version précédente. Si vous êtes certain que vous n’avez pas besoin de la base de données de l’analyseur précédente, vous pouvez la supprimer. Étant donné que la mise à niveau crée une nouvelle base de données, le moteur de base de données analyse tous les fichiers la première fois qu’elle est exécutée.
 
-##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Mettre à niveau à partir de Azure Information Protection la version 1.48.204.0 client (Classic) version et versions ultérieures de ce client
+##### <a name="upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client"></a>Mise à niveau à partir de Azure Information Protection la version 1.48.204.0 du client classique et des versions ultérieures de ce client
 
 Si vous avez mis à niveau le scanneur à l’aide de la version préliminaire du client d’étiquetage unifié, vous n’avez pas besoin de réexécuter ces instructions.
 
@@ -233,7 +233,7 @@ Si vous avez mis à niveau le scanneur à l’aide de la version préliminaire d
 
 Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md), en omettant l’étape d’installation du scanneur. Étant donné que le scanneur est déjà installé, il n’y a aucune raison de l’installer à nouveau.
 
-##### <a name="upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040"></a>Mise à niveau à partir des versions du client Azure Information Protection (Classic) antérieures à 1.48.204.0
+##### <a name="upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040"></a>Mise à niveau à partir des versions du client Azure Information Protection Classic antérieures à 1.48.204.0
 
 > [!IMPORTANT]
 > Pour un chemin de mise à niveau sans heurts, n’installez pas le client d’étiquetage unifié Azure Information Protection sur l’ordinateur exécutant le scanneur comme première étape de mise à niveau du scanneur. Utilisez plutôt les instructions de mise à niveau suivantes.

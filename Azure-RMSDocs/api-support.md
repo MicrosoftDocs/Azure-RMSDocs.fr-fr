@@ -1,10 +1,10 @@
 ---
 title: 'Autres applications prenant en charge les API RMS : installation et configuration - AIP'
 description: Découvrez comment le service Azure Rights Management d’Azure Information Protection peut prendre en charge d’autres applications pour protéger les données de votre organisation.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,21 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0eb26df168976fa028873551c8417bb1644d853a
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: fac36bf4c59608eb1393088024f39a9f936a9b5a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224629"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384007"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Autres applications prenant en charge les API Rights Management
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Utilisez les informations suivantes pour vous aider à comprendre comment le service Azure Rights Management de Azure Information Protection peut prendre en charge d’autres applications pour protéger les données de votre organisation.
 

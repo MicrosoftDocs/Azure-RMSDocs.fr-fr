@@ -4,7 +4,7 @@ description: Vous avez perdu un mot, une expression ou un acronyme lié à Micro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,27 +14,29 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f5b2dd317a6cdcf5d5d164f6431f8aa3163550da
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: af5c035a19847eca18a9686cc32895c363c0a926
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568572"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384554"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Azure Information Protection ? Recherchez ici la définition de termes et d’abréviations propres à Azure Information Protection, ou qui ont un sens particulier dans le contexte de ce service.
 
 ## <a name="word-phrase-or-acronym"></a>Mot, expression ou acronyme
 
-[Un](#a)  |  [B](#b)  |  [C](#c)  |  [D](#d)  |  [E](#e)  |  [G](#g)  |  [H](#h)  |  [Je](#i)  |  [K](#k)  |  [L](#l)  |  [M](#m) [N](#n)  |  [O](#o)  |  [P](#p)  |  [R](#r)  |  [S](#s)  |  [T](#t)  |  [U](#u)
+[Un](#a)  |  [B](#b)  |  [C](#c)  |  [D](#d)  |  [E](#e)  |  [G](#g)  |  [H](#h)  |  [Je](#i)  |  [K](#k)  |  [L](#l)  |  [M](#m) [N](#n)  |  [O](#o)  |  [P](#p)  |  [R](#r)  |  [](#s)  |  [T](#t)  |  [U](#u)
 
-### <a name="a"></a>A
+### <a name="a"></a>Un
 |Terme|Définition|
 |--------|--------------|
 |**AADRM**|Nom du premier module PowerShell pour le service de protection (Azure Rights Management), dérivé de l’abréviation non officielle d’Azure Rights Management lorsqu’il a été nommé précédemment (Windows) Azure Active Directory Rights Management. </br></br>Ce module PowerShell est maintenant remplacé par le module AIPService.|
@@ -68,7 +70,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 
 |Terme|Définition|
 |--------|--------------|
-|**occuper**|**Dans le contexte de la protection uniquement :** </br>Pour ouvrir un document ou un e-mail afin de le lire ou de l’utiliser si ce contenu a été protégé par un service de gestion des droits. </br>Pour un document, la consommation inclut le fait de modifier et d’ajouter un nouveau contenu à un document protégé. Pour un e-mail, la consommation inclut le fait de répondre à un message protégé.<br /><br/>**Dans le contexte de l’étiquetage (avec ou sans protection) :** </br>Pour lire et potentiellement agir sur les informations des étiquettes stockées dans les métadonnées des fichiers et des e-mails.|
+|**occuper**|**Dans le contexte de la protection uniquement**: </br>Pour ouvrir un document ou un e-mail afin de le lire ou de l’utiliser si ce contenu a été protégé par un service de gestion des droits. </br>Pour un document, la consommation inclut le fait de modifier et d’ajouter un nouveau contenu à un document protégé. Pour un e-mail, la consommation inclut le fait de répondre à un message protégé.<br /><br/>**Dans le contexte de l’étiquetage (avec ou sans protection)**: </br>Pour lire et potentiellement agir sur les informations des étiquettes stockées dans les métadonnées des fichiers et des e-mails.|
 |**clé de contenu**|Clé unique créée par des applications compatibles RMS pour chaque document ou e-mail protégé avec Rights Management et qui aide à limiter le risque de divulgation des informations.|
 | | |
 
@@ -151,7 +153,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 
 |Terme|Définition|
 |--------|--------------|
-|**Chiffrement des messages Office**|Souvent abrégé *OME*.<br /><br />Les nouvelles fonctionnalités de chiffrement de messages Office 365 ont une intégration native avec le service Azure Rights Management pour fournir la même protection des e-mails des utilisateurs internes et externes, actualiser automatiquement les modèles et prendre en charge le scénario BYOK (Bring your own key). </br></br>La précédente implémentation d’OME était seulement conçue pour les destinataires externes, nécessitait une règle de flux de courrier et ne prenait pas en charge BYOK.|
+|**Chiffrement des messages Office**|Souvent abrégé *OME*.<br /><br />Les nouvelles fonctionnalités de chiffrement de messages Office 365 intègrent le service Azure Rights Management pour offrir la même protection de messagerie pour les utilisateurs internes et externes, l’actualisation automatique des modèles et la prise en charge du scénario BYOK. </br></br>La précédente implémentation d’OME était seulement conçue pour les destinataires externes, nécessitait une règle de flux de courrier et ne prenait pas en charge BYOK.|
 | | |
 
 ### <a name="p"></a>P
@@ -201,3 +203,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |**étiquette unifiée**| Également appelée *étiquette de sensibilité unifiée*.<br /><br /> Étiquette qui peut être appliquée par les applications, les clients et les services qui prennent en charge Microsoft Information Protection Framework, pour appliquer la classification et éventuellement la protection. </br></br>Dans les applications et services Office, les étiquettes unifiées sont implémentées en tant qu’étiquettes de sensibilité.|
 |**ôter la protection**|Supprimer des contrôles de protection de fichiers ou d’e-mails, qui utilisent des stratégies de chiffrement, d’identité, de droits d’utilisation et de contrôle d’accès afin de sécuriser vos données.|
 |**licence d'utilisation**|Certificat associé à un document, qui est accordé à un utilisateur qui ouvre un fichier ou un e-mail protégé par un service de gestion des droits. </br></br>Ce certificat contient les droits d'utilisateur du fichier ou de l'e-mail, la clé de chiffrement qui est utilisée pour chiffrer le contenu, ainsi que les restrictions d'accès supplémentaires définies dans la stratégie du document.|
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations sur les noms AIP, consultez [Azure information protection, également appelé...](aka.md).

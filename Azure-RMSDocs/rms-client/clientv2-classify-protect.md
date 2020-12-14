@@ -5,26 +5,26 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 1e975eb3449169609e7b283e690b4d9046d5902e
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 4b95b8f3242a9200500f8904992a13c4661ca31f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568037"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385435"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : classifier et protéger avec le client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide de l’utilisateur du client Classic](client-classify-protect.md). *
 
 > [!NOTE]
 > Utilisez ces instructions pour classifier et protéger vos documents et e-mails. Si vous avez uniquement besoin de classifier et non de protéger vos documents et e-mails, consultez les [instructions de classification seule](clientv2-classify.md). Si vous ne savez pas quel ensemble d’instructions utiliser, contactez votre administrateur ou votre support technique.
@@ -74,7 +74,7 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 - Vous n’avez peut-être pas [installé](install-unifiedlabelingclient-app.md)le client d’étiquetage unifié Azure information protection.
 
-- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection (Classic) est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
+- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection Classic est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
  
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
 
@@ -82,7 +82,7 @@ Raisons possibles :
 
 - Si votre administrateur a récemment configuré une nouvelle étiquette pour vous, essayez de fermer toutes les instances de votre application Office, puis de la rouvrir. Cette action recherche les modifications apportées à vos étiquettes.
 
-- Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez **Sensitivity** sur  >  **aide et commentaires** sur la sensibilité. Dans la boîte de dialogue, vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n’est pas sous licence pour Office Professionnel Plus**. 
+- Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez sur  >  **aide et commentaires** sur la sensibilité. Dans la boîte de dialogue, vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n’est pas sous licence pour Office Professionnel Plus**. 
     
     Vous n’avez pas besoin d’Office professionnel plus si vous avez des applications Office à partir de Microsoft 365 Apps for Business ou Microsoft 365 Business Premium lorsque l’utilisateur se voit attribuer une licence pour Azure Rights Management (également appelée Azure Information Protection pour Microsoft 365).
 
@@ -149,7 +149,7 @@ La classification et la protection que vous avez spécifiées restent avec le fi
 ## <a name="other-instructions"></a>Autres instructions
 Pour plus d’informations sur les instructions du Guide de l’utilisateur pour Azure Information Protection client d’étiquetage unifiée, procédez comme suit :
 
--   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
+-   [Que voulez-vous faire ?](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
 

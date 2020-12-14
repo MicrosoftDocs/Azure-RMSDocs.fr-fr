@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
@@ -13,19 +13,22 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6f095c7cfd7a41663da3fd4f19d47012fa2604b5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 44de4e40b64cb7d76c2e0b581fd4641f462b9cd4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316685"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386285"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) et [restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels) de la documentation de Microsoft 365. *
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>
 
 Lorsque vous utilisez le service Azure Rights Management à partir de Azure Information Protection, les modèles de protection sont automatiquement téléchargés vers les ordinateurs clients afin que les utilisateurs puissent les sélectionner à partir de leurs applications. En revanche, vous devrez peut-être effectuer d'autres étapes si vous apportez des modifications aux modèles :
 
@@ -39,7 +42,7 @@ Lorsque vous utilisez le service Azure Rights Management à partir de Azure Info
 |Exchange sur site avec le connecteur Azure Rights Management<br /><br />Applicable aux règles de transport et à Outlook Web App|Actualisation automatique (aucune étape supplémentaire nécessaire). Toutefois, Outlook Web App met l’interface utilisateur en cache pendant un jour.|
 |Office 2019 pour Mac et Office 2016 pour Mac|Actualisation automatique lorsque vous ouvrez le contenu protégé. Pour forcer une actualisation, consultez la section suivante, [office 2019 pour Mac et office 2016 pour Mac : comment forcer une actualisation des modèles](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Application de partage RMS pour les ordinateurs Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
-|Office 365 ProPlus avec [étiquetage intégré](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Ce client d’étiquetage intégré ne télécharge pas de modèles, mais y accède en ligne, aucune étape supplémentaire n’est requise.|
+|Office 365 ProPlus avec [étiquetage intégré](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Cette solution d’étiquetage intégrée ne télécharge pas de modèles, mais y accède en ligne, aucune étape supplémentaire n’est requise.|
 | | |
 
 Lorsque les applications clientes doivent télécharger des modèles (initialement ou actualisés pour des modifications), préparez-vous à attendre jusqu’à 30 minutes avant que le téléchargement soit terminé et que les modèles nouveaux ou mis à jour soient entièrement opérationnels. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration du modèle et la connectivité réseau. 
@@ -56,19 +59,19 @@ En modifiant le registre sur les ordinateurs qui exécutent Microsoft 365 Apps, 
     
     - Pour définir une fréquence de mise à jour en jours (au moins 1 jour) :  créez une valeur de Registre nommée **TemplateUpdateFrequency**, et définissez une valeur entière pour les données, spécifiant la fréquence en jours de téléchargement des modifications dans un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
-        **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Chemin du Registre**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **Type :** REG_DWORD
+        **Type** : REG_DWORD
 
-        **Valeur** : TemplateUpdateFrequency
+        **Valeur**: TemplateUpdateFrequency
 
     - Pour définir une fréquence de mise à jour en secondes (au moins 1 seconde) :  créez une valeur de Registre nommée **TemplateUpdateFrequencyInSeconds**, et définissez une valeur entière pour les données, spécifiant la fréquence en secondes de téléchargement des modifications dans un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
-        **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Chemin du Registre**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **Type :** REG_DWORD
+        **Type** : REG_DWORD
 
-        **Valeur :** TemplateUpdateFrequencyInSeconds
+        **Valeur**: TemplateUpdateFrequencyInSeconds
 
     Assurez-vous que vous créez et définissez l'une de ces valeurs de Registre, pas les deux. Si les deux sont présentes, **TemplateUpdateFrequency** est ignoré.
 
@@ -78,11 +81,11 @@ En modifiant le registre sur les ordinateurs qui exécutent Microsoft 365 Apps, 
 
 1. Dans l’Éditeur du Registre, supprimez les données de la valeur **LastUpdatedTime**. Par exemple, les données peuvent afficher **2015-04-20T15:52**. Supprimez 2015-04-20T15:52 pour qu’aucune donnée ne s’affiche. Utilisez les informations suivantes pour rechercher le chemin de Registre et supprimer ces données de valeur de Registre.
 
-   **Chemin du Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> \Template \\ < *user_alias*>
+   **Chemin du Registre**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> \Template \\ < *user_alias*>
 
-   **Type :** REG_SZ
+   **Type**: REG_SZ
 
-   **Valeur** : LastUpdatedTime
+   **Valeur**: LastUpdatedTime
 
    > [!TIP]
    > Dans le chemin de Registre, *<MicrosoftRMS_FQDN>* fait référence au nom de domaine complet de votre service Microsoft RMS. Si vous souhaitez vérifier cette valeur :

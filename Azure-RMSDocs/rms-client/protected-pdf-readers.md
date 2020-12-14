@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
@@ -14,14 +14,21 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: e8cd7846159e2299d33b8b6533813ac8502140d3
-ms.sourcegitcommit: 2a72516a1f380adddd6501984b1989e3fa051976
+ms.openlocfilehash: f6ebddb276cdf77c977acc516cf1b6c3d2bbc7b4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "95568427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385112"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Quels sont les lecteurs PDF pris en charge pour les fichiers PDF protégés ?
+
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Les lecteurs PDF des fichiers PDF classifiés et/ou protégés vous permettent d’ouvrir des fichiers PDF chiffrés qui contiennent des informations sensibles.
 
@@ -50,7 +57,11 @@ Pour obtenir des instructions, consultez les sections suivantes :
 
 Les lecteurs PDF référencés sur cette page peuvent tous des documents protégés ouverts qui adhèrent à la norme ISO pour le chiffrement PDF. 
 
-Cette norme est utilisée par défaut par les clients d’étiquetage classique et unifiés, sauf si elle a été [désactivée par un administrateur](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+Cette norme est utilisée par défaut par le client AIP.
+
+> [!NOTE]
+> **Client classique uniquement**: Si vous avez le client classique AIP, il a peut-être été [désactivé par un administrateur](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+> 
 
 ### <a name="viewing-protected-pdfs-in-adobe-acrobat-reader"></a>Affichage de fichiers PDF protégés dans Adobe Acrobat Reader
 
@@ -66,18 +77,18 @@ Pour plus d’informations, consultez les billets de blog suivants :
 
 ## <a name="viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac"></a>Affichage de fichiers PDF protégés dans Microsoft Edge sur Windows ou Mac
 
-Microsoft Edge offre une prise en charge native de l’affichage des fichiers PDF qui sont classifiés et protégés. L’utilisation de Microsoft Edge garantit que les utilisateurs peuvent ouvrir des fichiers PDF protégés sans qu’il soit nécessaire d’installer ou de configurer des paramètres ou des logiciels supplémentaires.
+Microsoft Edge offre une prise en charge intégrée de l’affichage des fichiers PDF classés et protégés. L’utilisation de Microsoft Edge garantit que les utilisateurs peuvent ouvrir des fichiers PDF protégés sans qu’il soit nécessaire d’installer ou de configurer des paramètres ou des logiciels supplémentaires.
 
 Les versions prises en charge sont les suivantes :
 
-- **Windows :** Windows 10 et versions antérieures via Windows 8. 
+- **Windows**: Windows 10 et versions antérieures via Windows 8. 
     
     Pour plus d’informations sur les versions antérieures, consultez [prise en charge des formats précédents](#support-for-previous-formats).
 
-- **Mac :** macOS versions 10,12 et ultérieures 
+- **Mac**: macOS versions 10,12 et ultérieures 
 
 
-**Ample** 
+**Instructions**: 
 
 1. Vérifiez la [version de Microsoft Edge](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) installée sur votre système. 
 1. Si la version de Microsoft Edge est 83.0.478.37 ou supérieure, vous pouvez ouvrir des fichiers protégés directement dans le navigateur Edge. 
@@ -90,7 +101,7 @@ Les versions prises en charge sont les suivantes :
 
 Pour ouvrir un document PDF protégé sur votre ordinateur de bureau, nous vous recommandons d’installer le [plug-in Microsoft information protection (MIP) approprié pour Acrobat et Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) pour votre système d’exploitation.
 
-**Ample**
+**Instructions**:
 
 1. Si vous ne l’avez pas déjà fait, installez Adobe Reader à partir du [site Adobe](https://www.adobe.com/).
 
@@ -102,11 +113,11 @@ Pour ouvrir un document PDF protégé sur votre ordinateur de bureau, nous vous 
 
     Les versions prises en charge sont les suivantes :
 
-    - **Windows :** Windows 10 et versions antérieures via Windows 8. 
+    - **Windows**: Windows 10 et versions antérieures via Windows 8. 
     
         Pour plus d’informations sur les versions antérieures, consultez [prise en charge des formats précédents](#support-for-previous-formats).
 
-    - **Mac :** macOS versions 10,12-10,14 
+    - **Mac**: macOS versions 10,12-10,14 
 
 1. Si vous êtes invité à approuver l’administrateur, demandez à votre administrateur d’autoriser le plug-in.
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -13,16 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cfe396cea14effdd77b912b32c7c64296806b4be
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 53c5edea2593a653eec82ec5a61efed58ae76c1f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316226"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383922"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>BYOK les détails de votre propre clé pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Les organisations disposant d’un abonnement Azure Information Protection peuvent choisir de configurer leur locataire avec leur propre clé au lieu d’une clé par défaut générée par Microsoft. Cette configuration est souvent appelée Bring Your Own Key (BYOK).
 
@@ -30,14 +32,16 @@ BYOK et la [journalisation de l’utilisation](log-analyze-usage.md) fonctionnen
 
 Les applications prises en charge sont les suivantes :
 
-- **Services Cloud,** tels que Microsoft SharePoint ou Microsoft 365
+- **Services Cloud**, tels que Microsoft SharePoint ou Microsoft 365
 
 - **Services locaux exécutant des** applications Exchange et SharePoint qui utilisent le service Azure Rights Management via le connecteur RMS
 
-- **Applications clientes,** telles qu’Office 2019, Office 2016 et Office 2013
+- **Applications clientes**, telles qu’Office 2019, Office 2016 et Office 2013
 
 > [!TIP]
-> Si nécessaire, appliquez une sécurité supplémentaire à des documents spécifiques à l’aide d’une clé locale supplémentaire. Pour plus d’informations, consultez la page protection [hyok (blocage de votre propre clé](configure-adrms-restrictions.md) ) ou protection à [double clé (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only).
+> Si nécessaire, appliquez une sécurité supplémentaire à des documents spécifiques à l’aide d’une clé locale supplémentaire. Pour plus d’informations, consultez [protection de chiffrement à clé double (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke) (client d’étiquetage unifié uniquement).
+>
+> Si vous avez le client classique et que vous avez besoin d’une protection supplémentaire locale, implémentez la protection [hyok (maintenir votre propre clé) à la](configure-adrms-restrictions.md) place.
 > 
 
 ## <a name="azure-key-vault-key-storage"></a>Stockage de clé de Azure Key Vault
@@ -59,7 +63,7 @@ Nous vous recommandons d’utiliser un **coffre de clés dédié** pour votre cl
 
 Pour partager un abonnement Azure avec d’autres services qui utilisent Azure Key Vault, assurez-vous que l’abonnement partage un ensemble commun d’administrateurs. En confirmant que tous les administrateurs qui utilisent l’abonnement ont une compréhension solide de chaque clé à laquelle ils peuvent accéder, cela signifie qu’ils sont moins susceptibles de mal configurer vos clés.
 
-**Exemple :** Utilisation d’un abonnement Azure partagé lorsque les administrateurs de votre Azure Information Protection clé de locataire sont les mêmes que ceux qui gèrent vos clés pour la clé de client Office 365 et CRM Online. Si les administrateurs clés de ces services sont différents, nous vous recommandons d’utiliser des abonnements dédiés.
+**Exemple**: utilisation d’un abonnement Azure partagé lorsque les administrateurs de votre Azure information protection clé de locataire sont les mêmes que ceux qui gèrent vos clés pour la clé de client Office 365 et CRM Online. Si les administrateurs clés de ces services sont différents, nous vous recommandons d’utiliser des abonnements dédiés.
 
 ### <a name="benefits-of-using-azure-key-vault"></a>Avantages de l’utilisation d’Azure Key Vault
 
@@ -76,6 +80,7 @@ Le stockage de votre clé de locataire dans le Azure Key Vault offre les avantag
 |**Emplacement de la clé principale**| Azure Key Vault est disponible dans divers emplacements et prend en charge les organisations avec des restrictions qui peuvent résider dans les clés principales. <br /><br />Pour plus d’informations, consultez la page [Disponibilité des produits par région](https://azure.microsoft.com/regions/services/) sur le site Azure.|
 |**Domaines de sécurité séparés**|Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme Amérique du Nord, la zone EMEA (Europe, Moyen-Orient et Afrique) et l’Asie. <br /><br />Azure Key Vault utilise aussi différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. |
 |**Expérience unifiée**| Azure Key Vault permet également aux administrateurs de sécurité de stocker, d’accéder et de gérer les certificats et les secrets, tels que les mots de passe, pour les autres services qui utilisent le chiffrement. <br><br />L’utilisation de Azure Key Vault pour vos clés de locataire offre une expérience utilisateur transparente pour les administrateurs qui gèrent tous ces éléments.|
+| | |
 
 Pour obtenir les dernières mises à jour et découvrir comment d’autres services utilisent  [Azure Key Vault](/azure/key-vault/general/basic-concepts), visitez le blog de l' [équipe Azure Key Vault](/archive/blogs/kv/).
 
@@ -108,17 +113,17 @@ Si vous créez votre clé localement, vous devez ensuite la transférer ou l’i
 
 Options pour créer et stocker votre propre clé :
 
-- **Créé dans Azure Key Vault.** Créez et stockez votre clé dans Azure Key Vault en tant que clé protégée par HSM ou clé protégée par logiciel.
+- **Créé dans Azure Key Vault**. Créez et stockez votre clé dans Azure Key Vault en tant que clé protégée par HSM ou clé protégée par logiciel.
 
-- **Créé localement.** Créez votre clé locale et transférez-la vers Azure Key Vault à l’aide de l’une des options suivantes :
+- **Créé localement**. Créez votre clé locale et transférez-la vers Azure Key Vault à l’aide de l’une des options suivantes :
 
-    - **Clé protégée par HSM, transférée en tant que clé protégée par HSM.** Méthode la plus courante choisie.
+    - **Clé protégée par HSM, transférée en tant que clé protégée par HSM**. Méthode la plus courante choisie.
 
         Bien que cette méthode présente la surcharge administrative la plus importante, votre organisation peut être amenée à suivre des réglementations spécifiques. Les modules HSM utilisés par Azure Key Vault sont validés par le niveau 2 de FIPS 140-2.
 
-    - **Clé protégée par logiciel qui est convertie et transférée vers Azure Key Vault en tant que clé protégée par HSM.** Cette méthode est prise en charge uniquement lors [de la migration à partir de services AD RMS (Active Directory Rights Management Services) (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
+    - **Clé protégée par logiciel qui est convertie et transférée vers Azure Key Vault en tant que clé protégée par HSM**. Cette méthode est prise en charge uniquement lors [de la migration à partir de services AD RMS (Active Directory Rights Management Services) (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
 
-    - **Créé en local en tant que clé protégée par logiciel et transféré vers Azure Key Vault en tant que clé protégée par logiciel.** Cette méthode requiert un. Fichier de certificat PFX.
+    - **Créé en local en tant que clé protégée par logiciel et transféré vers Azure Key Vault en tant que clé protégée par logiciel**. Cette méthode requiert un. Fichier de certificat PFX.
 
 Par exemple, procédez comme suit pour utiliser une clé créée localement :
 
@@ -155,6 +160,7 @@ Les conditions préalables de BYOK varient en fonction de la configuration de vo
 |**Conditions préalables Azure Key Vault pour BYOK** | Si vous utilisez une clé protégée par HSM qui a été créée en local, assurez-vous que vous êtes également conforme aux [prérequis pour les BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) répertoriés dans la documentation Azure Key Vault.         |
 |**Microprogramme Thales version 11,62**    |Vous devez disposer de la version 11,62 du microprogramme de Thales si vous effectuez une migration à partir de AD RMS vers Azure Information Protection en utilisant une clé logicielle pour la clé matérielle et que vous utilisez le microprogramme Thales pour votre HSM.
 |**Contournement du pare-feu pour les services Microsoft approuvés** |Si le coffre de clés qui contient votre clé de locataire utilise des points de terminaison de service de réseau virtuel pour Azure Key Vault, vous devez autoriser les services Microsoft approuvés à contourner ce pare-feu. <br />Pour plus d’informations, consultez [Points de terminaison du service de réseau virtuel pour Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
+| | |
 
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>Vérification que vous disposez d’un abonnement Azure compatible avec BYOK
 
@@ -192,7 +198,7 @@ Faites votre choix en tenant d’abord compte de la conformité, et ensuite pour
 
 Pour identifier l’emplacement de votre locataire Azure Information Protection, utilisez l’applet de commande PowerShell [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) et identifiez la région à partir des URL. Par exemple :
 
-```ps
+```PowerShell
 LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 ```
     
@@ -209,6 +215,7 @@ Le tableau suivant répertorie les régions et les instances Azure recommandées
 |rms.**govus**.aadrm.com|**USA Centre** ou **USA Est 2**|
 |RMS.**aadrm.us**|**US gov Virginie** ou **US gov Arizona**|
 |RMS.**aadrm.CN**|**Chine est 2** ou **Chine Nord 2**|
+| | |
 
 ### <a name="create-and-configure-your-key"></a>Créer et configurer votre clé
 
@@ -251,7 +258,7 @@ Par défaut, toutes les opérations de Key Vault sont autorisées.
 
 Pour vérifier les opérations autorisées pour une clé spécifique, exécutez la commande PowerShell suivante :
 
-```ps
+```PowerShell
 (Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps
 ```
 
@@ -279,8 +286,8 @@ Le service de Rights Management Azure doit être autorisé à utiliser votre cl�
 
     Le modèle sélectionné a la configuration suivante :
 
-    - La valeur de l' **entité de sélection** est définie sur **services Microsoft Rights Management.**
-    - Les **autorisations de clé** sélectionnées incluent les autorisations d' **extraction,** de **déchiffrement** et de **signature.**
+    - La valeur de l' **entité de sélection** est définie sur **services Microsoft Rights Management**.
+    - Les **autorisations de clé** sélectionnées incluent les autorisations d' **extraction**, de **déchiffrement** et de **signature**.
 
 ##### <a name="enabling-key-authorization-using-powershell"></a>Activation de l’autorisation de clé à l’aide de PowerShell
 
@@ -288,7 +295,7 @@ Exécutez l’applet de commande PowerShell Key Vault, [Set-AzKeyVaultAccessPoli
 
 Par exemple :
 
-```ps
+```PowerShell
 Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
 
@@ -300,7 +307,7 @@ Pour accorder les autorisations d’utilisateur du principal du service Azure Ri
 az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
 ```
 
-Où :
+Où :
 - **00000012-0000-0000-C000-000000000000** est le GUID à utiliser dans cette commande
 - **ContosoMHSM** est un exemple de nom HSM. Lorsque vous exécutez cette commande, remplacez cette valeur par votre propre nom HSM.
 
@@ -317,13 +324,14 @@ Une fois que vous avez terminé toutes les étapes ci-dessus, vous êtes prêt �
 À l’aide des applets de commande Azure RMS, exécutez les commandes suivantes :
 
 1. Connectez-vous au service Azure Rights Management et connectez-vous :
-    ```ps
+
+    ```PowerShell
     Connect-AipService
     ```
 
 1. Exécutez l' [applet de commande use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey), en spécifiant l’URL de la clé. Par exemple :
 
-    ```ps
+    ```PowerShell
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/<key-version>"
     ```
 
@@ -341,4 +349,5 @@ Une fois que vous avez terminé toutes les étapes ci-dessus, vous êtes prêt �
 Azure Information Protection est maintenant configurée pour utiliser votre clé au lieu de la clé créée par défaut par Microsoft qui a été créée automatiquement pour votre locataire.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
 Une fois que vous avez configuré la protection BYOK, passez à la section prise en main de [votre clé racine de locataire](get-started-tenant-root-keys.md) pour plus d’informations sur l’utilisation et la gestion de votre clé.

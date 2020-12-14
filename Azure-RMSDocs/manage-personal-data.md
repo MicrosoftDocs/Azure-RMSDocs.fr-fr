@@ -12,20 +12,23 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 89f46156ec8e22c0e44a99c9e3d8d5f79b260129
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 128989642e78ab0d7d45f53e5fc72a2c85bbf28f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384262"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
 Lorsque vous configurez et utilisez Azure Information Protection, les adresses e-mail et les adresses IP sont stockées et utilisées par le service Azure Information Protection. Ces données personnelles se trouvent dans les éléments suivants :
-
-- Stratégie Azure Information Protection
-
-- Modèles pour le service de protection
 
 - Super utilisateurs et administrateurs délégués pour le service de protection 
 
@@ -33,54 +36,33 @@ Lorsque vous configurez et utilisez Azure Information Protection, les adresses e
 
 - Journaux d’utilisation pour le service de protection
 
-- Journaux de suivi des documents
-
 - Journaux d’utilisation pour les clients Azure Information Protection et le client RMS 
 
+**Client classique AIP uniquement**:
+
+- Stratégie Azure Information Protection
+
+- Modèles pour le service de protection
+
+- Journaux de suivi des documents
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
 
-
 ## <a name="viewing-personal-data-that-azure-information-protection-uses"></a>Affichage des données personnelles utilisées par Azure Information Protection
 
-À l’aide du portail Azure, un administrateur peut spécifier des adresses e-mail pour les stratégies délimitées et les paramètres de protection dans une configuration d’étiquette. Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md) et [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md). 
+- **Client d’étiquetage unifié** :
 
-Pour les étiquettes qui sont configurées pour appliquer la protection à partir du service Azure Rights Management, vous pouvez également trouver l’adresse de messagerie dans modèles de protection, à l’aide des applets de commande PowerShell du [module AIPService](/powershell/module/aipservice). Ce module PowerShell permet également à un administrateur de désigner par adresse e-mail les utilisateurs qui ont le rôle de [super utilisateur](configure-super-users.md) ou d’administrateur pour le service Azure Rights Management. 
+    Pour le client d’étiquetage unifié, les étiquettes de sensibilité et les stratégies d’étiquette sont configurées dans le centre de sécurité Microsoft 365, dans le centre de conformité Microsoft 365, ou dans le centre de conformité Microsoft 365 Security &. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels).
 
-Quand Azure Information Protection est utilisé pour classifier et protéger des documents et des e-mails, les adresses e-mail et les adresses IP des utilisateurs peuvent être enregistrées dans des fichiers journaux.
+- **Client classique** :
 
+    Pour le client classique, utilisez la Portail Azure pour spécifier les adresses de messagerie des stratégies délimitées et des paramètres de protection dans une configuration d’étiquette. Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md) et [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md). 
 
-### <a name="protection-templates"></a>Modèles de protection
+    Pour les étiquettes qui sont configurées pour appliquer la protection à partir du service Azure Rights Management, vous pouvez également trouver l’adresse de messagerie dans modèles de protection, à l’aide des applets de commande PowerShell du [module AIPService](/powershell/module/aipservice). Ce module PowerShell permet également à un administrateur de désigner par adresse e-mail les utilisateurs qui ont le rôle de [super utilisateur](configure-super-users.md) ou d’administrateur pour le service Azure Rights Management. 
 
-Exécutez l’applet de commande [obtenir-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) pour obtenir la liste des modèles de protection. Vous pouvez utiliser l’ID de modèle pour obtenir des informations détaillées sur un modèle spécifique. L’objet `RightsDefinitions` affiche les données personnelles, le cas échéant. 
-
-Exemple :
-```
-PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
-
-
-TemplateId              : fcdbbc36-1f48-48ca-887f-265ee1268f51
-Names                   : {1033 -> Confidential}
-Descriptions            : {1033 -> This data includes sensitive business information. Exposing this data to
-                          unauthorized users may cause damage to the business. Examples for Confidential information
-                          are employee information, individual customer projects or contracts and sales account data.}
-Status                  : Archived
-RightsDefinitions       : {admin@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT,
-                          REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER,
-                          AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@aip500.onmicrosoft.com -> VIEW,
-                          VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT,
-                          EDITRIGHTSDATA, OBJMODEL, OWNER, admin2@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT,
-                          DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER}
-ContentExpirationDate   : 1/1/0001 12:00:00 AM
-ContentValidityDuration : 0
-ContentExpirationOption : Never
-LicenseValidityDuration : 7
-ReadOnly                : False
-LastModifiedTimeStamp   : 1/26/2018 6:17:00 PM
-ScopedIdentities        : {}
-EnableInLegacyApps      : False
-LabelId                 :
-```
+> [!NOTE]
+> Quand Azure Information Protection est utilisé pour classifier et protéger des documents et des e-mails, les adresses e-mail et les adresses IP des utilisateurs peuvent être enregistrées dans des fichiers journaux.
+> 
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Super utilisateurs et administrateurs délégués pour le service de protection
 
@@ -92,7 +74,7 @@ Exécutez l’applet de commande [AipServiceSuperUser](/powershell/module/aipser
 Exécutez l’applet de commande [obtenir-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) pour obtenir un journal des actions d’administration pour le service de protection (Azure Rights Management) à partir de Azure information protection. Ce journal contient des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
 Par exemple :
-```
+```PowerShell
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
 ```
@@ -101,7 +83,7 @@ The Rights Management administration log was successfully generated and can be f
 Exécutez l’applet de commande [obtenir-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) pour récupérer un journal des actions de l’utilisateur final qui utilisent le service de protection à partir de Azure information protection. Le journal peut inclure des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
 Par exemple :
-```
+```PowerShell
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
 Downloading the log for 2018-04-01.
@@ -128,12 +110,68 @@ Downloading the log for 2018-04-24.
 Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018-04-24.log.
 ```   
 
+### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Journaux d’utilisation pour les clients Azure Information Protection et le client RMS
+
+Lorsque des étiquettes et la protection sont appliquées à des documents et des e-mails, les adresses e-mail et les adresses IP peuvent être stockées dans les fichiers journaux sur l’ordinateur d’un utilisateur aux emplacements suivants :
+
+- Pour le Azure Information Protection l’étiquetage unifié et les clients classiques : **%LocalAppData%\Microsoft\MSIP\Logs**
+
+- Pour le client RMS : **%LocalAppData%\Microsoft\MSIPC\msip\Logs**
+
+En outre, le client Azure information protection enregistre ces données personnelles dans le journal des événements Windows local Azure information protection **journaux des applications et des services**  >  .
+
+Lorsque le client Azure Information Protection exécute le scanneur, les données personnelles sont enregistrées dans **%LocalAppData%\Microsoft\MSIP\Scanner\Reports** sur l’ordinateur Windows Server qui exécute le scanneur.
+
+Pour désactiver la journalisation des informations pour le scanneur et le client Azure Information Protection, utilisez les configurations suivantes :
+
+- Pour le client Azure Information Protection : créez un [paramètre client avancé](./rms-client/clientv2-admin-guide-customizations.md#change-the-local-logging-level) qui configure **LogLevel** sur **off**.
+
+- Pour le scanneur Azure Information Protection : utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **off**.
+
+[!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
+
+### <a name="protection-templates"></a>Modèles de protection
+
+**Concerne**: client classique AIP uniquement
+
+Exécutez l’applet de commande [obtenir-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) pour obtenir la liste des modèles de protection. Vous pouvez utiliser l’ID de modèle pour obtenir des informations détaillées sur un modèle spécifique. L’objet `RightsDefinitions` affiche les données personnelles, le cas échéant. 
+
+Exemple :
+```PowerShell
+PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
+
+
+TemplateId              : fcdbbc36-1f48-48ca-887f-265ee1268f51
+Names                   : {1033 -> Confidential}
+Descriptions            : {1033 -> This data includes sensitive business information. Exposing this data to
+                          unauthorized users may cause damage to the business. Examples for Confidential information
+                          are employee information, individual customer projects or contracts and sales account data.}
+Status                  : Archived
+RightsDefinitions       : {admin@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT,
+                          REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER,
+                          AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@aip500.onmicrosoft.com -> VIEW,
+                          VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT,
+                          EDITRIGHTSDATA, OBJMODEL, OWNER, admin2@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT,
+                          DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER}
+ContentExpirationDate   : 1/1/0001 12:00:00 AM
+ContentValidityDuration : 0
+ContentExpirationOption : Never
+LicenseValidityDuration : 7
+ReadOnly                : False
+LastModifiedTimeStamp   : 1/26/2018 6:17:00 PM
+ScopedIdentities        : {}
+EnableInLegacyApps      : False
+LabelId                 :
+```
+
 ### <a name="document-tracking-logs"></a>Journaux de suivi des documents
+
+**Concerne**: client classique AIP uniquement
 
 Exécutez l’applet de commande [AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) pour récupérer des informations à partir du site de suivi des documents sur un utilisateur spécifique. Pour accéder aux informations de suivi associées aux journaux de document, utilisez l’applet de commande [AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) .
 
 Par exemple :
-```
+```PowerShell
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
 
@@ -187,27 +225,8 @@ IsHiddenInfo         : False
 
 Il n’est pas possible d’effectuer des recherches par ObjectID. Toutefois, vous n’êtes pas limité par le paramètre `-UserEmail` et il n’est pas nécessaire que l’adresse e-mail que vous fournissez fasse partie de votre locataire. Si l’adresse e-mail fournie est stockée n’importe où dans les journaux de suivi des documents, l’entrée de suivi de document est retournée dans la sortie de l’applet de commande.
 
-### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Journaux d’utilisation pour les clients Azure Information Protection et le client RMS
-
-Lorsque des étiquettes et la protection sont appliquées à des documents et des e-mails, les adresses e-mail et les adresses IP peuvent être stockées dans les fichiers journaux sur l’ordinateur d’un utilisateur aux emplacements suivants :
-
-- Pour le client d’étiquetage unifié Azure Information Protection et le client Azure Information Protection :%localappdata%\Microsoft\MSIP\Logs
-
-- Pour le client RMS : %localappdata%\Microsoft\MSIPC\msip\Logs
-
-En outre, le client Azure information protection enregistre ces données personnelles dans le journal des événements Windows local Azure information protection **journaux des applications et des services**  >  **Azure Information Protection**.
-
-Lorsque le client Azure Information Protection exécute le scanneur, les données personnelles sont enregistrées dans %localappdata%\Microsoft\MSIP\Scanner\Reports sur l’ordinateur Windows Server qui exécute le scanneur.
-
-Pour désactiver la journalisation des informations pour le scanneur et le client Azure Information Protection, utilisez les configurations suivantes :
-
-- Pour le client Azure Information Protection : créez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) qui configure **LogLevel** sur **off**.
-
-- Pour le scanneur Azure Information Protection : utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **off**.
-
-[!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
-
 ## <a name="securing-and-controlling-access-to-personal-information"></a>Sécurisation et contrôle de l’accès aux informations personnelles
+
 Les données personnelles que vous affichez et spécifiez dans le portail Azure sont accessibles uniquement par les utilisateurs ayant reçu l’un des [rôles d’administrateur suivants par Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) :
     
 - **Administrateur Azure Information Protection**
@@ -222,21 +241,23 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
 
 - **Administrateur général**
 
-- **Lecteur général**
+- **Lecteur global**
 
 Les données personnelles que vous affichez et spécifiez à l’aide du module AIPService (ou de l’ancien module, AADRM) sont accessibles uniquement aux utilisateurs qui ont reçu les rôles administrateur **Azure information protection**, administrateur de **conformité**, administrateur des **données de conformité** ou administrateur **général** de Azure Active Directory ou le rôle d’administrateur général pour le service de protection.
 
 ## <a name="updating-personal-data"></a>Mise à jour des données personnelles
 
-Vous pouvez mettre à jour les adresses e-mail pour les stratégies délimitées et les paramètres de protection dans la stratégie Azure Information Protection. Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md) et [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md). 
+**Client d’étiquetage unifié** :
+
+Pour le client d’étiquetage unifié, les étiquettes de sensibilité et les stratégies d’étiquette sont configurées dans le centre de sécurité Microsoft 365, dans le centre de conformité Microsoft 365, ou dans le centre de conformité Microsoft 365 Security &. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels).
+
+**Client classique** :
+
+Pour le client classique, vous pouvez mettre à jour les adresses de messagerie des stratégies délimitées et des paramètres de protection dans la stratégie de Azure Information Protection. Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md) et [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md). 
 
 Pour les paramètres de protection, vous pouvez mettre à jour les mêmes informations à l’aide des applets de commande PowerShell à partir du [module AIPService](/powershell/module/aipservice).
 
 Vous ne pouvez pas mettre à jour les adresses e-mail pour les super utilisateurs et les administrateurs délégués. Vous devez supprimer le compte d’utilisateur spécifié et ajouter le compte d’utilisateur avec l’adresse e-mail mise à jour. 
-
-### <a name="protection-templates"></a>Modèles de protection
-
-Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la `RightsDefinitions` propriété, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour, et utiliser l’objet de définitions de droits avec l’applet de commande `Set-AipServiceTemplateProperty` .
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Super utilisateurs et administrateurs délégués pour le service de protection
 
@@ -252,8 +273,21 @@ Lorsque vous avez besoin de mettre à jour une adresse e-mail pour un administra
 
 2. Utilisez [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator) pour ajouter l’utilisateur et une nouvelle adresse e-mail.
 
+### <a name="protection-templates"></a>Modèles de protection
+
+**Pertinent pour**: client classique uniquement
+
+Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la `RightsDefinitions` propriété, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour, et utiliser l’objet de définitions de droits avec l’applet de commande `Set-AipServiceTemplateProperty` .
+
 ## <a name="deleting-personal-data"></a>Suppression des données personnelles
-Vous pouvez supprimer les adresses e-mail pour les stratégies délimitées et les paramètres de protection dans la stratégie Azure Information Protection. Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md) et [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md). 
+
+- **Client d’étiquetage unifié** :
+
+    Pour le client d’étiquetage unifié, les étiquettes de sensibilité et les stratégies d’étiquette sont configurées dans le centre de sécurité Microsoft 365, dans le centre de conformité Microsoft 365, ou dans le centre de conformité Microsoft 365 Security &. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels).
+
+- **Client classique** :
+
+    Pour le client classique, vous pouvez supprimer les adresses de messagerie des stratégies délimitées et des paramètres de protection dans la stratégie de Azure Information Protection. Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md) et [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md). 
 
 Pour les paramètres de protection, vous pouvez supprimer les mêmes informations à l’aide des applets de commande PowerShell du [module AIPService](/powershell/module/aipservice).
 

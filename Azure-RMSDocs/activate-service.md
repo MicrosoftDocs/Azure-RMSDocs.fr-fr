@@ -13,21 +13,23 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c6f52dac44fc85bec09607bd6832b07484a161ac
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 842f452a5a7a62002b4c0555580258368416d2d3
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567462"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384177"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Activation du service de protection à partir de Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > Ces informations de configuration sont destinées aux administrateurs qui sont responsables d’un service qui s’applique à tous les utilisateurs dans une organisation. Si vous recherchez des informations et une aide utilisateur sur l’utilisation des fonctionnalités de Rights Management pour une application spécifique ou sur l’ouverture d’un fichier ou e-mail protégé par des droits, utilisez l’aide et les conseils qui accompagnent votre application.
 >
-> Par exemple, pour les applications Office, cliquez sur l'icône d'aide, puis entrez les termes recherchés, comme **Rights Management** ou **IRM**. Pour le client Azure Information Protection pour Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](./rms-client/client-user-guide.md).
+> Par exemple, pour les applications Office, cliquez sur l'icône d'aide, puis entrez les termes recherchés, comme **Rights Management** ou **IRM**. Pour le client Azure Information Protection pour Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](./rms-client/clientv2-user-guide.md).
 >
 > Pour le support technique et d’autres questions sur le service, consultez les informations dans [Options de support technique et ressources de la communauté](information-support.md#support-options-and-community-resources).
 
@@ -38,9 +40,9 @@ Lorsque le service de protection pour Azure Information Protection est activé p
 
 Si vous disposez d’un plan de service incluant Azure Rights Management, vous n’aurez peut-être pas besoin d’activer le service :
 
-- **Si vous avez obtenu votre abonnement incluant Azure Rights Management ou Azure Information Protection fin février 2018 ou après :** le service est automatiquement activé pour vous. Vous n’avez pas à activer le service, sauf si vous ou un autre administrateur global pour votre organisation a désactivé Azure Rights Management.
+- **Si votre abonnement incluant Azure Rights Management ou Azure information protection a été obtenu vers la fin du 2018 février ou version ultérieure**: le service est automatiquement activé pour vous. Vous n’avez pas à activer le service, sauf si vous ou un autre administrateur global pour votre organisation a désactivé Azure Rights Management.
 
-- **Si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu avant ou pendant février 2018 :** Microsoft commence à activer le service Azure Rights Management pour ces abonnements si votre locataire utilise Exchange Online. Pour ces abonnements, l’activation automatique commencera le 1er août 2018 lorsque le service sera activé pour vous, sauf si vous constatez que **AutomaticServiceUpdateEnabled** est défini sur **false** lorsque vous exécutez [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration). 
+- **Si votre abonnement incluant azure Rights Management ou Azure information protection a été obtenu avant ou après le 2018 février**: Microsoft démarre l’activation du service Azure Rights Management pour ces abonnements si votre locataire utilise Exchange Online. Pour ces abonnements, l’activation automatique commencera le 1er août 2018 lorsque le service sera activé pour vous, sauf si vous constatez que **AutomaticServiceUpdateEnabled** est défini sur **false** lorsque vous exécutez [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration). 
 
 Si aucun des scénarios suivants ne s’applique à vous, vous devez activer manuellement le service de protection. 
 

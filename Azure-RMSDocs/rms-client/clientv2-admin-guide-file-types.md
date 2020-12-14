@@ -4,27 +4,27 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b9f8a53135407e91d04542bc53c709b82662a19a
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 754525afeee619f8f336addd5239ea15223f986c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316634"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385520"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
+# <a name="file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*>
+>***S’applique à** [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 et Windows Server 2012*>
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne**: [client d’étiquetage unifié AIP uniquement](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [types de fichiers client classiques](client-admin-guide-file-types.md)*
 
 Le client d’étiquetage unifié Azure Information Protection peut appliquer les éléments suivants aux documents et aux e-mails :
 
@@ -94,7 +94,7 @@ La protection peut être appliquée automatiquement lorsqu’un utilisateur sél
 
 La taille maximale des fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection est prise en charge pour la protection.
 
-- **Pour les fichiers Office :**
+- **Pour les fichiers Office**:
 
   |                                                     Application Office                                                      |                                                Taille de fichier maximale prise en charge                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

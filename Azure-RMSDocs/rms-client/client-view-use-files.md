@@ -1,11 +1,11 @@
 ---
-title: Afficher les fichiers protégés avec la visionneuse de Azure Information Protection
-description: Instructions pour afficher et utiliser un fichier protégé qui vous oblige à installer la visionneuse Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+title: Afficher les fichiers protégés avec la visionneuse cliente Azure Information Protection Classic
+description: Instructions pour afficher et utiliser un fichier protégé qui vous oblige à installer la visionneuse cliente Azure Information Protection Classic.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 280fb2d86bf4c4c9165c1d74df6c17da69a499c0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568056"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385588"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : afficher les fichiers protégés avec la visionneuse de Azure Information Protection
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-classic-client-viewer"></a>Guide de l’utilisateur : afficher les fichiers protégés avec la visionneuse cliente Azure Information Protection Classic
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez le [Guide de l’utilisateur du client d’étiquetage unifié](clientv2-view-use-files.md). *
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Souvent, vous pouvez afficher un fichier protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 

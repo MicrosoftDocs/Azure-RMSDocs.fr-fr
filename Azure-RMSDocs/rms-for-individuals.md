@@ -1,10 +1,10 @@
 ---
 title: RMS for individuals et Azure Information Protection
 description: Informations relatives à RMS for Individuals, un abonnement libre-service gratuit destiné aux utilisateurs qui ont reçu des fichiers protégés, mais ne peuvent pas s’authentifier, car leur service informatique ne gère pas de compte en leur nom dans Azure.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,30 +12,40 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d7cd108b74d42a9d7bb7aab0480328b642697288
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: ac5b596c87649e32d27da8e2797bafe5b9745792
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "95567762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384789"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals et Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 RMS for individuals est un abonnement gratuit en libre-service destiné aux utilisateurs qui doivent ouvrir des fichiers protégés par Azure Information Protection. Si ces utilisateurs ne peuvent pas être authentifiés par Azure Active Directory, ce service d’abonnement gratuit peut leur créer un compte dans Azure Active Directory. Ainsi, ces utilisateurs peuvent s’authentifier avec leur e-mail professionnel et lire les fichiers protégés sur des ordinateurs ou des appareils mobiles.
 
 RMS for individuals utilise une inscription en libre service Azure Active Directory. Si des utilisateurs ont créé des comptes pour votre organisation dans le cadre de cet abonnement, vous pouvez, en tant qu’administrateur de votre organisation, revendiquer la propriété et [prendre le contrôle de leurs comptes](/azure/active-directory/users-groups-roles/domains-admin-takeover#external-admin-takeover). 
 
-
-> [!NOTE]
-> Cet abonnement gratuit est une option permettant de garantir que les personnes autorisées à l’extérieur de votre organisation peuvent toujours lire des fichiers protégés par votre organisation. Une autre option consiste à envoyer les documents par e-mail en utilisant le [chiffrement de messages Office 365 avec de nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Cette solution de messagerie fonctionne pour toutes les adresses e-mail sur tous les appareils et est recommandée pour le partage sécurisé d’informations et l’affichage de documents Office dans un navigateur avec des personnes extérieures à votre organisation.
-> 
-> Une autre option consiste à utiliser des comptes Microsoft. Toutefois, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
-
 Pour obtenir un compte gratuit, les utilisateurs doivent accéder à la [page Microsoft Azure Information Protection](https://aka.ms/rms-signup) et indiquez leur adresse e-mail professionnelle. Ils reçoivent en retour un e-mail de Microsoft qui leur permet d’effectuer l’inscription en entrant les détails nécessaires à la création de leur compte. 
 
 Une fois le compte créé, la dernière page affiche des liens pour télécharger le client ou la visionneuse Azure Information Protection pour différents appareils, un lien vers le guide de l’utilisateur, ainsi qu’un lien vers la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
+
+### <a name="alternatives-use-office-365-message-encryption-or-microsoft-accounts"></a>Alternatives : utiliser le chiffrement de messages Office 365 ou les comptes Microsoft
+
+RMS for Individuals est une option qui permet de s’assurer que les personnes autorisées en dehors de votre organisation peuvent toujours lire les fichiers que votre organisation protège. 
+
+Les autres options sont les suivantes :
+
+- **Envoyez des documents par e-mail en utilisant le [chiffrement de messages Office 365 avec de nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).** Cette solution de messagerie fonctionne pour toutes les adresses e-mail sur tous les appareils et est recommandée pour le partage sécurisé d’informations et l’affichage de documents Office dans un navigateur avec des personnes extérieures à votre organisation.
+ 
+- **Utilisez des comptes Microsoft.** Toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+
 
 ## <a name="to-sign-up-for-rms-for-individuals"></a>Inscription à RMS for individuals
 

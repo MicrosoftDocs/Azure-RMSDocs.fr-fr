@@ -1,8 +1,8 @@
 ---
 title: Supprimer des étiquettes à l’aide du client d’étiquetage unifié Azure Information Protection
 description: Instructions sur la suppression des étiquettes de sensibilité et la protection des fichiers et des e-mails à l’aide du client d’étiquetage unifié Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
 ms.topic: how-to
@@ -12,22 +12,22 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4009de4e147bd5102602ef946f8b892ab478e542
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: fffc0099d1a018141c15feabb746e4795be18d5b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567671"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385367"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Guide de l’utilisateur : supprimer des étiquettes et la protection des fichiers et des e-mails qui ont été étiquetés par Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide de l’utilisateur du client Classic](client-remove-label-protection.md). *
 
-Lorsque le Azure Information Protection client unifié est [installé sur votre ordinateur](install-client-app.md), vous pouvez supprimer les étiquettes de sensibilité et la protection des fichiers et des e-mails.
+Lorsque le Azure Information Protection client unifié est [installé sur votre ordinateur](install-unifiedlabelingclient-app.md), vous pouvez supprimer les étiquettes de sensibilité et la protection des fichiers et des e-mails.
 
 Lorsque l’étiquette de sensibilité que vous supprimez est configurée pour appliquer la protection, cette action supprime également la protection du fichier. Vous pouvez être invité à expliquer la raison pour laquelle vous avez supprimé l’étiquette.
 
@@ -72,7 +72,7 @@ Avec l’Explorateur de fichiers, vous pouvez rapidement supprimer les étiquett
 ## <a name="other-instructions"></a>Autres instructions
 Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :
 
-- [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
+- [Que voulez-vous faire ?](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
 

@@ -1,30 +1,30 @@
 ---
 title: Afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 description: Instructions pour afficher un fichier protégé qui vous oblige à installer la Azure Information Protection visionneuse d’étiquetage unifiée.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 76bbfce88fb35241ee5180221267e83a121482b4
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 9c09c4229db71f93d952868cc982f51c12fe9c00
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385231"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide de l’utilisateur du client Classic](client-view-use-files.md). *
 
 Souvent, vous pouvez afficher un fichier protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 
@@ -68,12 +68,12 @@ Si votre organisation ne dispose pas d’un compte Cloud que vous pouvez utilise
 4. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
 
 > [!TIP]
-> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **sensibilité** > paramètres de réinitialisation de **l’aide et des commentaires**  >  **Reset Settings**. 
+> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **sensibilité** > paramètres de réinitialisation de **l’aide et des commentaires**  >  . 
 > 
 > [Informations supplémentaires sur l’option Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## <a name="other-instructions"></a>Autres instructions
 Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :
 
-- [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
+- [Que voulez-vous faire ?](clientv2-user-guide.md#what-do-you-want-to-do)
 

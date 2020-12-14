@@ -5,23 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: bd7b94caba31ddbadf1d39754a6bb609c59aea60
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734962"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385163"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Qu’est-ce que l’application Azure Information Protection pour iOS ou Android ?
 
-*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 L’application mobile Azure Information Protection (AIP) pour iOS et Android est une application de visionneuse qui vous permet d’afficher des messages électroniques, des fichiers PDF, des images et des fichiers texte protégés, et qui sont utiles si vos applications normales pour ces types de fichiers ne prennent pas en charge la protection. 
 
@@ -91,9 +93,9 @@ Les applications mobiles AIP pour iOS et Android prennent en charge les types de
 
 |Condition requise  |Description  |
 |---------|---------|
-|**Versions du système d'exploitation prises en charge**     | Les OSs mobiles minimum incluent : </br>-iOS 11  </br>-Android 6,0 </br></br>**Remarque :** Les applications mobiles AIP ne sont pas prises en charge sur les processeurs Intel.  |
-|**Informations d’identification de connexion prises en charge**     | Connectez-vous aux applications mobiles AIP avec l’un des éléments suivants : </br></br>**Informations d’identification professionnelles ou scolaires.** Essayez de vous connecter avec vos informations d’identification professionnelles ou scolaires. Si vous avez des questions, contactez votre administrateur pour savoir si votre organisation a AD RMS localement avec l’extension d’appareil mobile, ou utilise Azure Information Protection. </br></br>**Compte Microsoft**. Si votre adresse de messagerie personnelle a été utilisée pour protéger le fichier, connectez-vous à l’aide d’un [compte Microsoft](https://signup.live.com). Si vous devez demander un compte Microsoft, vous pouvez utiliser votre propre adresse de messagerie Hotmail, Gmail ou toute autre adresse de messagerie. </br></br>**Remarque :** Toutes les applications ne sont pas en mesure d’ouvrir du contenu protégé avec une compte Microsoft. Pour plus d’informations, consultez [scénarios pris en charge pour l’ouverture de documents protégés](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Types de fichiers pris en charge**     | Les types de fichiers pris en charge incluent les messages électroniques protégés, les fichiers PDF, les images et les fichiers texte. </br></br>Par exemple, ces fichiers incluent les extensions suivantes : **rpmsg,** **. pdf,** **. ppdf,** **. pjpg,** **. pjpeg,** **. ptiff,** **.** PPNG,. PTXT **,** **. pXML** </br></br>Pour obtenir la liste complète des types de fichiers pris en charge, consultez [le Guide de l’administrateur du client AIP](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+|**Versions du système d'exploitation prises en charge**     | Les OSs mobiles minimum incluent : </br>-iOS 11  </br>-Android 6,0 </br></br>**Remarque**: les applications mobiles AIP ne sont pas prises en charge sur les processeurs Intel.  |
+|**Informations d’identification de connexion prises en charge**     | Connectez-vous aux applications mobiles AIP avec l’un des éléments suivants : </br></br>**Informations d’identification professionnelles ou scolaires.** Essayez de vous connecter avec vos informations d’identification professionnelles ou scolaires. Si vous avez des questions, contactez votre administrateur pour savoir si votre organisation a AD RMS localement avec l’extension d’appareil mobile, ou utilise Azure Information Protection. </br></br>**Compte Microsoft.** Si votre adresse de messagerie personnelle a été utilisée pour protéger le fichier, connectez-vous à l’aide d’un [compte Microsoft](https://signup.live.com). Si vous devez demander un compte Microsoft, vous pouvez utiliser votre propre adresse de messagerie Hotmail, Gmail ou toute autre adresse de messagerie. </br></br>**Remarque**: toutes les applications ne sont pas en mesure d’ouvrir du contenu protégé avec une compte Microsoft. Pour plus d’informations, consultez [scénarios pris en charge pour l’ouverture de documents protégés](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
+|**Types de fichiers pris en charge**     | Les types de fichiers pris en charge incluent les messages électroniques protégés, les fichiers PDF, les images et les fichiers texte. </br></br>Par exemple, ces fichiers incluent les extensions suivantes : **rpmsg**, **. pdf**, **. ppdf**,. **pjpg,** **. pjpeg**, **. ptiff**, **.** PPNG, **. PTXT**, **. pXML** </br></br>Pour obtenir la liste complète des types de fichiers pris en charge, consultez [le Guide de l’administrateur du client AIP](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
 ## <a name="admins-testing-the-aip-mobile-apps"></a>Administrateurs : test des applications mobiles AIP
@@ -109,8 +111,8 @@ Si vous êtes un administrateur système qui souhaite tester les applications mo
     |Type de fichier  |Instructions  |
     |---------|---------|
     |**Adresse de messagerie (. rpmsg)**     | Utilisez un autre appareil, tel qu’Outlook à partir d’un ordinateur Windows, pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile.  |
-    |**PDF**     | 1. à partir d’un ordinateur Windows, protégez un fichier PDF à l’aide du client d’étiquetage [classique](client-classify-protect.md) ou [unifié](clientv2-classify-protect.md) d’AIP. </br>2. envoyez-vous le fichier PDF protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie.        |
-    |**Image (. PTXT,. pjpg ou. PPNG)**     | 1. à partir d’un ordinateur Windows, protégez un fichier texte ou image à l’aide du client d’étiquetage [classique](client-classify-protect.md) ou [unifié](clientv2-classify-protect.md) d’AIP. </br></br>2. envoyez-vous le fichier protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie.   |
+    |**PDF**     | 1. à partir d’un ordinateur Windows, [Protégez un fichier PDF](clientv2-classify-protect.md) à l’aide du client AIP. </br>2. envoyez-vous le fichier PDF protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie.        |
+    |**Image (. PTXT,. pjpg ou. PPNG)**     | 1. à partir d’un ordinateur Windows, [Protégez un fichier texte ou image](clientv2-classify-protect.md) à l’aide du client AIP. </br></br>2. envoyez-vous le fichier protégé, ou téléchargez-le dans une bibliothèque protégée SharePoint et partagez-le avec votre propre adresse de messagerie.   |
 | | |
 
 1. Ouvrez le fichier protégé sur votre appareil mobile à l’aide de la pièce jointe ou du lien de courrier électronique que vous avez envoyé à vous-même.

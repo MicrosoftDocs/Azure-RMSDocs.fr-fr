@@ -1,6 +1,6 @@
 ---
-title: Types de fichiers pris en charge-client Azure Information Protection
-description: Détails techniques sur les types de fichiers pris en charge, les extensions de noms de fichiers et les niveaux de protection pour les administrateurs responsables du client Azure Information Protection pour Windows.
+title: Types de fichiers pris en charge-Azure Information Protection client classique
+description: Détails techniques sur les types de fichiers pris en charge, les extensions de nom de fichier et les niveaux de protection pour les administrateurs qui sont responsables du client Azure Information Protection Classic pour Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb1896adf9899700fe03fa1286509602e73c90bd
-ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
+ms.openlocfilehash: 67d5e173b1dbc1b749c9090746c8ed0342f064cc
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "95568463"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386097"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-classic-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client Azure Information Protection Classic
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Le client Azure Information Protection peut appliquer les éléments suivants aux documents et e-mails :
+Le client Azure Information Protection Classic peut appliquer les éléments suivants aux documents et aux e-mails :
 
 - Classification uniquement
 
@@ -95,7 +95,7 @@ La protection des données peut être automatiquement appliquée lorsqu’un uti
 
 Il existe des tailles de fichier maximales que le client Azure Information Protection prend en charge pour la protection.
 
-- **Pour les fichiers Office :**
+- **Pour les fichiers Office**:
 
 
   |                                                     Application Office                                                      |                                                Taille de fichier maximale prise en charge                                                 |

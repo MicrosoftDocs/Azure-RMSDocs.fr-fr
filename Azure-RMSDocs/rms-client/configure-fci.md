@@ -1,11 +1,11 @@
 ---
 title: Protection RMS avec l’infrastructure ICF de Windows Server - AIP
 description: Instructions d’utilisation du client Rights Management (RMS) avec le client Azure Information Protection pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF).
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
-ms.topic: conceptual
+ms.date: 11/12/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
@@ -13,18 +13,21 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 127682099f082d81c93e5951b149033a96d9504b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e775464efbff26cf6f425bce9d395c5bffc0cce4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568031"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385197"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Cet article contient des instructions et un script pour utiliser le client Azure Information Protection et PowerShell pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF).
 
@@ -38,6 +41,7 @@ Cette solution vous permet de protéger automatiquement tous les fichiers figura
 Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows Server 2012. Si vous exécutez d'autres versions prises en charge de Windows, il se peut que vous deviez adapter certaines étapes en fonction de différences existant entre votre version du système d'exploitation et celle évoquée dans cet article.
 
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
+
 Conditions préalables pour ces instructions :
 
 - Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
@@ -296,6 +300,7 @@ Si les changements apportés au modèle sont suffisamment importants pour proté
 Exécutez également cette ligne du script si vous publiez un nouveau modèle que vous voulez utiliser pour l’ICF, puis changez l’ID de modèle dans la ligne d’argument correspondant à la tâche de gestion de fichier personnalisée.
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modification des instructions pour protéger des fichiers de façon sélective
+
 Quand les instructions précédentes fonctionnent, il est facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.
 
 Pour faire cette modification, utilisez une des propriétés de classification prédéfinie (par exemple, **Informations d’identification personnelle**) ou créez votre propre propriété. Créez ensuite une règle utilisant cette propriété. Par exemple, vous pouvez sélectionner le **Classifieur de contenus**, choisir la propriété **Informations d'identification personnelle** avec une valeur **Haute**, et configurer le modèle de chaîne ou d'expression qui identifie le fichier à configurer pour cette propriété (par exemple, la chaîne « **Date de naissance** »).
@@ -304,4 +309,4 @@ Pour faire cette modification, utilisez une des propriétés de classification p
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](../faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)

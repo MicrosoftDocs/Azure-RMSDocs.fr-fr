@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
+ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384228"
+ms.locfileid: "97388386"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -43,7 +43,7 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : types d
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>Problèmes connus liés à AIP et à la protection contre les attaques
 
-Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3, où la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée et entraîne le blocage des applications Office.
+Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3, où la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée et entraîne un comportement inattendu des applications Office.
 
 Si vous disposez d’une version 2 ou 3 de .NET en plus d’une version de .NET 4. x requise pour votre système, veillez à désactiver la protection contre l’exploitation avant AIP. 
 
@@ -69,7 +69,7 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problèmes connus liés à AIP dans les applications Office
 
-|Composant  |Problèmes connus  |
+|Fonctionnalité  |Problèmes connus  |
 |---------|---------|
 |**Plusieurs versions d’Office**    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
 |**Affichages multiples** |Si vous utilisez plusieurs affichages et que vous avez une application Office ouverte : <br><br>-Vous pouvez rencontrer des problèmes de performances dans vos applications Office.<br>-La barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des écrans <br><br>Pour garantir des performances cohérentes et que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général**, sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence**.    |

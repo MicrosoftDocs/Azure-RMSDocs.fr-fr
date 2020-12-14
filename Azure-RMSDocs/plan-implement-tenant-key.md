@@ -13,19 +13,21 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24479014fcbd0bd93b65d6958d004deb9c7e0c95
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 35c898ded852970e380c8061ba8f97d040860017
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568103"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386387"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 La clé de locataire Azure Information Protection est une clé racine pour votre organisation. D’autres clés peuvent être dérivées de cette clé racine, y compris les clés utilisateur, les clés d’ordinateur ou les clés de chiffrement de document. Chaque fois que Azure Information Protection utilise ces clés pour votre organisation, elles sont chaînées par chiffrement à votre clé de locataire racine Azure Information Protection.
 
@@ -38,15 +40,10 @@ La clé racine de votre locataire peut être :
 - [Généré par Microsoft](#tenant-root-keys-generated-by-microsoft)
 - Généré par les clients ayant une protection [Bring Your Own Key (BYOK)](#bring-your-own-key-byok-protection) .
 
-Les gestions de clés locales diffèrent pour chaque type de client AIP. Si vous disposez d’un contenu hautement sensible nécessitant une protection supplémentaire locale, utilisez l’une des méthodes suivantes :
-
-- [Conserver votre propre clé (hyok)](#hold-your-own-key-hyok-aip-classic-client-only) (client classique uniquement)
-- [Chiffrement à clé double (DKE)](#double-key-encryption-dke-aip-unified-labeling-client-only) (client d’étiquetage unifié uniquement)
-
-Le contenu peut être chiffré à l’aide de la protection HYOK uniquement si vous disposez du client Classic. Toutefois, si vous avez un contenu protégé par HYOK, il peut être affiché à la fois dans le client d’étiquetage classique et le client d’étiquetage unifié. 
+Si vous disposez d’un contenu hautement sensible nécessitant une protection supplémentaire locale, nous vous recommandons d’utiliser le [chiffrement à clé double (DKE)](#double-key-encryption-dke).
 
 > [!TIP]
-> Vous n’êtes pas sûr de la différence entre le client classique et le client d’étiquetage unifié ? Pour plus d’informations, consultez ce [Forum aux questions](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+> Si vous utilisez le client classique et que vous avez besoin d’une protection locale supplémentaire, utilisez à la place [votre propre clé (hyok)](#hold-your-own-key-hyok) .
 >
 
 ## <a name="tenant-root-keys-generated-by-microsoft"></a>Clés racines de locataire générées par Microsoft
@@ -72,21 +69,9 @@ Pour plus d’informations, consultez [configurer la protection BYOK](byok-price
 
 Une fois configuré, poursuivez la prise en main de [votre clé racine de locataire](get-started-tenant-root-keys.md) pour plus d’informations sur l’utilisation et la gestion de votre clé.
 
-## <a name="hold-your-own-key-hyok-aip-classic-client-only"></a>Conserver votre propre clé (HYOK) (client classique AIP uniquement)
+## <a name="double-key-encryption-dke"></a>Chiffrement à clé double (DKE)
 
-HYOK-protection utilise une clé qui est créée et conservée par les clients, à un emplacement isolé du Cloud. Étant donné que HYOK-protection autorise uniquement l’accès aux données pour les applications et les services locaux, les clients qui utilisent HYOK ont également une clé Cloud pour les documents Cloud.
-
-Utilisez HYOK pour les documents qui sont :
-
-- Limité à quelques personnes
-- Non partagé en dehors de l’Organisation
-- Sont consommés uniquement sur le réseau interne.
-
-Ces documents ont généralement la classification la plus élevée au sein de votre organisation, en tant que « top secret ».
-
-Pour plus d’informations, voir [les détails de la conservation de votre propre clé (hyok)](configure-adrms-restrictions.md).
-
-## <a name="double-key-encryption-dke-aip-unified-labeling-client-only"></a>Chiffrement à clé double (DKE) (client d’étiquetage unifié AIP uniquement)
+**Concerne**: client d’étiquetage unifié AIP uniquement
 
 La protection DKE fournit une sécurité supplémentaire pour votre contenu à l’aide de deux clés : une créée et détenue par Microsoft dans Azure, et une autre créée et conservée localement par le client.
 
@@ -105,3 +90,22 @@ Utilisez DKE lorsque votre organisation :
 > DKE-protection nécessite à la fois la clé détenue par Microsoft et la clé détenue par le client pour déchiffrer le contenu protégé.
 
 Pour plus d’informations, consultez [chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365.
+
+## <a name="hold-your-own-key-hyok"></a>Conserver votre propre clé (HYOK)
+
+**Concerne**: client classique AIP uniquement
+
+HYOK-protection utilise une clé qui est créée et conservée par les clients, à un emplacement isolé du Cloud. Étant donné que HYOK-protection autorise uniquement l’accès aux données pour les applications et les services locaux, les clients qui utilisent HYOK ont également une clé Cloud pour les documents Cloud.
+
+Utilisez HYOK pour les documents qui sont :
+
+- Limité à quelques personnes
+- Non partagé en dehors de l’Organisation
+- Sont consommés uniquement sur le réseau interne.
+
+Ces documents ont généralement la classification la plus élevée au sein de votre organisation, en tant que « top secret ».
+
+Le contenu peut être chiffré à l’aide de la protection HYOK uniquement si vous disposez du client Classic. Toutefois, si vous avez un contenu protégé par HYOK, il peut être affiché à la fois dans le client d’étiquetage classique et le client d’étiquetage unifié.  
+
+Pour plus d’informations, voir [les détails de la conservation de votre propre clé (hyok)](configure-adrms-restrictions.md).
+

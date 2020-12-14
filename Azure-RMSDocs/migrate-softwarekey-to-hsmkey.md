@@ -1,11 +1,11 @@
 ---
 title: Migration de clé protégée par logiciel vers une clé protégée par HSM - AIP
 description: Instructions qui font partie du chemin de migration d’AD RMS vers Azure Information Protection. Celles-ci s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/18/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c654c395ee4b0f77ce0157743fa65bb6391a4ca
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: ca88715d32b3f5e7564c8382b8a63cd41d13140e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137031"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386455"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par HSM
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault. 
 
@@ -58,7 +59,7 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
 2. Administrateur Azure Information Protection ou administrateur Azure Key Vault : sur la station de travail déconnectée, exécutez l’outil TpdUtil à partir du [Kit de migration Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Par exemple, si l’outil est installé sur votre lecteur E où vous copiez votre fichier de données de configuration nommé ContosoTPD.xml :
 
-    ```ps
+    ```PowerShell
     E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
 
@@ -130,7 +131,7 @@ Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propri
 
 Utilisez ensuite l’applet de commande [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) pour autoriser le principal du service Azure Rights Management à accéder au coffre de clés. Les autorisations nécessaires sont déchiffrer, chiffrer, désencapsuler la clé (unwrapkey), encapsuler la clé (wrapkey), vérifier et signer.
 
-Par exemple, si le coffre de clés que vous avez créé pour Azure Information Protection est nommé contosorms-bvok-ky et que votre groupe de ressources est nommé contosorms-byok-rg, exécutez la commande suivante :
+Par exemple, si le coffre de clés que vous avez créé pour Azure Information Protection s’appelle ContosoRMS-Byok-kV et que votre groupe de ressources est nommé **ContosoRMS-Byok-RG**, exécutez la commande suivante :
 
 ```sh
 Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
@@ -148,13 +149,13 @@ Maintenant que vous avez transféré votre clé HSM dans Azure Key Vault, vous �
 
     Par exemple, à l’aide d’un fichier de données de configuration de C:\contoso_keyless.xml et de l’URL de notre clé issue de l’étape précédente, exécutez d’abord la commande suivante pour stocker le mot de passe :
     
-    ```ps
+    ```PowerShell
     $TPD_Password = Read-Host -AsSecureString
     ```
     
    Entrez le mot de passe que vous avez spécifié pour exporter le fichier de données de configuration. Ensuite, exécutez la commande suivante et confirmez que vous souhaitez effectuer cette action :
 
-    ```ps
+    ```PowerShell
     Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
@@ -164,7 +165,7 @@ Maintenant que vous avez transféré votre clé HSM dans Azure Key Vault, vous �
 
 4. Utilisez l’applet de commande [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) pour vous déconnecter du service Azure Rights Management :
 
-    ```ps
+    ```PowerShell
     Disconnect-AipServiceService
     ```
 

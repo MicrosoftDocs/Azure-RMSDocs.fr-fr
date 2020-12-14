@@ -1,10 +1,10 @@
 ---
 title: Log & analyser l’utilisation de la protection à partir de Azure Information Protection
 description: Informations et instructions sur l’utilisation de la journalisation de l’utilisation pour le service de protection à partir de Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,21 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc3dd9487548849d16f625092c2ff3dd121e4e54
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 06b32848bd1e2b0fa939474e74c174a674427eec
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384381"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Journalisation et analyse de l’utilisation de la protection à partir de Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Utilisez ces informations pour vous aider à comprendre comment utiliser la journalisation de l’utilisation pour le service de protection (Azure Rights Management) à partir de Azure Information Protection. Ce service de protection fournit la protection des données pour les documents et e-mails de votre organisation, et il peut journaliser chaque demande. Ces demandes incluent les cas où les utilisateurs protègent des documents et des e-mails, mais également consomment ce contenu, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par des opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection. 
 
@@ -46,10 +51,11 @@ En plus de cette journalisation de l’utilisation, vous disposez également des
 
 |Option de journalisation|Description|
 |----------------|---------------|
-|Journal d’administration|Journalise les tâches d’administration pour le service de protection. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d’informations, consultez l’applet de commande PowerShell, [obtenir-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
-|Suivi des documents|Permet aux utilisateurs d’effectuer le suivi et de révoquer les documents dont ils ont effectué le suivi avec le client Azure Information Protection. Les administrateurs généraux peuvent également effectuer le suivi de ces documents au nom des utilisateurs. <br /><br />Pour plus d’informations, consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
-|Journaux des événements de client|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Fichiers journaux du client|Journaux de dépannage pour le client Azure Information Protection, qui se trouvent dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|
+|**Journal d’administration**|Journalise les tâches d’administration pour le service de protection. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d’informations, consultez l’applet de commande PowerShell, [obtenir-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
+|**Suivi des documents**|Permet aux utilisateurs d’effectuer le suivi et de révoquer les documents dont ils ont effectué le suivi avec le client Azure Information Protection. Les administrateurs généraux peuvent également effectuer le suivi de ces documents au nom des utilisateurs. <br /><br />Pour plus d’informations, consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
+|**Journaux des événements de client**|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).|
+|**Fichiers journaux du client**|Journaux de dépannage pour le client Azure Information Protection, qui se trouvent dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|
+| | |
 
 En outre, les informations dans les journaux d’utilisation du client Azure Information Protection et le scanneur Azure Information Protection sont collectées et agrégées afin de créer des rapports dans le portail Azure. Pour plus d’informations, consultez [Création de rapports pour Azure Information Protection](reports-aip.md).
 
@@ -71,13 +77,13 @@ Pour télécharger vos journaux d’utilisation, vous allez utiliser le module P
 
 1.  Démarrez Windows PowerShell avec l’option **exécuter en tant qu’administrateur** et utilisez l’applet de commande [Connect-AipService](/powershell/module/aipservice/connect-aipservice) pour vous connecter à Azure information protection :
 
-    ```
+    ```PowerShell
     Connect-AipService
     ```
     
 2.  Pour télécharger les journaux correspondant à une date précise, exécutez la commande suivante : 
 
-    ```
+    ```PowerShell
     Get-AipServiceUserLog -Path <location> -fordate <date>
     ```
 
@@ -122,26 +128,26 @@ La troisième ligne énumère une liste de noms de champs séparés par des tabu
 
 Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des champs sont dans le même ordre que celui de la ligne précédente et sont séparées par des tabulations. Utilisez le tableau suivant pour interpréter les champs.
 
-
-|   Nom du champ   | Type de données W3C |                                                                                                                                                                          Description                                                                                                                                                                          |                                                            Valeur d'exemple                                                            |
-|----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|      date      |     Date      |                                                                                                                     Date UTC du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                                     |                                                             25-06-2013                                                              |
-|      time      |     Heure      |                                                                                                            Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                            |                                                              21:59:28                                                               |
-|     row-id     |     Texte      |                                                                           GUID unique de cet enregistrement de journal. En l’absence de valeur, utilisez la valeur correlation-id pour identifier l’entrée.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
-|  request-type  |     Name      |                                                                                                                                                            Nom de l’API RMS demandée.                                                                                                                                                            |                                                           AcquireLicense                                                            |
-|    user-id     |    String     |                                                               Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.                                                                |                                                          ‘joe@contoso.com’                                                          |
-|     result     |    String     |                                                                                                                  « Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.                                                                                                                   |                                                              « Succès »                                                              |
-| correlation-id |     Texte      |                                                                                                 GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |
-|   content-id   |     Texte      |                                                                      GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.                                                                       |                                               {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                |
-|  owner-email   |    String     |                                                                                                                       Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                        |                                                          alice@contoso.com                                                          |
-|     émetteur     |    String     |                                                                                                                          Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                          |                       alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
-|  template-id   |    String     |                                                                                                                    ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
-|   file-name    |    String     | Nom de fichier d’un document protégé qui est suivi en utilisant le client Azure Information Protection pour Windows. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess. |                                                       TopSecretDocument.docx                                                        |
-| date-published |     Date      |                                                                                                                          Date à laquelle le document a été protégé.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
-|     c-info     |    String     |                                                                                   Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l'application (par exemple, le système d'exploitation ou le navigateur).                                                                                   | ’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’ |
-|      c-ip      |    Adresse    |                                                                                                                                                       Adresse IP du client d’où émane la demande.                                                                                                                                                        |                                                            64.51.202.144                                                            |
-|  admin-action  |     Bool      |                                                                                                                                    Définit si un administrateur a eu accès au site de suivi des documents en mode administrateur.                                                                                                                                    |                                                                True                                                                 |
-| acting-as-user |    String     |                                                                                                                               Adresse e-mail de l’utilisateur pour lequel un administrateur accède au site de suivi des documents.                                                                                                                                |                                                          'joe@contoso.com'                                                          |
+| Nom du champ         | Type de données W3C | Description                                                                                                                                                                                                                                                                                          | Valeur d'exemple                                                                                                                       |
+| ------------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **date**           | Date          | Date UTC du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                                                                                                | 25-06-2013                                                                                                                          |
+| **time**           | Temps          | Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.                                                                                                                                                              | 21:59:28                                                                                                                            |
+| **ID de ligne**         | Texte          | GUID unique de cet enregistrement de journal. En l’absence de valeur, utilisez la valeur correlation-id pour identifier l’entrée.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.                                                                                            | 1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                                                                |
+| **type de demande**  | Nom          | Nom de l’API RMS demandée.                                                                                                                                                                                                                                                              | AcquireLicense                                                                                                                      |
+| **ID utilisateur**        | String        | Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.                                                                     | ‘joe@contoso.com’                                                                                                                   |
+| **result**         | String        | « Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.                                                                                                                                                                           | « Succès »                                                                                                                           |
+| **ID de corrélation** | Texte          | GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.                                                                                                                                        | cab52088-8925-4371-be34-4b71a3112356                                                                                                |
+| **ID de contenu**     | Texte          | GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.                                                                                   | {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                                                              |
+| **owner-email**    | String        | Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                                                                                     | alice@contoso.com                                                                                                                   |
+| **Émetteur**         | String        | Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                                                                                          | alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                                             |
+| **ID de modèle**   | String        | ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                                                                               | {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                                                              |
+| **nom de fichier**      | String        | Nom de fichier d’un document protégé qui est suivi en utilisant le client Azure Information Protection pour Windows. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess. | TopSecretDocument.docx                                                                                                              |
+| **Date de publication** | Date          | Date à laquelle le document a été protégé.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.                                                                                                                                                                                           | 2015-10-15T21:37:00                                                                                                                 |
+| **c-info**         | String        | Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l'application (par exemple, le système d'exploitation ou le navigateur).                                                                                                            | ’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’ |
+| **c-IP**           | Adresse       | Adresse IP du client d’où émane la demande.                                                                                                                                                                                                                                                     | 64.51.202.144                                                                                                                       |
+| **admin-action**   | Bool          | Définit si un administrateur a eu accès au site de suivi des documents en mode administrateur.                                                                                                                                                                                                              | Vrai                                                                                                                                |
+| **acting-as-user** | String        | Adresse e-mail de l’utilisateur pour lequel un administrateur accède au site de suivi des documents.                                                                                                                                                                                                     | 'joe@contoso.com'                                                                                                                   |
+|                    |               |                                                                                                                                                                                                                                                                                                      |                                                                                                                                     |
 
 #### <a name="exceptions-for-the-user-id-field"></a>Exceptions pour le champ user-id.
 Bien que le champ user-id indique généralement l'utilisateur qui effectue la demande, il existe deux exceptions pour lesquelles la valeur ne mappe pas à un utilisateur réel :
@@ -159,50 +165,63 @@ Il existe de nombreux types de demandes pour le service de protection, mais le t
 
 |Type de demande|Description|
 |----------------|---------------|
-|AcquireLicense|Un client d’un ordinateur Windows demande une licence pour du contenu protégé.|
-|AcquirePreLicense|Un client, pour le compte de l’utilisateur, demande une licence pour le contenu protégé.|
-|AcquireTemplates|Un appel a été fait pour acquérir des modèles basés sur des ID de modèle.|
-|AcquireTemplateInformation|Un appel a été fait pour obtenir les ID du modèle à partir du service.|
-|AddTemplate|Un appel est fait à partir du portail Azure pour ajouter un modèle.|
-|AllDocsCsv|Un appel est effectué à partir du site de suivi des documents pour télécharger le fichier CSV à partir de la page **Tous les documents**.|
-|BECreateEndUserLicenseV1|Un appel est fait à partir d’un appareil mobile pour créer une licence utilisateur final.|
-|BEGetAllTemplatesV1|Un appel est fait à partir d’un appareil mobile (principal) pour obtenir tous les modèles.|
-|Certify|Le client certifie l’utilisateur pour la consommation et la création de contenu protégé.|
-|DeleteTemplateById|Un appel est fait à partir du portail Azure pour supprimer un modèle sur la base de son ID.|
-|DocumentEventsCsv|Un appel est effectué à partir du site de suivi des documents pour télécharger le fichier CSV pour un seul document.|
-|ExportTemplateById|Un appel est fait à partir du portail Azure pour exporter un modèle sur la base de son ID.|
-|FECreateEndUserLicenseV1|Similaire à la demande AcquireLicense, mais à partir d’un appareil mobile.|
-|FECreatePublishingLicenseV1|Identique à Certify et GetClientLicensorCert combinés, mais à partir de clients mobiles.|
-|FEGetAllTemplates|Un appel est fait à partir d’un appareil mobile (frontal) pour obtenir les modèles.|
-|FindServiceLocationsForUser|Un appel est fait pour rechercher des URL utilisées pour appeler Certify ou AcquireLicense.|
-|GetAllDocs|Un appel est effectué à partir du site de suivi des documents pour charger la page **tous les documents** pour un utilisateur ou rechercher tous les documents pour le client. Utilisez cette valeur avec les champs admin-action et acting-as-admin :<br /><br />- admin-action est vide : un utilisateur affiche la page **tous les documents** page pour ses propres documents.<br /><br />- admin-action a la valeur true et acting-as-user est vide : un administrateur affiche tous les documents pour son client.<br /><br />- admin-action a la valeur true et acting-as-user n’est pas vide : un administrateur affiche la page **tous les documents** pour un utilisateur.|
-|GetAllTemplates|Un appel est fait à partir du portail Azure pour obtenir tous les modèles.|
-|GetClientLicensorCert|Le client demande un certificat de publication (qui sera ensuite utilisé pour protéger du contenu) à partir d'un ordinateur Windows.|
-|GetConfiguration|Une applet de commande Azure PowerShell est appelée pour obtenir la configuration du client Azure RMS.|
-|GetConnectorAuthorizations|Un appel est fait via les connecteurs RMS pour obtenir leur configuration à partir du cloud.|
-|GetRecipients|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage de liste pour un seul document.|
-|GetSingle|Un appel est effectué à partir du site de suivi des documents pour accéder à une page **un seul document**.|
-|GetTenantFunctionalState|Le Portail Azure vérifie si le service de protection (Azure Rights Management) est activé.|
-|GetTemplateById|Un appel est fait à partir du portail Azure pour obtenir un modèle en spécifiant son ID.|
-|KeyVaultDecryptRequest|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK) dans Azure Key Vault.|
-|KeyVaultGetKeyInfoRequest|Un appel est effectué pour vérifier que la clé spécifiée pour être utilisée dans Azure Key Vault pour la clé de locataire Azure Information Protection est accessible et n’est pas déjà utilisée.|
-|KeyVaultSignDigest|Un appel est effectué quand une clé gérée par le client (BYOK) dans Azure Key Vault est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
-|KMSPDecrypt|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK) héritée.|
-|KMSPSignDigest|Un appel est fait quand une clé gérée par le client (BYOK) héritée est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
-|LoadEventsForMap|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage du mappage pour un seul document.|
-|LoadEventsForSummary|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage de la chronologie pour un seul document.|
-|LoadEventsForTimeline|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage du mappage pour un seul document.|
-|ImportTemplate|Un appel est fait à partir du portail Azure pour importer un modèle.|
-|RevokeAccess|Un appel est effectué à partir du site de suivi des documents pour révoquer un document.|
-|SearchUsers |Un appel est effectué à partir du site de suivi des documents pour rechercher tous les utilisateurs dans un client.|
-|ServerCertify|Un appel est fait à partir d’un client RMS (par exemple, SharePoint) pour certifier le serveur.|
-|SetUsageLogFeatureState|Un appel est fait pour activer la journalisation de l’utilisation.|
-|SetUsageLogStorageAccount|Un appel est effectué pour spécifier l’emplacement des journaux du service Azure Rights Management.|
-|UpdateNotificationSettings|Un appel est effectué à partir du site de suivi des documents pour modifier les paramètres de notification pour un seul document.|
-|UpdateTemplate|Un appel est fait à partir du portail Azure pour mettre à jour un modèle existant.|
+|**AcquireLicense**|Un client d’un ordinateur Windows demande une licence pour du contenu protégé.|
+|**AcquirePreLicense**|Un client, pour le compte de l’utilisateur, demande une licence pour le contenu protégé.|
+|**AcquireTemplates**|Un appel a été fait pour acquérir des modèles basés sur des ID de modèle.|
+|**AcquireTemplateInformation**|Un appel a été fait pour obtenir les ID du modèle à partir du service.|
+|**AddTemplate**|Un appel est fait à partir du portail Azure pour ajouter un modèle.|
+|**AllDocsCsv**|Un appel est effectué à partir du site de suivi des documents pour télécharger le fichier CSV à partir de la page **Tous les documents**.|
+|**BECreateEndUserLicenseV1**|Un appel est fait à partir d’un appareil mobile pour créer une licence utilisateur final.|
+|**BEGetAllTemplatesV1**|Un appel est fait à partir d’un appareil mobile (principal) pour obtenir tous les modèles.|
+|**Certify**|Le client certifie l’utilisateur pour la consommation et la création de contenu protégé.|
+|**FECreateEndUserLicenseV1**|Similaire à la demande AcquireLicense, mais à partir d’un appareil mobile.|
+|**FECreatePublishingLicenseV1**|Identique à Certify et GetClientLicensorCert combinés, mais à partir de clients mobiles.|
+|**FEGetAllTemplates**|Un appel est fait à partir d’un appareil mobile (frontal) pour obtenir les modèles.|
+|**FindServiceLocationsForUser**|Un appel est fait pour rechercher des URL utilisées pour appeler Certify ou AcquireLicense.|
+|**GetClientLicensorCert**|Le client demande un certificat de publication (qui sera ensuite utilisé pour protéger du contenu) à partir d'un ordinateur Windows.|
+|**GetConfiguration**|Une applet de commande Azure PowerShell est appelée pour obtenir la configuration du client Azure RMS.|
+|**GetConnectorAuthorizations**|Un appel est fait via les connecteurs RMS pour obtenir leur configuration à partir du cloud.|
+|**GetRecipients**|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage de liste pour un seul document.|
+|**GetTenantFunctionalState**|Le Portail Azure vérifie si le service de protection (Azure Rights Management) est activé.|
+|**KeyVaultDecryptRequest**|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK) dans Azure Key Vault.|
+|**KeyVaultGetKeyInfoRequest**|Un appel est effectué pour vérifier que la clé spécifiée pour être utilisée dans Azure Key Vault pour la clé de locataire Azure Information Protection est accessible et n’est pas déjà utilisée.|
+|**KeyVaultSignDigest**|Un appel est effectué quand une clé gérée par le client (BYOK) dans Azure Key Vault est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|**KMSPDecrypt**|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK) héritée.|
+|**KMSPSignDigest**|Un appel est fait quand une clé gérée par le client (BYOK) héritée est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|**ServerCertify**|Un appel est fait à partir d’un client RMS (par exemple, SharePoint) pour certifier le serveur.|
+|**SetUsageLogFeatureState**|Un appel est fait pour activer la journalisation de l’utilisation.|
+|**SetUsageLogStorageAccount**|Un appel est effectué pour spécifier l’emplacement des journaux du service Azure Rights Management.|
+|**UpdateTemplate**|Un appel est fait à partir du portail Azure pour mettre à jour un modèle existant.|
+| | | 
+
+**Client classique uniquement**
+
+Les types de demandes suivants sont pertinents pour les utilisateurs avec le client classique AIP uniquement :
+
+|Type de demande|Description|
+|----------------|---------------|
+|**DeleteTemplateById**|Un appel est fait à partir du portail Azure pour supprimer un modèle sur la base de son ID.|
+|**DocumentEventsCsv**|Un appel est effectué à partir du site de suivi des documents pour télécharger le fichier CSV pour un seul document.|
+|**ExportTemplateById**|Un appel est fait à partir du portail Azure pour exporter un modèle sur la base de son ID.|
+|**FEGetAllTemplates**|Un appel est fait à partir d’un appareil mobile (frontal) pour obtenir les modèles.|
+|**GetAllDocs**|Un appel est effectué à partir du site de suivi des documents pour charger la page **tous les documents** pour un utilisateur ou rechercher tous les documents pour le client. Utilisez cette valeur avec les champs admin-action et acting-as-admin :<br /><br />- admin-action est vide : un utilisateur affiche la page **tous les documents** page pour ses propres documents.<br /><br />- admin-action a la valeur true et acting-as-user est vide : un administrateur affiche tous les documents pour son client.<br /><br />- admin-action a la valeur true et acting-as-user n’est pas vide : un administrateur affiche la page **tous les documents** pour un utilisateur.|
+|**GetAllTemplates**|Un appel est fait à partir du portail Azure pour obtenir tous les modèles.|
+|**GetConnectorAuthorizations**|Un appel est fait via les connecteurs RMS pour obtenir leur configuration à partir du cloud.|
+|**GetSingle**|Un appel est effectué à partir du site de suivi des documents pour accéder à une page **un seul document**.|
+|**GetTemplateById**|Un appel est fait à partir du portail Azure pour obtenir un modèle en spécifiant son ID.|
+|**LoadEventsForMap**|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage du mappage pour un seul document.|
+|**LoadEventsForSummary**|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage de la chronologie pour un seul document.|
+|**LoadEventsForTimeline**|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage du mappage pour un seul document.|
+|**ImportTemplate**|Un appel est fait à partir du portail Azure pour importer un modèle.|
+|**RevokeAccess**|Un appel est effectué à partir du site de suivi des documents pour révoquer un document.|
+|**SearchUsers** |Un appel est effectué à partir du site de suivi des documents pour rechercher tous les utilisateurs dans un client.|
+|**UpdateNotificationSettings**|Un appel est effectué à partir du site de suivi des documents pour modifier les paramètres de notification pour un seul document.|
+|**UpdateTemplate**|Un appel est fait à partir du portail Azure pour mettre à jour un modèle existant.|
+| | | 
 
 
-## <a name="powershell-reference"></a>Référence sur PowerShell
+
+## <a name="powershell-reference"></a>Informations de référence sur PowerShell
 
 La seule applet de commande PowerShell dont vous avez besoin pour accéder à la journalisation de l’utilisation de la protection est [AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog). 
 

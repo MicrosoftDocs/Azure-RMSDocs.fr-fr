@@ -1,6 +1,6 @@
 ---
-title: Guide de l’administrateur du client Azure Information Protection
-description: Instructions et informations destinées aux administrateurs d’un réseau d’entreprise en charge du déploiement du client Azure Information Protection pour Windows.
+title: Guide d’administration du client Azure Information Protection Classic
+description: Instructions et informations pour les administrateurs sur un réseau d’entreprise qui sont responsables du déploiement du client Azure Information Protection Classic pour Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc6a8cd4e891e007c9cf23d5dcb9f2381e068ac8
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: aa166cf6968af79ec22a7d3fd2a05e53e025bbe5
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568122"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385996"
 ---
-# <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
+# <a name="azure-information-protection-classic-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection Classic
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez le [Guide d’administration du client d’étiquetage unifié](clientv2-admin-guide.md). *
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
-> **Pour déployer le client classique AIP,** ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.
+> **Pour déployer le client classique AIP**, ouvrez un ticket de support pour télécharger les fichiers d’installation.
 
 Utilisez les informations de ce guide si vous êtes responsable du client Azure Information Protection sur un réseau d’entreprise, ou si vous souhaitez des informations techniques supplémentaires par rapport au [Guide de l’administrateur du client Azure Information Protection](client-user-guide.md). 
 
@@ -59,7 +59,7 @@ Le client Azure Information Protection inclut les éléments suivants :
 
 - L’Explorateur de fichiers Windows, avec des options contextuelles permettant aux utilisateurs d’appliquer des étiquettes de classification et la protection aux fichiers.
 
-- Une visionneuse pour afficher les fichiers protégés lorsqu’une application native ne peut pas les ouvrir.
+- Une visionneuse pour afficher les fichiers protégés lorsqu’une application intégrée ne peut pas l’ouvrir.
 
 - Un module PowerShell pour appliquer et supprimer des étiquettes de classification et la protection de fichiers. 
     
@@ -84,7 +84,7 @@ Déployez le client Azure Information Protection si vous n’utilisez pas d' [é
 
 - Vous souhaitez exécuter un service qui découvre, classifie (et éventuellement protège) des fichiers qui sont stockés localement.
 
-- Vous souhaitez afficher des documents protégés lorsqu’une application native permettant d’afficher le fichier n’est pas installée ou ne parvient pas à ouvrir ces documents.
+- Vous souhaitez afficher des documents protégés quand une application intégrée qui affiche le fichier n’est pas installée ou ne peut pas ouvrir ces documents.
 
 - Vous souhaitez uniquement protéger les fichiers à l’aide de l’Explorateur de fichiers ou des commandes PowerShell.
 
@@ -253,7 +253,7 @@ Si vous savez que vous souhaitez déplacer la base de données de configuration 
 
 3. Installez le scanneur à l’aide de [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), en spécifiant la nouvelle instance SQL Server et le nom du profil.
 
-4. **Facultatif :** Si vous ne souhaitez pas que le scanneur relance l’analyse de tous les fichiers, exportez la table ScannerFiles et importez-la dans la nouvelle base de données.
+4. **Facultatif**: Si vous ne souhaitez pas que le scanneur relance l’analyse de tous les fichiers, exportez la table ScannerFiles et importez-la dans la nouvelle base de données.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 

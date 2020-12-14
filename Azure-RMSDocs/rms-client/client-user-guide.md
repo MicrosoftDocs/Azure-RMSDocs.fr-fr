@@ -1,11 +1,11 @@
 ---
-title: Guide de l’utilisateur Azure Information Protection
-description: Le client Azure Information Protection pour Windows vous permet de tenir des documents et e-mails importants à distance des personnes qui ne doivent pas les voir, même si vos e-mails sont transférés ou vos documents enregistrés à un autre emplacement.
-author: mlottner
-ms.author: mlottner
+title: Guide de l’utilisateur du client Azure Information Protection Classic
+description: Le client Azure Information Protection Classic pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse e-mail est transférée ou si votre document est enregistré dans un autre emplacement.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/06/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
@@ -13,20 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: ea95338f27d0ac4143804b9d7beda46f6dab2f6a
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 4492487395dd45da0b184dc001deb189ce2f7609
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567743"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385741"
 ---
-# <a name="azure-information-protection-user-guide"></a>Guide de l’utilisateur Azure Information Protection
+# <a name="azure-information-protection-classic-client-user-guide"></a>Guide de l’utilisateur du client Azure Information Protection Classic
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez le [Guide de l’utilisateur du client d’étiquetage unifié](clientv2-user-guide.md). *
 
-Le client Azure Information Protection pour Windows vous permet de tenir des documents et e-mails importants à distance des personnes qui ne doivent pas les voir, même si vos e-mails sont transférés ou vos documents enregistrés à un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
+Le client Azure Information Protection Classic pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse e-mail est transférée ou si votre document est enregistré dans un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
 
 Tout ce dont vous avez besoin, c’est un ordinateur qui exécute au moins Windows 8. Ensuite, téléchargez auprès de Microsoft et installez ce client gratuit.
 

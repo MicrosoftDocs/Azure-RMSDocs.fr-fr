@@ -12,23 +12,23 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 77d7ddb996a224e871a89227bd58872989bdc759
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568554"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382851"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Qu’est-ce que le scanneur classique Azure Information Protection ?
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
-
->[!NOTE]
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
-> Si vous utilisez le client d’étiquetage unifié, consultez [qu’est-ce que le scanneur d’étiquetage unifié Azure information protection ?](deploy-aip-scanner.md).
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [qu’est-ce que le scanneur d’étiquetage unifié Azure information protection ?](deploy-aip-scanner.md). *
 
-Utilisez les informations de cette section pour en savoir plus sur le scanneur de Azure Information Protection, puis sur la façon d’installer, de configurer, d’exécuter et, le cas échéant, de résoudre le problème.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
+Utilisez les informations de cette section pour en savoir plus sur le Azure Information Protection scanneur client classique, puis sur la façon d’installer, de configurer, d’exécuter et, le cas échéant, de le résoudre.
 
 Le scanneur AIP s’exécute en tant que service sur Windows Server et vous permet de découvrir, classifier et protéger des fichiers sur les banques de données suivantes :
 
@@ -54,7 +54,7 @@ Le scanneur utilise le client Azure Information Protection et peut classer et pr
 Effectuez l’une des opérations suivantes pour configurer vos analyses en fonction des besoins :
 
 - **Exécutez le scanneur en mode détection uniquement** pour créer des rapports qui vérifient ce qui se produit lorsque vos fichiers sont étiquetés.
-- **Exécutez le scanneur pour détecter les fichiers contenant des informations sensibles,** sans configurer les étiquettes qui appliquent la classification automatique.
+- **Exécutez le scanneur pour détecter les fichiers contenant des informations sensibles**, sans configurer les étiquettes qui appliquent la classification automatique.
 - **Exécutez le scanner automatiquement** pour appliquer les étiquettes configurées.
 - **Définissez une liste de types de fichiers** pour spécifier des fichiers à analyser ou à exclure.
 
@@ -112,7 +112,7 @@ Le scanneur AIP ne peut pas étiqueter les fichiers dans les circonstances suiva
 
     D’autres types de fichiers peuvent être ajoutés pour la protection lorsque vous [Modifiez les types de fichiers à protéger](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Exemple :** Après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement.
+**Exemple**: après l’inspection des fichiers. txt, le scanneur ne peut pas appliquer une étiquette qui est configurée pour la classification uniquement, car le type de fichier. txt ne prend pas en charge la classification uniquement.
 
 Toutefois, si l’étiquette est configurée pour la classification et la protection et que le type de fichier. txt est inclus pour le scanneur à protéger, le scanneur peut étiqueter le fichier.
 
@@ -124,10 +124,10 @@ Pour plus d’informations sur le déploiement du scanneur, consultez les articl
 - [Configuration et installation du scanneur AIP](deploy-aip-scanner-configure-install.md)
 - [Exécution d’analyses à l’aide du scanneur AIP](deploy-aip-scanner-manage.md)
 
-**Plus d’informations :**
+**Plus d’informations**:
 
 - Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-- Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+- Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur tous les scénarios qui utilisent PowerShell, consultez [Utiliser PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).

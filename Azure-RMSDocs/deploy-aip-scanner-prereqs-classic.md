@@ -12,21 +12,21 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4c466fbbad6314a6b0ea0dddb85d07d359a42467
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 71dd1d8119af741bbafb8173c63622f4e99146d4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568566"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382630"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur Azure Information Protection Classic
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le scanneur d’étiquetage unifié, consultez la [Configuration requise pour le scanneur d’étiquetage unifié](deploy-aip-scanner-prereqs.md)*
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle. 
-> 
-> Si vous utilisez le scanneur d’étiquetage unifié, consultez [Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure information protection](deploy-aip-scanner-prereqs.md).
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Avant d’installer le Azure Information Protection scanneur local, assurez-vous que votre système est conforme aux exigences de base de [Azure information protection](requirements.md), ainsi qu’aux exigences suivantes spécifiques au scanneur :
 
@@ -55,7 +55,7 @@ Vous devez disposer d’un ordinateur Windows Server pour exécuter le scanneur,
 |**Processeur**     |4 processeurs principaux         |
 |**RAM**     |8 Go         |
 |**Espace disque**     |10 Go d’espace libre (moyenne) pour les fichiers temporaires. </br></br>Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. </br></br>L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. 
-|**Système d’exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque :** À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
+|**Système d’exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque**: à des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
 |**Connectivité réseau**     | Votre ordinateur de scanneur peut être un ordinateur physique ou virtuel avec une connexion réseau rapide et fiable aux magasins de données à analyser. </br></br> Si la connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Dans le cas contraire, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPs (port 443) :</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com|
 | ||
 
@@ -73,7 +73,7 @@ Ce compte de service a la configuration suivante :
 |---------|---------|
 |Attribution **de droits d’utilisateur d’ouverture de session locale**     |Requis pour installer et configurer le scanneur, mais pas pour exécuter des analyses.  </br></br>Une fois que vous avez confirmé que le scanneur peut détecter, classer et protéger les fichiers, vous pouvez supprimer ce droit du compte de service.  </br></br>S’il n’est pas possible d’accorder ce droit même pendant une brève période de temps en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).         |
 |**Ouvrir une session en tant que service**, attribution des droits utilisateur.     |  Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur.        |
-|**Autorisations pour les référentiels de données**     |- **Partages de fichiers ou fichiers locaux :** Accordez des autorisations de **lecture**, d' **écriture** et de **modification** pour analyser les fichiers, puis appliquez la classification et la protection conformément à la configuration.  <br /><br />- **SharePoint :** Accordez des autorisations **contrôle total** pour analyser les fichiers, puis appliquez la classification et la protection conformément à la configuration.  <br /><br />- **Mode de découverte :** Pour exécuter le scanneur en mode détection uniquement, l’autorisation **lecture** est suffisante.         |
+|**Autorisations pour les référentiels de données**     |- **Partages de fichiers ou fichiers locaux**: accordez les autorisations **lire**, **écrire** et **modifier** pour analyser les fichiers, puis appliquer la classification et la protection conformément à la configuration.  <br /><br />- **SharePoint**: accordez des autorisations **contrôle total** pour analyser les fichiers, puis appliquer la classification et la protection conformément à la configuration.  <br /><br />- **Mode de découverte**: pour exécuter le scanneur en mode détection uniquement, l’autorisation **lecture** est suffisante.         |
 |**Pour les étiquettes qui reprotègent ou suppriment la protection**     | Pour vous assurer que le scanneur a toujours accès aux fichiers protégés, définissez ce compte comme [super utilisateur](configure-super-users.md) pour Azure information protection et assurez-vous que la fonctionnalité de super utilisateur est activée. </br></br>En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que le compte de service est inclus dans les contrôles d’intégration que vous avez configurés.|
 | ||
 
@@ -101,7 +101,7 @@ Pour stocker les données de configuration de l’analyseur, utilisez un serveur
 
 - **Capacité.** Pour obtenir des conseils sur la capacité, consultez [exigences de stockage et planification de la capacité pour SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Classement non sensible à la casse](/sql/relational-databases/collations/collation-and-unicode-support)**
+- **[Classement non sensible](/sql/relational-databases/collations/collation-and-unicode-support)à la casse.**
 
 > [!NOTE]
 > Plusieurs bases de données de configuration sur le même serveur SQL Server sont prises en charge lorsque vous spécifiez un nom de cluster personnalisé (profil) pour le scanneur.
@@ -227,7 +227,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     Toutefois, le compte d’utilisateur qui configure le scanneur requiert toujours le rôle **db_owner** pour la base de données de configuration de l’analyseur. Si vous avez uniquement le rôle sysadmin jusqu’à ce que l’installation du scanneur soit terminée, [accordez manuellement le rôle db_owner au compte d’utilisateur](#create-a-user-and-grant-db_owner-rights-manually).
 
-- **Vous ne pouvez pas avoir le rôle sysadmin**. Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données avant d’installer le scanneur. 
+- **Vous ne pouvez pas avoir le rôle sysadmin.** Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données avant d’installer le scanneur. 
 
     Pour cette configuration, le rôle de **db_owner** doit être affecté aux comptes suivants : 
 
@@ -241,7 +241,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     Si vous ne spécifiez pas votre propre nom de cluster (profil) pour le scanneur, la base de données de configuration est nommée **AIPScanner_ \<computer_name>**. </br>Poursuivez avec [la création d’un utilisateur et en accordant des droits de db_owner sur la base de données](#create-a-user-and-grant-db_owner-rights-manually). 
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
@@ -296,9 +296,9 @@ Si les stratégies de votre organisation interdisent le droit **ouvrir une sessi
 
 Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre compte pour l’authentification auprès d’Azure Active Directory :
 
-- **Pour le compte de service du scanneur,** utilisez un compte Windows local ou un compte Active Directory.
+- **Pour le compte de service du scanneur**, utilisez un compte Windows local ou un compte Active Directory.
 
-- **Pour le compte Azure Active Directory,** [spécifiez et utilisez le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
+- **Pour le compte Azure Active Directory**, [spécifiez et utilisez le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
 
 #### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restriction : vos étiquettes n’ont pas de conditions d’étiquetage automatique
 
@@ -316,10 +316,10 @@ Une fois que vous avez confirmé que votre système est conforme aux conditions 
 
 Pour obtenir une vue d’ensemble du scanneur, consultez [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner-classic.md).
 
-**Plus d’informations :**
+**Plus d’informations**:
 
 Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez [utilisation de PowerShell avec le client Azure information protection Classic](./rms-client/client-admin-guide-powershell.md) .

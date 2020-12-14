@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 13c63f2e96b27a31b9afb91fbc8c03b9b198f9c1
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: ee761ef8ae12d638df7e05c83a5ed5d635d25b9b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316821"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384364"
 ---
 # <a name="migration-phase-1---preparation"></a>Phase de migration 1 : Préparation
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour la Phase 1 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 1 à 3 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et préparent votre environnement pour la migration sans aucun impact sur vos utilisateurs.
 
@@ -146,13 +148,13 @@ Pour chaque organisation Exchange, ajoutez les valeurs de Registre sur chaque se
 
 1. Si vous avez Exchange 2013 ou Exchange 2016, ajoutez la valeur de Registre suivante :
 
-    - **Chemin du Registre :**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Chemin du Registre**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Tapez :** Reg_SZ
+    - **Type**: REG_SZ
 
-    - **Valeur :** `https://\<Your Tenant URL\>/_wmcs/licensing`
+    - **Valeur** : `https://\<Your Tenant URL\>/_wmcs/licensing`
 
-    - **Données :**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
+    - **Données**: `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
 1. Exécutez les commandes PowerShell suivantes, une par une, ou dans un script :
 

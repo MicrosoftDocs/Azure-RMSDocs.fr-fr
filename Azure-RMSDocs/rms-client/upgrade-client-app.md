@@ -1,11 +1,11 @@
 ---
 title: Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS - AIP
 description: Instructions pour les utilisateurs ayant effectué la mise à niveau de l’application de partage RMS vers le client Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2019
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dcbd46699ba6c2da864ebb6463adce50872a8e90
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: bdaa80ba38a98a53dc4781bf7aadf15b23fbda3a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384891"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guide de l’utilisateur : Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>**Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Vous avez récemment effectué la mise à niveau de l’application de partage Rights Management (également appelée « application de partage RMS ») vers le client Azure Information Protection ? 
 
@@ -43,7 +43,7 @@ Utilisez les informations suivantes pour être opérationnel rapidement.
 
 Si vous recherchez une option spécifique que vous utilisiez avec l’application de partage RMS, consultez le tableau suivant.
 
-|Option dans l’application de partage RMS|Informations
+|Option dans l’application de partage RMS|Information
 |-----------|--------------------|
 |**Partage protégé**|Cette option n’est plus disponible dans le ruban Office. Au lieu de partager directement à partir de votre application Office, utilisez l’option contextuelle de l’Explorateur de fichiers, **Classifier et protéger** pour protéger une copie du document avec des autorisations personnalisées, puis partagez le fichier à l’aide du client de messagerie de votre choix ou d’un emplacement de partage. <br /><br /> Vous pouvez également attacher un document Office non protégé à un e-mail que vous protégez : ce document est alors protégé automatiquement avec les mêmes restrictions. Vous ne pouvez cependant pas suivre ni révoquer ce document.
 |**M’envoyer un e-mail quand quelqu’un tente d’ouvrir ces documents**|Utilisez le site de suivi des documents pour configurer votre paramètre de notification par courrier électronique préféré : localiser le document protégé que vous avez partagé > **paramètres**  >  **notifications par e-mail**

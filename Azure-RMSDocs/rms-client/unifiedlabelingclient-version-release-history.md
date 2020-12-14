@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection l’historique des versions du client d’étiquetage unifié-version & la stratégie de support
-description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
+description: Découvrez les nouveautés du client d’étiquetage unifié de l’Azure Information Protection (AIP) pour Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,20 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
-ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
+ms.openlocfilehash: 8d116c08680372e6a63a93c3c179914f9fe0e464
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "96740620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385027"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne**: [client d’étiquetage unifié AIP uniquement](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [l’historique des versions du client classique et la stratégie de support](client-version-release-history.md). *
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -67,7 +67,7 @@ La dernière version de Azure Information Protection est actuellement en version
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
-Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Le client d’étiquetage unifié remplace le client Azure Information Protection Classic. Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les solutions d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 ## <a name="version-291010-public-preview"></a>Version 2.9.101.0 (version préliminaire publique)
 
@@ -118,7 +118,7 @@ Pour prendre en charge les analyses sur les partages NFS, les services pour NFS 
 Pour plus d’informations, consultez [créer un travail d’analyse du contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### <a name="added-support-for-sensitive-information-types"></a>Ajout de la prise en charge des types d’informations sensibles
-Nous avons ajouté la prise en charge de types d’informations sensibles supplémentaires dans Azure Information Protection, tels que le **numéro d’entreprise Australie,** le **numéro de société en Australie** ou la **carte d’identité autrichienne.** 
+Nous avons ajouté la prise en charge de types d’informations sensibles supplémentaires dans Azure Information Protection, tels que le **numéro d’entreprise Australie**, le **numéro de société en Australie** ou la carte d' **identité autrichienne**. 
 
 Pour plus d’informations, consultez les [définitions d’entité de type d’informations sensibles](/microsoft-365/compliance/sensitive-information-type-entity-definitions) dans la documentation de Microsoft 365.
 ### <a name="fixes-and-improvements"></a>Correctifs et améliorations
@@ -133,7 +133,7 @@ Les correctifs suivants ont été fournis dans la version 2.9.101.0 de l' [Azure
 - Prise en charge pour [éviter un délai d’expiration](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) lors de l’analyse d’un serveur SharePoint.
 
 ### <a name="known-issues"></a>Problèmes connus
-Dans cette version préliminaire publique, l’application d’étiquettes avec [protection DKE](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) n’est pas prise en charge par le scanneur.
+Dans cette version préliminaire publique, l’application d’étiquettes avec [protection DKE](../plan-implement-tenant-key.md#double-key-encryption-dke) n’est pas prise en charge par le scanneur.
 
 ## <a name="version-28850"></a>Version 2.8.85.0
 
@@ -164,7 +164,7 @@ Ignorez la nouvelle analyse complète et immédiate, puis revenez plus tard pour
 > [!IMPORTANT]
 > Les administrateurs qui modifient leurs stratégies et les travaux d’analyse de contenu doivent maintenant comprendre les effets de ces modifications sur le contenu et déterminer si une nouvelle analyse complète est nécessaire.
 > 
-> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on,** veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
+> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 >
 
 #### <a name="configure-sharepoint-timeouts"></a>Configurer des délais d’attente SharePoint
@@ -295,7 +295,7 @@ Les correctifs suivants ont été fournis dans la version 2.8.85.0 du client d�
 
 **Publication** le 08/23/2020
 
-**Résoudre**
+**Correctif**:
 
 Correction du problème pour les utilisateurs de PPT, d’Excel et de Word, ce qui a entraîné le blocage, le blocage ou l’obligation de répéter l’enregistrement qui était lié aux étiquettes obligatoires configurées avec la protection, le filigrane et/ou le marquage du contenu.
 
@@ -305,7 +305,7 @@ Correction du problème pour les utilisateurs de PPT, d’Excel et de Word, ce q
 
 **Publication** le 07/20/2020
 
-**Correctifs et améliorations :**
+**Correctifs et améliorations**:
 
 Correction des problèmes dans les actions d’étiquetage des fichiers pour les nouveaux journaux d’audit des **étiquettes** .
 
@@ -317,7 +317,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 **Publication** le 06/29/2020
 
-**Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié :**
+**Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié**:
 
 - [Utilisez le scanneur pour appliquer des étiquettes en fonction des conditions recommandées](../deploy-aip-scanner-prereqs.md). Les clients AIP peuvent désormais choisir d’implémenter l’étiquetage automatique côté service uniquement. Cette fonctionnalité permet aux utilisateurs d’AIP de suivre toujours les recommandations au lieu du scénario précédent, qui n’autorise que l’étiquetage automatique côté utilisateur.
 
@@ -331,7 +331,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 - Vous pouvez maintenant configurer le scanneur d’étiquetage unifié pour ignorer des fichiers spécifiques en fonction de leurs attributs de fichier. Définissez la liste des attributs de fichier qui déclenchent l’omission d’un fichier à l’aide du nouveau paramètre avancé **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** .
 
-**Nouvelles fonctionnalités pour le client d’étiquetage unifié :**
+**Nouvelles fonctionnalités pour le client d’étiquetage unifié**:
 
 - Les [**fenêtres contextuelles de justification**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) s’affichent désormais pour les modifications apportées aux étiquettes par défaut dans le client d’étiquetage unifié.
     
@@ -391,7 +391,7 @@ Pour plus d’informations sur la configuration requise, consultez [firewalls an
 
 - Lorsque plusieurs comptes Exchange sont configurés et que le client Azure Information Protection Outlook est activé, les messages électroniques sont envoyés à partir du compte secondaire comme prévu. Pour plus d’informations sur la configuration du client d’étiquetage unifié avec Outlook, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
-- Lorsqu’un document avec une étiquette de confidentialité plus élevée est glissé et déposé dans un message électronique, le message électronique reçoit désormais automatiquement l’étiquette de confidentialité la plus élevée comme prévu. Pour plus d’informations sur l’étiquetage des fonctionnalités clientes, consultez le [tableau comparatif des clients d’étiquetage](use-client.md#compare-the-labeling-clients-for-windows-computers).
+- Lorsqu’un document avec une étiquette de confidentialité plus élevée est glissé et déposé dans un message électronique, le message électronique reçoit désormais automatiquement l’étiquette de confidentialité la plus élevée comme prévu. Pour plus d’informations sur l’étiquetage des fonctionnalités clientes, consultez le [tableau comparatif des clients d’étiquetage](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 - Les autorisations personnalisées sont désormais appliquées aux courriers électroniques comme prévu, lorsque les adresses de messagerie incluent à la fois une apostrophe (') et un point (.) Pour plus d’informations sur la configuration du client d’étiquetage unifié avec Outlook, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -405,7 +405,7 @@ Pour plus d’informations sur la configuration requise, consultez [firewalls an
 
 Pris en charge jusqu’à 12/29/2020
 
-**Nouvelles fonctionnalités :**
+**Nouvelles fonctionnalités** :
 
 - Version de disponibilité générale du [scanneur](../deploy-aip-scanner.md), pour inspecter et étiqueter des documents dans des magasins de données locaux. 
 
@@ -427,7 +427,7 @@ Pris en charge jusqu’à 12/29/2020
 
 - Prise en charge ajoutée pour la [fonctionnalité d’étiquetage hors connexion](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) avec les applications Office dans le client d’étiquetage unifié.
 
-**Correctifs :**
+**Correctifs** :
 
 - Dans les cas où les utilisateurs ont tenté sans succès d’ouvrir des fichiers TIFF protégés et des fichiers TIFF créés par RightFax, les fichiers TIFF s’ouvrent et restent stables comme prévu.  
 - Les endommagements précédents des fichiers txt et PDF protégés sont résolus.
@@ -439,7 +439,7 @@ Pris en charge jusqu’à 12/29/2020
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous ne savez pas si l’étiquetage unifié est le bon client à installer ?  Consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Vous ne savez pas si l’étiquetage unifié est le bon client à installer ?  Consultez [choisir votre solution d’étiquetage Windows](use-client.md#choose-your-windows-labeling-solution).
 
 Pour plus d’informations sur l’installation et l’utilisation du client d’étiquetage unifié : 
 

@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 06/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbfa9b0d7a4257f73071f2ff611a4c5fd2394bc0
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ca7b5c157a2c6d6d1162963053828e895fba1fe8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382817"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configuration et installation du Azure Information Protection scanneur classique
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
-
->[!NOTE]
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
-> Si vous utilisez le scanneur d’étiquetage unifié, consultez [installation et configuration du scanneur d’étiquetage unifié Azure information protection](deploy-aip-scanner-configure-install.md).
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [installation et configuration du scanneur d’étiquetage unifié AIP](deploy-aip-scanner-configure-install.md). *
+
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Avant de commencer à configurer et à installer le scanneur Azure Information Protection, vérifiez que votre système est conforme aux [conditions préalables requises](deploy-aip-scanner-prereqs.md).
 
@@ -88,7 +88,7 @@ Pour configurer votre scanneur :
     |Section  |Paramètres  |
     |---------|---------|
     |**Paramètres du travail d’analyse du contenu**     |    - **Planifier**: conserver la valeur par défaut **manuelle** </br>- **Types d’informations à découvrir**: changer en **stratégie uniquement** </br>- **Configurer les référentiels**: ne pas configurer pour l’instant, car le travail d’analyse de contenu doit d’abord être enregistré.         |
-    |**Application de stratégies**     | - **Appliquer**: sélectionner **désactivé** </br>- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** </br>- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut </br>- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
+    |**Application de la stratégie**     | - **Appliquer**: sélectionner **désactivé** </br>- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** </br>- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut </br>- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
     |**Configurer les paramètres du fichier**     | - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »**: conserver la valeur par défaut **activée** </br>- **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion** </br>- **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**        |
     | | |
 
@@ -120,7 +120,7 @@ Pour configurer votre scanneur :
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Chemin d’accès  |Syntax  |
+    |Path  |Syntaxe  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` </br></br>Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. </br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -153,7 +153,7 @@ Une fois que vous avez [configuré le scanneur Azure information protection dans
 
 1. Exécutez l’applet de commande [install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , en spécifiant votre SQL Server instance sur laquelle créer une base de données pour le scanneur de Azure information protection, et le nom du cluster du scanneur que vous avez spécifié dans la section précédente :
 
-    ```ps
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
 
@@ -187,7 +187,7 @@ Pour recevoir un jeton de Azure AD :
 
     Exécutez [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), en spécifiant les valeurs copiées à partir de l’étape précédente :
 
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
 
@@ -195,7 +195,7 @@ Pour recevoir un jeton de Azure AD :
 
     Par exemple :
 
-    ```powershell
+    ```PowerShell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
     Acquired application access token on behalf of the user
     ```
@@ -234,7 +234,7 @@ Pour modifier ces paramètres, modifiez le travail d’analyse du contenu :
 
     Vous pouvez également exécuter la commande suivante dans votre session PowerShell :
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -268,10 +268,10 @@ Pour aligner les types de fichiers pris en charge avec le client, où tous les f
     ![Modification du Registre pour que le scanneur applique une protection](./media/editregistry-scanner.png)
 
     > [!NOTE]
-    > En tant que fichier image, les fichiers TIFF prennent en charge la protection native et l’extension de nom de fichier résultante est **. ptiff.**
+    > En tant que fichier image, les fichiers TIFF prennent en charge la protection native et l’extension de nom de fichier résultante est **. ptiff**.
     >
 
-    Pour les fichiers ne prenant pas en charge la protection native, indiquez l’extension de nom de fichier comme nouvelle clé et **PFile** pour la protection générique. L’extension de nom de fichier résultante pour le fichier protégé est **. pfile.**
+    Pour les fichiers ne prenant pas en charge la protection native, indiquez l’extension de nom de fichier comme nouvelle clé et **PFile** pour la protection générique. L’extension de nom de fichier résultante pour le fichier protégé est **. pfile**.
 
 Pour obtenir la liste des types de fichiers texte et image qui prennent en charge de façon similaire la protection native, mais qui doivent être spécifiés dans le registre, consultez [types de fichiers pris en charge pour la classification et la protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
@@ -317,8 +317,8 @@ Dans cette configuration, tous les fichiers sans étiquette du référentiel son
 
 Configurez les paramètres suivants :
 
-- **Étiqueter les fichiers en fonction du contenu :** **Désactivée**
-- **Étiquette par défaut :** Définissez sur **personnalisé**, puis sélectionnez l’étiquette à utiliser.
+- **Étiqueter les fichiers en fonction du contenu**: **désactivée**
+- **Étiquette par défaut**: définissez sur **personnalisé**, puis sélectionnez l’étiquette à utiliser
 
 ### <a name="identify-all-custom-conditions-and-known-sensitive-information-types"></a>Identifiez toutes les conditions personnalisées et les types d’informations sensibles connus
 
@@ -345,7 +345,7 @@ Utilisez les options et les conseils suivants pour vous aider à optimiser les p
 |**Installer plusieurs instances du scanneur** | Le scanneur Azure Information Protection prend en charge plusieurs bases de données de configuration sur la même instance de SQL Server lorsque vous spécifiez un nom de cluster personnalisé (profil) pour le scanneur. |
 |**Accorder des droits spécifiques et désactiver le niveau d’intégrité faible**|Vérifiez que le compte de service qui exécute le scanneur dispose uniquement des droits décrits dans la [Configuration requise du compte de service](deploy-aip-scanner-prereqs.md#service-account-requirements). </br></br>Ensuite, configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) pour désactiver le niveau d’intégrité faible pour le scanneur.|
 |**Vérifier l’utilisation de la configuration de remplacement** |Le scanneur s’exécute plus rapidement lorsque vous utilisez la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) pour appliquer une étiquette par défaut à tous les fichiers, car le scanneur n’inspecte pas le contenu du fichier. <br/></br>Le scanneur s’exécute plus lentement lorsque la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) est utilisée pour identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.|
-|**Réduire les délais d’expiration du scanneur** | Diminuez les délais d’attente du scanneur avec les [Paramètres avancés du client](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). Les délais d’analyse réduits permettent d’obtenir de meilleurs taux d’analyse et une consommation de mémoire inférieure. </br></br>**Remarque :** La diminution du délai d’attente du scanneur signifie que certains fichiers peuvent être ignorés.
+|**Réduire les délais d’expiration du scanneur** | Diminuez les délais d’attente du scanneur avec les [Paramètres avancés du client](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). Les délais d’analyse réduits permettent d’obtenir de meilleurs taux d’analyse et une consommation de mémoire inférieure. </br></br>**Remarque**: la diminution du délai d’attente du scanneur signifie que certains fichiers peuvent être ignorés.
 | | |
 
 
@@ -401,10 +401,10 @@ Une fois que vous avez installé et configuré votre scanneur, commencez à [ana
 
 Voir aussi : [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md).
 
-**Plus d’informations :**
+**Plus d’informations**:
 
 Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur tous les scénarios qui utilisent PowerShell, consultez [Utiliser PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).

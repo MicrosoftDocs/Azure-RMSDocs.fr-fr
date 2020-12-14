@@ -5,26 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316566"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382868"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows server 2012 R2*
-
->[!NOTE] 
-> Si vous utilisez le scanneur classique AIP, consultez [installation et configuration du Azure information protection scanneur classique](deploy-aip-scanner-configure-install-classic.md).
+>***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Concerne**: [client d’étiquetage unifié AIP uniquement](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le scanneur classique, consultez [configuration et installation du Azure information protection scanneur classique](deploy-aip-scanner-configure-install-classic.md). *
 
 Avant de commencer à configurer et à installer le scanneur Azure Information Protection, vérifiez que votre système est conforme aux [conditions préalables requises](deploy-aip-scanner-prereqs.md). 
 
@@ -111,7 +110,7 @@ Pour configurer votre scanneur :
 
 #### <a name="creating-a-network-scan-job"></a>Création d’un travail d’analyse réseau
 
-1. Connectez-vous au Portail Azure et accédez à **Azure information protection.** Dans le menu du **scanneur** situé à gauche, sélectionnez **travaux d’analyse réseau (** préversion) ![icône travaux d’analyse réseau](media/i-network-scan-jobs.png "icône de travaux d’analyse réseau").
+1. Connectez-vous au Portail Azure et accédez à **Azure information protection**. Dans le menu du **scanneur** situé à gauche, sélectionnez **travaux d’analyse réseau (** préversion) ![icône travaux d’analyse réseau](media/i-network-scan-jobs.png "icône de travaux d’analyse réseau").
     
 1. Dans le volet **Azure information protection-travaux d’analyse réseau** , sélectionnez **Ajouter** une ![icône](media/i-add.png "icône d’ajout").
     
@@ -121,10 +120,10 @@ Pour configurer votre scanneur :
     |---------|---------|
     |**Nom du travail d’analyse réseau**     |Entrez un nom explicite pour ce travail.  Ce champ doit obligatoirement être renseigné.       |
     |**Description**     |   Entrez une description explicite.      |
-    |**Sélectionner le cluster.**     |Dans la liste déroulante, sélectionnez le cluster que vous souhaitez utiliser pour analyser les emplacements réseau configurés.  <br /><br />**Conseil :** Lorsque vous sélectionnez un cluster, assurez-vous que les nœuds du cluster que vous affectez peuvent accéder aux plages d’adresses IP configurées via SMB.      |
-    |**Configurer des plages d’adresses IP à découvrir**     |   Cliquez pour définir une adresse IP ou une plage. <br /><br />Dans le volet **choisir des plages** d’adresses IP, entrez un nom facultatif, puis une adresse IP de début et une adresse IP de fin pour votre plage. <br /><br />**Conseil :** Pour analyser uniquement une adresse IP spécifique, entrez l’adresse IP identique dans les champs adresse IP de **début** et adresse IP de **fin** .      |
+    |**Sélectionner le cluster.**     |Dans la liste déroulante, sélectionnez le cluster que vous souhaitez utiliser pour analyser les emplacements réseau configurés.  <br /><br />**Conseil**: lors de la sélection d’un cluster, assurez-vous que les nœuds du cluster que vous affectez peuvent accéder aux plages d’adresses IP configurées via SMB.      |
+    |**Configurer des plages d’adresses IP à découvrir**     |   Cliquez pour définir une adresse IP ou une plage. <br /><br />Dans le volet **choisir des plages** d’adresses IP, entrez un nom facultatif, puis une adresse IP de début et une adresse IP de fin pour votre plage. <br /><br />**Conseil**: pour analyser uniquement une adresse IP spécifique, entrez l’adresse IP identique dans les champs adresse IP de **début** et adresse IP de **fin** .      |
     |**Définir le calendrier**     | Définissez la fréquence à laquelle vous souhaitez que ce travail d’analyse de réseau s’exécute.  <br /><br />Si vous sélectionnez **hebdomadaire**, le paramètre **exécuter le travail d’analyse du réseau sur** s’affiche. Sélectionnez les jours de la semaine où vous souhaitez que le travail d’analyse du réseau s’exécute.       |
-    |**Définir l’heure de début (UTC)**     |Définissez la date et l’heure de début de l’exécution de ce travail d’analyse de réseau. Si vous avez choisi d’exécuter le travail tous les jours, toutes les semaines ou tous les mois, le travail s’exécutera à l’heure définie, à la périodicité que vous avez sélectionnée. <br /><br />**Remarque**: Soyez prudent lors de la définition de la date sur un jour à la fin du mois. Si vous sélectionnez **31,** le travail d’analyse du réseau ne s’exécutera pas dans un mois de 30 jours ou moins.    |
+    |**Définir l’heure de début (UTC)**     |Définissez la date et l’heure de début de l’exécution de ce travail d’analyse de réseau. Si vous avez choisi d’exécuter le travail tous les jours, toutes les semaines ou tous les mois, le travail s’exécutera à l’heure définie, à la périodicité que vous avez sélectionnée. <br /><br />**Remarque**: Soyez prudent lors de la définition de la date sur un jour à la fin du mois. Si vous sélectionnez **31**, le travail d’analyse du réseau ne s’exécutera pas dans un mois de 30 jours ou moins.    |
     | | |
 
 1. Sélectionnez **Enregistrer** l' ![icône Enregistrer](media/qs-tutor/save-icon.png "icône Enregistrer") pour enregistrer vos modifications.
@@ -188,7 +187,7 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
     |Paramètre  |Description  |
     |---------|---------|
     |**Paramètres du travail d’analyse du contenu**     |    - **Planifier**: conserver la valeur par défaut **manuelle** <br />- **Types d’informations à découvrir**: changer en **stratégie uniquement** <br />- **Configurer les référentiels**: ne pas configurer pour l’instant, car le travail d’analyse de contenu doit d’abord être enregistré.         |
-    |**Application de stratégies**     | - **Appliquer**: sélectionner **désactivé** <br />- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** <br />- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut <br />- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
+    |**Application de la stratégie**     | - **Appliquer**: sélectionner **désactivé** <br />- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** <br />- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut <br />- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
     |**Configurer les paramètres du fichier**     | - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »**: conserver la valeur par défaut **activée** <br />- **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion** <br />- **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**        |
     | | |
 
@@ -232,7 +231,7 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Chemin d’accès  |Syntax  |
+    |Path  |Syntaxe  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` <br /><br />Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. <br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -264,16 +263,16 @@ Une fois que vous avez [configuré le scanneur Azure information protection dans
 1. Exécutez l’applet de commande [install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , en spécifiant votre SQL Server instance sur laquelle créer une base de données pour le scanneur de Azure information protection, et le nom du cluster du scanneur que vous avez spécifié dans la section précédente : 
     
     ```PowerShell
-    Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
+    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
     Exemples utilisant le nom de profil **Europe** :
     
-    - Pour une instance par défaut : `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile Europe`
+    - Pour une instance par défaut : `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
-    - Pour une instance nommée : `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile Europe`
+    - Pour une instance nommée : `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
     
-    - Pour SQL Server Express : `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile Europe`
+    - Pour SQL Server Express : `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
     Lorsque vous y êtes invité, fournissez les informations d’identification du compte de service du scanneur ( \<domain\user name> ) et du mot de passe.
 
@@ -358,13 +357,13 @@ Pour une stratégie d’étiquette qui s’applique au compte d’utilisateur qu
 
 Pour un scanneur qui a accès à Internet, ce compte d’utilisateur est le compte que vous spécifiez pour le paramètre *DelegatedUser* avec la commande Set-AIPAuthentication.
 
-**Exemple 1 :**  Commande PowerShell pour que le scanneur protège tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
+**Exemple 1**: commande PowerShell pour le scanneur afin de protéger tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Exemple 2 :** Commande PowerShell permettant au scanneur de protéger les fichiers. xml et. TIFF en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
+**Exemple 2**: commande PowerShell pour le scanneur afin de protéger les fichiers. xml et. TIFF en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
@@ -451,7 +450,7 @@ Utilisez les options et les conseils suivants pour vous aider à optimiser les p
 |---------|---------|
 |**Veillez à avoir une connexion haut débit fiable entre l’ordinateur de l’analyseur et le magasin de données analysé**     |  Par exemple, placez l’ordinateur du scanneur sur le même réseau local, ou de préférence, dans le même segment de réseau que le magasin de données analysé. <br /><br />La qualité de la connexion réseau affecte les performances de l’analyseur car, pour inspecter les fichiers, l’analyseur transfère le contenu des fichiers sur l’ordinateur exécutant le service du scanneur. <br /><br />La réduction ou l’élimination des sauts réseau requis pour le déplacement des données réduit également la charge sur votre réseau.      |
 |**Assurez-vous que l’ordinateur de l’analyseur dispose de ressources processeur**     | L’inspection du contenu du fichier et le chiffrement et le déchiffrement des fichiers sont des actions nécessitant beaucoup de ressources du processeur. <br /><br />Surveillez les cycles d’analyse typiques pour les magasins de données spécifiés pour déterminer si un manque de ressources du processeur affecte les performances de l’analyseur.        |
-|**Installer plusieurs instances du scanneur** | Le scanneur Azure Information Protection prend en charge plusieurs bases de données de configuration sur la même instance de SQL Server lorsque vous spécifiez un nom de cluster personnalisé (profil) pour le scanneur. <br /><br />Plusieurs analyseurs peuvent également partager le même cluster (profil), ce qui permet des temps d’analyse plus rapides.|
+|**Installer plusieurs instances du scanneur** | Le scanneur Azure Information Protection prend en charge plusieurs bases de données de configuration sur la même instance de SQL Server lorsque vous spécifiez un nom de cluster personnalisé pour le scanneur. <br /><br />Plusieurs analyseurs peuvent également partager le même cluster, ce qui entraîne des temps d’analyse plus rapides.|
 |**Vérifier l’utilisation de la configuration de remplacement** |Le scanneur s’exécute plus rapidement lorsque vous utilisez la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) pour appliquer une étiquette par défaut à tous les fichiers, car le scanneur n’inspecte pas le contenu du fichier. <br/><br />Le scanneur s’exécute plus lentement lorsque la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) est utilisée pour identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.|
 | | |
 
@@ -538,10 +537,8 @@ Une fois que vous avez installé et configuré votre scanneur, commencez à [ana
 
 Voir aussi : [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md).
 
-**Plus d’informations :**
+**Plus d’informations**:
 
 - Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
-
-- Vous vous posez peut-être [la différence entre Windows Server FCI et le scanneur Azure information protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Utilisez PowerShell pour classifier et protéger de manière interactive les fichiers de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md).

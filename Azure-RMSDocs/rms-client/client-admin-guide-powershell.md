@@ -1,34 +1,34 @@
 ---
-title: Utiliser PowerShell avec le client Azure Information Protection
-description: Instructions et informations pour que les administrateurs gèrent le client Azure Information Protection à l’aide de PowerShell.
-author: mlottner
-ms.author: mlottner
+title: Utiliser PowerShell avec le client Azure Information Protection Classic
+description: Instructions et informations permettant aux administrateurs de gérer le client Azure Information Protection Classic à l’aide de PowerShell.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c5f2975b93e907d244db7c95975105f58ed1b94
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c2c9829154a7efd3bb5aa340e37018d1085105ce
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568128"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386013"
 ---
-# <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client Azure Information Protection Classic
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012*
+>***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
+Lorsque vous installez le client Azure Information Protection Classic, les commandes PowerShell sont installées automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
 Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Par exemple :
 
@@ -594,7 +594,7 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 15. Sélectionnez **Autorisations de l’API**.
 
-16. Dans le **AIPOnBehalfOf**  |  volet **autorisations** de l’API AIPOnBehalfOf, sélectionnez **+ Ajouter une autorisation**.
+16. Dans le   |  volet **autorisations** de l’API AIPOnBehalfOf, sélectionnez **+ Ajouter une autorisation**.
 
 17. Choisissez **Azure Right Management**, sélectionnez **autorisations déléguées** , puis sélectionnez **créer et accéder au contenu protégé pour les utilisateurs**.
 
@@ -713,7 +713,7 @@ Procédure générale :
 
 1. Vérifiez que le jeton est maintenant stocké dans le dossier **%LocalAppData%\Microsoft\MSIP** pour le profil du compte de service. Cette valeur est protégée par le compte de service.
 
-2. Supprimez le script PowerShell qui contient la valeur de jeton (par exemple, **Aipauthentication.ps1).**
+2. Supprimez le script PowerShell qui contient la valeur de jeton (par exemple, **Aipauthentication.ps1)**.
 
     Vous pouvez supprimer la tâche si vous le souhaitez. Si votre jeton expire, vous devez répéter ce processus, auquel cas il peut être plus pratique de laisser la tâche configurée afin qu’elle soit prête à s’exécuter à nouveau lorsque vous copierez le nouveau script PowerShell avec la nouvelle valeur du jeton.
 

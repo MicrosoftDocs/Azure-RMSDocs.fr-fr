@@ -13,16 +13,18 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d750edb4aef5bf0b2c546598bb3007f609e50cf4
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849691"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386217"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****S’applique à**  _: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)_
+>
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Avant de déployer Azure Information Protection, assurez-vous que votre système répond aux conditions préalables suivantes :
 
@@ -36,7 +38,7 @@ Avant de déployer Azure Information Protection, assurez-vous que votre système
 
 Vous devez disposer de l’un des éléments suivants, selon les fonctionnalités d’Azure Information Protection que vous allez utiliser :
 
-- **Un [plan Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/)** . Requis pour la classification, l’étiquetage et la protection à l’aide du lecteur ou du client Azure Information Protection (étiquetage classique ou unifié)
+- **Un [plan Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/)** . Requis pour la classification, l’étiquetage et la protection à l’aide du lecteur ou du client Azure Information Protection.
 
 - **Un [plan Office 365 incluant Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)** . Requis uniquement pour la protection.
 
@@ -85,7 +87,7 @@ Les ordinateurs des utilisateurs ou les appareils mobiles doivent s’exécuter 
 
 ### <a name="supported-operating-systems-for-client-devices"></a>Systèmes d’exploitation pris en charge pour les appareils clients
 
-Les systèmes d'exploitation suivants prennent tous les deux en charge l’étiquetage unifié Azure Information Protection et les clients Azure Information Protection : 
+Les clients Azure Information Protection pour Windows sont pris en charge sur les systèmes d’exploitation suivants :
 
 - **Windows 10** (x86, x64). L’écriture manuscrite n’est pas prise en charge dans la build Windows 10 RS4 et versions ultérieures.
  
@@ -98,8 +100,6 @@ Les systèmes d'exploitation suivants prennent tous les deux en charge l’étiq
 - **Windows Server 2016**
 
 - **Windows Server 2012 R2** et **Windows Server 2012**
-
-[Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails.
 
 Pour plus d’informations sur la prise en charge dans les versions antérieures de Windows, contactez votre compte Microsoft ou un représentant du support technique.
 
@@ -152,13 +152,13 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement et les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs. 
 
-Ces étiquettes auraient sinon été affichées dans la barre de Azure Information Protection ou dans le client d’étiquetage unifié sur le ruban Office (à partir du bouton **Protéger** dans le client classique ou le bouton **Sensibilité** du client d’étiquetage unifié). 
+Les étiquettes sont visibles dans une barre affichée en haut du document Office, accessible avec le bouton **Sensibilité** dans le client d’étiquetage unifié ou avec le bouton **Protéger** dans le client classique.
 
 Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Fonctionnalités et caractéristiques Office non prises en charge
 
-- Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.
+- Les clients Azure Information Protection pour Windows ne prennent pas en charge l’utilisation de plusieurs versions d’Office sur le même ordinateur, ni le changement de comptes d’utilisateur dans Office.
 
 - La fonctionnalité [Publipostage](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) n’est pas prise en charge avec les fonctionnalités Azure Information Protection.
 
@@ -174,10 +174,10 @@ Azure Information Protection présente les exigences supplémentaires suivantes�
 
     Pour prendre en charge les fichiers **Proxy.pac** si vous utilisez un proxy pour acquérir un jeton, ajoutez la nouvelle clé de Registre suivante :
 
-    - **Chemin :** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
-    - **Clé :** `UseDefaultCredentialsInProxy`
-    - **Type :** `DWORD`
-    - **Valeur :** `1`
+    - **Path** (Chemin) : `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Clé** : `UseDefaultCredentialsInProxy`
+    - **Type** : `DWORD`
+    - **Valeur** : `1`
     
 - **Connexions client à service TLS**. N’interrompez pas la connexion du client au service TLS, par exemple, pour effectuer une inspection au niveau du paquet vers l’URL **aadrm.com**. Cela annule l’association de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour vous aider à sécuriser leur communication avec le service Azure Rights Management.
      

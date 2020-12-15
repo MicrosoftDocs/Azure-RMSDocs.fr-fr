@@ -1,10 +1,10 @@
 ---
 title: 'Azure Information Protection : autres appellations'
 description: Azure Information Protection ayant changé plusieurs fois d’appellation, il est possible que vous le connaissiez sous un autre nom.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,20 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5a9e9e18734480f139a9e88f06c0fbb1772448c3
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 40ceb9ebb8ef4f78869583408501e8bbd7c9948a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178256"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384041"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-La solution Azure Information Protection (parfois abrégée AIP) s’appuie sur de nombreuses technologies développées de longue date par Microsoft dans le domaine de la protection de la gestion des droits. En raison de cette évolution, vous connaissez peut-être cette solution par l’un de ses anciens noms, tout comme vous pouvez voir des références à ces noms dans de la documentation, des interfaces utilisateur et des fichiers journaux. 
+La solution Azure Information Protection (AIP) s’appuie sur de nombreuses technologies développées de longue date par Microsoft dans le domaine de la protection de la gestion des droits. En raison de cette évolution, vous connaissez peut-être cette solution par l’un de ses anciens noms, tout comme vous pouvez voir des références à ces noms dans de la documentation, des interfaces utilisateur et des fichiers journaux. 
 
 Les sections suivantes répertorient certains de ces noms.
 
@@ -75,3 +77,7 @@ De même, « Active Directory Rights Management Services » (AD RMS) reste un
 ## <a name="how-to-evaluate-or-purchase-the-latest-version"></a>Comment évaluer ou acheter la version la plus récente
 
 Pour plus d’informations sur l’achat ou l’évaluation d’Azure Information Protection et sur les différentes fonctionnalités disponibles suivant les plans d’abonnement, consultez le site [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection).
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations, consultez [Terminologie liée à Azure Information Protection](terminology.md).

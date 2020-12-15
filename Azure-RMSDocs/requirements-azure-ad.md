@@ -12,16 +12,18 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 1dfb6879533e4bb567f97d56a88cd1df2915e338
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178168"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386234"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Prérequis Azure AD supplémentaires pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Un [annuaire Azure AD est requis](requirements.md#azure-active-directory) pour utiliser Azure Information Protection. Utilisez un compte d’un annuaire Azure AD pour vous connecter au portail Azure, dans lequel vous pouvez configurer les paramètres Azure Information Protection.
 
@@ -31,9 +33,16 @@ Les sections suivantes liste les prérequis AIP et Azure AD supplémentaires pou
 
 ## <a name="computers-running-office-2010"></a>Ordinateurs qui exécutent Office 2010
 
-En plus du compte Azure AD, les ordinateurs qui exécutent Microsoft Office 2010 nécessitent le [client d’étiquetage unifié Azure Information Protection](./rms-client/aip-clientv2.md) ou le [client classique Azure Information Protection](./rms-client/aip-client.md) pour s’authentifier auprès d’Azure Information Protection et son service de protection des données, Azure Rights Management.
+En plus d’un compte Azure AD, les ordinateurs qui exécutent Microsoft 2010 nécessitent le client Azure Information Protection pour Windows pour s’authentifier auprès d’Azure Information Protection, et son service de protection des données, Azure Rights Management. 
 
 Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ces ordinateurs doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
+
+Nous vous recommandons de déployer le client d’étiquetage unifié Azure Information Protection. Si vous n’avez pas encore effectué la mise à niveau, vous avez peut-être encore le [client classique Azure Information Protection ](./rms-client/aip-client.md) qui est déployé sur votre système. Pour plus d’informations, consultez [Côté client d’Azure Information Protection](rms-client/use-client.md).
+
+> [!NOTE]
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. 
+>
+> Ce laps de temps permet à tous les utilisateurs actuels d’Azure Information Protection de passer à la solution d’étiquetage unifié Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>Prise en charge de l’authentification basée sur les certificats
 
@@ -45,7 +54,7 @@ Pour plus d’informations, consultez [Bien démarrer avec l’authentification 
 
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir installé au moins l’un des éléments suivants :
 
-- **Microsoft Office,** version 2013 ou ultérieure
+- **Microsoft Office**, version 2013 ou ultérieure
 - **Un client AIP**. Aucune version minimale requise. Les clients AIP pour Windows, ainsi que les applications de visionneuse pour iOS et Android prennent tous en charge MFA.
 - **Application de partage Rights Management pour les ordinateurs Mac**. Les applications de partage RMS prennent en charge MFA depuis la version de septembre 2015.
 
@@ -92,7 +101,7 @@ Pour plus d'informations, consultez les pages suivantes :
 
 Pour plus d’informations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
-## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>Authentification locale avec AD FS ou un autre fournisseur d’authentification
+## <a name="authenticating-on-premises-using-ad-fs-or-another-authentication-provider"></a>Authentification locale avec AD FS ou un autre fournisseur d’authentification
 
 Si vous utilisez un appareil mobile ou un ordinateur Mac qui s’authentifie localement avec AD FS, ou un fournisseur d’authentification équivalent, vous devez utiliser AD FS sur l’une des configurations suivantes :
 

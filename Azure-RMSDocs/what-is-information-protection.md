@@ -9,19 +9,21 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: 7ee4c5c26792a56c2637d62a67e2921df8c99a61
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: aa41b20152df55f7153f4c8cedd013041460b596
+ms.sourcegitcommit: ad2b3e0b6f438f9ffc0bca975653bd13f1b7d131
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924949"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514937"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection (AIP) est une solution cloud qui permet aux organisations de découvrir, de classifier et de protéger leurs documents et leurs e-mails en appliquant des étiquettes au contenu.
 
@@ -65,19 +67,19 @@ Téléchargez l’installation du scanneur en même temps que le client depuis l
 
 ## <a name="microsoft-information-protection-sdk"></a>Kit SDK Microsoft Information Protection
 
-Le SDK Microsoft Information Protection étend les étiquettes de sensibilité aux applications et services tiers. Les développeurs peuvent utiliser le kit SDK pour générer une prise en charge native afin d’appliquer des étiquettes et une protection aux fichiers.
+Le SDK Microsoft Information Protection étend les étiquettes de sensibilité aux applications et services tiers. Les développeurs peuvent utiliser le kit SDK pour générer une prise en charge intégrée afin d’appliquer des étiquettes et une protection aux fichiers.
 
 Par exemple, vous pouvez utiliser le SDK MIP pour :
 
 - Application métier qui applique des étiquettes de classification aux fichiers lors de l’exportation.
-- Application d’une conception CAO/FAO qui assure une prise en charge native de l’étiquetage Microsoft Information Protection.
+- Application d’une conception CAO/FAO qui assure une prise en charge intégrée de l’étiquetage Microsoft Information Protection.
 - Répartiteur de sécurité d’accès cloud (CASB) ou solution de protection contre la perte de données sécurité qui réfléchit aux données chiffrées avec Azure Information Protection.
 
 Pour plus d’informations, consultez la [Vue d’ensemble du SDK Microsoft Information Protection](/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Pour commencer à utiliser AIP,** téléchargez et installez le client d’étiquetage unifié et le scanneur.
+**Pour commencer à utiliser AIP**, téléchargez et installez le client d’étiquetage unifié et le scanneur.
 
 - [S’inscrire pour un essai gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Télécharger le client](https://www.microsoft.com/download/details.aspx?id=53018)
@@ -101,10 +103,20 @@ Pour plus d’informations, consultez la [Vue d’ensemble du SDK Microsoft Info
 |**Questions fréquentes (FAQ) et problèmes connus**     | [Forum aux questions sur Azure Information Protection](faqs.md) </br> [Problèmes connus - Azure Information Protection](known-issues.md)       |
 |**Options de support**     | [Options de support pour Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Ignite 2020**     |  - [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)</br>- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)</br>- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)</br>- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d) (Demandez à l’expert : Posez des questions sur la conformité Microsoft : protection des informations et gouvernance, risques internes, gestion de la conformité, et ainsi de suite)       |
 |**Nouveautés**     | Découvrez les nouvelles fonctionnalités liées à AIP dans les Centres d’administration Microsoft 365 et SharePoint :   </br>- [Nouveautés du Centre d’administration Microsoft 365](/microsoft-365/admin/whats-new-in-preview) </br>- [Nouveautés du Centre d’administration SharePoint](/sharepoint/what-s-new-in-admin-center)     |
 |     |         |
 
+#### <a name="top-ignite-sessions"></a>Principales sessions Ignite
+
+Consultez les sessions Ignite 2020 enregistrées suivantes :
+
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476) (Optimiser la protection des informations et la gouvernance dans le cloud, localement, sur les points de terminaison et dans les environnements de travail à distance)
+
+- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
+
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f) (Apprenez à connaître vos données, protégez vos données et prévenez la perte de données avec Microsoft Information Protection)
+
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d) (Demandez à l’expert : Posez des questions sur la conformité Microsoft : protection des informations et gouvernance, risques internes, gestion de la conformité, et ainsi de suite)
 ## <a name="aips-classic-client"></a>Client classique d’AIP
 
 Le client classique d’Azure Information Protection est la version antérieure d’AIP ; il permet aux administrateurs de gérer les étiquettes de classification directement dans le portail Azure.
@@ -114,6 +126,6 @@ Les étiquettes AIP gérées dans le portail Azure ne sont *pas* prises en charg
 Nous vous recommandons de migrer vers l’étiquetage unifié pour prendre en charge ces fonctionnalités, ainsi que SharePoint, les applications Microsoft 365, Outlook pour le web et les appareils mobiles, la protection des données Power BI, etc. Pour plus d’informations, consultez [Tutoriel : Migration depuis le client classique Azure Information Protection (AIP) vers le client d’étiquetage unifié](tutorial-migrating-to-ul.md).
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. 
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. 
 >
 > Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à l’étiquetage unifié en utilisant la solution d’étiquetage unifié de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.

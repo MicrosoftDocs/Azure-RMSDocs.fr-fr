@@ -12,28 +12,31 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca4dfed92aafb690da28e5164496b924c9c3fe7e
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2da5d348f497a74e88c0bf11da023be6e3cb0152
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383599"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583538"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : installation et configuration pour les clients
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Les ordinateurs qui exécutent Office 2010 requièrent le client Azure Information Protection pour s’authentifier auprès du service Azure Information Protection.
+Le client d’étiquetage unifié AIP est recommandé pour tous les ordinateurs Windows, car il installe un complément Office qui permet aux utilisateurs d’étiqueter et de protéger facilement des documents directement à partir du ruban Office. 
 
-Le client d’étiquetage unifié AIP est recommandé pour tous les ordinateurs Windows, car ils installent un complément Office qui permet aux utilisateurs d’étiqueter et de protéger facilement des documents directement à partir du ruban Office. Le client offre également des fonctionnalités d’étiquetage et de protection pour les types de fichiers qui ne sont pas pris en charge par le service de protection intégré (Azure Rights Management), ainsi qu’une visionneuse pour les fichiers protégés qui ne peuvent pas être ouverts par les applications Office. Il existe une visionneuse similaire pour iOS et Android.
+Le client offre également les éléments suivants :
 
-Si le client standard AIP est installé, vous disposez également d’un site de suivi de document permettant aux utilisateurs de suivre et de révoquer les fichiers qu’ils ont protégés.
+- Étiquetage et protection des types de fichiers qui ne sont pas pris en charge par le service de protection intégré (Azure Rights Management).
+- Visionneuse pour les fichiers protégés qui ne peuvent pas être ouverts par les applications Office. Il existe une visionneuse similaire pour iOS et Android.
+- Fonctionnalités de suivi et de révocation de l’accès aux fichiers protégés.
 
+Les ordinateurs qui exécutent Office 2010 requièrent le client Azure Information Protection pour s’authentifier auprès du service Azure Information Protection. Pour plus d’informations, consultez [AIP pour Windows et les versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Le client Azure Information Protection pour Windows : installation et configuration
 
 Pour une installation et une configuration d’entreprise du client pour Windows, consultez le Guide de l' [administrateur du client d’étiquetage Azure information protection unifié](./rms-client/clientv2-admin-guide.md).

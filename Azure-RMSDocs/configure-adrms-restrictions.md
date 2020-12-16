@@ -11,21 +11,21 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: c02e7195d9edf93401b601e4d7ca243e6a14b702
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383818"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583606"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Conserver les informations de votre propre clé (HYOK) pour Azure Information Protection
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 >***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [chiffrement à clé double](plan-implement-tenant-key.md#double-key-encryption-dke). *
 
 > [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Conserver vos propres configurations de clé (HYOK) permet aux clients AIP avec le client classique de protéger du contenu très sensible tout en conservant le contrôle total de leur clé. HYOK utilise une clé supplémentaire, détenue par le client et stockée localement pour le contenu hautement sensible, ainsi que la protection basée sur le Cloud par défaut utilisée pour d’autres contenus. 
 
@@ -157,7 +157,7 @@ Un déploiement AD RMS doit remplir les conditions suivantes pour fournir une pr
 |**Configuration de AD RMS**     |Votre système de AD RMS doit être configuré de manière spécifique pour prendre en charge HYOK. Pour plus d’informations, voir [ci-dessous](#ad-rms-configuration-requirements).          |
 |**Synchronisation de répertoires**     |La synchronisation d’annuaires doit être configurée entre votre Active Directory local et le Azure Active Directory. </br></br>Les utilisateurs qui utiliseront des étiquettes de protection HYOK doivent être configurés pour l’authentification unique.         |
 |**Configuration pour les approbations explicitement définies**     |Si vous partagez du contenu protégé par HYOK avec d’autres personnes en dehors de votre organisation, AD RMS devez être configuré pour les approbations explicitement définies dans une relation de point à point directe avec les autres organisations. </br></br>Pour ce faire, utilisez des domaines d’utilisateur approuvé (utilisateurs approuvés) ou des approbations fédérées créées à l’aide de Services ADFS (AD FS).         |
-|**Version prise en charge de Microsoft Office**     | Les utilisateurs qui protègent ou consomment du contenu protégé par HYOK doivent disposer des éléments suivants : </br></br>-Une version d’Office qui prend en charge les informations Rights Management (IRM) </br>-Microsoft Office professionnel plus version 2013 ou ultérieure avec Service Pack 1, exécuté sur Windows 7 Service Pack 1 ou version ultérieure. </br>-Pour l’édition Office 2016 Microsoft Installer (. msi), vous devez disposer de la [mise à jour 4018295 pour Microsoft Office 2016 publiée le 2018 6 mars](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Remarque**: Office 2010 et Office 2007 ne sont pas pris en charge.        |
+|**Version prise en charge de Microsoft Office**     | Les utilisateurs qui protègent ou consomment du contenu protégé par HYOK doivent disposer des éléments suivants : </br></br>-Une version d’Office qui prend en charge les informations Rights Management (IRM) </br>-Microsoft Office professionnel plus version 2013 ou ultérieure avec Service Pack 1, exécuté sur Windows 7 Service Pack 1 ou version ultérieure. </br>-Pour l’édition Office 2016 Microsoft Installer (. msi), vous devez disposer de la [mise à jour 4018295 pour Microsoft Office 2016 publiée le 2018 6 mars](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Remarque**: Office 2010 et Office 2007 ne sont pas pris en charge.  Pour plus d’informations, consultez [AIP pour Windows et les versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).      |
 
 > [!IMPORTANT]
 > Pour s’assurer de la haute garantie offerte par HYOK protection, nous vous recommandons d’effectuer les opérations suivantes :
@@ -234,4 +234,4 @@ Par exemple : **https://rmscluster.contoso.com**
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Lorsque vous avez terminé de configurer votre système pour prendre en charge HYOK, poursuivez la configuration des étiquettes pour la protection HYOK. Pour plus d’informations, consultez [Comment configurer une étiquette pour la protection de Rights Management](configure-policy-protection.md).
+Lorsque vous avez terminé de configurer votre système pour prendre en charge HYOK, poursuivez la configuration des étiquettes pour la protection HYOK. Pour en savoir plus, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md).

@@ -4,32 +4,35 @@ description: Utilisez le scanneur Azure Information Protection pour rechercher l
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
+ms.date: 11/10/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 0ab3f66437882f6c458b3e4793be935d5f14686d
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 2b5bc28e18778a3ad7d4304632611df102577f92
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503653"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386404"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client classique ou d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE]
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Dans ce guide de démarrage rapide, vous allez autoriser SharePoint à permettre l’analyse, et installer et configurer le scanneur Azure Information Protection de façon à trouver d’éventuelles données sensibles stockées dans un magasin de données local.
 
-**Temps nécessaire :** Cette configuration prend moins de 15 minutes.
+**Temps nécessaire** : Cette configuration prend moins de 15 minutes.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour effectuer ce démarrage rapide, les éléments suivants sont requis :
+Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 |Condition requise  |Description  |
 |---------|---------|
@@ -147,7 +150,7 @@ Vous pouvez maintenant installer le scanneur avec le profil que vous avez créé
 >
 ## <a name="see-detailed-results"></a>Afficher les résultats détaillés
 
-À l’aide de l’Explorateur de fichiers, recherchez les rapports du scanneur dans **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.** Ouvrez le fichier de rapport détaillé au format **.csv**.
+À l’aide de l’Explorateur de fichiers, recherchez les rapports du scanneur dans **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**. Ouvrez le fichier de rapport détaillé au format **.csv**.
 
 Dans Excel :
 
@@ -191,12 +194,9 @@ Puis redémarrez votre ordinateur.
 
 Cette commande ne supprime pas les éléments suivants et vous devez les supprimer manuellement si vous ne souhaitez pas les conserver après ce démarrage rapide :
 
-- La base de données SQL Server qui a été créée en exécutant l’applet de commande Install-AIPScanner lors de l’installation du scanneur Azure Information Protection :
+- La base de données SQL Server qui a été créée en exécutant l’applet de commande Install-AIPScanner lors de l’installation du scanneur Azure Information Protection : **AIPScanner_\<profile>**
 
-    - Pour le client classique : **AIPScanner_\<profile>**
-    - Pour le client d’étiquetage unifié : **AIPScannerUL_\<profile_name>**
-
-- Les rapports du scanneur situés dans **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.**
+- Les rapports du scanneur situés dans **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**.
 
 - Les droits d’utilisateur **Ouvrir une session en tant que service** qui ont été accordés à votre compte de domaine pour votre ordinateur local.
 
@@ -206,12 +206,5 @@ Ce démarrage rapide inclut la configuration minimale vous permettant de constat
 
 Si vous souhaitez classifier et protéger les fichiers contenant des informations sensibles, vous devez configurer des étiquettes pour la classification et la protection automatiques :
 
-**Pour le client classique :**
-
 - [Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md)
 - [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md)
-
-**Pour le client d’étiquetage unifié :**
-
-- [Appliquer automatiquement une étiquette sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels)

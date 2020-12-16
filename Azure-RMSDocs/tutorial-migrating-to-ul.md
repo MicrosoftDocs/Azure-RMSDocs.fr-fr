@@ -1,5 +1,5 @@
 ---
-title: Tutoriel - Migration depuis le client classique Azure Information Protection (AIP) vers le client d’étiquetage unifié
+title: Tutoriel - Migration depuis le client classique Azure Information Protection (AIP) vers la solution d’étiquetage unifié
 description: Tutoriel pas à pas pour la migration depuis le client classique Azure Information Protection (AIP) vers le client d’étiquetage unifié.
 author: batamig
 ms.author: bagol
@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 649983dd43145b5752ed4d65f257e3def4278533
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384653"
 ---
-# <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>Tutoriel : Migration depuis le client classique d’Azure Information Protection (AIP) vers le client d’étiquetage unifié
+# <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-unified-labeling-solution"></a>Tutoriel : Migration depuis le client classique Azure Information Protection (AIP) vers la solution d’étiquetage unifié
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > Pour fournir une expérience client unifiée et homogène, le client classique Azure Information Protection client et la gestion des étiquettes dans le portail Azure seront dépréciés à compter du 31 mars 2021.
@@ -29,9 +29,9 @@ ms.locfileid: "94503636"
 > Ce laps de temps permet à toutes les organisations utilisant actuellement le client Azure Information Protection de passer à l’étiquetage unifié AIP, qui utilise la solution d’étiquetage unifié de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
 
-Ce tutoriel explique comment migrer le déploiement Azure Information Protection de votre organisation du client classique vers le client d’étiquetage unifié.
+Ce tutoriel explique comment migrer le déploiement Azure Information Protection de votre organisation à partir du client classique, ainsi que la gestion des étiquettes/stratégies d’étiquette dans le portail Azure, vers la solution d’étiquetage unifié et les [étiquettes de sensibilité Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
-**Temps nécessaire :** Le temps nécessaire pour effectuer une migration dépend de la complexité de vos stratégies et des fonctionnalités AIP que vous utilisez. Vous pouvez continuer à travailler avec le client classique pendant que vous effectuez la migration en arrière-plan.
+**Temps nécessaire** : Le temps nécessaire pour effectuer une migration dépend de la complexité de vos stratégies et des fonctionnalités AIP que vous utilisez. Vous pouvez continuer à travailler avec le client classique pendant que vous effectuez la migration en arrière-plan.
 
 Ce tutoriel fournit une description générale de chaque étape, puis référence la section appropriée qui se trouve ailleurs dans la documentation Microsoft et qui donne plus d’informations.
 
@@ -43,9 +43,9 @@ Dans ce didacticiel, vous allez :
 > * Copier vos stratégies vers la plateforme d’étiquetage unifié
 > * Déployer le client d’étiquetage unifié
 
-## <a name="why-migrate-to-the-unified-labeling-platform"></a>Pourquoi migrer vers le client d’étiquetage unifié ?
+## <a name="why-migrate-to-the-unified-labeling-solution"></a>Pourquoi migrer vers la solution d’étiquetage unifié ?
 
-En plus de la [dépréciation planifiée du client classique](https://aka.ms/aipclassicsunset), la migration vers le client d’étiquetage unifié vous permet de protéger efficacement les données sensibles dans votre patrimoine numérique. Une fois que vous avez effectué la migration, utilisez Microsoft Information Protection (MIP) dans les services cloud Microsoft 365, localement, dans des applications SaaS de tiers, etc.
+En plus de la [dépréciation planifiée du client classique](https://aka.ms/aipclassicsunset), la migration vers la solution d’étiquetage unifié vous permet de protéger efficacement les données sensibles dans votre patrimoine numérique. Une fois que vous avez effectué la migration, utilisez Microsoft Information Protection (MIP) dans les services cloud Microsoft 365, localement, dans des applications SaaS de tiers, etc.
 
 MIP prend en charge les services d’étiquetage intégrés pour de nombreuses fonctionnalités basiques de protection des informations, ce qui vous permet de réserver l’utilisation du client seulement pour les fonctionnalités supplémentaires non prises en charge par l’étiquetage intégré.
 
@@ -64,7 +64,7 @@ Si la plupart des fonctionnalités disponibles pour le client classique AIP sont
 Consultez les articles suivants pour comprendre comment les fonctionnalités Information Protection que vous utilisez peuvent différer lors de l’utilisation du client d’étiquetage unifié :
 
 - [En savoir plus sur les fonctionnalités d’étiquetage intégrées dans Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [Comparer la prise en charge entre le client classique et le client d’étiquetage unifié](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Comparer les solutions d’étiquetage pour les ordinateurs Windows](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Découvrir comment gérer les paramètres d’étiquette qui ne sont pas pris en charge d’origine dans les centres d’administration d’étiquetage unifié](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
 > [!TIP]
@@ -107,7 +107,7 @@ Une fois que vous avez migré vos étiquettes dans votre centre d’administrati
 
 Cependant, les modifications apportées aux étiquettes migrées dans votre Centre d’administration ne sont *pas* resynchronisées vers le portail Azure. Si vous effectuez des modifications dans le Centre d’administration et que vous voulez qu’elles soient mises à jour dans le portail Azure, revenez au portail pour publier la mise à jour.
 
-**Pour pubier une étiquette mise à jour dans le portail Azure :**
+**Pour publier une étiquette mise à jour dans le portail Azure** :
 
 1. Dans la zone Azure Information Protection, sous **Gérer** sur la gauche, sélectionnez **Étiquetage unifié**.
 
@@ -147,7 +147,7 @@ Cette fonctionnalité est actuellement en PRÉVERSION. Les [Conditions d’utili
     |Considération  |Description  |
     |---------|---------|
     |**La copie des stratégies copie *toutes*  vos stratégies**     |     La copie des stratégies ne prend pas en charge la copie de stratégies spécifiques uniquement : pour l’instant, c’est toutes vos stratégies ou aucune d’elles.   |
-    |**La copie publie automatiquement vos stratégies**     |  La copie de vos stratégies vers le client d’étiquetage unifié les publie automatiquement sur tous les clients pris en charge par l’étiquetage unifié. <br /><br />   **Important :** Ne copiez pas vos stratégies si vous ne voulez pas les publier.     |
+    |**La copie publie automatiquement vos stratégies**     |  La copie de vos stratégies vers le client d’étiquetage unifié les publie automatiquement sur tous les clients pris en charge par l’étiquetage unifié. <br /><br />   **Important** : Ne copiez pas vos stratégies si vous ne voulez pas les publier.     |
     |**La copie remplace les stratégies existantes du même nom**     |   Si une stratégie portant le même nom existe déjà dans votre Centre d’administration, la copie de vos stratégies va remplacer tous les paramètres définis dans cette stratégie.   <br /><br />Toutes les stratégies copiées depuis le portail Azure sont nommées avec la syntaxe suivante : `AIP_<policy name>`.    |
     |**Certains paramètres du client ne sont pas copiés**     | Certains paramètres du client ne sont pas copiés vers la plateforme d’étiquetage unifié et doivent être configurés manuellement après la migration. <br /><br />Pour plus d’informations, consultez [Configuration des options d’étiquetage avancées](#configuring-advanced-labeling-settings).|
     | | |
@@ -261,7 +261,7 @@ Pour les machines Windows avec Microsoft 365 Apps for Enterprise, utilisez la p
 
 Pour plus d’informations, consultez : 
 
-- [Comparer les clients d’étiquetage pour les ordinateurs Windows](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Comparer les solutions d’étiquetage pour les ordinateurs Windows](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection (AIP)](quickstart-deploy-client.md)
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection depuis le [Centre de téléchargement Microsoft](https://aka.ms/aipclient). 

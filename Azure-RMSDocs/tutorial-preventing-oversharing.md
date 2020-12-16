@@ -10,22 +10,22 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384534"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Tutoriel : Empêcher les partages inappropriés dans Outlook avec Azure Information Protection (AIP)
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>**S’applique à* : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 En tant qu’administrateur système, vous devez faire en sorte que le contenu de votre organisation reste sécurisé et partagé seulement avec des utilisateurs approuvés. Une des façons les plus courantes avec laquelle les utilisateurs partagent le contenu de manière inappropriée est l’e-mail. Configurez votre stratégie pour empêcher le partage inapproprié via Outlook, par exemple en limitant l’accès à des utilisateurs spécifiques ou en autorisant les utilisateurs à partager du contenu seulement avec des utilisateurs externes approuvés.
 
-**Temps nécessaire :** Vous pouvez suivre ce tutoriel en 30 minutes.
+**Temps nécessaire** : Vous pouvez suivre ce tutoriel en 30 minutes.
 
 Dans ce tutoriel, vous allez apprendre à :
 > [!div class="checklist"]
@@ -223,7 +223,7 @@ Cette procédure décrit comment personnaliser le message qui apparaît quand un
 > En production, nous vous recommandons d’éviter les complications en utilisant la propriété avancée **OutlookUnlabeledCollaborationAction** pour définir vos règles *ou* en définissant des règles complexes avec un fichier JSON, comme indiqué ci-dessous, mais *pas les deux*.
 >
 
-**Pour définir votre règle en utilisant un fichier JSON :**
+**Pour définir votre règle en utilisant un fichier json** :
 
 1. Créez un fichier **.json** nommé **OutlookCollaborationRule_1.json** avec le code suivant :
 
@@ -310,15 +310,15 @@ Dans ce tutoriel , vous avez découvert comment personnaliser le comportement d�
 
 Vous pouvez maintenant démarrer l’observateur d’événements Windows pour rechercher dans les journaux les actions qui se sont produites.
 
-**Pour rechercher les événements de journalisation AIP dans l’observateur d’événements :**
+**Pour rechercher les événements de journalisation AIP dans l’observateur d’événements** :
 
 Sur votre ordinateur client, ouvrez l’application Observateur d’événements Windows et accédez à **Journaux des applications et des services** > **Azure Information Protection**.
 
 Vous allez voir un événement d’information journalisé pour chaque test que vous avez effectué, notamment des détails sur le message et sur la réponse de l’utilisateur :
 
-- **Messages d’avertissement :** ID d’information 301
-- **Messages de justification :** ID d’information 302
-- **Messages de blocage :** ID d’information 303
+- **Messages d’avertissement** : ID d’information 301
+- **Messages de justification** : ID d’information 302
+- **Messages de blocage** : ID d’information 303
 
 Exemple :
 

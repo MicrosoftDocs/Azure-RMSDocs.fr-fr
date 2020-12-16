@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 432004443bf684967849b5b91acd9052cbf07eec
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924973"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384636"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Tutoriel : Découverte de votre contenu sensible avec le scanneur Azure Information Protection (AIP)
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Le client Azure Information Protection fournit un analyseur local qui permet aux administrateurs système d’analyser les référentiels de fichiers locaux à la recherche de contenu sensible. 
 
@@ -38,7 +38,7 @@ Ce didacticiel vous montre comment effectuer les opérations suivantes :
 > Si vous n’avez pas installé cette version du client et du scanneur, passez en revue les [prérequis du tutoriel](#tutorial-prerequisites), puis passez directement à [Définir et exécuter votre travail d’analyse de contenu](#define-and-run-your-content-scan-job).
 
 
-**Temps nécessaire :** Vous pouvez terminer cette configuration en 15 minutes.
+**Temps nécessaire** : Vous pouvez terminer cette configuration en 15 minutes.
 
 ## <a name="tutorial-prerequisites"></a>Configuration requise pour le didacticiel
 
@@ -64,7 +64,7 @@ Créez un travail d’analyse du réseau pour analyser une adresse IP ou une pla
 > Cette fonctionnalité est disponible uniquement à compter de la version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) et est actuellement en préversion. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
 > 
 
-**Pour créer un travail d’analyse du réseau :**
+**Pour créer un travail d’analyse du réseau** :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com/) en tant qu’[administrateur pris en charge](#tutorial-prerequisites), puis accédez à la zone **Azure Information Protection**.
         
@@ -177,7 +177,7 @@ Exemple :
 > [!TIP]
 > Si vos résultats sont vides et que vous souhaitez exécuter une analyse significative, créez un fichier nommé **Payment info** dans un des référentiels inclus dans votre travail d’analyse de contenu. Enregistrez le fichier avec le contenu suivant :
 > 
-> **Credit card:** 2384 2328 5436 3489
+> **Carte de crédit** : 2384 2328 5436 3489
 >
 > Réexécutez votre analyse pour voir la différence dans les résultats.
 > 
@@ -191,7 +191,7 @@ Les journaux sont également stockés localement dans le **répertoire %localapp
 |Type  |Description  |
 |---------|---------|
 |**Fichiers de récapitulatif .txt**     |  Inclut la durée de l’analyse, le nombre de fichiers analysés et le nombre de fichiers pour lesquels une correspondance avec les types d’informations a été trouvée.       |
-|**Fichiers de détails .csv.**     | Contient des descriptions détaillées pour chaque fichier analysé. Le répertoire peut contenir jusqu’à 60 rapports pour chaque cycle d’analyse.         |
+|**Fichiers de détails .csv**     | Contient des descriptions détaillées pour chaque fichier analysé. Le répertoire peut contenir jusqu’à 60 rapports pour chaque cycle d’analyse.         |
 |     |         |
 
 ## <a name="next-steps"></a>Étapes suivantes
@@ -201,7 +201,7 @@ Si vous voulez suivre d’autres tutoriels, consultez :
 - [Tutoriel : Empêcher les partages inappropriés avec Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 - [Tutoriel : Migration depuis le client classique Azure Information Protection (AIP) vers le client d’étiquetage unifié](tutorial-migrating-to-ul.md)
 
-**Voir aussi :**
+**Voir aussi** :
 
 - [Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?](deploy-aip-scanner.md)
 - [Prérequis pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection](deploy-aip-scanner-prereqs.md)

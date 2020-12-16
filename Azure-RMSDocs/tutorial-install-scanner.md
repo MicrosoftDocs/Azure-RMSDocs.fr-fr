@@ -10,22 +10,22 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 73bcb5e636b8a5e4456ad80f8435a27dfc898339
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503687"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384772"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutoriel : Installation du scanneur d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour le [client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Ce tutoriel explique comment installer le scanneur local Azure Information Protection (AIP). Le scanneur permet aux administrateurs AIP d’analyser leurs réseaux et leurs partages de contenu pour y rechercher des données sensibles, et d’appliquer des étiquettes de classification et de protection comme configuré dans la stratégie de leur organisation.
 
-**Temps nécessaire :** Vous pouvez effectuer ce tutoriel en 30 minutes.
+**Temps nécessaire** : Vous pouvez effectuer ce tutoriel en 30 minutes.
 
 ## <a name="tutorial-prerequisites"></a>Configuration requise pour le didacticiel
 
@@ -154,7 +154,7 @@ Cette procédure n’est pas nécessaire si vous travaillez en mode hors connexi
 
 Pour plus d’informations, consultez [Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
 
-**Pour obtenir un jeton Azure AD pour le scanneur :**
+**Pour obtenir un jeton Azure AD pour le scanneur** :
 
 1. Dans le portail Azure, créez une application Azure AD pour spécifier un jeton d’accès à des fins d’authentification.
 
@@ -176,7 +176,7 @@ Pour plus d’informations, consultez [Comment étiqueter des fichiers de maniè
     ``` 
 
     > [!TIP]
-    > Si le droit **Se connecter en local**  ne peut pas être accordé à votre compte de service de scanneur, utilisez le paramètre **OnBehalfOf** avec **Set-AIPAuthentication** au lieu du paramètre **DelegatedUser**.
+    > Si le droit **Se connecter en local** ne peut pas être accordé à votre compte de service de scanneur, utilisez le paramètre **OnBehalfOf** avec **Set-AIPAuthentication** au lieu du paramètre **DelegatedUser**.
 
 Le scanneur a maintenant un jeton pour s’authentifier auprès d’Azure AD. Ce jeton est valide aussi longtemps que ce que vous avez configuré dans Azure Active Directory. Vous devez répéter cette procédure quand le jeton expire.
 
@@ -193,7 +193,7 @@ Par exemple, si vous trouvez qu’un référentiel est accessible publiquement �
 > [!NOTE]
 > Cette fonctionnalité est actuellement en PRÉVERSION. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
 
-**Pour installer le service de découverte du réseau :**
+**Pour installer le service de découverte du réseau** :
 
 1. Sur la machine du scanneur, ouvrez une session PowerShell en tant qu’administrateur.
 
@@ -247,7 +247,7 @@ Pour plus d’informations, consultez [Tutoriel : Découverte de votre contenu 
 >Pour rechercher les données sensibles dans vos référentiels à risque, puis classifier et protéger ces données des utilisateurs externes, mettez à jour votre travail d’analyse de contenu avec les informations des référentiels que vous avez trouvés.
 >
 
-**Voir aussi :**
+**Voir aussi** :
 
 - [Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?](deploy-aip-scanner.md)
 - [Prérequis pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection](deploy-aip-scanner-prereqs.md)

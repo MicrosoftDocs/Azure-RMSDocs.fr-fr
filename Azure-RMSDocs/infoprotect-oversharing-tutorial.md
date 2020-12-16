@@ -10,23 +10,23 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6bb35700a025105b584b93b5a38219b567dbe99c
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: ff00e9731041344aac8a11b990f990efb113074e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381814"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client classique uniquement](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
-> **Pour déployer le client classique AIP,** ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.
+> **Pour déployer le client classique AIP**, ouvrez un ticket de support afin d’obtenir l’accès au téléchargement.
 
 Dans ce tutoriel, vous allez apprendre à :
 > [!div class="checklist"]
@@ -55,7 +55,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 1. Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous pouvez vous connecter à Outlook. Vous devrez peut-être redémarrer Outlook plusieurs fois au cours de ce tutoriel.
 
-1. Le client Azure Information Protection (classique) installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
+1. Le client classique Azure Information Protection installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
 
 > [!TIP]
 > Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
@@ -440,4 +440,4 @@ Redémarrez Outlook afin qu’il ne soit plus configuré pour les paramètres qu
 
 Pour que les tests soient plus rapides, ce tutoriel utilise un e-mail pour un seul destinataire et sans pièces jointes. Mais vous pouvez appliquer la même méthode avec plusieurs destinataires, plusieurs étiquettes et également appliquer la même logique aux pièces jointes dont l’état d’étiquetage est souvent moins évident pour les utilisateurs. Par exemple, l’e-mail proprement dit est étiqueté Public, mais la présentation PowerPoint jointe est étiquetée Général. Pour plus d’informations sur les options de configuration, consultez la section suivante dans le guide de l’administrateur : [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-Le guide de l’administrateur contient également des informations sur les autres paramètres clients avancés que vous pouvez utiliser pour personnaliser le comportement du client. Pour obtenir la liste complète, consultez [Paramètres client avancés disponibles](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
+Le guide de l’administrateur contient également des informations sur les autres paramètres clients avancés que vous pouvez utiliser pour personnaliser le comportement du client. Pour obtenir la liste complète, consultez [Paramètres client avancés disponibles](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings).

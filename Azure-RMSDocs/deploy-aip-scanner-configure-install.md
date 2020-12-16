@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382868"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583708"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -166,18 +166,20 @@ Si vous avez [défini un travail d’analyse réseau](#create-a-network-scan-job
 
 Les référentiels pour lesquels un **accès public** est accessible **en lecture** ou **en lecture/écriture** peuvent avoir un contenu sensible qui doit être sécurisé. Si l' **accès public** a la valeur false, le référentiel n’est pas accessible par le public.
 
-L’accès public à un référentiel est signalé uniquement si vous avez défini un compte faible dans le paramètre **StandardDomainsUserAccount** de l’applet de commande [**install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) .
+L’accès public à un référentiel est signalé uniquement si vous avez défini un compte faible dans le paramètre **StandardDomainsUserAccount** des applets de commande [**install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) ou [**Set-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration) .
 
 - Les comptes définis dans ces paramètres sont utilisés pour simuler l’accès d’un utilisateur faible au référentiel. Si l’utilisateur faible défini peut accéder au référentiel, cela signifie que le référentiel est accessible publiquement. 
 
 - Pour vous assurer que l’accès public est correctement signalé, assurez-vous que l’utilisateur spécifié dans ces paramètres est membre du groupe **utilisateurs du domaine** uniquement.
-       
+
 ### <a name="create-a-content-scan-job"></a>Créer un travail d’analyse de contenu
 
 Explorez en profondeur votre contenu pour analyser des référentiels spécifiques pour obtenir du contenu sensible. 
 
 Vous pouvez effectuer cette opération uniquement après avoir exécuté un travail d’analyse réseau pour analyser les référentiels de votre réseau, mais vous pouvez également définir vos référentiels vous-même.
- 
+
+**Pour créer votre travail d’analyse de contenu sur le Portail Azure :**
+
 1. Dans le menu du **scanneur** situé à gauche, sélectionnez **travaux d’analyse du contenu**. 
    
 1. Dans le volet **Azure information protection-travaux d’analyse de contenu** , sélectionnez **Ajouter** une ![icône](media/i-add.png "icône Enregistrer").
@@ -231,7 +233,7 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Path  |Syntaxe  |
+    |Chemin d’accès  |Syntaxe  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` <br /><br />Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. <br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -255,18 +257,20 @@ Une fois que vous avez [configuré le scanneur Azure information protection dans
 1. Connectez-vous à l’ordinateur Windows Server qui exécutera le scanneur. Utilisez un compte disposant de droits d’administrateur local et qui est autorisé à écrire dans la base de données principale SQL Server.
 
     > [!IMPORTANT]
+    > Vous devez avoir installé le client d’étiquetage unifié AIP sur votre ordinateur avant d’installer le scanneur. 
+    >
     > Pour plus d’informations, consultez [Configuration requise pour l’installation et le déploiement du scanneur Azure information protection](deploy-aip-scanner-prereqs.md).
     >
  
 1. Ouvrez une session Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**.
 
-1. Exécutez l’applet de commande [install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , en spécifiant votre SQL Server instance sur laquelle créer une base de données pour le scanneur de Azure information protection, et le nom du cluster du scanneur que vous avez spécifié dans la section précédente : 
+1. Exécutez l’applet de commande [install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , en spécifiant votre SQL Server instance sur laquelle créer une base de données pour le scanneur de Azure information protection, et le nom du cluster du scanneur que vous avez [spécifié dans la section précédente](#create-a-scanner-cluster): 
     
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
-    Exemples utilisant le nom de profil **Europe** :
+    Exemples, à l’aide du nom de cluster du scanneur **Europe**:
     
     - Pour une instance par défaut : `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
@@ -274,7 +278,9 @@ Une fois que vous avez [configuré le scanneur Azure information protection dans
     
     - Pour SQL Server Express : `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
-    Lorsque vous y êtes invité, fournissez les informations d’identification du compte de service du scanneur ( \<domain\user name> ) et du mot de passe.
+    Lorsque vous y êtes invité, fournissez les informations d’identification Active Directory pour le compte de service du scanneur.
+
+    Utilisez la syntaxe suivante : `\<domain\user name>` . Par exemple : `contoso\scanneraccount`
 
 1. Vérifiez que le service est maintenant installé à l’aide des **Outils d’administration**  >  **services**. 
     
@@ -404,6 +410,7 @@ Dans les scénarios suivants, le Azure Information Protection scanner est égale
 - [Appliquer une étiquette par défaut à tous les fichiers d’un référentiel de données](#apply-a-default-label-to-all-files-in-a-data-repository)
 - [Supprimer des étiquettes existantes de tous les fichiers d’un référentiel de données](#remove-existing-labels-from-all-files-in-a-data-repository)
 - [Identifiez toutes les conditions personnalisées et les types d’informations sensibles connus](#identify-all-custom-conditions-and-known-sensitive-information-types)
+
 ### <a name="apply-a-default-label-to-all-files-in-a-data-repository"></a>Appliquer une étiquette par défaut à tous les fichiers d’un référentiel de données
 
 Dans cette configuration, tous les fichiers sans étiquette du référentiel sont étiquetés avec l’étiquette par défaut spécifiée pour le référentiel ou le travail d’analyse du contenu. Les fichiers sont étiquetés sans inspection. 
@@ -465,7 +472,7 @@ Les facteurs supplémentaires qui affectent les performances du scanneur sont le
 |**Mode scanneur** (détection/application)    | Le mode de détection a généralement un taux d’analyse plus élevé que le mode d’application. <br /><br />La découverte requiert une seule action de lecture de fichier, tandis que le mode d’application requiert des actions de lecture et d’écriture.        |
 |**Modifications de stratégie**     |Les performances de votre scanneur peuvent être affectées si vous avez apporté des modifications à l’étiquetage automatique dans la stratégie d’étiquette. <br /><br />Votre premier cycle d’analyse, lorsque le scanneur doit inspecter chaque fichier, prend plus de temps que les cycles d’analyse suivants qui, par défaut, inspectent uniquement les fichiers nouveaux et modifiés. <br /><br />Si vous modifiez les conditions ou les paramètres d’étiquetage automatique, tous les fichiers sont analysés à nouveau. Pour plus d’informations, consultez [rescaning Files](deploy-aip-scanner-manage.md#rescanning-files).|
 |**Constructions Regex**    | Les performances de l’analyseur sont affectées par la manière dont vos expressions Regex pour les conditions personnalisées sont construites. <br /><br /> Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. <br /><br />Par exemple : <br />-Évitez les [quantificateurs gourmands](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Utiliser des groupes sans capture comme `(?:expression)` au lieu de `(expression)`    |
-|**Niveau de journalisation**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.<br /><br />- La valeur **off** permet d’obtenir des performances optimales <br />- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. <br /><br />Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Log level**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.<br /><br />- La valeur **off** permet d’obtenir des performances optimales <br />- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. <br /><br />Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Fichiers en cours d’analyse**     |-À l’exception des fichiers Excel, les fichiers Office sont analysés plus rapidement que les fichiers PDF. <br /><br />-Les fichiers non protégés sont plus rapides à analyser que les fichiers protégés. <br /><br />-Les fichiers volumineux sont évidemment plus longs à analyser que les petits fichiers.         |
 | | |
 
@@ -493,6 +500,10 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 
 - [MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
+- [MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+
+- [MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Set-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
@@ -503,6 +514,10 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 
 - [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
+- [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+
+- [Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
@@ -512,6 +527,10 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+
+- [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+
+- [Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
@@ -530,6 +549,7 @@ Les applets de commande prises en charge pour le scanneur sont les suivantes :
 - [Uninstall-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

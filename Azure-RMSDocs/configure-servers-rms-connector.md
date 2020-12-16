@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 43e9731197231c8bccf2c5d00aec81b20ab3c889
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383004"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583555"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
@@ -115,7 +115,7 @@ Les **inconvénients sont** les suivants :
 
 Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre organisation. 
 
-Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, `https:\//connector.contoso.com`. 
+Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple : `https:\//connector.contoso.com`. 
 
 L'outil utilise ensuite cette URL pour contacter les serveurs qui exécutent le connecteur RMS et obtenir d'autres paramètres servant à créer les configurations requises.
 
@@ -134,10 +134,13 @@ Consultez les sections suivantes pour obtenir des informations spécifiques pour
 
 Il est possible que les applications clientes installées en local sur les serveurs configurés pour utiliser le connecteur ne fonctionnent pas avec RMS, car elles tentent d'utiliser le connecteur plutôt que RMS directement, ce qui n'est pas pris en charge.
 
-En outre, si Office 2010 est installé localement sur un serveur Exchange, les fonctionnalités IRM de l’application cliente peuvent fonctionner à partir de cet ordinateur une fois que le serveur est configuré pour utiliser le connecteur, mais cela n’est pas pris en charge.
+En outre, si Office 2010 est installé localement sur un serveur Exchange, les fonctionnalités IRM de l’application cliente peuvent fonctionner à partir de cet ordinateur une fois que le serveur est configuré pour utiliser le connecteur, mais cela n’est pas pris en charge. 
 
 Dans les deux cas, vous devez installer les applications clientes sur des ordinateurs distincts non configurés pour utiliser le connecteur. Elles utiliseront alors RMS correctement.
 
+> [!NOTE]
+> Pour plus d’informations sur AIP et Office 2010, consultez [AIP pour Windows et versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configuration d'un serveur Exchange afin d'utiliser le connecteur
 Les rôles Exchange qui communiquent avec le connecteur RMS sont les suivants :
 
@@ -246,7 +249,7 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 
 - Windows Server 2016
 
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
 - Windows Server 2012
 

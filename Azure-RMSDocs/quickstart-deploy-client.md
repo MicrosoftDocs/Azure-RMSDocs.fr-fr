@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 210e556a2ecaab2dec7eb46b4b3b9b3c2c968ea4
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: fa795fa29e39bc9fe5abc9a68febcd168a5bb502
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386336"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Le client d’étiquetage unifié Azure Information Protection (AIP) fait partie de la solution [Microsoft Information Protection](https://aka.ms/MIPdocs) et étend les fonctionnalités intégrées pour l’étiquetage de la sensibilité fournies par Microsoft 365. 
 

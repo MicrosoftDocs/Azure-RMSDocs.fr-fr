@@ -8,16 +8,16 @@ metadata:
   ms.service: information-protection
   ms.topic: landing-page
   ms.collection: M365-security-compliance
-  author: mlottner
-  ms.author: mlottner
+  author: batamig
+  ms.author: bagol
   manager: rkarlin
-  ms.date: 04/02/2019
-  ms.openlocfilehash: a2f73c9aa0207af5b7ba77b3b53c271eb8722cb2
-  ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+  ms.date: 12/08/2020
+  ms.openlocfilehash: ef5cc6624b8d6e1af2750ebf1f4fbb5c54f72dd2
+  ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/09/2020
-  ms.locfileid: "94379161"
+  ms.lasthandoff: 12/14/2020
+  ms.locfileid: "97382137"
 landingContent:
 - title: À propos d’Azure Information Protection
   linkLists:
@@ -27,12 +27,10 @@ landingContent:
       url: what-is-information-protection.md
     - text: Forum aux questions
       url: faqs.md
-- title: Prise en main
-  linkLists:
-  - linkListType: overview
-    links:
     - text: Configuration requise
       url: requirements.md
+- title: Bien démarrer
+  linkLists:
   - linkListType: quickstart
     links:
     - text: Déployer le client d’étiquetage unifié
@@ -45,28 +43,38 @@ landingContent:
       url: tutorial-scan-networks-and-content.md
     - text: Empêcher le surpartage
       url: tutorial-preventing-oversharing.md
+  - linkListType: how-to-guide
+    links:
+    - text: Consulter des fichiers protégés hors Office
+      url: ./rms-client/clientv2-view-use-files.md
+    - text: Guides pratiques d’administration pour les scénarios courants
+      url: how-to-guides.md
 - title: Rester à jour
   linkLists:
   - linkListType: whats-new
     links:
-    - text: 5 sessions Ignite principales recommandées
-      url: what-is-information-protection.md#additional-resources
-    - text: Dernière version du client d’étiquetage unifié
+    - text: Meilleures sessions Ignite recommandées
+      url: what-is-information-protection.md#top-ignite-sessions
+    - text: Nouveautés du client d’étiquetage unifié AIP
       url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: Classer et protéger les données dans des magasins de données locaux
   linkLists:
+  - linkListType: overview
+    links:
+    - text: À propos de l’analyseur local
+      url: deploy-aip-scanner.md
   - linkListType: how-to-guide
     links:
-    - text: Déployer le scanneur
-      url: deploy-aip-scanner.md
+    - text: Configurer et installer l’analyseur
+      url: deploy-aip-scanner-configure-install.md
+    - text: Exécuter l’analyseur
+      url: deploy-aip-scanner-manage.md
 - title: Personnaliser le client
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 'Client d’étiquetage unifié : Paramètres avancés'
+    - text: Paramètres avancés du client d’étiquetage unifié
       url: ./rms-client/clientv2-admin-guide-customizations.md
-    - text: 'Client classique : Paramètres avancés'
-      url: ./rms-client/client-admin-guide-customizations.md
 - title: Kit SDK Microsoft Information Protection
   linkLists:
   - linkListType: overview
@@ -87,15 +95,21 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Choisir votre client d’étiquetage
-      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+    - text: Choisir une solution d’étiquetage Windows
+      url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+  - linkListType: tutorial
+    links:
+    - text: Migrer vers la solution d’étiquetage unifié
+      url: tutorial-migrating-to-ul.md
   - linkListType: how-to-guide
     links:
-    - text: Effectuer une migration vers le client d’étiquetage unifié
-      url: tutorial-migrating-to-ul.md
+    - text: Migrer les étiquettes AIP vers des étiquettes de confidentialité unifiées
+      url: configure-policy-migrate-labels.md
 - title: Surveiller l’utilisation des étiquettes et découvrir les informations sensibles
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Création centralisée de rapports
       url: reports-aip.md
+    - text: Informations de référence sur le journal d’audit
+      url: audit-logs.md

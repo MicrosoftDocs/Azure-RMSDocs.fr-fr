@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386234"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583351"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Prérequis Azure AD supplémentaires pour Azure Information Protection
 
@@ -37,7 +37,9 @@ En plus d’un compte Azure AD, les ordinateurs qui exécutent Microsoft 2010 n
 
 Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ces ordinateurs doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
 
-Nous vous recommandons de déployer le client d’étiquetage unifié Azure Information Protection. Si vous n’avez pas encore effectué la mise à niveau, vous avez peut-être encore le [client classique Azure Information Protection ](./rms-client/aip-client.md) qui est déployé sur votre système. Pour plus d’informations, consultez [Côté client d’Azure Information Protection](rms-client/use-client.md).
+Nous vous recommandons de déployer le client d’étiquetage unifié Azure Information Protection. Si vous n’avez pas encore effectué la mise à niveau, vous avez peut-être encore le [client classique Azure Information Protection ](./rms-client/aip-client.md) qui est déployé sur votre système. 
+
+Pour plus d’informations, consultez [Le côté client d’Azure Information Protection](rms-client/use-client.md) et [AIP pour les versions Windows et Office en support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 > [!NOTE]
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. 

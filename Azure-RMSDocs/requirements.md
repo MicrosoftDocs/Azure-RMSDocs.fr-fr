@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: b5e64f9537ee9c8f7f684e708c5de35ec28f3400
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386217"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583368"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -69,10 +69,11 @@ Pour prendre en charge l’authentification et l’autorisation pour Azure Infor
 
 L’accès conditionnel est pris en charge en préversion pour les documents protégés par Azure Information Protection. Pour plus d'informations, voir : [Je vois qu’Azure Information Protection est répertorié en tant qu’application cloud disponible pour l’accès conditionnel : comment cela fonctionne-t-il ?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Des conditions préalables supplémentaires sont requises pour des scénarios spécifiques, par exemple lors de l’utilisation d’Office 2010, de l’authentification par certificat ou multifacteur ou lorsque les valeurs UPN ne correspondent pas aux adresses e-mail des utilisateurs. Pour plus d’informations, consultez [Exigences Azure AD supplémentaires pour Azure Information Protection](requirements-azure-ad.md).
+Des conditions préalables supplémentaires sont requises pour des scénarios spécifiques, par exemple lors de l’utilisation de l’authentification par certificat ou multifacteur, lorsque les valeurs UPN ne correspondent pas aux adresses e-mail des utilisateurs ou lors de l’utilisation d’[Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
+- [Prérequis Azure AD supplémentaires pour Azure Information Protection](requirements-azure-ad.md).
 - [Qu’est-ce qu’Azure AD Directory ?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Intégrer des domaines Active Directory locaux avec Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
@@ -154,7 +155,7 @@ Les autres éditions d’Office ne peuvent pas protéger les documents et messag
 
 Les étiquettes sont visibles dans une barre affichée en haut du document Office, accessible avec le bouton **Sensibilité** dans le client d’étiquetage unifié ou avec le bouton **Protéger** dans le client classique.
 
-Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
+Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md) et [AIP pour les versions Windows et Office en support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Fonctionnalités et caractéristiques Office non prises en charge
 

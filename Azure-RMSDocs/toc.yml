@@ -135,7 +135,7 @@
           items:
             - name: Vue d’ensemble
               href: deploy-aip-scanner.md
-            - name: Configurer et installer le scanneur d’étiquetage unifié
+            - name: Configurer et installer l’analyseur d’étiquetage unifié
               href: deploy-aip-scanner-configure-install.md
             - name: Exécuter le scanneur d’étiquetage unifié
               href: deploy-aip-scanner-manage.md
@@ -181,6 +181,8 @@
               href: ./rms-client/clientv2-admin-guide.md
             - name: Installer le client pour les utilisateurs
               href: ./rms-client/clientv2-admin-guide-install.md
+            - name: Suivre et révoquer l’accès
+              href: ./rms-client/track-and-revoke-admin.md
             - name: Personnalisations
               href: ./rms-client/clientv2-admin-guide-customizations.md
             - name: Fichiers du client et journalisation de l’utilisation
@@ -201,6 +203,8 @@
               href: ./rms-client/clientv2-view-use-files.md
             - name: Supprimer des étiquettes et la protection
               href: ./rms-client/clientv2-remove-label-protection.md
+            - name: Révoquer l’accès à un document
+              href: ./rms-client/revoke-access-user.md
         - name: Applications Azure Information Protection pour iOS et Android
           href: ./rms-client/mobile-app-faq.md
         - name: Lecteurs PDF protégés

@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 3e58c7efe669aa6c3405a5fd1c2056e96a933ff6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: fe246ceb2f54d24318373b95c36733a977b560dc
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565581"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701728"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) Kit de développement logiciel (SDK), historique des versions et stratégie de support
 
 ## <a name="servicing"></a>Maintenance
 
-Chaque version de disponibilité générale (GA) est prise en charge pendant six mois après la publication de la prochaine version GA. La documentation peut ne pas inclure d’informations sur les versions non prises en charge. Les correctifs et les nouvelles fonctionnalités s’appliquent uniquement à la dernière version GA.
+Chaque version de disponibilité générale (GA) est prise en charge pendant un an après la publication de la prochaine version GA. La documentation peut ne pas inclure d’informations sur les versions non prises en charge. Les correctifs et les nouvelles fonctionnalités s’appliquent uniquement à la dernière version GA.
 
 Les versions préliminaires ne doivent pas être déployées en production. Au lieu de cela, utilisez la version préliminaire la plus récente pour tester les nouvelles fonctionnalités ou les correctifs fournis dans la prochaine version GA. Seule la version préliminaire la plus récente est prise en charge.
 
@@ -27,9 +27,25 @@ Les versions préliminaires ne doivent pas être déployées en production. Au l
 Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge. La dernière version est répertoriée en première position.
 
 > [!NOTE]
-> Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le kit de développement logiciel (SDK), nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, consultez la préversion actuelle.
+> Les correctifs mineurs ne sont pas répertoriés. Si vous rencontrez un problème avec le kit de développement logiciel (SDK), nous vous recommandons de vérifier s’il est corrigé avec la dernière version GA. Si le problème persiste, consultez la préversion actuelle.
 >  
 > Pour obtenir un support technique, consultez le [forum Stack Overflow Microsoft information protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## <a name="version-17147"></a>Version 1.7.147
+
+### <a name="file-sdk"></a>SDK de fichiers
+
+- Résolution de bogue mineure pour le format de fichier PBIX.
+
+## <a name="version-17145"></a>Version 1.7.145
+
+**Date de publication :** 13 novembre 2020
+
+### <a name="general-changes"></a>Modifications générales
+
+- Package NuGet mis à jour pour copier les dépendances uniquement sur Update plutôt que sur Always.
+- La configuration de débogage sur .NET utilise la version finale des bibliothèques natives. Nous avons découvert que les clients qui déploient des solutions .NET en mode débogage sur des serveurs distants devaient installer le runtime de débogage VC + +, ce qui n’est pas trivial. Si vous avez besoin de déboguer dans des bibliothèques natives, copiez les dll à partir du kit de développement logiciel (SDK) redistribuable dans le dossier du projet (https://ala.ms/mipsdkbins)
+- Correction d’un bogue qui générait des avertissements pour les projets .NET Core.
 
 ## <a name="version-17133"></a>Version 1.7.133
 
@@ -187,7 +203,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
   - MIP ::P olicyHandler :: IsLabeled ()
   - Risque mineur de faux positifs (par exemple, si le contenu contient des métadonnées d’étiquette Zombie)
 - Durée de vie du cache de stratégie d’étiquette
-  - Par défaut : 30 jours
+  - Par défaut : 30 jours
   - Configurable via MIP ::P olicyProfile :: SetCustomSettings ()
 - **Modification avec rupture**
   - Mise à jour de PolicyEngine. Settings. LabelFilter à partir de la liste d’enums vers un champ de type Nullable.

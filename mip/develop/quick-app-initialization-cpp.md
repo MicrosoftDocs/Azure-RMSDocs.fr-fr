@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: cc8b2f4d969e24451110a6838ce10c8eea39abd9
-ms.sourcegitcommit: 54e742defb0b8dca35047b34498ec66e61602fa6
+ms.openlocfilehash: 688fe04d993ae1d286458fa9d41b0915838e6406
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96577046"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701677"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++) 
 
@@ -350,13 +350,6 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
 
 4. À présent, effectuez une build finale de l’application et corrigez les erreurs éventuelles. Votre code doit être généré avec succès, mais ne s’exécutera pas correctement tant que vous n’aurez pas terminé le guide de démarrage rapide suivant. Si vous exécutez l’application, vous voyez une sortie similaire à ce qui suit. Vous n’aurez pas de jeton d’accès à fournir tant que vous n’aurez pas terminé le guide de démarrage rapide suivant.
 
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account:
-   Enter access token:
-   ```
 
 ## <a name="next-steps"></a>Étapes suivantes
 

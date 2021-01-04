@@ -12,12 +12,12 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 40ceb9ebb8ef4f78869583408501e8bbd7c9948a
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f503fff97fae5f9bce0551f67fddf11f7590ecac
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384041"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764048"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 
@@ -80,4 +80,8 @@ Pour plus d’informations sur l’achat ou l’évaluation d’Azure Informatio
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations, consultez [Terminologie liée à Azure Information Protection](terminology.md).
+Pour plus d'informations, consultez les pages suivantes :
+
+- [Qu’est-ce qu’Azure Information Protection ?](what-is-information-protection.md)
+- [En quoi consiste Azure Rights Management ?](what-is-azure-rms.md)
+- [Terminologie liée à Azure Information Protection](terminology.md)

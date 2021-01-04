@@ -8,14 +8,15 @@ ms.date: 11/10/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 2b5bc28e18778a3ad7d4304632611df102577f92
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f57d8722cc1e42c196253a76f7338cd2a8e6c700
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386404"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807006"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 

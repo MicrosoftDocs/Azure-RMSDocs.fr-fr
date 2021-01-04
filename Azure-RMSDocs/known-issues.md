@@ -4,25 +4,25 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 12/29/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e18c18322783a4f953c898cb96232ab35b642dca
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 1ee51978452a4f420478f2938020578166f49335
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583623"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805986"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
 >***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -45,15 +45,15 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : types d
 
 Le client Azure Information Protection n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3, où la [protection contre l’exploitation](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée et entraîne un comportement inattendu des applications Office.
 
-Si vous disposez d’une version 2 ou 3 de .NET en plus d’une version de .NET 4. x requise pour votre système, veillez à désactiver la protection contre l’exploitation avant AIP. 
+Dans ce cas, nous vous recommandons de mettre à niveau votre version .NET. Pour plus d’informations, consultez [Microsoft .NET Framework Requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
+
+Si vous devez conserver votre .NET version 2 ou 3, veillez à désactiver la protection contre l’exploitation avant d’installer AIP. 
 
 Pour désactiver la protection contre les attaques par le biais de PowerShell, exécutez la commande suivante :
 
 ```PowerShell
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
-
-Pour plus d’informations, voir [conditions préalables supplémentaires pour le client d’étiquetage unifié Azure information protection](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Prise en charge de PowerShell pour le client Azure Information Protection
 
@@ -85,17 +85,11 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 
 La publication des stratégies peut prendre jusqu’à 24 heures.
 
-## <a name="known-issues-in-the-aip-client"></a>Problèmes connus dans le client AIP
-
-- [Tailles maximales de fichiers](#maximum-file-sizes)
-- [Visionneuse AIP](#aip-viewer)
-- [Suivi et révocation de l’accès aux documents](#tracking-and-revoking-document-access-public-preview)
-
-### <a name="maximum-file-sizes"></a>Tailles maximales de fichiers
+## <a name="maximum-file-sizes"></a>Tailles maximales de fichiers
 
 Les fichiers de plus de 2 Go sont pris en charge pour la protection, mais pas pour le déchiffrement.
 
-### <a name="aip-viewer"></a>Visionneuse AIP
+## <a name="known-issues-for-the-aip-viewer"></a>Problèmes connus de la visionneuse AIP
 
 La visionneuse AIP affiche des images en mode portrait, et certaines images larges et de vue paysage peuvent sembler étirées.
 
@@ -103,12 +97,12 @@ Par exemple, une image d’origine est représentée ci-dessous à gauche, avec 
     
 :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Image étirée dans la visionneuse cliente":::
     
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [**Client classique**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/client-view-use-files.md)
 - [**Client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md)
 
-### <a name="tracking-and-revoking-document-access-public-preview"></a>Suivi et révocation de l’accès aux documents (préversion publique)
+## <a name="known-issues-for-track-and-revoke-features-public-preview"></a>Problèmes connus pour les fonctionnalités de suivi et de révocation (version préliminaire publique)
 
 Le suivi et la révocation de l’accès aux documents à l’aide du client d’étiquetage unifié présente les problèmes connus suivants :
 
@@ -127,30 +121,35 @@ En outre, la révocation de l’accès pour l’une des pièces jointes révoque
 
 #### <a name="documents-accessed-via-sharepoint"></a>Documents accessibles via SharePoint
     
-- Les documents protégés qui sont téléchargés sur SharePoint perdent leur valeur ContentID. 
+- Les documents protégés téléchargés sur SharePoint perdent leur valeur **contentid** , et l’accès ne peut pas être suivi ou révoqué.
 
-    Cela signifie que les données ne sont pas suivies et que les révocations d’accès ne s’appliquent pas au fichier stocké dans SharePoint.
-
-- Si un utilisateur télécharge le fichier à partir de SharePoint et y accède à partir de son ordinateur local, une nouvelle ContentID est appliquée au document lorsqu’il l’ouvre localement. 
+- Si un utilisateur télécharge le fichier à partir de SharePoint et y accède à partir de son ordinateur local, une nouvelle **contentid** est appliquée au document lorsqu’il l’ouvre localement. 
     
-    L’utilisation de la valeur ContentID d’origine pour le suivi des données n’inclut pas les accès effectués pour le fichier téléchargé de l’utilisateur. En outre, la révocation de l’accès basé sur la valeur ContentID d’origine ne révoque pas l’accès pour les fichiers téléchargés.
+    L’utilisation de la valeur **contentid** d’origine pour le suivi des données n’inclut pas les accès effectués pour le fichier téléchargé de l’utilisateur. En outre, la révocation de l’accès basé sur la valeur **contentid** d’origine ne révoque pas l’accès pour les fichiers téléchargés.
 
-    Dans ce cas, les administrateurs peuvent être en mesure de localiser les fichiers téléchargés à l’aide de PowerShell pour rechercher les nouvelles valeurs ContentID pour suivre ou révoquer l’accès.
+    Dans ce cas, les administrateurs peuvent être en mesure de localiser les fichiers téléchargés à l’aide de PowerShell pour rechercher les nouvelles valeurs **contentid** pour suivre ou révoquer l’accès.
 
+### <a name="knowns-issues-for-the-aip-client-and-onedrive"></a>Problèmes connus liés au client AIP et à OneDrive
+
+Si vous avez des documents stockés dans OneDrive avec une étiquette de sensibilité appliquée et qu’un administrateur modifie l’étiquette dans la stratégie d’étiquetage pour ajouter une protection, la protection récemment appliquée n’est pas appliquée automatiquement au document étiqueté. 
+
+Dans ce cas, renommez le document manuellement pour appliquer la protection en fonction des besoins.
 ## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP pour Windows et les versions d’Office dans le support étendu
 
 - La [**prise en charge étendue de Windows 7 a pris fin le 14 janvier 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
-    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente de Windows 10. Toutefois, si vous avez étendu des mises à jour de sécurité (UDE) et un contrat de support, le support AIP est disponible pour maintenir la sécurité de vos systèmes Windows 7.
+    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente de Windows 10. 
+
+    Toutefois, si vous avez étendu des mises à jour de sécurité (UDE) et un contrat de support, le support AIP est disponible pour maintenir la sécurité de vos systèmes Windows 7.
 
     Pour plus d’informations, consultez votre contact de support technique.
 
-- [**Office 2010 est actuellement en support étendu**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Le support étendu Office 2010 a pris fin le 13 octobre 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
 
-    Cette prise en charge prendra fin le 13 octobre 2020 et ne sera pas étendue. En outre, UDE n’est pas proposée pour Office 2010 et nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente d’Office 365. 
+    Cette prise en charge n’est pas étendue et l’UDE n’est pas proposée pour Office 2010. 
+
+    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente d’Office 365. 
     
-    Pour les clients qui exécutent actuellement Office 2010 dans le support étendu, le support AIP est disponible jusqu’au 13 octobre 2020. 
-
     Pour plus d’informations, consultez votre contact de support technique.
 
 ## <a name="aip-based-conditional-access-policies"></a>Stratégies d’accès conditionnel basées sur AIP
@@ -165,7 +164,7 @@ Nous vous recommandons d’activer les stratégies d’accès conditionnel basé
 
 1.  Dans le Portail Azure, accédez au panneau **accès conditionnel** , puis sélectionnez la stratégie d’accès conditionnel que vous souhaitez modifier. 
 2.  Sous **affectations**, sélectionnez **utilisateurs et groupes**, puis sélectionnez **tous les utilisateurs**. Assurez-vous que l’option **tous les utilisateurs invités et externes** n’est *pas* sélectionnée.
-3.  Enregistrez vos changements. 
+3.  Enregistrez vos modifications. 
  
 Vous pouvez également désactiver entièrement l’autorité de certification dans Azure Information Protection si cette fonctionnalité n’est pas requise pour votre organisation, afin d’éviter ce problème potentiel. 
 

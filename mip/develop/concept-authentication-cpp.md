@@ -6,16 +6,16 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e4f734560c4d3942995f7547f41648bd765bb1b1
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 9cc8d3b874e4971907770ee18508f331acf1ea2d
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555838"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701626"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés à l’authentification
 
-L’authentification dans le kit SDK MIP s’effectue en étendant la classe `mip::AuthDelegate` pour implémenter votre méthode d’authentification préférée. `mip::AuthDelegate` contient :
+L’authentification dans le kit SDK MIP s’effectue en étendant la classe `mip::AuthDelegate` pour implémenter votre méthode d’authentification préférée. `mip::AuthDelegate` contient :
 
 - `mip::AuthDelegate::OAuth2Challenge` – classe qui gère les informations d’autorité OAuth2 et fournit des données à l’application cliente.
 - `mip::AuthDelegate::OAuth2Token` – classe qui gère l’acquisition d’un jeton accès OAuth2 (à partir de l’application cliente) et le stockage du jeton.
@@ -24,12 +24,12 @@ L’authentification dans le kit SDK MIP s’effectue en étendant la classe `mi
 `mip::AuthDelegate::AcquireOAuth2Token` accepte les paramètres suivants et retourne une valeur booléenne indiquant si l’acquisition du jeton a réussi :
 
 - `mip::Identity` : l’identité de l’utilisateur ou du service à authentifier, si elle est connue.
-- `mip::AuthDelegate::OAuth2Challenge`: accepte quatre paramètres, **autorité**, **ressource**, **revendications**et **étendues**. L’**autorité** est le service par rapport auquel le jeton sera généré. La **ressource** est le service auquel nous essayons d’accéder. Le kit SDK traitera la transmission de ces paramètres dans le délégué lorsqu’il sera appelé. Les **revendications** sont les revendications spécifiques aux étiquettes requises par le service de protection. Les **étendues** sont les étendues d’autorisation Azure ad requises pour accéder à la ressource. 
+- `mip::AuthDelegate::OAuth2Challenge`: Accepte quatre paramètres, **autorité**, **ressource**, **revendications** et **étendues**. L’**autorité** est le service par rapport auquel le jeton sera généré. La **ressource** est le service auquel nous essayons d’accéder. Le kit SDK traitera la transmission de ces paramètres dans le délégué lorsqu’il sera appelé. Les **revendications** sont les revendications spécifiques aux étiquettes requises par le service de protection. Les **étendues** sont les étendues d’autorisation Azure ad requises pour accéder à la ressource. 
 - `mip::AuthDelegate::OAuth2Token` : le résultat de jeton est écrit dans cet objet. Il sera consommé par le kit SDK lorsque le moteur sera chargé. En dehors de notre implémentation de l’authentification, il ne devrait pas être nécessaire d’obtenir ou de définir cette valeur.
 
 **Important :** Les applications n’appellent pas `AcquireOAuth2Token` directement. Le kit SDK appellera cette fonction si nécessaire.
 
-## <a name="consent"></a>Consent
+## <a name="consent"></a>Consentement
 
 Azure AD exige qu’une application reçoive un consentement, avant d’être autorisée à accéder aux API/ressources sécurisées sous l’identité d’un compte. Le consentement est enregistré comme un accusé de réception permanent de l’autorisation dans le locataire du compte, pour le compte spécifique (consentement de l’utilisateur) ou pour tous les comptes (consentement de l’administrateur). Le consentement intervient dans divers scénarios, en fonction de l’API accédée et des autorisations que l’application recherche, ainsi que du compte utilisé pour la connexion : 
 
@@ -101,7 +101,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-À des fins de test et de développement, il est possible d’implémenter un `ConsentDelegate` simple qui ressemble à ceci :
+À des fins de test et de développement, `ConsentDelegate` il est possible d’implémenter un simple qui ressemble à ceci :
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -115,5 +115,4 @@ Toutefois, dans le code de production, l’utilisateur peut être invité à don
 
 Par souci de simplicité, les exemples qui illustrent le délégué implémenteront l’acquisition du jeton en appelant un script externe. Ce script peut être remplacé par n’importe quel autre type de script, par une bibliothèque OAuth2 open source ou par une bibliothèque OAuth2 personnalisée.
 
-- [Acquérir un jeton d’accès à l’aide de PowerShell](concept-authentication-acquire-token-ps.md)
 - [Acquérir un jeton d’accès à l’aide de Python](concept-authentication-acquire-token-py.md)

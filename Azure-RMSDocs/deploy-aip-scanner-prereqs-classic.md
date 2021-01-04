@@ -8,16 +8,17 @@ ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 71dd1d8119af741bbafb8173c63622f4e99146d4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382630"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806173"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur Azure Information Protection Classic
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382630"
 >***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le scanneur d’étiquetage unifié, consultez la [Configuration requise pour le scanneur d’étiquetage unifié](deploy-aip-scanner-prereqs.md)*
 
 > [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Avant d’installer le Azure Information Protection scanneur local, assurez-vous que votre système est conforme aux exigences de base de [Azure information protection](requirements.md), ainsi qu’aux exigences suivantes spécifiques au scanneur :
 
@@ -241,7 +242,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     Si vous ne spécifiez pas votre propre nom de cluster (profil) pour le scanneur, la base de données de configuration est nommée **AIPScanner_ \<computer_name>**. </br>Poursuivez avec [la création d’un utilisateur et en accordant des droits de db_owner sur la base de données](#create-a-user-and-grant-db_owner-rights-manually). 
 
-En outre :
+De plus :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :

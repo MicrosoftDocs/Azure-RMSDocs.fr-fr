@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: abb96719d51658226211653b4ab4d171fcaa6b2e
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97592743"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764099"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection (version préliminaire publique)
 
@@ -51,7 +51,7 @@ Pour révoquer l’accès à partir de Word, Excel ou PowerPoint :
  
 1. Dans le message de confirmation qui s’affiche, cliquez sur **Oui** pour continuer.
 
-L’accès est révoqué et les autres utilisateurs ne peuvent plus accéder au document.
+L’accès est révoqué et les autres utilisateurs ne peuvent plus accéder au document. Si l' [accès hors connexion](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) est autorisé, les utilisateurs continuent d’accéder aux documents qui ont été révoqués jusqu’à l’expiration de la période de stratégie hors connexion. 
 
 ### <a name="dont-see-the-revoke-access-option"></a>Vous ne voyez pas l’option révoquer l’accès ?
 
@@ -64,6 +64,8 @@ Si vous ne voyez pas l’option permettant de **révoquer l’accès** dans le m
 - La dernière version du client d’étiquetage unifiée AIP n’est peut-être pas installée, ou vous devrez peut-être redémarrer vos applications ou ordinateurs Office après l’installation. 
 
     Pour plus d’informations, consultez [le Guide de l’utilisateur : Télécharger et installer le client Azure information protection](install-client-app.md).
+
+- Il se peut que votre administrateur ait [désactivé les fonctionnalités de suivi](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) de votre organisation.
 
 ## <a name="revoking-access-where-the-document-protection-has-been-changed-on-a-copy"></a>Révocation de l’accès lorsque la protection de document a été modifiée sur une copie
 
@@ -80,4 +82,4 @@ Pour plus d'informations, consultez les pages suivantes :
 
 - [Guide de l’utilisateur du client d’étiquetage unifié AIP](clientv2-user-guide.md)
 - [Guide de l’administrateur du client d’étiquetage unifié AIP](clientv2-admin-guide.md)
-- [Problèmes connus pour le suivi et la révocation de l’accès aux documents](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Problèmes connus pour les fonctionnalités de suivi et de révocation](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 5f21c837c1bcd48fe23f3df2647d401390ee81f5
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: e1b21d78f45d1040766d2b4e13b98ba638770106
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556229"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701575"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Kit SDK Microsoft Information Protection – Implémentation d’un délégué d’authentification (C++)
 
@@ -113,5 +113,4 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 
 Pour terminer l’implémentation de l’authentification, il est nécessaire de générer le code figurant derrière la fonction `AcquireToken()`. Les exemples ci-dessous décrivent plusieurs façons d’acquérir le jeton.
 
-- [Exemple d’acquisition de jeton simple/PowerShell](concept-authentication-acquire-token-ps.md)
 - [Exemple d’acquisition de jeton Python](concept-authentication-acquire-token-py.md)

@@ -4,7 +4,7 @@ description: Répertorie les conditions préalables à l’installation et au d�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/03/2020
+ms.date: 12/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49c614e4d124e7001a446c784a816b42ec91e111
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
+ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382579"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97705715"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -318,62 +318,80 @@ Pour prendre en charge un ordinateur déconnecté à l’aide de PowerShell uniq
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
 
+Utilisez les procédures suivantes pour créer manuellement des bases de données et accorder le rôle **db_owner** , si nécessaire.
+
+- [Procédure pour la base de données du scanneur](#manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights)
+- [Procédure pour la base de données de découverte du réseau](#manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights)
+
 Si le rôle sysadmin peut être accordé *temporairement* pour installer le scanneur, vous pouvez supprimer ce rôle une fois l’installation du scanneur terminée.
 
 Effectuez l’une des opérations suivantes, selon les besoins de votre organisation :
 
-- **Vous pouvez avoir le rôle sysadmin temporairement.** Si vous avez temporairement le rôle sysadmin, la base de données est automatiquement créée pour vous et le compte de service du scanneur reçoit automatiquement les autorisations requises.
+|Restriction  |Description  |
+|---------|---------|
+|**Vous pouvez avoir le rôle sysadmin temporairement**     |  Si vous avez temporairement le rôle sysadmin, la base de données est automatiquement créée pour vous et le compte de service du scanneur reçoit automatiquement les autorisations requises. <br><br>Toutefois, le compte d’utilisateur qui configure le scanneur requiert toujours le rôle **db_owner** pour la base de données de configuration de l’analyseur. Si vous avez uniquement le rôle sysadmin jusqu’à ce que l’installation du scanneur soit terminée, accordez manuellement le rôle **db_owner** au compte d’utilisateur.       |
+|**Vous ne pouvez pas avoir le rôle sysadmin**     |  Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données avant d’installer le scanneur. <br><br>Pour cette configuration, le rôle de **db_owner** doit être affecté aux comptes suivants : <br>-Compte de service pour le scanneur<br>-Compte d’utilisateur pour l’installation du scanneur<br>-Compte d’utilisateur pour la configuration du scanneur <br><br>En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle **db_owner** pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. Si vous spécifiez votre propre nom de cluster, la base de données de configuration est nommée **AIPScannerUL_<cluster_name>**.  |
+| | |
 
-    Toutefois, le compte d’utilisateur qui configure le scanneur requiert toujours le rôle **db_owner** pour la base de données de configuration de l’analyseur. Si vous avez uniquement le rôle sysadmin jusqu’à ce que l’installation du scanneur soit terminée, [accordez manuellement le rôle db_owner au compte d’utilisateur](#create-a-user-and-grant-db_owner-rights-manually).
-
-- **Vous ne pouvez pas avoir le rôle sysadmin**. Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données avant d’installer le scanneur.
-
-    Pour cette configuration, le rôle de **db_owner** doit être affecté aux comptes suivants :
-
-    - Compte de service pour le scanneur
-    - Compte d’utilisateur pour l’installation du scanneur
-    - Compte utilisateur pour la configuration du scanneur
-
-    En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle db_owner pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. Si vous spécifiez votre propre nom de cluster, la base de données de configuration est nommée **AIPScannerUL_<cluster_name>**.
-
-En outre :
+De plus :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
 
-    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server`
 
 Si, après avoir configuré ces autorisations, vous voyez une erreur lors de l’installation du scanneur, l’erreur peut être ignorée et vous pouvez démarrer manuellement le service du scanneur.
 
-#### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Créer un utilisateur et lui accorder des droits db_owner manuellement
+#### <a name="manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights"></a>Créez manuellement une base de données et un utilisateur pour le scanneur, et accordez des droits de db_owner
 
-Pour créer un utilisateur et accorder des droits de db_owner sur cette base de données, demandez à l’administrateur système d’effectuer les étapes suivantes :
+Si vous devez créer manuellement votre base de données de scanneur et/ou créer un utilisateur et accorder des droits de **db_owner** sur la base de données, demandez à votre administrateur système d’effectuer les étapes suivantes :
 
-1. Créer une base de connaissances pour le scanneur :
+1. Créer une base de données pour le scanneur :
 
-    ```cli
+    ```sql
     **CREATE DATABASE AIPScannerUL_[clustername]**
 
     **ALTER DATABASE AIPScannerUL_[clustername] SET TRUSTWORTHY ON**
     ```
 
-2. Accordez des droits à l’utilisateur qui exécute la commande d’installation et qui est utilisé pour exécuter des commandes de gestion du scanneur.
-
-    Script SQL :
+2. Accordez des droits à l’utilisateur qui exécute la commande d’installation et qui est utilisé pour exécuter des commandes de gestion du scanneur. Utilisez le script suivant :
 
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
     ```
 
-3. Accordez des droits au compte de service du scanneur.
+3. Accordez des droits au compte de service du scanneur. Utilisez le script suivant :
 
-    Script SQL :
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
+#### <a name="manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights"></a>Créez manuellement une base de données et un utilisateur pour le service de découverte du réseau et accordez des droits db_owner
+
+Si vous avez besoin de créer manuellement votre base de données de [découverte du réseau](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) et/ou de créer un utilisateur et d’accorder des droits de **db_owner** sur la base de données, demandez à votre administrateur système d’effectuer les étapes suivantes :
+
+1. Créer une base de données pour le service de découverte du réseau :
+
+    ```sql
+    **CREATE DATABASE AIPNetworkDiscovery_[clustername]**
+
+    **ALTER DATABASE AIPNetworkDiscovery_[clustername] SET TRUSTWORTHY ON**
+    ```
+
+2. Accordez des droits à l’utilisateur qui exécute la commande d’installation et qui est utilisé pour exécuter des commandes de gestion du scanneur. Utilisez le script suivant :
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+    ```
+
+3. Accordez des droits au compte de service du scanneur. Utilisez le script suivant :
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    ```
 ### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : le compte de service pour le scanneur ne peut pas obtenir le droit **Ouvrir une session localement**
 
 Si les stratégies de votre organisation n’interdisent pas le droit d' **ouverture de session en local** pour les comptes de service, utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication.

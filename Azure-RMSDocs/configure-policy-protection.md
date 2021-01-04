@@ -9,23 +9,24 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 17c60e535e41f5678ca94d3744b487c566a3247d
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 85932860538bbdbc073c49aa12e241b6adad3c09
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383106"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806649"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection de Rights Management
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 >***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) et [restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels) de la documentation de Microsoft 365. *
 
 > [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
 
 Vous pouvez protéger vos documents et vos e-mails les plus sensibles avec le service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour empêcher la perte de données. La protection est appliquée à une étiquette qui est configurée afin d’utiliser la protection de Rights Management pour les documents et les e-mails, et les utilisateurs peuvent également cliquer sur le bouton **Ne pas transférer** dans Outlook.

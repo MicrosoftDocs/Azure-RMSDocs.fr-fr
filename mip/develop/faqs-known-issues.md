@@ -6,18 +6,24 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9b0f9e3fa619762e08d32fb17da576d58f92071d
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0fbb704024a87cbee30016a2f5130d788609cea3
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567833"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701558"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Questions fréquentes (FAQ) sur le kit SDK Microsoft Information Protection (MIP) et problèmes
 
 Cet article fournit des réponses aux Questions fréquentes (FAQ) et des conseils de dépannage pour les problèmes connus et les erreurs courantes.
 
-## <a name="frequently-asked-questions"></a>Forum Aux Questions (FAQ) 
+## <a name="frequently-asked-questions"></a>Forum Aux Questions 
+
+### <a name="file-parsing"></a>Analyse des fichiers
+
+**Question**: puis-je écrire dans le même fichier que celui que je lise actuellement avec le kit de développement logiciel (SDK) de fichier ?
+
+Le kit de développement logiciel MIP ne prend pas en charge la lecture et l’écriture simultanées du même fichier. Les fichiers étiquetés génèrent une *copie* du fichier d’entrée avec les actions d’étiquette appliquées. Votre application doit remplacer le fichier d’origine par le fichier étiqueté. 
 
 ### <a name="sdk-string-handling"></a>Gestion des chaînes SDK
 
@@ -25,7 +31,7 @@ Cet article fournit des réponses aux Questions fréquentes (FAQ) et des conseil
 
 Le kit SDK est destiné à un usage multiplateforme et utilise [UTF-8 (Unicode Transformation Format - 8 bits)](https://wikipedia.org/wiki/UTF-8) pour gérer les chaînes. Les instructions varient selon la plateforme que vous utilisez :
 
-| Plateforme | Guidance |
+| Plateforme | Assistance |
 |-|-|
 | Windows natif | Pour les clients SDK C++, le type de bibliothèque standard C++ [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) est utilisé pour passer des chaînes vers/à partir de fonctions API. La conversion depuis/vers UTF-8 est gérée en interne par le SDK MIP. Quand un `std::string` est retourné à partir d’une API, vous devez vous attendre à un encodage UTF-8 et devez gérer la chaîne en conséquence si vous la convertissez. Dans certains cas, une chaîne est retournée en tant que partie d’un vecteur `uint8_t` (par exemple, une licence de publication), mais doit être traitée comme un objet blob opaque.<br><br>Pour plus d’informations et d’exemples, consultez :<ul><li>[Fonction WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) pour obtenir une assistance sur la conversion des chaînes de caractères larges en caractères multioctets, comme UTF-8.<li>Les exemples de fichiers suivants inclus dans le [téléchargement du kit SDK](setup-configure-mip.md#configure-your-client-workstation) :<ul><li>Les exemples de fonctions d’utilitaire de chaînes dans `file\samples\common\string_utils.cpp`, pour la conversion vers/depuis des chaînes UTF-8 larges.<li>Une implémentation de `wmain(int argc, wchar_t *argv[])` dans `file\samples\file\main.cpp`, qui utilise les fonctions de conversion de chaînes précédentes.</li></ul></ul>|
 | .NET | Pour les clients du kit SDK .NET, toutes les chaînes utilisent l’encodage UTF-16 par défaut et aucune conversion spéciale n’est nécessaire. La conversion depuis/vers UTF-16 est gérée en interne par le SDK MIP. |
@@ -72,9 +78,3 @@ Votre application n’a pas le runtime requis ou n’a pas été créée en tant
 > « ProxyAuthenticatonError : l’authentification du proxy n’est pas prise en charge »
 
 Le kit de développement logiciel MIP ne prend pas en charge l’utilisation de proxys authentifiés. Pour résoudre ce message, les administrateurs de proxy doivent définir les points de terminaison du service Microsoft Information Protection pour ignorer le proxy. Une liste de ces points de terminaison est disponible à la page [URL Office 365 et plages d’adresses IP](/office365/enterprise/urls-and-ip-address-ranges) . Le kit de développement logiciel (SDK) MIP requiert que `*.protection.outlook.com` (ligne 9) et les points de terminaison de service Azure information protection (ligne 73) contourner l’authentification du proxy.
-
-### <a name="issues-in-net-core"></a>Problèmes dans .NET Core
-
-**Question**: le package NuGet fonctionne-t-il dans .net Core ? 
-
-Le package NuGet s’installe dans un projet .NET Core, mais ne peut pas s’exécuter. Nous nous efforçons de résoudre ce dysfonctionnement pour Windows, mais vous ne disposez pas actuellement d’une chronologie pour prendre en charge d’autres plateformes.

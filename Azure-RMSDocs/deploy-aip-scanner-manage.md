@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a24332d284c8f1884d357765f4a30c07fb992df0
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 344a2c8ed5f4912a96af2031accb9476358a2930
+ms.sourcegitcommit: c6aa8f8ecec8950ac6104fc6f47a102e54804a95
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382766"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97706101"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution du scanneur Azure Information Protection
 
@@ -31,8 +31,6 @@ Suivez les autres étapes décrites ci-dessous pour gérer vos analyses.
 
 - [Arrêter une analyse](#stopping-a-scan)
 - [Réanalyse des fichiers](#rescanning-files)
-- [Résolution des problèmes d’analyse arrêtée](#troubleshooting-a-stopped-scan)
-- [Résolution des problèmes à l’aide de l’outil de diagnostic du scanneur](#troubleshooting-using-the-scanner-diagnostic-tool)
 
 Pour plus d’informations, consultez [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner.md).
 
@@ -136,50 +134,6 @@ Si vous avez également modifié les paramètres de protection de vos étiquette
 >
 > Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 > 
-
-## <a name="troubleshooting-a-stopped-scan"></a>Résolution des problèmes d’analyse arrêtée
-
-Si le scanneur s’arrête de manière inattendue et ne termine pas l’analyse d’un grand nombre de fichiers dans un référentiel, vous devrez peut-être modifier l’un des paramètres suivants :
-
-- **Nombre de ports dynamiques**. Vous devrez peut-être augmenter le nombre de ports dynamiques pour le système d’exploitation hébergeant les fichiers. Le renforcement du serveur pour SharePoint peut être l’une des raisons expliquant pourquoi le scanneur dépasse le nombre de connexions réseau autorisées et s’arrête.
-
-    Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, regardez si le message d’erreur suivant est consigné pour le scanneur dans le fichier **% *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
-
-    **Impossible de se connecter au serveur distant---> System .net. Sockets. SocketException : une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est normalement autorisée sur IP : port**
-
-    > [!NOTE]
-    > Ce fichier sera compressé s’il existe plusieurs journaux.
-
-    Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmentation de la plage, consultez [Paramètres modifiables pour améliorer les performances du réseau](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
-
-- **Seuil du mode liste.** Pour les batteries de serveurs SharePoint de grande taille, vous devrez peut-être augmenter le seuil d’affichage de liste. Par défaut, le seuil d’affichage de liste est défini sur 5 000.
-
-    Pour plus d’informations, consultez [gérer des listes et des bibliothèques de grande taille dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
-
-## <a name="troubleshooting-using-the-scanner-diagnostic-tool"></a>Résolution des problèmes à l’aide de l’outil de diagnostic du scanneur
-
-Si vous rencontrez des problèmes avec Azure information scanner, vérifiez que votre déploiement est sain à l’aide de la commande PowerShell suivante :
-
-```PowerShell
-Start-AIPScannerDiagnostics
-```
-
-L’outil de diagnostic vérifie les détails suivants, puis exporte un fichier journal avec les résultats :
-
-- Si la base de données est à jour
-- Si les URL réseau sont accessibles
-- Indique s’il existe un jeton d’authentification valide et si la stratégie peut être acquise
-- Si le profil est défini dans le Portail Azure
-- Indique si la configuration en ligne/hors connexion existe et peut être acquise
-- Indique si les règles configurées sont valides
-
-> [!TIP]
-> Si vous exécutez la commande sous un utilisateur qui n’est pas l’utilisateur du scanneur, veillez à ajouter le paramètre **-OnBehalf** . 
->
-
-> [!NOTE]
-> L’outil **Start-AIPScannerDiagnostics** n’exécute pas une vérification de la configuration requise complète. Si vous rencontrez des problèmes avec le scanneur, vérifiez également que votre système est conforme aux [exigences du scanneur](deploy-aip-scanner-prereqs.md)et que la [configuration et l’installation de votre scanneur](deploy-aip-scanner-configure-install.md) sont terminées.
->
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -8,23 +8,24 @@ ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f68561ed0d3d655dfdeb8feb380941106ea2674c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 7a8715e62a0b3690fd923aeb2c4662eb0732cc91
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383378"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806683"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 >***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) dans la documentation de Microsoft 365. *
 
 > [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Utilisez les informations suivantes pour comprendre la configuration de la stratégie par défaut pour Azure Information Protection.
 
@@ -114,7 +115,7 @@ Certains paramètres ont été ajoutés après le 31 juillet 2017.
 
 |Paramètre|Valeur|
 |-------------------------------|---------------------------|
-|Sélectionner l’étiquette par défaut|Aucun|
+|Sélectionner l’étiquette par défaut|None|
 |Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
@@ -162,7 +163,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 |Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
-|Sélectionner l’étiquette par défaut|Aucun|
+|Sélectionner l’étiquette par défaut|None|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
@@ -200,7 +201,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 |Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
-|Sélectionner l’étiquette par défaut|Aucun|
+|Sélectionner l’étiquette par défaut|None|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
 

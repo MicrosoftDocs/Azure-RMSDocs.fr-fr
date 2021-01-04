@@ -9,25 +9,26 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 117a943c410497cda1df9d0740ad9c91e2744e7f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2224aa0ff69eeb29da0accb6bded70dbe94c60db
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384840"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806972"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) dans la documentation de Microsoft 365. *
 
 > [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 >
 
 Lorsque vous utilisez Azure Information Protection, vous pouvez protéger vos documents sans pour autant devoir renoncer à la collaboration avec des utilisateurs autorisés. Les documents créés par un utilisateur puis partagés avec d’autres afin que ceux-ci puissent les consulter et les modifier sont en majorité des documents Office Word, Excel et PowerPoint. Ces documents prennent en charge la protection native, autrement dit, en plus des fonctionnalités de protection que sont le chiffrement et l’autorisation, ils prennent également en charge l’autorisation restreinte pour un contrôle plus précis. 
@@ -64,9 +65,9 @@ Cet exemple montre comment configurer une étiquette existante pour appliquer la
     
    - Pour tous les utilisateurs de la première organisation externe : sélectionnez **Entrez les détails** et tapez le nom d’un domaine dans le locataire de l’organisation. Par exemple, fabrikam.com.
     
-   - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple, sales@contoso.com.
+   - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple : sales@contoso.com.
     
-   - Pour l’utilisateur qui n’a pas de compte Azure AD : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple, bengi.turan@gmail.com. 
+   - Pour l’utilisateur qui n’a pas de compte Azure AD : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple : bengi.turan@gmail.com. 
 
 4. Pour accorder les mêmes autorisations à tous les utilisateurs : dans **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
     

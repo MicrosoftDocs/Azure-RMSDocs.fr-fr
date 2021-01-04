@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/07/2020
+ms.date: 12/21/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c0280de31b36358cd670c1d1b147dd4132ac6ac
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 016dfba5d945c0411b3c6858922a2e919282e94e
+ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583419"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762347"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -26,116 +26,98 @@ ms.locfileid: "97583419"
 >
 >***Instructions pour**: [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide-install.md). *
 
-Avant d’installer le client d’étiquetage unifié Azure Information Protection sur votre réseau d’entreprise, vérifiez que les ordinateurs disposent des versions et des applications de système d’exploitation requises pour Azure Information Protection : [Configuration requise pour la Azure information protection](../requirements.md). 
+Avant d’installer le client d’étiquetage unifié Azure Information Protection sur votre réseau d’entreprise, vérifiez que les ordinateurs disposent des versions et des applications de système d’exploitation requises pour Azure Information Protection : [Configuration requise pour la Azure information protection](../requirements.md) et [exigences supplémentaires pour l’installation du client d’étiquetage unifié sur les réseaux d’entreprise](reqs-ul-client.md).
 
-Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires pour le client d’étiquetage unifié Azure Information Protection, comme indiqué dans la section suivante. Tous les prérequis ne sont pas vérifiés par le programme d’installation.
-
-## <a name="additional-prerequisites-for-the-azure-information-protection-unified-labeling-client"></a>Conditions préalables supplémentaires pour le client d’étiquetage unifié Azure Information Protection
-
-Les prérequis suivants pour le client d’étiquetage unifié AIP s’ajoutent aux éléments répertoriés dans [Azure information protection exigences](../requirements.md).
-
-|Condition requise  |Description  |
-|---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | L’installation complète du client d’étiquetage unifié Azure Information Protection par défaut nécessite une version minimale de Microsoft .NET Framework 4.6.2. <br><br>Si ce Framework est absent, l’Assistant Installation du programme d’installation exécutable tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, l’ordinateur doit être redémarré.       |
-|**Microsoft .NET Framework 4.5.2**     | Si la visionneuse de Azure Information Protection est installée séparément, l’application de la visionneuse requiert une version minimale de Microsoft .NET Framework 4.5.2. <br><br>**Important**: si cette infrastructure est manquante pour la visionneuse, le programme d’installation exécutable ne le télécharge *pas* ou l’installe.        |
-|**Version minimale de Windows PowerShell 4,0**     |   Le module PowerShell pour le client nécessite une version minimale de Windows PowerShell 4,0, qui peut être nécessaire pour être installé sur des systèmes d’exploitation plus anciens. <br><br>Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). <br><br>**Important**: le programme d’installation ne vérifie pas ou n’installe *pas* ce composant requis pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.      |
-|**Résolution d’écran supérieure à 800 x 600**    |     Les résolutions de 800 x 600 et les résolutions inférieures ne peuvent pas afficher entièrement la boîte de dialogue **Classifier et protéger - Azure Information Protection** lorsque vous cliquez avec le bouton droit sur un fichier ou dossier dans l’Explorateur de fichiers.    |
-|**Assistant de connexion Microsoft Online Services 7.250.4303.0**     |   Les ordinateurs qui exécutent [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) requièrent l’Assistant de connexion Microsoft Online Services version 7.250.4303.0, qui est inclus dans l’installation du client. <br><br>Si vous disposez d’une version ultérieure de l’Assistant de connexion, désinstallez-la avant d’installer le client d’étiquetage unifié Azure Information Protection. <br><br>Par exemple, vérifiez la version et désinstallez l’Assistant de connexion à l’aide du **panneau de configuration**  >  **programme et fonctionnalités**  >  **désinstaller ou modifier un programme**.      |
-|**KB 4482887**     | Pour Windows 10 version 1809 uniquement, pour les builds du système d’exploitation postérieures à 17763.348, installez [1er mars 2019—KB4482887 (Build du système d’exploitation 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) pour que la barre Information Protection s’affiche correctement dans les applications Office. <br><br>Cette mise à jour n’est pas nécessaire si vous avez Office 365 1902 ou ultérieur.        |
-|**Autorisations d’administrateur**| L’installation du client d’étiquetage unifié Azure Information Protection requiert des autorisations d’administrateur local.| 
-|**Désactiver la protection contre l’exploitation (.NET 2 ou 3 uniquement)**   |Le client AIP n’est pas pris en charge sur les ordinateurs disposant de .NET 2 ou 3 dont la [protection contre l’exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) est activée. Si votre ordinateur dispose de .NET 2 ou 3 en plus d’une version de .NET 4. x indiquée ci-dessus, veillez à [désactiver la protection contre l’exploitation](../known-issues.md#known-issues-for-aip-and-exploit-protection) avant d’installer le client AIP.  |
-|||
-        
-### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>Configurer votre stratégie de groupe pour empêcher la désactivation d’AIP
-
-Pour les versions d’Office 2013 et ultérieures, nous vous recommandons de configurer votre stratégie de groupe pour vous assurer que le complément **Microsoft Azure information protection** pour les applications Office est toujours activé.  Sans ce complément, les utilisateurs ne peuvent pas étiqueter leurs documents ou messages électroniques dans les applications Office.   
-
-Pour Word, Excel, PowerPoint et Outlook, utilisez la **liste des paramètres de stratégie de groupe des compléments gérés** documentés dans [aucun complément n’est chargé en raison des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
-
-Spécifiez les identificateurs programmatiques (ProgID) suivants pour AIP, puis affectez la valeur 1 à l’option **: le complément est toujours activé**.
-
-|Application  |ProgID  |
-|---------|---------|
-|Word     |     `MSIP.WordAddin`    |
-|Excel     |  `MSIP.ExcelAddin`       |
-|PowerPoint     |   `MSIP.PowerPointAddin`      |
-|Outlook | `MSIP.OutlookAddin` |
-| | | 
-
-## <a name="applications"></a>Applications
+## <a name="supported-applications-for-the-unified-labeling-client"></a>Applications prises en charge pour le client d’étiquetage unifié
 
 Le client d’étiquetage unifié Azure Information Protection peut étiqueter et protéger des documents et des e-mails à l’aide des applications Office Word, Excel, PowerPoint et Outlook de l’une des éditions Office suivantes :
 
-- Applications Office, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
-- Microsoft 365 Apps for enterprise
-- Office Professionnel Plus 2019
-- Office Professionnel Plus 2016
-- Office Professionnel Plus 2013 avec Service Pack 1
-- Office Professionnel Plus 2010 avec Service Pack 2
+- **Applications Office**, pour les versions listées dans le [tableau des versions prises en charge pour Microsoft 365 Apps par le canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), depuis Microsoft 365 Apps for Business ou Microsoft 365 Business Premium, lorsqu’une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est attribuée à l’utilisateur
+- **Microsoft 365 Apps for enterprise**
+- **Office Professional Plus 2019**
+- **Office Professional Plus 2016**
+- **Office Professional Plus 2013 avec Service Pack 1**
+- **Office Professional Plus 2010 avec Service Pack 2**
 
-D’autres éditions (telles que **standard**) d’Office ne peuvent pas protéger des documents et des e-mails à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour l' **étiquetage** uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs sur le bouton ou la barre de sensibilité de Azure Information Protection.
+D’autres éditions d’Office (comme **standard**) ne peuvent pas protéger des documents et des e-mails à l’aide d’un service de Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour l' **étiquetage** uniquement. 
+
+Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs sur le bouton ou la barre de sensibilité de Azure Information Protection.
 
 Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection, consultez [Applications prenant en charge la protection des données Azure Rights Management](../requirements-applications.md).
 
-### <a name="office-features-and-capabilities-not-supported"></a>Fonctionnalités et caractéristiques Office non prises en charge
+Pour plus d’informations, consultez [problèmes connus des AIP dans les applications Office](../known-issues.md#aip-known-issues-in-office-applications).
 
-Le client d’étiquetage unifié Azure Information Protection ne prend pas en charge plusieurs versions d’Office sur le même ordinateur ou ne bascule pas les comptes d’utilisateur dans Office.
-
-La fonctionnalité Publipostage n’est pas prise en charge avec les fonctionnalités Azure Information Protection.
-
-## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Options d’installation du client d’étiquetage unifié Azure Information Protection pour les utilisateurs
+## <a name="unified-labeling-client-installation-options"></a>Options d’installation du client d’étiquetage unifié
 
 Il existe deux options d’installation du client pour les utilisateurs :
 
-**Exécuter la version exécutable (.exe) du client** : la méthode d’installation recommandée que vous pouvez exécuter en mode interactif ou silencieux. Cette méthode offre la plus grande souplesse et est recommandée, car le programme d’installation vérifie la plupart des composants requis et peut automatiquement installer les composants requis manquants. [Instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)
+|Option  |Description  | I
+|---------|---------|
+|**Exécuter la version exécutable (. exe) du client**     |   La méthode d’installation recommandée que vous pouvez exécuter en mode interactif ou silencieux. <br><br>Cette méthode offre la plus grande souplesse et est recommandée, car le programme d’installation vérifie la plupart des composants requis et peut automatiquement installer les composants requis manquants. <br><br>Pour plus d’informations, consultez [installer le client d’étiquetage unifié AIP à l’aide du programme d’installation exécutable](#install-the-aip-unified-labeling-client-using-the-executable-installer).|
+|**Déployer la version Windows Installer (. msi) du client**     |     Pris en charge pour les installations en mode silencieux uniquement avec l’utilisation d’un mécanisme de déploiement central, comme une stratégie de groupe, Configuration Manager ou Microsoft Intune. <br><br>Cette méthode est nécessaire pour les PC Windows 10 qui sont gérés par Intune et la gestion des appareils mobiles (MDM), car pour ces ordinateurs, les fichiers exécutables ne sont pas pris en charge pour l’installation. <br><br> Toutefois, lorsque vous utilisez cette méthode d’installation, vous devez manuellement vérifier et installer ou désinstaller le logiciel dépendant que le programme d’installation pour le fichier exécutable exécuterait pour chaque ordinateur. <br><br>Pour plus d’informations, consultez [installer le client d’étiquetage unifié à l’aide du programme d’installation. msi](#install-the-unified-labeling-client-using-the-msi-installer). |
+|     |         |
 
-**Déployer le programme d’installation (.msi) Windows du client** : pris en charge pour les installations en mode silencieux uniquement avec l’utilisation d’un mécanisme de déploiement central, comme une stratégie de groupe, Configuration Manager ou Microsoft Intune. Cette méthode est nécessaire pour les PC Windows 10 qui sont gérés par Intune et la gestion des appareils mobiles (MDM), car pour ces ordinateurs, les fichiers exécutables ne sont pas pris en charge pour l’installation. Toutefois, lorsque vous utilisez cette méthode d’installation, vous devez manuellement vérifier et installer ou désinstaller le logiciel dépendant que le programme d’installation pour le fichier exécutable exécuterait pour chaque ordinateur. [Instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)
 
-Une fois le client d’étiquetage unifié Azure Information Protection installé, vous pouvez mettre à jour ce client en répétant la méthode d’installation choisie ou en utilisant Windows Update pour que le client soit mis à niveau automatiquement. Pour plus d’informations sur la mise à niveau, consultez la section [Mise à niveau et maintenance du client Azure Information Protection](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
+Une fois le client d’étiquetage unifié Azure Information Protection installé, vous pouvez mettre à jour ce client en répétant la méthode d’installation choisie ou en utilisant Windows Update pour que le client soit mis à niveau automatiquement. 
 
-### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer"></a>Pour installer le client d’étiquetage unifié Azure Information Protection à l’aide du programme d’installation exécutable
+Pour plus d’informations sur la mise à niveau, consultez la section [Mise à niveau et maintenance du client Azure Information Protection](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
-Utilisez les instructions suivantes pour installer le client lorsque vous n’utilisez pas le catalogue Microsoft Update, ou que vous déployez le fichier .msi à l’aide d’une méthode de déploiement central comme Intune.
+## <a name="install-the-aip-unified-labeling-client-using-the-executable-installer"></a>Installer le client d’étiquetage unifié AIP à l’aide du programme d’installation exécutable
 
-1. Téléchargez la version exécutable de l’Azure Information Protection client d’étiquetage unifié (nom de fichier de AzInfoProtection_UL) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
+Utilisez les instructions suivantes pour installer le client lorsque vous *n’utilisez pas* le catalogue Microsoft Update ou si vous [déployez le fichier **. msi**](#install-the-unified-labeling-client-using-the-msi-installer) à l’aide d’une méthode de déploiement centralisée telle qu’Intune.
+
+**Pour installer le client d’étiquetage unifié à l’aide du fichier. exe**:
+
+1. Téléchargez la version exécutable de l’Azure Information Protection client d’étiquetage unifié (nom de fichier de **AzInfoProtection_UL**) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
     
-    Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production. 
+    > [!IMPORTANT]
+    > Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production. 
+    >
+ 
+1. Pour une installation par défaut, il vous suffit d’exécuter le fichier exécutable, par exemple, **AzInfoProtection_UL.exe**. 
 
-2. Pour une installation par défaut, il vous suffit d’exécuter le fichier exécutable, par exemple, **AzInfoProtection_UL.exe**. Toutefois, pour afficher les options d’installation, commencez par exécuter le fichier exécutable avec **/Help**: `AzInfoProtection_UL.exe /help`
+    Pour afficher toutes les options d’installation, commencez par exécuter le fichier exécutable avec **/Help**: `AzInfoProtection_UL.exe /help`
 
-    Exemple pour installer le client en mode silencieux : `AzInfoProtection_UL.exe /quiet`
+    Par exemple : 
+    - Pour installer le client en mode silencieux : `AzInfoProtection_UL.exe /quiet`
     
-    Exemple d’installation silencieuse unique des applets de commande PowerShell :`AzInfoProtection_UL.exe  PowerShellOnly=true /quiet`
+    - Pour installer en mode silencieux uniquement les applets de commande PowerShell : `AzInfoProtection_UL.exe  PowerShellOnly=true /quiet`
     
     Paramètres supplémentaires qui ne figurent pas sur l’écran d’aide :
-    
-    - **ServiceLocation** : utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010 et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent un message. Pour plus d’informations, consultez :
-
-        - [Plus d’informations sur le paramètre d’installation **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) 
-        - [AIP pour Windows et les versions d’Office dans le support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)
-
-    
-    - **AllowTelemetry = 0** : Utilisez ce paramètre pour désactiver l’option d’installation **Participer à l’amélioration d’Azure Information Protection en envoyant des statistiques d’utilisation à Microsoft**. 
-
-3. Pour achever l'installation : 
-
-    - Si votre ordinateur exécute [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support), redémarrez votre ordinateur. 
         
-        Si le client n’a pas été installé avec le paramètre ServiceLocation, lorsque vous ouvrez pour la première fois l’une des applications Office qui utilisent le client unifié Azure Information Protection (par exemple, Word), vous devez confirmer les invites pour mettre à jour le registre pour cette première utilisation. La fonction [Détection du service](client-deployment-notes.md#rms-service-discovery) est utilisée pour remplir les clés de registre. 
-    
-    - Pour les autres versions d’Office, redémarrez les applications Office et toutes les instances de l’Explorateur de fichiers. 
+    |Paramètre  |Description  |
+    |---------|---------|
+    |**AllowTelemetry = 0**     |    Utilisez ce paramètre pour désactiver l’option d’installation **Participer à l’amélioration d’Azure Information Protection en envoyant des statistiques d’utilisation à Microsoft**.     |
+    |**ServiceLocation**     |  Utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010, et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent d’invites. <br><br>Pour plus d'informations, consultez les pages suivantes : <br>- [Plus d’informations sur le paramètre d’installation **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP pour Windows et les versions d’Office dans le support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
+
+    | | |
+
+1. Pour achever l'installation : 
+
+    - **Si votre ordinateur exécute [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)**, redémarrez votre ordinateur. 
         
-5. Vous pouvez vérifier que l’installation a réussi en consultant le fichier journal de l’installation, qui est créé par défaut dans le dossier %temp%. Vous pouvez modifier cet emplacement à l’aide du paramètre d’installation **/log**. 
- 
-    Le nom du fichier a pour format : `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`.
+        Si le client n’a pas été installé avec le paramètre **ServiceLocation** , lorsque vous ouvrez pour la première fois l’une des applications Office qui utilisent le client unifié Azure information protection (par exemple, Word), vous devez confirmer les invites pour mettre à jour le registre pour cette première utilisation. 
+
+        La fonction [Détection du service](client-deployment-notes.md#rms-service-discovery) est utilisée pour remplir les clés de registre. 
+    
+    - **Pour les autres versions d’Office**, redémarrez toutes les applications Office et toutes les instances de l’Explorateur de fichiers. 
+        
+1. Vérifiez que l’installation a réussi en consultant le fichier journal d’installation, qui est créé par défaut dans le dossier **% temp%** . 
+
+    Le format de nom du fichier journal d’installation est le suivant : `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
     Par exemple : **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     Dans ce fichier journal, recherchez la chaîne suivante : **Product : Microsoft Azure information protection--installation terminée**. En cas d’échec de l’installation, ce fichier journal contient des informations pour vous aider à identifier et résoudre les problèmes.
 
-#### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Plus d’informations sur le paramètre d’installation ServiceLocation
+    > [!TIP]
+    > Vous pouvez modifier l’emplacement du fichier journal d’installation avec le paramètre d’installation **/log** . 
+    >  
+### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Plus d’informations sur le paramètre d’installation ServiceLocation
 
-Quand vous installez le client pour les utilisateurs qui disposent d' [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) et qu’ils ne disposent pas d’autorisations d’administrateur local, spécifiez le paramètre ServiceLocation et l’URL de votre service Azure Rights Management. Ce paramètre et la valeur créent et définissent les clés de registre suivantes :
+Quand vous installez le client pour les utilisateurs qui disposent d' [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) et qu’ils ne disposent pas d’autorisations d’administrateur local, spécifiez le paramètre **SERVICELOCATION** et l’URL de votre service Azure Rights Management. 
+
+Ce paramètre et la valeur créent et définissent les clés de registre suivantes :
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
@@ -145,9 +127,8 @@ Quand vous installez le client pour les utilisateurs qui disposent d' [Office 20
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
-Utilisez la procédure suivante pour identifier la valeur à spécifier pour le paramètre **ServiceLocation** . 
 
-##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Pour identifier la valeur à spécifier pour le paramètre ServiceLocation
+**Pour identifier la valeur à spécifier pour le paramètre ServiceLocation :**
 
 1. À partir d’une session PowerShell, exécutez d’abord [Connect-AipService](/powershell/module/aipservice/connect-aipservice) et spécifiez vos informations d’identification d’administrateur pour vous connecter au service Azure Rights Management. Exécutez ensuite la [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration). 
  
@@ -161,20 +142,30 @@ Utilisez la procédure suivante pour identifier la valeur à spécifier pour le 
 
     La chaîne restante correspond à la valeur à spécifier pour le paramètre ServiceLocation.
 
-Exemple pour installer le client en mode silencieux pour [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) et Azure RMS : `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+Par exemple, pour installer le client en mode silencieux pour [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) et Azure RMS :
+
+```powershell
+AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
+```
 
 
-### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>Pour installer le client d’étiquetage unifié Azure Information Protection à l’aide du programme d’installation. msi
+## <a name="install-the-unified-labeling-client-using-the-msi-installer"></a>Installer le client d’étiquetage unifié à l’aide du programme d’installation. msi
 
-Pour le déploiement central, utilisez les informations suivantes, spécifiques à la version d’installation. msi du client d’étiquetage unifié Azure Information Protection. 
+Pour le déploiement central, utilisez les informations suivantes, spécifiques à la version d’installation **. msi** du client d’étiquetage unifié Azure information protection. 
 
 Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilisez ces instructions avec [Ajouter des applications avec Microsoft Intune](/mem/intune/apps/apps-add).
 
-1. Téléchargez la version. msi du Azure Information Protection AzInfoProtection_UL (Unified étiquetage client) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
-    
-    Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production.
+**Pour installer le client d’étiquetage unifié avec le fichier. msi**
 
-1. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
+1. Téléchargez la version **. msi** du Azure information protection **AzInfoProtection_UL**(Unified étiquetage client) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
+    
+    > [!IMPORTANT]
+    > Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production.
+    > 
+
+1. Pour chaque ordinateur qui exécute le fichier **. msi** , vous devez vous assurer que les dépendances logicielles suivantes sont en place. 
+
+    Par exemple, empaquetez-les avec la version **. msi** du client ou déployez uniquement sur les ordinateurs qui répondent à ces dépendances :
     
     |Version d’Office|Système d’exploitation|Logiciel|Action|
     |--------------------|--------------|----------------|---------------------|
@@ -188,7 +179,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 1. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection_UL.msi /quiet`.
 
-    Vous devrez peut-être spécifier des paramètres d’installation supplémentaires. Pour plus d’informations, consultez les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).
+    Vous devrez peut-être spécifier des paramètres d’installation supplémentaires. Pour plus d’informations, consultez les [instructions du programme d’installation exécutable](#install-the-aip-unified-labeling-client-using-the-executable-installer).
 
     > [!NOTE]
     > Par défaut, l’option **aider à améliorer Azure information protection en envoyant des statistiques d’utilisation à** l’installation Microsoft est activée. Pour désactiver cette option, veillez à effectuer l’une des opérations suivantes :

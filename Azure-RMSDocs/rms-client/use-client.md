@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 536811aa07df108a0c5cbb44bad5ba5ff2e6f292
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 37d626fc3cf907191aed9760d1452082d732044f
+ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384874"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97747135"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -25,10 +25,10 @@ ms.locfileid: "97384874"
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 
 Le client d’étiquetage unifié Azure Information Protection fournit une solution client-serveur qui permet de protéger les documents et les e-mails d’une organisation, et constitue une alternative à la [solution d’étiquetage intégrée pour Microsoft Office](/microsoft-365/compliance/sensitivity-labels). 
@@ -42,7 +42,7 @@ Le service réside dans le Cloud ou localement :
 - Le service Cloud est **Azure information protection** et utilise le service Azure Rights Management pour la protection des données
 - Le service local est **services AD RMS (Active Directory Rights Management Services)** (AD RMS)
 
-## <a name="choose-your-windows-labeling-solution"></a>Choisir votre solution d’étiquetage Windows
+## <a name="choose-your-windows-labeling-solution"></a>Choisir une solution d’étiquetage Windows
 
 Les étiquettes facilitent l’application de la protection pour vos utilisateurs, et fournissent également une classification pour vous permettre de suivre et de gérer vos données. 
 
@@ -70,7 +70,7 @@ Utilisez les sections suivantes pour vous aider à déterminer quel client est l
 
 - [Solution d’étiquetage Office intégrée](#built-in-office-labeling-solution)
 - [Client d’étiquetage unifié Azure Information Protection](#azure-information-protection-unified-labeling-client)
-- [Client Azure Information Protection Classic](#azure-information-protection-classic-client)
+- [Client classique Azure Information Protection](#azure-information-protection-classic-client)
 - [Utilisation de plusieurs clients dans le même environnement](#using-multiple-clients-in-the-same-environment)
 
 Pour plus d’informations, consultez : [comparaisons détaillées pour les clients](#detailed-comparisons-for-the-azure-information-protection-clients) et les [fonctionnalités AIP non planifiés pour le client d’étiquetage unifié](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client).
@@ -100,7 +100,7 @@ Le client d’étiquetage unifié requiert un ordinateur Windows et vous permet 
 
 **N’utilisez pas** le client d’étiquetage unifié si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md).
 
-### <a name="azure-information-protection-classic-client"></a>Client Azure Information Protection Classic
+### <a name="azure-information-protection-classic-client"></a>Client classique Azure Information Protection
 
 Le client classique est le client hérité de AIP, prend en charge des fonctionnalités similaires à celles du client d’étiquetage unifié et doit également être installé séparément pour les applications Office. 
 
@@ -148,7 +148,7 @@ Pour plus d’informations, consultez également :
 - [Comparaisons détaillées pour les clients Azure Information Protection](#detailed-comparisons-for-the-azure-information-protection-clients)
 - [Fonctionnalités non planifiées dans le client d’étiquetage unifié Azure Information Protection](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
 
-|Composant|Client classique|Client d’étiquetage unifié|Solution d’étiquetage Office intégrée|
+|Fonctionnalité|Client classique|Client d’étiquetage unifié|Solution d’étiquetage Office intégrée|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**Étiquetage manuel**| ![Oui](../media/yes-icon.png)   | ![Oui](../media/yes-icon.png)   |![Oui](../media/yes-icon.png) |
 |**Étiquette par défaut**| ![Oui](../media/yes-icon.png)| ![Oui](../media/yes-icon.png)| ![Oui](../media/yes-icon.png)|
@@ -176,8 +176,8 @@ Pour plus d’informations, consultez également :
 |**Support HYOK**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
 |**Journalisation de l’utilisation dans observateur d’événements**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)| ![non](../media/no-icon.png)|
 |**Afficher le bouton Ne pas transférer dans Outlook**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
-|**Suivre la protection documentée**| ![Oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>5</sup> |  ![non](../media/no-icon.png)|
-|**Révoquer des documents protégés**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
+|**Suivre les documents protégés**| ![oui ](../media/yes-icon.png) <sup>5</sup> | ![oui ](../media/yes-icon.png) <sup>5</sup> |  ![non](../media/no-icon.png)|
+|**Révoquer des documents protégés**| ![oui ](../media/yes-icon.png) <sup>5</sup> |  ![oui ](../media/yes-icon.png) <sup>5</sup>|  ![non](../media/no-icon.png)|
 |**Mode protection uniquement** (aucune étiquette)| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
 |**Prise en charge du changement de compte**|  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)| ![Oui](../media/yes-icon.png) |
 |**Prise en charge de Services Bureau à distance**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |
@@ -191,13 +191,13 @@ Pour plus d’informations, consultez également :
 
 <sup>1</sup> ces paramètres, et bien plus encore, sont pris en charge en tant que [Paramètres client avancés que vous configurez dans la portail Azure](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
-<sup>2</sup> ces paramètres, et bien plus encore, sont pris en charge en tant que [Paramètres avancés que vous configurez avec PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+<sup>2</sup> ces paramètres, et bien plus encore, sont pris en charge en tant que [Paramètres avancés que vous configurez avec PowerShell](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
 <sup>3</sup> pris en charge par l’Explorateur de fichiers et PowerShell. Dans les applications Office, les utilisateurs peuvent sélectionner les **informations de fichier**  >  **protéger le document**  >  **restreindre l’accès**.
 
 <sup>4</sup> pour l’Explorateur de fichiers et les commandes PowerShell, l’utilisateur doit être connecté à Internet pour protéger des fichiers.
 
-<sup>5</sup> le site de suivi des documents pris en charge par le client classique n’est pas pris en charge par le client d’étiquetage unifié. Toutefois, si vous n’avez pas besoin d’enregistrer d’abord le document pour le suivi, les administrateurs peuvent utiliser la [création de rapports centralisée](../reports-aip.md) pour déterminer si les documents protégés sont accessibles à partir d’ordinateurs Windows et si l’accès a été accordé ou refusé. 
+<sup>5</sup> pour plus d’informations, consultez : **Unified Labeling client**: Guide d’administration (préversion [publique)](track-and-revoke-admin.md)  |   [Guide de l’utilisateur (](revoke-access-user.md)préversion publique). Le suivi est pris en charge uniquement pour les administrateurs généraux. **Client classique**: Guide de l’utilisateur du Guide de l' [administrateur](client-admin-guide-document-tracking.md)  |  [](client-track-revoke.md). Les administrateurs peuvent également utiliser la [création de rapports centralisée](../reports-aip.md) pour déterminer si les documents protégés sont accessibles à partir d’ordinateurs Windows et si l’accès a été accordé ou refusé.
 
 <sup>6</sup> les actions d’étiquetage et de protection ne sont pas prises en charge. Toutefois, pour un déploiement AD RMS, la visionneuse peut ouvrir des documents protégés lorsque vous utilisez l' [extension d’appareil Mobile services AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
@@ -210,7 +210,7 @@ Pour plus d’informations, consultez également :
 Lorsque le client Azure Information Protection Classic et le Azure Information Protection client d’étiquetage unifié prennent tous deux en charge la même fonctionnalité, utilisez les listes suivantes pour identifier les différences fonctionnelles entre les deux clients :
 
 
-|Fonctionnalité |Client classique|Client d’étiquetage unifié|
+|Fonctionnalités |Client classique|Client d’étiquetage unifié|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |**Paramétrage**| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |**Marquer la sélection et l’affichage quand elle est appliquée dans les applications Office**|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|

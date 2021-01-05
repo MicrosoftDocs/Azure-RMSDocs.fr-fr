@@ -1,17 +1,17 @@
 ---
 title: Republication dans le kit de développement logiciel MIP
-description: Cet article vous aidera à comprendre le scénario de réutilisation du gestionnaire de protection pour les scénarios de republication.
-author: Pathak-Aniket
+description: Cet article aide à comprendre le scénario de réutilisation du gestionnaire de protection dans les scénarios de republication.
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: 499e4881175920fdf3127856fa9056b10ae22b79
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: 79fd94614fd19a3cc93c59736931495c9019e2d8
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405212"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864972"
 ---
 # <a name="republishing-c"></a>Republication (C++)
 
@@ -54,9 +54,9 @@ Pour mener à bien ce scénario de reprotection, passez en revue les Démarrages
 
 ## <a name="create-a-protection-handler-from-the-file-and-decrypt-the-file"></a>Créer un gestionnaire de protection à partir du fichier et déchiffrer le fichier
 
-`mip::ProtectionHandler`expose les fonctions pour le chiffrement et le déchiffrement de flux et de mémoires tampons protégés, l’exécution de contrôles d’accès, l’obtention de la licence de publication et l’obtention d’attributs à partir des informations protégées. `mip::ProtectionHandler`les objets sont construits en fournissant un ProtectionDescriptor ou une licence de publication sérialisée. Pour ce cas d’usage, nous utiliserons implicitement la licence de publication, car la licence de publication sera utilisée lors du déchiffrement de contenu déjà protégé ou de la protection du contenu où la licence a déjà été construite.
+`mip::ProtectionHandler` expose les fonctions pour le chiffrement et le déchiffrement de flux et de mémoires tampons protégés, l’exécution de contrôles d’accès, l’obtention de la licence de publication et l’obtention d’attributs à partir des informations protégées. `mip::ProtectionHandler` les objets sont construits en fournissant un ProtectionDescriptor ou une licence de publication sérialisée. Pour ce cas d’usage, nous utiliserons implicitement la licence de publication, car la licence de publication sera utilisée lors du déchiffrement de contenu déjà protégé ou de la protection du contenu où la licence a déjà été construite.
 
-`mip::FileHandler`expose une méthode nommée `GetProtection()` qui récupère `mip::ProtectionHandler` à partir du fichier associé à `mip::FileHandler` . Une fois que l' `mip::ProtectionHandler` objet est récupéré, le même peut être utilisé pour valider les niveaux d’accès de l’utilisateur pour le fichier, déchiffrer le fichier et chiffrer ultérieurement le fichier une fois qu’il est modifié.
+`mip::FileHandler` expose une méthode nommée `GetProtection()` qui récupère `mip::ProtectionHandler` à partir du fichier associé à `mip::FileHandler` . Une fois que l' `mip::ProtectionHandler` objet est récupéré, le même peut être utilisé pour valider les niveaux d’accès de l’utilisateur pour le fichier, déchiffrer le fichier et chiffrer ultérieurement le fichier une fois qu’il est modifié.
 
 `mip::ProtectionHandler``AccessCheck()`est utilisé pour valider le fait que l’utilisateur dispose d’un droit spécifique au fichier et retourne une réponse booléenne, en fonction du résultat. Par exemple, pour vérifier que l’utilisateur dispose des droits de modification, appelez la méthode en passant la valeur « EDIT ». Si le résultat est *true*, autorisez l’utilisateur à modifier le fichier. Une fois le droit de **modification** vérifié, `mip::FileHandler` Utilisez `GetDecryptedTemporaryFileAsync()` pour récupérer le fichier déchiffré temporaire.
 

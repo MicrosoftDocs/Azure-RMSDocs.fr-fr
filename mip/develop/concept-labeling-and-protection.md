@@ -1,17 +1,17 @@
 ---
 title: Étiquetage et protection-Kit de développement logiciel (SDK) Microsoft Information Protection
 description: Opérations du kit de développement logiciel Microsoft Information Protection.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: 22cea33a439d8d0ca014095f3f2b7144f112fd93
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: 2e18b9ae65a4915807fdcb8fc37dd18396270fee
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565653"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865008"
 ---
 # <a name="labeling-and-pre-existing-protection-in-microsoft-information-protection-sdk"></a>Étiquetage et protection préexistante dans le kit de développement logiciel (SDK) Microsoft Information Protection
 

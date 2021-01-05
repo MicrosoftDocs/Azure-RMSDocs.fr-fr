@@ -1,17 +1,17 @@
 ---
 title: Comment traiter des messages électroniques à l’aide du kit de développement logiciel MIP
 description: Cet article vous aidera à comprendre le scénario d’utilisation de l’API de fichier du kit de développement logiciel MIP pour traiter les fichiers. MSG et. rpmsg.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 04/08/2020
-ms.author: v-anikep
-ms.openlocfilehash: 074a0f6868796c68cf02a5a6cf4e105f9afeff19
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: 52526409b6d08efde1064063b9f36564baa6a378
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405213"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864768"
 ---
 # <a name="file-api-email-message-file-processing"></a>Traitement du fichier de message électronique de l’API de fichier
 
@@ -31,7 +31,7 @@ L’API de fichier prend en charge les opérations de protection pour les fichie
 > [!IMPORTANT]
 > Les opérations d’étiquetage pour les fichiers. msg ne sont pas prises en charge actuellement.
 
-Comme nous l’avons vu précédemment, l’instanciation de `mip::FileEngine` nécessite un objet de paramètre : `mip::FileEngineSettings`. `mip::FileEngineSettings`peut être utilisé pour passer des paramètres pour les paramètres personnalisés que l’application doit définir pour une instance particulière. La propriété CustomSettings de FileEngineSettings est utilisée pour définir l’indicateur pour `enable_msg_file_type` activer le traitement des fichiers. msg.
+Comme nous l’avons vu précédemment, l’instanciation de `mip::FileEngine` nécessite un objet de paramètre : `mip::FileEngineSettings`. `mip::FileEngineSettings` peut être utilisé pour passer des paramètres pour les paramètres personnalisés que l’application doit définir pour une instance particulière. La propriété CustomSettings de FileEngineSettings est utilisée pour définir l’indicateur pour `enable_msg_file_type` activer le traitement des fichiers. msg.
 
 Le pseudo-code des opérations de protection du fichier. MSG peut se présenter comme suit :
 
@@ -50,9 +50,9 @@ En règle générale, les services de passerelle de messagerie et de protection 
 
 Dans la plupart des cas, le partenaire DLP doit être en mesure d’obtenir les pièces jointes et les octets en texte clair du message à inspecter et à évaluer par rapport aux stratégies DLP. L’API d’inspection prend le message. rpmsg comme entrée et retourne des flux d’octets en tant que sortie. Ces flux d’octets contiennent les octets de texte en clair du message, ainsi que les pièces jointes. C’est au développeur de l’application de gérer ces flux et de faire des choses utiles avec eux (inspecter, déchiffrer de manière récursive, etc.).
 
-L' `Inspect` API est implémentée par le biais d’une classe `mip::FileInspector` qui expose des opérations pour inspecter les types de fichiers pris en charge. `mip::MsgInspector`qui étend `mip::FileInspector` , expose les opérations de déchiffrement spécifiques au format de fichier rpmsg. Le kit de développement logiciel MIP ne prend pas en charge les scénarios de publication des fichiers *message. rpmsg* .
+L' `Inspect` API est implémentée par le biais d’une classe `mip::FileInspector` qui expose des opérations pour inspecter les types de fichiers pris en charge. `mip::MsgInspector` qui étend `mip::FileInspector` , expose les opérations de déchiffrement spécifiques au format de fichier rpmsg. Le kit de développement logiciel MIP ne prend pas en charge les scénarios de publication des fichiers *message. rpmsg* .
 
-`mip::MsgInspector`la classe expose les membres suivants :
+`mip::MsgInspector` la classe expose les membres suivants :
 
 ```cpp
 public const std::vector<uint8_t>& GetBody()

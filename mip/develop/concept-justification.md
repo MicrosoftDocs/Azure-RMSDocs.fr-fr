@@ -1,17 +1,17 @@
 ---
 title: Concept-justification de l’action dans le SDK MIP
 description: Cet article explique comment supprimer une étiquette qui nécessite une justification ou la faire passer à une version antérieure.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 04/14/2020
-ms.author: v-anikep
-ms.openlocfilehash: c783722a7cded0242ae12386854b3c8fca325a9e
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: b6f5ebaa08a2726671f891c583d46f310952d1d2
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405201"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864938"
 ---
 # <a name="action-justification-in-mip-sdk"></a>Justification de l’action dans le SDK MIP
 

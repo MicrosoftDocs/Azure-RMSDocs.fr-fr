@@ -1,17 +1,17 @@
 ---
 title: Autorisations d’API requises-Kit de développement logiciel (SDK) Microsoft Information Protection
 description: Détails techniques sur les autorisations d’API nécessaires pour les opérations du kit de développement logiciel (SDK) Microsoft Information Protection.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: ce44c0d8b65f477fdd7b08f34cfe2aacc890d259
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: d1d7e026ffb3b35d2d26f40c6b48baa9a0991a8d
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567924"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864870"
 ---
 # <a name="api-permissions-for-the-microsoft-information-protection-sdk"></a>Autorisations d’API pour le kit de développement logiciel (SDK) Microsoft Information Protection
 
@@ -30,11 +30,11 @@ Les autorisations d’application permettent à une application de Azure Active 
 
 | Service                         | Nom de l'autorisation           | Description                                  | Consentement de l’administrateur requis |
 | ------------------------------- | ------------------------- | -------------------------------------------- | ---------------------- |
-| Service Rights Management Azure | Contenu. superutilisateur         | Lire tout le contenu protégé pour ce locataire   | Yes                    |
-| Service Rights Management Azure | Contenu. DelegatedReader   | Lire du contenu protégé pour le compte d’un utilisateur   | Yes                    |
-| Service Rights Management Azure | Contenu. DelegatedWriter   | Créer du contenu protégé pour le compte d’un utilisateur | Yes                    |
-| Service Rights Management Azure | Content. Writer            | Créer du contenu protégé                     | Yes                    |
-| Service de synchronisation MIP                | UnifiedPolicy. locataire. Read | Lire toutes les stratégies unifiées du locataire      | Yes                    |
+| Service Rights Management Azure | Contenu. superutilisateur         | Lire tout le contenu protégé pour ce locataire   | Oui                    |
+| Service Rights Management Azure | Contenu. DelegatedReader   | Lire du contenu protégé pour le compte d’un utilisateur   | Oui                    |
+| Service Rights Management Azure | Contenu. DelegatedWriter   | Créer du contenu protégé pour le compte d’un utilisateur | Oui                    |
+| Service Rights Management Azure | Content. Writer            | Créer du contenu protégé                     | Oui                    |
+| Service de synchronisation MIP                | UnifiedPolicy. locataire. Read | Lire toutes les stratégies unifiées du locataire      | Oui                    |
 
 ### <a name="contentsuperuser"></a>Contenu. superutilisateur
 
@@ -62,8 +62,8 @@ Les autorisations déléguées permettent à une application de Azure Active Dir
 
 | Service                         | Nom de l'autorisation         | Description                                      | Consentement de l’administrateur requis |
 | ------------------------------- | ----------------------- | ------------------------------------------------ | ---------------------- |
-| Service Rights Management Azure | user_impersonation      | Créer et accéder à du contenu protégé pour l’utilisateur | No                     |
-| Service de synchronisation MIP                | UnifiedPolicy. utilisateur. Read | Lire toutes les stratégies unifiées auxquelles un utilisateur a accès   | No                     |
+| Service Rights Management Azure | user_impersonation      | Créer et accéder à du contenu protégé pour l’utilisateur | Non                     |
+| Service de synchronisation MIP                | UnifiedPolicy. utilisateur. Read | Lire toutes les stratégies unifiées auxquelles un utilisateur a accès   | Non                     |
 
 ### <a name="user_impersonation"></a>user_impersonation
 

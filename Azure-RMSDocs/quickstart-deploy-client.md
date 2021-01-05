@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fa795fa29e39bc9fe5abc9a68febcd168a5bb502
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 468cbe031b22ba07127b75295da98ee9a081048a
+ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386336"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762330"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection
 
@@ -33,23 +33,23 @@ Pour les organisations sans plateforme de protection des informations, le client
 
 Utilisez les articles en lien ci-dessous pour mieux comprendre les prérequis pour le déploiement de l’étiquetage unifié Azure Information Protection dans votre organisation :
 
-- **[Configuration requise pour Azure Information Protection](requirements.md).** Décrit la configuration système requise détaillée pour le déploiement du client AIP dans votre organisation, par exemple un abonnement Azure Information Protection et Azure Active Directory. Liste également les appareils clients pris en charge et les applications prises en charge.
+- **[Exigences d’Azure Information Protection](requirements.md)** . Décrit la configuration système requise détaillée pour le déploiement du client AIP dans votre organisation, par exemple un abonnement Azure Information Protection et Azure Active Directory. Liste également les appareils clients pris en charge et les applications prises en charge.
 
-- **[Prérequis du client d’étiquetage unifié](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).** Décrit la configuration requise pour chaque machine où le client AIP est installé.
+- **[Exigences du client d’étiquetage unifié](./rms-client/reqs-ul-client.md)** . Décrit la configuration requise pour chaque machine où le client AIP est installé.
 
 ## <a name="install-the-aip-client"></a>Installer le client AIP
 
 AIP fournit les options d’installation du client suivantes :
 
-- **[Télécharger et exécuter le fichier .exe.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)** Cette installation est l’option recommandée pour la plupart des cas d’usage. L’installation peut être exécutée de façon interactive ou silencieuse.
+- **[Télécharger et exécuter le fichier .exe.](rms-client/clientv2-admin-guide-install.md#install-the-aip-unified-labeling-client-using-the-executable-installer)** Cette installation est l’option recommandée pour la plupart des cas d’usage. L’installation peut être exécutée de façon interactive ou silencieuse.
 
     Une fois l’installation terminée, vous pouvez être invité à redémarrer votre ordinateur ou votre logiciel Office. Redémarrez si nécessaire pour continuer.
 
-- **[Télécharger et exécuter le fichier .msi.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)** Prise en charge pour les installations en mode silencieux qui utilisent un mécanisme de déploiement central, comme des stratégies de groupe, Configuration Manager ou Microsoft Intune.
+- **[Télécharger et exécuter le fichier .msi.](rms-client/clientv2-admin-guide-install.md#install-the-unified-labeling-client-using-the-msi-installer)** Prise en charge pour les installations en mode silencieux qui utilisent un mécanisme de déploiement central, comme des stratégies de groupe, Configuration Manager ou Microsoft Intune.
 
 Les fichiers d’installation du client AIP sont disponibles auprès du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
 
-Pour plus d’informations, consultez [Options d’installation du client AIP](rms-client/clientv2-admin-guide-install.md#options-to-install-the-azure-information-protection-unified-labeling-client-for-users).
+Pour plus d’informations, consultez [Guide de l’administrateur : Installation du client d’étiquetage unifié Azure Information Protection pour les utilisateurs](rms-client/clientv2-admin-guide-install.md).
 
 > [!TIP]
 > Pour tester et exécuter les dernières fonctionnalités disponibles pour le client AIP, déployez notre préversion publique sur un système de test. Pour plus d’informations, consultez l’[historique des versions](rms-client/unifiedlabelingclient-version-release-history.md) du client d’étiquetage unifié AIP.

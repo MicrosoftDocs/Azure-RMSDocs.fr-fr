@@ -17,6 +17,8 @@
           href: requirements-applications.md
         - name: Types de fichiers pris en charge
           href: ./rms-client/clientv2-admin-guide-file-types.md
+        - name: Exigences du client d’étiquetage unifié
+          href: ./rms-client/reqs-ul-client.md
         - name: Prérequis de l’analyseur local
           href: deploy-aip-scanner-prereqs.md
     - name: AIP est également connu sous le nom de ...
@@ -139,6 +141,8 @@
               href: deploy-aip-scanner-configure-install.md
             - name: Exécuter le scanneur d’étiquetage unifié
               href: deploy-aip-scanner-manage.md
+            - name: Résolution des problèmes de scanneur
+              href: deploy-aip-scanner-tsg.md
         - name: Déploiement du connecteur RMS
           items:
             - name: Vue d’ensemble
@@ -333,7 +337,7 @@
           items:
             - name: Avis de dépréciation
               href: ./develop/deprecation-notice.md
-            - name: Vue d’ensemble
+            - name: Vue d'ensemble
               href: ./develop/overview.md
             - name: Prise en main
               href: ./develop/get-started.md

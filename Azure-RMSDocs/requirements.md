@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b5e64f9537ee9c8f7f684e708c5de35ec28f3400
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 229b67b152845cfb1e0499f1df9eb08ba28b49df
+ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583368"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762302"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -129,11 +129,11 @@ En outre, Server Core et Nano Server ne sont pas pris en charge.
 
 ### <a name="additional-requirements-per-client"></a>Configuration requise supplémentaire par client
 
-Chaque client Azure Information Protection dispose d’une configuration requise supplémentaire. Pour plus d’informations, consultez :
+Chaque client Azure Information Protection impose des exigences supplémentaires. Pour plus d’informations, consultez :
 
-- [Configuration requise du client d’étiquetage unifié Azure Information Protection](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- [Exigences du client d’étiquetage unifié Azure Information Protection](./rms-client/reqs-ul-client.md)
 
-- [Condition requise du client Azure Information Protection](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- [Exigences du client Azure Information Protection](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## <a name="applications"></a>Applications
 

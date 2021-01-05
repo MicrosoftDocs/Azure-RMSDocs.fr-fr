@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: aa41b20152df55f7153f4c8cedd013041460b596
-ms.sourcegitcommit: ad2b3e0b6f438f9ffc0bca975653bd13f1b7d131
+ms.openlocfilehash: 6bebd942d24029288d0ca0602fd32901e2685abc
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514937"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97582926"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -93,7 +93,7 @@ Pour plus d’informations, consultez la [Vue d’ensemble du SDK Microsoft Info
 
 **Quand vous êtes prêt à personnaliser davantage AIP**, consultez [Guide d’administration : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection](rms-client/clientv2-admin-guide-customizations.md).
 
-**Pour commencer à utiliser le SDK MIP**, consultez [Installation et configuration du SDK Microsoft Information Protection (MIP)](/information-protection/develop/setup-configure-mip).
+**Pour bien démarrer avec le kit SDK MIP**, consultez [Installation et configuration du kit SDK Microsoft Information Protection (MIP)](/information-protection/develop/setup-configure-mip).
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 

@@ -1,18 +1,18 @@
 ---
 title: Démarrage rapide – Répertorier les étiquettes de sensibilité dans un locataire Microsoft Information Protection (MIP) à l’aide du kit SDK MIP C++
-description: Guide de démarrage rapide illustrant comment utiliser le kit SDK C++ Microsoft Information Protection pour répertorier les étiquettes de sensibilité dans votre locataire (C++).
+description: Guide de démarrage rapide illustrant comment utiliser le kit SDK C++ Microsoft Information Protection pour répertorier les étiquettes de sensibilité dans votre locataire.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 14b36ecee7fc49c5b50d627e6ef1ab95d436d7ee
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536043"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865261"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C++)
 
@@ -83,21 +83,11 @@ Enfin, générez et testez votre application cliente.
 
 1. Utilisez la touche F6 (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
-2. Si votre projet est généré et s’exécute correctement, l’application demande un jeton d’accès chaque fois que le kit SDK appelle votre méthode `AcquireOAuth2Token()`. Vous pouvez réutiliser un jeton précédemment généré, si vous y êtes invité plusieurs fois et que les valeurs demandées sont les mêmes :
-
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token:
-   ```
+2. Si votre projet est généré et s’exécute correctement, l’application demande un jeton d’accès chaque fois que le kit SDK appelle votre méthode `AcquireOAuth2Token()`. Vous pouvez réutiliser un jeton déjà généré, si vous y êtes invité plusieurs fois et que les valeurs demandées sont identiques.
 
 3. Pour générer un jeton d’accès en réponse à l’invite, revenez à votre script PowerShell et :
 
    - Mettez à jour les variables `$authority` et `$resourceUrl`. Elles doivent correspondre aux valeurs qui sont spécifiées dans la sortie de la console à l’étape 2. Ces valeurs sont fournies par le kit SDK MIP dans le paramètre `challenge` de `AcquireOAuth2Token()` :
-     - `$authority` doit avoir la valeur `https://login.windows.net/common/oauth2/authorize`
-     - `$resourceUrl` doit avoir la valeur `https://syncservice.o365syncservice.com/` ou `https://aadrm.com`
    - Exécutez le script PowerShell. L’applet de commande `Get-ADALToken` déclenche une invite d’authentification Azure AD similaire à l’exemple ci-dessous. Spécifiez le même compte que celui fourni dans la sortie de console à l’étape 2. Une fois la connexion réussie, le jeton d’accès sera placé dans le Presse-papiers.
 
      [![Acquisition par Visual Studio d’un jeton de connexion](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
@@ -122,15 +112,6 @@ Enfin, générez et testez votre application cliente.
    > Copiez et enregistrez l’ID d’une ou plusieurs des étiquettes de sensibilité (par exemple, `f42a3342-8706-4288-bd31-ebb85995028z`), car vous les utiliserez dans le guide de démarrage rapide suivant.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
-
-### <a name="problems-during-execution-of-powershell-script"></a>Problèmes durant l’exécution du script PowerShell
-
-| Résumé | Message d'erreur | Solution |
-|---------|---------------|----------|
-| URI de redirection incorrecte dans l’inscription de l’application ou un script PowerShell (AADSTS50011) |*AADSTS50011 : l’URL de réponse spécifiée dans la requête ne correspond pas aux URL de réponse configurées pour l’application : 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Vérifiez l’URI de redirection utilisé, en effectuant l’une des opérations suivantes :<br><br><li>Mettez à jour l’URI de redirection dans la configuration de votre application Azure AD, pour qu’il corresponde à votre script PowerShell. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) pour vérifier que vous avez correctement configuré la propriété de l’URI de redirection.<br><li>Mettez à jour la variable `redirectUri` dans votre script PowerShell, pour qu’elle corresponde à l’inscription de votre application. |
-| Compte de connexion incorrect (AADSTS50020) | *AADSTS50020 : le compte d’utilisateur « user@domain.com » du fournisseur d’identité « https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/  » n’existe pas dans le locataire « Nom de l’organisation » et ne peut donc pas accéder à l’application « 0edbblll-8773-44de-b87c-b8c6276d41eb » dans ce locataire.* | Effectuez l'une des opérations suivantes :<br><br><li>Réexécutez le script PowerShell, mais veillez à utiliser un compte issu du même locataire où votre application Azure AD est inscrite.<br><li>Si votre compte de connexion était correct, votre session hôte PowerShell peut être déjà authentifiée sous un compte différent. Dans ce cas, quittez l’hôte de script, puis rouvrez-le et essayez de l’exécuter de nouveau.<br><li>Si vous utilisez ce guide de démarrage rapide avec une application web (au lieu d’une application native) et que vous avez besoin de vous connecter à l’aide d’un compte issu d’un autre locataire, veillez à ce que l’inscription de votre application Azure AD soit activée pour une utilisation multilocataire. Vous pouvez vérifier à l’aide de la fonctionnalité « Modifier le manifeste » dans l’inscription de l’application et vous assurer qu’elle spécifie `"availableToOtherTenants": true,`. |
-| Autorisations incorrectes dans l’inscription de l’application (AADSTS65005) | *AADSTS65005 : ressource non valide. Le client a demandé l’accès à une ressource qui n’est pas listée dans les autorisations demandées dans l’inscription d’application du client. ID de l’application cliente : 0edbblll-8773-44de-b87c-b8c6276d41eb. Valeur de la ressource à partir de la demande : https://syncservice.o365syncservice.com/. ID de l’application de ressources : 870c4f2e-85b6-4d43-bdda-6ed9a579b725. Liste des ressources valides à partir de l’inscription de l’application : 00000002-0000-0000-c000-000000000000.* | Mettez à jour les demandes d’autorisation dans la configuration de votre application Azure AD. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) pour vérifier que vous avez correctement configuré les demandes d’autorisation dans l’inscription de votre application. |
-
 ### <a name="problems-during-execution-of-c-application"></a>Problèmes durant l’exécution de l’application C++
 
 | Résumé | Message d'erreur | Solution |

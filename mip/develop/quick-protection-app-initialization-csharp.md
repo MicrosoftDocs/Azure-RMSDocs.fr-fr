@@ -1,17 +1,17 @@
 ---
 title: 'Démarrage rapide : Initialisation d’une application cliente - API Protection (C#)'
 description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes C# du SDK Microsoft Information Protection (MIP) - API Protection (C#).
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
-ms.openlocfilehash: 0f8ed60420b5a0c4fcc0f8264d54f696f5c439a2
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: bfa1866618e65f1f9f215cb70fd76254623777d0
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535890"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865176"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Démarrage rapide : Initialisation d’une application cliente pour les API Protection (C#)
 

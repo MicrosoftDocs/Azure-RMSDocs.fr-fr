@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556025"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865159"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
@@ -138,7 +138,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    {
         cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
         system("pause");
-        return 1;
+        return 1; 
    }
 
    // Commit changes, save as a different/output file
@@ -220,11 +220,11 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    | Espace réservé | valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Un identificateur explicite du contenu. Exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Un identificateur explicite du contenu. Exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `"c:\\Test\\Test_labeled.docx"`. |
 
-## <a name="build-and-test-the-application"></a>Générer et tester l'application
+## <a name="build-and-test-the-application"></a>Générer et tester l’application
 
 Générez et testez votre application cliente. 
 
@@ -234,11 +234,6 @@ Générez et testez votre application cliente.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
 
    Sensitivity labels for your organization:
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -251,21 +246,7 @@ Générez et testez votre application cliente.
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
 
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
-
    Label committed to file: c:\Test\Test_labeled.docx
-   Press any key to continue . . .
-
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/94f69844-8d34-4794-bde4-3ac89ad2b664/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
    Press any key to continue . . .
 
    Getting the label committed to file: c:\Test\Test_labeled.docx

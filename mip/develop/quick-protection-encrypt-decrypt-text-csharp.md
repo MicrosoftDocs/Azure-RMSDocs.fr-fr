@@ -2,18 +2,18 @@
 title: 'Démarrage rapide : chiffrer/déchiffrer du texte à l’aide de l’API Protection du SDK MIP C#'
 description: Guide de démarrage rapide vous montrant comment utiliser le wrapper Microsoft Information Protection SDK .NET pour chiffrer et déchiffrer le texte ad hoc à l’aide d’un modèle de protection (C#).
 services: information-protection
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5fae5837ab26c4fce20ac120293eff3823dd9b70
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 6b0ff0faabe8ebb1776cb95e411fe6ee08d39c9f
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535822"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864990"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>Démarrage rapide : Chiffrer/déchiffrer le texte à l’aide du SDK MIP (C#)
 

@@ -1,17 +1,17 @@
 ---
 title: Guide pratique pour republier un scénario C++
 description: Cet article vous aide à comprendre comment réutiliser le gestionnaire de protection dans les scénarios de republication (C++).
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: e71b4c59c15f0c4435f72187006de1ecdc2bffb2
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.author: mbaldwin
+ms.openlocfilehash: 657a8a3e7650b8afb8c4d8384fc078e48eb64f36
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701745"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865227"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>Démarrage rapide sur la republication de l’API de fichier (C++)
 

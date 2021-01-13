@@ -4,7 +4,7 @@ description: Découvrez les nouveautés du client d’étiquetage unifié de l�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805952"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164400"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -69,33 +69,33 @@ La dernière version de Azure Information Protection est actuellement en version
 
 Le client d’étiquetage unifié remplace le client Azure Information Protection Classic. Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les solutions d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## <a name="version-291090-public-preview"></a>Version 2.9.109.0 (version préliminaire publique)
+## <a name="version-291110"></a>Version 2.9.111.0
 
-2.9.109.0 de la version du client et du scanneur d’étiquetage unifiée
+2.9.111.0 de la version du client et du scanneur d’étiquetage unifiée
 
-**Version** 12/16/2020
+**Version** 1/13/2021
 
 Cette version comprend les nouvelles fonctionnalités, les correctifs et les améliorations suivants pour le scanneur d’étiquetage et le client unifiés :
 
 - **Nouvelles fonctionnalités pour le scanneur**:
 
     - [Prise en charge de PowerShell pour les serveurs de scanneur déconnectés](#powershell-support-for-disconnected-scanner-servers)
-    - [Prise en charge des référentiels NFS dans les travaux d’analyse de contenu](#support-for-nfs-repositories-in-content-scan-jobs)
+    - [Prise en charge des référentiels NFS dans les travaux d’analyse de contenu](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
     - [Ajout de la prise en charge de types d’informations sensibles supplémentaires](#added-support-for-additional-sensitive-information-types)
 
 - **Nouvelles fonctionnalités pour le client**:
 
-    - [Suivre l’accès aux documents et révoquer l’accès](#track-document-access-and-revoke-access)
+    - [Suivre l’accès aux documents et révoquer l’accès](#track-document-access-and-revoke-access-public-preview)
     - [Ajout de la prise en charge de types d’informations sensibles supplémentaires](#added-support-for-additional-sensitive-information-types)
 
-- **Correctifs et améliorations :**
+- **Correctifs et améliorations**:
 
     - [Correctifs et améliorations pour le scanneur d’étiquetage unifié](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Correctifs et améliorations pour le client d’étiquetage unifié](#fixes-and-improvements-for-the-unified-labeling-client)
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Prise en charge de PowerShell pour les serveurs de scanneur déconnectés
 
-Le [Azure information protection analyseur local](../deploy-aip-scanner.md) prend désormais en charge la gestion des travaux d’analyse de contenu, pour les serveurs de scanneurs qui ne peuvent pas se connecter à Internet, via PowerShell.
+Le [Azure information protection analyseur local](../deploy-aip-scanner.md) prend désormais en charge la gestion des travaux d’analyse de contenu via PowerShell, pour les serveurs de scanneurs qui ne peuvent pas se connecter à Internet, par exemple avec un [serveur de scanner Azure China 21ViaNet](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
 Pour prendre en charge les serveurs de scanneur déconnectés, nous avons ajouté les nouvelles applets de commande suivantes :
 
@@ -114,7 +114,7 @@ L’applet de commande [**Set-MIPNetworkDiscovery**](/powershell/module/azureinf
 
 Pour plus d’informations, consultez [lorsque le serveur de scanneur ne peut pas disposer d’une connexion Internet](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) et [configurer le scanneur](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
-### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Prise en charge des référentiels NFS dans les travaux d’analyse de contenu
+### <a name="support-for-nfs-repositories-in-content-scan-jobs-public-preview"></a>Prise en charge des référentiels NFS dans les travaux d’analyse de contenu (version préliminaire publique)
 
 Vous pouvez désormais ajouter des référentiels NFS à vos travaux d’analyse de contenu, en plus des partages de fichiers SMB et des référentiels SharePoint.
 
@@ -136,9 +136,9 @@ Nous avons ajouté la prise en charge de types d’informations sensibles suppl�
 
 Pour plus d’informations, consultez les [définitions d’entité de type d’informations sensibles](/microsoft-365/compliance/sensitive-information-type-entity-definitions) dans la documentation de Microsoft 365.
 
-### <a name="track-document-access-and-revoke-access"></a>Suivre l’accès aux documents et révoquer l’accès
+### <a name="track-document-access-and-revoke-access-public-preview"></a>Suivre l’accès aux documents et révoquer l’accès (version préliminaire publique)
 
-Une fois que vous avez effectué une mise à niveau vers la version 2.9.109.0, tous les documents qui n’ont pas encore été enregistrés pour le suivi sont enregistrés la prochaine fois qu’ils sont ouverts sur un ordinateur sur lequel est installé le client d’étiquetage unifié AIP.
+Une fois que vous avez effectué une mise à niveau vers la version 2.9.111.0, tous les documents protégés qui ne sont pas encore enregistrés pour le suivi sont enregistrés la prochaine fois qu’ils sont ouverts sur un ordinateur sur lequel est installé le client d’étiquetage unifié AIP. Les documents protégés sont pris en charge pour la suivi et la révocation, même s’ils ne sont pas étiquetés.
 
 Si vos documents sont enregistrés pour le suivi, permet aux administrateurs d’utiliser PowerShell pour effectuer le suivi de l’accès aux documents et de révoquer l’accès si nécessaire.
 
@@ -160,14 +160,13 @@ Pour afficher les données de suivi avec le client d’étiquetage unifié, util
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>Correctifs et améliorations pour le scanneur d’étiquetage unifié
 
-Les correctifs suivants ont été fournis dans la version 2.9.109.0 de l' [Azure information protection scanneur d’étiquetage unifié](../deploy-aip-scanner.md):
+Les correctifs suivants ont été fournis dans la version 2.9.111.0 de l' [Azure information protection scanneur d’étiquetage unifié](../deploy-aip-scanner.md):
 
 - Ajout de la prise en charge des traits d’Union ( **-** ) dans les noms des [bases de données du scanneur](../deploy-aip-scanner-prereqs.md)
 - Mises à jour dans les rapports pour lesquelles l’option **[étiqueter les fichiers en fonction du contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** a la valeur **désactivé**
 - [Amélioration de la consommation de mémoire](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) pour un grand nombre de correspondances de type d’informations
 - Prise en charge des chemins d’accès [locaux SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) qui se terminent par une barre oblique ( **/** )
 - Augmentation de la [Vitesse](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) d’analyse SharePoint
-
 - Prise en charge pour [éviter un délai d’expiration](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) lors de l’analyse d’un serveur SharePoint.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>Correctifs et améliorations pour le client d’étiquetage unifié
@@ -182,9 +181,9 @@ Les correctifs suivants ont été fournis dans la version 2.9.109.0 de l' [Azure
 
 - Les [étiquettes recommandées](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) et le [marquage visuel](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) sont appliqués comme prévu dans Outlook. 
 
-- Ajout de la prise en charge de la [recherche de destinataires dans les listes de distribution Outlook](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview), par exemple lorsque les paramètres [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) et [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) sont configurés.
+- Ajout de la prise en charge de la [recherche de destinataires dans les listes de distribution Outlook](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients), par exemple lorsque les paramètres [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) et [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) sont configurés.
 
-    Lorsque vous activez cette fonctionnalité, nous vous recommandons de déclencher également la valeur de délai d’attente par défaut, comme défini dans le paramètre [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
+    Lorsque vous activez cette fonctionnalité, nous vous recommandons de déclencher également la valeur de délai d’attente par défaut, comme défini dans le paramètre [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients) .
 
 - Mises à jour de l' [ordre de priorité](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) utilisé lorsque plusieurs stratégies d’étiquette sont configurées pour un utilisateur, chacune avec des paramètres avancés en conflit.
 

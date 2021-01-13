@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca365962d470d009411e4e02de885acd2e7fb043
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 7c76e7e79acb0cd12bfcbe2d71a1fee3ce78b1ba
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806921"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164281"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 
@@ -33,9 +33,9 @@ Les informations suivantes vous permettent de configurer des règles de flux de 
 
 - Votre étiquette par défaut est **Général**, qui n’applique pas de protection. Pour les e-mails avec cette étiquette qui sont envoyés à l’extérieur, appliquer l’action de protection supplémentaire Ne pas transférer.
 
-- Si une pièce jointe avec une étiquette **Confidentiel\Partenaires** est envoyée par courrier électronique à des personnes extérieures à l’organisation et que l’e-mail n’est pas protégé, appliquez l’action de protection supplémentaire Chiffrer uniquement.
+- Si une pièce jointe avec une étiquette **confidentiel \ Partners** est envoyé par courrier électronique à des personnes extérieures à l’organisation et que le courrier électronique n’est pas protégé, appliquez l’action de protection en chiffre uniquement supplémentaire.
 
-Les règles de flux de messagerie qui appliquent la protection en tant qu’action sont ignorées si l’e-mail est déjà protégé. Par exemple, un message électronique qui a été protégé par Ne pas transférer ne peut pas être modifié par une règle de flux de messagerie Exchange pour utiliser l’option Chiffrement seul.  
+Les règles de flux de messagerie qui appliquent la protection en tant qu’action sont ignorées si l’e-mail est déjà protégé. Par exemple, un message électronique qui a été protégé par ne pas transférer ne peut pas être modifié par une règle de workflow de courrier Exchange pour utiliser l’option de chiffrement uniquement.  
 
 Vous pouvez étendre ces exemples ainsi que les modifier. Par exemple, ajoutez plus de conditions. Pour plus d’informations sur la configuration des règles de flux de messagerie, consultez les [règles de flux de messagerie (règles de transport) dans Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) dans la documentation d’Exchange Online.
 
@@ -91,11 +91,11 @@ Dans la stratégie Azure Information Protection, cette étiquette a été config
     
     La configuration de votre règle doit maintenant ressembler à ce qui suit :  ![ règle de workflow de courrier Exchange Online configurée pour un Azure information protection étiquette-exemple 1](./media/aip-exo-rule-ex1.png)
 
-7. Sélectionnez **Enregistrer** 
+7. Sélectionnez **Enregistrer**. 
 
 Pour plus d’informations sur l’option Ne pas transférer, consultez [option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Exemple 2 : Règle qui applique l’option Chiffrement seul à des e-mails qui ont des pièces jointes étiquetées **Confidentiel\Partenaires** et ces e-mails sont envoyés en dehors de l’organisation
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Exemple 2 : règle qui applique l’option de chiffrement uniquement aux e-mails lorsqu’ils ont des pièces jointes étiquetées **confidentiels** et que ces messages électroniques sont envoyés à l’extérieur de l’Organisation
 
 Dans cet exemple, la sous-étiquette **Confidentiel\Partenaires** a le GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Remplacez par votre propre étiquette ou sous-étiquette GUID que vous souhaitez utiliser avec cette règle. 
 
@@ -121,9 +121,9 @@ Cette étiquette est utilisée pour classifier et protéger des documents que vo
     
     La configuration de votre règle doit maintenant ressembler à ce qui suit :  ![ règle de workflow de courrier Exchange Online configurée pour un Azure information protection étiquette-exemple 2](./media/aip-exo-rule-ex2.png)
 
-6. Sélectionnez **Enregistrer** 
+6. Sélectionnez **Enregistrer**. 
 
-Pour plus d’informations sur l’option de chiffrement, consultez [option Chiffrement seul pour les e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
+Pour plus d’informations sur l’option Encrypt, consultez [option encrypt uniquement pour les e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
 ## <a name="next-steps"></a>Étapes suivantes

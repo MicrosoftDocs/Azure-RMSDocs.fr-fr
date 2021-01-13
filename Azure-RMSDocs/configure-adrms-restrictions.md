@@ -12,12 +12,12 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 9b608b8f38c157320558cf5ae5011ef601773b2e
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805833"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164230"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Conserver les informations de votre propre clé (HYOK) pour Azure Information Protection
 
@@ -81,7 +81,7 @@ Pour vous assurer que seuls les utilisateurs qui ont besoin d’appliquer la pro
 
 Les services de Microsoft 365 et d’autres services en ligne ne peuvent pas déchiffrer le contenu protégé par HYOK.
 
-Pour les e-mails, cette perte de fonctionnalités comprend des scanneurs de logiciels malveillants, la protection Encrypt-Only, les solutions de prévention de perte de données (DLP), les règles de routage de messagerie, la journalisation, la eDiscovery, les solutions d’archivage et Exchange ActiveSync.
+Pour les e-mails, cette perte de fonctionnalités comprend des scanneurs de logiciels malveillants, la protection contre le chiffrement, les solutions de prévention de perte de données (DLP), les règles de routage de messagerie, la journalisation, la eDiscovery, les solutions d’archivage et Exchange ActiveSync.
 
 Les utilisateurs peuvent ne pas comprendre pourquoi certains appareils ne peuvent pas ouvrir des e-mails protégés par HYOK, ce qui conduit à des appels supplémentaires à votre support technique. Tenez compte de ces limitations importantes lors de la configuration de la protection HYOK avec les e-mails.
 

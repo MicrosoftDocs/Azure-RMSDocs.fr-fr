@@ -4,7 +4,7 @@ description: Décrit comment les utilisateurs finaux peuvent utiliser le client 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 294d93666eed55616bbe033215abef0e9dcf62b7
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764099"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163771"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection (version préliminaire publique)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764099"
 >
 >***Concerne**: [client d’étiquetage unifié AIP uniquement](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le Guide de l' [utilisateur : suivre et révoquer vos documents lorsque vous utilisez le client classique AIP](client-track-revoke.md). *
 
-Cet article explique comment révoquer l’accès pour les documents que vous avez protégés de Microsoft Office.
+Cet article explique comment révoquer l’accès pour les documents que vous avez protégés de Microsoft Office. Les documents protégés sont pris en charge pour la suivi et la révocation, même s’ils ne sont pas étiquetés.
 
 Révoquer l’accès d’un document protégé empêche les autres utilisateurs d’accéder au document, même si vous leur avez donné un accès auparavant. Pour plus d’informations, consultez [le Guide de l’utilisateur : classifier et protéger avec le client d’étiquetage unifié Azure information protection](clientv2-classify-protect.md).
 

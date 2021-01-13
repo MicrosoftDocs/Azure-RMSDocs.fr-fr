@@ -4,7 +4,7 @@ description: Décrit comment les administrateurs peuvent suivre l’accès aux d
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/24/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6c83aa89c06dbf7c6cab5ac014db72eed5e91f06
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 7b60438ad3d1e8a971c58a7f29b2f8b41dd84c91
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764133"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163737"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection (version préliminaire publique)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764133"
 >
 >***Concerne**: [client d’étiquetage unifié AIP uniquement](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [le Guide de l’administrateur : configuration et utilisation du suivi des documents pour AIP à l’aide du client classique](client-admin-guide-document-tracking.md). *
 
-Si vous avez effectué une mise à niveau vers la [version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) ou ultérieure, tous les documents protégés qui ne sont pas encore enregistrés pour le suivi sont automatiquement enregistrés la prochaine fois qu’ils sont ouverts via le client d’étiquetage unifié AIP.
+Si vous avez effectué une mise à niveau vers la [version 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110) ou ultérieure, tous les documents protégés qui ne sont pas encore enregistrés pour le suivi sont automatiquement enregistrés la prochaine fois qu’ils sont ouverts via le client d’étiquetage unifié AIP. Les documents protégés sont pris en charge pour la suivi et la révocation, même s’ils ne sont pas étiquetés.
 
 L’inscription d’un document pour le suivi permet à [Microsoft 365 administrateurs généraux](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) de suivre les détails de l’accès, y compris les événements d’accès réussis et les tentatives refusées, ainsi que de révoquer l’accès si nécessaire. 
 

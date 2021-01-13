@@ -13,18 +13,18 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 873d000a7ce6ce67588f82b98f2ed570d55805ad
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806003"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164111"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Plan de déploiement Azure Information Protection pour la protection uniquement
 
 >***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Concerne** : [Client classique Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne :** [Azure information protection client classique pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client d’étiquetage unifié, consultez feuille [de route pour le déploiement d’AIP pour la classification, l’étiquetage et la protection](deployment-roadmap-classify-label-protect.md). *
 
 > [!NOTE] 
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -41,7 +41,7 @@ Cette feuille de route est recommandée pour les clients disposant d’un abonne
 
 ## <a name="deployment-process"></a>Processus de déploiement
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. [Confirmer que vous disposez d’un abonnement qui comprend le service de protection AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Préparer votre locataire à l’utilisation d’Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -108,7 +108,7 @@ Avant de commencer à utiliser le service de protection d’Azure Information Pr
 
 ## <a name="install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management"></a>Installer le Azure Information Protection Classic et le client configurer des applications et des services pour Rights Management
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. **Déployer le client Azure Information Protection Classic**
     

@@ -12,24 +12,24 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 69a0f87bd47e164f709dee4159a810141515a343
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 4b936baf799808fadbdaaefc0ae1fd55a6853fb2
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583691"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164444"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Qu’est-ce que l’application Azure Information Protection pour iOS ou Android ?
 
 >***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 L’application mobile Azure Information Protection (AIP) pour iOS et Android est une application de visionneuse qui vous permet d’afficher des messages électroniques, des fichiers PDF, des images et des fichiers texte protégés, et qui sont utiles si vos applications normales pour ces types de fichiers ne prennent pas en charge la protection. 
 
 Par exemple, si des e-mails protégés s’affichent dans votre application mobile de messagerie standard en tant que pièces jointes, vous souhaiterez peut-être utiliser l’application mobile AIP pour afficher cet e-mail.
 
-Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](../requirements-applications.md).
+Pour plus d’informations sur les fonctionnalités de protection prises en charge dans vos applications, les [applications qui prennent en charge Azure Rights Management la protection des données](../requirements-applications.md). 
 
 > [!NOTE]
 > Les applications mobiles AIP sont *uniquement des visionneuses* et ne vous permettent pas de créer de nouveaux courriers électroniques ou de répondre à des courriers électroniques, ni de créer ou de modifier des fichiers protégés. Les applications mobiles AIP ne peuvent pas non plus ouvrir des pièces jointes à des e-mails ou des fichiers PDF protégés.
@@ -39,26 +39,19 @@ Pour plus d’informations, consultez [Applications prenant en charge la protect
 
 Téléchargez et installez les applications mobiles AIP à partir de l’un des emplacements suivants :
 
-**iTunes**
+**iTunes**:
 
-:::image type="content" source="../media/develop/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::
+:::image type="content" source="../media/ios-icon.png" alt-text="iTunes" link="https://apps.apple.com/app/microsoft-rights-management/id689516635" border="false":::  
 
-**Google Play**
+**Google Play**:
 
-:::image type="content" source="../media/develop/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false":::
+:::image type="content" source="../media/android-icon.png" alt-text="Google Play" link="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer" border="false"::: 
 
-**Page de téléchargement AIP**
-
-:::image type="content" source="../media/aip-icon.png" alt-text="Page de téléchargement de Azure Information Protection" border="false":::
-
-Sélectionnez les icônes [iOS](https://apps.apple.com/app/microsoft-rights-management/id689516635) ou [Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) dans la section **périphériques mobiles** .
-
-**Votre portail d’entreprise**
+**Votre portail d’entreprise**:
 
 Si votre appareil mobile est géré par Microsoft Intune, vous pouvez télécharger les applications mobiles AIP à partir du portail d’entreprise. 
 
-Pour plus d’informations, contactez votre administrateur système.
-
+Pour plus d’informations, contactez votre administrateur système. 
 ## <a name="ios-view-protected-files-on-your-device"></a>iOS : afficher les fichiers protégés sur votre appareil
 
 Une fois que vous avez [installé l’application mobile AIP](#download-and-install-the-aip-app-for-your-device), ouvrez un fichier ou un e-mail protégé. 

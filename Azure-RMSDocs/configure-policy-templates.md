@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b88b2c0e2bbdff7f77d4eb36256a771dc9f5b6
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 03a1f0d7d28db24614bb92fa78de41fdd11a12f9
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806326"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163686"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -42,7 +42,7 @@ Les modèles de protection, également appelés modèles Rights Management, sont
 - Les modèles de votre locataire sont affichés dans la section **modèles de protection** dans le volet **Azure information protection-étiquettes** . Pour accéder à ce volet, sélectionnez l’option de menu **classifications**  >  **étiquettes** . Aucune étiquette n’apparaît. Vous pouvez également voir les paramètres de configuration qui sont spécifiques à la classification et à l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
 >[!NOTE]
->Dans certains services et applications, vous pouvez voir [Ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails) et [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails) (ou **Chiffrer**) affichés sous la forme d’un modèle. Ils ne s’agit pas de modèles que vous pouvez modifier ou supprimer, mais d’options fournies par défaut avec le service Exchange.
+>Dans certains services et applications, vous pouvez voir [ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails) et [chiffrer uniquement](configure-usage-rights.md#encrypt-only-option-for-emails) (**chiffrer**) affiché en tant que modèle. Ils ne s’agit pas de modèles que vous pouvez modifier ou supprimer, mais d’options fournies par défaut avec le service Exchange.
 
 ## <a name="default-templates"></a>Modèles par défaut
 

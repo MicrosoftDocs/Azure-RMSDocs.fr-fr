@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
-ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
+ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97705715"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164179"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -32,7 +32,7 @@ En outre, les conditions requises suivantes sont spécifiques au scanneur :
 - [Configuration requise pour Windows Server](#windows-server-requirements)
 - [Exigences relatives au compte de service](#service-account-requirements)
 - [Configuration requise pour SQL Server](#sql-server-requirements)
-- [Configuration requise pour le client Azure Information Protection](#azure-information-protection-client-requirements)
+- [Exigences du client Azure Information Protection](#azure-information-protection-client-requirements)
 - [Configuration requise pour l’étiquette](#label-configuration-requirements)
 - [Configuration requise pour SharePoint](#sharepoint-requirements)
 - [Configuration requise pour la Microsoft Office](#microsoft-office-requirements)
@@ -134,7 +134,7 @@ Pour plusieurs Scanneurs :
     - 8 processus de base
     - 16 Go de RAM recommandés
 
-## <a name="azure-information-protection-client-requirements"></a>Configuration requise pour le client Azure Information Protection
+## <a name="azure-information-protection-client-requirements"></a>Exigences du client Azure Information Protection
 
 Vous devez disposer de la [version actuelle de la disponibilité générale](./rms-client/unifiedlabelingclient-version-release-history.md) du client Azure information Protection installé sur l’ordinateur Windows Server.
 
@@ -287,7 +287,11 @@ Pour prendre en charge un ordinateur déconnecté du Portail Azure, procédez co
 
 #### <a name="use-powershell-with-a-disconnected-computer"></a>Utiliser PowerShell avec un ordinateur déconnecté
 
-Pour prendre en charge un ordinateur déconnecté à l’aide de PowerShell uniquement, procédez comme suit :
+Procédez comme suit pour prendre en charge un ordinateur déconnecté à l’aide de PowerShell uniquement.
+
+> [!IMPORTANT]
+> Les administrateurs des [serveurs de scanneurs Azure China 21ViaNet](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs) *doivent* suivre cette procédure afin de gérer leurs travaux d’analyse de contenu.
+> 
 
 **Gérer vos travaux d’analyse de contenu à l’aide de PowerShell uniquement**:
 

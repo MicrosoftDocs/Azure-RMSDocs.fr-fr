@@ -13,21 +13,21 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 39fedde68cfe771d29e9fda1be4a9f2883cf1ede
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382885"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164247"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configuration des droits d’utilisation pour Azure Information Protection
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 > 
 > Par souci d’exhaustivité, cet article contient des valeurs tirées du portail Azure Classic, qui n’est plus en service depuis le 8 janvier 2018.
 
@@ -117,9 +117,9 @@ Un utilisateur souhaite envoyer un e-mail à des personnes spécifiques du servi
 > [!NOTE] 
 > Utilisez l’option **Ne pas transférer** quand il est important que seuls les destinataires choisis par l’expéditeur puissent consulter les informations contenues dans l’e-mail. Utilisez un modèle pour les e-mails afin de restreindre les droits à un groupe de personnes spécifié à l’avance par l’administrateur, indépendamment des destinataires choisis par l’expéditeur.
 
-## <a name="encrypt-only-option-for-emails"></a>Option Chiffrement seul pour les e-mails
+## <a name="encrypt-only-option-for-emails"></a>Option de chiffrement uniquement pour les e-mails
 
-Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement des messages Office 365, une nouvelle option d’e-mail est disponible : **Chiffrement seul**.
+Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement de messages Office 365, une nouvelle option **de chiffrement de courrier électronique devient** disponible pour chiffrer les données sans restrictions supplémentaires.
 
 Cette option est disponible pour les locataires qui utilisent Exchange Online et qui peuvent être sélectionnées comme suit :
 
@@ -128,7 +128,7 @@ Cette option est disponible pour les locataires qui utilisent Exchange Online et
 - **En tant qu’action DLP d’Office 365**
 - **À partir d’Outlook**, pour les versions listées dans le [tableau des versions prises en charge pour les applications Microsoft 365es par canal de mise à jour](/officeupdates/update-history-microsoft365-apps-by-date), lorsque vous avez [Microsoft 365 des applications qui prennent en charge Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
 
-Pour plus d’informations sur l’option Encrypt-Only, consultez le billet de blog suivant de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
+Pour plus d’informations sur l’option chiffrer uniquement, consultez l’annonce de blog suivante de l’équipe Office : [chiffrement du déploiement uniquement dans le chiffrement de messages Office 365](https://aka.ms/omefeb2018).
 
 Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de **Enregistrer sous, Exporter** et de **Contrôle total**. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier à partir de l’e-mail, l’imprimer et le transférer. 
 
@@ -204,8 +204,8 @@ Ces modèles par défaut sont créés lors de l’achat de votre abonnement, et 
 
 |Nom complet du modèle|Droits d’utilisation du 6 octobre 2017 à maintenant|Droits d’utilisation avant le 6 octobre 2017|
 |----------------|--------------------|----------|
-|\<*organization name> -Affichage confidentiel uniquement * <br /><br />ou<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
-|\<*organization name>Confidentiel <br /><br />ou <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
+|\<*organization name> -Affichage confidentiel uniquement * <br /><br />or<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
+|\<*organization name>Confidentiel <br /><br />or <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
 
 ## <a name="see-also"></a>Voir aussi
 [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)

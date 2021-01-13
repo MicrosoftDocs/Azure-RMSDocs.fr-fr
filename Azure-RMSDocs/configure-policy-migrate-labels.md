@@ -12,18 +12,18 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f124e6c1bbf8b77760744885492e1c5663d02443
-ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
+ms.openlocfilehash: 9e72c64fe59626f5f670712a2503308047e1aff8
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97747118"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164298"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
-> **S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+> ***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> **Concerne les** [clients Azure information protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne les** [clients Azure information protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
@@ -171,7 +171,7 @@ Les paramètres de protection qui se comportent de la même façon n’apparaiss
 
 ###### <a name="footnote-1"></a>Note 1
 
-Dans Outlook, la protection est conservée avec une exception : lorsqu’un e-mail a été protégé avec l’option Encrypt-Only, cette protection est supprimée.
+Dans Outlook, la protection est conservée avec une exception : lorsqu’un e-mail a été protégé avec l’option de chiffrement uniquement (**chiffrer**), cette protection est supprimée.
 
 
 ###### <a name="footnote-2"></a>Note 2

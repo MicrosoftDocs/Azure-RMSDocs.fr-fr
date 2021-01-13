@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3deab3f361667a79905ab91842361d270b4323d7
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: ccedda605f736647766a0a5b2465e9ef90f2dbcc
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764167"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164145"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -159,13 +159,6 @@ Lorsque plusieurs stratégies d’étiquette sont configurées pour un utilisate
 
 Les paramètres avancés de la stratégie d’étiquette sont appliqués à l’aide de la même logique, à l’aide du dernier paramètre de stratégie.
 
-> [!NOTE]
-> Dans la version GA actuelle, il existe une exception pour le paramètre de stratégie [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) Advanced label, qui vous permet de définir une étiquette par défaut différente pour Outlook.
-> 
-> Si vous avez des conflits pour le paramètre [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) , la configuration est effectuée à partir du premier paramètre de stratégie, en fonction de l’ordre de la stratégie dans le centre d’administration. 
->
-> Cette exception a été supprimée dans le cadre de la préversion publique [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) .
-
 ## <a name="advanced-setting-references"></a>Références de paramètres avancés
 
 Les sections suivantes présentent les paramètres avancés disponibles pour les étiquettes et les stratégies d’étiquette :
@@ -179,7 +172,7 @@ Les sections suivantes répertorient les paramètres avancés décrits sur cette
 
 |Fonctionnalité  |Paramètres avancés  |
 |---------|---------|
-|**Paramètres Outlook et de messagerie**     | - [Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages) <br>- [Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)<br> - [Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Pour les courriers électroniques avec pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes.](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Développer les listes de distribution Outlook lors de la recherche de destinataires de courrier électronique](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) <br>- [Implémenter des messages contextuels dans Outlook pour avertir, justifier ou bloquer l’envoi de courriers électroniques](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook) |
+|**Paramètres Outlook et de messagerie**     | - [Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages) <br>- [Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)<br> - [Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Pour les courriers électroniques avec pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes.](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Développer les listes de distribution Outlook lors de la recherche de destinataires de courrier électronique](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implémenter des messages contextuels dans Outlook pour avertir, justifier ou bloquer l’envoi de courriers électroniques](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)     |
 |**Paramètres PowerPoint** | - [Évitez de supprimer des formes de PowerPoint qui contiennent du texte spécifié, et qui ne sont pas des en-têtes et des pieds de page](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Supprimer explicitement des marquages de contenu externes dans vos dispositions PowerPoint personnalisées](#extend-external-marking-removal-to-custom-layouts)<br>- [Supprimer toutes les formes d’un nom de forme spécifique de vos en-têtes et pieds de page, au lieu de supprimer des formes par du texte à l’intérieur de la forme](#remove-all-shapes-of-a-specific-shape-name)  |
 |**Paramètres de l’Explorateur de fichiers**     | - [Toujours afficher les autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Désactiver les autorisations personnalisées dans l’Explorateur de fichiers](#disable-custom-permissions-in-file-explorer)      |
 |**Paramètres d’amélioration des performances**     | - [Limiter la consommation de l’UC](#limit-cpu-consumption) <br>- [Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)        |
@@ -205,7 +198,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/mod
 |**EnableCustomPermissionsForCustomProtectedFiles**|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées aux utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableLabelByMailHeader**|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-| **EnableOutlookDistributionListExpansion** | [Développer les listes de distribution Outlook lors de la recherche de destinataires de courrier électronique](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+| **EnableOutlookDistributionListExpansion** | [Développer les listes de distribution Outlook lors de la recherche de destinataires de courrier électronique](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 | **EnableTrackAndRevoke** | [Désactiver les fonctionnalités de suivi des documents (préversion publique)](#turn-off-document-tracking-features-public-preview) |
 |**HideBarByDefault**|[Afficher la barre Information Protection dans les applications Office](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Personnaliser les textes d’invite de justification pour les étiquettes modifiées](#customize-justification-prompt-texts-for-modified-labels) |
@@ -214,7 +207,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/mod
 |**OutlookBlockUntrustedCollaborationLabel**|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookCollaborationRule**| [Personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages)|
 |**OutlookDefaultLabel**|[Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)|
-|**OutlookGetEmailAddressesTimeOutMSProperty** | [Modifier le délai d’attente pour le développement d’une liste de distribution dans Outlook lors de l’implémentation de messages de blocage pour les destinataires dans les listes de distribution](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+|**OutlookGetEmailAddressesTimeOutMSProperty** | [Modifier le délai d’attente pour le développement d’une liste de distribution dans Outlook lors de l’implémentation de messages de blocage pour les destinataires dans les listes de distribution](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 |**OutlookJustifyTrustedDomains**|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookJustifyUntrustedCollaborationLabel**|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookRecommendationEnabled**|[Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)|
@@ -874,7 +867,7 @@ Pour une personnalisation plus poussée, vous pouvez également [exempter les no
 >Pour plus d’informations, consultez [personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages).
 > 
 > [!TIP]
-> Pour vous assurer que vos messages de bloc s’affichent en fonction des besoins, même pour un destinataire situé dans une liste de distribution Outlook, veillez à ajouter le paramètre avancé [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
+> Pour vous assurer que vos messages de bloc s’affichent en fonction des besoins, même pour un destinataire situé dans une liste de distribution Outlook, veillez à ajouter le paramètre avancé [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients) .
 >
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Pour exempter les noms de domaine pour les messages contextuels configurés pour des étiquettes spécifiques
@@ -908,7 +901,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomain
 ```
 
 > [!NOTE]
-> Pour vous assurer que vos messages de bloc s’affichent en fonction des besoins, même pour un destinataire situé dans une liste de distribution Outlook, veillez à ajouter le paramètre avancé [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
+> Pour vous assurer que vos messages de bloc s’affichent en fonction des besoins, même pour un destinataire situé dans une liste de distribution Outlook, veillez à ajouter le paramètre avancé [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients) .
 >
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Pour implémenter les messages contextuels d’avertissement, de justification ou de blocage pour les e-mails ou les pièces jointes qui n’ont pas d’étiquette
@@ -984,7 +977,7 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview"></a>Développer les listes de distribution Outlook lors de la recherche de destinataires de courrier électronique (version préliminaire publique)
+## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients"></a>Développer les listes de distribution Outlook lors de la recherche de destinataires de courrier électronique
 
 Cette configuration utilise un [paramètre avancé](#configuring-advanced-settings-for-the-client-via-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Security & Compliance Center PowerShell.
 

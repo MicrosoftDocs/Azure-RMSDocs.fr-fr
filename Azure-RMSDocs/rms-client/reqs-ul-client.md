@@ -4,19 +4,19 @@ description: Informations destinées aux administrateurs qui doivent comprendre 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c93b0a338f25b058e517c4c2bb746ccaa6e41a69
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: dbd9d86e1ce2103f144e51314950cf67be31eef6
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792311"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164383"
 ---
 # <a name="additional-requirements-for-installing-the-unified-labeling-client-on-enterprise-networks"></a>Conditions supplémentaires requises pour l’installation du client d’étiquetage unifié sur les réseaux d’entreprise
 
@@ -24,7 +24,7 @@ ms.locfileid: "97792311"
 >
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Instructions pour**: [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide-install.md). *
+>***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide-install.md). *
 
 Avant d’installer le client d’étiquetage unifié Azure Information Protection sur votre réseau d’entreprise, vérifiez que les ordinateurs disposent des versions et des applications de système d’exploitation requises pour Azure Information Protection : [Configuration requise pour la Azure information protection](../requirements.md). 
 
@@ -100,7 +100,6 @@ Spécifiez les identificateurs programmatiques (ProgID) suivants pour AIP, puis 
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
-    
 
 ## <a name="next-steps"></a>Étapes suivantes
 

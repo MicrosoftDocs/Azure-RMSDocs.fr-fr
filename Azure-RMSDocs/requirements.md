@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables nécessaires pour déployer A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 229b67b152845cfb1e0499f1df9eb08ba28b49df
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: dda6d51f6130ab0fd34f2bcf0a72600898603f48
+ms.sourcegitcommit: 4381c7cf2a87002caba5eb0cab3046466a2f293e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762302"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98124391"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -224,13 +224,18 @@ Si vous utilisez un point de terminaison Azure et un groupe de sécurité résea
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-De plus, dans ce cas, le service Azure Information Protection dépend également de deux adresses IP spécifiques :
+De plus, dans ce cas, le service Azure Information Protection dépend également des adresses IP et du port ci-dessous :
 
+ - **13.107.9.198**
+ - **13.107.6.198**
+ - **2620:1ec:4::198**
+ - **2620:1ec:a92::198**
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443** pour le trafic HTTPS
 
-Veillez à créer des règles pour autoriser l’accès sortant à ces adresses IP spécifiques et via ce port.
+Veillez à créer des règles qui autorisent l’accès sortant à ces adresses IP spécifiques et via ce port.
+
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Serveurs locaux pris en charge la protection des données Azure Rights Management
 

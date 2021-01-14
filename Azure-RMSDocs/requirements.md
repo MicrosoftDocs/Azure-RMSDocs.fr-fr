@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dda6d51f6130ab0fd34f2bcf0a72600898603f48
-ms.sourcegitcommit: 4381c7cf2a87002caba5eb0cab3046466a2f293e
+ms.openlocfilehash: c001f032281e323c6a4ca72530b1f005c3a1c268
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98124391"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164570"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -235,7 +235,6 @@ De plus, dans ce cas, le service Azure Information Protection dépend également
  - **Port 443** pour le trafic HTTPS
 
 Veillez à créer des règles qui autorisent l’accès sortant à ces adresses IP spécifiques et via ce port.
-
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Serveurs locaux pris en charge la protection des données Azure Rights Management
 

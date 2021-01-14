@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 3e5a34268b2b0144c49c7ce6150d725b642184e5
+ms.sourcegitcommit: d68537b88ac6b43846d574359938fb45277cb850
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164400"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195413"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -80,12 +80,12 @@ Cette version comprend les nouvelles fonctionnalités, les correctifs et les am�
 - **Nouvelles fonctionnalités pour le scanneur**:
 
     - [Prise en charge de PowerShell pour les serveurs de scanneur déconnectés](#powershell-support-for-disconnected-scanner-servers)
-    - [Prise en charge des référentiels NFS dans les travaux d’analyse de contenu](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
+    - [Prise en charge des référentiels NFS dans les travaux d’analyse de contenu](#support-for-nfs-repositories-in-content-scan-jobs-public-preview) (version préliminaire publique)
     - [Ajout de la prise en charge de types d’informations sensibles supplémentaires](#added-support-for-additional-sensitive-information-types)
 
 - **Nouvelles fonctionnalités pour le client**:
 
-    - [Suivre l’accès aux documents et révoquer l’accès](#track-document-access-and-revoke-access-public-preview)
+    - [Suivre l’accès aux documents et révoquer l’accès](#track-document-access-and-revoke-access-public-preview) (version préliminaire publique)
     - [Ajout de la prise en charge de types d’informations sensibles supplémentaires](#added-support-for-additional-sensitive-information-types)
 
 - **Correctifs et améliorations**:
@@ -95,9 +95,9 @@ Cette version comprend les nouvelles fonctionnalités, les correctifs et les am�
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Prise en charge de PowerShell pour les serveurs de scanneur déconnectés
 
-Le [Azure information protection analyseur local](../deploy-aip-scanner.md) prend désormais en charge la gestion des travaux d’analyse de contenu via PowerShell, pour les serveurs de scanneurs qui ne peuvent pas se connecter à Internet, par exemple avec un [serveur de scanner Azure China 21ViaNet](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
+Le [Azure information protection analyseur local](../deploy-aip-scanner.md) prend désormais en charge la gestion des travaux d’analyse de contenu via PowerShell, pour les serveurs de scanneurs qui ne peuvent pas se connecter à Internet ou pour les scanneurs dans un [environnement Azure China 21ViaNet (Chine souverain)](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
-Pour prendre en charge les serveurs de scanneur déconnectés, nous avons ajouté les nouvelles applets de commande suivantes :
+Pour prendre en charge les serveurs de scanneurs déconnectés ou Azure China 21Vianet, nous avons ajouté les nouvelles applets de commande suivantes :
 
 |Applet de commande  |Description  |
 |---------|---------|
@@ -144,7 +144,7 @@ Si vos documents sont enregistrés pour le suivi, permet aux administrateurs d�
 
 Une fois que vous avez mis à niveau, les utilisateurs finaux peuvent également révoquer l’accès pour les documents qu’ils ont protégés. Pour révoquer l’accès à partir de Microsoft Office Apps, utilisez l’option nouveau **révoquer l’accès** dans le menu **sensibilité** .
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection](track-and-revoke-admin.md)
 - [Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection](revoke-access-user.md)
@@ -198,6 +198,8 @@ Les correctifs suivants ont été fournis dans la version 2.9.111.0 de l' [Azure
 2.8.85.0 de la version du client et du scanneur d’étiquetage unifiée
 
 **Publication** le 09/22/2020
+
+**Pris en charge jusqu’à** 7/13/2021
 
 Cette version comprend les nouvelles fonctionnalités, les correctifs et les améliorations suivants pour le scanneur d’étiquetage et le client unifiés :
 
@@ -253,7 +255,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
     - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -313,7 +315,7 @@ Pour plus d’informations, consultez [accéder aux journaux d’audit](../audit
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
@@ -352,6 +354,8 @@ Les correctifs suivants ont été fournis dans la version 2.8.85.0 du client d�
 
 **Publication** le 08/23/2020
 
+**Pris en charge jusqu’à** 3/22/2021
+
 **Correctif**:
 
 Correction du problème pour les utilisateurs de PPT, d’Excel et de Word, ce qui a entraîné le blocage, le blocage ou l’obligation de répéter l’enregistrement qui était lié aux étiquettes obligatoires configurées avec la protection, le filigrane et/ou le marquage du contenu.
@@ -361,6 +365,8 @@ Correction du problème pour les utilisateurs de PPT, d’Excel et de Word, ce q
 2.7.99.0 de la version du client et du scanneur d’étiquetage unifiée
 
 **Publication** le 07/20/2020
+
+**Pris en charge jusqu’à** 2/23/2021
 
 **Correctifs et améliorations**:
 
@@ -373,6 +379,8 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 2.7.96.0 de la version du client et du scanneur d’étiquetage unifiée
 
 **Publication** le 06/29/2020
+
+**Pris en charge jusqu’à** 1/20/2021
 
 - [Nouvelles fonctionnalités pour le client d’étiquetage unifié, version 2.7.96.0](#new-features-for-the-unified-labeling-client-version-27960)
 - [Nouvelles fonctionnalités pour le scanneur d’étiquetage unifié, version 2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
@@ -411,7 +419,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)

@@ -12,21 +12,21 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3465bdb2eaf1efce3524d2f28332b094ba31db5d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384194"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240850"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Azure Information Protection (AIP) étiquetage, classification et protection
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > ***Concerne :** [Azure information protection client d’étiquetage unifié et client Classic pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Azure Information Protection (AIP) est une solution basée sur le cloud qui permet à une organisation de classifier et de protéger ses documents et ses e-mails en les étiquetant. 
 
@@ -111,7 +111,7 @@ Par ailleurs, le client AIP permet aux utilisateurs de classifier et de protége
 L’option de menu **Classifier et protéger** fonctionne de manière similaire à la barre Information Protection dans les applications Office, ce qui permet aux utilisateurs de sélectionner une étiquette ou de définir des autorisations personnalisées.
 
 > [!TIP]
-> Les utilisateurs avancés ou les administrateurs peuvent trouver l’utilisation des commandes PowerShell plus efficace pour la gestion et la configuration de la classification et de la protection de plusieurs fichiers. Les [commandes PowerShell pertinentes](https://docs.microsoft.com/powershell/module/azureinformationprotection) sont incluses avec le client et peuvent également être installées séparément.
+> Les utilisateurs avancés ou les administrateurs peuvent trouver l’utilisation des commandes PowerShell plus efficace pour la gestion et la configuration de la classification et de la protection de plusieurs fichiers. Les [commandes PowerShell pertinentes](/powershell/module/azureinformationprotection) sont incluses avec le client et peuvent également être installées séparément.
 
 Les utilisateurs et les administrateurs peuvent utiliser les sites de suivi de documents pour superviser les documents protégés, qui y accède et quand. En outre, s’ils suspectent une utilisation incorrecte, ils peuvent révoquer l’accès à ces documents. Par exemple :
 
@@ -151,7 +151,7 @@ Utilisez l’une des méthodes suivantes pour classifier et protéger le contenu
 
     Vous pouvez également utiliser le scanneur pour appliquer une étiquette par défaut à tous les documents dans un référentiel de données sans inspecter le contenu des fichiers. Utilisez le scanneur en mode de création de rapports pour découvrir des informations sensibles dont vous ignorez peut-être qu’elles sont en votre possession.
 
-- **Stockage de données dans le cloud** : Utilisez [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration) pour appliquer vos étiquettes aux documents dans Box, SharePoint et OneDrive. Pour obtenir un tutoriel, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](https://docs.microsoft.com/cloud-app-security/use-case-information-protection) 
+- **Stockage de données dans le cloud** : Utilisez [Microsoft Cloud App Security](/cloud-app-security/azip-integration) pour appliquer vos étiquettes aux documents dans Box, SharePoint et OneDrive. Pour obtenir un tutoriel, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](/cloud-app-security/use-case-information-protection) 
 
 
 ## <a name="next-steps"></a>Étapes suivantes

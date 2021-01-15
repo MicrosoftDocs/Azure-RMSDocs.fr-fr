@@ -1,17 +1,17 @@
 ---
 title: MsgInspector de classe
 description: 'Documente la classe msginspector :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 9f19c53a2c6eca82cdf1469c63436ad56112dc52
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: aaf9cc6803e0111cd37960f356d8a6bb19fd60a5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567942"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215168"
 ---
 # <a name="class-msginspector"></a>MsgInspector de classe 
   
@@ -39,7 +39,7 @@ Obtient la page de codes d’encodage du corps, pertinente pour les formats txt 
   
 **Retourne**: une page de codes non signée. 
   
-**Voir aussi**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
+**Voir aussi**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>GetBodyType fonction)
 Obtient le type de corps.

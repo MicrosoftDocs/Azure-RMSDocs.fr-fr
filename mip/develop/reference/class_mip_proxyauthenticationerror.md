@@ -1,17 +1,17 @@
 ---
 title: ProxyAuthenticationError de classe
 description: 'Documente la classe proxyauthenticationerror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d4468fe243f7120630d0a34d453ff4e9a5bf6527
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 04915e74cc09f271a2ca3bb256b906bc442bb3fd
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567078"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214301"
 ---
 # <a name="class-proxyauthenticationerror"></a>ProxyAuthenticationError de classe 
 Échec de l’authentification du proxy.
@@ -39,9 +39,11 @@ Obtient le code d’état de réponse HTTP.
   
 ### <a name="category-enum"></a>Enum de catégorie
 
+Catégorie d’erreur réseau.
+
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Inconnu            | Défaillance réseau inconnue
+Unknown            | Défaillance réseau inconnue
 FailureResponseCode            | Le code de réponse HTTP indique un échec
 BadResponse            | Impossible de lire la réponse HTTP
 UnexpectedResponse            | La réponse HTTP est terminée, mais contient des données inattendues
@@ -52,5 +54,3 @@ Délai d'expiration            | Délai de connexion dépassé
 Hors connexion            | L’opération requiert une connectivité réseau
 Throttled            | Échec de l’opération HTTP en raison de la limitation du trafic du serveur
 Annulé            | L’opération HTTP a été annulée par l’application
-
-Catégorie d’erreur réseau.

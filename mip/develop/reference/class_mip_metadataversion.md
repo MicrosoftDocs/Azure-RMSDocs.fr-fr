@@ -1,17 +1,17 @@
 ---
 title: MetadataVersion de classe
 description: 'Documente la classe metadataversion :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 05154ec7777fb94478c2065f6e637dea47d58d28
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 35ed3ef28cd4a1a822c11f64b422a474edcd4b53
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565672"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213604"
 ---
 # <a name="class-metadataversion"></a>MetadataVersion de classe 
 Interface pour un MetadataVersion. MetadataVersion détermine les métadonnées actives et leur mode de traitement.

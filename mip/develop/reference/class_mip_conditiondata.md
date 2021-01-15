@@ -1,17 +1,17 @@
 ---
 title: ConditionData de classe
 description: 'Documente la classe conditiondata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 53aadacaec779ec882644493e484a746b3224c3a
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6c97bddbe88fe174d42ce9792b4ab42eef2b204f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567210"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215389"
 ---
 # <a name="class-conditiondata"></a>ConditionData de classe 
   
@@ -23,4 +23,4 @@ virtuel public ~ ConditionData ()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="conditiondata-function"></a>~ ConditionData fonction)
-Pas encore documenté.
+_Pas encore documenté._

@@ -1,17 +1,17 @@
 ---
 title: PrivilegedRequiredError de classe
 description: 'Documente la classe privilegedrequirederror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e5942cfbd67911d426d83ffb2c9001f28fb142c8
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 14df33c5c62acd88f0915b901a8e3d2522133f84
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565568"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215032"
 ---
 # <a name="class-privilegedrequirederror"></a>PrivilegedRequiredError de classe 
 L’étiquette actuelle a été affectée en tant qu’opération avec des privilèges (l’équivalent d’une opération administrateur), par conséquent, elle ne peut pas être remplacée.
@@ -21,4 +21,4 @@ L’étiquette actuelle a été affectée en tant qu’opération avec des privi
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-Pas encore documenté.
+_Pas encore documenté._

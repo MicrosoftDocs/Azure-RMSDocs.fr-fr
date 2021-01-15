@@ -1,17 +1,17 @@
 ---
 title: JustifyAction de classe
 description: 'Documente la classe justifyaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d5fa4ef9c61c91c3b9675a38c07e04d52ba7d42c
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: eac964c6f672c107b30ebdd30c0ccbe7f0be27b0
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566853"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213944"
 ---
 # <a name="class-justifyaction"></a>JustifyAction de classe 
 Justify Action nécessite de fournir une justification de rétrogradation d’une étiquette et de définir la réponse dans l’état d’exécution.
@@ -23,4 +23,4 @@ Justify Action nécessite de fournir une justification de rétrogradation d’un
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-Pas encore documenté.
+_Pas encore documenté._

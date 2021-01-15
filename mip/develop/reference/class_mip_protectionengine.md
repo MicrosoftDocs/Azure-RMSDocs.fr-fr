@@ -1,17 +1,17 @@
 ---
 title: ProtectionEngine de classe
 description: 'Documente la classe protectionengine :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f87b65f85693850ea3344aa2b1340f9fc4de4e73
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6df50823102c7cf897dceb2d6d576384431ccfc6
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567150"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214675"
 ---
 # <a name="class-protectionengine"></a>ProtectionEngine de classe 
 Gère les actions liées à la protection sur une identité spécifique.
@@ -35,6 +35,8 @@ public void RegisterContentForTrackingAndRevocation (const std :: Vector \<uint
 public std :: shared_ptr \<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (const std :: vector \<uint8_t\>& serializedPublishingLicense, const std :: String& ContentName, bool isOwnerNotificationEnabled, const std :: shared_ptr \<ProtectionEngine::Observer\>& observateur, const std :: shared_ptr \<void\>& contexte)  |  Enregistrez la licence de publication (PL) pour le suivi des documents & la révocation.
 public void RevokeContent (const std :: Vector \<uint8_t\>& serializedPublishingLicense, const std :: shared_ptr \<void\>& Context)  |  Procédez à la révocation du contenu.
 public std :: shared_ptr \<AsyncControl\> RevokeContentAsync (const std :: vector \<uint8_t\>& serializedPublishingLicense, const std :: shared_ptr \<ProtectionEngine::Observer\>& observateur, const std :: shared_ptr \<void\>& contexte)  |  Procédez à la révocation du contenu.
+public std :: Vector \<std::shared_ptr\<DelegationLicense\> \> CreateDelegationLicenses (const DelegationLicenseSettings& Settings, const std :: shared_ptr \<void\>& Context)  |  Crée une licence déléguée.
+public std :: shared_ptr \<AsyncControl\> CreateDelegationLicensesAsync (const DelegationLicenseSettings& Settings, const std :: \<ProtectionEngine::Observer\> shared_ptr& observateur, const std :: shared_ptr \<void\>& contexte)  |  Crée une licence déléguée.
   
 ## <a name="members"></a>Membres
   
@@ -280,3 +282,35 @@ Paramètres :
 
   
 **Retourne**: objet de contrôle asynchrone.
+  
+### <a name="createdelegationlicenses-function"></a>CreateDelegationLicenses fonction)
+Crée une licence déléguée.
+
+Paramètres :  
+* **paramètres**: paramètres de délégation 
+
+
+* **Context**: contexte client qui sera transféré opaque aux observateurs et facultatif HttpDelegate
+
+
+
+  
+**Retourne**: un vecteur des licences de délégation utilise cette méthode pour créer des licences pour une liste d’utilisateurs
+  
+### <a name="createdelegationlicensesasync-function"></a>CreateDelegationLicensesAsync fonction)
+Crée une licence déléguée.
+
+Paramètres :  
+* **paramètres**: paramètres de délégation 
+
+
+* **observer** : classe qui implémente l’interface ProtectionHandler::Observer 
+
+
+* **Context**: contexte client qui sera transféré opaque aux observateurs et facultatif HttpDelegate
+
+
+
+  
+**Retourne**: objet de contrôle asynchrone.
+Utilisez cette méthode pour créer des licences pour une liste d’utilisateurs. Recevoir le vecteur DelegationLicense dans les échecs de OnCreateDelegatedLicensesSuccess de rappel sont envoyés dans OnCreateDelegatedLicensesFailure

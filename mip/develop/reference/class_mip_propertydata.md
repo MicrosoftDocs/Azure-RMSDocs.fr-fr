@@ -1,17 +1,17 @@
 ---
 title: PropertyData de classe
 description: 'Documente la classe PropertyData :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d1cb95167182edd7ad81c36301c15c6951865190
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 90f85f42062b9bd9183907b9e9e9d75f7850cb50
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565564"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214981"
 ---
 # <a name="class-propertydata"></a>PropertyData de classe 
   
@@ -25,12 +25,12 @@ virtuel public ~ PropertyData ()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="getid-function"></a>GetId, fonction
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getname-function"></a>Fonction GetName
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="propertydata-function"></a>~ PropertyData fonction)
-Pas encore documenté.
+_Pas encore documenté._

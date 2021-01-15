@@ -1,17 +1,17 @@
 ---
 title: ProtectionHandler de classe ::P ublishingSettings
 description: Documente la classe protectionhandler ::p ublishingsettings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: c5edcb9eca5e14d0f0f611f32e2f91d9ed2fcb25
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: bbefbe143d434669692b6e60734698d7bd4b575f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567117"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214522"
 ---
 # <a name="class-protectionhandlerpublishingsettings"></a>ProtectionHandler de classe ::P ublishingSettings 
 Paramètres utilisés pour créer un ProtectionHandler pour protéger un nouveau contenu.
@@ -43,7 +43,7 @@ Paramètres :
 
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getisauditedextractionallowed-function"></a>GetIsAuditedExtractionAllowed fonction)

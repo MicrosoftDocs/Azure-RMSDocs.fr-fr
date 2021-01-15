@@ -1,17 +1,17 @@
 ---
 title: OperationCancelledError de classe
 description: 'Documente la classe operationcancellederror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 4fa4222c5b41205d9890aba6177eca8476110116
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 5b5f1f373997953fb9cfa4cc5f632483df81c5fa
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565604"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215117"
 ---
 # <a name="class-operationcancellederror"></a>OperationCancelledError de classe 
 L'opération a été annulée.
@@ -21,4 +21,4 @@ L'opération a été annulée.
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-Pas encore documenté.
+_Pas encore documenté._

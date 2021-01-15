@@ -1,17 +1,17 @@
 ---
 title: LabelActionData de classe
 description: 'Documente la classe labelactiondata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0ab02ba1a8b0d8d9f8b2632f34e49c6102c2912c
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b8290426dff4614512bd7408899087d9b4700591
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566822"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213927"
 ---
 # <a name="class-labelactiondata"></a>LabelActionData de classe 
   
@@ -25,12 +25,12 @@ virtuel public ~ LabelActionData ()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="getlabelid-function"></a>GetLabelId fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getlabelactiondatatype-function"></a>GetLabelActionDataType fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="labelactiondata-function"></a>~ LabelActionData fonction)
-Pas encore documenté.
+_Pas encore documenté._

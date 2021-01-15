@@ -1,17 +1,17 @@
 ---
 title: ProtectionHandler de classe
 description: 'Documente la classe protectionhandler :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e38aaf0e4dfee1d10f67f175eb50119fe3aa484d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d70e32793ede4a1184672f3f8755112766ba571b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567131"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214607"
 ---
 # <a name="class-protectionhandler"></a>ProtectionHandler de classe 
 Gère les actions liées à la protection pour une configuration de protection spécifique.
@@ -213,9 +213,9 @@ Obtient le mode de chiffrement du gestionnaire de protection.
   
 ### <a name="prelicenseformat-enum"></a>Énumération PreLicenseFormat
 
+Format de licence préalable.
+
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Xml            | Format XML/SOAP hérité utilisé par MSIPC
 Json            | Format JSON/REST utilisé par le kit de développement logiciel MIP et kit de développement logiciel (SDK) RMS
-
-Format de licence préalable.

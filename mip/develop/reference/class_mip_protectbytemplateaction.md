@@ -1,17 +1,17 @@
 ---
 title: ProtectByTemplateAction de classe
 description: 'Documente la classe protectbytemplateaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 17ae0749a56254d0ce4769c6cd3bf56ecd881fe7
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: cc8b9c62738a7edb24a04f2e68265aa416833a76
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565541"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214862"
 ---
 # <a name="class-protectbytemplateaction"></a>ProtectByTemplateAction de classe 
 Classe d’action qui spécifie l’ajout de la protection par modèle au document.
@@ -31,4 +31,4 @@ Obtenir l’ID du modèle de protection associé à l’action.
 **Retourne** : ID du modèle de protection.
   
 ### <a name="isdoublekey-function"></a>IsDoubleKey fonction)
-Pas encore documenté.
+_Pas encore documenté._

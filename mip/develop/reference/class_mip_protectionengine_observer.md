@@ -1,17 +1,17 @@
 ---
 title: 'classe ProtectionEngine :: observer'
 description: 'Documente la classe protectionengine :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 7a576882376caa8cc5f9c5c1b3d3036ee7e57b21
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b9243a1b7d9addaceaec907a368f7e651c99fbd5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567149"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214624"
 ---
 # <a name="class-protectionengineobserver"></a>classe ProtectionEngine :: observer 
 Interface qui reçoit les notifications relatives à ProtectionEngine.
@@ -30,6 +30,8 @@ public virtuel void OnRegisterContentForTrackingAndRevocationSuccess (const std�
 public virtual void OnRegisterContentForTrackingAndRevocationFailure (const std :: exception_ptr& erreur, const std :: shared_ptr \<void\>& contexte)  |  Appelé lorsque l’inscription du contenu pour le suivi & révocation échoue.
 public virtuel void OnRevokeContentSuccess (const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas de réussite de la révocation de.
 public virtual void OnRevokeContentFailure (const std :: exception_ptr& erreur, const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas d’échec de la révocation du contenu.
+public virtual void OnCreateDelegatedLicensesSuccess (std :: Vector \<std::shared_ptr\<DelegationLicense\> \> delegatedLicenses, const std :: shared_ptr \<void\>& contexte)  |  Appelé lorsque la création d’une licence déléguée réussit.
+public virtual void OnCreateDelegatedLicensesFailure (const std :: exception_ptr& erreur, const std :: shared_ptr \<void\>& contexte)  |  Appelé en cas d’échec de la création d’une licence déléguée.
   
 ## <a name="members"></a>Membres
   
@@ -143,3 +145,24 @@ Paramètres :
 
 
 Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: RevokeContentAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnRevokeContentSuccess ou ProtectionEngine :: observer :: OnRevokeContentFailure
+  
+### <a name="oncreatedelegatedlicensessuccess-function"></a>OnCreateDelegatedLicensesSuccess fonction)
+Appelé lorsque la création d’une licence déléguée réussit.
+
+Paramètres :  
+* **Context**: le même contexte qui a été passé à ProtectionEngine :: CreateDelegationLicensesAsync.
+
+
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: CreateDelegationLicensesAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnCreateDelegatedLicensesSuccess ou ProtectionEngine :: observer :: OnCreateDelegatedLicensesFailure.
+  
+### <a name="oncreatedelegatedlicensesfailure-function"></a>OnCreateDelegatedLicensesFailure fonction)
+Appelé en cas d’échec de la création d’une licence déléguée.
+
+Paramètres :  
+* **erreur**: erreur qui s’est produite 
+
+
+* **Context**: le même contexte qui a été passé à ProtectionEngine :: CreateDelegationLicensesAsync
+
+
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionEngine :: CreateDelegationLicensesAsync et ce même contexte sera transféré en l’État à ProtectionEngine :: observer :: OnCreateDelegatedLicensesSuccess ou ProtectionEngine :: observer :: OnCreateDelegatedLicensesFailure

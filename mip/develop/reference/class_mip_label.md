@@ -1,17 +1,17 @@
 ---
 title: Étiquette de la classe
 description: 'Documente la classe Label :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 6a0bd370dd8a0f08156861995c498f4f3710e9e2
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 726c61d1b73389bfdc10afb961177659e5a137d4
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566854"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213893"
 ---
 # <a name="class-label"></a>Étiquette de la classe 
 Abstraction d’une étiquette unique Microsoft Information Protection.
@@ -31,6 +31,7 @@ public std::weak_ptr\<Label\> GetParent() const  |  Obtenir l’étiquette paren
 public const std :: Vector \<std::shared_ptr\<Label\> \>& GetChildren () const  |  Obtenir les étiquettes enfants de l’étiquette actuelle.
 public const std :: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Obtient les paramètres personnalisés d’une étiquette.
 public ActionSource GetActionSource() const  |  Obtient la source d’action de l’étiquette.
+public const std :: Vector \<std::string\>& GetContentFormats () const  |  Obtient les types de contenu.
   
 ## <a name="members"></a>Membres
   
@@ -106,3 +107,9 @@ Obtient la source d’action de l’étiquette.
 
   
 **Retourne**: source de l’action
+  
+### <a name="getcontentformats-function"></a>GetContentFormats fonction)
+Obtient les types de contenu.
+
+  
+<Returns>

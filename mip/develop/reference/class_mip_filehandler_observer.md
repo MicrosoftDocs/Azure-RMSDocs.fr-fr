@@ -1,17 +1,17 @@
 ---
 title: 'classe FileHandler :: observer'
 description: 'Documente la classe fileHandler :: observer du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d469271718d422216f6eaad905e60cd82e7f1244
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 7cc73d0a81d6a620a411035bb0aae4258794e978
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566950"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215287"
 ---
 # <a name="class-filehandlerobserver"></a>classe FileHandler :: observer 
 Interface Observer permettant aux clients d’obtenir les notifications des événements liés au gestionnaire de fichiers.

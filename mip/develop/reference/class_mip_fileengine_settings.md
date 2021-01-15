@@ -1,17 +1,17 @@
 ---
 title: 'classe FileEngine :: Settings'
 description: 'Documente la classe fileengine :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 05fb06ec06943b39209c980236643e50d873d451
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 56b4bf62af04b3b84c5ed291ce9ccb0fa0d3ee28
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566974"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215423"
 ---
 # <a name="class-fileenginesettings"></a>classe FileEngine :: Settings 
   
@@ -45,10 +45,8 @@ public void SetDelegatedUserEmail (const std :: String& delegatedUserEmail)  | 
 public const std :: String& GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
 public void SetLabelFilter (const std :: Vector \<LabelFilterType\>& deprecatedLabelFilters)  |  Définit le filtre d’étiquette.
 public const std :: Vector \<LabelFilterType\>& GetLabelFilter () const  |  Obtient les filtres d’étiquette définis via la fonction déconseillée SetLabelFilter.
-public void ConfigureFunctionality (LabelFilterType labelFilterType, bool Enabled)  |  Active ou désactive la fonctionnalité.
-public const std :: map \<LabelFilterType, bool\>& GetConfiguredFunctionality () const  |  Obtient les fonctionnalités configurées.
-public void SetClassifierEnabled (classifieur classifierType, bool Enabled)  |  Active ou désactive la prise en charge des types de classification.
-public const std :: map \<Classifier, bool\>& GetConfiguredClassifierSupport () const  |  Obtient les substitutions de classifieur prises en charge.
+public void ConfigureFunctionality (FunctionalityFilterType functionalityFilterType, bool Enabled)  |  Active ou désactive la fonctionnalité.
+public const std :: map \<FunctionalityFilterType, bool\>& GetConfiguredFunctionality () const  |  Obtient les fonctionnalités configurées.
 public void SetAuthDelegate (const std :: shared_ptr \<AuthDelegate\>& authDelegate)  |  Définissez le délégué d’authentification du moteur.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Obtient le délégué d’authentification du moteur.
   
@@ -229,7 +227,7 @@ Par défaut, les étiquettes sont filtrées par défaut, cette API permet de fil
 Active ou désactive la fonctionnalité.
 
 Paramètres :  
-* **labelFilterType**: type de fonctionnalité. 
+* **functionalityFilterType**: type de fonctionnalité. 
 
 
 * **activé**: true pour activer, false pour désactiver
@@ -242,24 +240,6 @@ Obtient les fonctionnalités configurées.
 
   
 **Retourne**: un mappage des types à une valeur booléenne indiquant si elle est activée ou non.
-  
-### <a name="setclassifierenabled-function"></a>SetClassifierEnabled fonction)
-Active ou désactive la prise en charge des types de classification.
-
-Paramètres :  
-* **classifierType**: type de classifieur 
-
-
-* **activé**: true pour activer, false pour désactiver
-
-
-Seuls les classifers SensitiveInformation sont activés par défaut
-  
-### <a name="getconfiguredclassifiersupport-function"></a>GetConfiguredClassifierSupport fonction)
-Obtient les substitutions de classifieur prises en charge.
-
-  
-**Retourne**: un mappage des types à une valeur booléenne indiquant s’ils ont été remplacés par la prise en charge
   
 ### <a name="setauthdelegate-function"></a>SetAuthDelegate fonction)
 Définissez le délégué d’authentification du moteur.

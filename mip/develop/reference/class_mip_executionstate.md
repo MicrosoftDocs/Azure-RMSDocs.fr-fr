@@ -1,17 +1,17 @@
 ---
 title: ExecutionState de classe
 description: 'Documente la classe ExecutionState :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f73c3e366f1be0647d2c9a7de78f37b6a9a95549
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 543b46f8ceb731e7ea7c4e513f1a42c25a080521
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566990"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215457"
 ---
 # <a name="class-executionstate"></a>ExecutionState de classe 
 Interface pour tous les états nécessaires à l’exécution du moteur.
@@ -28,7 +28,7 @@ public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Obtenir la méth
 public virtuel std :: Vector \<std::pair\<std::string, std::string\> \> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
 public std :: Vector \<MetadataEntry\> GetContentMetadata (const std :: vector \<std::string\>& Names, const std :: Vector \<std::string\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Obtenir le descripteur de protection.
-public ContentFormat GetContentFormat() const  |  Obtient le format du contenu.
+public std :: String GetContentFormat () const  |  Obtient le format du contenu.
 MetadataVersion virtuel public GetContentMetadataVersion () const  |  Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.
 public ActionType GetSupportedActions() const  |  Obtient une énumération masquée qui décrit tous les types d’action pris en charge.
 public virtuel std :: shared_ptr \<ClassificationResults\> GetClassificationResults (const std :: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
@@ -93,9 +93,7 @@ Obtenir le descripteur de protection.
 Obtient le format du contenu.
 
   
-**Retourne** : DEFAULT, EMAIL 
-  
-**Voir aussi** : mip::ContentFormat
+**Retourne**: format du contenu
   
 ### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion fonction)
 Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.

@@ -1,17 +1,17 @@
 ---
 title: DocumentState de classe
 description: 'Documente la classe documentstate :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: ad1c99a76c3078c86ec80a4ec6e1cc7d244cbbeb
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 1d584ba1f0c66c51646b6fe6fc4dd4fa9a6ccf0d
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567006"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215474"
 ---
 # <a name="class-documentstate"></a>DocumentState de classe 
   
@@ -22,7 +22,7 @@ public std::string GetContentIdentifier() const  |  Obtient la description du co
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
 public std :: Vector \<MetadataEntry\> GetContentMetadata (const std :: vector \<std::string\>& Names, const std :: Vector \<std::string\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Obtenir le descripteur de protection.
-public ContentFormat GetContentFormat() const  |  Obtient le format du contenu.
+public std :: String GetContentFormat () const  |  Obtient le format du contenu.
 MetadataVersion virtuel public GetContentMetadataVersion () const  |  Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.
 public virtuel std :: shared_ptr \<ClassificationResults\> GetClassificationResults (const std :: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
 public virtuel std :: map \<std::string, std::string\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
@@ -61,9 +61,7 @@ Obtenir le descripteur de protection.
 Obtient le format du contenu.
 
   
-**Retourne** : DEFAULT, EMAIL 
-  
-**Voir aussi** : mip::ContentFormat
+**Retourne**: format du contenu
   
 ### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion fonction)
 Obtient la version de métadonnées la plus élevée prise en charge par l’application pour le locataire.

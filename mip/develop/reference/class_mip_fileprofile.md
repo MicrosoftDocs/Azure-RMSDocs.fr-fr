@@ -1,17 +1,17 @@
 ---
 title: FileProfile de classe
 description: 'Documente la classe fileprofile :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 6a7ed521ce5a277a72e8b151c8331d537484c86a
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 10c5656328377a3ced0e24de22d957d016adf396
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566926"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211598"
 ---
 # <a name="class-fileprofile"></a>FileProfile de classe 
 La classe FileProfile est la classe de base pour l’utilisation des opérations Microsoft Information Protection.

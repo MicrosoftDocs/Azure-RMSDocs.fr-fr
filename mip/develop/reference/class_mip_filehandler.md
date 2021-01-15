@@ -1,17 +1,17 @@
 ---
 title: FileHandler de classe
 description: 'Documente la classe fileHandler :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: bf3866fb1ec06156ebf40b2efed8c44f8af4a4ce
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 77b94fdd79334b842cc2ad1f19cf9a17ddc04439
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566958"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211496"
 ---
 # <a name="class-filehandler"></a>FileHandler de classe 
 Interface pour toutes les fonctions de gestion de fichiers.
@@ -22,8 +22,8 @@ Interface pour toutes les fonctions de gestion de fichiers.
 public std :: shared_ptr \<ContentLabel\> getLabel ()  |  Démarre la récupération de l’étiquette de sensibilité à partir du fichier.
 public std :: Vector \<std::pair\<std::string, std::string\> \> GetProperties (version uint32_t)  |  Récupère le fichier propertries en fonction de la version.
 public std :: shared_ptr \<ProtectionHandler\> GetProtection ()  |  Démarre la récupération de la stratégie de protection à partir du fichier.
-public std :: shared_ptr \<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (bool isOwnerNotificationEnabled, const std :: shared_ptr \<ProtectionEngine::Observer\>& observateur, const std :: shared_ptr \<void\>& contexte)  |  # # # # Paramètres
-public std :: shared_ptr \<AsyncControl\> RevokeContentAsync (const std :: shared_ptr \<ProtectionEngine::Observer\>& observateur, const std :: shared_ptr \<void\>& contexte)  |  Procédez à la révocation du contenu.
+public void RegisterContentForTrackingAndRevocationAsync (bool isOwnerNotificationEnabled, const std :: shared_ptr \<ProtectionEngine::Observer\>& observateur, const std :: shared_ptr \<void\>& contexte)  |  # # # # Paramètres
+public void RevokeContentAsync (const std :: shared_ptr \<ProtectionEngine::Observer\>& observateur, const std :: shared_ptr \<void\>& contexte)  |  Procédez à la révocation du contenu.
 public void ClassifyAsync (const std :: shared_ptr \<void\>& contexte)  |  Exécute les règles dans le gestionnaire et retourne la liste des actions à exécuter.
 public void InspectAsync (const std :: shared_ptr \<void\>& contexte)  |  Crée un objet d’inspecteur de fichier, utilisé pour récupérer le contenu d’un fichier à partir de formats de fichiers compatibles.
 public void SetLabel (const std :: shared_ptr \<Label\>& étiquette, const LabelingOptions& LabelingOptions, const ProtectionSettings& ProtectionSettings)  |  Définit l’étiquette de sensibilité sur le fichier.

@@ -1,17 +1,17 @@
 ---
 title: RulePackageData de classe
 description: 'Documente la classe rulepackagedata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 4f2106518bb2837d85eb5874307fad2639df5d90
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 709db83f046380b898606a6c7967110da0a84f82
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565596"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213111"
 ---
 # <a name="class-rulepackagedata"></a>RulePackageData de classe 
   
@@ -26,16 +26,16 @@ virtuel public ~ RulePackageData ()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="getruledata-function"></a>GetRuleData fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getlabeltotemplateid-function"></a>GetLabelToTemplateId fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getlabeltoprotectiontype-function"></a>GetLabelToProtectionType fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="rulepackagedata-function"></a>~ RulePackageData fonction)
-Pas encore documenté.
+_Pas encore documenté._

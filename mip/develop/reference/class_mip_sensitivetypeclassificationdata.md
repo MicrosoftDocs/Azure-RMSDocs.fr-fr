@@ -1,17 +1,17 @@
 ---
 title: SensitiveTypeClassificationData de classe
 description: 'Documente la classe sensitivetypeclassificationdata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5005b6fabbe458e3558016cc9dd504dd81fadd97
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: a94b8f950c326b77f48f85ef1e0126a8785a06cf
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567408"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213077"
 ---
 # <a name="class-sensitivetypeclassificationdata"></a>SensitiveTypeClassificationData de classe 
   
@@ -19,6 +19,7 @@ ms.locfileid: "95567408"
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std :: String& GetRulePackageId () const  | _Pas encore documenté._
+public const std::string& GetName() const  | _Pas encore documenté._
 public int GetMaxCount () const  | _Pas encore documenté._
 public int GetMinCount () const  | _Pas encore documenté._
 public int GetMinConfidence () const  | _Pas encore documenté._
@@ -30,32 +31,36 @@ public bool Evaluate (const ClassificationResult& résultat, const PredicateInpu
 ## <a name="members"></a>Membres
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId fonction)
-Pas encore documenté.
+_Pas encore documenté._
+
+  
+### <a name="getname-function"></a>Fonction GetName
+_Pas encore documenté._
 
   
 ### <a name="getmaxcount-function"></a>GetMaxCount fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getmincount-function"></a>GetMinCount fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getminconfidence-function"></a>GetMinConfidence fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getmaxconfidence-function"></a>GetMaxConfidence fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getclassificationid-function"></a>GetClassificationId fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getclassifiertype-function"></a>GetClassifierType fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="evaluate-function"></a>Fonction Evaluate
-Pas encore documenté.
+_Pas encore documenté._

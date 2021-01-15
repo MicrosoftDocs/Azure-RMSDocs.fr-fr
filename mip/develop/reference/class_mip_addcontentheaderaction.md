@@ -1,17 +1,17 @@
 ---
 title: AddContentHeaderAction de classe
 description: 'Documente la classe addcontentheaderaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 090bf4e1ad70238d6023a914fba4786a97a25a0d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: e5a2993af705855dde94f5be37e22f1e9ab87c99
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567324"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212449"
 ---
 # <a name="class-addcontentheaderaction"></a>AddContentHeaderAction de classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.

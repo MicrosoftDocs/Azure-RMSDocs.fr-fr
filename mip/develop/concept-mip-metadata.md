@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 1e211cf19c5d90f4c1e6e60c808bb38d701720bf
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555685"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212635"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>SDK Microsoft Information Protection-métadonnées
 
@@ -33,34 +33,34 @@ Le GUID est un identificateur unique pour chaque étiquette d’une organisation
 
 Le kit de développement logiciel MIP applique l’ensemble de métadonnées suivant.
 
-| Attribut | Type ou valeur                 | Description                                                                                                                                                                                                                                        | Obligatoire |
-|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Enabled**   | Vrai ou faux                 | Cet attribut indique si la classification représentée par cet ensemble de paires clé-valeur est activée pour l’élément de données. Les produits DLP valident généralement l’existence de cette clé pour identifier l’étiquette de classification. | Oui       |
-| **SiteId**    | GUID                          | ID de locataire Azure Active Directory                                                                                                                                                                                                                   | Oui       |
-| **ActionId**  | GUID                          | ActionID est modifié chaque fois qu’une étiquette est définie. Les journaux d’audit incluent l’ancien et le nouvel actionID pour permettre le chaînage de l’activité d’étiquetage à l’élément de données.                                                                                 | Oui       |
-| **Méthode**    | Standard ou privilégié        | Défini via [MIP :: assignation](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard signifie que l’étiquette est appliquée par défaut ou automatiquement. Privileged signifie que l’étiquette a été sélectionnée manuellement.                                                                                                                                                                                                                 | Non        |
-| **SetDate**   | Format de date ISO 8601 étendu | Horodatage lorsque l’étiquette a été définie.                                                                                                                                                                                                              | Non        |
-| **Nom**      | string                        | Nom unique de l’étiquette dans le locataire. Il ne correspond pas nécessairement au nom complet.                                                                                                                                                              | Non      |
-| **ContentBits** | integer | Masque de données qui décrit les types de marquage de contenu qui doivent être appliqués à un fichier. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, filigrane = 0X4, CHIFFREr = 0x8
- | Non |
+| Attribut                                       | Type ou valeur                 | Description                                                                                                                                                                                                                  | Obligatoire |
+| ----------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| **Enabled**                                     | True ou False                 | Cet attribut indique si la classification représentée par cet ensemble de paires clé-valeur est activée pour l’élément de données. Les produits DLP valident généralement l’existence de cette clé pour identifier l’étiquette de classification. | Oui       |
+| **SiteId**                                      | GUID                          | ID de locataire Azure Active Directory                                                                                                                                                                                             | Oui       |
+| **ActionID** (supprimé dans le kit de développement logiciel MIP 1,8 et versions ultérieures) | GUID                          | ActionID est modifié chaque fois qu’une étiquette est définie. Les journaux d’audit incluent l’ancien et le nouvel actionID pour permettre le chaînage de l’activité d’étiquetage à l’élément de données.                                                                     | Oui       |
+| **Méthode**                                      | Standard ou privilégié        | Défini via [MIP :: assignation](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard signifie que l’étiquette est appliquée par défaut ou automatiquement. Privileged signifie que l’étiquette a été sélectionnée manuellement.  | Non        |
+| **SetDate**                                     | Format de date ISO 8601 étendu | Horodatage lorsque l’étiquette a été définie.                                                                                                                                                                                        | Non        |
+| **Nom**                                        | string                        | Nom unique de l’étiquette dans le locataire. Il ne correspond pas nécessairement au nom complet.                                                                                                                                      | Non        |
+| **ContentBits**                                 | entier                       | Masque de données qui décrit les types de marquage de contenu qui doivent être appliqués à un fichier. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, filigrane = 0X4, CHIFFREr = 0x8                                                             |
+| Non                                              |
 
 Lorsqu’il est appliqué à un fichier, le résultat est semblable au tableau ci-dessous.
 
-| Clé                                                         | valeur                                |
-|-------------------------------------------------------------|--------------------------------------|
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
+| Clé                                                         | Valeur                                |
+| ----------------------------------------------------------- | ------------------------------------ |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Enabled     | true                                 |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
 | MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Method      | Privilégié                           |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Confidentiel                         |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Name        | Confidentiel                         |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
 | MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_ContentBits | 2                                    |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
 ## <a name="extending-metadata-with-custom-attributes"></a>Extension des métadonnées avec des attributs personnalisés
 
-Les métadonnées personnalisées peuvent être ajoutées par le biais de l’API de fichier et de stratégie. Les attributs personnalisés doivent conserver le préfixe de base `MSIP_Label_GUID`. 
+Les métadonnées personnalisées peuvent être ajoutées par le biais de l’API de fichier et de stratégie. Les attributs personnalisés doivent conserver le `MSIP_Label_GUID` préfixe de base.
 
-Par exemple, une application écrite par Contoso Corporation doit appliquer des métadonnées indiquant le système qui a généré un fichier étiqueté. L’application peut créer une nouvelle étiquette, précédée de `MSIP_Label_GUID`. Le nom de l’éditeur du logiciel et l’attribut personnalisé sont ajoutés au préfixe pour générer les métadonnées personnalisées.
+Par exemple, une application écrite par Contoso Corporation doit appliquer des métadonnées indiquant le système qui a généré un fichier étiqueté. L’application peut créer une nouvelle étiquette, précédée de `MSIP_Label_GUID` . Le nom de l’éditeur du logiciel et l’attribut personnalisé sont ajoutés au préfixe pour générer les métadonnées personnalisées.
 
 ```
 MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRReportingSystem
@@ -77,7 +77,7 @@ Lors du remplacement d’un attribut par une version plus récente, un suffixe d
 
 `MSIP_Label_GUID_EnabledV2 = True | False | Condition`
 
-## <a name="email"></a>Adresse de messagerie
+## <a name="email"></a>Courrier
 
 Les métadonnées appliquées à la messagerie électronique gèrent un format de paire clé/valeur semblable à celui des documents. La principale différence réside dans le fait que tous les attributs sont sérialisés dans un en-tête de message électronique appelé **MSIP_Labels**. Les paires clé/valeur sont délimitées par un point-virgule et un espace blanc, puis placées dans le nouvel en-tête.
 

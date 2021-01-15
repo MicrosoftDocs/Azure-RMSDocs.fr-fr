@@ -1,17 +1,17 @@
 ---
 title: TemplateNotFoundError de classe
 description: 'Documente la classe templatenotfounderror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0ba4eae1c1c3d846c5e696a55a8a089b18a583ed
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 48182ae5d821aeed65e8c28b086dce0349b9af03
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567395"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212856"
 ---
 # <a name="class-templatenotfounderror"></a>TemplateNotFoundError de classe 
 L’ID de modèle n’est pas reconnu par le service RMS.
@@ -36,15 +36,15 @@ public const std :: map \<std::string, std::string\>& GetDebugInfo () const  | 
 ## <a name="members"></a>Membres
   
 ### <a name="mmessage"></a>mMessage
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="mdebuginfo"></a>mDebugInfo
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="mname"></a>mName
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="geterrorcode-function"></a>GetErrorCode, fonction)
@@ -110,9 +110,9 @@ Obtient les informations de débogage.
   
 ### <a name="errorcode-enum"></a>ErrorCode (énumération)
 
+Code d’erreur de l’erreur d’entrée incorrecte.
+
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Général            | Erreur d’entrée générale incorrecte
 FileIsTooLargeForProtection            | Le fichier est trop volumineux pour la protection
-
-Code d’erreur de l’erreur d’entrée incorrecte.

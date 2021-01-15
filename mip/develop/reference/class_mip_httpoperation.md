@@ -1,17 +1,17 @@
 ---
 title: HttpOperation de classe
 description: 'Documente la classe httpoperation :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: ece0d76577747170e4328bc1d9bdabb0678e65a5
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 7ceb76ff61ce13fd47b764fa336ffcf5e167608e
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566878"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211513"
 ---
 # <a name="class-httpoperation"></a>HttpOperation de classe 
 Interface qui décrit une seule opération HTTP, implémentée par l’application cliente lors du remplacement de HttpDelegate.

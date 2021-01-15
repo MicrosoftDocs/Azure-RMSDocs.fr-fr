@@ -1,17 +1,17 @@
 ---
 title: 'classe AuthDelegate :: OAuth2Challenge'
 description: 'Documente la classe authdelegate :: oauth2challenge du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f422b99674213904316eab622bfc915f128228ec
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 3062130037142ebe3b5c227da0dd12a8f38065c1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567270"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212074"
 ---
 # <a name="class-authdelegateoauth2challenge"></a>classe AuthDelegate :: OAuth2Challenge 
 classe qui contient toutes les informations requises de l’application appelante afin de générer un jeton oauth2.

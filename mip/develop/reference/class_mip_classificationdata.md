@@ -1,17 +1,17 @@
 ---
 title: ClassificationData de classe
 description: 'Documente la classe classificationdata :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e575260b1c03fa71f4f454df2cd1d431b13a7650
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 1009df26b84ddff61d03a79c823840a1ff10fba1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567251"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211989"
 ---
 # <a name="class-classificationdata"></a>ClassificationData de classe 
   
@@ -23,4 +23,4 @@ virtuel public ~ ClassificationData ()  | _Pas encore documenté._
 ## <a name="members"></a>Membres
   
 ### <a name="classificationdata-function"></a>~ ClassificationData fonction)
-Pas encore documenté.
+_Pas encore documenté._

@@ -1,17 +1,17 @@
 ---
 title: 'classe PolicyProfile :: Settings'
 description: 'Documente la classe policyprofile :: Settings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2ec38a34f2522448704f1be91d03c62761cafdf6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 49cff6afb3f42b427e656f886eef82fff6bde51e
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565600"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213349"
 ---
 # <a name="class-policyprofilesettings"></a>classe PolicyProfile :: Settings 
 Paramètres utilisés par PolicyProfile lors de sa création et tout au long de sa durée de vie.
@@ -97,11 +97,11 @@ Paramètres :
 les tâches peuvent faire référence à des objets de profil empêchant sa destruction, car les files d’attente taskdispatcher ne doivent pas être partagées.
   
 ### <a name="setsessionid-function"></a>SetSessionId fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="getsessionid-function"></a>GetSessionId fonction)
-Pas encore documenté.
+_Pas encore documenté._
 
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings fonction)
@@ -119,4 +119,4 @@ Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation e
 **Retourne** : liste de paires nom/valeur.
   
 ### <a name="settings-function"></a>~ Settings, fonction
-Pas encore documenté.
+_Pas encore documenté._

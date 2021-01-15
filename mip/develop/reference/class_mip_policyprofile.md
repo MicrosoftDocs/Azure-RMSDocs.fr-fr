@@ -1,17 +1,17 @@
 ---
 title: PolicyProfile de classe
 description: 'Documente la classe policyprofile :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0cd8c300aa2c6edb0e06c6cd8306c48d2cb8dafa
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 89bac003d9a4924d5b854826b53eaa787f770a7c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567377"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213366"
 ---
 # <a name="class-policyprofile"></a>PolicyProfile de classe 
 La classe PolicyProfile est la classe de base pour l’utilisation des opérations Microsoft Information Protection. Une application classique a besoin d’une seule classe PolicyProfile, mais elle peut créer plusieurs profils si nécessaire.

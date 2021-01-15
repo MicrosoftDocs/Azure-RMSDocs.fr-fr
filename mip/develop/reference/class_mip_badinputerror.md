@@ -1,17 +1,17 @@
 ---
 title: BadInputError de classe
 description: 'Documente la classe badinputerror :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2571723264718e7dd0e946233454b81caf571fcb
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 7d195edd0468440bc72e3df15a8c2c9e26370957
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567257"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212006"
 ---
 # <a name="class-badinputerror"></a>BadInputError de classe 
 Erreur d’entrée incorrecte, levée quand l’entrée dans une API SDK n’est pas valide.
@@ -21,4 +21,4 @@ Erreur d’entrée incorrecte, levée quand l’entrée dans une API SDK n’est
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Membres
-Pas encore documenté.
+_Pas encore documenté._

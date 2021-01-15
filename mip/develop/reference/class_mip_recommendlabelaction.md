@@ -1,17 +1,17 @@
 ---
 title: RecommendLabelAction de classe
 description: 'Documente la classe recommendlabelaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2a0318c0da7bfc3a2be72c1139754da1f7142d71
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d86f9a77a7e198ed47b633bd74da49db41edda15
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565540"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213264"
 ---
 # <a name="class-recommendlabelaction"></a>RecommendLabelAction de classe 
 Les actions d’étiquette recommandées sont conçues pour suggérer une étiquette aux utilisateurs. La suppression de cet appel lorsqu’un utilisateur ignore l’étiquette recommandée doit être effectuée via les actions prises en charge sur l’état d’exécution.

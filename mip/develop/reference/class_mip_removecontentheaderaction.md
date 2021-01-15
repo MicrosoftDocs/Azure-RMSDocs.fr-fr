@@ -1,17 +1,17 @@
 ---
 title: RemoveContentHeaderAction de classe
 description: 'Documente la classe removecontentheaderaction :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 47adf87ab294da64df37d03bf846d723c33d9c8a
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 1f8e6ee1898aa4f575d255d33ba23208acc47c3b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95565536"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213213"
 ---
 # <a name="class-removecontentheaderaction"></a>RemoveContentHeaderAction de classe 
 Classe d’action qui spécifie la suppression de l’en-tête de contenu du document.

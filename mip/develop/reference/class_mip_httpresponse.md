@@ -1,17 +1,17 @@
 ---
 title: HttpResponse de classe
 description: 'Documente la classe HttpResponse :: non définie du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0a08b2bea4834375a01897b3d657772112463b89
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 8e4a8c392c6e18197e3b9b376482f3145d1ecd3f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566877"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211394"
 ---
 # <a name="class-httpresponse"></a>HttpResponse de classe 
 Interface qui décrit une seule réponse HTTP, implémentée par l’application cliente lors du remplacement de HttpDelegate.

@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: c3973488cb8c3ec109a5a11dea1e540f09db92d4
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 732ca5e87b83f578dad3b40f842e31ea29e95c08
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555702"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212720"
 ---
 # <a name="implement-executionstate"></a>Implémenter ExecutionState
 
@@ -27,7 +27,7 @@ Le passage d’informations dans le kit SDK MIP pour calculer une action à effe
 
 `ExecutionState` expose les membres virtuels suivants. Chacun d’eux fournit un contexte au moteur de stratégies pour retourner des informations sur les actions à entreprendre par l’application. De plus, vous pouvez utiliser ces informations pour fournir des informations d’audit à la fonctionnalité de création de rapports Azure Information Protection.
 
-| Membre                                                                             | Returns                                                                                                              |
+| Membre                                                                             | Retours                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Retourne l’étiquette à appliquer à l’objet.                                                                       |
 | `mip::DataState GetDataState()`                                                    | Retourne le ataState MIP ::D de l’objet.                                                                            |
@@ -38,7 +38,7 @@ Le passage d’informations dans le kit SDK MIP pour calculer une action à effe
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Retourne un std::vector du std::pairs des chaînes contenant les métadonnées personnalisées à appliquer au document. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Retourne un std::vector du std::pairs de la chaîne contenant les métadonnées de contenu actuelles.                               |
 | `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | Retourne un pointeur vers mip::ProtectionDescriptor                                                                     |
-| `mip::ContentFormat GetContentFormat()`                                            | Retourne mip::ContentFormat                                                                                           |
+| `std::string GetContentFormat()`                                            | Retourne une chaîne                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                            | Retourne mip::ActionTypes pour l’étiquette.                                                                              |
 | `std::shared_ptr<mip::ClassificationResults>`                                      | Retourne une liste de résultats de classification, si elle est implémentée.                                                            |
 
@@ -57,7 +57,7 @@ struct ExecutionStateOptions {
     bool isDowngradeJustified = false;
     std::string downgradeJustification;
     std::string templateId;
-    mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    std::string contentFormat = mip::GetFileContentFormat();
     mip::ActionType supportedActions;
     bool generateAuditEvent;
 };

@@ -209,7 +209,7 @@
               href: ./rms-client/clientv2-remove-label-protection.md
             - name: Révoquer l’accès à un document
               href: ./rms-client/revoke-access-user.md
-        - name: Applications Azure Information Protection pour iOS et Android
+        - name: Apps AIP pour iOS et Android
           href: ./rms-client/mobile-app-faq.md
         - name: Lecteurs PDF protégés
           href: ./rms-client/protected-pdf-readers.md
@@ -337,7 +337,7 @@
           items:
             - name: Avis de dépréciation
               href: ./develop/deprecation-notice.md
-            - name: Vue d'ensemble
+            - name: Vue d’ensemble
               href: ./develop/overview.md
             - name: Prise en main
               href: ./develop/get-started.md

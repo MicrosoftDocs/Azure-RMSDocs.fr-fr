@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 8cc4a6123a9b292212f573c75f2807905c646675
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583708"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540201"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -233,7 +233,7 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Chemin d’accès  |Syntaxe  |
+    |Chemin d’accès  |Syntax  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` <br /><br />Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. <br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -306,7 +306,7 @@ Pour recevoir un jeton de Azure AD :
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
-    Par exemple :
+    Exemple :
 
     ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
@@ -325,6 +325,8 @@ Vous pouvez maintenant exécuter votre première analyse en mode découverte. Po
 
 Une fois que vous avez exécuté votre analyse de découverte initiale, poursuivez [la configuration du scanneur pour appliquer la classification et la protection](#configure-the-scanner-to-apply-classification-and-protection).
 
+> [!NOTE]
+> Pour plus d’informations, consultez [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurer le scanneur pour appliquer la classification et la protection
 
 Les paramètres par défaut configurent le scanneur pour qu’il s’exécute une seule fois et en mode rapport uniquement.
@@ -393,7 +395,7 @@ Par exemple, si vous avez un nouveau type de fichier dans plusieurs référentie
 
 Pour apporter des modifications en bloc dans les référentiels :
 
-1. Dans le Portail Azure du volet **référentiels** , sélectionnez l’option d' **exportation** . Par exemple :
+1. Dans le Portail Azure du volet **référentiels** , sélectionnez l’option d' **exportation** . Exemple :
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportation des paramètres du référentiel de données pour le scanneur de Azure Information Protection":::
 
@@ -471,7 +473,7 @@ Les facteurs supplémentaires qui affectent les performances du scanneur sont le
 |**Temps de chargement/réponse**     |Les temps de chargement et de réponse actuels des magasins de données qui contiennent les fichiers à analyser affectent également les performances du scanneur.         |
 |**Mode scanneur** (détection/application)    | Le mode de détection a généralement un taux d’analyse plus élevé que le mode d’application. <br /><br />La découverte requiert une seule action de lecture de fichier, tandis que le mode d’application requiert des actions de lecture et d’écriture.        |
 |**Modifications de stratégie**     |Les performances de votre scanneur peuvent être affectées si vous avez apporté des modifications à l’étiquetage automatique dans la stratégie d’étiquette. <br /><br />Votre premier cycle d’analyse, lorsque le scanneur doit inspecter chaque fichier, prend plus de temps que les cycles d’analyse suivants qui, par défaut, inspectent uniquement les fichiers nouveaux et modifiés. <br /><br />Si vous modifiez les conditions ou les paramètres d’étiquetage automatique, tous les fichiers sont analysés à nouveau. Pour plus d’informations, consultez [rescaning Files](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Constructions Regex**    | Les performances de l’analyseur sont affectées par la manière dont vos expressions Regex pour les conditions personnalisées sont construites. <br /><br /> Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. <br /><br />Par exemple : <br />-Évitez les [quantificateurs gourmands](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Utiliser des groupes sans capture comme `(?:expression)` au lieu de `(expression)`    |
+|**Constructions Regex**    | Les performances de l’analyseur sont affectées par la manière dont vos expressions Regex pour les conditions personnalisées sont construites. <br /><br /> Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. <br /><br />Exemple : <br />-Évitez les [quantificateurs gourmands](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Utiliser des groupes sans capture comme `(?:expression)` au lieu de `(expression)`    |
 |**Log level**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.<br /><br />- La valeur **off** permet d’obtenir des performances optimales <br />- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. <br /><br />Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Fichiers en cours d’analyse**     |-À l’exception des fichiers Excel, les fichiers Office sont analysés plus rapidement que les fichiers PDF. <br /><br />-Les fichiers non protégés sont plus rapides à analyser que les fichiers protégés. <br /><br />-Les fichiers volumineux sont évidemment plus longs à analyser que les petits fichiers.         |
 | | |

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8c2441a9272e62577fcaf88c14fb7e6bb6cdbdde
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164502"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540174"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -78,7 +78,7 @@ Utilisez les instructions suivantes pour installer le client lorsque vous *n’u
 
     Pour afficher toutes les options d’installation, commencez par exécuter le fichier exécutable avec **/Help**: `AzInfoProtection_UL.exe /help`
 
-    Par exemple : 
+    Exemple : 
     - Pour installer le client en mode silencieux : `AzInfoProtection_UL.exe /quiet`
     
     - Pour installer en mode silencieux uniquement les applets de commande PowerShell : `AzInfoProtection_UL.exe  PowerShellOnly=true /quiet`
@@ -88,8 +88,7 @@ Utilisez les instructions suivantes pour installer le client lorsque vous *n’u
     |Paramètre  |Description  |
     |---------|---------|
     |**AllowTelemetry = 0**     |    Utilisez ce paramètre pour désactiver l’option d’installation **Participer à l’amélioration d’Azure Information Protection en envoyant des statistiques d’utilisation à Microsoft**.     |
-    |**ServiceLocation**     |  Utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010, et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent d’invites. <br><br>Pour plus d'informations, consultez les pages suivantes : <br>- [Plus d’informations sur le paramètre d’installation **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP pour Windows et les versions d’Office dans le support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
-
+    |**ServiceLocation**     |  Utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010, et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent d’invites. <br><br>Pour plus d’informations, consultez : <br>- [Plus d’informations sur le paramètre d’installation **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP pour Windows et les versions d’Office dans le support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
     | | |
 
 1. Pour achever l'installation : 

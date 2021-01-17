@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d9eadd907059bd128ac08c761128e0f1926c9f81
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792294"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540103"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Résolution des problèmes liés au déploiement d’un analyseur local d’étiquetage local
 
@@ -69,7 +69,7 @@ Si le scanneur s’arrête de manière inattendue et ne termine pas l’analyse 
 
 Utilisez les sections suivantes pour comprendre les messages d’erreur spécifiques générés par le scanneur, ainsi que les actions de résolution des problèmes ou des solutions pour résoudre le problème :
 
-|Type d’erreur |Résolution des problèmes  |
+|Type d’erreur |Dépannage  |
 |---------|---------|
 |**Erreurs d'authentification**     |  - [Jeton d’authentification non accepté](#authentication-token-not-accepted) <br>  - [Jeton d’authentification manquant](#authentication-token-missing)|
 |**Erreurs de stratégie**     |  - [Stratégie manquante](#policy-missing) <br>- [La stratégie n’inclut aucune condition d’étiquetage automatique](#policy-doesnt-include-any-automatic-labeling-condition)      |
@@ -90,7 +90,7 @@ Utilisez les sections suivantes pour comprendre les messages d’erreur spécifi
 
 Si la commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) a échoué, veillez à définir correctement les autorisations dans le portail Azure.
 
-Pour plus d’informations, consultez [créer et configurer les applications de Azure AD pour Set-AIPAuthentication](rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication).
+Pour plus d’informations, consultez [créer et configurer des applications Azure AD pour Set-AIPAuthentication](rms-client/clientv2-admin-guide-powershell.md#create-and-configure-azure-ad-applications-for-set-aipauthentication).
 
 ### <a name="authentication-token-missing"></a>Jeton d’authentification manquant
 
@@ -112,7 +112,7 @@ Pour que le scanneur s’exécute de manière non interactive, vous devez vous a
 
 Quand vous exécutez la commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) , veillez à utiliser le paramètre Token pour le compte de l’utilisateur du scanneur.
 
-Par exemple :
+Exemple :
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner

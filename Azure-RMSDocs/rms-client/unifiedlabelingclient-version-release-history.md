@@ -12,18 +12,18 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e5a34268b2b0144c49c7ce6150d725b642184e5
-ms.sourcegitcommit: d68537b88ac6b43846d574359938fb45277cb850
+ms.openlocfilehash: 91f8975ddd3fe262a1ca7a0df1a7392fbda59a6a
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98195413"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559776"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
 >***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Concerne**: [client d’étiquetage unifié AIP uniquement](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [l’historique des versions du client classique et la stratégie de support](client-version-release-history.md). *
 
@@ -144,7 +144,7 @@ Si vos documents sont enregistrés pour le suivi, permet aux administrateurs d�
 
 Une fois que vous avez mis à niveau, les utilisateurs finaux peuvent également révoquer l’accès pour les documents qu’ils ont protégés. Pour révoquer l’accès à partir de Microsoft Office Apps, utilisez l’option nouveau **révoquer l’accès** dans le menu **sensibilité** .
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection](track-and-revoke-admin.md)
 - [Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection](revoke-access-user.md)
@@ -255,7 +255,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
     - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -315,7 +315,7 @@ Pour plus d’informations, consultez [accéder aux journaux d’audit](../audit
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
@@ -419,7 +419,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)

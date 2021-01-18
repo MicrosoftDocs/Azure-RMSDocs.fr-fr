@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: adfc8fcb0ce9ea8c227aad74e7d686a96d081b8c
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 49f80d17e62bbe7e520696460ec39df396e439e4
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807346"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560354"
 ---
 # <a name="azure-information-protection-classic-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection Classic
 
@@ -93,8 +93,10 @@ Déployez le client Azure Information Protection si vous n’utilisez pas d' [é
 
 - Voulez-vous supprimer le chiffrement des fichiers et des conteneurs (annuler la protection) en bloc aux fins de récupération des données.
 
-- Vous exécutez [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) et souhaitez protéger des documents et des e-mails à l’aide du service Azure Rights Management. 
+- Vous exécutez Office 2010 et souhaitez protéger des documents et des e-mails à l’aide du service Azure Rights Management. 
 
+    Notez que le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    
 Exemple qui illustre le complément du client Azure Information Protection pour une application Office, affiche les étiquettes de classification de votre organisation ainsi que le nouveau bouton **Protéger** sur le ruban :
 
 ![Barre Azure Information Protection avec la stratégie par défaut](../media/word2016-calloutsv2.png)

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164349"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559640"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -135,7 +135,7 @@ En outre, la révocation de l’accès pour l’une des pièces jointes révoque
 Si vous avez des documents stockés dans OneDrive avec une étiquette de sensibilité appliquée et qu’un administrateur modifie l’étiquette dans la stratégie d’étiquetage pour ajouter une protection, la protection récemment appliquée n’est pas appliquée automatiquement au document étiqueté. 
 
 Dans ce cas, renommez le document manuellement pour appliquer la protection en fonction des besoins.
-## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP pour Windows et les versions d’Office dans le support étendu
+## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP et versions héritées de Windows et d’Office
 
 - La [**prise en charge étendue de Windows 7 a pris fin le 14 janvier 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
@@ -171,7 +171,7 @@ Vous pouvez également désactiver entièrement l’autorité de certification d
 
 Pour plus d’informations, consultez la [documentation relative à l’accès conditionnel](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Autres informations
+## <a name="more-information"></a>Informations complémentaires
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

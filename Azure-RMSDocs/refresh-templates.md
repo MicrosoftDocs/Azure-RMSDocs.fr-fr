@@ -14,12 +14,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c96fa834e53c044c88393fc9ba2000be89c6a112
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 35968d8e7c22fa4ad0bb232dae9d2b6dd8362286
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807414"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560248"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -39,7 +39,7 @@ Lorsque vous utilisez le service Azure Rights Management à partir de Azure Info
 |**Client classique Azure Information Protection**|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Lorsque le service du scanneur Azure Information Protection démarre et que la stratégie locale remonte à plus d’une heure. De plus, le service du scanneur vérifie les modifications apportées toutes les heures et utilise ces modifications pour le prochain cycle d’analyse.<br /><br /> - Toutes les 24 heures.<br /><br /> En outre, étant donné que ce client est étroitement intégré à Office, tous les modèles actualisés pour les applications Microsoft 365, Office 2019, Office 2016 ou Office 2013 seront également actualisés pour le client Azure Information Protection.|
 |**Client d’étiquetage unifié Azure Information Protection**|Pour les applications Office, les modèles s’actualisent automatiquement chaque fois que l’application est ouverte.<br /><br /> En outre, étant donné que ce client est étroitement intégré à Office, tous les modèles actualisés pour les applications Microsoft 365, Office 2019, Office 2016 ou Office 2013 seront également actualisés pour le client d’étiquetage unifié Azure Information Protection.<br /><br /> Pour l’Explorateur de fichiers, PowerShell et le scanneur, le client ne télécharge pas de modèles, mais y accède en ligne, aucune étape supplémentaire n’est requise.|
 |**Microsoft 365 Apps, Office 2019, Office 2016 et Office 2013**|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />Pour forcer une actualisation plus tôt que la planification, consultez la section suivante, [Microsoft 365 Apps, office 2019, office 2016 et office 2013 : comment forcer une actualisation des modèles](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
-|**Office 2010**|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure. <br><br>Pour plus d’informations, consultez [AIP pour Windows et les versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).|
+|**Office 2010**|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure. <br><br>**Important**: la prise en charge étendue d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](known-issues.md#aip-and-legacy-windows-and-office-versions).|
 |**Exchange sur site avec le connecteur Azure Rights Management**<br /><br />Applicable aux règles de transport et à Outlook Web App|Actualisation automatique (aucune étape supplémentaire nécessaire). Toutefois, Outlook Web App met l’interface utilisateur en cache pendant un jour.|
 |**Office 2019 pour Mac et Office 2016 pour Mac**|Actualisation automatique lorsque vous ouvrez le contenu protégé. Pour forcer une actualisation, consultez la section suivante, [office 2019 pour Mac et office 2016 pour Mac : comment forcer une actualisation des modèles](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |**Application de partage RMS pour les ordinateurs Mac**|Actualisation automatique (aucune étape supplémentaire nécessaire).|

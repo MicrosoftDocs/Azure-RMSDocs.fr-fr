@@ -13,18 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3c174a8afba4571df1546ebeeebc790bd4cdc99
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 80a1a42642ab0d611c64da34e3bf5a86a219f447
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583572"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560405"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
 >***S’applique à**: services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez l’ensemble d’instructions suivant pour migrer votre déploiement des services AD RMS (Active Directory Rights Management Services) vers Azure Information Protection. 
 
@@ -70,19 +70,30 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
         
       - Plusieurs forêts, plusieurs clusters RMS
         
-    Remarque : Par défaut, plusieurs clusters AD RMS migrent vers un seul locataire pour Azure Information Protection. Si vous voulez des locataires séparés pour Azure Information Protection, vous devez les traiter comme des migrations différentes. Une clé d’un cluster RMS ne peut pas être importée dans plusieurs locataires.
-
+    > [!NOTE]
+    > Par défaut, plusieurs clusters AD RMS migrent vers un seul locataire pour Azure Information Protection. Si vous voulez des locataires séparés pour Azure Information Protection, vous devez les traiter comme des migrations différentes. Une clé d’un cluster RMS ne peut pas être importée dans plusieurs locataires.
+    >
+ 
 - **Toutes les conditions requises pour exécuter Azure information protection, y compris un abonnement pour Azure information protection (le service Azure Rights Management n’est pas activé)**:
 
     Consultez [Configuration requise pour Azure Information Protection](./requirements.md).
 
-    **Si vous avez des ordinateurs qui exécutent Office 2010**, vous devez installer le [client Azure information protection](rms-client/use-client.md) pour offrir la possibilité d’authentifier les utilisateurs auprès des services Cloud. Pour plus d’informations, consultez [AIP pour Windows et les versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
-    **Pour les versions ultérieures d’Office**, le client Azure information protection est *requis* pour la classification et l’étiquetage, et est *facultatif, mais recommandé* si vous souhaitez protéger uniquement les données. 
+    Le client Azure Information Protection est *requis* pour la classification et l’étiquetage, et est *facultatif, mais recommandé* si vous souhaitez protéger uniquement les données. 
 
     Pour plus d’informations, consultez les guides d’administration de l' [Azure information protection client d’étiquetage unifié](./rms-client/clientv2-admin-guide.md).
 
-    Bien que vous deviez disposer d’un abonnement pour Azure Information Protection avant de pouvoir effectuer une migration à partir d’AD RMS, nous vous recommandons de ne pas activer le service Rights Management pour votre locataire avant de démarrer la migration. Le processus de migration inclut cette étape d’activation après l’exportation des clés et modèles à partir d’AD RMS, et leur importation dans votre locataire pour Azure Information Protection. Toutefois, si le service Rights Management est déjà activé, vous pouvez toujours migrer à partir d’AD RMS en suivant quelques étapes supplémentaires.
+    Bien que vous deviez disposer d’un abonnement pour Azure Information Protection avant de pouvoir effectuer une migration à partir d’AD RMS, nous vous recommandons de ne pas activer le service Rights Management pour votre locataire avant de démarrer la migration. 
+
+    Le processus de migration inclut cette étape d’activation après l’exportation des clés et modèles à partir d’AD RMS, et leur importation dans votre locataire pour Azure Information Protection. Toutefois, si le service Rights Management est déjà activé, vous pouvez toujours migrer à partir d’AD RMS en suivant quelques étapes supplémentaires.
+
+    **Office 2010 uniquement**: 
+
+    Si vous avez des ordinateurs qui exécutent Office 2010, vous devez installer le [client Azure information protection](rms-client/use-client.md) pour offrir la possibilité d’authentifier les utilisateurs auprès des services Cloud. 
+
+    > [!IMPORTANT]
+    > Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >  
+    
 
 
 - **Préparation à la Azure information protection**:
@@ -219,7 +230,10 @@ Si vous avez déployé l’[extension d’appareil mobile](/previous-versions/wi
     
 Les contrôles d’intégration que vous avez configurés au cours de la phase de préparation ne sont plus nécessaires. Toutefois, si vous n’utilisez pas de contrôles d’intégration parce que vous avez choisi de tout migrer à la fois au lieu d’effectuer une migration en plusieurs phases, vous pouvez ignorer les instructions pour supprimer les contrôles d’intégration.
     
-Si vos ordinateurs Windows exécutent Office 2010, vérifiez si vous devez désactiver la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)**. Pour plus d’informations, consultez [AIP pour Windows et les versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+Si vos ordinateurs Windows exécutent Office 2010, vérifiez si vous devez désactiver la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)**.
+
+> [!IMPORTANT]
+> Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 **Étape 12 : renouvellement de la clé de locataire Azure Information Protection**
 

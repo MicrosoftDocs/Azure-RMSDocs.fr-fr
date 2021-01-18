@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8d4e19358fd9286eda3c7dcd1f65606d761c068b
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: d6c4ea5c07330efd429577ee569f8f899f63ae0d
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583402"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559742"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : Télécharger et installer le client d’étiquetage unifié Azure Information Protection
 
@@ -42,13 +42,19 @@ Avant d’installer le client d’étiquetage unifié Azure Information Protecti
 
 4. Si vous êtes invité à continuer, cliquez sur **Oui** et attendez que l’installation se termine.
 
-6. Cliquez sur **Fermer**. Avant de commencer à utiliser le client d’étiquetage unifié Azure Information Protection :
+6. Cliquez sur **Fermer**. 
 
-    - **Si votre ordinateur exécute Office 2010**, redémarrez votre ordinateur, puis passez à la section suivante pour la dernière étape.    
-        
-    - **Pour les autres versions d’Office**, redémarrez toutes les applications Office et toutes les instances de l’Explorateur de fichiers. L’installation est à présent terminée. Vous pouvez désormais utiliser le client pour étiqueter et protéger vos documents et vos e-mails.
+    Avant de commencer à utiliser le client d’étiquetage unifié Azure Information Protection, redémarrez toutes les applications Office et toutes les instances de l’Explorateur de fichiers. L’installation est à présent terminée. Vous pouvez désormais utiliser le client pour étiqueter et protéger vos documents et vos e-mails.
 
+    > [!NOTE]
+    > Si votre ordinateur exécute Office 2010, redémarrez votre ordinateur, puis passez à la [section suivante](#installing-the-azure-information-protection-unified-labeling-client-with-office-2010) pour la dernière étape.   
+    >
+     
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Installation du client d’étiquetage unifié Azure Information Protection avec Office 2010
+
+> [!IMPORTANT]
+> Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 Une fois le client d’étiquetage unifié Azure Information Protection installé à l’aide des instructions précédentes :
 
@@ -59,8 +65,6 @@ Une fois le client d’étiquetage unifié Azure Information Protection install�
 3. Si une boîte de dialogue **Contrôle d’accès utilisateur** s’affiche, cliquez sur **Oui**, afin que le client Azure Information Protection puisse mettre à jour le registre.
 
 L’installation est à présent terminée et vous pouvez utiliser le client d’étiquetage unifié Azure Information Protection pour étiqueter et protéger vos documents et vos e-mails.
-
-Pour plus d’informations, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="other-instructions"></a>Autres instructions    
 Vous trouverez des instructions supplémentaires dans le Guide de l’utilisateur du client d’étiquetage unifié Azure Information Protection.

@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a0fe31a92d97ebacf8ab0fed45198086079051fa
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: 60f9493601d40b17c42354dae2d3978b8cb5972b
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540188"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560065"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
 >***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP pour Windows et les versions d’Office dans support étendu](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Concerne :** [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez le [Guide d’administration du client classique](client-admin-guide-powershell.md). *
 
@@ -30,7 +30,7 @@ Lorsque vous installez le client d’étiquetage unifié Azure Information Prote
 
 Le module **AzureInformationProtection** vous permet de gérer le client en exécutant des commandes pour les scripts d’automatisation.
 
-Exemple :
+Par exemple :
 
 - [Obtenir-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus): obtient le Azure information protection étiquette et les informations de protection pour un fichier ou des fichiers spécifiés.
 - [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification): analyse un fichier pour définir automatiquement une étiquette de Azure information protection pour un fichier, en fonction des conditions configurées dans la stratégie.
@@ -93,7 +93,7 @@ Le tableau suivant mappe les applets de commande associées à RMS avec les appl
 
 Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les commandes s’exécutent dans votre propre contexte utilisateur dans une session PowerShell interactive.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Conditions préalables à l’exécution sans assistance des applets de commande d’étiquetage AIP](#prerequisites-for-running-aip-labeling-cmdlets-unattended)
 - [Créer et configurer des applications Azure AD pour Set-AIPAuthentication](#create-and-configure-azure-ad-applications-for-set-aipauthentication)

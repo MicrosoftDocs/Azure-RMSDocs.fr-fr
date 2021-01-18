@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 404e3d9db620011befb1a5d9a79f8186a8721cb7
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164111"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559419"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Plan de déploiement Azure Information Protection pour la protection uniquement
 
@@ -112,10 +112,8 @@ Procédez comme suit :
 
 1. **Déployer le client Azure Information Protection Classic**
     
-    Installez le client Classic pour que les utilisateurs prennent en charge Office 2010, afin de protéger les fichiers autres que les documents Office et les e-mails, ainsi que de suivre les documents protégés et de fournir une formation utilisateur pour ce client. 
-
-    Pour plus d’informations, consultez [Azure information protection client classique pour Windows](./rms-client/aip-client.md) et [AIP pour Windows et les versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
+    Installez le client Classic pour permettre aux utilisateurs de protéger des fichiers autres que des documents et des e-mails Office, ainsi que d’effectuer le suivi des documents protégés et de fournir une formation utilisateur pour ce client. Pour plus d’informations, consultez [Azure information protection Classic client pour Windows](./rms-client/aip-client.md).
+ 
 2. **Configurer des applications et des services Office**
     
     Configurez les applications et services Office pour les fonctionnalités de gestion des droits relatifs à l’information (IRM) dans SharePoint ou Exchange Online. 

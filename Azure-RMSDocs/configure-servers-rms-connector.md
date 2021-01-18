@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43e9731197231c8bccf2c5d00aec81b20ab3c889
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 3a616092ac1b74c2ae530898c69a61f071e93ea1
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583555"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559793"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
 >***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour vous aider à configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 du [déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
@@ -138,8 +138,8 @@ En outre, si Office 2010 est installé localement sur un serveur Exchange, les f
 
 Dans les deux cas, vous devez installer les applications clientes sur des ordinateurs distincts non configurés pour utiliser le connecteur. Elles utiliseront alors RMS correctement.
 
-> [!NOTE]
-> Pour plus d’informations sur AIP et Office 2010, consultez [AIP pour Windows et versions d’Office dans support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> [!IMPORTANT]
+> Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configuration d'un serveur Exchange afin d'utiliser le connecteur
 Les rôles Exchange qui communiquent avec le connecteur RMS sont les suivants :
@@ -249,7 +249,7 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 
 - Windows Server 2016
 
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
 - Windows Server 2012
 

@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9f4cc024066769c750f2fef946d9c5581cb99314
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
+ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560337"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98569093"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -40,6 +40,8 @@ Utilisez les informations suivantes pour les configurations avancées nécessair
 > Ces paramètres requièrent la modification du registre ou la spécification de paramètres avancés. Les paramètres avancés utilisent [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
 
+
+
 ## <a name="configuring-advanced-settings-for-the-client-via-powershell"></a>Configuration des paramètres avancés pour le client via PowerShell
 
 Utilisez la Microsoft 365 Security & Compliance Center PowerShell pour configurer des paramètres avancés pour la personnalisation des étiquettes et des stratégies d’étiquette. 
@@ -53,13 +55,14 @@ Pour supprimer un paramètre avancé, utilisez la même syntaxe de paramètre **
 
 Pour plus d'informations, consultez les pages suivantes :
 
-- [Syntaxe des paramètres avancés de la stratégie d’étiquette](#label-policy-advanced-settings)
-- [Syntaxe des paramètres avancés des étiquettes](#label-advanced-settings)
+- [Syntaxe des paramètres avancés de la stratégie d’étiquette](#label-policy-advanced-settings-syntax)
+- [Syntaxe des paramètres avancés des étiquettes](#label-advanced-settings-syntax)
+- [Vérification de vos paramètres avancés actuels](#checking-your-current-advanced-settings)
 - [Exemples de paramétrage des paramètres avancés](#examples-for-setting-advanced-settings)
 - [Spécification de la stratégie d’étiquette ou de l’identité de l’étiquette](#specifying-the-label-policy-or-label-identity)
 - [Ordre de priorité-mode de résolution des paramètres en conflit](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Références de paramètres avancés](#advanced-setting-references)
-### <a name="label-policy-advanced-settings"></a>Paramètres avancés de la stratégie d’étiquette
+### <a name="label-policy-advanced-settings-syntax"></a>Syntaxe des paramètres avancés de la stratégie d’étiquette
 
 Un exemple de paramètre avancé de stratégie d’étiquette est le paramètre permettant d’afficher la barre d’Information Protection dans les applications Office.
 
@@ -75,7 +78,7 @@ Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### <a name="label-advanced-settings"></a>Paramètres avancés des étiquettes
+### <a name="label-advanced-settings-syntax"></a>Syntaxe des paramètres avancés des étiquettes
 
 Un exemple de paramètre avancé d’étiquette est le paramètre permettant de spécifier une couleur d’étiquette.
 
@@ -91,27 +94,49 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
+
+
+### <a name="checking-your-current-advanced-settings"></a>Vérification de vos paramètres avancés actuels
+
+Pour vérifier les paramètres avancés actuels en vigueur, exécutez les commandes suivantes :
+
+**Pour vérifier les paramètres avancés de votre *stratégie d’étiquette***, utilisez la syntaxe suivante :
+
+Pour une stratégie d’étiquette nommée **Global**:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+**Pour vérifier les paramètres avancés de votre *étiquette***, utilisez la syntaxe suivante :
+
+Pour une étiquette nommée **public**:
+
+```powershell
+(Get-Label -Identity Public).settings
+```
+
 ### <a name="examples-for-setting-advanced-settings"></a>Exemples de paramétrage des paramètres avancés
 
-**Exemple 1 :** Définir un paramètre avancé pour une stratégie d’étiquette pour une valeur de chaîne unique :
+**Exemple 1**: définir une stratégie d’étiquette paramètre avancé pour une valeur de chaîne unique :
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-**Exemple 2 :** Définissez un paramètre avancé pour une étiquette pour une valeur de chaîne unique :
+**Exemple 2**: définir un paramètre avancé pour une étiquette pour une valeur de chaîne unique :
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-**Exemple 3 :** Définissez un paramètre avancé pour les étiquettes pour plusieurs valeurs de chaîne :
+**Exemple 3**: définir un paramètre avancé pour les étiquettes pour plusieurs valeurs de chaîne :
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-**Exemple 4 :** Supprimez un paramètre avancé de stratégie d’étiquette en spécifiant une valeur de chaîne NULL :
+**Exemple 4**: supprimer un paramètre avancé de stratégie d’étiquette en spécifiant une valeur de chaîne NULL :
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
@@ -233,12 +258,6 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/mod
 |**UseCopyAndPreserveNTFSOwner** | [Conserver les propriétaires NTFS pendant l’étiquetage](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### <a name="check-label-policy-settings"></a>Vérifier les paramètres de stratégie d’étiquette
-Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée « global » :
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### <a name="label-advanced-setting-reference"></a>Référence des paramètres avancés des étiquettes
 
@@ -253,13 +272,6 @@ Utilisez le paramètre *AdvancedSettings* avec [New-label](/powershell/module/ex
 |**SMimeEncrypt**|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### <a name="check-label-settings"></a>Vérifier les paramètres des étiquettes
-
-Exemple de commande PowerShell pour vérifier les paramètres de votre étiquette en vigueur pour une étiquette nommée « public » :
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Afficher la barre Information Protection dans les applications Office
 
@@ -371,13 +383,13 @@ Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier 
 |ConvertTo-JSON (". jpg", ". png")|En plus des fichiers PDF et des types de fichiers Office, appliquer la protection aux extensions de nom de fichier spécifiées | En plus des fichiers PDF et des types de fichiers Office, appliquer la protection aux extensions de nom de fichier spécifiées
 | | | |
 
-**Exemple 1 :**  Commande PowerShell pour que le scanneur protège tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
+**Exemple 1**: commande PowerShell pour le scanneur afin de protéger tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Exemple 2 :** Commande PowerShell pour le scanneur afin de protéger les fichiers. txt et. csv en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
+**Exemple 2**: commande PowerShell pour le scanneur afin de protéger les fichiers. txt et. csv en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -401,23 +413,23 @@ Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier 
 |\<null value>| La valeur par défaut se comporte comme la valeur de protection par défaut.|
 |ConvertTo-JSON (". DWG", ". zip")|En plus de la liste précédente, « . dwg » et « . zip » deviennent P\<EXT>| 
 
-Avec ce paramètre, les extensions suivantes deviennent toujours **P \<EXT> :** ». txt ",". xml ",". bmp ",". JT ",". jpg ",". jpeg ",". jpe ",". jif ",". JFIF ",". JFI ",". png ",". TIF ",". TIFF ",". gif "). L’exclusion notable est que « PTXT » ne devient pas « txt. pfile ». 
+Avec ce paramètre, les extensions suivantes deviennent toujours **P \<EXT>**:». txt ",". xml ",". bmp ",". JT ",". jpg ",". jpeg ",". jpe ",". jif ",". JFIF ",". JFI ",". png ",". TIF ",". TIFF ",". gif "). L’exclusion notable est que « PTXT » ne devient pas « txt. pfile ». 
 
 **AdditionalPPrefixExtensions** fonctionne uniquement si la protection de fichiers pfile avec la propriété Advanced- [**PFileSupportedExtension**](#pfilesupportedextension) est activée. 
 
-**Exemple 1 :** Commande PowerShell qui se comporte comme le comportement par défaut où Protect ". DWG" devient ". dwg. pfile" :
+**Exemple 1**: une commande PowerShell se comporte comme le comportement par défaut où protéger « . DWG » devient « . dwg. pfile » :
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Exemple 2 :**  Commande PowerShell pour remplacer toutes les extensions PFile de la protection générique (DWG. PFile) par la protection native (. PDWG) lorsque les fichiers sont protégés :
+**Exemple 2**: commande PowerShell permettant de remplacer toutes les extensions PFile de la protection générique (DWG. PFile) par la protection native (. PDWG) lorsque les fichiers sont protégés :
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**Exemple 3 :** Commande PowerShell pour modifier « . dwg » en « . PDWG » lors de l’utilisation de ce service, protéger ce fichier :
+**Exemple 3**: commande PowerShell pour modifier « . dwg » en « . PDWG » lors de l’utilisation de ce service, Protégez ce fichier :
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -478,7 +490,7 @@ Pour utiliser cette propriété avancée, vous devez rechercher le nom de la for
 > Si vous ne spécifiez pas de formes de mot dans ce paramètre de propriété avancé supplémentaire et que Word est inclus dans la valeur de clé **RemoveExternalContentMarkingInApp** , le texte que vous spécifiez dans la valeur [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) est recherché dans toutes les formes. 
 >
 
-**Pour rechercher le nom de la forme que vous utilisez et souhaitez exclure :**
+**Pour rechercher le nom de la forme que vous utilisez et souhaitez exclure**:
 
 1. Dans Word, affichez le volet de **sélection** : onglet dossier de **démarrage** > groupe **édition** > **Sélectionnez** l’option > **volet sélection**.
 
@@ -1098,11 +1110,11 @@ Pour les documents Office étiquetés par des îlots sécurisés, vous pouvez r�
 
 À la suite de cette option de configuration, la nouvelle étiquette de sensibilité est appliquée par le client d’étiquetage unifié Azure Information Protection comme suit :
 
-- **Pour les documents Office :** Lorsque le document est ouvert dans l’application de bureau, la nouvelle étiquette de sensibilité est indiquée comme définie et appliquée lorsque le document est enregistré.
+- **Pour les documents Office**: lorsque le document est ouvert dans l’application de bureau, la nouvelle étiquette de sensibilité est indiquée comme définie et appliquée lorsque le document est enregistré.
 
-- **Pour PowerShell :** [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) peuvent appliquer la nouvelle étiquette de sensibilité.
+- **Pour PowerShell**: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) peuvent appliquer la nouvelle étiquette de sensibilité.
 
-- **Pour l’Explorateur de fichiers :** Dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette de sensibilité est affichée, mais n’est pas définie.
+- **Pour l’Explorateur de fichiers**: dans la boîte de dialogue Azure information protection, la nouvelle étiquette de sensibilité est affichée, mais n’est pas définie.
 
 Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé **labelByCustomProperties** pour chaque étiquette de sensibilité que vous souhaitez mapper à l’ancienne étiquette. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
@@ -1424,7 +1436,7 @@ Par défaut, le Azure Information Protection client d’étiquetage unifié tent
 
 Si vous avez des ordinateurs qui ne peuvent pas se connecter à Internet pendant un certain temps, vous pouvez exporter et copier des fichiers qui gèrent manuellement la stratégie du client d’étiquetage unifié.
 
-**Pour prendre en charge les ordinateurs déconnectés du client d’étiquetage unifié :**
+**Pour prendre en charge les ordinateurs déconnectés du client d’étiquetage unifié**:
 
 1. Choisissez ou créez un compte d’utilisateur dans Azure AD que vous allez utiliser pour télécharger des étiquettes et des paramètres de stratégie que vous souhaitez utiliser sur votre ordinateur déconnecté.
 
@@ -1636,14 +1648,14 @@ Les types de nœuds pris en charge sont les suivants :
 | **Except**    | Retourne la valeur *not* pour son propre enfant, provoquant son comportement comme **All**        |
 | **SentTo**, suivi des **domaines : listOfDomains**    |Vérifie l’un des éléments suivants : <br>-Si le parent est **except**, vérifie si **tous** les destinataires se trouvent dans l’un des domaines.<br>-Si le parent est autre que, **à l’exception** de, **vérifie si l’un des** destinataires est dans l’un des domaines.   |
 | **EMailLabel**, suivi de l’étiquette | Celui-ci peut avoir l'une des valeurs suivantes :  <br>-ID d’étiquette <br>-NULL, s’il n’est pas étiqueté             |
-| **AttachmentLabel**, suivi par l' **étiquette** et les **Extensions** prises en charge   | Celui-ci peut avoir l'une des valeurs suivantes :  <br><br>**:** <br>-Si le parent est **except**, vérifie si **toutes** les pièces jointes avec une extension prise en charge existent dans l’étiquette<br>-Si le parent est autre que, **à l’exception** de, vérifie si l' **une** des pièces jointes avec une extension prise en charge existe dans l’étiquette <br>-S’il n’est pas étiqueté et **étiquette = null** <br><br> **false :** Pour tous les autres cas <br><br>**Remarque**: si la propriété **Extensions** est vide ou manquante, tous les types de fichiers pris en charge (extensions) sont inclus dans la règle.
+| **AttachmentLabel**, suivi par l' **étiquette** et les **Extensions** prises en charge   | Celui-ci peut avoir l'une des valeurs suivantes :  <br><br>**vrai**: <br>-Si le parent est **except**, vérifie si **toutes** les pièces jointes avec une extension prise en charge existent dans l’étiquette<br>-Si le parent est autre que, **à l’exception** de, vérifie si l' **une** des pièces jointes avec une extension prise en charge existe dans l’étiquette <br>-S’il n’est pas étiqueté et **étiquette = null** <br><br> **false**: pour tous les autres cas <br><br>**Remarque**: si la propriété **Extensions** est vide ou manquante, tous les types de fichiers pris en charge (extensions) sont inclus dans la règle.
 | | |
 
 #### <a name="rule-action-syntax"></a>Syntaxe de l’action de règle
 
 Les actions de règle peuvent être l’une des suivantes :
 
-|Action  |Syntaxe  |Exemple de message  |
+|Action  |Syntax  |Exemple de message  |
 |---------|---------|---------|
 |**Bloquer**     |    `Block (List<language, [title, body]>)`     |    **_E-mail bloqué_* _<br /><br />  _You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **secret** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation n’autorise pas cette action. Envisagez de supprimer ces destinataires ou de remplacer le contenu. *|
 |**Viendra**     | `Warn (List<language,[title,body]>)`        |  **_Confirmation obligatoire_* _<br /><br />_You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **général** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation nécessite une confirmation pour l’envoi de ce contenu. *       |
@@ -1994,7 +2006,7 @@ Si vous avez des chemins d’accès de fichiers longs dans SharePoint version 20
 
 Cette valeur est définie dans la classe **HttpRuntimeSection** de la `ASP.NET` Configuration. 
 
-**Pour mettre à jour la classe HttpRuntimeSection** : * *
+**Pour mettre à jour la classe HttpRuntimeSection**:
 
 1. Sauvegardez votre configuration de **web.config** . 
 

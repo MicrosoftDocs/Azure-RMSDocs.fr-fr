@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 6936402c9b58bf46b94e71ab597ce04c0391f59d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384534"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240816"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Tutoriel : Empêcher les partages inappropriés dans Outlook avec Azure Information Protection (AIP)
 
@@ -41,7 +41,7 @@ Avant de commencer ce tutoriel, veillez à disposer de la configuration système
 |---------|---------|
 |**Configuration requise pour la machine**     | Veillez à : <br /><br />- Disposer d’un ordinateur Windows, avec le client d’étiquetage unifié Azure Information Protection installé. Pour plus d’informations, consultez [Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection (AIP)](quickstart-deploy-client.md) <br /><br />- Avoir PowerShell installé et pouvoir l’exécuter en tant qu’administrateur. <br /><br />- Pouvoir vous connecter à Outlook. Vous devrez peut-être redémarrer Outlook plusieurs fois au cours de ce tutoriel.     |
 |**Abonnement à Azure Information Protection**     |   Il vous faut un abonnement Azure comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />Si vous n’avez aucun de ces abonnements, créez un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
-|**Des étiquettes de sensibilité et une stratégie de test**     |  Une étiquette de sensibilité **Général** configurée dans votre stratégie. <br /><br />Configurez des étiquettes de sensibilité dans le Centre d’administration d’étiquetage, notamment le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité Microsoft 365. Pour plus d’informations, consultez la [documentation Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Nous vous recommandons d’utiliser une stratégie de test pour ce tutoriel afin de ne pas affecter votre stratégie en cours. <br />Veillez à avoir le nom de votre stratégie sous la main ainsi que le GUID pour votre étiquette **Général**.   |
+|**Des étiquettes de sensibilité et une stratégie de test**     |  Une étiquette de sensibilité **Général** configurée dans votre stratégie. <br /><br />Configurez des étiquettes de sensibilité dans le Centre d’administration d’étiquetage, notamment le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité Microsoft 365. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Nous vous recommandons d’utiliser une stratégie de test pour ce tutoriel afin de ne pas affecter votre stratégie en cours. <br />Veillez à avoir le nom de votre stratégie sous la main ainsi que le GUID pour votre étiquette **Général**.   |
 | | |
 
 Allons-y. 
@@ -399,7 +399,7 @@ Une fois que vous avez terminé ce tutoriel, vous pouvez conserver la stratégie
 
 Si vous voulez supprimer votre stratégie, faites-le dans le Centre d’administration où elle a été créée, c’est-à-dire le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité de Microsoft 365.
 
-Pour plus d’informations, consultez la [documentation Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
 Une fois la stratégie supprimée, redémarrez Outlook sur l’ordinateur client pour qu’il ne soit plus configuré avec les paramètres définis dans ce tutoriel.
 

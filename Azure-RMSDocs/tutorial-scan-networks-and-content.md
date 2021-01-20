@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384636"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240884"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Tutoriel : Découverte de votre contenu sensible avec le scanneur Azure Information Protection (AIP)
 
@@ -50,7 +50,7 @@ Ce didacticiel vous montre comment effectuer les opérations suivantes :
 |**Un travail d’analyse de contenu** | Veillez à avoir un travail d’analyse de contenu de base que vous pouvez utiliser pour le test. Vous en avez peut-être créé un quand vous avez [installé votre scanneur](tutorial-install-scanner.md).<br /><br />Si vous devez en créer un maintenant, vous pouvez utiliser les instructions de [Configurer Azure Information Protection dans le portail Azure](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). Si vous avez un travail d’analyse de contenu simple, revenez ici pour suivre ce tutoriel. |
 |**SQL Server**     | Pour exécuter le scanneur, SQL Server doit être installé sur la machine du scanneur. <br /><br /> Pour l’installer, accédez à la [page de téléchargement de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads), puis sélectionnez **Télécharger maintenant** sous l’option d’installation que vous voulez utiliser. Dans le programme d’installation, sélectionnez le type d’installation **De base**. <br /><br />**Remarque** : Nous vous recommandons d’installer SQL Server Entreprise pour les environnements de production et l’édition Express seulement pour les tests.    |
 |**Compte Active Directory Azure**     |  Quand vous utilisez un environnement standard connecté au cloud, votre compte de domaine doit être synchronisé avec [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ce n’est pas nécessaire si vous travaillez hors connexion. <br /><br />Si vous avez un doute sur votre compte, contactez un de vos administrateurs système pour vérifier l’état de la synchronisation. Pour plus d’informations, consultez [Déploiement du scanneur avec d’autres configurations](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
-|**Des étiquettes de sensibilité et une stratégie publiée** |Vous devez avoir créé des étiquettes de sensibilité et publié une stratégie avec au moins une étiquette dans le Centre d’administration d’étiquetage, pour le compte de service du scanneur. <br /><br />Configurez des étiquettes de sensibilité dans le Centre d’administration d’étiquetage, notamment le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité Microsoft 365. Pour plus d’informations, consultez la [documentation Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
+|**Des étiquettes de sensibilité et une stratégie publiée** |Vous devez avoir créé des étiquettes de sensibilité et publié une stratégie avec au moins une étiquette dans le Centre d’administration d’étiquetage, pour le compte de service du scanneur. <br /><br />Configurez des étiquettes de sensibilité dans le Centre d’administration d’étiquetage, notamment le Centre de conformité Microsoft 365, le Centre de sécurité Microsoft 365 ou le Centre de sécurité et de conformité Microsoft 365. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels). |
 | | | 
 
 

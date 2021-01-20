@@ -1,6 +1,6 @@
 ---
 title: Prérequis supplémentaires pour Azure AD et Azure Information Protection
-description: Découvrez les prérequis Azure AD supplémentaires pour Azure Information Protection dans des scénarios spécifiques, comme l’authentification multifacteur ou basée sur les certificats, ou encore les ordinateurs utilisant Office 2010 et plus encore.
+description: Découvrez les prérequis Azure AD supplémentaires pour Azure Information Protection dans des scénarios spécifiques, comme l’authentification multifacteur ou basée sur un certificat et bien plus encore.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 7ba843beac002261cd1ada865767b414e22560ae
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583351"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560388"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Prérequis Azure AD supplémentaires pour Azure Information Protection
 
@@ -25,26 +25,16 @@ ms.locfileid: "97583351"
 >
 >***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
+> [!NOTE]
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. 
+>
+> Ce laps de temps permet à tous les utilisateurs actuels d’Azure Information Protection de passer à la solution d’étiquetage unifié Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+
 Un [annuaire Azure AD est requis](requirements.md#azure-active-directory) pour utiliser Azure Information Protection. Utilisez un compte d’un annuaire Azure AD pour vous connecter au portail Azure, dans lequel vous pouvez configurer les paramètres Azure Information Protection.
 
 Si vous avez un abonnement incluant Azure Information Protection ou Azure Rights Management, votre annuaire Azure AD est créé automatiquement pour vous si nécessaire.
 
 Les sections suivantes liste les prérequis AIP et Azure AD supplémentaires pour des scénarios spécifiques. 
-
-## <a name="computers-running-office-2010"></a>Ordinateurs qui exécutent Office 2010
-
-En plus d’un compte Azure AD, les ordinateurs qui exécutent Microsoft 2010 nécessitent le client Azure Information Protection pour Windows pour s’authentifier auprès d’Azure Information Protection, et son service de protection des données, Azure Rights Management. 
-
-Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ces ordinateurs doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
-
-Nous vous recommandons de déployer le client d’étiquetage unifié Azure Information Protection. Si vous n’avez pas encore effectué la mise à niveau, vous avez peut-être encore le [client classique Azure Information Protection ](./rms-client/aip-client.md) qui est déployé sur votre système. 
-
-Pour plus d’informations, consultez [Le côté client d’Azure Information Protection](rms-client/use-client.md) et [AIP pour les versions Windows et Office en support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
-> [!NOTE]
-> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. 
->
-> Ce laps de temps permet à tous les utilisateurs actuels d’Azure Information Protection de passer à la solution d’étiquetage unifié Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>Prise en charge de l’authentification basée sur les certificats
 
@@ -110,5 +100,18 @@ Si vous utilisez un appareil mobile ou un ordinateur Mac qui s’authentifie loc
 - Version serveur minimale de **Windows Server 2012 R2**
 - Un autre fournisseur d’authentification qui prend en charge le protocole OAuth 2.0
 
+## <a name="computers-running-office-2010"></a>Ordinateurs qui exécutent Office 2010
+
+> [!IMPORTANT]
+> Le support étendu d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
+
+En plus d’un compte Azure AD, les ordinateurs qui exécutent Microsoft 2010 nécessitent le client Azure Information Protection pour Windows pour s’authentifier auprès d’Azure Information Protection, et son service de protection des données, Azure Rights Management. 
+
+Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ces ordinateurs doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
+
+Nous vous recommandons de déployer le client d’étiquetage unifié Azure Information Protection. Si vous n’avez pas encore effectué la mise à niveau, vous avez peut-être encore le [client classique Azure Information Protection ](./rms-client/aip-client.md) qui est déployé sur votre système. 
+
+Pour plus d’informations, consultez [Côté client d’Azure Information Protection](rms-client/use-client.md).
 ## <a name="next-steps"></a>Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements.md).

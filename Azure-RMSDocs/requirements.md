@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c001f032281e323c6a4ca72530b1f005c3a1c268
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 50f8a118327f5a04748c4327175298694b0c84f4
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164570"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560269"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -69,7 +69,7 @@ Pour prendre en charge l’authentification et l’autorisation pour Azure Infor
 
 L’accès conditionnel est pris en charge en préversion pour les documents protégés par Azure Information Protection. Pour plus d'informations, voir : [Je vois qu’Azure Information Protection est répertorié en tant qu’application cloud disponible pour l’accès conditionnel : comment cela fonctionne-t-il ?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Des conditions préalables supplémentaires sont requises pour des scénarios spécifiques, par exemple lors de l’utilisation de l’authentification par certificat ou multifacteur, lorsque les valeurs UPN ne correspondent pas aux adresses e-mail des utilisateurs ou lors de l’utilisation d’[Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+Des prérequis supplémentaires sont requis pour des scénarios spécifiques, par exemple en cas d’utilisation de l’authentification basée sur un certificat ou de l’authentification multifacteur ou lorsque les valeurs UPN ne correspondent pas aux adresses e-mail de l’utilisateur.
 
 Pour plus d’informations, consultez :
 
@@ -155,7 +155,11 @@ Les autres éditions d’Office ne peuvent pas protéger les documents et messag
 
 Les étiquettes sont visibles dans une barre affichée en haut du document Office, accessible avec le bouton **Sensibilité** dans le client d’étiquetage unifié ou avec le bouton **Protéger** dans le client classique.
 
-Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md) et [AIP pour les versions Windows et Office en support étendu](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+Pour plus d’informations, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
+
+> [!IMPORTANT]
+> Le support étendu d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Fonctionnalités et caractéristiques Office non prises en charge
 

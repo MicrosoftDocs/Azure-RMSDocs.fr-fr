@@ -4,7 +4,7 @@ description: Décrit comment les administrateurs peuvent suivre l’accès aux d
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/07/2021
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7b60438ad3d1e8a971c58a7f29b2f8b41dd84c91
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 935e6a3439a06887a91981cb8ed69a342172b686
+ms.sourcegitcommit: 99a58f50b08abc546073657c66247553faeecf8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163737"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608619"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection (version préliminaire publique)
 
@@ -103,12 +103,12 @@ Les administrateurs généraux peuvent révoquer l’accès pour tout document p
 
 ### <a name="un-revoke-access"></a>Annuler la révocation de l’accès
 
-Si vous avez refusé accidentellement l’accès à un document spécifique, utilisez la même valeur **contentid** avec l’applet de commande [Clear-AipServiceDocumentRevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) pour annuler la révocation de l’accès. 
+Si vous avez refusé accidentellement l’accès à un document spécifique, utilisez la même valeur **contentid** avec l’applet de commande [Clear-AipServiceDocumentRevoked](/powershell/module/aipservice/clear-aipservicedocumentrevoked) pour annuler la révocation de l’accès. 
 
 Par exemple :
 
 ```PowerShell
-Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
+Clear-AipServiceDocumentRevoked -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
 ```
 
 L’accès au document est accordé à l’utilisateur que vous avez défini dans le paramètre **IssuerName** .

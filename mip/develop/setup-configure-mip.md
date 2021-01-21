@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 44636616cf410f0976a51afa4bd110e0531de85c
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 5daada951fb888fc7aa01071236af751ec38e002
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535550"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215525"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP)
 
@@ -27,7 +27,7 @@ Veillez à consulter les rubriques suivantes avant de commencer :
 - [Comment la protection fonctionne-t-elle dans Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 > [!IMPORTANT]
-> **Afin de respecter la confidentialité de l’utilisateur, vous devez lui demander son consentement avant d’activer la journalisation automatique.** L’exemple suivant est un message standard que Microsoft utilise pour la notification de journalisation :
+> **Pour respecter la confidentialité de l’utilisateur, vous devez lui demander son consentement avant d’activer la journalisation automatique.** L’exemple suivant est un message standard que Microsoft utilise pour la notification de journalisation :
 >
 > *En activant la journalisation des erreurs et des performances, vous acceptez d’envoyer les données des erreurs et des performances à Microsoft. Microsoft collecte les données des erreurs et des performances via Internet (« Données »). Microsoft utilise ces données pour fournir et améliorer la qualité, la sécurité et l’intégrité des produits et des services Microsoft. Par exemple, nous analysons les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit. Les données incluent également des informations sur la configuration de votre logiciel, comme le logiciel en cours d’exécution et l’adresse IP.*
 
@@ -102,7 +102,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
 
    **Téléchargements Tar.gz/.Zip**
 
-   Les téléchargements Tar.gz et .Zip contiennent plusieurs fichiers compressés supplémentaires, un pour chaque API. Les fichiers compressés sont nommés comme suit, où \<API\> = `file`, `protection` ou `upe` et \<OS\> = la plateforme : `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Par exemple, le fichier pour les binaires et en-têtes de l’API de protection sur Debian serait : `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Chaque fichier .tar.gz/.zip contenu se divise en trois répertoires :
+   Les téléchargements Tar.gz et .Zip contiennent plusieurs fichiers compressés, un pour chaque API. Les fichiers compressés sont nommés comme suit, où \<API\> = `file`, `protection` ou `upe` et \<OS\> = la plateforme : `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Par exemple, le fichier pour les binaires et en-têtes de l’API de protection sur Debian serait : `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Chaque fichier .tar.gz/.zip contenu se divise en trois répertoires :
 
    - **Bins** : fichiers binaires compilés pour chaque architecture de plateforme, le cas échéant.
    - **Include** : fichiers d’en-tête (C++).
@@ -155,7 +155,7 @@ Pour enregistrer un compte d’application dans Azure AD en vue de l’utiliser 
 
 1. Effectuez les étapes de la section [Inscrire une application auprès d’Azure AD, Inscrire une nouvelle application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). À des fins de test, utilisez les valeurs suivantes pour les propriétés spécifiées lorsque vous parcourez les étapes du guide :
     - **Types de comptes pris en charge** - Sélectionnez « Comptes dans cet annuaire organisationnel uniquement ».
-    - **URI de redirection** - Définissez le type de l’URI de redirection sur « Public client (mobile & desktop) » (Client public (mobile & bureau)). Étant donné que le kit SDK utilise des applications clientes de console simples, utilisez un URI au format `<app-name>://authorize`.
+    - **URI de redirection** - Définissez le type de l’URI de redirection sur « Public client (mobile & desktop) » (Client public (mobile & bureau)). Si votre application utilise la bibliothèque d’authentification Microsoft (MSAL), utilisez `http://localhost`. Dans le cas contraire, utilisez le format `<app-name>://authorize`.
 
 2. Lorsque vous avez terminé, vous êtes ramené à la page **Application inscrite** pour l’inscription de votre nouvelle application. Copiez et enregistrez le GUID dans le champ **ID d’application (client)** , car vous en aurez besoin pour les guides de démarrage rapide.
 
@@ -164,7 +164,7 @@ Pour enregistrer un compte d’application dans Azure AD en vue de l’utiliser 
 4. Vous allez maintenant ajouter les API MIP et les autorisations que l’application nécessitera au moment de l’exécution :
    - Sur la page **Sélectionner une API**, cliquez sur **Microsoft Rights Management Services**.
    - Sur la page de l’API **Azure Rights Management Services**, cliquez sur **Autorisations déléguées**.
-   - Dans la section **Sélectionner des autorisations**, cochez l’autorisation **user_impersonation**. Cela permet à l’application de créer un contenu protégé au nom d’un utilisateur et d’y accéder.
+   - Dans la section **Sélectionner des autorisations**, cochez l’autorisation **user_impersonation**. Ce droit permet à l’application de créer un contenu protégé au nom d’un utilisateur et d’y accéder.
    - Cliquez sur **Ajouter des autorisations** pour enregistrer.
 
 5. Répétez l’étape 4 mais, cette fois, lorsque vous accédez à la page **Sélectionner une API**, vous devez rechercher l’API.
@@ -177,7 +177,7 @@ Pour enregistrer un compte d’application dans Azure AD en vue de l’utiliser 
 
 Lorsque vous avez terminé, l’inscription de l’application et les autorisations d’API doivent ressembler aux exemples suivants :
 
-   [![Inscription de l’application à Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Autorisations Azure AD de l’application](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Inscription d’application Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Inscription d’application Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 Pour plus d’informations sur l’ajout d’API et d’autorisations à une inscription, consultez [Configurer une application cliente pour accéder aux API web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Vous y trouverez des informations sur l’ajout des API et des autorisations requises par une application cliente.
 
@@ -194,7 +194,7 @@ Avant de pouvoir lancer une application développée avec MIP, vous devez obteni
    - Nom et prénom du demandeur
    - Adresse de messagerie du demandeur
 
-2. Après réception de votre demande d'IPIA, nous vous enverrons un formulaire (sous forme de document Word). Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à l'adresse [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) avec les informations suivantes :
+2. Après réception de votre demande d’IPIA, nous vous enverrons un formulaire (sous forme de document Word). Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à l'adresse [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) avec les informations suivantes :
 
    - Raison sociale de la société
    - État/Province (États-Unis / Canada) ou pays d'immatriculation

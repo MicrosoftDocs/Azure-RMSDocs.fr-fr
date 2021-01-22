@@ -4,7 +4,7 @@ description: Informations vous permettant de surveiller le connecteur et l’uti
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a440f075e8bbcd4d8c2d8ee8050ef0ab1d203b54
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 49b74533f745906ee919173884c8bc4bafdb52fa
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381831"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659100"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
 >***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Après avoir installé et configuré le connecteur RMS, vous pouvez utiliser les méthodes et les informations suivantes pour surveiller le connecteur et l’utilisation du service Azure Rights Management d’Azure Information Protection par votre organisation.
 
@@ -179,21 +179,25 @@ La journalisation de l’utilisation vous aide à identifier quand les e-mails e
 
 Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](log-analyze-usage.md).
 
-Si vous avez besoin d’une journalisation plus détaillée à des fins de diagnostic, vous pouvez utiliser [Debugview](/sysinternals/downloads/debugview) dans Windows Sysinternals. Activez le traçage pour le connecteur RMS en modifiant le fichier web.config du site par défaut dans IIS :
+Si vous avez besoin d’une journalisation plus détaillée à des fins de diagnostic, utilisez [DebugView](/sysinternals/downloads/debugview) à partir de Windows Sysinternals pour générer les journaux dans un canal de débogage. 
 
-1. Recherchez le fichier web.config dans **%programfiles%\Microsoft Rights Management connector\Web Service**.
+1. Lancez DebugView en tant qu’administrateur, puis sélectionnez **capturer** la  >  **capture global Win32**.
 
-1. Recherchez la ligne suivante :
+1. Activez le suivi pour le connecteur RMS en modifiant le fichier **web.config** pour le site par défaut dans IIS :
 
-    ```sh
-    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Localisez le fichier **web.config** dans le dossier **%ProgramFiles%\Microsoft Rights Management connector\Web service** .
 
-1. Remplacez cette ligne par le texte suivant :
-    ```sh
-    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Recherchez la ligne suivante :
+
+        ```sh
+        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
+
+    1. Remplacez cette ligne par le texte suivant :
+        ```sh
+        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
 
 1.  Arrêtez et démarrez les services IIS pour activer le suivi. 
 
-1.  Quand vous avez capturé les traces dont vous avez besoin, rétablissez la ligne de l’étape 3, puis arrêtez et redémarrez les services IIS.
+1.  Une fois que vous avez capturé les traces dans DebugView dont vous avez besoin, restaurez la ligne à l’étape 3, puis arrêtez et redémarrez IIS.

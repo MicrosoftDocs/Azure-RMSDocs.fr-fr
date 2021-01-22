@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6787f7d3bfcc2cb877291399d9519a707b1ef248
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: fdcc7103795fda20ae253d9f96c2aeb3f29d185f
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164077"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98658998"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-classic-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client Azure Information Protection Classic
 
@@ -199,7 +199,7 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 Il n’est pas nécessaire de redémarrer l’ordinateur après avoir apporté ces modifications au Registre. Toutefois, si vous utilisez des commandes PowerShell pour protéger des fichiers, vous devez démarrer une nouvelle session PowerShell pour que les modifications soient effectives.
 
-Pour savoir comment modifier le Registre afin de changer le niveau de protection par défaut des fichiers, voir [Configuration de l’API des fichiers](../develop/file-api-configuration.md) dans l’aide aux développeurs. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
+Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Types de fichiers exclus de la classification et de la protection
 

@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 514eaf2f935d4ec454b57dbaf2ce1c97c029c4b8
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 6dffbe4480d5b6d1c2a01813d982e2a36ce81933
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806241"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659151"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>Déploiement des versions précédentes du scanneur du client Azure Information Protection Classic
 
@@ -340,7 +340,7 @@ Comme dans l’étape précédente, le scanneur ne peut pas étiqueter les fichi
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Modification du Registre pour le scanneur
 
-Pour changer le comportement par défaut du scanneur pour protéger d’autres types de fichiers que les fichiers Office et PDF, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés ainsi que le type de protection (native ou générique). Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
+Pour changer le comportement par défaut du scanneur pour protéger d’autres types de fichiers que les fichiers Office et PDF, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés ainsi que le type de protection (native ou générique). Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
 
 - Le scanneur a son propre comportement par défaut : seuls les formats de fichier Office et les documents PDF sont protégés par défaut. Si le Registre n’est pas modifié, aucun des autres types de fichiers ne sera étiqueté ou protégé par le scanneur.
 

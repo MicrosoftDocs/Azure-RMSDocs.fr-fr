@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9a139aaa4e36a45d23821ae71b27262c5b8c3f89
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 112593d0d26deca85dad62d580c73553f4a26107
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806292"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659185"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configuration et installation du Azure Information Protection scanneur classique
 
@@ -121,7 +121,7 @@ Pour configurer votre scanneur :
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Path  |Syntaxe  |
+    |Chemin  |Syntaxe  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` </br></br>Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. </br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -252,7 +252,7 @@ Par défaut, le scanneur AIP protège les types de fichiers Office et les fichie
 - Spécifiez les types de fichiers supplémentaires que vous souhaitez protéger.
 - Spécifiez le type de protection que vous souhaitez appliquer (natif ou générique)
 
-Pour plus d’informations, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide pour développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
+Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
 
 Pour aligner les types de fichiers pris en charge avec le client, où tous les fichiers sont automatiquement protégés par une protection native ou générique :
 

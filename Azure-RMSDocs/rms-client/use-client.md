@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fcd21a58dabe65f1de88694f97dc57975bc19450
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: e715ca9f5131095e38e0fb9589494924ae36210f
+ms.sourcegitcommit: b82640b2af14b383a3d4d73692f3da907dc0f191
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659066"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711867"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -153,7 +153,7 @@ Pour plus d’informations, consultez également :
 |**Étiquetage manuel**| ![oui](../media/yes-icon.png)   | ![oui](../media/yes-icon.png)   |![oui](../media/yes-icon.png) |
 |**Étiquette par défaut**| ![oui](../media/yes-icon.png)| ![oui](../media/yes-icon.png)| ![oui](../media/yes-icon.png)|
 |**Étiquetage automatique ou recommandé** <br />Pour Word, Excel, PowerPoint, Outlook|![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
-|**Étiquetage obligatoire**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
+|**Étiquetage obligatoire**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |  ![oui](../media/yes-icon.png)|
 |**Autorisations définies par l’utilisateur pour une étiquette**: <br />Ne pas transférer pour les e-mails| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
 |**Autorisations définies par l’utilisateur pour une étiquette**: <br />Autorisations personnalisées pour Word, Excel, PowerPoint| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
 |**Prise en charge multilingue pour les étiquettes**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |![oui](../media/yes-icon.png) |
@@ -210,7 +210,7 @@ Pour plus d’informations, consultez également :
 Lorsque le client Azure Information Protection Classic et le Azure Information Protection client d’étiquetage unifié prennent tous deux en charge la même fonctionnalité, utilisez les listes suivantes pour identifier les différences fonctionnelles entre les deux clients :
 
 
-|Fonctionnalités |Client classique|Client d’étiquetage unifié|
+|Fonctionnalité |Client classique|Client d’étiquetage unifié|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |**Paramétrage**| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |**Marquer la sélection et l’affichage quand elle est appliquée dans les applications Office**|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|

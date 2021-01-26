@@ -5,25 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cb8120f710c3c88b12f539e265bb620f4eae981
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 5f63b23bd6f4e6fdf1198d12e235991f4a692495
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386353"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809373"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et des groupes pour Azure Information Protection
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Avant de déployer Azure Information Protection pour votre organisation, assurez-vous de disposer de comptes pour les utilisateurs et les groupes d’Azure AD pour le locataire de votre organisation.
 
@@ -160,7 +160,7 @@ Si la colonne **ProxyAddresses** n’est pas remplie, la valeur de l’attribut 
 Par exemple :
 
 
-|  Nom complet   |     UserPrincipalName      |                            ProxyAddresses                             |
+|  Nom d’affichage   |     UserPrincipalName      |                            ProxyAddresses                             |
 |-----------------|----------------------------|-----------------------------------------------------------------------|
 | Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
 |    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
@@ -184,7 +184,7 @@ Dans la plupart des cas, la valeur pour UserPrincipalName correspond à une des 
 > [!TIP]
 > Vous pouvez utiliser l’applet de commande Export-Csv pour exporter les résultats dans une feuille de calcul pour faciliter les tâches de gestion, telles que la recherche et la modification en bloc pour l’importation.
 >
-> Par exemple : `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> Par exemple : `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confirmer que les comptes de groupe sont prêts pour Azure Information Protection
 

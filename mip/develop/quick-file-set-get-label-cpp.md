@@ -1,18 +1,18 @@
 ---
 title: Démarrage rapide - Définir et obtenir une étiquette de sensibilité sur un fichier à l’aide du kit SDK MIP C++
-description: Guide de démarrage rapide illustrant comment utiliser le kit SDK C++ Microsoft Information Protection pour définir et obtenir une étiquette de sensibilité sur un fichier.
+description: Guide de démarrage rapide sur l’utilisation du kit de développement logiciel (SDK) C++ Microsoft Information Protection (MIP) pour définir et obtenir une étiquette de confidentialité sur un fichier (C++)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
-ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
+ms.openlocfilehash: 101e99790c09acb52841d81e139802b039adb710
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865159"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659168"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
@@ -220,7 +220,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    | Espace réservé | valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Un identificateur explicite du contenu. Exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Un identificateur explicite du contenu. Par exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `"c:\\Test\\Test_labeled.docx"`. |
 

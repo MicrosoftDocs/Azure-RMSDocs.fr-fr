@@ -1,6 +1,6 @@
 ---
 title: Démarrage rapide – Définir et obtenir une étiquette de sensibilité sur un fichier à l’aide du kit SDK MIP C#
-description: Guide de démarrage rapide illustrant comment utiliser le wrapper .NET du SDK Microsoft Information Protection (MIP) pour définir et obtenir une étiquette de sensibilité sur un fichier.
+description: Guide de démarrage rapide sur l’utilisation du wrapper .NET du kit de développement logiciel (SDK) Microsoft Information Protection (MIP) pour définir et obtenir une étiquette de confidentialité sur un fichier (C#)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: aaa7857146bc2dbc806e20097657831445e48949
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972167"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659032"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
 
@@ -87,7 +87,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `f42a3342-8706-4288-bd31-ebb85995028z`. |
    | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `c:\\Test\\Test_labeled.docx`. |
 
-## <a name="build-and-test-the-application"></a>Générer et tester l'application
+## <a name="build-and-test-the-application"></a>Générer et tester l’application
 
 Générez et testez votre application cliente.
 

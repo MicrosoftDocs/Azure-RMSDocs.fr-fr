@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cd07207751a3ad7f6bf929f0d94d9f8802f15436
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 7df480389741a900326477e8d6088ac9dc6da596
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164553"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808666"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client Azure Information Protection Classic
 
@@ -73,7 +73,7 @@ Pour plus d’informations, consultez la collection appropriée de [Azure inform
 Lisez cette section avant de commencer à utiliser les commandes PowerShell quand votre organisation utilise Azure Information Protection pour la classification et la protection, ou seulement le service Azure Rights Management pour la protection des données.
 
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 En plus des prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour l’étiquetage Azure Information Protection et pour le service de protection de données Azure Rights Management :
 
@@ -386,7 +386,7 @@ Notez que si les modèles Rights Management sont modifiés, vous devez les tél�
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 Outre les prérequis pour l’installation du module AzureInformationProtection, le compte utilisé pour protéger ou déprotéger des fichiers doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 

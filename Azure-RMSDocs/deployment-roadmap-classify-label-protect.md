@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 594d6fed74e2a8330c2a523ddbab5da2dd3d880c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 6612500a86f8a84c5f5762e91933c3f9cf743678
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382494"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809520"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Plan de déploiement AIP pour la classification, l’étiquetage et la protection
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Suivez les étapes ci-dessous comme recommandations pour vous aider à préparer, implémenter et gérer des Azure Information Protection pour votre organisation, lorsque vous souhaitez classifier, étiqueter et protéger vos données.
 
@@ -42,7 +42,7 @@ Les étiquettes peuvent également appliquer une protection, ce qui simplifie ce
 
 ## <a name="deployment-process"></a>Processus de déploiement
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. [Vérifier votre abonnement et attribuer des licences utilisateur](#confirm-your-subscription-and-assign-user-licenses)
 1. [Préparer votre locataire à l’utilisation d’Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -78,7 +78,7 @@ Pour plus d’informations, consultez [Préparation des utilisateurs et groupes 
 
 ## <a name="configure-and-deploy-classification-and-labeling"></a>Configurer et déployer la classification et l’étiquetage
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. **Analyser vos fichiers (facultatif mais recommandé)**
 
@@ -163,7 +163,7 @@ Pour préparer la protection des données, procédez comme suit :
 
 ## <a name="configure-labels-and-settings-applications-and-services-for-data-protection"></a>Configurer des étiquettes et des paramètres, des applications et des services pour la protection des données
 
-Effectuez les étapes suivantes :
+Procédez comme suit :
 
 1. **Mettre à jour vos étiquettes pour appliquer la protection**
     

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -13,18 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 53c5edea2593a653eec82ec5a61efed58ae76c1f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: bc9da85af00c0f183d79347b0b723da8e090aaa4
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383922"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809809"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>BYOK les détails de votre propre clé pour Azure Information Protection
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Les organisations disposant d’un abonnement Azure Information Protection peuvent choisir de configurer leur locataire avec leur propre clé au lieu d’une clé par défaut générée par Microsoft. Cette configuration est souvent appelée Bring Your Own Key (BYOK).
 
@@ -159,7 +159,7 @@ Les conditions préalables de BYOK varient en fonction de la configuration de vo
 |**Module PowerShell AIPService pour Azure Information Protection**|Obligatoire pour toutes les configurations. <br />Pour plus d’informations, consultez [installation du module PowerShell AIPService](./install-powershell.md).|
 |**Conditions préalables Azure Key Vault pour BYOK** | Si vous utilisez une clé protégée par HSM qui a été créée en local, assurez-vous que vous êtes également conforme aux [prérequis pour les BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) répertoriés dans la documentation Azure Key Vault.         |
 |**Microprogramme Thales version 11,62**    |Vous devez disposer de la version 11,62 du microprogramme de Thales si vous effectuez une migration à partir de AD RMS vers Azure Information Protection en utilisant une clé logicielle pour la clé matérielle et que vous utilisez le microprogramme Thales pour votre HSM.
-|**Contournement du pare-feu pour les services Microsoft approuvés** |Si le coffre de clés qui contient votre clé de locataire utilise des points de terminaison de service de réseau virtuel pour Azure Key Vault, vous devez autoriser les services Microsoft approuvés à contourner ce pare-feu. <br />Pour plus d’informations, consultez [Points de terminaison du service de réseau virtuel pour Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
+|**Contournement du pare-feu pour les services Microsoft approuvés** |Si le coffre de clés qui contient votre clé de locataire utilise des points de terminaison de service de réseau virtuel pour Azure Key Vault, vous devez autoriser les services Microsoft approuvés à contourner ce pare-feu. <br />Pour plus d’informations, consultez [points de terminaison de service de réseau virtuel pour Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
 | | |
 
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>Vérification que vous disposez d’un abonnement Azure compatible avec BYOK
@@ -340,7 +340,7 @@ Une fois que vous avez terminé toutes les étapes ci-dessus, vous êtes prêt �
     >
     > Utilisez la commande [AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) en fonction des besoins pour connaître le numéro de version de la clé actuelle.
     >
-    > Par exemple : `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+    > Par exemple : `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
     Pour confirmer que l’URL de la clé est définie correctement pour Azure Information Protection, exécutez la commande [AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) dans le Azure Key Vault pour afficher l’URL de la clé.
 

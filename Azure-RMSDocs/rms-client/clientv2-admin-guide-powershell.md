@@ -5,18 +5,18 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 01/14/2021
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60f9493601d40b17c42354dae2d3978b8cb5972b
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 2a4bd98e22789e71cf090efb4c83a2a1ba000df2
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560065"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809914"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 

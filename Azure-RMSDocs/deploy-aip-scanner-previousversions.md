@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6dffbe4480d5b6d1c2a01813d982e2a36ce81933
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: b0fc60219636412feaf3f1558da2d229201f0154
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659151"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809565"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>Déploiement des versions précédentes du scanneur du client Azure Information Protection Classic
 
@@ -115,7 +115,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 ```
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :
@@ -444,7 +444,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
     - Les gros fichiers prennent évidemment plus de temps à analyser que les petits fichiers.
 
-- De plus :
+- En outre :
 
     - Vérifiez que le compte de service qui exécute le scanneur dispose uniquement des droits décrits dans la section [conditions préalables du scanneur](#prerequisites-for-the-azure-information-protection-scanner) , puis configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) pour désactiver le niveau d’intégrité faible du scanneur.
 

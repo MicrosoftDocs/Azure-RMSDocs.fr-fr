@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5eab2eee3fb0117bc3efd21c2605fc8d0293178d
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: c744d29bb687ec16683e6a94c557698cb1448e4e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560371"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808657"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Guide de l’administrateur : installer le client Azure Information Protection Classic pour les utilisateurs
 
@@ -63,7 +63,7 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
     Si vous disposez d’une version ultérieure de l’assistant de connexion, désinstallez-la avant d’installer le client Azure Information Protection. Par exemple, vérifiez la version et désinstallez l’Assistant de connexion à l’aide du **panneau de configuration**  >  **programme et fonctionnalités**  >  **désinstaller ou modifier un programme**.
 
     > [!IMPORTANT]
-    > Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Le support étendu d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 - **KB 4482887**
@@ -130,7 +130,7 @@ Utilisez les instructions suivantes pour installer le client lorsque vous n’ut
     - **ServiceLocation** : utilisez ce paramètre si vous installez le client sur des ordinateurs exécutant Office 2010 et que vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs ou que vous ne voulez pas qu’ils reçoivent un message.  Pour plus d’informations, consultez [informations supplémentaires sur le paramètre d’installation ServiceLocation](#more-information-about-the-servicelocation-installation-parameter). 
     
         > [!IMPORTANT]
-        > Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+        > Le support étendu d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
         >
 
 1. Si vous installez de manière interactive, sélectionnez l’option d’installation d’une **stratégie de démonstration** si vous ne pouvez pas vous connecter à Microsoft 365 ou Azure Active Directory, mais que vous souhaitez voir et découvrir le côté client de Azure information protection à l’aide d’une stratégie locale à des fins de démonstration. Lorsque votre client se connecte à un service Azure Information Protection, cette stratégie de démonstration est remplacée par la stratégie Azure Information Protection de votre organisation.
@@ -154,7 +154,7 @@ Quand vous installez le client pour les utilisateurs qui disposent d’Office 20
 
     
 > [!IMPORTANT]
-> Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Le support étendu d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
 Ce paramètre et la valeur créent et définissent les clés de registre suivantes :
@@ -193,7 +193,7 @@ Pour prendre en charge les mises à jour automatiques via Windows Update et pou
 
 Si l’installation de cette version de Microsoft .NET Framework ne vous arrange pas, vous pouvez installer le client en indiquant le paramètre et la valeur suivants **DowngradeDotNetRequirement=True**, ce qui permet de contourner cette exigence si la version 4.5.1 de Microsoft .NET Framework est installée.
 
-Par exemple : `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+Par exemple : `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 Nous vous recommandons d’utiliser ce paramètre avec précaution, car des problèmes ont été signalés avec les applications Office. Il arrive que celles-ci se bloquent lorsque le client Azure Information Protection est utilisé avec cette ancienne version de Microsoft .NET Framework. Si vous rencontrez des problèmes de blocage, installez la version recommandée avant d’essayer d’autres solutions de dépannage. 
 
@@ -219,7 +219,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     | | | | |
     
     > [!IMPORTANT]
-    > Le support étendu Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Le support étendu d’Office 2010 a pris fin le 13 octobre 2020. Pour plus d’informations, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 1. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).

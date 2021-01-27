@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef3a9198af5fb44927438c66262e30acf439f2eb
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 0bdf9feb0b81d6fe39dba3545b171c60ec0661b5
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383854"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809488"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
 >***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, 2012 R2 et Windows Server 2012 *
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilisez les informations suivantes pour installer et configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de l’article [Déployer le connecteur Azure Rights Management - AIP](deploy-rms-connector.md).
 
@@ -49,7 +49,7 @@ Assurez-vous que vous avez pris connaissance de l’instance de cloud Souverain 
 
     Pour installer le connecteur RMS, téléchargez RMSConnectorSetup.exe.
 
-    Informations supplémentaires :
+    De plus :
 
     -   Si vous souhaitez utiliser l’outil de configuration de serveur pour le connecteur RMS afin d’automatiser la configuration des paramètres de Registre sur vos serveurs locaux, téléchargez également GenConnectorConfig.ps1.
 

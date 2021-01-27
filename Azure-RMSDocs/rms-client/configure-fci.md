@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/12/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
@@ -14,12 +14,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 96527b929784fd6819fb9881a2f6c8c09aa6460b
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 0020cec23dc8261621f524dbb6c8cc76009150a6
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807058"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809875"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -59,7 +59,7 @@ Conditions préalables pour ces instructions :
     
   - Si vous souhaitez modifier le niveau par défaut de protection (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la section [Modification du niveau de protection par défaut des fichiers](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) du guide d’administrateur.
     
-  - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur si ceux-ci sont requis pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
+  - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur si ceux-ci sont requis pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
     
 - Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Microsoft 365, y compris leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
     

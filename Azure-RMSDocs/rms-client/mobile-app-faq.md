@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/24/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b936baf799808fadbdaaefc0ae1fd55a6853fb2
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 94fc34bc7e1ec5c1802c78f3bf4347bfac75371f
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164444"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809896"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Qu’est-ce que l’application Azure Information Protection pour iOS ou Android ?
 

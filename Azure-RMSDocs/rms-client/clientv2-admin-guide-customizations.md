@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 01/18/2021
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
-ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
+ms.openlocfilehash: 925ef5dda1f470dbba6f173df427d4672b853167
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98569093"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809929"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -1417,7 +1417,7 @@ Pensez à vérifier le nom de domaine du compte connecté. En effet, vous pouvez
 
 2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si vous ne voyez pas d’invite dans votre application Office pour vous connecter au service Azure Information Protection, revenez à la boîte de dialogue **Microsoft Azure information protection** et sélectionnez **se connecter** à partir de la section **État du client** mis à jour.
 
-De plus :
+En outre :
 
 |Scénario  |Description  |
 |---------|---------|
@@ -1655,7 +1655,7 @@ Les types de nœuds pris en charge sont les suivants :
 
 Les actions de règle peuvent être l’une des suivantes :
 
-|Action  |Syntax  |Exemple de message  |
+|Action  |Syntaxe  |Exemple de message  |
 |---------|---------|---------|
 |**Bloquer**     |    `Block (List<language, [title, body]>)`     |    **_E-mail bloqué_* _<br /><br />  _You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **secret** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation n’autorise pas cette action. Envisagez de supprimer ces destinataires ou de remplacer le contenu. *|
 |**Viendra**     | `Warn (List<language,[title,body]>)`        |  **_Confirmation obligatoire_* _<br /><br />_You êtes sur le paragraphe de l’envoi d’un contenu classifié comme **général** à un ou plusieurs destinataires non approuvés : *<br />* `rsinclair@contoso.com` *<br /><br />* la stratégie de votre organisation nécessite une confirmation pour l’envoi de ce contenu. *       |

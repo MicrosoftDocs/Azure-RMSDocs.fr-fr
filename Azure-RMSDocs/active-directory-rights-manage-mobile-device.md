@@ -5,24 +5,24 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 874a73480e8d15380d9e69a532a1b8ff39d38eb7
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3fca14f82db5cd78727b14cc417517921baa0f7b
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384160"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808584"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Extension Appareils mobiles AD RMS (Active Directory Rights Management Services)
 
 >***S’applique à**: Windows Server 2019, 2016, 2012 R2 et 2012 *
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Vous pouvez télécharger l’extension d’appareil mobile (AD RMS) services AD RMS (Active Directory Rights Management Services) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=43738) et installer cette extension sur un déploiement de AD RMS existant. Cela permet aux utilisateurs de protéger et de consommer des données sensibles quand leur appareil prend en charge les dernières applications compatibles avec l’API. Par exemple, les utilisateurs peuvent effectuer les opérations suivantes :
 - Utilisez l’application Azure Information Protection pour consommer des fichiers texte protégés dans différents formats (y compris. txt,. csv et. Xml).
@@ -130,7 +130,7 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 |**Règle de revendication**|**Magasin d’attributs** : Active Directory <br /><br />**Adresses de messagerie**: adresse de messagerie<br /><br>**User-principal-name**: UPN<br /><br /> **Adresse proxy**: _https : \/ \/schemas.xmlSOAP.org/claims/proxyAddresses|
 
 > [!TIP]
-> Pour obtenir des instructions pas à pas pour un exemple de déploiement de AD RMS avec AD FS, consultez [déploiement de services AD RMS (Active Directory Rights Management Services) avec services ADFS](/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
+> Pour obtenir des instructions pas à pas pour un exemple de déploiement de AD RMS avec AD FS, consultez [déploiement de services AD RMS (Active Directory Rights Management Services) avec services de fédération Active Directory (AD FS)](/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
 
 #### <a name="step-2-authorize-apps-for-your-devices"></a>Étape 2 : autoriser les applications pour vos appareils
 
@@ -226,7 +226,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez les tableaux 
 |Domain|_tcp. contoso. com
 |Service|_rmsdisco
 |Protocol|_http
-|Priority|0
+|Priorité|0
 |Poids|0
 |Numéro de port|443
 |Hôte offrant ce service|_rmsserver. contoso. com
@@ -236,7 +236,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez les tableaux 
 |Domain|_tcp. fabrikam. com
 |Service|_rmsdisco
 |Protocol|_http
-|Priority|0
+|Priorité|0
 |Poids|0
 |Numéro de port|443
 |Hôte offrant ce service|_rmsserver. contoso. com|
@@ -253,7 +253,7 @@ Si vous utilisez le rôle serveur DNS sur Windows Server, utilisez le tableau su
 |Domain|_tcp. contoso. com
 |Service|_rmsdisco
 |Protocol|_http
-|Priority|0
+|Priorité|0
 |Poids|0
 |Numéro de port|443
 |Hôte offrant ce service|_rmsserver. contoso. com|

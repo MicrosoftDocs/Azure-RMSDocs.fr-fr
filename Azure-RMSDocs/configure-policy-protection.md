@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fc02a679cfbc389cb4f09e72018f0b96a30a8b0a
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 4687241aa49bd760b3d246300f2e5004fe756591
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164316"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809727"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection de Rights Management
 
@@ -157,7 +157,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      ###### <a name="information-about-the-protection-settings"></a>Informations sur les paramètres de protection
     
-     |Paramètre|Autres informations|Paramètre recommandé
+     |Paramètre|Informations complémentaires|Paramètre recommandé
      |-----------|--------------------|--------------------|
      |**Expiration du contenu du fichier**|Définissez une date ou un nombre de jours limite pour l’ouverture par les utilisateurs sélectionnés des documents protégés par ces paramètres. Pour les e-mails, l’expiration n’est pas toujours appliquée en raison des mécanismes de mise en cache utilisés par certains clients de messagerie.<br /><br />Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, cette dernière prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais** sauf s’il est associé à une exigence temporelle spécifique.|
      |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter avant de pouvoir ouvrir le document ou l’e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent obtenir des résultats d’accès différents pour le même document ou e-mail si la stratégie ou l’appartenance au groupe a changé par rapport au moment où ils ont accédé au contenu pour la dernière fois. Cela peut inclure le refus d’accès à un document si ce dernier a été [révoqué](./rms-client/client-track-revoke.md).|Selon la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet**  =  **7** pour les données sensibles de l’entreprise qui pourraient nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation est un bon compromis entre flexibilité et sécurité. Elle peut concerner les contrats, les rapports de sécurité, les synthèses de prévision et les données commerciales, par exemple.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient nuire à l’entreprise si elles étaient partagées avec des personnes non autorisées. Cette recommandation privilégie la sécurité par rapport à la flexibilité, et elle garantit qu’en cas de révocation du document, tous les utilisateurs autorisés sont dans l’incapacité d’ouvrir le document immédiatement. Elle peut concerner les informations relatives aux employés et aux clients, les mots de passe, le code source et les rapports financiers préannoncés, par exemple.|

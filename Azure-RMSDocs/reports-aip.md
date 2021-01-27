@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.date: 11/09/2020
 manager: rkarlin
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
@@ -13,23 +13,23 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25ea3c8e008334ec50f81f0c5fcef15690132ef6
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 99c1fa6379f346477431caa884b687d39d500b7a
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386268"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808809"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. Informations supplémentaires :
+Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. De plus :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -169,7 +169,7 @@ Vous devez disposer de l’un des [rôles d’administrateur Azure ad](/azure/ac
 - Une fois l’espace de travail créé, vous pouvez utiliser les rôles suivants avec moins d’autorisations pour afficher les données collectées :
     
     - **Lecteur de sécurité**
-    - **Lecteur global**
+    - **Lecteur général**
 
 #### <a name="required-azure-log-analytics-roles"></a>Rôles de Log Analytics Azure requis
 
@@ -265,7 +265,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |-----------|-----------|
 |**Time**|Heure de l’événement : UTC au format AAAA-MM-JJThh : MM : SS|
 |**Utilisateur**|Utilisateur : format UPN ou domaine\utilisateur|
-|**L’élément ItemPath**|Chemin d’accès complet de l’élément ou objet de l’e-mail|
+|**ItemPath**|Chemin d’accès complet de l’élément ou objet de l’e-mail|
 |**ItemName**|Nom de fichier ou objet de l’e-mail |
 |**Méthode**|Méthode assignée à l’étiquette : Manual, auto, Recommended, default ou Mandatory|
 |**Activité**|Activité d’audit : DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection ou FileRemoved |

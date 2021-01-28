@@ -4,7 +4,7 @@ description: Instructions pour la résolution des problèmes liés au déploieme
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/26/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: 46a994c5191e82d68f318e4900e0a5d45c1e176b
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540103"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958072"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Résolution des problèmes liés au déploiement d’un analyseur local d’étiquetage local
 
@@ -74,7 +74,7 @@ Utilisez les sections suivantes pour comprendre les messages d’erreur spécifi
 |**Erreurs d'authentification**     |  - [Jeton d’authentification non accepté](#authentication-token-not-accepted) <br>  - [Jeton d’authentification manquant](#authentication-token-missing)|
 |**Erreurs de stratégie**     |  - [Stratégie manquante](#policy-missing) <br>- [La stratégie n’inclut aucune condition d’étiquetage automatique](#policy-doesnt-include-any-automatic-labeling-condition)      |
 |**Erreurs de base de BD/schéma**     |  - [Erreurs de base de données](#database-errors) <br> - [Schéma incompatible ou obsolète](#mismatched-or-outdated-schema)  |
-|**Autres erreurs**     |  - [Processus de scanneur bloqués](#stuck-scanner-processes) <br>- [Impossible de se connecter au serveur distant](#unable-to-connect-to-remote-server) <br>- [Une erreur s’est produite lors de l’envoi de la demande](#error-occurred-while-sending-the-request) <br>- [Travail ou profil d’analyse de contenu manquant](#missing-content-scan-job-or-profile) <br>- [Aucun référentiel configuré](#no-repositories-configured) <br>- [Aucun cluster trouvé](#no-cluster-found)   |
+|**Autres erreurs**     |  - [La connexion sous-jacente a été fermée](#underlying-connection-was-closed) <br> - [Processus de scanneur bloqués](#stuck-scanner-processes) <br>- [Impossible de se connecter au serveur distant](#unable-to-connect-to-remote-server) <br>- [Une erreur s’est produite lors de l’envoi de la demande](#error-occurred-while-sending-the-request) <br>- [Travail ou profil d’analyse de contenu manquant](#missing-content-scan-job-or-profile) <br>- [Aucun référentiel configuré](#no-repositories-configured) <br>- [Aucun cluster trouvé](#no-cluster-found)   |
 |     |         |
 
 
@@ -112,7 +112,7 @@ Pour que le scanneur s’exécute de manière non interactive, vous devez vous a
 
 Quand vous exécutez la commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) , veillez à utiliser le paramètre Token pour le compte de l’utilisateur du scanneur.
 
-Exemple :
+Par exemple :
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
@@ -193,6 +193,20 @@ Exécutez la commande [Update-AIPScanner](/powershell/module/azureinformationpro
 
 
 <!--Other errors-->
+
+### <a name="underlying-connection-was-closed"></a>La connexion sous-jacente a été fermée
+
+**Message d’erreur**
+
+`System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Authentication failed because the remote party has closed the transport stream.`
+
+**Solution**
+
+Cette erreur signifie généralement que TLS 1,2 n’est pas activé.
+
+Pour plus d’informations, consultez [pare-feu et infrastructure réseau](requirements.md#firewalls-and-network-infrastructure). 
+
+Pour activer TLS 1,2, consultez [Comment activer tls 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) dans la documentation Enterprise Mobility + Security.
 
 ### <a name="stuck-scanner-processes"></a>Processus de scanneur bloqués
 

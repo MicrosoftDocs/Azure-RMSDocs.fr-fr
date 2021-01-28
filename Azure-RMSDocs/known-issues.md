@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559640"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958123"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -107,11 +107,15 @@ Pour plus d'informations, consultez les pages suivantes :
 
 Le suivi et la révocation de l’accès aux documents à l’aide du client d’étiquetage unifié présente les problèmes connus suivants :
 
+- [Documents protégés par mot de passe](#password-protected-documents)
 - [Plusieurs pièces jointes dans un e-mail protégé](#multiple-attachments-in-a-protected-email)
 - [Documents accessibles via SharePoint](#documents-accessed-via-sharepoint)
 
-Pour plus d’informations, consultez [le Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure information protection et le](rms-client/track-and-revoke-admin.md) Guide de l' [utilisateur : révoquer l’accès aux documents avec Azure information protection](rms-client/revoke-access-user.md).
+Pour plus d’informations, consultez le Guide de l' [administrateur](rms-client/track-and-revoke-admin.md) et les procédures du Guide de l' [utilisateur](rms-client/revoke-access-user.md) .
 
+#### <a name="password-protected-documents"></a>Documents protégés par mot de passe
+
+Les documents protégés par mot de passe ne sont pas pris en charge par les fonctionnalités suivre et révoquer.
 #### <a name="multiple-attachments-in-a-protected-email"></a>Plusieurs pièces jointes dans un e-mail protégé
 
 Si vous joignez plusieurs documents à un message électronique, puis Protégez l’e-mail et l’envoyez, chacune des pièces jointes obtient la même valeur ContentID. 
@@ -130,7 +134,7 @@ En outre, la révocation de l’accès pour l’une des pièces jointes révoque
 
     Dans ce cas, les administrateurs peuvent être en mesure de localiser les fichiers téléchargés à l’aide de PowerShell pour rechercher les nouvelles valeurs **contentid** pour suivre ou révoquer l’accès.
 
-### <a name="knowns-issues-for-the-aip-client-and-onedrive"></a>Problèmes connus liés au client AIP et à OneDrive
+### <a name="known-issues-for-the-aip-client-and-onedrive"></a>Problèmes connus liés au client AIP et à OneDrive
 
 Si vous avez des documents stockés dans OneDrive avec une étiquette de sensibilité appliquée et qu’un administrateur modifie l’étiquette dans la stratégie d’étiquetage pour ajouter une protection, la protection récemment appliquée n’est pas appliquée automatiquement au document étiqueté. 
 

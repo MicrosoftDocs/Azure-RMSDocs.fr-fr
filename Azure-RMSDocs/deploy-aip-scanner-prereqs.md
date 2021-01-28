@@ -4,7 +4,7 @@ description: Répertorie les conditions préalables à l’installation et au d�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/17/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164179"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958089"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -37,7 +37,6 @@ En outre, les conditions requises suivantes sont spécifiques au scanneur :
 - [Configuration requise pour SharePoint](#sharepoint-requirements)
 - [Configuration requise pour la Microsoft Office](#microsoft-office-requirements)
 - [Exigences relatives au chemin de fichier](#file-path-requirements)
-- [Exigences relatives aux statistiques d’utilisation](#usage-statistics-requirements)
 
 Si vous ne pouvez pas répondre à toutes les conditions requises répertoriées pour le scanneur parce qu’elles sont interdites par les stratégies de votre organisation, consultez la section [autres configurations](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -69,7 +68,7 @@ Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre 
 
 Ce compte de service a la configuration suivante :
 
-|Condition requise  |Détails  |
+|Prérequis  |Détails  |
 |---------|---------|
 |Attribution **de droits d’utilisateur d’ouverture de session locale**     |Requis pour installer et configurer le scanneur, mais pas pour exécuter des analyses.  </br></br>Une fois que vous avez confirmé que le scanneur peut détecter, classer et protéger les fichiers, vous pouvez supprimer ce droit du compte de service.  </br></br>S’il n’est pas possible d’accorder ce droit même pendant une brève période de temps en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).         |
 |**Ouvrir une session en tant que service**, attribution des droits utilisateur.     |  Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur.        |
@@ -195,13 +194,6 @@ Pour analyser des fichiers avec des chemins d’accès de plus de 260 caractère
 |**Windows 10, version 1607 ou ultérieure**     |  Abonnez-vous à la fonctionnalité de **MAX_PATH** mise à jour. Pour plus d’informations, consultez [activer des chemins d’accès longs dans Windows 10 versions 1607 et ultérieures](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
 
-## <a name="usage-statistics-requirements"></a>Exigences relatives aux statistiques d’utilisation
-
-Désactivez les statistiques d’utilisation à l’aide de l’une des méthodes suivantes :
-
-- Affectation de la valeur 0 au paramètre [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
-
-- Assurez-vous que l’option **contribuer à l’amélioration des Azure information protection en envoyant des statistiques d’utilisation à Microsoft** reste désélectionnée pendant le processus d’installation du scanneur.
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>Déploiement du scanneur avec d’autres configurations
 
@@ -337,7 +329,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 |**Vous ne pouvez pas avoir le rôle sysadmin**     |  Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données avant d’installer le scanneur. <br><br>Pour cette configuration, le rôle de **db_owner** doit être affecté aux comptes suivants : <br>-Compte de service pour le scanneur<br>-Compte d’utilisateur pour l’installation du scanneur<br>-Compte d’utilisateur pour la configuration du scanneur <br><br>En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle **db_owner** pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. Si vous spécifiez votre propre nom de cluster, la base de données de configuration est nommée **AIPScannerUL_<cluster_name>**.  |
 | | |
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :

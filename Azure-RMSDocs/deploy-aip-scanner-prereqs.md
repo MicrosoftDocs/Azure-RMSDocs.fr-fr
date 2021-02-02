@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958089"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473002"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -68,7 +68,7 @@ Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre 
 
 Ce compte de service a la configuration suivante :
 
-|Prérequis  |Détails  |
+|Condition requise  |Détails  |
 |---------|---------|
 |Attribution **de droits d’utilisateur d’ouverture de session locale**     |Requis pour installer et configurer le scanneur, mais pas pour exécuter des analyses.  </br></br>Une fois que vous avez confirmé que le scanneur peut détecter, classer et protéger les fichiers, vous pouvez supprimer ce droit du compte de service.  </br></br>S’il n’est pas possible d’accorder ce droit même pendant une brève période de temps en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).         |
 |**Ouvrir une session en tant que service**, attribution des droits utilisateur.     |  Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur.        |
@@ -267,7 +267,7 @@ Pour prendre en charge un ordinateur déconnecté du Portail Azure, procédez co
     
     **Activer la gestion hors connexion des travaux d’analyse réseau**:
 
-    1. Configurez le service de découverte du réseau pour qu’il fonctionne en mode hors connexion à l’aide de l’applet de commande [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
+    1. Configurez le service de découverte du réseau (version préliminaire publique) pour qu’il fonctionne en mode hors connexion à l’aide de l’applet de commande [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
     1. Configurez le travail Network Scan dans le Portail Azure. Pour plus d’informations, consultez [création d’un travail d’analyse réseau](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
     

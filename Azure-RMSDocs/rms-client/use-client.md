@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e715ca9f5131095e38e0fb9589494924ae36210f
-ms.sourcegitcommit: b82640b2af14b383a3d4d73692f3da907dc0f191
+ms.openlocfilehash: fd76ce1c8efa79050869a93a311f0ae80d59d0b4
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711867"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473036"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -150,41 +150,41 @@ Pour plus d’informations, consultez également :
 
 |Fonctionnalité|Client classique|Client d’étiquetage unifié|Solution d’étiquetage Office intégrée|
 |:------|:------------:|:---------------------:|:-----------------------------:|
-|**Étiquetage manuel**| ![oui](../media/yes-icon.png)   | ![oui](../media/yes-icon.png)   |![oui](../media/yes-icon.png) |
-|**Étiquette par défaut**| ![oui](../media/yes-icon.png)| ![oui](../media/yes-icon.png)| ![oui](../media/yes-icon.png)|
-|**Étiquetage automatique ou recommandé** <br />Pour Word, Excel, PowerPoint, Outlook|![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
-|**Étiquetage obligatoire**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |  ![oui](../media/yes-icon.png)|
-|**Autorisations définies par l’utilisateur pour une étiquette**: <br />Ne pas transférer pour les e-mails| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
-|**Autorisations définies par l’utilisateur pour une étiquette**: <br />Autorisations personnalisées pour Word, Excel, PowerPoint| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
-|**Prise en charge multilingue pour les étiquettes**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |![oui](../media/yes-icon.png) |
-|**Héritage des étiquettes dans les pièces jointes**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png)  | ![non](../media/no-icon.png)|
+|**Étiquetage manuel**| ![Oui](../media/yes-icon.png)   | ![Oui](../media/yes-icon.png)   |![Oui](../media/yes-icon.png) |
+|**Étiquette par défaut**| ![Oui](../media/yes-icon.png)| ![Oui](../media/yes-icon.png)| ![Oui](../media/yes-icon.png)|
+|**Étiquetage automatique ou recommandé** <br />Pour Word, Excel, PowerPoint, Outlook|![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |
+|**Étiquetage obligatoire**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |  ![Oui](../media/yes-icon.png)|
+|**Autorisations définies par l’utilisateur pour une étiquette**: <br />Ne pas transférer pour les e-mails| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |
+|**Autorisations définies par l’utilisateur pour une étiquette**: <br />Autorisations personnalisées pour Word, Excel, PowerPoint| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |
+|**Prise en charge multilingue pour les étiquettes**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |![Oui](../media/yes-icon.png) |
+|**Héritage des étiquettes dans les pièces jointes**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png)  | ![non](../media/no-icon.png)|
 |Les **personnalisations qui incluent**:<br />- Étiquette par défaut pour e-mail<br />-Afficher les messages dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| ![oui ](../media/yes-icon.png) <sup>1</sup> | ![oui ](../media/yes-icon.png) <sup>2</sup> |  ![non](../media/no-icon.png)|
-|**Scanneur pour les magasins de données locaux**| ![oui](../media/yes-icon.png) |  ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
-|**Rapports centraux (analytique)**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
-|**Autorisations personnalisées définies indépendamment d’une étiquette**| ![oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>3</sup>|  ![non](../media/no-icon.png)|
-|**Barre de Information Protection dans les applications Office**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png)|  ![non](../media/no-icon.png)|
-|**Marquages visuels comme une action d’étiquette**<br> (en-tête, pied de page, filigrane)| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png)|
-|**Marquages visuels par application**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>9</sup>|
-|**Marquages visuels dynamiques avec des variables**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>9</sup>|
-|**Supprimer le marquage de contenu externe dans l’application**| ![oui](../media/yes-icon.png)| ![oui](../media/yes-icon.png)| ![non](../media/no-icon.png)|
-|**Étiquette avec l’Explorateur de fichiers**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
-|**Visionneuse pour les fichiers protégés** <br> (texte, images, PDF,. pfile)| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![non](../media/no-icon.png)|
-|**Prise en charge PPDF pour l’application des étiquettes**| ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
-|**Applets de commande d’étiquetage PowerShell**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png)  |  ![non](../media/no-icon.png)|
-|**Prise en charge hors connexion des actions de protection**| ![oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>4</sup> | ![oui](../media/yes-icon.png) |
-|**Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés**| ![oui](../media/yes-icon.png) |![oui](../media/yes-icon.png)|  ![non](../media/no-icon.png)|
-|**Support HYOK**| ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
-|**Journalisation de l’utilisation dans observateur d’événements**| ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)| ![non](../media/no-icon.png)|
-|**Afficher le bouton Ne pas transférer dans Outlook**| ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
+|**Scanneur pour les magasins de données locaux**| ![Oui](../media/yes-icon.png) |  ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
+|**Rapports centraux (analytique)**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
+|**Autorisations personnalisées définies indépendamment d’une étiquette**| ![Oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>3</sup>|  ![non](../media/no-icon.png)|
+|**Barre de Information Protection dans les applications Office**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png)|  ![non](../media/no-icon.png)|
+|**Marquages visuels comme une action d’étiquette**<br> (en-tête, pied de page, filigrane)| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png)|
+|**Marquages visuels par application**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>9</sup>|
+|**Marquages visuels dynamiques avec des variables**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>9</sup>|
+|**Supprimer le marquage de contenu externe dans l’application**| ![Oui](../media/yes-icon.png)| ![Oui](../media/yes-icon.png)| ![non](../media/no-icon.png)|
+|**Étiquette avec l’Explorateur de fichiers**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
+|**Visionneuse pour les fichiers protégés** <br> (texte, images, PDF,. pfile)| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![non](../media/no-icon.png)|
+|**Prise en charge PPDF pour l’application des étiquettes**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
+|**Applets de commande d’étiquetage PowerShell**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png)  |  ![non](../media/no-icon.png)|
+|**Prise en charge hors connexion des actions de protection**| ![Oui](../media/yes-icon.png) | ![oui ](../media/yes-icon.png) <sup>4</sup> | ![Oui](../media/yes-icon.png) |
+|**Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés**| ![Oui](../media/yes-icon.png) |![Oui](../media/yes-icon.png)|  ![non](../media/no-icon.png)|
+|**Support HYOK**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
+|**Journalisation de l’utilisation dans observateur d’événements**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)| ![non](../media/no-icon.png)|
+|**Afficher le bouton Ne pas transférer dans Outlook**| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
 |**Suivre les documents protégés**| ![oui ](../media/yes-icon.png) <sup>5</sup> | ![oui ](../media/yes-icon.png) <sup>5</sup> |  ![non](../media/no-icon.png)|
 |**Révoquer des documents protégés**| ![oui ](../media/yes-icon.png) <sup>5</sup> |  ![oui ](../media/yes-icon.png) <sup>5</sup>|  ![non](../media/no-icon.png)|
-|**Mode protection uniquement** (aucune étiquette)| ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
-|**Prise en charge du changement de compte**|  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)| ![oui](../media/yes-icon.png) |
-|**Prise en charge de Services Bureau à distance**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |
-|**Prise en charge de AD RMS**| ![oui](../media/yes-icon.png) |  ![non ](../media/no-icon.png) <sup>6</sup> |  ![non](../media/no-icon.png)|
-|**Prise en charge des formats Microsoft Office 97-2003**| ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) |  ![non ](../media/no-icon.png) <sup>8</sup>|
-|**Chiffrement à clé double**|  ![non](../media/no-icon.png)| ![oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
-|**Cloud de la communauté gouvernementale** | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png) | ![oui](../media/yes-icon.png)|
+|**Mode protection uniquement** (aucune étiquette)| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)|
+|**Prise en charge du changement de compte**|  ![non](../media/no-icon.png)|  ![non](../media/no-icon.png)| ![Oui](../media/yes-icon.png) |
+|**Prise en charge de Services Bureau à distance**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |
+|**Prise en charge de AD RMS**| ![Oui](../media/yes-icon.png) |  ![non ](../media/no-icon.png) <sup>6</sup> |  ![non](../media/no-icon.png)|
+|**Prise en charge des formats Microsoft Office 97-2003**| ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) |  ![non ](../media/no-icon.png) <sup>8</sup>|
+|**Chiffrement à clé double**|  ![non](../media/no-icon.png)| ![Oui](../media/yes-icon.png) |  ![non](../media/no-icon.png)|
+|**Cloud de la communauté gouvernementale** | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png) | ![Oui](../media/yes-icon.png)|
 | | | | |
 
 **Notes de bas de page**:
@@ -227,7 +227,7 @@ Lorsque le client Azure Information Protection Classic et le Azure Information P
 |**Prise en charge des commandes pour les sous-étiquettes sur les pièces jointes** | Activé avec un [paramètre client avancé](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Activé par défaut, aucune configuration n’est requise|
 |**Modifier le comportement de protection par défaut pour les types de fichiers**| Utilisez les [modifications du Registre](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) pour remplacer les valeurs par défaut de protection native et générique | Utiliser [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) pour modifier les types de fichiers qui sont protégés|
 |**Analyses automatiques** | Les analyses complètes sont exécutées automatiquement chaque fois que l’analyseur détecte une modification de la stratégie ou des paramètres d’étiquetage | À partir de la version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), les administrateurs peuvent choisir d’ignorer une nouvelle analyse complète après avoir apporté des modifications aux paramètres de la stratégie ou du travail d’analyse du contenu. |
-|**Détection de réseau** |Les fonctionnalités de découverte du réseau ne sont pas disponibles pour le scanneur classique | Les administrateurs peuvent découvrir des référentiels à risque supplémentaires en analysant une adresse IP ou une plage spécifiée.|
+|**Découverte du réseau** (préversion publique) |Les fonctionnalités de découverte du réseau ne sont pas disponibles pour le scanneur classique | Les administrateurs peuvent découvrir des référentiels à risque supplémentaires en analysant une adresse IP ou une plage spécifiée.|
 | | | |
 
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Fonctionnalités non planifiées dans le client d’étiquetage unifié Azure Information Protection

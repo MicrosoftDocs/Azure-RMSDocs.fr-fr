@@ -4,7 +4,7 @@ description: Découvrez les nouveautés du client d’étiquetage unifié de l�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30ed80c43494db6b9ad8c33827d138d3c7ae2065
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958140"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473019"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -93,6 +93,14 @@ Cette version comprend les nouvelles fonctionnalités, les correctifs et les am�
 
     - [Correctifs et améliorations pour le scanneur d’étiquetage unifié](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Correctifs et améliorations pour le client d’étiquetage unifié](#fixes-and-improvements-for-the-unified-labeling-client)
+
+- **Problème connu**: un problème a été identifié dans la dernière version GA (2.9.111) où certains utilisateurs ne sont pas en mesure d’afficher les fichiers protégés dans les scénarios suivants :
+    
+    - Lorsque des fichiers protégés sont partagés avec des utilisateurs qui n’ont pas de stratégie AIP configurée, telle que des utilisateurs externes. Ce problème se produit uniquement avec l' [application de visionneuse AIP](clientv2-view-use-files.md).
+
+    - Lorsque le contenu avec une étiquette délimitée est partagé avec des utilisateurs ou des groupes qui ne sont pas inclus dans la portée de l’étiquette. Ce problème se produit à la fois avec l' [application de visionneuse AIP](clientv2-view-use-files.md) et lors de l’affichage ou de la classification du contenu partagé via l' [Explorateur de fichiers](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
+    
+    Nous travaillons activement sur ce problème et un plan de livraison mis à jour pour le correctif.
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Prise en charge de PowerShell pour les serveurs de scanneur déconnectés
 
@@ -208,7 +216,7 @@ Cette version comprend les nouvelles fonctionnalités, les correctifs et les am�
 
     - [Analyses complètes facultatives pour les modifications détectées](#optional-full-rescans-for-changes-detected)
     - [Configurer des délais d’attente SharePoint](#configure-sharepoint-timeouts)
-    - [Prise en charge de la découverte du réseau](#network-discovery-support)
+    - [Prise en charge](#network-discovery-support-public-preview) de la découverte du réseau (version préliminaire publique)
 
 - **Nouvelles fonctionnalités pour le client**:
 
@@ -245,14 +253,14 @@ Les administrateurs AIP peuvent également configurer des délais d’attente Sh
 
 Pour plus d’informations, consultez [configurer des délais d’attente SharePoint](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### <a name="network-discovery-support"></a>Prise en charge de la découverte du réseau
+### <a name="network-discovery-support-public-preview"></a>Prise en charge de la découverte du réseau (version préliminaire publique)
 
 Le scanneur d’étiquetage unifié comprend maintenant un nouveau service de **découverte du réseau** , qui vous permet d’analyser les adresses IP ou plages spécifiées pour les partages de fichiers réseau qui peuvent avoir un contenu sensible.
 
 Le service de **découverte du réseau** met à jour les rapports de **référentiel** avec une liste d’emplacements de partage susceptibles d’être menacés, en fonction des autorisations et des droits d’accès découverts. Vérifiez les rapports de **référentiel** mis à jour pour vous assurer que vos travaux d’analyse de contenu incluent tous les référentiels devant être analysés.
 
 > [!TIP]
-> Pour plus d’informations, consultez [applets](#network-discovery-cmdlets)de commande de découverte du réseau.
+> Pour plus d’informations, consultez [applets](#network-discovery-cmdlets-public-preview)de commande de découverte du réseau.
 
 **Pour utiliser le service de découverte du réseau**
 
@@ -277,7 +285,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 1. Utilisez les rapports générés dans le nouveau volet [**référentiels**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pour rechercher les partages de fichiers réseau supplémentaires qui peuvent être menacés. Ajoutez tous les partages de fichiers risqués à vos [travaux d’analyse de contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) pour analyser les référentiels ajoutés au contenu sensible.
 
-#### <a name="network-discovery-cmdlets"></a>Applets de commande de découverte du réseau
+#### <a name="network-discovery-cmdlets-public-preview"></a>Applets de commande de découverte du réseau (version préliminaire publique)
 
 Les applets de commande PowerShell ajoutées pour la découverte du réseau sont les suivantes :
 

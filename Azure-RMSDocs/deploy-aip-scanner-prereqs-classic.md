@@ -4,7 +4,7 @@ description: Répertorie les conditions préalables à l’installation et au d�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 02/03/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: fb1d7a7ce57eb6ae8659b7e268726143d4ca4028
+ms.sourcegitcommit: 1aba7f2d5c15f2657d1db293118f6670bf99323d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806173"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505269"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Conditions préalables à l’installation et au déploiement du scanneur Azure Information Protection Classic
 
@@ -34,12 +34,11 @@ Avant d’installer le Azure Information Protection scanneur local, assurez-vous
 - [Configuration requise pour Windows Server](#windows-server-requirements)
 - [Exigences relatives au compte de service](#service-account-requirements)
 - [Configuration requise pour SQL Server](#sql-server-requirements)
-- [Configuration requise pour le client Azure Information Protection](#azure-information-protection-client-requirements)
+- [Exigences du client Azure Information Protection](#azure-information-protection-client-requirements)
 - [Configuration requise pour l’étiquette](#label-configuration-requirements)
 - [Configuration requise pour SharePoint](#sharepoint-requirements)
 - [Configuration requise pour la Microsoft Office](#microsoft-office-requirements)
 - [Exigences relatives au chemin de fichier](#file-path-requirements)
-- [Exigences relatives aux statistiques d’utilisation](#usage-statistics-requirements)
 
 Si vous ne pouvez pas satisfaire à toutes les exigences du tableau parce qu’elles sont interdites par les stratégies de votre organisation, consultez la section [autres configurations](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -121,7 +120,7 @@ Pour chaque scanneur, utilisez :
 - 4 processeurs principaux
 - 8 Go de RAM (4 Go minimum)
 
-## <a name="azure-information-protection-client-requirements"></a>Configuration requise pour le client Azure Information Protection
+## <a name="azure-information-protection-client-requirements"></a>Exigences du client Azure Information Protection
 
 Le client de Azure Information Protection doit être installé sur l’ordinateur Windows Server.
 
@@ -174,15 +173,6 @@ Pour analyser les fichiers, vos chemins d’accès aux fichiers doivent comporte
 Windows 10 et Windows Server 2016 prennent en charge des longueurs de chemin de plus de 260 caractères avec le [paramètre de stratégie de groupe](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10)suivant : stratégie de l' **ordinateur local**  >  **Configuration ordinateur**  >  **modèles d’administration**  >  **tous les paramètres**  >  **activer les chemins longs Win32**
 
 Pour plus d’informations sur la prise en charge des chemins de fichiers longs, consultez la section consacrée à la [longueur maximale des chemins](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
-
-## <a name="usage-statistics-requirements"></a>Exigences relatives aux statistiques d’utilisation
-
-Désactivez les statistiques d’utilisation à l’aide de l’une des méthodes suivantes :
-
-- Affectation de la valeur 0 au paramètre [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
-
-- Assurez-vous que l’option **contribuer à l’amélioration des Azure information protection en envoyant des statistiques d’utilisation à Microsoft** reste désélectionnée pendant le processus d’installation du scanneur.
-
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>Déploiement du scanneur avec d’autres configurations
 
@@ -242,7 +232,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 
     Si vous ne spécifiez pas votre propre nom de cluster (profil) pour le scanneur, la base de données de configuration est nommée **AIPScanner_ \<computer_name>**. </br>Poursuivez avec [la création d’un utilisateur et en accordant des droits de db_owner sur la base de données](#create-a-user-and-grant-db_owner-rights-manually). 
 
-De plus :
+En outre :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :

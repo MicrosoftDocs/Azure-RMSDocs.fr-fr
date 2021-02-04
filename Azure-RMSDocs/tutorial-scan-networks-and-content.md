@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
+ms.openlocfilehash: db57d4cdcf0d9153af2c6c1310019e8d1700e96c
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240884"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473070"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Tutoriel : Découverte de votre contenu sensible avec le scanneur Azure Information Protection (AIP)
 
@@ -46,7 +46,7 @@ Ce didacticiel vous montre comment effectuer les opérations suivantes :
 |---------|---------|
 |**Un abonnement avec prise en charge**     |  Il vous faut un abonnement Azure comportant [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.       |
 |**Accès administrateur au portail Azure** |Vérifiez que vous pouvez vous connecter au [portail Azure](https://portal.azure.com/) avec un compte d’administrateur pris en charge et que la protection est activée. Les comptes d’administrateur pris en charge sont les suivants : <br /><br />- **Administrateur de conformité**<br />- **Administrateur des données de conformité**<br />- **Administrateur de la sécurité**<br />- **Administrateur général**   |
-|**Client, scanneur et service de découverte du réseau AIP**   |   Pour suivre la totalité de ce tutoriel, vous devez avoir installé le client d’étiquetage unifiés et le scanneur Azure Information Protection ainsi que le service de découverte du réseau (préversion publique). <br /><br />Pour plus d’informations, consultez : <br /><br />- [Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection (AIP)](quickstart-deploy-client.md) <br />- [Tutoriel : Installation du scanneur d’étiquetage unifié Azure Information Protection](tutorial-install-scanner.md) |
+|**Client, scanneur et service de découverte du réseau AIP**   |   Pour effectuer la totalité de ce tutoriel, vous devez avoir installé le client d’étiquetage unifié et le scanneur Azure Information Protection, ainsi que le service de découverte du réseau (préversion publique). <br /><br />Pour plus d’informations, consultez : <br /><br />- [Démarrage rapide : Déploiement du client d’étiquetage unifié Azure Information Protection (AIP)](quickstart-deploy-client.md) <br />- [Tutoriel : Installation du scanneur d’étiquetage unifié Azure Information Protection](tutorial-install-scanner.md) |
 |**Un travail d’analyse de contenu** | Veillez à avoir un travail d’analyse de contenu de base que vous pouvez utiliser pour le test. Vous en avez peut-être créé un quand vous avez [installé votre scanneur](tutorial-install-scanner.md).<br /><br />Si vous devez en créer un maintenant, vous pouvez utiliser les instructions de [Configurer Azure Information Protection dans le portail Azure](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). Si vous avez un travail d’analyse de contenu simple, revenez ici pour suivre ce tutoriel. |
 |**SQL Server**     | Pour exécuter le scanneur, SQL Server doit être installé sur la machine du scanneur. <br /><br /> Pour l’installer, accédez à la [page de téléchargement de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads), puis sélectionnez **Télécharger maintenant** sous l’option d’installation que vous voulez utiliser. Dans le programme d’installation, sélectionnez le type d’installation **De base**. <br /><br />**Remarque** : Nous vous recommandons d’installer SQL Server Entreprise pour les environnements de production et l’édition Express seulement pour les tests.    |
 |**Compte Active Directory Azure**     |  Quand vous utilisez un environnement standard connecté au cloud, votre compte de domaine doit être synchronisé avec [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ce n’est pas nécessaire si vous travaillez hors connexion. <br /><br />Si vous avez un doute sur votre compte, contactez un de vos administrateurs système pour vérifier l’état de la synchronisation. Pour plus d’informations, consultez [Déploiement du scanneur avec d’autres configurations](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
@@ -94,7 +94,7 @@ Les données de la grille sont mises à jour à mesure que votre analyse est eff
 :::image type="content" source="media/qs-tutor/scanned-network.png" alt-text="Travaux d’analyse du réseau actualisés":::
 
 > [!TIP]
-> Si votre travail d’analyse du réseau ne s’exécute pas, vérifiez que le [service de découverte du réseau est correctement installé](tutorial-install-scanner.md#install-the-network-discovery-service) sur la machine du scanneur.
+> Si votre travail d’analyse du réseau ne s’exécute pas, vérifiez que le [service de découverte du réseau est correctement installé](tutorial-install-scanner.md#install-the-network-discovery-service-public-preview) sur la machine du scanneur.
 
 Poursuivez avec [Ajouter les référentiels à risque à un travail d’analyse de contenu](#add-risky-repositories-to-a-content-scan-job).
 

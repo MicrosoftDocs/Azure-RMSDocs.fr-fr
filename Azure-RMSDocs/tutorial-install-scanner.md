@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 54bb64810e2dc71f6356dfe60c0443dccfb87315
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
+ms.openlocfilehash: e9c6769781c81e03c6ed47f12b62eb3afefb40a7
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240867"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473053"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutoriel : Installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -180,9 +180,9 @@ Pour plus d’informations, consultez [Comment étiqueter des fichiers de maniè
 
 Le scanneur a maintenant un jeton pour s’authentifier auprès d’Azure AD. Ce jeton est valide aussi longtemps que ce que vous avez configuré dans Azure Active Directory. Vous devez répéter cette procédure quand le jeton expire.
 
-Poursuivez avec [Installation du service de découverte du réseau facultatif](#install-the-network-discovery-service), qui vous permet d’analyser les référentiels de votre réseau à la recherche de contenu susceptible d’être à risque, puis d’ajouter ces référentiels à un travail d’analyse de contenu.
+Poursuivez avec [Installation du service de découverte du réseau facultatif](#install-the-network-discovery-service-public-preview), qui vous permet d’analyser les référentiels de votre réseau à la recherche de contenu susceptible d’être à risque, puis d’ajouter ces référentiels à un travail d’analyse de contenu.
 
-## <a name="install-the-network-discovery-service"></a>Installer le service de découverte du réseau
+## <a name="install-the-network-discovery-service-public-preview"></a>Installer le service de découverte du réseau (préversion publique)
 
 À compter de la version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) du client d’étiquetage unifié AIP, les administrateurs peuvent utiliser le scanneur AIP pour analyser les référentiels du réseau, puis ajouter les référentiels qui semblent être à risque à un travail d’analyse de contenu.
 

@@ -123,6 +123,8 @@
           href: concept-classification-labels.md
         - name: Comportement des étiquettes et de la protection
           href: concept-labeling-and-protection.md
+        - name: Autorisations définies par l’utilisateur
+          href: concept-user-defined-permissions.md
     - name: Métadonnées
       href: concept-mip-metadata.md
     - name: Observateurs pour async (C++)

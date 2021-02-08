@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 02/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958123"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817820"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -109,7 +109,7 @@ Le suivi et la révocation de l’accès aux documents à l’aide du client d�
 
 - [Documents protégés par mot de passe](#password-protected-documents)
 - [Plusieurs pièces jointes dans un e-mail protégé](#multiple-attachments-in-a-protected-email)
-- [Documents accessibles via SharePoint](#documents-accessed-via-sharepoint)
+- [Documents accessibles via SharePoint ou OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
 Pour plus d’informations, consultez le Guide de l' [administrateur](rms-client/track-and-revoke-admin.md) et les procédures du Guide de l' [utilisateur](rms-client/revoke-access-user.md) .
 
@@ -124,11 +124,11 @@ Cette valeur ContentID est retournée uniquement avec le premier fichier qui ava
 
 En outre, la révocation de l’accès pour l’une des pièces jointes révoque également l’accès aux autres pièces jointes dans le même e-mail protégé.
 
-#### <a name="documents-accessed-via-sharepoint"></a>Documents accessibles via SharePoint
+#### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>Documents accessibles via SharePoint ou OneDrive
     
-- Les documents protégés téléchargés sur SharePoint perdent leur valeur **contentid** , et l’accès ne peut pas être suivi ou révoqué.
+- Les documents protégés qui sont téléchargés sur SharePoint ou OneDrive perdent leur valeur **contentid** , et l’accès ne peut pas être suivi ou révoqué.
 
-- Si un utilisateur télécharge le fichier à partir de SharePoint et y accède à partir de son ordinateur local, une nouvelle **contentid** est appliquée au document lorsqu’il l’ouvre localement. 
+- Si un utilisateur télécharge le fichier à partir de SharePoint ou OneDrive et y accède à partir de son ordinateur local, une nouvelle **contentid** est appliquée au document lorsqu’il l’ouvre localement. 
     
     L’utilisation de la valeur **contentid** d’origine pour le suivi des données n’inclut pas les accès effectués pour le fichier téléchargé de l’utilisateur. En outre, la révocation de l’accès basé sur la valeur **contentid** d’origine ne révoque pas l’accès pour les fichiers téléchargés.
 
@@ -175,7 +175,7 @@ Vous pouvez également désactiver entièrement l’autorité de certification d
 
 Pour plus d’informations, consultez la [documentation relative à l’accès conditionnel](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Informations complémentaires
+## <a name="more-information"></a>Plus d’informations
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

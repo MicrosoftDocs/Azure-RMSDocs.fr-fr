@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
-ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
+ms.openlocfilehash: 1b90b0df202719f6cadab0671db9f118be58ad72
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99817820"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105247"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -92,16 +92,27 @@ Les fichiers de plus de 2 Go sont pris en charge pour la protection, mais pas po
 
 ## <a name="known-issues-for-the-aip-viewer"></a>Problèmes connus de la visionneuse AIP
 
+- [Modes paysage](#landscape-views-in-the-aip-viewer)
+- [Utilisateurs externes](#external-users-and-the-aip-viewer)
+
+Pour plus d’informations, consultez [ **client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md).
+### <a name="landscape-views-in-the-aip-viewer"></a>Affichages en mode paysage dans la visionneuse AIP
+
 La visionneuse AIP affiche des images en mode portrait, et certaines images larges et de vue paysage peuvent sembler étirées.
 
 Par exemple, une image d’origine est représentée ci-dessous à gauche, avec une version en mode portrait étirée dans la visionneuse AIP à droite. 
-    
-:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Image étirée dans la visionneuse cliente":::
-    
-Pour plus d'informations, consultez les pages suivantes :
 
-- [**Client classique**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/client-view-use-files.md)
-- [**Client d’étiquetage unifié**: afficher les fichiers protégés avec la visionneuse de Azure information protection](rms-client/clientv2-view-use-files.md)
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Image étirée dans la visionneuse cliente":::
+
+### <a name="external-users-and-the-aip-viewer"></a>Utilisateurs externes et visionneuse AIP 
+
+Si un utilisateur externe a déjà un compte invité dans Azure AD, la visionneuse AIP peut afficher une erreur quand l’utilisateur ouvre un document protégé, lui indiquant qu’il ne peut pas se connecter avec un compte personnel.
+
+Si une telle erreur s’affiche, l’utilisateur doit installer [Adobe Acrobat DC avec l’extension MIP](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) afin d’ouvrir le document protégé.
+
+Lors de l’ouverture du document protégé après l’installation d’Adobe Acrobat DC avec l’extension MIP, l’utilisateur peut toujours voir une erreur indiquant que le compte d’utilisateur sélectionné n’existe pas dans le locataire et lui demander de sélectionner un compte. 
+
+Il s’agit d’une erreur attendue. Dans la fenêtre d’invite, sélectionnez **précédent** pour continuer à ouvrir le document protégé.
 
 ## <a name="known-issues-for-track-and-revoke-features-public-preview"></a>Problèmes connus pour les fonctionnalités de suivi et de révocation (version préliminaire publique)
 
@@ -175,7 +186,7 @@ Vous pouvez également désactiver entièrement l’autorité de certification d
 
 Pour plus d’informations, consultez la [documentation relative à l’accès conditionnel](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Informations complémentaires
 
 Les articles supplémentaires suivants peuvent être utiles pour répondre à des questions sur les problèmes connus dans Azure Information Protection :
 

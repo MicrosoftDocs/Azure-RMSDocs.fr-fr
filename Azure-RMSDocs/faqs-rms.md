@@ -4,7 +4,7 @@ description: Questions fréquemment posées sur le service de protection des don
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/02/2020
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 31202876b035f7b5266abd006cfcd943e8eb6690
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: 31da35a9dc1f726cba86897e45f3ee6537efa0fa
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659015"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105281"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -162,7 +162,7 @@ Utilisez la [fonctionnalité de super utilisateur](configure-super-users.md), qu
 Si votre contenu est stocké dans SharePoint ou OneDrive, les administrateurs peuvent exécuter l’applet de commande [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) pour supprimer l’étiquette de sensibilité et le chiffrement. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Est-ce que Rights Management peut empêcher les captures d’écran ?
-En n’accordant pas le [droit d’utilisation](configure-usage-rights.md)de **copie** , Rights Management pouvez empêcher la capture d’écran à partir de nombreux outils de capture d’écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 mobile) et Android. Toutefois, appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran. En outre, les navigateurs sur n’importe quel appareil ne peuvent pas empêcher les captures d’écran. L’utilisation du navigateur comprend Outlook sur le Web et Office pour le Web.
+En n’accordant pas le [droit d’utilisation](configure-usage-rights.md) **copier** , Rights Management pouvez empêcher la capture d’écran à partir de nombreux outils de capture d’écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10 et Windows 10 mobile). Toutefois, les appareils iOS, Mac et Android n’autorisent aucune application à empêcher les captures d’écran. En outre, les navigateurs sur n’importe quel appareil ne peuvent pas empêcher les captures d’écran. L’utilisation du navigateur comprend Outlook sur le Web et Office pour le Web.
 
 La possibilité d’empêcher les captures d’écran peut également aider à éviter la divulgation accidentelle ou involontaire de renseignements confidentiels ou sensibles. Mais il existe de nombreuses façons pour un utilisateur de partager des données affichées sur un écran, et la capture d’écran n’est qu’une méthode. Par exemple, un utilisateur désireux de partager des informations affichées peut parfaitement les photographier avec son téléphone, recopier les données ou simplement les communiquer verbalement à un tiers.
 

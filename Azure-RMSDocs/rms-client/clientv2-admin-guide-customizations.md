@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/18/2021
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 925ef5dda1f470dbba6f173df427d4672b853167
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: dec2d96f05f419c0a0f13f50210ed59d0bf67213
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809929"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105298"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -203,9 +203,8 @@ Les sections suivantes répertorient les paramètres avancés décrits sur cette
 |**Paramètres d’amélioration des performances**     | - [Limiter la consommation de l’UC](#limit-cpu-consumption) <br>- [Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Empêcher les problèmes de performances d’Outlook avec les e-mails S/MIME](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Paramètres pour les intégrations à d’autres solutions d’étiquetage**     | - [Migrer des étiquettes à partir d’îlots sécurisés et d’autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**Paramètres d’analyse AIP**     |   - [Désactiver l’envoi de données d’audit à Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
-|**Paramètres généraux**     | - [Ajouter « signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users) <br>- [Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Modifier le niveau de journalisation locale](#change-the-local-logging-level) <br>- [Changer les types de fichiers à protéger](#change-which-file-types-to-protect)<br>- [Configurer des délais d’attente SharePoint](#configure-sharepoint-timeouts)<br>- [Personnaliser les textes d’invite de justification pour les étiquettes modifiées](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Afficher la barre de Information Protection dans les applications Office](#display-the-information-protection-bar-in-office-apps) <br>- [Activer la suppression de la protection des fichiers compressés](#enable-removal-of-protection-from-compressed-files) <br>-  [Conserver les propriétaires NTFS lors de l’étiquetage (version préliminaire publique)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Supprimer « pas maintenant » pour les documents lorsque vous utilisez l’étiquetage obligatoire](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Spécifier une couleur pour l’étiquette](#specify-a-color-for-the-label)<br>-  [Spécifier une sous-étiquette par défaut pour une étiquette parent](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Prise en charge de la modification \<EXT> . PFILE à P\<EXT>](#additionalpprefixextensions)  <br>-  [Prise en charge des ordinateurs déconnectés](#support-for-disconnected-computers)     <br>-  [Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Désactiver les fonctionnalités de suivi des documents (préversion publique)](#turn-off-document-tracking-features-public-preview)   |
+|**Paramètres généraux**     | - [Ajouter « signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users) <br>- [Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Modifier le niveau de journalisation locale](#change-the-local-logging-level) <br>- [Changer les types de fichiers à protéger](#change-which-file-types-to-protect)<br>- [Configurer le délai d’étiquetage automatique des fichiers Office](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configurer des délais d’attente SharePoint](#configure-sharepoint-timeouts)<br>- [Personnaliser les textes d’invite de justification pour les étiquettes modifiées](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Afficher la barre de Information Protection dans les applications Office](#display-the-information-protection-bar-in-office-apps) <br>- [Activer la suppression de la protection des fichiers compressés](#enable-removal-of-protection-from-compressed-files) <br>-  [Conserver les propriétaires NTFS lors de l’étiquetage (version préliminaire publique)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Supprimer « pas maintenant » pour les documents lorsque vous utilisez l’étiquetage obligatoire](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Ignorer ou ignorer les fichiers lors des analyses en fonction des attributs de fichier](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Spécifier une couleur pour l’étiquette](#specify-a-color-for-the-label)<br>-  [Spécifier une sous-étiquette par défaut pour une étiquette parent](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Prise en charge de la modification \<EXT> . PFILE à P\<EXT>](#additionalpprefixextensions)  <br>-  [Prise en charge des ordinateurs déconnectés](#support-for-disconnected-computers)     <br>-  [Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Désactiver les fonctionnalités de suivi des documents (préversion publique)](#turn-off-document-tracking-features-public-preview)   |
 |     |         |
-
 
 ### <a name="label-policy-advanced-setting-reference"></a>Référence des paramètres avancés de la stratégie d’étiquette
 
@@ -215,7 +214,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/mod
 |----------------|---------------|
 |**AdditionalPPrefixExtensions**|[Prise en charge de la modification \<EXT> . PFILE à P à \<EXT> l’aide de cette propriété avancée](#additionalpprefixextensions)
 |**AttachmentAction**|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-|**AttachmentActionTip**|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|**AttachmentActionTip**|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**DisableMandatoryInOutlook**|[Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling)
 |**EnableAudit**|[Désactiver l’envoi de données d’audit à Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |**EnableContainerSupport**|[Activer la suppression de la protection des fichiers PST, rar, 7zip et MSG](#enable-removal-of-protection-from-compressed-files)
@@ -228,6 +227,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](/powershell/mod
 |**HideBarByDefault**|[Afficher la barre Information Protection dans les applications Office](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Personnaliser les textes d’invite de justification pour les étiquettes modifiées](#customize-justification-prompt-texts-for-modified-labels) |
 |**LogMatchedContent**|[Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
+|**OfficeContentExtractionTimeout** | [Configurer le délai d’étiquetage automatique des fichiers Office](#configure-the-autolabeling-timeout-on-office-files) |
 |**OutlookBlockTrustedDomains**|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookBlockUntrustedCollaborationLabel**|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookCollaborationRule**| [Personnaliser les messages de la fenêtre contextuelle Outlook](#customize-outlook-popup-messages)|
@@ -576,25 +576,45 @@ Pour plus d'informations, consultez les pages suivantes :
 
 #### <a name="multiline-headers-or-footers"></a>En-têtes ou pieds de page multilignes
 
-Si un texte d’en-tête ou de pied de page prend plus d’une ligne, créez une clé et une valeur pour chaque ligne. Par exemple, si vous avez le pied de page suivant avec deux lignes :
+Si le texte d’en-tête ou de pied de page est plus qu’une seule ligne, votre commande dépend des parties que vous souhaitez supprimer de l’en-tête. Dans cette section, nous allons utiliser l’exemple suivant, pied de page à plusieurs lignes :
 
-**Le fichier est classé confidentiel**
+*Le fichier est classé confidentiel*
 
-**Étiquette appliquée manuellement**
+*Étiquette appliquée manuellement*
 
-Pour supprimer ce pied de page multiligne, vous créez les deux entrées suivantes pour la même stratégie d’étiquette :
+*Partager avec précaution*
 
-- Clé : **ExternalContentMarkingToRemove**
+Utilisez l’une des méthodes suivantes, en fonction de la partie du pied de page que vous souhaitez supprimer :
 
-- Valeur de clé 1 : **\* confidentiel***
+- **Si vous souhaitez supprimer l’intégralité du pied de page**, vous n’avez besoin que d’une seule valeur de clé, avec des astérisques avant et après tout mot unique de votre pied de page. 
 
-- Valeur de clé 2 : **\* étiquette appliquée*** 
+    Par exemple, créez l’entrée suivante dans la stratégie d’étiquette :
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+    - Clé : **ExternalContentMarkingToRemove**
 
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-```
+    - Valeur de clé 1 : **\* confidentiel***
+    
+    Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*"}
+    ```
+
+- **Si vous souhaitez supprimer uniquement une ligne spécifique**, vous avez besoin d’une valeur de clé pour chaque ligne spécifique que vous souhaitez supprimer. Chaque valeur de clé doit contenir le texte exact que vous souhaitez supprimer.
+
+    Par exemple, créez l’entrée suivante dans la stratégie d’étiquette :
+
+    - Clé : **ExternalContentMarkingToRemove**
+
+    - Valeur de clé 1 : **étiquette appliquée manuellement**
+
+    - Valeur de clé 2 : **partager avec précaution**
+
+    Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="Label applied manually,Share with caution"}
+    ```
 
 #### <a name="optimization-for-powerpoint"></a>Optimisation pour PowerPoint
 
@@ -1417,7 +1437,7 @@ Pensez à vérifier le nom de domaine du compte connecté. En effet, vous pouvez
 
 2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si vous ne voyez pas d’invite dans votre application Office pour vous connecter au service Azure Information Protection, revenez à la boîte de dialogue **Microsoft Azure information protection** et sélectionnez **se connecter** à partir de la section **État du client** mis à jour.
 
-En outre :
+De plus :
 
 |Scénario  |Description  |
 |---------|---------|
@@ -1645,7 +1665,7 @@ Les types de nœuds pris en charge sont les suivants :
 | **And**   | Effectue *et* sur tous les nœuds enfants     |
 | **Ou**    |Effectue *ou* sur tous les nœuds enfants       |
 | **Not**   | *N’effectue pas* pour son propre enfant      |
-| **Except**    | Retourne la valeur *not* pour son propre enfant, provoquant son comportement comme **All**        |
+| **Mais**    | Retourne la valeur *not* pour son propre enfant, provoquant son comportement comme **All**        |
 | **SentTo**, suivi des **domaines : listOfDomains**    |Vérifie l’un des éléments suivants : <br>-Si le parent est **except**, vérifie si **tous** les destinataires se trouvent dans l’un des domaines.<br>-Si le parent est autre que, **à l’exception** de, **vérifie si l’un des** destinataires est dans l’un des domaines.   |
 | **EMailLabel**, suivi de l’étiquette | Celui-ci peut avoir l'une des valeurs suivantes :  <br>-ID d’étiquette <br>-NULL, s’il n’est pas étiqueté             |
 | **AttachmentLabel**, suivi par l' **étiquette** et les **Extensions** prises en charge   | Celui-ci peut avoir l'une des valeurs suivantes :  <br><br>**vrai**: <br>-Si le parent est **except**, vérifie si **toutes** les pièces jointes avec une extension prise en charge existent dans l’étiquette<br>-Si le parent est autre que, **à l’exception** de, vérifie si l' **une** des pièces jointes avec une extension prise en charge existe dans l’étiquette <br>-S’il n’est pas étiqueté et **étiquette = null** <br><br> **false**: pour tous les autres cas <br><br>**Remarque**: si la propriété **Extensions** est vide ou manquante, tous les types de fichiers pris en charge (extensions) sont inclus dans la règle.
@@ -2062,6 +2082,29 @@ Cette configuration utilise un [paramètre avancé](#configuring-advanced-settin
 > [!NOTE]
 > Pour activer le suivi et la révocation, affectez la valeur **true** à **EnableTrackAndRevoke** et exécutez également l’applet de commande [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) .
 >
+
+## <a name="configure-the-autolabeling-timeout-on-office-files"></a>Configurer le délai d’étiquetage automatique des fichiers Office
+
+Par défaut, le délai d’expiration d’étiquetage automatique du scanneur sur les fichiers Office est de 3 secondes.
+
+Si vous avez un fichier Excel complexe contenant de nombreuses feuilles ou lignes, il se peut que 3 secondes ne soient pas suffisantes pour appliquer automatiquement des étiquettes. Pour augmenter ce délai d’attente pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
+
+- Clé : **OfficeContentExtractionTimeout**
+
+- Valeur : secondes, au format suivant : `hh:mm:ss` . 
+
+> [!IMPORTANT]
+> Nous vous recommandons de ne pas augmenter ce délai d’attente à une valeur supérieure à 15 secondes.
+> 
+
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OfficeContentExtractionTimeout="00:00:15"}
+```
+
+Le délai d’expiration mis à jour s’applique à l’étiquetage automatique sur tous les fichiers Office.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 Maintenant que vous avez personnalisé le client d’étiquetage unifié Azure Information Protection, consultez les ressources suivantes pour obtenir des informations supplémentaires dont vous pouvez avoir besoin pour prendre en charge ce client :

@@ -4,7 +4,7 @@ description: Au lieu que Microsoft gère la clé racine pour Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,25 +13,26 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35c898ded852970e380c8061ba8f97d040860017
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: cf9c6dd8cfee0c800289fddf6cbb46c909d23a6d
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386387"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521291"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 La clé de locataire Azure Information Protection est une clé racine pour votre organisation. D’autres clés peuvent être dérivées de cette clé racine, y compris les clés utilisateur, les clés d’ordinateur ou les clés de chiffrement de document. Chaque fois que Azure Information Protection utilise ces clés pour votre organisation, elles sont chaînées par chiffrement à votre clé de locataire racine Azure Information Protection.
 
 En plus de votre clé racine de locataire, votre organisation peut nécessiter une sécurité locale pour des documents spécifiques. La protection de clé locale est généralement requise uniquement pour une petite quantité de contenu et, par conséquent, est configurée avec une clé racine de locataire.
+
 
 ## <a name="azure-information-protection-key-types"></a>Types de clés de Azure Information Protection
 
@@ -109,3 +110,14 @@ Le contenu peut être chiffré à l’aide de la protection HYOK uniquement si v
 
 Pour plus d’informations, voir [les détails de la conservation de votre propre clé (hyok)](configure-adrms-restrictions.md).
 
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations sur les types de clés spécifiques, consultez l’un des articles suivants :
+
+- [Prise en main des clés racines du locataire](get-started-tenant-root-keys.md)
+- [BYOK les détails de votre propre clé pour Azure Information Protection](byok-price-restrictions.md)
+- [Chiffrement à clé double pour Microsoft 365](/microsoft-365/compliance/double-key-encryption)
+
+
+Si vous effectuez une migration entre des locataires, par exemple après une fusion d’entreprise, nous vous recommandons de lire notre [billet de blog sur fusions et Spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) pour plus d’informations.

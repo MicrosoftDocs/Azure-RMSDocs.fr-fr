@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dec2d96f05f419c0a0f13f50210ed59d0bf67213
-ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
+ms.openlocfilehash: dc8d5d5eb1bb69287439e541f1f03327394b4861
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100105298"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521325"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -53,7 +53,7 @@ Pour supprimer un paramètre avancé, utilisez la même syntaxe de paramètre **
 > [!IMPORTANT]
 > N’utilisez pas d’espaces blancs dans vos valeurs de chaîne. Les chaînes blanches dans ces valeurs de chaîne empêcheront l’application de vos étiquettes.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Syntaxe des paramètres avancés de la stratégie d’étiquette](#label-policy-advanced-settings-syntax)
 - [Syntaxe des paramètres avancés des étiquettes](#label-advanced-settings-syntax)
@@ -473,7 +473,7 @@ Il existe deux méthodes pour supprimer des classifications d’autres solutions
 |Paramètre  |Description  |
 |---------|---------|
 |**WordShapeNameToRemove**     |  Supprime toute forme des documents Word où le nom de la forme correspond au nom défini dans la propriété avancée **WordShapeNameToRemove** .  <br><br>Pour plus d’informations, consultez [utiliser la propriété avancée WordShapeNameToRemove](#use-the-wordshapenametoremove-advanced-property).     |
-|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels dans des documents Word, Excel et PowerPoint. <br><br>Pour plus d'informations, consultez les pages suivantes : <br>- [Utiliser la propriété avancée RemoveExternalContentMarkingInApp](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [Comment configurer ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove).    |
+|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels dans des documents Word, Excel et PowerPoint. <br><br>Pour plus d’informations, consultez : <br>- [Utiliser la propriété avancée RemoveExternalContentMarkingInApp](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [Comment configurer ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove).    |
 |     |         |
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>Utiliser la propriété avancée WordShapeNameToRemove
@@ -569,7 +569,7 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 ```
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [En-têtes ou pieds de page multilignes](#multiline-headers-or-footers)
 - [Optimisation pour PowerPoint](#optimization-for-powerpoint)
@@ -677,7 +677,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesBy
 > Si vous souhaitez définir **PowerPointRemoveAllShapesByShapeName**, nous vous recommandons de définir [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) et [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) afin d’éviter de supprimer plus de formes que prévu.
 >
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)
 - [Supprimer le marquage de contenu externe des dispositions personnalisées dans PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)
@@ -855,7 +855,7 @@ Pour obtenir un exemple de procédure pas à pas de configuration de ces paramè
 > [!TIP]
 > Pour garantir l’affichage des fenêtres contextuelles, même lorsque les documents sont partagés à partir d’Outlook **(partage de > de fichiers > joindre une copie)**, configurez également le paramètre avancé [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Pour implémenter les messages contextuels avertir, justifier ou bloquer pour des étiquettes spécifiques](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels)
 - [Pour implémenter les messages contextuels d’avertissement, de justification ou de blocage pour les e-mails ou les pièces jointes qui n’ont pas d’étiquette](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)
@@ -1157,6 +1157,10 @@ Pour une personnalisation supplémentaire, consultez :
 
 - [Étendre vos règles de migration d’étiquette aux e-mails](#extend-your-label-migration-rules-to-emails)
 - [Étendre vos règles de migration d’étiquette à des propriétés SharePoint](#extend-your-label-migration-rules-to-sharepoint-properties)
+
+> [!NOTE]
+> Si vous effectuez une migration à partir de vos étiquettes à travers les locataires, par exemple après une fusion d’entreprise, nous vous recommandons de lire notre [billet de blog sur fusions et Spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) pour plus d’informations.
+>
 
 #### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : mappage du même nom d’étiquette
 
@@ -1649,7 +1653,7 @@ Définissez la syntaxe JSON de votre règle comme suit :
 "nodes" : []
 ```
 
-Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d'informations, consultez les pages suivantes :
+Vous devez avoir au moins deux nœuds, le premier représentant la condition de la règle et le dernier représentant l’action de la règle. Pour plus d’informations, consultez :
 
 - [Syntaxe de condition de règle](#rule-condition-syntax)
 - [Syntaxe de l’action de règle](#rule-action-syntax)

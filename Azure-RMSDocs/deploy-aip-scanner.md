@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f674cd162131b0a45dbefbe70e617296695d6126
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382545"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524742"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?
 
@@ -146,6 +146,8 @@ Pour plus d’informations sur le déploiement du scanneur, consultez les articl
 - [Exécution d’analyses à l’aide du scanneur AIP](deploy-aip-scanner-manage.md)
 
 **Plus d’informations**:
+
+- [Regardez notre vidéo de déploiement !](https://techcommunity.microsoft.com/t5/microsoft-security-and/mip-scanner-deployment-watch-our-video/ba-p/2023277) Visionnez une démonstration pas à pas de l’installation et de la configuration du scanneur local avec étiquetage.
 
 - Consultez notre blog sur les meilleures pratiques pour le scanneur d’étiquetage unifié : [meilleures pratiques pour le déploiement et l’utilisation du scanneur UL AIP](https://aka.ms/AIPScannerBestPractices)
 

@@ -4,7 +4,7 @@ description: Instructions d’installation et de configuration de l’analyseur 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 112593d0d26deca85dad62d580c73553f4a26107
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: 46655ef7da2d8670ef3fced105b3d471bb05a8f9
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659185"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524759"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configuration et installation du Azure Information Protection scanneur classique
 
@@ -89,7 +89,7 @@ Pour configurer votre scanneur :
     |Section  |Paramètres  |
     |---------|---------|
     |**Paramètres du travail d’analyse du contenu**     |    - **Planifier**: conserver la valeur par défaut **manuelle** </br>- **Types d’informations à découvrir**: changer en **stratégie uniquement** </br>- **Configurer les référentiels**: ne pas configurer pour l’instant, car le travail d’analyse de contenu doit d’abord être enregistré.         |
-    |**Application de la stratégie**     | - **Appliquer**: sélectionner **désactivé** </br>- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** </br>- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut </br>- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
+    |**Stratégie de sensibilité**     | - **Appliquer**: sélectionner **désactivé** </br>- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** </br>- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut </br>- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
     |**Configurer les paramètres du fichier**     | - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »**: conserver la valeur par défaut **activée** </br>- **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion** </br>- **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**        |
     | | |
 
@@ -121,7 +121,7 @@ Pour configurer votre scanneur :
 
     Pour ajouter des chemins d’accès SharePoint, utilisez la syntaxe ci-après :
     
-    |Chemin  |Syntaxe  |
+    |Chemin d’accès  |Syntaxe  |
     |---------|---------|
     |**Chemin d’accès racine**     | `http://<SharePoint server name>` </br></br>Analyse tous les sites, y compris les collections de sites autorisées pour l’utilisateur du scanneur. </br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu racine        |
     |**Sous-site ou regroupement SharePoint spécifique**     | Celui-ci peut avoir l'une des valeurs suivantes : </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Nécessite [des autorisations supplémentaires](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) pour découvrir automatiquement le contenu de la collection de sites         |
@@ -224,7 +224,7 @@ Pour modifier ces paramètres, modifiez le travail d’analyse du contenu :
 2. Dans le volet du travail analyse du contenu, modifiez les éléments suivants, puis sélectionnez **Enregistrer**:
 
    - Dans la section **travail d’analyse du contenu** : modifiez la **planification** pour **toujours**
-   - À partir de la section application de la **stratégie** : modifier **appliquer** la valeur **activé**
+   - À partir de la section **stratégie de sensibilité** : changer **appliquer** à **activé**
 
     > [!TIP]
     > Vous pouvez modifier d’autres paramètres dans ce volet, par exemple si les attributs de fichier sont modifiés et si le scanneur peut réétiqueter les fichiers. Utilisez l’aide contextuelle des informations pour plus d’informations sur chaque paramètre de configuration.
@@ -316,7 +316,7 @@ Dans les scénarios suivants, le Azure Information Protection scanner est égale
 
 Dans cette configuration, tous les fichiers sans étiquette du référentiel sont étiquetés avec l’étiquette par défaut spécifiée pour le référentiel ou le travail d’analyse du contenu. Les fichiers sont étiquetés sans inspection.
 
-Configurez les paramètres suivants :
+Configurez les paramètres suivants :
 
 - **Étiqueter les fichiers en fonction du contenu**: **désactivée**
 - **Étiquette par défaut**: définissez sur **personnalisé**, puis sélectionnez l’étiquette à utiliser
@@ -360,7 +360,7 @@ Les facteurs supplémentaires qui affectent les performances du scanneur sont le
 |**Mode scanneur** (détection/application)    | Le mode de détection a généralement un taux d’analyse plus élevé que le mode d’application. </br></br>La découverte requiert une seule action de lecture de fichier, tandis que le mode d’application requiert des actions de lecture et d’écriture.        |
 |**Modifications de stratégie**     |Les performances de votre scanneur peuvent être affectées si vous avez apporté des modifications aux conditions de la stratégie de Azure Information Protection. </br></br>Votre premier cycle d’analyse, lorsque le scanneur doit inspecter chaque fichier, prend plus de temps que les cycles d’analyse suivants qui, par défaut, inspectent uniquement les fichiers nouveaux et modifiés. </br></br>Si vous modifiez les conditions, tous les fichiers sont analysés à nouveau. Pour plus d’informations, consultez [rescaning Files](deploy-aip-scanner-manage-classic.md#rescanning-files).|
 |**Constructions Regex**    | Les performances de l’analyseur sont affectées par la manière dont vos expressions Regex pour les conditions personnalisées sont construites. </br></br> Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. </br></br>Par exemple : </br>-Évitez les [quantificateurs gourmands](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Utiliser des groupes sans capture comme `(?:expression)` au lieu de `(expression)`    |
-|**Log level**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.</br></br>- La valeur **off** permet d’obtenir des performances optimales </br>- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. </br></br>Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Niveau de journalisation**     |  Les options de niveau de journalisation sont **Debug**, **info**, **Error** et **off** pour les rapports du scanneur.</br></br>- La valeur **off** permet d’obtenir des performances optimales </br>- Le **débogage** ralentit considérablement le scanneur et doit être utilisé uniquement pour la résolution des problèmes. </br></br>Pour plus d’informations, consultez le paramètre *ReportLevel* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Fichiers en cours d’analyse**     |-À l’exception des fichiers Excel, les fichiers Office sont analysés plus rapidement que les fichiers PDF. </br></br>-Les fichiers non protégés sont plus rapides à analyser que les fichiers protégés. </br></br>-Les fichiers volumineux sont évidemment plus longs à analyser que les petits fichiers.         |
 | | |
 

@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb3d8789ddd94ee1cb9e7eb948475b559d632fc
-ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
+ms.openlocfilehash: afe860e878df27b7081c4f12a9b4612cab845db9
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100521308"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524793"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -255,7 +255,7 @@ Ignorez la nouvelle analyse complète et immédiate, puis revenez plus tard pour
 > [!IMPORTANT]
 > Les administrateurs qui modifient leurs stratégies et les travaux d’analyse de contenu doivent maintenant comprendre les effets de ces modifications sur le contenu et déterminer si une nouvelle analyse complète est nécessaire.
 >
-> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
+> Par exemple, si vous avez modifié les paramètres de **stratégie de sensibilité** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 >
 
 ### <a name="configure-sharepoint-timeouts"></a>Configurer des délais d’attente SharePoint
@@ -335,6 +335,7 @@ Les types d’informations ne sont plus envoyés par [les journaux d’audit pou
 
 Pour plus d’informations, consultez [accéder aux journaux d’audit](../audit-logs.md#access-audit-logs).
 
+Pour plus d’informations, consultez [Azure information protection référence du journal d’audit](../audit-logs.md).
 ### <a name="dke-template-based-labeling-updates"></a>Mises à jour de l’étiquetage basé sur un modèle DKE
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.

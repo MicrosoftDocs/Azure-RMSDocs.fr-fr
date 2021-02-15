@@ -4,7 +4,7 @@ description: Instructions pour exécuter le Azure Information Protection scanner
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/25/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9815969701e1dee352d2b2ad5d2874de6c8df204
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 13484ad0301ec8d7404c4127ff78720df81d8eb5
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809573"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524776"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Exécution du scanneur Azure Information Protection
 
@@ -132,7 +132,7 @@ Si vous avez également modifié les paramètres de protection de vos étiquette
 > [!IMPORTANT]
 > Si vous avez effectué une mise à niveau vers la version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) ou ultérieure, AIP ignore la rerecherche complète des paramètres mis à jour pour garantir des performances cohérentes. Si vous avez effectué une mise à niveau, veillez à [exécuter une nouvelle analyse complète manuellement](#rescanning-files) en fonction des besoins. 
 >
-> Par exemple, si vous avez modifié les paramètres de **mise en application des stratégies** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
+> Par exemple, si vous avez modifié les paramètres de **stratégie de sensibilité** de **appliquer = désactivé** à **appliquer = on**, veillez à exécuter une nouvelle analyse complète pour appliquer vos étiquettes à votre contenu.
 > 
 
 ## <a name="next-steps"></a>Étapes suivantes

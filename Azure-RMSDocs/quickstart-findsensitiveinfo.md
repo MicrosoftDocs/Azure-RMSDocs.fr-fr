@@ -4,19 +4,19 @@ description: Utilisez le scanneur Azure Information Protection pour rechercher l
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 19070e1e661718c70b21cd16d76130afed91b17f
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 61a31c458ced8f28f62de35204db180dcc785ee2
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809395"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524810"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -92,7 +92,7 @@ Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail 
 
     Si vous le souhaitez, entrez une description des raisons administratives, pour vous aider à identifier le nom de profil du scanneur.
 
-1. Recherchez la section **Application de la stratégie**, dans laquelle pour ce démarrage rapide, vous allez sélectionner un seul paramètre : Pour **Appliquer**, sélectionnez **Désactivé**. Puis sélectionnez **Enregistrer** mais ne fermez pas le volet.
+1. Recherchez la section **Stratégie de confidentialité**, dans laquelle pour ce démarrage rapide, vous allez sélectionner un seul paramètre : Pour **Appliquer**, sélectionnez **Désactivé**. Puis sélectionnez **Enregistrer** mais ne fermez pas le volet.
 
     Les paramètres configurent le scanneur pour une détection à usage unique de tous les fichiers dans vos référentiels de données spécifiés. Cette analyse recherche tous les types connus d’informations sensibles et ne nécessite aucune configuration préalable de vos étiquettes Azure Information Protection ou paramètres de stratégie.
 

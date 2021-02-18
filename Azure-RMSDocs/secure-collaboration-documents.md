@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57f26f92535560a86377a34dcdfbb00a3453d73e
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 8030d9c276bd745a427ed5444076cea4a7a6283e
+ms.sourcegitcommit: 939dee0b096f49f5cf3df32cf800c6ae3114ce25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809824"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100655235"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -142,10 +142,10 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 
 |Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
-|Windows|Oui [[1]](#footnote-1)|Oui (Microsoft 365 les applications uniquement)|
+|Windows|Oui [[1]](#footnote-1)|Oui (Microsoft 365 Apps et Microsoft Office 2019)|
 |iOS|Oui [[1]](#footnote-1)|Oui (version 2,42 et versions ultérieures) |
 |Android|Oui [[1]](#footnote-1)|Oui (version 16.0.13029 et versions ultérieures)|
-|MacOS|Oui [[1]](#footnote-1)|Oui (version 16,42 et versions ultérieures)|
+|MacOS|Oui [[1]](#footnote-1)|Oui (Microsoft 365 Apps, version 16,42 et versions ultérieures)|
 
 ###### <a name="footnote-1"></a>Note 1
 Prend en charge les comptes d’utilisateur, les groupes à extension messagerie, tous les membres. Les comptes d’utilisateur et les groupes à extension messagerie peuvent inclure des comptes Invité. Tous les membres sauf les comptes Invité.

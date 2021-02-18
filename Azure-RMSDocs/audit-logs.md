@@ -4,7 +4,7 @@ description: En savoir plus sur les journaux d’audit générés par Azure Info
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,21 +12,21 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e48c3a32527ea214d952725a4935c566a60d208f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3019f0d6886f5de79f51f14262094e2be1f7ee40
+ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383939"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101090539"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Informations de référence sur le journal d’audit Azure Information Protection (version préliminaire publique)
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, Azure Information Protection la **gestion des étiquettes** et des **clients classiques** dans le portail Azure sont **dépréciées** depuis le **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
+> Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 La fonctionnalité de journal d’audit Azure Information Protection est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
 
@@ -44,9 +44,6 @@ Microsoft Azure Information Protection génère des journaux d’audit au niveau
 * [Supprimer la protection](#remove-protection-audit-logs)
 * [Étiquette de mise à niveau](#upgrade-label-audit-logs)
 
-> [!NOTE]
-> La [visionneuse AIP](rms-client/clientv2-view-use-files.md) n’envoie pas de journaux d’audit. 
->
 ## <a name="access-audit-logs"></a>Accéder aux journaux d’audit
 
 Les journaux d’audit d' **accès** sont générés pour les activités suivantes :
@@ -88,6 +85,7 @@ Les journaux d’audit de la **protection des modifications** sont générés po
 |---------|---------|---------|---------|
 |Azure Information Protection : <br />-Scanneur classique <br />-Scanneur d’étiquetage unifié | Windows        | Office        |Généré chaque fois qu’un fichier est analysé par le scanneur AIP.<br>Le journal contient les informations suivantes :<br>-Types d’informations identiques<br>-Étiquettes |
 |SDK Microsoft Information Protection (MIP) | Quelconque | Applications tierces | Généré chaque fois qu’un fichier est analysé par une application tierce qui le prend en charge. <br />Le journal contient les informations suivantes :<br />-Types d’informations identiques<br />-Étiquettes|
+|Visionneuse d’étiquetage unifiée Azure Information Protection |Windows |Visionneuse d’étiquetage unifiée AIP  | Généré chaque fois qu’un fichier étiqueté ou protégé est ouvert.|
 | | | | |
 
 ## <a name="downgrade-label-audit-logs"></a>Déclasser les journaux d’audit des étiquettes

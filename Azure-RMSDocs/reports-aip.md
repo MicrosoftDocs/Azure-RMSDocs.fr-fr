@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: batamig
 ms.author: bagol
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 99c1fa6379f346477431caa884b687d39d500b7a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 19c6b2d4e2e7d06c7fa5552f592f69359dc039de
+ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98808809"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101090557"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
 
@@ -41,7 +41,7 @@ Utilisez Azure Information Protection Analytics pour la création de rapports ce
 
 - Identifiez le moment où les utilisateurs internes ou externes accèdent à des documents protégés à partir d’ordinateurs Windows, et si l’accès a été accordé ou refusé.
 
-Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, de Microsoft Cloud App Security à partir d’ordinateurs Windows 10 utilisant Microsoft Defender-protection avancée contre les menaces et de [journaux d’utilisation](log-analyze-usage.md)de la protection. Notez que la [visionneuse AIP](rms-client/clientv2-view-use-files.md) n’envoie pas de journaux d’audit.
+Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, de Microsoft Cloud App Security à partir d’ordinateurs Windows 10 utilisant Microsoft Defender-protection avancée contre les menaces et de [journaux d’utilisation](log-analyze-usage.md)de la protection. 
 
 Azure Information Protection Analytics pour la création de rapports centraux est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
 

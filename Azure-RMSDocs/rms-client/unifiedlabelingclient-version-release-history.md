@@ -4,7 +4,7 @@ description: Découvrez les nouveautés du client d’étiquetage unifié de l�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/14/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: afe860e878df27b7081c4f12a9b4612cab845db9
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 6f77220e6321f8a601c936fec9a5ea4812539f01
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524793"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844368"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -39,8 +39,6 @@ Pour plus d’informations, consultez [mise à niveau et maintenance du client d
 
 Chaque version de disponibilité générale de la Azure Information Protection client d’étiquetage unifiée est prise en charge pendant six mois après la publication de la version GA suivante. La documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
-Notez que les fonctionnalités de Azure Information Protection sont actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
-
 ### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge
 
 |Version du client|Date de publication|
@@ -61,7 +59,7 @@ Le format de date utilisé sur cette page est *mois/jour/année*.
 
 Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge de l’Azure Information Protection client d’étiquetage unifié pour Windows. La dernière version est répertoriée en première position. Le format de date utilisé sur cette page est *mois/jour/année*.
 
-La dernière version de Azure Information Protection est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
+Notez que les fonctionnalités de Azure Information Protection sont actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le client d’étiquetage unifié, nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
@@ -69,6 +67,56 @@ La dernière version de Azure Information Protection est actuellement en version
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 Le client d’étiquetage unifié remplace le client Azure Information Protection Classic. Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les solutions d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
+
+## <a name="version-210460-for-co-authoring-public-preview"></a>Version 2.10.46.0 pour la co-création (préversion publique)
+
+2.10.46.0 d’étiquetage unifiée version du client
+
+**Version** 03/02/2021
+
+Cette version dédiée de Azure Information Protection fournit une version préliminaire publique des fonctionnalités de co-création récemment prises en charge dans Microsoft 365.
+
+La co-création d’applications Office permet à plusieurs utilisateurs de modifier des documents étiquetés et chiffrés par des [étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
+
+> [!IMPORTANT]
+> Pour tirer parti des fonctionnalités de co-création de la version préliminaire publique, vous devez télécharger et installer le fichier d’installation dédié pour cette version. Sur le [site de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018), téléchargez et installez le `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  fichier.
+>
+> Votre système doit également respecter les exigences de version indiquées dans la [Microsoft 365 conditions préalables pour la co-création](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
+>
+
+Avant de commencer, nous vous recommandons de passer en revue toutes les conditions préalables et limitations associées. Pour plus d'informations, consultez les pages suivantes :
+
+- [Activez la co-création de fichiers chiffrés avec des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels-coauthoring) dans la documentation de Microsoft 365.
+- [Problèmes connus de la co-création dans AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
+## <a name="version-210430-for-dlp-policies-public-preview"></a>Version 2.10.43.0 pour les stratégies DLP (version préliminaire publique)
+
+2.10.43.0 de version de scanneur d’étiquetage unifiée
+
+**Version** 03/02/2021
+
+Cette version dédiée de Azure Information Protection fournit une version préliminaire publique de la prise en charge des stratégies de protection contre la perte de données (DLP) prises en charge par Microsoft 365. 
+
+- **L’utilisation d’une stratégie DLP** permet à l’analyseur de détecter les fuites de données potentielles en faisant correspondre les règles DLP aux fichiers stockés dans les partages de fichiers et SharePoint Server. 
+
+- [**Activez les règles DLP dans votre travail d’analyse de contenu**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) pour réduire l’exposition des fichiers qui correspondent à vos stratégies DLP. 
+
+    Le scanneur peut réduire l’accès aux fichiers aux propriétaires de données uniquement ou réduire l’exposition aux groupes à l’ensemble du réseau, tels que **tout le monde**, **les utilisateurs authentifiés** ou **les utilisateurs du domaine**.
+
+- **L’analyse de vos fichiers avec les règles DLP activé crée également des rapports d’autorisations sur les fichiers**. Interrogez ces rapports pour examiner les expositions de fichiers spécifiques ou explorer l’exposition d’un utilisateur spécifique à des fichiers analysés.
+
+Les paramètres d’application ou de test de la stratégie DLP sont configurés dans le [Centre de conformité Microsoft 365](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!IMPORTANT]
+> Pour tirer parti de la prise en charge de DLP dans la version préliminaire publique, vous devez télécharger et installer le fichier d’installation dédié pour cette version. Sur le [site de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018), téléchargez et installez le `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` fichier.
+> 
+Pour plus d’informations, y compris les conditions de licence, consultez :
+
+- [Configurer une stratégie DLP dans le scanneur AIP](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
+- En [savoir plus sur le Microsoft 365 analyseur local pour la protection contre la perte de données](/microsoft-365/compliance/dlp-on-premises-scanner-learn), dans la documentation de Microsoft 365
+- [Prise en main du scanneur local pour la protection contre la perte de données](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
+- [Utiliser le Microsoft 365 analyseur local pour la protection contre la perte de données](/microsoft-365/compliance/dlp-on-premises-scanner-use)
+
+
 
 ## <a name="version-29116"></a>Version 2.9.116 
 
@@ -166,7 +214,7 @@ Si vos documents sont enregistrés pour le suivi, permet aux administrateurs d�
 
 Une fois que vous avez mis à niveau, les utilisateurs finaux peuvent également révoquer l’accès pour les documents qu’ils ont protégés. Pour révoquer l’accès à partir de Microsoft Office Apps, utilisez l’option nouveau **révoquer l’accès** dans le menu **sensibilité** .
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection](track-and-revoke-admin.md)
 - [Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection](revoke-access-user.md)
@@ -277,7 +325,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
     - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -340,7 +388,7 @@ Pour plus d’informations, consultez [Azure information protection référence 
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
@@ -444,7 +492,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)

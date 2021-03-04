@@ -6,12 +6,12 @@ ms.author: v-anikep
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: bee7cb6854aa58f6d5c3c6781984875c8ee347a1
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: 8d210d74ecfd4ebdc50ec618415191894431fcdc
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98212618"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844316"
 ---
 # <a name="quickstart-public-and-confidential-clients-c"></a>Démarrage rapide : clients publics et confidentiels (C#)
 
@@ -52,7 +52,7 @@ L' **ID** d’application est l’ID de l’application dans l’inscription de 
 
 Ces applications sont des applications Cloud ou basées sur des services, où l’utilisateur ne se connecte pas directement aux services MIP principaux. Le service doit étiqueter, protéger ou ôter la protection du contenu compatible MIP. Dans ce scénario, l’application doit stocker un certificat ou une clé secrète d’application. Ces secrets seront utilisés pour l’authentification pour Azure AD et utiliser ce secret pour extraire des jetons pour les services MIP principaux du backend. Il peut ensuite utiliser les fonctionnalités de délégation du kit de développement logiciel (SDK) MIP pour protéger ou consommer du contenu pour le compte de l’utilisateur authentifié.
 
-L’intégration du kit de développement logiciel MIP avec les applications basées sur des services requiert l’utilisation du workflow d’octroi d’informations d’identification du client. La bibliothèque d’authentification Microsoft (MSAL) peut être utilisée pour implémenter cela dans un modèle similaire à ce que nous verrions dans une application cliente publique. Cet article explique brièvement comment mettre à jour le kit de développement logiciel (SDK) MIP `IAuthDelegate` dans .net pour effectuer l’authentification pour les applications basées sur les services à l’aide de ce processus. Au moment de la publication, il n’existe aucune version de MSAL pour C++. Toutefois, il est possible d’implémenter ce processus par le biais d' [appels Rest directs](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token).
+L’intégration du kit de développement logiciel MIP avec les applications basées sur des services requiert l’utilisation du workflow d’octroi d’informations d’identification du client. La bibliothèque d’authentification Microsoft (MSAL) peut être utilisée pour implémenter cela dans un modèle similaire à ce que nous verrions dans une application cliente publique. Cet article explique brièvement comment mettre à jour le kit de développement logiciel (SDK) MIP `IAuthDelegate` dans .net pour effectuer l’authentification pour les applications basées sur les services à l’aide de ce processus. Au moment de la publication, il n’existe aucune version de MSAL pour C++. Toutefois, il est possible d’implémenter ce processus par le biais d' [appels Rest directs](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token).
 
 Pour plus d’informations, consultez la documentation sur le [Workflow d’authentification de client confidentiel](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)
 

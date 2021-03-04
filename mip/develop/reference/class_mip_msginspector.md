@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
 ms.date: 01/13/2021
-ms.openlocfilehash: aaf9cc6803e0111cd37960f356d8a6bb19fd60a5
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: b9a1f4e96b4a8a80280007353d578391f6a02e50
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98215168"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844249"
 ---
 # <a name="class-msginspector"></a>MsgInspector de classe 
   
@@ -39,7 +39,7 @@ Obtient la page de codes d’encodage du corps, pertinente pour les formats txt 
   
 **Retourne**: une page de codes non signée. 
   
-**Voir aussi**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
+**Voir aussi**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>GetBodyType fonction)
 Obtient le type de corps.

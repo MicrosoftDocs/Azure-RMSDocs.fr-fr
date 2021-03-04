@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 52e43c9c0960ca5dadcd581db53bad2be2323b25
-ms.sourcegitcommit: 0f694bf6c7ea9c7709954bfb5dbd1c5f009b85a7
+ms.openlocfilehash: 1b34606abcf9093bc082d11b576d5d521e4d7777
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100360345"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844198"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) Kit de développement logiciel (SDK), historique des versions et stratégie de support
 
@@ -30,11 +30,18 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 >  
 > Pour obtenir un support technique, consultez le [forum Stack Overflow Microsoft information protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## <a name="version-1897"></a>Version 1.8.97
+
+**Date de publication :** Le 24 février 2021
+
+- Correction d’un bogue dans lequel les étiquettes enfants n’étaient pas filtrées correctement et incluaient tous les types d’étiquettes, même si elles n’ont pas été demandées. 
+- Correction d’un bogue dans lequel les étiquettes n’étaient pas conservées `RemoveProtection()` si les métadonnées d’étiquette étaient incomplètes. 
+
 ## <a name="version-1894"></a>Version 1.8.94
 
 **Date de publication :** 8 février 2021
 
-- Correction du bogue dans le package NuGet où la configuration de débogage pour les projets C++ déployait des fichiers binaires de version. 
+- Correction du bogue dans le package NuGet où la configuration de débogage pour les projets C++ déployait des fichiers binaires de version. La version 1.8.86 peut provoquer un blocage avec les applications C++ natives. Veillez à effectuer la mise à jour vers 1.8.94 ou version ultérieure.
 - Correction d’un bogue dans lequel le moteur de stratégie était nécessaire pour supprimer la protection. 
   - Si le moteur de stratégie ne peut pas être chargé et que les métadonnées d’étiquette sont présentes, elles seront ignorées si la protection est supprimée. 
 - Correction d’un bogue dans lequel une `labelInfo.xml` valeur vide a été générée si le fichier a été remplacé par une autre étiquette protégée. 
@@ -50,7 +57,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 - Tous les clouds sont entièrement pris en charge dans les trois kits de développement logiciel (SDK).
 - Renommez `TelemetryConfiguration` en `DiagnosticConfiguration`.
 - Mise à jour `MipContext` pour accepter `DiagnosticConfiguration` au lieu de `TelemetryConfiguration` .
-- Exposition des nouvelles `TelemetryDelegate` et `AuditDelegate` .
+- Nouvelles exposées `AuditDelegate` .
 - Le nom de plusieurs paramètres personnalisés a été modifié et sera supprimé dans la version 1,9. Celles-ci continuent à fonctionner en parallèle avec leurs noms de mises à jour dans la version 1,8. 
 
 | Nouveau nom          | Ancien nom                   |
@@ -185,7 +192,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 - TLS 1,2 appliqué à toutes les communications HTTP non ADRMS.
 - Implémentation HTTP iOS/macOS migrée à partir de NSURLConnection vers passer.
 - Composant de télémétrie iOS migré du kit de développement logiciel (SDK) Aria vers 1DS SDK.
-- Le composant de télémétrie utilise désormais le HttpDelegate MIP sur iOS, macOs et Linux. (Auparavant Win32 uniquement).
+- Le composant de télémétrie utilise désormais le HttpDelegate MIP sur iOS, macOS et Linux. (Auparavant Win32 uniquement).
 - Amélioration de la sécurité des types pour l’API C.
 - Déplacement de AuthDelegate depuis le profil vers le moteur en C++, C# et les API Java.
 - AuthDelegate déplacé du constructeur de `Profile::Settings` à `Engine::Settings` .

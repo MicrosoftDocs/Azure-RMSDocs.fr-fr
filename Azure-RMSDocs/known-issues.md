@@ -4,19 +4,19 @@ description: Recherchez et parcourez les problèmes connus et les limitations de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/09/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b90b0df202719f6cadab0671db9f118be58ad72
-ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
+ms.openlocfilehash: c6fc0880904658b76ff774de33030ce0ca8e3048
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100105247"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844351"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -71,7 +71,7 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 
 |Fonctionnalité  |Problèmes connus  |
 |---------|---------|
-|**Plusieurs versions d’Office**    | Les clients Azure Information Protection, y compris les étiquetages classiques et unifiés, ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou n’échangent pas de comptes d’utilisateur dans Office.       |
+|**Plusieurs versions d’Office <br> <br> comptes multiples Office**    | Les clients Azure Information Protection, y compris les étiquettes classiques et unifiées, ne prennent pas en charge :  <br><br>-Plusieurs versions d’Office sur le même ordinateur <br>-Plusieurs comptes Office ou basculer des comptes d’utilisateur dans Office <br>-Boîtes aux lettres partagées     |
 |**Affichages multiples** |Si vous utilisez plusieurs affichages et que vous avez une application Office ouverte : <br><br>-Vous pouvez rencontrer des problèmes de performances dans vos applications Office.<br>-La barre de Azure Information Protection peut sembler flotter au milieu de l’écran du bureau, sur l’un ou l’autre des écrans <br><br>Pour garantir des performances cohérentes et que la barre reste à l’emplacement approprié, ouvrez la boîte de dialogue **options** de votre application Office et, sous **général**, sélectionnez **optimiser pour la compatibilité** plutôt que **optimiser pour une meilleure apparence**.    |
 |**Prise en charge d’IRM dans Office 2016**| Le paramètre de Registre [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , qui contrôle le chiffrement des métadonnées dans Office 2016, n’est pas pris en charge pour les étiquettes de Azure information protection.|
 |**Accès au modèle objet Outlook** | -Le paramètre de Registre [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) , qui contrôle les invites qui s’affichent lorsque les carnets d’adresses sont accessibles via le modèle objet Outlook, n’est pas pris en charge avec les étiquettes Azure information protection. <br><br>-Le paramètre de Registre [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) , qui contrôle les invites qui s’affichent lorsqu’un programme lit les informations d’adresse, n’est pas pris en charge pour les étiquettes de Azure information protection.|
@@ -80,7 +80,68 @@ Pour plus d’informations, consultez [le Guide de l’administrateur : utilisa
 |**Fusion et publipostage**    |  La fonctionnalité [Publipostage](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) n’est pas prise en charge avec les fonctionnalités Azure Information Protection.       |
 | **Courriers électroniques S/MIME** | L’ouverture des e-mails S/MIME dans le volet de lecture d’Outlook peut entraîner des problèmes de performances. <br><br>Pour éviter les problèmes de performances avec les e-mails S/MIME, activez la propriété avancée [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . <br><br>**Remarque**: l’activation de cette propriété empêche l’affichage de la barre AIP ou de la classification des messages dans le volet de lecture d’Outlook. |
 |**Option Envoyer vers l’Explorateur de fichiers** |Si vous choisissez de cliquer avec le bouton droit sur un fichier dans l’Explorateur de fichiers et que vous sélectionnez **Envoyer à > destinataire du courrier**, le message Outlook qui s’ouvre avec le fichier joint peut ne pas afficher la barre d’outils AIP. <br><br>Si cela se produit et que vous devez utiliser les options de la barre d’outils AIP, commencez votre adresse de messagerie à partir d’Outlook, puis accédez au fichier que vous souhaitez envoyer et joignez-le.|
+|**Co-création** |La prise en charge de la co-création est assurée par une [installation dédiée](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) du client Azure information protection et est actuellement en version préliminaire publique. <br><br>Pour plus d’informations, consultez [problèmes connus pour la co-création (](#known-issues-for-co-authoring-public-preview)préversion publique). |
 | | |
+
+### <a name="known-issues-for-co-authoring-public-preview"></a>Problèmes connus de la co-création (version préliminaire publique)
+
+- [Utiliser dans les environnements de test uniquement](#use-in-testing-environments-only)
+- [Versions prises en charge pour les étiquettes de co-création et de sensibilité](#supported-versions-for-co-authoring-and-sensitivity-labels)
+- [Mises à jour de stratégie](#policy-updates)
+- [Journaux d’analyse et d’audit AIP](#aip-analytics-and-audit-logs)
+- [Étiquettes avec des autorisations définies par l’utilisateur](#labels-with-user-defined-permissions)
+- [Fonctionnalités non prises en charge pour la co-création](#unsupported-features-for-co-authoring)
+
+> [!IMPORTANT]
+> Les étiquettes de co-création et de sensibilité ne peuvent pas être déployées sur certains utilisateurs uniquement, car les nouvelles étiquettes ne sont pas visibles par les utilisateurs ayant une version antérieure du client Office.
+> 
+Pour plus d’informations sur la prise en charge de la co-création, y compris les limitations et les problèmes connus de la version préliminaire publique, consultez la [documentation Microsoft 365](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+
+#### <a name="use-in-testing-environments-only"></a>Utiliser dans les environnements de test uniquement
+
+Pour éviter les conflits entre vos fichiers étiquetés, la co-création ne peut pas être désactivée sans l’assistance du support client pendant la période de la version préliminaire publique.
+
+Pour cette raison, nous vous recommandons d’activer la co-création pour votre système dans les environnements de test uniquement.
+
+#### <a name="supported-versions-for-co-authoring-and-sensitivity-labels"></a>Versions prises en charge pour les étiquettes de co-création et de sensibilité
+
+L’ensemble des applications, services et outils opérationnels de votre locataire doivent prendre en charge la co-création.
+
+Avant de commencer, assurez-vous que votre système est conforme à la configuration requise indiquée dans la [Microsoft 365 conditions préalables pour la co-création](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
+
+> [!NOTE]
+> Alors que les étiquettes de sensibilité peuvent être appliquées aux fichiers dans les formats Office 97-2003, tels que  **. doc**, **. ppt** et **. xls**, la co-création de ces types de fichiers n’est pas prise en charge. Une fois qu’une étiquette est appliquée à un fichier nouvellement créé, ou à un fichier au format de fichier avancé, tel que **. docx**, **. pptx** et **. xlsx**, l’enregistrement du fichier au format Office 97-2003 entraîne la suppression de l’étiquette.
+> 
+
+#### <a name="policy-updates"></a>Mises à jour de stratégie
+
+Si votre stratégie d’étiquetage a été mise à jour lors de l’ouverture d’une application Office avec Azure Information Protection, toute nouvelle étiquette s’affiche, mais l’application de ces étiquettes génère une erreur. 
+
+Si cela se produit, fermez et rouvrez votre application Office pour pouvoir appliquer vos étiquettes.
+
+#### <a name="aip-analytics-and-audit-logs"></a>Journaux d’analyse et d’audit AIP
+
+Lorsque la co-création est activée, le client Azure Information Protection n’envoie aucun [Journal d’audit](audit-logs.md).
+
+#### <a name="labels-with-user-defined-permissions"></a>Étiquettes avec des autorisations définies par l’utilisateur
+
+Dans Microsoft Word, Excel et PowerPoint, les étiquettes avec des autorisations définies par l’utilisateur sont toujours disponibles et peuvent être appliquées aux documents, mais ne sont pas prises en charge pour les fonctionnalités de co-création. 
+
+Cela signifie que l’application d’une étiquette avec des autorisations définies par l’utilisateur vous empêchera de travailler sur le document avec d’autres utilisateurs en même temps.
+
+#### <a name="unsupported-features-for-co-authoring"></a>Fonctionnalités non prises en charge pour la co-création
+
+Les fonctionnalités suivantes ne sont pas prises en charge lors de l’utilisation de la co-création et des étiquettes de sensibilité :
+
+- **Les modèles DKE et les propriétés définies par l’utilisateur DKE**. Pour plus d’informations, consultez [chiffrement à clé double (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Suppression du marquage de contenu externe dans les applications**. Pour plus d’informations, consultez [Côté client d’Azure Information Protection](rms-client/use-client.md).
+
+- Les paramètres avancés suivants :
+
+    - **customPropertiesByLabel**. Pour plus d’informations, consultez [application d’une propriété personnalisée lorsqu’une étiquette est appliquée](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
+
+    - **labelByCustomProperties** et **EnableLabelBySharePointProperties**. Pour plus d’informations, consultez [migrer des étiquettes à partir d’îlots sécurisés et d’autres solutions d’étiquetage](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions).
 
 ## <a name="known-issues-in-policies"></a>Problèmes connus dans les stratégies
 

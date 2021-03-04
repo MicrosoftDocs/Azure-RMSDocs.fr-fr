@@ -4,7 +4,7 @@ description: Instructions d’installation et de configuration du Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c3aa35877ed657f81c955af0d674bde3d22a079
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 98cadb555919ecd6e95e3328ad489b29e3f5c0ef
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524827"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844385"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -189,10 +189,12 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
     |Paramètre  |Description  |
     |---------|---------|
     |**Paramètres du travail d’analyse du contenu**     |    - **Planifier**: conserver la valeur par défaut **manuelle** <br />- **Types d’informations à découvrir**: changer en **stratégie uniquement** <br />- **Configurer les référentiels**: ne pas configurer pour l’instant, car le travail d’analyse de contenu doit d’abord être enregistré.         |
+    |**Stratégie DLP** | Si vous utilisez une stratégie de protection contre la perte de données (DLP) Microsoft 365, affectez à **activer les règles DLP** la valeur **activé**. Pour plus d’informations, consultez [utiliser une stratégie DLP](#use-a-dlp-policy-public-preview). |
     |**Stratégie de sensibilité**     | - **Appliquer**: sélectionner **désactivé** <br />- **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée** <br />- **Étiquette par** défaut : conserver la valeur par défaut de la **stratégie** par défaut <br />- **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**        |
-    |**Configurer les paramètres du fichier**     | - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »**: conserver la valeur par défaut **activée** <br />- **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion** <br />- **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**        |
+    |**Configurer les paramètres du fichier**     | - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »**: conserver la valeur par défaut **activée** <br />- **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion** <br />- **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**  <br /> - **Définir le propriétaire du dépôt**: utilisez cette option uniquement lors [de l’utilisation d’une stratégie DLP](#use-a-dlp-policy-public-preview). |
     | | |
 
+   
 1. Maintenant que le travail d’analyse de contenu est créé et enregistré, vous êtes prêt à revenir à l’option **configurer les référentiels** pour spécifier les magasins de données à analyser. 
 
     Spécifiez les chemins d’accès UNC et les URL du serveur SharePoint pour les dossiers et bibliothèques de documents locaux SharePoint. 
@@ -222,9 +224,9 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
   
     Si vous ajoutez un chemin d’accès SharePoint pour les **documents partagés**:
     - Spécifiez **Documents partagés** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers de Documents partagés. 
-    Par exemple : `http://sp2013/SharedDocuments`
+    Par exemple : `http://sp2013/SharedDocuments`
     - Spécifiez **Documents** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers d’un sous-dossier sous Documents partagés. 
-    Par exemple : `http://sp2013/Documents/SalesReports`
+    Par exemple : `http://sp2013/Documents/SalesReports`
     - Ou bien, spécifiez uniquement le **nom de domaine complet** de votre SharePoint, par exemple `http://sp2013` pour [détecter et analyser tous les sites et sous-sites SharePoint sous une URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) et des sous-titres spécifiques sous cette URL. Accordez des droits d' **auditeur du collecteur de sites** du scanneur pour activer cette. 
     >
 
@@ -280,7 +282,7 @@ Une fois que vous avez [configuré le scanneur Azure information protection dans
     
     Lorsque vous y êtes invité, fournissez les informations d’identification Active Directory pour le compte de service du scanneur.
 
-    Utilisez la syntaxe suivante : `\<domain\user name>` . Par exemple : `contoso\scanneraccount`
+    Utilisez la syntaxe suivante : `\<domain\user name>` . Par exemple : `contoso\scanneraccount`
 
 1. Vérifiez que le service est maintenant installé à l’aide des **Outils d’administration**  >  **services**. 
     
@@ -354,6 +356,44 @@ Pour modifier ces paramètres, modifiez le travail d’analyse du contenu :
     ```
 
 Le scanneur est maintenant programmé pour s’exécuter en continu. Lorsque le scanneur fonctionne dans tous les fichiers configurés, il démarre automatiquement un nouveau cycle afin que tous les fichiers nouveaux et modifiés soient découverts.
+
+## <a name="use-a-dlp-policy-public-preview"></a>Utiliser une stratégie DLP (version préliminaire publique)
+
+L’utilisation d’une stratégie de protection contre la perte de données (DLP) Microsoft 365 permet à l’analyseur de détecter les fuites de données potentielles en faisant correspondre les règles DLP aux fichiers stockés dans les partages de fichiers et SharePoint Server.
+
+- **Activez les règles DLP dans votre travail d’analyse de contenu** pour réduire l’exposition des fichiers qui correspondent à vos stratégies DLP. Lorsque vos règles DLP sont activées, le scanneur peut réduire l’accès aux fichiers aux propriétaires de données uniquement ou réduire l’exposition aux groupes au niveau du réseau, tels que **tout le monde**, **les utilisateurs authentifiés** ou **les utilisateurs du domaine**. 
+
+- **Dans votre Microsoft 365 étiqueter le centre d’administration**, déterminez si vous testez simplement votre stratégie DLP ou si vous souhaitez appliquer vos règles et que vos autorisations de fichier ont changé conformément à ces règles. Pour plus d’informations, consultez [activer une stratégie DLP](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!TIP]
+> L’analyse de vos fichiers, même en testant simplement la stratégie DLP, crée également des rapports d’autorisations sur les fichiers. Interrogez ces rapports pour examiner les expositions de fichiers spécifiques ou explorer l’exposition d’un utilisateur spécifique à des fichiers analysés.
+> 
+
+Les stratégies DLP sont configurées dans le centre d’administration d’étiquetage, comme le centre de conformité Microsoft 365, et sont prises en charge dans Azure Information Protection à partir de la version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+
+Pour plus d’informations sur les licences DLP, consultez [prise en main du scanneur local pour la protection contre la perte de données](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
+
+**Pour utiliser une stratégie DLP avec le scanneur**:
+
+1. Dans le Portail Azure, accédez à votre travail d’analyse de contenu. Pour plus d’informations, consultez [créer un travail d’analyse du contenu](#create-a-content-scan-job).
+
+1. Sous **stratégie DLP**, affectez à **activer les règles DLP** la valeur **activé**.
+
+    > [!IMPORTANT]
+    > N’affectez pas la valeur **on** à **activer les règles DLP** , sauf si vous avez réellement une stratégie dlp configurée dans Microsoft 365. 
+    >
+    >Si vous activez cette fonctionnalité sans une stratégie DLP, le scanneur génère des erreurs.
+1. Facultatif Sous **configurer les paramètres du fichier**, affectez la valeur **on** au propriétaire de l' **ensemble de référentiels** et définissez un utilisateur spécifique comme propriétaire du dépôt.  
+
+    Cette option permet à l’analyseur de réduire l’exposition de tous les fichiers trouvés dans ce référentiel, qui correspondent à la stratégie DLP, au propriétaire du dépôt défini.
+
+### <a name="dlp-policies-and-make-private-actions"></a>Stratégies DLP et *effectuer* des actions privées
+
+Si vous utilisez une stratégie DLP avec une action *Make Private* et que vous envisagez également d’utiliser le scanneur pour étiqueter automatiquement vos fichiers, nous vous recommandons de définir également le paramètre avancé [**UseCopyAndPreserveNTFSOwner**](rms-client/clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview) du client d’étiquetage unifié. 
+
+Ce paramètre permet de s’assurer que les propriétaires d’origine conservent l’accès à leurs fichiers.
+
+Pour plus d’informations, consultez [créer un travail d’analyse de contenu](#create-a-content-scan-job) et  [appliquer une étiquette de sensibilité au contenu automatiquement](/microsoft-365/compliance/apply-sensitivity-label-automatically) dans la documentation de Microsoft 365. 
 
 ## <a name="change-which-file-types-to-protect"></a>Changer les types de fichiers à protéger
 

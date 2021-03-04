@@ -4,7 +4,7 @@ description: En savoir plus sur les journaux d’audit générés par Azure Info
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/18/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3019f0d6886f5de79f51f14262094e2be1f7ee40
-ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
+ms.openlocfilehash: fc51c360e4cded259b87eee7bedcaf0829e0b717
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101090539"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844266"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Informations de référence sur le journal d’audit Azure Information Protection (version préliminaire publique)
 
@@ -28,7 +28,7 @@ ms.locfileid: "101090539"
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-La fonctionnalité de journal d’audit Azure Information Protection est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
+La fonctionnalité de journal d’audit Azure Information Protection est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
 
 Microsoft Azure Information Protection génère des journaux d’audit au niveau des événements d’activité suivants :
 
@@ -95,7 +95,7 @@ Les journaux d’audit des **étiquettes de rétrogradation** sont générés po
 | Signalé par      | Plateforme                       | Application              | Action/Description      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
 |Azure Information Protection :<br />-Scanneur et client classiques<br />-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible.|
-| Microsoft Defender - PACM            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible. |
+| Microsoft Defender - PACM            | Windows                        | Système d’exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible. |
 | SDK Microsoft Information Protection (MIP)          | Quelconque                            | Applications tierces | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette moins sensible.<br>Généré uniquement s’il est pris en charge par l’application tierce. |
 | | | | |
 
@@ -118,7 +118,7 @@ De nouveaux journaux d’audit des **étiquettes** sont générés pour les acti
 | Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :<br />-Scanneur et client classiques<br />-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une nouvelle étiquette est appliquée.                                                                  |
-| Microsoft Defender - PACM                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une nouvelle étiquette de document est appliquée.                                                                  |
+| Microsoft Defender - PACM                                                                            | Windows                        | Système d’exploitation                       | Généré chaque fois qu’une nouvelle étiquette de document est appliquée.                                                                  |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois qu’une nouvelle étiquette de document est appliquée.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
 | | | | |
 
@@ -139,7 +139,7 @@ De nouveaux journaux d’audit de **protection** sont générés pour les activi
 | Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :<br />-Scanneur et client classiques<br />-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une étiquette est supprimée.                                                                  |
-| Microsoft Defender - PACM                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette est supprimée.                                                                  |
+| Microsoft Defender - PACM                                                                            | Windows                        | Système d’exploitation                       | Généré chaque fois qu’une étiquette est supprimée.                                                                  |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois qu’une étiquette est supprimée.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
 | | | | |
 
@@ -160,10 +160,16 @@ Les journaux d’audit des **étiquettes de mise à niveau** sont générés pou
 | Signalé par                                                                      | Plateforme                       | Application              | Action/Description                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Azure Information Protection :<br />-Scanneur et client classiques<br />-Scanneur d’étiquetage et client unifiés | Windows, SharePoint, un lecteur | Office                   | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.                                                                   |
-| Microsoft Defender - PACM                                                                            | Windows                        | Système d''exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.                                                                   |
+| Microsoft Defender - PACM                                                                            | Windows                        | Système d’exploitation                       | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.                                                                   |
 | SDK Microsoft Information Protection (MIP)                                                                          | Quelconque                            | Applications tierces | Généré chaque fois qu’une étiquette de document est mise à jour avec une étiquette plus sensible.<br>Généré uniquement lorsqu’il est pris en charge par l’application tierce. |
 | | | | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la journalisation d’audit, consultez [central Reporting for Azure information protection (version préliminaire publique)](reports-aip.md).
+Les journaux d’audit AIP sont également envoyés à l’Explorateur d’activités Microsoft 365, où ils peuvent être affichés avec des noms différents.
+
+Pour plus d'informations, consultez les pages suivantes :
+
+- [Version préliminaire publique : journaux d’audit AIP dans l’Explorateur d’activités](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Prise en main de l’Explorateur d’activités](/microsoft-365/compliance/data-classification-activity-explorer)
+- [Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)](reports-aip.md)

@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables nécessaires pour déployer A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 03/04/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 50f8a118327f5a04748c4327175298694b0c84f4
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: c5eade80b9e3f46e5288b4604f64063cf097a170
+ms.sourcegitcommit: 95f3b19e1034025e7de0ca523b837843d9c15d86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560269"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102094845"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -200,6 +200,15 @@ Azure Information Protection présente les exigences supplémentaires suivantes�
 
 - **TLS version 1.2 ou ultérieure** (client d’étiquetage unifié uniquement). Le client d’étiquetage unifié requiert une version TLS de 1.2 ou une version ultérieure pour garantir l’utilisation de protocoles sécurisés par chiffrement et s’aligner sur les consignes de sécurité Microsoft.
 
+- **Microsoft 365 Enhanced Configuration Service (ECS)** . AIP doit avoir accès à l’URL **config.edge.skype.com**, qui est un service ECS (Enhanced Configuration Service) Microsoft 365.
+ 
+    ECS offre à Microsoft la possibilité de reconfigurer les installations AIP sans avoir à redéployer AIP. Il permet de contrôler le déploiement graduel des fonctionnalités ou des mises à jour, en surveillant son impact à partir des données de diagnostic collectées.
+    
+    ECS est également utilisé pour réduire les problèmes de sécurité ou de performances d’une fonctionnalité ou d’une mise à jour. ECS prend aussi en charge les changements de configuration associés aux données de diagnostic pour s’assurer que les événements appropriés sont collectés. 
+ 
+    La limitation de l’URL **config.edge.skype.com** peut affecter la capacité de Microsoft à réduire les erreurs et peut affecter votre capacité à tester les fonctionnalités en préversion.
+ 
+    Pour plus d’informations, consultez [Services essentiels pour Office - Déployer Office](/deployoffice/privacy/essential-services).
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coexistence d’AD RMS et Azure RMS
 
 L’utilisation de AD RMS et Azure RMS côte à côte, au sein d’une même organisation, pour protéger du contenu par le même utilisateur dans la même organisation, est **uniquement** pris en charge dans AD RMS pour [HYOK (maintenir votre propre clé)](configure-adrms-restrictions.md) de protection avec Azure Information Protection.

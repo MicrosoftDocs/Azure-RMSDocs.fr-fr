@@ -1,5 +1,5 @@
 ---
-title: Configurer les droits d’utilisation pour Azure Information Protection
+title: Configurer les droits d’utilisation de Azure Information Protection (AIP)
 description: Comprenez et identifiez les droits spécifiques qui sont utilisés quand vous protégez des fichiers ou des e-mails à l’aide de la protection Rights Management de Azure Information Protection.
 author: batamig
 ms.author: bagol
@@ -13,14 +13,14 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16cc8ae0424f307ae7f0ed864ca36f1a91230977
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 13263b8d11829104bb0175b4ca91d023637dd1f5
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809642"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415277"
 ---
-# <a name="configuring-usage-rights-for-azure-information-protection"></a>Configuration des droits d’utilisation pour Azure Information Protection
+# <a name="configure-usage-rights-for-azure-information-protection"></a>Configurer les droits d’utilisation pour Azure Information Protection
 
 >***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
@@ -31,10 +31,15 @@ ms.locfileid: "98809642"
 > 
 > Par souci d’exhaustivité, cet article contient des valeurs tirées du portail Azure Classic, qui n’est plus en service depuis le 8 janvier 2018.
 
-Quand vous configurez des étiquettes de sensibilité ou des modèles de protection pour le chiffrement, vous sélectionnez les droits d’utilisation qui seront ensuite appliqués automatiquement lorsque l’étiquette ou le modèle est sélectionné par des utilisateurs, des administrateurs ou des services configurés. Par exemple, dans le portail Azure, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou bien vous pouvez configurer les droits individuels. Les utilisateurs peuvent également sélectionner et appliquer les droits d’utilisation eux-mêmes.
+Cet article décrit les droits d’utilisation que vous pouvez configurer pour qu’ils soient automatiquement appliqués lorsqu’une étiquette ou un modèle est sélectionné par des utilisateurs, des administrateurs ou des services configurés.
 
-Utilisez cet article pour vous aider à configurer les droits d’utilisation que vous souhaitez pour l’application que vous utilisez et pour comprendre comment ces droits sont conçus pour être interprétés par les applications. Toutefois, les applications peuvent varier dans la manière dont elles implémentent les droits. par conséquent, consultez toujours leur documentation et effectuez vos propres tests avec les applications que les utilisateurs utilisent pour vérifier le comportement avant le déploiement en production.
+Les droits d’utilisation sont sélectionnés lorsque vous configurez des étiquettes de sensibilité ou des modèles de protection pour le chiffrement. Par exemple, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou configurer les droits individuels séparément. Les utilisateurs peuvent également sélectionner et appliquer les droits d’utilisation eux-mêmes.
 
+> [!IMPORTANT]
+> Utilisez cet article pour comprendre comment les droits d’utilisation sont *conçus* pour être interprétés par les applications. 
+>
+> Les applications peuvent varier dans la manière dont elles implémentent des droits d’utilisation. nous vous recommandons de consulter la documentation de votre application et d’effectuer vos propres tests pour vérifier le comportement de l’application avant de la déployer en production.
+> 
 
 ## <a name="usage-rights-and-descriptions"></a>Droits d’utilisation et descriptions
 Le tableau suivant répertorie et décrit les droits d’utilisation pris en charge par Rights Management, ainsi que la façon dont ils sont utilisés et interprétés. Ils sont répertoriés par leur **nom commun**, généralement la façon dont ils sont affichés ou référencés, sous une forme plus conviviale que la valeur uniterme utilisée dans le code (la valeur **Encodage dans la stratégie**). 
@@ -64,6 +69,7 @@ Dans ce tableau :
 |Nom commun : **Afficher les droits** <br /><br />Encodage dans la stratégie : **VIEWRIGHTSDATA**|Permet à l’utilisateur d’afficher la stratégie appliquée au document. <br /><br /> Non pris en charge par les applications Office ou les clients Azure Information Protection.|Droits personnalisés Office : non implémenté.<br /><br />Nom dans le portail Azure Classic : **Afficher les droits affectés**<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **afficher les droits (VIEWRIGHTSDATA)**.<br /><br />Nom dans les modèles AD RMS : **Afficher les droits** <br /><br />Constante ou valeur API :`IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
 |Nom commun : **Modifier les droits** <br /><br />Encodage dans la stratégie : **EDITRIGHTSDATA**|Permet à l’utilisateur de modifier la stratégie appliquée au document. Cela inclut notamment la suppression de la protection. <br /><br /> Non pris en charge par les applications Office ou les clients Azure Information Protection.|Droits personnalisés Office : non implémenté.<br /><br />Nom dans le portail Azure Classic : **Modifier les droits**<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **modifier les droits (EDITRIGHTSDATA)**.<br /><br />Nom dans les modèles AD RMS : **Modifier les droits** <br /><br />Constante ou valeur API :`PC_WRITE_RIGHTS L"EDITRIGHTSDATA"`|
 |Nom commun : **Autoriser les macros** <br /><br />Encodage dans la stratégie : **OBJMODEL**|Active l’option pour exécuter des macros ou effectuer d’autres accès à distance ou par programme au contenu d’un document.|Droits personnalisés Office : comme l’option de stratégie personnalisée **Autoriser l’accès par programme**. Ce n’est pas un paramètre par destinataire.<br /><br />Nom dans le portail Azure Classic : **Autoriser les macros**<br /><br />Nom dans le centre d’administration d’étiquetage et Portail Azure : **autoriser les macros (OBJMODEL)**<br /><br />Nom dans les modèles AD RMS : **Autoriser les macros** <br /><br />Constante ou valeur API : non implémenté.|
+| | | |
 
 ## <a name="rights-included-in-permissions-levels"></a>Droits inclus dans les niveaux d’autorisation
 
@@ -73,12 +79,11 @@ Utilisez le tableau suivant pour disposer d’une liste de ces niveaux d’autor
 
 |Niveau d’autorisation|Applications|Droits d’utilisation inclus|
 |---------------------|----------------|---------------------------------|
-|Visionneuse|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Afficher les droits ; Répondre [[1]](#footnote-1); Répondre à tous [[1]](#footnote-1); Autoriser les Macros [[2]](#footnote-2)<br /><br />Remarque : Pour les e-mails, utilisez Réviseur plutôt que ce niveau d’autorisation pour vous assurer qu’une réponse à l’e-mail est reçue en tant qu’e-mail et non pas en tant que pièce jointe. Réviseur est également requis lorsque vous envoyez un e-mail à une autre organisation utilisant le client ou l’application web Outlook. Ou, pour les utilisateurs de votre organisation exempts de l’utilisation du service Azure Rights Management après l’implémentation des [contrôles d’intégration](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
-|Réviseur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Afficher les droits ; Répondre ; Répondre à tous [[3]](#footnote-3); Transférer [[3]](#footnote-3); Autoriser les Macros [[2]](#footnote-2)|
-|Coauteur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les Macros ; Enregistrer sous, Exporter [[4]](#footnote-4); Imprimer ; Répondre [[3]](#footnote-3); Répondre à tous [[3]](#footnote-3); Transférer [[3]](#footnote-3)|
-|Copropriétaire|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[3]](#footnote-3); Répondre à tous [[3]](#footnote-3); Transférer [[3]](#footnote-3) ; Contrôle total|
-
-----
+|**Observateur**|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Afficher les droits ; Répondre [[1]](#footnote-1); Répondre à tous [[1]](#footnote-1); Autoriser les Macros [[2]](#footnote-2)<br /><br />Remarque : Pour les e-mails, utilisez Réviseur plutôt que ce niveau d’autorisation pour vous assurer qu’une réponse à l’e-mail est reçue en tant qu’e-mail et non pas en tant que pièce jointe. Réviseur est également requis lorsque vous envoyez un e-mail à une autre organisation utilisant le client ou l’application web Outlook. Ou, pour les utilisateurs de votre organisation exempts de l’utilisation du service Azure Rights Management après l’implémentation des [contrôles d’intégration](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
+|**Réviseur**|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Afficher les droits ; Répondre ; Répondre à tous [[3]](#footnote-3); Transférer [[3]](#footnote-3); Autoriser les Macros [[2]](#footnote-2)|
+|**Coauteur**|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les Macros ; Enregistrer sous, Exporter [[4]](#footnote-4); Imprimer ; Répondre [[3]](#footnote-3); Répondre à tous [[3]](#footnote-3); Transférer [[3]](#footnote-3)|
+|**Copropriétaire**|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[3]](#footnote-3); Répondre à tous [[3]](#footnote-3); Transférer [[3]](#footnote-3) ; Contrôle total|
+| | | |
 
 ###### <a name="footnote-1"></a>Note 1
 
@@ -138,8 +143,9 @@ Vous pouvez aussi modifier cet héritage de la protection des documents en spéc
 
 Si vous n’avez pas besoin qu’un document joint conserve la protection d’origine, consultez [Sécuriser la collaboration sur les documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md).
 
-Remarque : Si vous voyez des références à **DecryptAttachmentFromPortal**, ce paramètre est désormais déconseillé pour [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Sauf si vous avez précédemment défini ce paramètre, il n’est pas disponible.
-
+> [!NOTE]
+> Si vous voyez des références à **DecryptAttachmentFromPortal**, notez que ce paramètre est maintenant déprécié pour [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Sauf si vous avez précédemment défini ce paramètre, il n’est pas disponible.
+> 
 ## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>Chiffrer automatiquement les documents PDF avec Exchange Online
 
 Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement de messages Office 365, vous pouvez chiffrer automatiquement les documents PDF non protégés lorsqu’ils sont joints à un message électronique chiffré. Le document hérite des mêmes autorisations que celles du message électronique. Pour activer cette configuration, définissez **EnablePdfEncryption $true** avec [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration).
@@ -172,8 +178,9 @@ Par exemple, l’utilisateur qui a créé le document peut l’imprimer, même s
 
 Le propriétaire Rights Management pour un document ou un e-mail est enregistré avec le champ **owner-email** dans les [journaux d’utilisation](log-analyze-usage.md#how-to-interpret-your-usage-logs).
 
-Notez que le propriétaire Rights Management est indépendant du propriétaire du système de fichiers Windows. Ce sont souvent les mêmes, mais ils peuvent être différents, même si vous n’utilisez pas les kits de développement logiciel ou PowerShell.
-
+> [!NOTE]
+> Le propriétaire du Rights Management est indépendant du propriétaire du système de fichiers Windows. Ce sont souvent les mêmes, mais ils peuvent être différents, même si vous n’utilisez pas les kits de développement logiciel ou PowerShell.
+> 
 ## <a name="rights-management-use-license"></a>Licence d’utilisation de Rights Management
 
 Lorsqu’un utilisateur ouvre un document ou un e-mail protégé par Azure Rights Management, une licence d’utilisation de Rights Management pour ce contenu est accordée à l’utilisateur. Cette licence d’utilisation est un certificat contenant les droits d’utilisation de l’utilisateur pour le document ou l’e-mail ainsi que la clé de chiffrement utilisée pour chiffrer le contenu. La licence d’utilisation peut également contenir une date d’expiration, ainsi qu’une durée de validité.
@@ -204,10 +211,11 @@ Ces modèles par défaut sont créés lors de l’achat de votre abonnement, et 
 
 |Nom complet du modèle|Droits d’utilisation du 6 octobre 2017 à maintenant|Droits d’utilisation avant le 6 octobre 2017|
 |----------------|--------------------|----------|
-|\<*organization name> -Affichage confidentiel uniquement * <br /><br />or<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
-|\<*organization name>Confidentiel <br /><br />or <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
+|**\<*organization name> -Affichage confidentiel uniquement*** <br /><br />or<br /><br /> **_Hautement confidentiel \ tous les employés_**|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
+|**\<*organization name>-Confidentiel*** <br /><br />or <br /><br />**_Confidentiel \ tous les employés_**|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les Macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les Macros ; Transférer ; Répondre ; Répondre à tous|
+| | | |
 
 ## <a name="see-also"></a>Voir aussi
-[Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)
 
-[Configuration de super utilisateurs pour Azure Information Protection ainsi que pour les services de découverte ou la récupération des données](configure-super-users.md)
+- [Restreindre l’accès au contenu à l’aide d’étiquettes de sensibilité pour appliquer le chiffrement](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configuration de super utilisateurs pour Azure Information Protection ainsi que pour les services de découverte ou la récupération des données](configure-super-users.md)

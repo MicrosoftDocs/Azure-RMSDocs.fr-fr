@@ -1,6 +1,6 @@
 ---
-title: Activer Azure RMS avec le Centre d’administration Microsoft 365 - AIP
-description: Instructions d’activation du service Azure Rights Management lorsque vous utilisez le centre d’administration Microsoft 365.
+title: Activer Azure RMS à partir du centre d’administration Microsoft 365-AIP
+description: Découvrez comment activer le service Azure Rights Management à partir du centre d’administration Microsoft 365.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,24 +13,28 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2a8bdeea76c021107e86584e3508a66823716e50
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 24787eda3b248cab2e6cc3c055611378e39b5c3c
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383701"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414784"
 ---
-# <a name="how-to-activate-rights-management-protection-from-the-microsoft-365-admin-center"></a>Comment activer Rights Management protection à partir du centre d’administration Microsoft 365
+# <a name="activate-azure-rights-management-protection-from-the-microsoft-365-admin-center"></a>Activer la protection Azure Rights Management à partir du centre d’administration Microsoft 365
 
->***S’applique à**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->*Concerne : client **d'** [étiquetage unifié AIP et client Classic](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Concerne** : [Client d’étiquetage unifié AIP et client classique](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Suivez ces instructions si vous avez accès au service Azure Rights Management à partir du Centre d’administration Microsoft 365 et que vous êtes administrateur général. 
+Cet article explique comment les administrateurs généraux ayant accès au service Azure Rights Management à partir du centre d’administration Microsoft 365 peuvent activer Azure Rights Management.
+
+## <a name="prerequisites"></a>Prérequis
 
 Pour activer le service Azure Rights Management, vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Par exemple, votre organisation dispose d’un plan Office 365 E3 ou Office 365 E5. 
 
 Si vous avez des questions sur les exigences de l’abonnement ou que vous avez besoin d’aide pour activer le service, [contactez le Support Microsoft](information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
+
+## <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
 1. Après avoir vérifié que votre organisation dispose d’un plan incluant Azure Rights Management, accédez à la [page Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) du Centre d’administration Microsoft 365.
     
@@ -48,5 +52,6 @@ Si vous avez des questions sur les exigences de l’abonnement ou que vous avez 
 Vous devez maintenant voir **Rights Management est activé**, ainsi qu'une option de désactivation.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
 Reprendre [la lecture de l’activation du service de protection à partir de Azure information protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

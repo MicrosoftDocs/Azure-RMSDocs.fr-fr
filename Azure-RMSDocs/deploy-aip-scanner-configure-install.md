@@ -1,6 +1,6 @@
 ---
 title: Installer et configurer le scanneur d’étiquetage unifiée de l’Azure Information Protection (AIP)
-description: Instructions d’installation et de configuration du Azure Information Protection scanneur d’étiquetage unifié pour la détection, la classification et la protection des fichiers sur les banques de données.
+description: Découvrez comment installer et configurer le scanneur d’étiquetage unifié de l’Azure Information Protection (AIP) pour découvrir, classer et protéger des fichiers sur des magasins de données.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,24 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 98cadb555919ecd6e95e3328ad489b29e3f5c0ef
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: ed21f867dfbd3cf6fb0e453367f9e657ba463e99
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844385"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415396"
 ---
-# <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifié Azure Information Protection
+# <a name="configuring-and-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Configuration et installation du scanneur d’étiquetage unifiée de l’Azure Information Protection (AIP)
 
 >***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
 >***Concerne**: [client d’étiquetage unifié AIP uniquement](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le scanneur classique, consultez [configuration et installation du Azure information protection scanneur classique](deploy-aip-scanner-configure-install-classic.md). *
 
-Avant de commencer à configurer et à installer le scanneur Azure Information Protection, vérifiez que votre système est conforme aux [conditions préalables requises](deploy-aip-scanner-prereqs.md). 
+Cet article explique comment configurer et installer le Azure Information Protection l’étiquetage unifié, le scanneur local. 
+
+## <a name="overview"></a>Vue d’ensemble
+
+Avant de commencer, vérifiez que votre système est conforme aux [conditions préalables requises](deploy-aip-scanner-prereqs.md). 
 
 Lorsque vous êtes prêt, passez aux étapes suivantes :
 
@@ -37,18 +41,18 @@ Lorsque vous êtes prêt, passez aux étapes suivantes :
 
 1. [Configurer le scanneur pour appliquer la classification et la protection](#configure-the-scanner-to-apply-classification-and-protection)
  
-Effectuez les procédures de configuration supplémentaires suivantes selon les besoins de votre système :
+Ensuite, effectuez les procédures de configuration suivantes en fonction des besoins de votre système :
 
 |Procédure  |Description  |
 |---------|---------|
 |[Changer les types de fichiers à protéger](#change-which-file-types-to-protect) |Vous souhaiterez peut-être analyser, classer ou protéger différents types de fichiers par rapport à la valeur par défaut. Pour plus d’informations, consultez [processus d’analyse AIP](deploy-aip-scanner.md#aip-scanning-process). |
-|[Mise à niveau de votre scanneur](#upgrading-your-scanner) | Mettez à niveau votre scanneur pour tirer parti des dernières fonctionnalités et améliorations.|
-|[Modification des paramètres du référentiel de données en bloc](#editing-data-repository-settings-in-bulk)| Utilisez les options d’importation et d’exportation pour apporter des modifications en bloc pour plusieurs référentiels de données.|
-|[Utiliser le scanneur avec d’autres configurations](#using-the-scanner-with-alternative-configurations)| Utiliser le scanneur sans configurer d’étiquettes avec des conditions |
-|[Optimiser les performances](#optimizing-scanner-performance)| Conseils pour optimiser les performances de votre scanneur|
+|[Mise à niveau de votre scanneur](#upgrade-your-scanner) | Mettez à niveau votre scanneur pour tirer parti des dernières fonctionnalités et améliorations.|
+|[Modification des paramètres du référentiel de données en bloc](#edit-data-repository-settings-in-bulk)| Utilisez les options d’importation et d’exportation pour apporter des modifications en bloc pour plusieurs référentiels de données.|
+|[Utiliser le scanneur avec d’autres configurations](#use-the-scanner-with-alternative-configurations)| Utiliser le scanneur sans configurer d’étiquettes avec des conditions |
+|[Optimiser les performances](#optimize-scanner-performance)| Conseils pour optimiser les performances de votre scanneur|
 | | |
 
-Pour plus d’informations, consultez également [la liste des applets de commande pour le scanneur](#list-of-cmdlets-for-the-scanner).
+Pour plus d’informations, consultez également les [applets de commande PowerShell prises en charge](#supported-powershell-cmdlets).
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Configurer le scanneur dans le portail Azure
 
@@ -93,14 +97,11 @@ Pour configurer votre scanneur :
 
 À partir de la version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), vous pouvez analyser votre réseau à la recherche de référentiels risqués. Ajoutez un ou plusieurs référentiels trouvés à un travail d’analyse de contenu pour les analyser à la recherche de contenu sensible.
 
-- [Conditions préalables pour la découverte du réseau](#network-discovery-prerequisites)
-- [Création d’un travail d’analyse réseau](#creating-a-network-scan-job)
-
 > [!NOTE]
 > La fonctionnalité de découverte du réseau Azure Information Protection est actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
 > 
 
-#### <a name="network-discovery-prerequisites"></a>Conditions préalables pour la découverte du réseau
+Le tableau suivant décrit les conditions préalables requises pour le service de découverte du réseau :
 
 |Configuration requise  |Description  |
 |---------|---------|
@@ -108,7 +109,7 @@ Pour configurer votre scanneur :
 |**Azure Information Protection Analytics**     | Assurez-vous que Azure Information Protection Analytics est activé. <br /><br />Dans la Portail Azure, accédez à **Azure Information Protection > gérer > configurer Analytics (** préversion). <br /><br />Pour plus d’informations, consultez [central Reporting for Azure information protection (version préliminaire publique)](reports-aip.md).|
 | | |
 
-#### <a name="creating-a-network-scan-job"></a>Création d’un travail d’analyse réseau
+**Pour créer un travail d’analyse réseau**
 
 1. Connectez-vous au Portail Azure et accédez à **Azure information protection**. Dans le menu du **scanneur** situé à gauche, sélectionnez **travaux d’analyse réseau (** préversion) ![icône travaux d’analyse réseau](media/i-network-scan-jobs.png "icône de travaux d’analyse réseau").
     
@@ -162,7 +163,6 @@ Si vous avez [défini un travail d’analyse réseau](#create-a-network-scan-job
     |![Icône Log Analytics](media/i-log-analytics.png "Icône Log Analytics") |Dans le coin supérieur droit du graphique dépôts non managés, cliquez sur l’icône **log Analytics** pour accéder à log Analytics données de ces dépôts. |
     | | |
 
-#### <a name="repositories-with-public-access"></a>Dépôts avec accès public
 
 Les référentiels pour lesquels un **accès public** est accessible **en lecture** ou **en lecture/écriture** peuvent avoir un contenu sensible qui doit être sécurisé. Si l' **accès public** a la valeur false, le référentiel n’est pas accessible par le public.
 
@@ -204,11 +204,11 @@ Vous pouvez effectuer cette opération uniquement après avoir exécuté un trav
     >     
     Pour ajouter votre premier magasin de données, dans le volet **Ajouter un nouveau travail d’analyse de contenu** , sélectionnez configurer les **référentiels** pour ouvrir le volet **dépôts** :
     
-    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configuration de référentiels de données pour le scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configurez les référentiels de données pour le scanneur Azure Information Protection.":::
 
     1. Dans le volet **Référentiels**, sélectionnez **Ajouter** :
     
-        :::image type="content" source="media/scanner-repository-add.png" alt-text="Ajout d’un référentiel de données pour le scanneur Azure Information Protection":::
+        :::image type="content" source="media/scanner-repository-add.png" alt-text="Ajoutez un référentiel de données pour le scanneur de Azure Information Protection.":::
 
     1. Dans le volet **référentiel** , spécifiez le chemin d’accès du référentiel de données, puis sélectionnez **Enregistrer**.
     
@@ -347,7 +347,7 @@ Pour modifier ces paramètres, modifiez le travail d’analyse du contenu :
 
 3. Prenez note de l’heure actuelle et redémarrez le scanneur à partir du volet **travaux d’analyse de contenu Azure information protection** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Lancement de l’analyse du scanneur Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Lancez l’analyse pour le scanneur de Azure Information Protection.":::
     
     Vous pouvez également exécuter la commande suivante dans votre session PowerShell :
     
@@ -369,7 +369,7 @@ L’utilisation d’une stratégie de protection contre la perte de données (DL
 > L’analyse de vos fichiers, même en testant simplement la stratégie DLP, crée également des rapports d’autorisations sur les fichiers. Interrogez ces rapports pour examiner les expositions de fichiers spécifiques ou explorer l’exposition d’un utilisateur spécifique à des fichiers analysés.
 > 
 
-Les stratégies DLP sont configurées dans le centre d’administration d’étiquetage, comme le centre de conformité Microsoft 365, et sont prises en charge dans Azure Information Protection à partir de la version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+Les stratégies DLP sont configurées dans le centre d’administration d’étiquetage, comme le centre de conformité Microsoft 365, et sont prises en charge dans Azure Information Protection à partir de la version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-dlp-policies-public-preview). 
 
 Pour plus d’informations sur les licences DLP, consultez [prise en main du scanneur local pour la protection contre la perte de données](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
 
@@ -419,13 +419,13 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 Pour plus d’informations, consultez [modifier les types de fichiers à protéger](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
-## <a name="upgrading-your-scanner"></a>Mise à niveau de votre scanneur
+## <a name="upgrade-your-scanner"></a>Mettre à niveau votre scanneur
  
 Si vous avez déjà installé le scanneur et que vous souhaitez effectuer une mise à niveau, suivez les instructions décrites dans [mise à niveau de l’analyseur de Azure information protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
 Ensuite, [configurez](deploy-aip-scanner-configure-install.md) et [Utilisez votre scanneur](deploy-aip-scanner-manage.md) comme d’habitude, en ignorant les étapes d’installation de votre scanneur.
 
-## <a name="editing-data-repository-settings-in-bulk"></a>Modification des paramètres du référentiel de données en bloc
+## <a name="edit-data-repository-settings-in-bulk"></a>Modifier les paramètres du référentiel de données en bloc
 
 Utilisez les boutons **Exporter** et **Importer** pour apporter des modifications à votre scanneur sur plusieurs dépôts. 
 
@@ -437,13 +437,13 @@ Pour apporter des modifications en bloc dans les référentiels :
 
 1. Dans le Portail Azure du volet **référentiels** , sélectionnez l’option d' **exportation** . Par exemple :
 
-    :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportation des paramètres du référentiel de données pour le scanneur de Azure Information Protection":::
+    :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportation des paramètres du référentiel de données pour le scanneur de Azure Information Protection.":::
 
 1. Modifiez manuellement le fichier exporté pour effectuer votre modification. 
 
 1. Utilisez l’option d' **importation** sur la même page pour réimporter les mises à jour dans vos référentiels.
 
-## <a name="using-the-scanner-with-alternative-configurations"></a>Utilisation du scanneur avec d’autres configurations
+## <a name="use-the-scanner-with-alternative-configurations"></a>Utiliser le scanneur avec d’autres configurations
 
 Le scanneur de Azure Information Protection recherche généralement des conditions spécifiées pour vos étiquettes afin de classer et de protéger votre contenu si nécessaire.
 
@@ -487,7 +487,7 @@ Définissez les **types d’informations à découvrir** pour **tous**.
 
 Pour identifier les conditions et les types d’informations pour l’étiquetage, le scanneur utilise tous les types d’informations sensibles personnalisés spécifiés, ainsi que la liste des types d’informations sensibles intégrés disponibles à sélectionner, tels que définis dans le centre de gestion des étiquettes.
 
-## <a name="optimizing-scanner-performance"></a>Optimisation des performances de l’analyseur
+## <a name="optimize-scanner-performance"></a>Optimiser les performances de l’analyseur
 
 > [!NOTE]
 > Si vous cherchez à améliorer la réactivité de l’ordinateur du scanneur plutôt que les performances de l’analyseur, utilisez un paramètre client avancé pour [limiter le nombre de threads utilisés par le scanneur](./rms-client/clientv2-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner).
@@ -500,7 +500,7 @@ Utilisez les options et les conseils suivants pour vous aider à optimiser les p
 |**Veillez à avoir une connexion haut débit fiable entre l’ordinateur de l’analyseur et le magasin de données analysé**     |  Par exemple, placez l’ordinateur du scanneur sur le même réseau local, ou de préférence, dans le même segment de réseau que le magasin de données analysé. <br /><br />La qualité de la connexion réseau affecte les performances de l’analyseur car, pour inspecter les fichiers, l’analyseur transfère le contenu des fichiers sur l’ordinateur exécutant le service du scanneur. <br /><br />La réduction ou l’élimination des sauts réseau requis pour le déplacement des données réduit également la charge sur votre réseau.      |
 |**Assurez-vous que l’ordinateur de l’analyseur dispose de ressources processeur**     | L’inspection du contenu du fichier et le chiffrement et le déchiffrement des fichiers sont des actions nécessitant beaucoup de ressources du processeur. <br /><br />Surveillez les cycles d’analyse typiques pour les magasins de données spécifiés pour déterminer si un manque de ressources du processeur affecte les performances de l’analyseur.        |
 |**Installer plusieurs instances du scanneur** | Le scanneur Azure Information Protection prend en charge plusieurs bases de données de configuration sur la même instance de SQL Server lorsque vous spécifiez un nom de cluster personnalisé pour le scanneur. <br /><br />Plusieurs analyseurs peuvent également partager le même cluster, ce qui entraîne des temps d’analyse plus rapides.|
-|**Vérifier l’utilisation de la configuration de remplacement** |Le scanneur s’exécute plus rapidement lorsque vous utilisez la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) pour appliquer une étiquette par défaut à tous les fichiers, car le scanneur n’inspecte pas le contenu du fichier. <br/><br />Le scanneur s’exécute plus lentement lorsque la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) est utilisée pour identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.|
+|**Vérifier l’utilisation de la configuration de remplacement** |Le scanneur s’exécute plus rapidement lorsque vous utilisez la [configuration de remplacement](#use-the-scanner-with-alternative-configurations) pour appliquer une étiquette par défaut à tous les fichiers, car le scanneur n’inspecte pas le contenu du fichier. <br/><br />Le scanneur s’exécute plus lentement lorsque la [configuration de remplacement](#use-the-scanner-with-alternative-configurations) est utilisée pour identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.|
 | | |
 
 
@@ -518,7 +518,7 @@ Les facteurs supplémentaires qui affectent les performances du scanneur sont le
 |**Fichiers en cours d’analyse**     |-À l’exception des fichiers Excel, les fichiers Office sont analysés plus rapidement que les fichiers PDF. <br /><br />-Les fichiers non protégés sont plus rapides à analyser que les fichiers protégés. <br /><br />-Les fichiers volumineux sont évidemment plus longs à analyser que les petits fichiers.         |
 | | |
 
-## <a name="list-of-cmdlets-for-the-scanner"></a>Liste des cmdlets pour le scanneur
+## <a name="supported-powershell-cmdlets"></a>Applets de commande PowerShell prises en charge
 
 Cette section répertorie les applets de commande PowerShell prises en charge pour le scanneur Azure Information Protection.
 

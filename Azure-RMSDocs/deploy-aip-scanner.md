@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f674cd162131b0a45dbefbe70e617296695d6126
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 24429f7727800650e5ce8f5f814597dfd83de0b2
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524742"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414988"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Qu’est-ce que le scanneur d’étiquetage unifié Azure Information Protection ?
 
@@ -80,7 +80,7 @@ Pour plus d’informations, consultez [fichiers non marqués par le scanneur](#f
 
 ### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. déterminer si les fichiers sont inclus ou exclus pour l’analyse 
 
-Le scanneur ignore automatiquement les fichiers qui sont exclus de la classification et de la protection, comme les fichiers exécutables et les fichiers système. Pour plus d’informations, consultez [types de fichiers exclus de la classification et](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)de la protection.
+Le scanneur ignore automatiquement les fichiers qui sont exclus de la classification et de la protection, comme les fichiers exécutables et les fichiers système. Pour plus d’informations, consultez [types de fichiers exclus de la classification et de la protection](rms-client/clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection).
 
 Le scanneur prend également en compte toutes les listes de fichiers explicitement définies pour analyser ou exclure de l’analyse. Les listes de fichiers s’appliquent à tous les référentiels de données par défaut et peuvent également être définies pour des référentiels spécifiques.
 
@@ -94,9 +94,9 @@ Pour plus d’informations, consultez [déploiement de l’analyseur de Azure in
 
 Après avoir identifié les fichiers exclus, le scanneur filtre à nouveau pour identifier les fichiers pris en charge pour l’inspection.
 
-Ces filtres supplémentaires sont les mêmes que ceux utilisés par le système d’exploitation pour la recherche et l’indexation Windows et ne nécessitent aucune configuration supplémentaire. Windows IFilter est également utilisé pour analyser les types de fichiers utilisés par Word, Excel et PowerPoint, ainsi que pour les documents PDF et les fichiers texte.
+Ces filtres sont les mêmes que ceux utilisés par le système d’exploitation pour la recherche et l’indexation Windows et ne nécessitent aucune configuration supplémentaire. Windows IFilter est également utilisé pour analyser les types de fichiers utilisés par Word, Excel et PowerPoint, ainsi que pour les documents PDF et les fichiers texte.
 
-Pour obtenir la liste complète des types de fichiers pris en charge pour l’inspection, ainsi que des instructions supplémentaires pour la configuration des filtres pour inclure des fichiers. zip et. TIFF, consultez [types de fichiers pris en charge pour l’inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
+Pour obtenir la liste complète des types de fichiers pris en charge pour l’inspection, ainsi que d’autres instructions pour la configuration des filtres pour inclure des fichiers. zip et. TIFF, consultez [types de fichiers pris en charge pour l’inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 Après l’inspection, les types de fichiers pris en charge sont étiquetés à l’aide des conditions spécifiées pour vos étiquettes. Si vous utilisez le mode détection, ces fichiers peuvent être consignés pour contenir les conditions spécifiées pour vos étiquettes, ou être signalés comme contenant des types d’informations sensibles connus.
 
@@ -106,7 +106,7 @@ Si le scanneur s’arrête et ne termine pas une analyse pour un grand nombre de
 
 Par exemple, le renforcement de serveur pour SharePoint est une des raisons pour lesquelles le scanneur dépasserait le nombre de connexions réseau autorisées et, par conséquent, s’arrêter.
 
-Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, recherchez le message d’erreur suivant dans les journaux du scanneur sur **%LocalAppData%\Microsoft\MSIP\Logs\MSIPScanner.Iplog** (plusieurs journaux sont compressés dans un fichier zip) :
+Pour vérifier si le renforcement de serveur pour SharePoint est la cause de l’arrêt du scanneur, recherchez le message d’erreur suivant dans les journaux du scanneur sur **%LocalAppData%\Microsoft\MSIP\Logs\MSIPScanner.Iplog** (plusieurs journaux sont compressés dans un fichier zip) :
 
 `Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
 

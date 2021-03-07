@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c81df0928261ea50795837e8e0fe2b542d7b8af
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: c918c03616affeea1972518e5af1e439def22243
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382154"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414971"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
->***S’applique à**: [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> ***Pertinent pour**: [Azure information protection client d’étiquetage unifié pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Concerne** : [Client d’étiquetage unifié Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Il existe de nombreux scénarios dans lesquels vous pouvez utiliser Azure Information Protection pour classer et, le cas échéant, protéger les documents et e-mails de votre organisation. 
 
@@ -57,5 +57,3 @@ Pour plus d’informations et pour obtenir des instructions pas à pas, consulte
 ## <a name="next-steps"></a>Étapes suivantes
 
 Votre scénario n’est pas répertorié ? Pour obtenir la liste complète des étapes de planification et de déploiement, consultez les [feuilles de route](deployment-roadmap.md) pour le déploiement.
-
-Si vous débutez avec Azure Information Protection, consultez [Qu’est-ce qu’Azure Information Protection ?](what-is-information-protection.md) pour une présentation rapide du service avant de commencer votre déploiement.

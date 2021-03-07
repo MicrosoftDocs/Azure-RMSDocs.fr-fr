@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection l’historique des versions du client d’étiquetage unifié-version & la stratégie de support
+title: Nouveautés de Azure Information Protection (AIP)-historique des versions & stratégie de support
 description: Découvrez les nouveautés du client d’étiquetage unifié de l’Azure Information Protection (AIP) pour Windows.
 author: batamig
 ms.author: bagol
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6f77220e6321f8a601c936fec9a5ea4812539f01
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 73d64904f3bea44e7432709773f9400ccd40da3e
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844368"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415294"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -26,6 +26,8 @@ ms.locfileid: "101844368"
 >*Si vous disposez de Windows 7 ou Office 2010, consultez [AIP et versions héritées de Windows et d’Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Concerne**: [client d’étiquetage unifié AIP uniquement](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Pour le client Classic, consultez [l’historique des versions du client classique et la stratégie de support](client-version-release-history.md). *
+
+Cet article décrit les nouvelles fonctionnalités disponibles pour le client d’étiquetage unifié, ainsi que les informations de maintenance et les chronologies de support pour chaque version du client unifié AIP.
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -84,7 +86,7 @@ La co-création d’applications Office permet à plusieurs utilisateurs de modi
 > Votre système doit également respecter les exigences de version indiquées dans la [Microsoft 365 conditions préalables pour la co-création](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
 >
 
-Avant de commencer, nous vous recommandons de passer en revue toutes les conditions préalables et limitations associées. Pour plus d'informations, consultez les pages suivantes :
+Avant de commencer, nous vous recommandons de passer en revue toutes les conditions préalables et limitations associées. Pour plus d’informations, consultez :
 
 - [Activez la co-création de fichiers chiffrés avec des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels-coauthoring) dans la documentation de Microsoft 365.
 - [Problèmes connus de la co-création dans AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
@@ -214,7 +216,7 @@ Si vos documents sont enregistrés pour le suivi, permet aux administrateurs d�
 
 Une fois que vous avez mis à niveau, les utilisateurs finaux peuvent également révoquer l’accès pour les documents qu’ils ont protégés. Pour révoquer l’accès à partir de Microsoft Office Apps, utilisez l’option nouveau **révoquer l’accès** dans le menu **sensibilité** .
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection](track-and-revoke-admin.md)
 - [Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection](revoke-access-user.md)
@@ -234,9 +236,9 @@ Les correctifs suivants ont été fournis dans la version 2.9.111.0 de l' [Azure
 
 - Ajout de la prise en charge des traits d’Union ( **-** ) dans les noms des [bases de données du scanneur](../deploy-aip-scanner-prereqs.md)
 - Mises à jour dans les rapports pour lesquelles l’option **[étiqueter les fichiers en fonction du contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** a la valeur **désactivé**
-- [Amélioration de la consommation de mémoire](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) pour un grand nombre de correspondances de type d’informations
+- [Amélioration de la consommation de mémoire](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) pour un grand nombre de correspondances de type d’informations
 - Prise en charge des chemins d’accès [locaux SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) qui se terminent par une barre oblique ( **/** )
-- Augmentation de la [Vitesse](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) d’analyse SharePoint
+- Augmentation de la [Vitesse](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) d’analyse SharePoint
 - Prise en charge pour [éviter un délai d’expiration](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) lors de l’analyse d’un serveur SharePoint.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>Correctifs et améliorations pour le client d’étiquetage unifié
@@ -259,7 +261,7 @@ Les correctifs suivants ont été fournis dans la version 2.9.111.0 de l' [Azure
 
     Dans ce cas, les paramètres avancés de la première stratégie sont toujours appliqués, en fonction de l’ordre des stratégies dans le centre d’administration. L’exception pour *OutlookDefaultLabel* est maintenant supprimée.
 
-- Dans un scénario où **% AppData% (Appdata\Roaming)** pointe vers une structure de dossiers Windows non définie par défaut, les fichiers des dossiers mappés à des répertoires utilisateur sont désormais [exclus de l’étiquetage et de la protection](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) comme prévu, en fonction de la configuration.
+- Dans un scénario où **% AppData% (Appdata\Roaming)** pointe vers une structure de dossiers Windows non définie par défaut, les fichiers des dossiers mappés à des répertoires utilisateur sont désormais [exclus de l’étiquetage et de la protection](clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection) comme prévu, en fonction de la configuration.
 
 - [Nouveau paramètre de client avancé](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**PowerPointRemoveAllShapesByShapeName**), ajouté pour supprimer des formes des en-têtes ou des pieds de page PowerPoint, en utilisant le nom de forme au lieu du texte à l’intérieur d’une forme.
 
@@ -325,8 +327,8 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
-    - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
+    - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Assurez-vous que Azure Information Protection Analytics est activé.
@@ -346,7 +348,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 1. Utilisez les rapports générés dans le nouveau volet [**référentiels**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pour rechercher les partages de fichiers réseau supplémentaires qui peuvent être menacés. Ajoutez tous les partages de fichiers risqués à vos [travaux d’analyse de contenu](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) pour analyser les référentiels ajoutés au contenu sensible.
 
-#### <a name="network-discovery-cmdlets-public-preview"></a>Applets de commande de découverte du réseau (version préliminaire publique)
+### <a name="network-discovery-cmdlets-public-preview"></a>Applets de commande de découverte du réseau (version préliminaire publique)
 
 Les applets de commande PowerShell ajoutées pour la découverte du réseau sont les suivantes :
 
@@ -388,7 +390,7 @@ Pour plus d’informations, consultez [Azure information protection référence 
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
@@ -492,7 +494,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)

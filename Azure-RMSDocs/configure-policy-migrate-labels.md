@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1751368b74d6ed2800bfd2e7432a4ce4a5844f0a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 1243d62932a2cda0c6ead806e1b322324e974a9f
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809764"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415209"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -39,9 +39,9 @@ Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-
 
 - [Quelle est la différence entre les étiquettes dans Microsoft 365 et les étiquettes dans Azure Information Protection ?](faqs.md#whats-the-difference-between-labels-in-microsoft-365-and-labels-in-azure-information-protection)
 
-- [Quand est-il approprié de migrer mes étiquettes ?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
+- [Quand est-il approprié de migrer mes étiquettes vers un étiquetage unifié ?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
 
-- [Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
+- [Une fois que j’ai migré mes étiquettes vers l’étiquetage unifié, quel portail de gestion dois-je utiliser ?](faqs.md#after-ive-migrated-my-labels-to-unified-labeling-which-management-portal-do-i-use)
 
 ### <a name="administrative-roles-that-support-the-unified-labeling-platform"></a>Rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée
 
@@ -294,7 +294,7 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
 
 Si vous ne l’avez pas déjà fait, installez le client d’étiquetage unifié Azure Information Protection. 
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié](rms-client/unifiedlabelingclient-version-release-history.md)
 - [Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection](rms-client/clientv2-admin-guide.md)

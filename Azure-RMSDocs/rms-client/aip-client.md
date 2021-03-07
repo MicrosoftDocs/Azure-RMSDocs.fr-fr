@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86463add67ca43f6908fed110dd358df89052a92
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 39f37c72be1d9284aecdcec559afc03b586e011c
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806904"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415413"
 ---
 # <a name="azure-information-protection-classic-client-for-windows"></a>Azure Information Protection client classique pour Windows
 
@@ -29,7 +29,7 @@ ms.locfileid: "97806904"
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Le client Azure Information Protection Classic est le client téléchargeable d’origine pour les organisations qui utilisent [Azure information protection](../what-is-information-protection.md) pour classifier et protéger des documents et des e-mails, ou utiliser un service Rights Management pour protéger leurs données. Ce client dispose également d’une visionneuse pour les organisations qui ne disposent pas de leur propre infrastructure de protection des informations, mais qui souhaitent consommer du contenu protégé par d’autres organisations qui utilisent un service Rights Management de Microsoft.
+Le client Azure Information Protection Classic est le client téléchargeable d’origine pour les organisations qui utilisent Azure Information Protection pour classifier et protéger des documents et des e-mails, ou utiliser un service Rights Management pour protéger leurs données. Ce client dispose également d’une visionneuse pour les organisations qui ne disposent pas de leur propre infrastructure de protection des informations, mais qui souhaitent consommer du contenu protégé par d’autres organisations qui utilisent un service Rights Management de Microsoft.
 
 Utilisez les ressources suivantes pour le client classique :
 

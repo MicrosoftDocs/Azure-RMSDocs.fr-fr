@@ -1,6 +1,6 @@
 ---
-title: Création de rapports centralisée pour Azure Information Protection
-description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
+title: Analyses et rapports centralisés pour Azure Information Protection (AIP)
+description: Découvrez comment utiliser l’analyse Azure Information Protection (AIP) et les rapports centraux pour suivre l’utilisation des étiquettes et identifier les fichiers qui contiennent des informations sensibles.
 author: batamig
 ms.author: bagol
 ms.date: 03/01/2021
@@ -13,14 +13,14 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4c42dccc21235fe403f3c491491e0a03e015c890
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 5665a071bd99f8ed1118adffcd1ce65f20ff9aa4
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844334"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415464"
 ---
-# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Création de rapports centralisés pour Azure Information Protection (version préliminaire publique)
+# <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analyse et création de rapports centralisées pour Azure Information Protection (version préliminaire publique)
 
 >***S’applique à** : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -29,7 +29,9 @@ ms.locfileid: "101844334"
 >[!NOTE] 
 > Pour fournir une expérience client unifiée et homogène, le **client classique Azure Information Protection** et la **gestion des étiquettes** dans le portail Azure seront **dépréciés** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
-Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. De plus :
+Cet article explique comment utiliser Azure Information Protection (AIP) Analytics pour la création de rapports centralisés, qui peut vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. 
+
+Les analyses AIP vous permettent également d’effectuer les opérations suivantes :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -150,7 +152,7 @@ Caractéristique propre à l’analytique Azure Information Protection, après q
 
 Étant donné que Azure Information Protection Analytics utilise la surveillance Azure, le contrôle d’accès en fonction du rôle (RBAC) pour Azure contrôle également l’accès à votre espace de travail. Vous avez donc besoin d’un rôle Azure ainsi que d’un rôle Administrateur d’Azure AD pour gérer l’analytique Azure Information Protection. Si vous ne connaissez pas les rôles Azure, il peut s’avérer utile de lire [Différences entre les rôles RBAC Azure et les rôles d’administrateur Azure AD](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [Rôles d’administrateur Azure AD requis](#required-azure-ad-administrator-roles)
 - [Rôles de Log Analytics Azure requis](#required-azure-log-analytics-roles)
@@ -235,7 +237,7 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
 
 Vous êtes maintenant prêt à afficher les rapports.
 
-## <a name="how-to-view-the-reports"></a>Comment afficher les rapports
+## <a name="view-the-aip-analytics-reports"></a>Afficher les rapports d’analyse AIP
 
 Dans le volet Azure Information Protection, recherchez les options du menu **tableaux de bord** , puis sélectionnez l’une des options suivantes :
 
@@ -248,7 +250,7 @@ Dans le volet Azure Information Protection, recherchez les options du menu **tab
 |     |         |
 
 
-## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Comment modifier les rapports et créer des requêtes personnalisées
+## <a name="modify-the-aip-analytics-reports-and-create-custom-queries"></a>Modifier les rapports d’analyse AIP et créer des requêtes personnalisées
 
 Sélectionnez l’icône de requête dans le tableau de bord pour ouvrir un volet de recherche dans les **journaux** : 
 
@@ -349,7 +351,7 @@ Après avoir vérifié les informations contenues dans les rapports, si vous uti
 
 Si vous avez un abonnement Microsoft 365, vous pouvez également consulter l’utilisation des étiquettes dans le Centre de conformité Microsoft 365 et le Centre de sécurité Microsoft 365. Pour plus d’informations, voir [Afficher l’utilisation des étiquettes avec l’Analyse des étiquettes](/microsoft-365/compliance/label-analytics).
 
-Les journaux d’audit AIP sont également envoyés à l’Explorateur d’activités Microsoft 365, où ils peuvent être affichés avec des noms différents. Pour plus d'informations, consultez les pages suivantes :
+Les journaux d’audit AIP sont également envoyés à l’Explorateur d’activités Microsoft 365, où ils peuvent être affichés avec des noms différents. Pour plus d’informations, consultez :
 
 - [Version préliminaire publique : journaux d’audit AIP dans l’Explorateur d’activités](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
 - [Prise en main de l’Explorateur d’activités](/microsoft-365/compliance/data-classification-activity-explorer).

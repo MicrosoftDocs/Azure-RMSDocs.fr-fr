@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
-ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.openlocfilehash: 4e8c4444aad6185b54a6f5b5178fa225857b71d2
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99473002"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414954"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -53,7 +53,7 @@ Vous devez disposer d’un ordinateur Windows Server pour exécuter le scanneur,
 |**Processeur**     |4 processeurs principaux         |
 |**RAM**     |8 Go         |
 |**Espace disque**     |10 Go d’espace libre (moyenne) pour les fichiers temporaires. </br></br>Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. </br></br>L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo.
-|**Système d’exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque**: à des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
+|**Système d'exploitation**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Remarque**: à des fins de test ou d’évaluation dans un environnement hors production, vous pouvez également utiliser n’importe quel système d’exploitation Windows [pris en charge par le client Azure information protection](requirements.md#client-devices).
 |**Connectivité réseau**     | Votre ordinateur de scanneur peut être un ordinateur physique ou virtuel avec une connexion réseau rapide et fiable aux magasins de données à analyser. </br></br> Si la connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Dans le cas contraire, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPs (port 443) :</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com <br />-  \*. protection.outlook.com |
 |**Partages NFS** |Pour prendre en charge les analyses sur les partages NFS, les services pour NFS doivent être déployés sur l’ordinateur du scanneur. <br><br>Sur votre ordinateur, accédez à la boîte de dialogue des paramètres **fonctionnalités Windows (activer ou désactiver des fonctionnalités Windows)** , puis sélectionnez les éléments suivants :   >  **Outils d’administration** de NFS et **client pour NFS**. |
 | | |
@@ -112,7 +112,7 @@ Pour stocker les données de configuration de l’analyseur, utilisez un serveur
 
 La quantité d’espace disque requise pour la base de données de configuration du scanneur et la spécification de l’ordinateur qui exécute SQL Server peuvent varier pour chaque environnement, nous vous encourageons donc à effectuer vos propres tests. Utilisez les instructions suivantes comme point de départ.
 
-Pour plus d’informations, consultez [optimisation des performances du scanneur](deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
+Pour plus d’informations, consultez [optimisation des performances du scanneur](deploy-aip-scanner-configure-install.md#optimize-scanner-performance).
 
 La taille du disque de la base de données de configuration de l’analyseur varie pour chaque déploiement. Utilisez l’équation suivante en guise d’aide :
 
@@ -153,7 +153,7 @@ Le *compte du scanneur* est le compte que vous spécifiez dans le paramètre **D
 
 Si vos étiquettes n’ont pas de conditions d’étiquetage automatique, consultez les [instructions pour les autres configurations](#restriction-your-labels-do-not-have-auto-labeling-conditions) ci-dessous.
 
-Pour plus d'informations, consultez les pages suivantes :
+Pour plus d’informations, consultez :
 
 - [En savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels)
 - [Appliquer automatiquement une étiquette sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically)
@@ -269,7 +269,7 @@ Pour prendre en charge un ordinateur déconnecté du Portail Azure, procédez co
 
     1. Configurez le service de découverte du réseau (version préliminaire publique) pour qu’il fonctionne en mode hors connexion à l’aide de l’applet de commande [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
-    1. Configurez le travail Network Scan dans le Portail Azure. Pour plus d’informations, consultez [création d’un travail d’analyse réseau](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    1. Configurez le travail Network Scan dans le Portail Azure. Pour plus d’informations, consultez [création d’un travail d’analyse réseau](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
     
     1. Exportez votre travail d’analyse réseau à partir du volet **Azure information protection-tâches d’analyse réseau (** préversion) à l’aide de l’option d' **exportation** . 
     
@@ -329,7 +329,7 @@ Effectuez l’une des opérations suivantes, selon les besoins de votre organisa
 |**Vous ne pouvez pas avoir le rôle sysadmin**     |  Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous devez demander à un utilisateur disposant des droits d’administrateur système de créer manuellement une base de données avant d’installer le scanneur. <br><br>Pour cette configuration, le rôle de **db_owner** doit être affecté aux comptes suivants : <br>-Compte de service pour le scanneur<br>-Compte d’utilisateur pour l’installation du scanneur<br>-Compte d’utilisateur pour la configuration du scanneur <br><br>En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Si vous utilisez des comptes différents, ils nécessitent tous deux le rôle **db_owner** pour la base de données de configuration de l’analyseur. Créez cet utilisateur et les droits nécessaires. Si vous spécifiez votre propre nom de cluster, la base de données de configuration est nommée **AIPScannerUL_<cluster_name>**.  |
 | | |
 
-En outre :
+De plus :
 
 - Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
 - Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes :

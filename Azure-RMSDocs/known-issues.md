@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c6fc0880904658b76ff774de33030ce0ca8e3048
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 77016efd46f045f324c9dea540d3b7ce75415d1d
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844351"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446964"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problèmes connus - Azure Information Protection
 
@@ -190,18 +190,18 @@ Pour plus d’informations, consultez le Guide de l' [administrateur](rms-client
 Les documents protégés par mot de passe ne sont pas pris en charge par les fonctionnalités suivre et révoquer.
 #### <a name="multiple-attachments-in-a-protected-email"></a>Plusieurs pièces jointes dans un e-mail protégé
 
-Si vous joignez plusieurs documents à un message électronique, puis Protégez l’e-mail et l’envoyez, chacune des pièces jointes obtient la même valeur ContentID. 
+Si vous joignez plusieurs documents à un message électronique, puis Protégez l’e-mail et l’envoyez, chacune des pièces jointes obtient la même valeur ContentID.
 
-Cette valeur ContentID est retournée uniquement avec le premier fichier qui avait été ouvert. La recherche des autres pièces jointes ne retourne pas la valeur ContentID requise pour obtenir les données de suivi.      
+Cette valeur ContentID est retournée uniquement avec le premier fichier qui avait été ouvert. La recherche des autres pièces jointes ne retourne pas la valeur ContentID requise pour obtenir les données de suivi.
 
 En outre, la révocation de l’accès pour l’une des pièces jointes révoque également l’accès aux autres pièces jointes dans le même e-mail protégé.
 
 #### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>Documents accessibles via SharePoint ou OneDrive
-    
+
 - Les documents protégés qui sont téléchargés sur SharePoint ou OneDrive perdent leur valeur **contentid** , et l’accès ne peut pas être suivi ou révoqué.
 
-- Si un utilisateur télécharge le fichier à partir de SharePoint ou OneDrive et y accède à partir de son ordinateur local, une nouvelle **contentid** est appliquée au document lorsqu’il l’ouvre localement. 
-    
+- Si un utilisateur télécharge le fichier à partir de SharePoint ou OneDrive et y accède à partir de son ordinateur local, une nouvelle **contentid** est appliquée au document lorsqu’il l’ouvre localement.
+
     L’utilisation de la valeur **contentid** d’origine pour le suivi des données n’inclut pas les accès effectués pour le fichier téléchargé de l’utilisateur. En outre, la révocation de l’accès basé sur la valeur **contentid** d’origine ne révoque pas l’accès pour les fichiers téléchargés.
 
     Dans ce cas, les administrateurs peuvent être en mesure de localiser les fichiers téléchargés à l’aide de PowerShell pour rechercher les nouvelles valeurs **contentid** pour suivre ou révoquer l’accès.
@@ -213,20 +213,20 @@ Si vous avez des documents stockés dans OneDrive avec une étiquette de sensibi
 Dans ce cas, renommez le document manuellement pour appliquer la protection en fonction des besoins.
 ## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP et versions héritées de Windows et d’Office
 
-- La [**prise en charge étendue de Windows 7 a pris fin le 14 janvier 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+- La [**prise en charge étendue de Windows 7 a pris fin le 14 janvier 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente de Windows 10. 
+    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente de Windows 10.
 
     Toutefois, si vous avez étendu des mises à jour de sécurité (UDE) et un contrat de support, le support AIP est disponible pour maintenir la sécurité de vos systèmes Windows 7.
 
     Pour plus d’informations, consultez votre contact de support technique.
 
-- [**Le support étendu Office 2010 a pris fin le 13 octobre 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Le support étendu Office 2010 a pris fin le 13 octobre 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
 
-    Cette prise en charge n’est pas étendue et l’UDE n’est pas proposée pour Office 2010. 
+    Cette prise en charge n’est pas étendue et l’UDE n’est pas proposée pour Office 2010.
 
-    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente d’Office 365. 
-    
+    Nous vous encourageons vivement à effectuer une mise à niveau vers une version plus récente d’Office 365.
+
     Pour plus d’informations, consultez votre contact de support technique.
 
 ## <a name="aip-based-conditional-access-policies"></a>Stratégies d’accès conditionnel basées sur AIP
@@ -239,11 +239,11 @@ Nous vous recommandons d’activer les stratégies d’accès conditionnel basé
 
 **Activez les stratégies d’accès conditionnel pour AIP pour les utilisateurs internes uniquement**:
 
-1.  Dans le Portail Azure, accédez au panneau **accès conditionnel** , puis sélectionnez la stratégie d’accès conditionnel que vous souhaitez modifier. 
+1.  Dans le Portail Azure, accédez au panneau **accès conditionnel** , puis sélectionnez la stratégie d’accès conditionnel que vous souhaitez modifier.
 2.  Sous **affectations**, sélectionnez **utilisateurs et groupes**, puis sélectionnez **tous les utilisateurs**. Assurez-vous que l’option **tous les utilisateurs invités et externes** n’est *pas* sélectionnée.
-3.  Enregistrez vos modifications. 
- 
-Vous pouvez également désactiver entièrement l’autorité de certification dans Azure Information Protection si cette fonctionnalité n’est pas requise pour votre organisation, afin d’éviter ce problème potentiel. 
+3.  Enregistrez vos modifications.
+
+Vous pouvez également désactiver entièrement l’autorité de certification dans Azure Information Protection si cette fonctionnalité n’est pas requise pour votre organisation, afin d’éviter ce problème potentiel.
 
 Pour plus d’informations, consultez la [documentation relative à l’accès conditionnel](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 

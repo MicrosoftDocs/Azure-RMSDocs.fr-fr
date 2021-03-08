@@ -4,19 +4,19 @@ description: En savoir plus sur les types de fichiers et les tailles prises en c
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/08/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bfc773c32a7667a54abdc75985934794414d575a
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: 22a30abf5ea3bf63e5a352bb8b68ceb852036794
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102415260"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446913"
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-aip-unified-labeling-client"></a>Types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection (AIP)
 
@@ -113,35 +113,104 @@ La taille maximale des fichiers pris en charge par le client d’étiquetage uni
 
 Le tableau suivant répertorie un sous-ensemble de types de fichiers qui prennent en charge la protection native par le client d’étiquetage unifié Azure Information Protection, et qui peuvent également être classés.
 
-Ces types de fichiers sont identifiés séparément, car quand ils sont protégés en mode natif, l’extension de nom de fichier d’origine change et ces fichiers passent en lecture seule. Lorsque les fichiers sont protégés de manière générique, l’extension de nom de fichier d’origine est toujours remplacée par. pfile.
+Ces types de fichiers sont identifiés séparément, car quand ils sont protégés en mode natif, l’extension de nom de fichier d’origine change et ces fichiers passent en lecture seule. Lorsque les fichiers sont protégés de manière générique, l’extension de nom de fichier d’origine est toujours remplacée par `.p<file-type>` .
 
 > [!WARNING]
 > Si vous disposez de pare-feu, proxys web ou logiciels de sécurité qui contrôlent et prennent des mesures en fonction des extensions de nom de fichier, vous devrez peut-être reconfigurer ces appareils et logiciels réseau pour qu'ils prennent en charge ces nouvelles extensions de nom de fichier.
 
 |Extension de nom de fichier d'origine|Extension de nom d’un fichier protégé|
 |--------------------------------|-------------------------------------|
-|.txt|.ptxt|
-|.xml|.pxml|
-|.jpg|.pjpg|
+|.bmp|.pbmp|
+|.gif|.pgif|
+|.jfif|.pjfif|
+|.jpe|.pjpe|
 |.jpeg|.pjpeg|
+|.jpg|.pjpg|
+|.jt|.pjt|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
-|.bmp|.pbmp|
-|.gif|.pgif|
-|.jpe|.pjpe|
-|.jfif|.pjfif|
-|.jt|.pjt|
+|.txt|.ptxt|
+|.xla |.pxla | 
+|.xlam |.pxlam |
+|.xml|.pxml|
 | | |
 
-Le tableau suivant répertorie les types de fichiers restants qui prennent en charge la protection native par le client d’étiquetage unifié Azure Information Protection, et qui peuvent également être classés. Vous y trouvez les types de fichiers pour les applications Microsoft Office. Les formats de fichiers pris en charge pour ces types de fichiers sont les formats 97-2003 et les formats Office Open XML pour les programmes Office suivants : Word, Excel et PowerPoint.
+**Types de fichiers pris en charge par Office**
 
-Pour ces fichiers, l’extension de nom de fichier reste la même une fois que le fichier est protégé par un service Rights Management.
+La liste suivante répertorie les types de fichiers restants qui prennent en charge la protection native par le client d’étiquetage unifié Azure Information Protection, et qui peuvent également être classés. Vous y trouvez les types de fichiers pour les applications Microsoft Office. Les formats de fichiers pris en charge pour ces types de fichiers sont les formats 97-2003 et les formats Office Open XML pour les programmes Office suivants : Word, Excel et PowerPoint.
 
-|Types de fichiers pris en charge par Office|Types de fichiers pris en charge par Office|
-|----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
-| | |
+Pour ces fichiers, l’extension de nom de fichier *reste la même* une fois que le fichier est protégé par un service Rights Management.
+
+:::row:::
+   :::column span="4":::
+.doc
+
+.docm
+
+.docx
+
+.dot
+
+.dotm
+
+.dotx
+
+.potm
+
+   :::column-end:::
+   :::column span="":::
+
+.potx
+
+.pps
+
+.ppsm
+
+.ppsx
+
+.ppt
+
+.pptm
+
+.pptx
+
+
+   :::column-end:::
+   :::column span="":::
+.vsdm
+
+.vsdx
+
+.vssm
+
+.vssx
+
+.vstm
+
+.vstx
+
+.xls
+
+   :::column-end:::
+   :::column span="":::
+
+.xlsb
+
+.xlt
+
+.xlsm
+
+.xlsx
+
+.xltm
+
+.xltx
+
+.xps
+   :::column-end:::
+:::row-end:::
+
 ## <a name="file-types-excluded-from-classification-and-protection"></a>Types de fichiers exclus de la classification et de la protection
 
 Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionnement de l’ordinateur, certains types de fichiers et de dossiers sont automatiquement exclus de classification et de la protection. Si les utilisateurs essaient de classer ou de protéger ces fichiers à l’aide du client d’étiquetage unifié Azure Information Protection, ils voient un message indiquant qu’ils sont exclus.

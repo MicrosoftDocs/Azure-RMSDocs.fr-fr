@@ -4,7 +4,7 @@ description: Découvrez les nouveautés du client d’étiquetage unifié de l�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/01/2021
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 73d64904f3bea44e7432709773f9400ccd40da3e
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: e416a7f9b363dc1c0d773561b2c3a1eb6cd56926
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102415294"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446981"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -31,7 +31,7 @@ Cet article décrit les nouvelles fonctionnalités disponibles pour le client d�
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update. Les versions de Azure information protection ont un nom de produit de **Microsoft Azure information protection**  >  **Microsoft Azure information protection client d’étiquetage unifié** et une classification des **mises à jour**.
+Après un bref délai de quatre semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update. Les versions de Azure information protection ont un nom de produit de **Microsoft Azure information protection**  >  **Microsoft Azure information protection client d’étiquetage unifié** et une classification des **mises à jour**.
 
 L’inclusion de Azure Information Protection dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou d’Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 

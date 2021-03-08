@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4e8c4444aad6185b54a6f5b5178fa225857b71d2
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: b81f72e0bd53e6dc518fad4c7d1bd1700044a8d5
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102414954"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446930"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Configuration requise pour l’installation et le déploiement du scanneur d’étiquetage unifié Azure Information Protection
 
@@ -400,7 +400,11 @@ Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre co
 
 - **Pour le compte de service du scanneur**, utilisez un compte Windows local ou un compte Active Directory.
 
-- **Pour le compte Azure Active Directory**, spécifiez votre compte local pour le paramètre *OnBehalfOf* avec set-AIPAuthentication. Pour plus d’informations, consultez [Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+- **Pour le compte Azure Active Directory**, spécifiez l’utilisateur AAD dans l’applet de commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) , dans le paramètre *DelegatedUser* . 
+
+    Si vous exécutez l’analyse sous un utilisateur autre que le compte du scanneur, veillez à spécifier également le compte du scanneur dans le paramètre *OnBehalfOf* . 
+
+    Pour plus d’informations, consultez [Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
 
 ### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restriction : vos étiquettes n’ont pas de conditions d’étiquetage automatique
 

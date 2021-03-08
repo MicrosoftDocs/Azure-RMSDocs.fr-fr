@@ -4,7 +4,7 @@ description: Identifiez les conditions préalables nécessaires pour déployer A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/04/2021
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c5eade80b9e3f46e5288b4604f64063cf097a170
-ms.sourcegitcommit: 95f3b19e1034025e7de0ca523b837843d9c15d86
+ms.openlocfilehash: 66ce835eea1bb9d8213a78a211295dea7b93d5e4
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102094845"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446845"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -209,6 +209,14 @@ Azure Information Protection présente les exigences supplémentaires suivantes�
     La limitation de l’URL **config.edge.skype.com** peut affecter la capacité de Microsoft à réduire les erreurs et peut affecter votre capacité à tester les fonctionnalités en préversion.
  
     Pour plus d’informations, consultez [Services essentiels pour Office - Déployer Office](/deployoffice/privacy/essential-services).
+
+- **Connectivité réseau des URL de journalisation d’audit**. AIP doit pouvoir accéder aux URL suivantes afin de prendre en charge les journaux d’audit AIP :
+
+    - `https://*.events.data.microsoft.com`
+    - `https://*.aria.microsoft.com` (Données des appareils Android uniquement)
+    
+    Pour plus d’informations, consultez [Configuration requise pour la création de rapports AIP](reports-aip.md#prerequisites).
+
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coexistence d’AD RMS et Azure RMS
 
 L’utilisation de AD RMS et Azure RMS côte à côte, au sein d’une même organisation, pour protéger du contenu par le même utilisateur dans la même organisation, est **uniquement** pris en charge dans AD RMS pour [HYOK (maintenir votre propre clé)](configure-adrms-restrictions.md) de protection avec Azure Information Protection.

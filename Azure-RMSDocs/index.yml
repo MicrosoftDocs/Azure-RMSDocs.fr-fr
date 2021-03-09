@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: Documentation sur Azure Information Protection
-summary: Contrôlez et sécurisez les e-mails, les documents et les données sensibles à l’intérieur comme à l’extérieur de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Azure Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
+title: Documentation sur Azure Information Protection (AIP)
+summary: Découvrez comment contrôler et sécuriser les e-mails, les documents et les données sensibles à l’intérieur comme à l’extérieur de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Azure Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
 metadata:
   title: Documentation sur Azure Information Protection
   description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise.
@@ -12,12 +12,12 @@ metadata:
   ms.author: bagol
   manager: rkarlin
   ms.date: 12/08/2020
-  ms.openlocfilehash: ef5cc6624b8d6e1af2750ebf1f4fbb5c54f72dd2
-  ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+  ms.openlocfilehash: 0fcccc68cabda6db704c457db7b1bf8d4c344ede
+  ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/14/2020
-  ms.locfileid: "97382137"
+  ms.lasthandoff: 03/07/2021
+  ms.locfileid: "102414937"
 landingContent:
 - title: À propos d’Azure Information Protection
   linkLists:

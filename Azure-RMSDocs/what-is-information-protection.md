@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: 8bc04ea9c8d26dc33a8fbb6cdcc52bd78257f41a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: d1316fb289c39766b956931758da438b722f018d
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98808529"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415311"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -27,14 +27,17 @@ ms.locfileid: "98808529"
 
 Azure Information Protection (AIP) est une solution cloud qui permet aux organisations de découvrir, de classifier et de protéger leurs documents et leurs e-mails en appliquant des étiquettes au contenu.
 
-AIP fait partie de la solution Microsoft Information Protection (MIP) et étend les fonctionnalités d’étiquetage et de classification fournies par Microsoft 365.
+AIP fait partie de la solution Microsoft Information Protection (MIP) et étend les fonctionnalités d’[étiquetage](/microsoft-365/compliance/sensitivity-labels) et de [classification](/microsoft-365/compliance/data-classification-overview) fournies par Microsoft 365.
 
-L’illustration suivante montre les ajouts d’Azure Information Protection à MIP, notamment le [client d’étiquetage unifié](#aip-unified-labeling-client), le [scanneur](#aip-on-premises-scanner) et le [SDK](#microsoft-information-protection-sdk).
+L’illustration suivante montre ce qu’ajoute Azure Information Protection à la protection MIP, notamment le [**client d’étiquetage unifié**](#aip-unified-labeling-client), le [**scanneur**](#aip-on-premises-scanner) et le kit [**SDK**](#microsoft-information-protection-sdk).
 
 :::image type="content" source="media/what-is-mip.png" alt-text="Zones Azure Information Protection de la structure Microsoft Information Protection":::
 
 Microsoft Information Protection est la structure de protection des informations commune qui est exploitée par le client d’étiquetage unifié d’AIP. Pour plus d’informations, consultez la [documentation Microsoft 365](/microsoft-365/compliance/protect-information).
 
+> [!NOTE]
+> Pour plus d’informations sur les fonctionnalités les plus récentes et la préversion publique du client d’étiquetage unifié, consultez [Client d’étiquetage unifié Azure Information Protection - Historique des versions et politique de support](rms-client/unifiedlabelingclient-version-release-history.md).
+> 
 ## <a name="aip-unified-labeling-client"></a>Client d’étiquetage unifié AIP
 
 Le client d’étiquetage unifié Azure Information Protection étend les fonctionnalités d’étiquetage, de classification et de protection à des types de fichiers supplémentaires, ainsi qu’à l’Explorateur de fichiers et à PowerShell. 
@@ -43,7 +46,6 @@ Par exemple, dans l’Explorateur de fichiers, cliquez avec le bouton droit sur 
 
 :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classer et protéger à partir de l’Explorateur de fichiers":::
 
-Pour plus d’informations sur les fonctionnalités les plus récentes et la préversion publique du client d’étiquetage unifié, consultez [Client d’étiquetage unifié Azure Information Protection - Historique des versions et politique de support](rms-client/unifiedlabelingclient-version-release-history.md).
 
 Téléchargez le client depuis la [page de téléchargement de Microsoft Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=53018).
     

@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e416a7f9b363dc1c0d773561b2c3a1eb6cd56926
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: cf639e1a0e8b68ed58aadb2404c15fd385320bcb
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446981"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558134"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -64,7 +64,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 Notez que les fonctionnalités de Azure Information Protection sont actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale.
 
 > [!NOTE]
-> Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le client d’étiquetage unifié, nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
+> Les correctifs mineurs ne sont pas toujours répertoriés. par conséquent, si vous rencontrez un problème avec le client d’étiquetage unifié, nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
 >
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
@@ -86,7 +86,7 @@ La co-création d’applications Office permet à plusieurs utilisateurs de modi
 > Votre système doit également respecter les exigences de version indiquées dans la [Microsoft 365 conditions préalables pour la co-création](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
 >
 
-Avant de commencer, nous vous recommandons de passer en revue toutes les conditions préalables et limitations associées. Pour plus d’informations, consultez :
+Avant de commencer, nous vous recommandons de passer en revue toutes les conditions préalables et limitations associées. Pour plus d'informations, consultez les pages suivantes :
 
 - [Activez la co-création de fichiers chiffrés avec des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels-coauthoring) dans la documentation de Microsoft 365.
 - [Problèmes connus de la co-création dans AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
@@ -145,7 +145,7 @@ Cette version comprend les nouvelles fonctionnalités, les correctifs et les am�
 
 - **Nouvelles fonctionnalités pour le scanneur**:
 
-    - [Prise en charge de PowerShell pour les serveurs de scanneur déconnectés](#powershell-support-for-disconnected-scanner-servers)
+    - [Prise en charge des scanneurs déconnectés dans PowerShell](#powershell-support-for-disconnected-scanner-servers)
     - [Prise en charge des référentiels NFS dans les travaux d’analyse de contenu](#support-for-nfs-repositories-in-content-scan-jobs-public-preview) (version préliminaire publique)
     - [Ajout de la prise en charge de types d’informations sensibles supplémentaires](#added-support-for-additional-sensitive-information-types)
 
@@ -165,7 +165,7 @@ Cette version comprend les nouvelles fonctionnalités, les correctifs et les am�
 
     - Lorsque le contenu avec une étiquette délimitée est partagé avec des utilisateurs ou des groupes qui ne sont pas inclus dans la portée de l’étiquette. Ce problème se produit à la fois avec l' [application de visionneuse AIP](clientv2-view-use-files.md) et lors de l’affichage ou de la classification du contenu partagé via l' [Explorateur de fichiers](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
 
-### <a name="powershell-support-for-disconnected-scanner-servers"></a>Prise en charge de PowerShell pour les serveurs de scanneur déconnectés
+### <a name="powershell-support-for-disconnected-scanner-servers"></a>Prise en charge des scanneurs déconnectés dans PowerShell
 
 Le [Azure information protection analyseur local](../deploy-aip-scanner.md) prend désormais en charge la gestion des travaux d’analyse de contenu via PowerShell, pour les serveurs de scanneurs qui ne peuvent pas se connecter à Internet ou pour les scanneurs dans un [environnement Azure China 21ViaNet (Chine souverain)](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
@@ -216,7 +216,7 @@ Si vos documents sont enregistrés pour le suivi, permet aux administrateurs d�
 
 Une fois que vous avez mis à niveau, les utilisateurs finaux peuvent également révoquer l’accès pour les documents qu’ils ont protégés. Pour révoquer l’accès à partir de Microsoft Office Apps, utilisez l’option nouveau **révoquer l’accès** dans le menu **sensibilité** .
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Guide de l’administrateur : suivre et révoquer l’accès aux documents avec Azure Information Protection](track-and-revoke-admin.md)
 - [Guide de l’utilisateur : révoquer l’accès aux documents avec Azure Information Protection](revoke-access-user.md)
@@ -327,7 +327,7 @@ Le service de **découverte du réseau** met à jour les rapports de **référen
 
 **Pour utiliser le service de découverte du réseau**
 
-1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d’informations, consultez :
+1. Mettez à niveau votre version de scanneur et vérifiez que votre cluster de scanneur est correctement configuré. Pour plus d'informations, consultez les pages suivantes :
     - [Mise à niveau de votre scanneur](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Créer un cluster de scanneur](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -390,7 +390,7 @@ Pour plus d’informations, consultez [Azure information protection référence 
 
 Azure Information Protection prend désormais en charge l’étiquetage basé sur les modèles de chiffrement à clé double (DKE) dans le scanneur, ainsi que l’utilisation de l’Explorateur de fichiers et de PowerShell.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-implement-tenant-key.md)
 - [Chiffrement à clé double](/microsoft-365/compliance/double-key-encryption) dans la documentation Microsoft 365
@@ -494,7 +494,7 @@ Pour plus d’informations, consultez version 2.7.96.0 et [Azure information pro
 
 Les journaux d’audit sont désormais générés chaque fois que l’analyseur détecte qu’un fichier qui avait été analysé précédemment est maintenant supprimé.
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Fichiers journaux d’audit supprimés](../audit-logs.md#file-removed-audit-logs)
 - [Rapports centraux d’Azure Information Protection](../reports-aip.md)

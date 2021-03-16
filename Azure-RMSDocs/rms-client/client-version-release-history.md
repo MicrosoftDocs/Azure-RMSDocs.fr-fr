@@ -4,7 +4,7 @@ description: Découvrez les nouveautés ou les modifications apportées dans une
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 03/11/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: def8ba403e961f6e64b0bd34eb5c7ac5bd50632a
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 9e03169c4c30bbad4ff9ed9ccaf06b6992994785
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807069"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558093"
 ---
 # <a name="azure-information-protection-classic-client-version-release-history-and-support-policy"></a>Client Classic Azure Information Protection : historique de publication des versions et stratégie de support
 
@@ -70,15 +70,23 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 Notez que les fonctionnalités de Azure Information Protection sont actuellement en version préliminaire. Les [Conditions d’utilisation supplémentaires des préversions Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) incluent des conditions légales supplémentaires qui s’appliquent aux fonctionnalités Azure en version bêta, en préversion ou pas encore disponibles dans la version en disponibilité générale. 
 
 > [!NOTE]
-> Les correctifs mineurs ne sont pas listés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, nous vous recommandons de vérifier s’il n’est pas résolu dans la toute dernière version GA. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
->  
-> Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
+>  Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
+>
+## <a name="version-156250"></a>Version 1.56.25.0
+
+**Publication**: 11/05/2020
+
+**Pris en charge via**: 03/31/2021
+
+Correctifs de bogues mineurs liés à la prise en charge d’Outlook.
 
 ## <a name="version-154590"></a>Version 1.54.59.0
 
 **Publication**: 02/12/2020
 
-Cette version comprend uniquement des correctifs. 
+**Pris en charge via**: 03/31/2021
+
+Cette version comprend uniquement des correctifs.
 
 **Correctifs** :
 

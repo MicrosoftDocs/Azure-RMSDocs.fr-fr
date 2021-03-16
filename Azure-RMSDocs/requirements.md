@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 66ce835eea1bb9d8213a78a211295dea7b93d5e4
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: 04c8a8b78090c784216845530c3ca5587ea4396d
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446845"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558113"
 ---
 # <a name="azure-information-protection-requirements"></a>Configuration requise pour Azure Information Protection
 
@@ -82,6 +82,7 @@ Pour plus d’informations, consultez :
 Les ordinateurs des utilisateurs ou les appareils mobiles doivent s’exécuter sur un système d’exploitation qui prend en charge Azure Information Protection.
 
 - [Systèmes d’exploitation pris en charge pour les appareils clients](#supported-operating-systems-for-client-devices)
+- [ARM64](#arm64)
 - [Machines virtuelles](#virtual-machines)
 - [Prise en charge de serveur](#server-support)
 - [Configuration requise supplémentaire par client](#additional-requirements-per-client)
@@ -107,6 +108,8 @@ Pour plus d’informations sur la prise en charge dans les versions antérieures
 > [!NOTE]
 > Quand les clients Azure Information Protection protègent les données à l’aide du service Azure Rights Management, ces données peuvent être utilisées par les [mêmes appareils](#client-devices) que ceux qui prennent en charge le service Azure Rights Management.
 >
+
+
 ### <a name="arm64"></a>ARM64 
 
 ARM64 n’est **pas** pris en charge actuellement. 

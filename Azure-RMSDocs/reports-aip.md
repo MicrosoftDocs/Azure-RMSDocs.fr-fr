@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7d86ee43b7ccc60922dea88c76e9e0aa68474d26
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: 661baa61f49c6f85f6b52de99ad807f0fcd67ca5
+ms.sourcegitcommit: b2af03adcab2d0446114eea1973a919331cfb437
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446947"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103561260"
 ---
 # <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analyse et création de rapports centralisées pour Azure Information Protection (version préliminaire publique)
 
@@ -154,7 +154,7 @@ Caractéristique propre à l’analytique Azure Information Protection, après q
 
 Étant donné que Azure Information Protection Analytics utilise la surveillance Azure, le contrôle d’accès en fonction du rôle (RBAC) pour Azure contrôle également l’accès à votre espace de travail. Vous avez donc besoin d’un rôle Azure ainsi que d’un rôle Administrateur d’Azure AD pour gérer l’analytique Azure Information Protection. Si vous ne connaissez pas les rôles Azure, il peut s’avérer utile de lire [Différences entre les rôles RBAC Azure et les rôles d’administrateur Azure AD](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Rôles d’administrateur Azure AD requis](#required-azure-ad-administrator-roles)
 - [Rôles de Log Analytics Azure requis](#required-azure-log-analytics-roles)
@@ -175,7 +175,7 @@ Vous devez disposer de l’un des [rôles d’administrateur Azure ad](/azure/ac
 - Une fois l’espace de travail créé, vous pouvez utiliser les rôles suivants avec moins d’autorisations pour afficher les données collectées :
     
     - **Lecteur de sécurité**
-    - **Lecteur général**
+    - **Lecteur global**
 
 #### <a name="required-azure-log-analytics-roles"></a>Rôles de Log Analytics Azure requis
 
@@ -351,9 +351,7 @@ Après avoir vérifié les informations contenues dans les rapports, si vous uti
 
 - **Client classique**: apportez des modifications à votre stratégie dans le portail Azure. Pour plus d’informations, consultez [configuration de la stratégie de Azure information protection](configure-policy.md).
 
-Si vous avez un abonnement Microsoft 365, vous pouvez également consulter l’utilisation des étiquettes dans le Centre de conformité Microsoft 365 et le Centre de sécurité Microsoft 365. Pour plus d’informations, voir [Afficher l’utilisation des étiquettes avec l’Analyse des étiquettes](/microsoft-365/compliance/label-analytics).
-
-Les journaux d’audit AIP sont également envoyés à l’Explorateur d’activités Microsoft 365, où ils peuvent être affichés avec des noms différents. Pour plus d’informations, consultez :
+Les journaux d’audit AIP sont également envoyés à l’Explorateur d’activités Microsoft 365, où ils peuvent être affichés avec des noms différents. Pour plus d'informations, consultez les pages suivantes :
 
 - [Version préliminaire publique : journaux d’audit AIP dans l’Explorateur d’activités](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
 - [Prise en main de l’Explorateur d’activités](/microsoft-365/compliance/data-classification-activity-explorer).
